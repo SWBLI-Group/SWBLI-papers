@@ -2388,23 +2388,34 @@ def main():
         print(f"loaded {len(deep_by_id)} deep-reading records")
         # Copy only the figures actually cited by a deep record into assets so
         # the generated site can be moved without the build/ directory.
-        copied = 0
-        for pid, rec in deep_by_id.items():
-            for fig in as_list(rec.get("figures")):
-                fn = clean_str(fig.get("file")) if isinstance(fig, dict) else ""
-                if not fn:
-                    continue
-                src = FIGS_DIR / str(pid) / fn
-                if not src.exists():
-                    print(f"!! missing deep figure {pid}/{fn}")
-                    continue
-                dst_dir = ASSET_FIGS_DIR / str(pid)
-                dst_dir.mkdir(parents=True, exist_ok=True)
-                dst = dst_dir / fn
-                if not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime:
-                    shutil.copy2(src, dst)
-                    copied += 1
-        print(f"copied {copied} deep figures into assets/figs")
+        # The large candidate-figure directory is intentionally archived outside
+        # the project once assets/figs contains the 495 figures actually used.
+        if FIGS_DIR.exists():
+            copied = 0
+            for pid, rec in deep_by_id.items():
+                for fig in as_list(rec.get("figures")):
+                    fn = clean_str(fig.get("file")) if isinstance(fig, dict) else ""
+                    if not fn:
+                        continue
+                    src = FIGS_DIR / str(pid) / fn
+                    if not src.exists():
+                        print(f"!! missing deep figure {pid}/{fn}")
+                        continue
+                    dst_dir = ASSET_FIGS_DIR / str(pid)
+                    dst_dir.mkdir(parents=True, exist_ok=True)
+                    dst = dst_dir / fn
+                    if not dst.exists() or dst.stat().st_mtime < src.stat().st_mtime:
+                        shutil.copy2(src, dst)
+                        copied += 1
+            print(f"copied {copied} deep figures into assets/figs")
+        else:
+            missing = []
+            for pid, rec in deep_by_id.items():
+                for fig in as_list(rec.get("figures")):
+                    fn = clean_str(fig.get("file")) if isinstance(fig, dict) else ""
+                    if fn and not (ASSET_FIGS_DIR / str(pid) / fn).exists():
+                        missing.append(f"{pid}/{fn}")
+            print(f"build/figs absent; using existing assets/figs (missing refs: {len(missing)})")
 
     missing = [i for i in meta_by_id if i not in c_by_id]
     extra = [i for i in c_by_id if i not in meta_by_id]
