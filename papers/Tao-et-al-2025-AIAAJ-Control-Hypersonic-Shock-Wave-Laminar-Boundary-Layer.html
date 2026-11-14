@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Control of Hypersonic Shock-Wave/Laminar-Boundary-Layer Interaction Using Deep Reinforcement Learning · SWBLI</title>
+<meta name="description" content="高超声速激波/边界层干扰文献库：流动分离与峰值传热的知识地图。">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%231e5f63'/><text x='32' y='39' font-size='18' text-anchor='middle' fill='%23fff9ee' font-family='monospace'>SW</text></svg>">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/katex/katex.min.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../index.html"><span class="mark">SW</span>激波 / 边界层干扰文献图谱</a>
+    <nav class="nav"><a href="../index.html" class="">总览</a><a href="../library.html" class="active">文献库</a><a href="../reviews.html" class="">综述与空白</a><a href="../taxonomy.html" class="">方法与规范</a></nav>
+    <div class="top-actions"><button class="icon-btn" id="themeBtn" type="button" aria-label="切换主题">◐</button></div>
+  </div>
+</header>
+<main id="main"><div class="wrap detail-wrap" data-pid="2093">
+  <div class="breadcrumb"><a href="../library.html">文献库</a><span>/</span><a href="../library.html?board=流动分离">流动分离</a><span>/</span><span>2025</span></div>
+  <section class="detail-hero">
+    <div>
+      <div class="kicker"><span class="badge teal">流动分离</span><span class="badge journal" title="期刊目录：AIAA J">AIAA J</span><span class="badge">层流</span><span class="badge blue">数值模拟</span><span class="badge blue">理论建模（数据驱动）</span></div>
+      <h1>Control of Hypersonic Shock-Wave/Laminar-Boundary-Layer Interaction Using Deep Reinforcement Learning</h1>
+      <p class="title-zh">基于深度强化学习的高超声速激波/层流边界层干扰控制</p>
+      <div class="authors">Shancong Tao; Xiaotian Shi; Xue-Lu Xiong; Yi Zhou</div>
+      <div class="source">AIAA Journal · 2025, Vol. 63(10): 4308-4322</div>
+      <div class="doi"><a href="https://doi.org/10.2514/1.j065230" target="_blank" rel="noopener">DOI ↗</a></div>
+      <div class="detail-actions"><a class="btn ghost" href="https://doi.org/10.2514/1.j065230" target="_blank" rel="noopener" title="通过 DOI 获取原文">DOI ↗</a><span class="pdf-slot" data-pdf-slot><button class="btn small primary" type="button" data-upload-trigger aria-controls="pdfUpload">上传 PDF 补充全文</button></span><a class="btn small" href="../library.html?tag=层流">同标签文献</a></div>
+    </div>
+    <aside class="side-card">
+      <h4>编目信息</h4>
+      <div class="fact"><span class="fk">板块</span><span class="fv">流动分离</span></div>
+      <div class="fact"><span class="fk">文章类型</span><span class="fv">期刊</span></div>
+      <div class="fact"><span class="fk">期刊目录</span><span class="fv">AIAA J</span></div>
+      <div class="fact"><span class="fk">年代</span><span class="fv">2000~至今</span></div>
+      <div class="fact"><span class="fk">流态</span><span class="fv">层流</span></div>
+      <div class="fact"><span class="fk">方法</span><span class="fv">数值模拟、理论建模（数据驱动）</span></div>
+      <div class="fact"><span class="fk">构型</span><span class="fv">压缩拐角</span></div>
+      <div class="fact"><span class="fk">真实气体</span><span class="fv">未考虑 / 不适用</span></div>
+      <div class="fact"><span class="fk">关注点</span><span class="fv">马赫数效应、主动控制</span></div>
+      <div class="fact"><span class="fk">证据</span><span class="fv">摘要 · 中</span></div>
+      <div class="pc-tags"><a class="tag no-pdf" href="../library.html?tag=无全文pdf" title="本库无全文文件，可通过 DOI 或来源页获取">无全文pdf</a><a class="tag" href="../library.html?tag=层流">层流</a><a class="tag" href="../library.html?tag=流动分离">流动分离</a><a class="tag" href="../library.html?tag=数据驱动">数据驱动</a><a class="tag" href="../library.html?tag=理论建模">理论建模</a><a class="tag" href="../library.html?tag=数值模拟">数值模拟</a><a class="tag" href="../library.html?tag=压缩拐角">压缩拐角</a></div>
+      <div class="evidence-note">内容依据：摘要；置信度：中。定量结论请以原文为准。</div>
+      <div class="hr" style="margin:14px 0"></div><h4>学术影响</h4><p class="small muted">未在 OpenAlex / Crossref 检索到匹配记录。中文文献、教材或学位论文可能未被这些平台完整收录；这里不推测、不补零。</p>
+    </aside>
+  </section>
+
+  <div class="detail-body">
+    <div class="detail-main">
+      <section class="content-section"><h2><span class="no">01</span>中文摘要</h2><div class="abstract-box"><p>本文首次将深度强化学习（DRL）用于高超声速激波/层流边界层干扰（SBLI）所致分离的闭环控制。对象为 OpenFOAM 模拟的层流压缩拐角：壁面压力系数为观测状态，微射流作动为动作，壁面摩阻系数（表征分离范围）为奖励。在来流马赫数恒定与变化两种条件下训练均收敛，分离区减小约40%，机理为分离激波减弱与局部边界层增能。并以长短期记忆（LSTM）网络作环境代理模型，训练时间缩短近60%，精度与无模型方法相当。具体马赫数、拐角角度与作动参数摘要未给出。</p></div><details class="orig-abstract"><summary>原始摘要（英文/原文）</summary><p>Deep reinforcement learning (DRL) is applied to control the flow separation induced by the shock-wave/boundary-layer interaction (SBLI) for the first time in a laminar compression ramp configuration simulated via OpenFOAM. The wall pressure coefficient serves as the observed state, while the agent outputs microjet actuation as the corresponding action. The wall skin friction coefficient, indicating the extent of SBLI-induced flow separation, is used as the reward to guide the learning process. Under both constant and varying incoming Mach number conditions, a converged controlled model can be obtained through the repeated DRL training, resulting in a 40% reduction in the separation area. The suppression of the separated shear layer is owing to the weakening of the separation shock and the energizing of the local boundary layer under the DRL control. To reduce the computational costs of CFD simulations, a long short-term memory network is employed as a surrogate model for the environment in DRL. This model-based approach reduces overall training time by nearly 60% and at the same time achieves accuracy comparable to the model-free method that only interacts with the CFD environment. The present study opens a gateway to the closed-loop control of SBLI using state-of-the-art DRL.</p></details></section><section class="content-section"><h2><span class="no">02</span>研究背景与问题</h2><p>高超声速飞行器进气道与机体外流中，激波/边界层干扰（SBLI）常诱发流动分离，造成总压损失、进气道不起动与局部热载荷升高，是制约性能的关键因素之一。传统被动控制（涡流发生器、空腔等）与开环主动控制多依赖经验与风洞标定，难以随来流条件自适应。深度强化学习（DRL）能在与流场环境交互中自主学习控制策略，为 SBLI 闭环控制提供新途径；但以 CFD 作为训练环境代价高昂，且层流条件下分离对作动敏感，控制难度不小。</p></section><section class="content-section"><h2><span class="no">03</span>本文主要工作</h2><p>论文把深度强化学习引入高超声速激波/层流边界层干扰的流动分离控制，研究对象是 OpenFOAM 求解的层流压缩拐角流场，属于典型的二维分离型 SBLI。作者将壁面压力系数作为智能体可观测的状态量，把微射流作动作为动作输出，并以表征分离范围的壁面摩阻系数构造奖励函数，引导智能体在反复试错中学习抑制分离的策略。训练分别在来流马赫数恒定与来流马赫数变化两种条件下进行，均可获得收敛的控制模型，使分离区面积减小约40%。作者进一步分析了控制机理：DRL 作动削弱了分离激波强度，同时为局部边界层注入能量，二者共同抑制了分离剪切层的发展。为降低 CFD 环境的计算开销，论文用长短期记忆（LSTM）网络构建环境代理模型，形成基于模型的 DRL 训练框架，在保持与仅与 CFD 环境交互的无模型方法相当精度的同时，将总训练时间缩短近60%。摘要未给出所采用的 DRL 算法、网络结构与作动参数等实现细节。</p></section><section class="content-section"><h2><span class="no">04</span>方法与算例细节</h2><p>数值方面，采用 OpenFOAM 对层流压缩拐角进行 CFD 模拟，作为强化学习的环境；摘要未给出求解器、网格规模与收敛判据。DRL 接口设计为：观测量取壁面压力系数，动作为微射流作动的控制量，奖励取壁面摩阻系数，用其反映 SBLI 所致分离的强弱与范围。训练分两类工况：来流马赫数恒定，以及来流马赫数随工况变化，用于检验策略的适应性。为节省计算成本，另以 LSTM 网络在已有 CFD 数据上训练环境代理模型，采用基于模型的 DRL 流程，并与无模型（直接与 CFD 交互）方法在训练时长和最终控制效果上对比。具体强化学习算法、状态维度、作动器数量与位置、奖励的加权方式等，摘要未给出。</p></section><section class="content-section"><h2><span class="no">05</span>关键结果与证据</h2><p>在恒定与变化来流马赫数两种条件下，经反复 DRL 训练均得到收敛的控制模型，分离区面积减小约40%，说明学习到的策略对来流条件变化具有一定适应性。流场分析表明，分离剪切层受到明显抑制，其来源有二：一是微射流作动使分离激波减弱，降低了逆压梯度对边界层的作用；二是作动为局部边界层注入能量，提高了其抗逆压梯度能力。在计算效率方面，以 LSTM 代理模型替代 CFD 环境后，总训练时间缩短近60%，控制精度与无模型方法相当，表明代理模型可在不明显损失控制效果的前提下显著降低 DRL 用于 SBLI 控制的成本。摘要未给出分离区长度、摩阻与压力分布的定量变化，也未给出与开环控制的对比。</p></section><section class="content-section"><h2><span class="no">06</span>问题、发现与推断</h2><div class="key-findings"><h3>重要发现与推断</h3><ul><li>首次将深度强化学习用于高超声速激波/层流边界层干扰所致分离的闭环控制</li><li>以壁压系数为状态、微射流为动作、壁面摩阻为奖励，在恒定与变化来流马赫数下训练均收敛，分离区约减小40%</li><li>控制机理为分离激波减弱与局部边界层增能，从而抑制分离剪切层</li><li>LSTM 环境代理模型使总训练时间缩短近60%，控制精度与无模型方法相当</li><li>为 SBLI 闭环智能控制提供了一条可行途径</li></ul></div></section><section class="content-section"><h2><span class="no">07</span>本文结论</h2><p>本文表明，深度强化学习可用于高超声速层流激波/边界层干扰所致分离的闭环控制：以壁压系数为观测、微射流为动作、壁面摩阻为奖励的框架，可在恒定与变化来流马赫数下训练出收敛策略，使分离区减小约40%，其机理为分离激波减弱与局部边界层增能。以 LSTM 作为环境代理模型的基于模型方法，把训练时间缩短近60%且精度相当，为缓解 DRL 控制中 CFD 采样代价高的问题提供了可行方案。作者认为该工作为采用先进 DRL 实现 SBLI 闭环控制打开了途径，但相关结论基于层流压缩拐角的数值模拟，向湍流、真实气体与三维构型的推广尚待验证。</p></section><section class="content-section"><h2><span class="no">08</span>适用边界与局限</h2><p>证据仅为摘要，未给出具体来流马赫数、雷诺数、拐角角度、微射流参数、DRL 算法与网络结构、网格与收敛判据，也未见与开环或其他控制方法的定量对比。研究对象限于层流二维压缩拐角与单一作动方式，未涉及湍流 SBLI、真实气体效应与三维效应；摘要未提及实验验证，结论的工程适用性需原文与后续工作确认。</p></section><section class="content-section"><h2><span class="no">09</span>关联文献</h2><p class="muted small">依据标签、板块、构型与作者脉络自动关联，可据此追踪同一问题的前序与后续工作。</p><div class="related-grid"><div class="related-card"><div class="rc-meta">2023 · Physics of Fluids</div>
+        <a href="Ma-et-al-2023-POF-Flow-control-pulsed-arc-discharge-plasma-actuation.html">Flow control effect of pulsed arc discharge plasma actuation on impinging shock wave/boundary layer interaction</a></div><div class="related-card"><div class="rc-meta">2023 · Physics of Fluids</div>
+        <a href="Tang-Wu-2023-POF-Direct-simulation-compression-ramp-shock-wave-boundary.html">Direct numerical simulation of compression ramp shock wave/boundary layer interaction controlled by plasma actuator array</a></div><div class="related-card"><div class="rc-meta">2025 · Physics of Fluids</div>
+        <a href="Guo-et-al-2025-POF-ramp-induced-hypersonic-shock-wave-boundary-layer.html">Study of ramp-induced hypersonic shock-wave/boundary layer interaction controlled with steady jet</a></div><div class="related-card"><div class="rc-meta">2021 · Canadian Journal of Physics</div>
+        <a href="Fang-et-al-2021-CanJPhys-Physical-modeling-correlation-separation-length.html">Physical modeling and correlation of separation length in hypersonic laminar ramp flows</a></div></div></section><section class="content-section"><h2><span class="no">10</span>引用格式</h2><p class="muted small">选择期刊风格后复制；出处保留原刊名。BibTeX 可直接用于 LaTeX。</p><details class="cite" data-cite data-pid="2093">
+      <summary>引用格式 <span aria-hidden="true">▾</span></summary>
+      <div class="cite-pop">
+        <div class="cite-top"><select data-cite-select aria-label="选择引用格式"><option value="jfm">JFM（Cambridge）</option><option value="pof">Physics of Fluids（AIP）</option><option value="cja">Chinese Journal of Aeronautics（Elsevier）</option><option value="ast">Aerospace Science and Technology（Elsevier）</option><option value="aiaa">AIAA Journal</option><option value="prf">Physical Review Fluids（APS）</option><option value="aia">Advances in Aerodynamics（Springer）</option><option value="shock">Shock Waves（Springer）</option><option value="ams">Acta Mechanica Sinica（力学学报英文）</option><option value="lxxb">力学学报</option><option value="qtl">气体物理</option><option value="taml">力学快报（英文）</option><option value="bibtex">BibTeX</option></select>
+        <button class="btn small" type="button" data-copy-cite>复制</button></div>
+        <pre data-cite-pre>Tao, S., Shi, X., Xiong, X. L. &amp; Zhou, Y. 2025 Control of Hypersonic Shock-Wave/Laminar-Boundary-Layer Interaction Using Deep Reinforcement Learning. AIAA Journal 63 (10), 4308–4322. https://doi.org/10.2514/1.j065230</pre>
+        <div class="cite-foot"><span class="hint">按各刊常见风格排版，出处保留原刊名</span><a href="https://doi.org/10.2514/1.j065230" target="_blank" rel="noopener">DOI ↗</a></div>
+      </div>
+    </details></section>
+      <section class="content-section upload-section" id="pdfUpload" data-pid="2093" data-year="2025" data-has-pdf="0">
+        <h2><span class="no">PDF</span>补充 PDF（本条目暂无本地 PDF）</h2>
+        <p class="upload-missing-note">本条目目前没有本地 PDF。上传后只保存在本机浏览器，不会写入项目文件，也不会上传网络；刷新页面仍会保留，换浏览器或清理站点数据后会丢失。</p>
+        <p class="muted small">本页缺少全文、摘要或图件时，可在浏览器本地补入 PDF。解析完全在本机完成，不上传网络；完成后会更新本页的 PDF 打开链接、原摘要、IMRaD 机器抽取、关键句与含图页面。复杂的公式语义与中文深度解读仍以原文和既有精读记录为准。</p>
+        <div class="upload-drop" id="pdfDrop">
+          <div class="upload-icon" aria-hidden="true">⇧</div>
+          <div><b>拖入 PDF</b><span>或点击选择文件；建议单篇论文，≤ 80 MB</span></div>
+          <label class="btn small" for="pdfFile">选择 PDF</label>
+          <input id="pdfFile" type="file" accept="application/pdf,.pdf" hidden>
+        </div>
+        <div class="upload-status" id="pdfUploadStatus" role="status"></div>
+        <div class="parsed-panel" id="pdfParsed"></div>
+      </section>
+      
+      <div class="prevnext"><a href="Zeng-et-al-2025-POF-Cluster-based-microjet-control-shock-wave-boundary.html"><span class="pn-lab">上一篇</span>Cluster-based microjet control of shock wave/boundary layer interactio</a><a href="Xue-et-al-2025-PhysFluids-Control-incident-shock-wave-boundary-layer-interaction.html" style="text-align:right"><span class="pn-lab">下一篇</span>Control of incident shock wave/boundary layer interaction by concave s</a></div>
+    </div>
+    <aside class="detail-side">
+      <div class="side-card">
+        <h4>Zotero 分类</h4>
+        <div class="pc-tags"><span class="tag">2026新检索</span></div>
+        <div class="hr" style="margin:14px 0"></div>
+        <h4>本地文件</h4>
+        <p class="small muted" style="word-break:break-all" data-pdf-name>无本地 PDF</p>
+        <a class="btn ghost" href="https://doi.org/10.2514/1.j065230" target="_blank" rel="noopener" title="通过 DOI 获取原文">DOI ↗</a><span class="pdf-slot" data-pdf-slot><button class="btn small primary" type="button" data-upload-trigger aria-controls="pdfUpload">上传 PDF 补充全文</button></span>
+      </div>
+    </aside>
+  </div>
+</div></main>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div><span class="fmark">SWBLI Literature Atlas</span> · 本地离线文献图谱 · 数据来自 Zotero 文献库</div>
+    <div>共 283 篇 · 生成于 2026-11-14 · <a href="../taxonomy.html">分类与证据说明</a></div>
+  </div>
+</footer>
+<script src="../assets/data.js"></script>
+<script src="../assets/app.js"></script>
+<script src="../assets/upload.js"></script>
+<script defer src="../assets/katex/katex.min.js"></script>
+<script defer src="../assets/katex/auto-render.min.js"></script>
+<script defer src="../assets/katex/katex-init.js"></script>
+</body>
+</html>

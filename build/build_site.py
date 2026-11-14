@@ -39,7 +39,7 @@ except ImportError:  # pragma: no cover
     latex_to_mathml = None
 
 ALLOWED_BOARDS = ["流动分离", "初始分离", "峰值传热", "基础与工具"]
-ALLOWED_FOCUS = ["马赫数效应", "雷诺数效应", "壁温效应", "轴对称效应", "三维效应", "湍流效应", "动壁效应", "非定常效应"]
+ALLOWED_FOCUS = ["马赫数效应", "雷诺数效应", "壁温效应", "轴对称效应", "三维效应", "湍流效应", "动壁效应", "非定常效应", "稳定性", "主动控制"]
 # 流态是多值分面：同一篇文献可以同时是“层流 + 非定常”或“无粘 + 非定常”。
 ALLOWED_REGIMES = ["层流", "转捩", "湍流", "无粘", "非定常", "多流态"]
 ALLOWED_GASES = ["真实气体效应", "壁面催化", "壁面适应", "振动能激发", "稀薄气体效应", "化学非平衡", "振动能非平衡"]
@@ -1649,7 +1649,7 @@ def render_library(meta, papers):
     <summary class="facet-shell-summary">
       <span class="facet-shell-caret" aria-hidden="true"></span>
       <span class="facet-shell-title">检索切面</span>
-      <span class="facet-shell-hint">板块、文章类型、关注点、标签、年代、流态、方法、构型、真实气体、期刊目录</span>
+      <span class="facet-shell-hint">板块、文章类型、关注点、年代、流态、方法、构型、真实气体、期刊目录</span>
       <span class="facet-state" id="facetShellState"></span>
     </summary>
     <div class="facet-rows">
@@ -1662,9 +1662,6 @@ def render_library(meta, papers):
       <div class="facet-block" data-facets="focus" data-label="关注点">
         <div class="facet-head"><span class="flabel">关注点</span><span class="facet-state"></span></div>
       </div>
-      <details class="facet-block facet-journal" data-facets="tag" data-label="标签">
-        <summary class="facet-head"><span class="facet-caret" aria-hidden="true"></span><span class="flabel">标签</span><span class="facet-state"></span></summary>
-      </details>
       <div class="facet-block" data-facets="era" data-label="年代">
         <div class="facet-head"><span class="flabel">年代</span><span class="facet-state"></span></div>
       </div>
@@ -1786,7 +1783,9 @@ def render_taxonomy(meta, papers):
             ("三维效应", "把三维性、后掠、有限宽、展向压力梯度或三维分离拓扑作为研究重点，而非仅用三维网格"),
             ("湍流效应", "以湍流物理、湍流模型、激波—湍流相互作用或层流—湍流对比为核心，而非仅工况为湍流"),
             ("动壁效应", "以运动壁面/运动平板本身为自变量，讨论上下游行壁对分离、剪切或稳定性的影响"),
-            ("非定常效应", "以非定常性、自持振荡、全局稳定性或运动激波/俯仰等为核心，而非仅求解器可算非定常"),
+            ("非定常效应", "以非定常性、自持振荡、运动激波/俯仰等为核心，而非仅求解器可算非定常"),
+            ("稳定性", "以线性/非线性和全局稳定性、LST/BiGlobal、绝对/对流不稳定性、感受性或双稳态为核心"),
+            ("主动控制", "以吹气/抽吸、等离子体、MHD、微射流、振荡涡流发生器等主动手段改变 SWBLI 为目标，并给出控制效果"),
         ]
     )
     board_rows = "".join(

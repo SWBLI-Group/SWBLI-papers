@@ -187,7 +187,6 @@
       { key: "board", label: "板块", values: meta.boards || [], counts: meta.boardCounts || {} },
       { key: "articleType", label: "文章类型", values: meta.articleTypes || [], counts: meta.articleTypeCounts || {} },
       { key: "focus", label: "关注点", values: meta.focus || [], counts: meta.focusCounts || {} },
-      { key: "tag", label: "标签", values: meta.tags || [], counts: meta.tagCounts || {} },
       { key: "era", label: "年代", values: meta.eras || [], counts: meta.eraCounts || {} },
       { key: "regime", label: "流态", values: meta.regimes || [], counts: meta.regimeCounts || {} },
       { key: "method", label: "方法", values: meta.methods || [], counts: meta.methodCounts || {} },

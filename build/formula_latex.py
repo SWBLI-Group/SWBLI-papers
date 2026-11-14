@@ -341,4 +341,13 @@ FORMULA_LATEX = {
     1563: [
         r"St=\frac{f\,L_{\mathrm{sep}}}{U_\infty},\qquad 0.02<St<0.05",
     ],
+    2078: [
+        r"\frac{f\,L_{\mathrm{sep}}}{U_\infty}\approx 0.015",
+    ],
+    2083: [
+        r"Sr_L=0.025\text{–}0.05",
+    ],
+    2098: [
+        r"St_L\sim 0.03\ \text{(呼吸)},\quad St_L\sim 0.1\ \text{(剪切层拍动)},\quad St_L\sim 1\ \text{(Kelvin–Helmholtz)}",
+    ],
 }
