@@ -1,5 +1,6 @@
 # Local full-text PDFs: copyrighted and large; not part of the public repo
-pdfs/
+pdfs/*
+!pdfs/README.md
 
 # Build-time source figures and extracted text
 build/figs/

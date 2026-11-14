@@ -14,7 +14,18 @@ F:\文献工具\index.html
 
 不需要服务器、不需要联网，也不依赖任何 CDN。`assets/data.js` 内含全部文献数据，`papers/<id>.html` 为逐篇详情页。
 
-> 本地 PDF 使用 `file:///C:/Users/TYL13/Zotero/storage/...` 链接。若浏览器阻止本地文件跳转，可在详情页复制 PDF 路径，或把站点放到本地 HTTP 服务下打开。
+> 本地 PDF 已复制到 `pdfs/`，详情页用相对路径 `../pdfs/<关键词>.pdf` 直接打开。若浏览器阻止本地文件跳转，可在详情页复制 PDF 路径，或把站点放到本地 HTTP 服务下打开。`pdfs/` 不进入 Git 仓库（版权与体积原因），换机器时需从 Zotero 重新复制。
+
+## 文件命名
+
+详情页与 PDF 不再使用内部数字 id，而是：
+
+```text
+papers/<作者>-<年份>-<期刊>-<简要标题>.html
+pdfs/<作者>-<年份>-<期刊>-<简要标题>.pdf
+```
+
+例：`Bleilebens-Olivier-2006-ShockWaves-elevated-surface-temperatures-hypersonic-shock-wave.html`。作者取第一作者（两人列两位，三人以上加 `et-al`）；期刊用 `journal_abbr`；标题取去掉冠词/介词后的前 7 个关键词。中文文献保留汉字，英文文献用 ASCII。`pdfs/manifest.json` 保存 id 与文件名的对应表。
 
 ### 在详情页补入 PDF
 

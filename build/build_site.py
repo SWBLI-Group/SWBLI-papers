@@ -18,6 +18,7 @@ from urllib.parse import quote as urlquote
 
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parent
+PDF_DIR = ROOT / "pdfs"
 META_PATH = BASE / "selected_meta.json"
 CONTENT_GLOB = "content_*.json"
 CITATION_METRICS_PATH = BASE / "citation_metrics.json"
@@ -372,6 +373,109 @@ def build_author_full(authors):
     return "; ".join(
         (f"{a.get('first','')} {a.get('last','')}".strip()) for a in authors
     ) if authors else "Anon."
+
+
+# 文件名用“作者 + 年份 + 期刊 + 简要标题”，而不是内部数字 id。
+# 纯英文走 ASCII 关键词；中文保留汉字，便于在资源管理器里直接辨认。
+CJK_RE = re.compile(r"[一-鿿]")
+TITLE_STOPWORDS = {
+    "a", "an", "the", "on", "of", "in", "for", "to", "with", "and", "at", "by",
+    "from", "into", "over", "under", "between", "effects", "effect", "influence",
+    "investigation", "investigations", "experimental", "numerical", "study",
+    "studies", "analysis", "research", "recent", "advances", "new", "selected",
+    "proceedings", "international", "using", "via", "toward", "towards",
+}
+
+
+def _fold_ascii(s):
+    s = unicodedata.normalize("NFKD", str(s or ""))
+    return "".join(ch for ch in s if not unicodedata.combining(ch))
+
+
+def _key_words(s, max_words=7, max_chars=58):
+    s = re.sub(r"\$[^$]*\$", " ", str(s or ""))
+    s = re.sub(r"\[[^\]]*\]", " ", s)
+    if CJK_RE.search(s):
+        s = re.sub(r"[^一-鿿A-Za-z0-9]+", "", s)
+        return (s[:18] or "untitled").strip("-")
+    s = _fold_ascii(s)
+    s = re.sub(r"[^A-Za-z0-9]+", " ", s).strip()
+    words = s.split()
+    kept = [w for w in words if w.lower() not in TITLE_STOPWORDS]
+    if not kept:
+        kept = words
+    joined = "-".join(kept[:max_words])
+    if len(joined) > max_chars:
+        joined = joined[:max_chars].rsplit("-", 1)[0]
+    return (joined.strip("-") or "untitled")
+
+
+def _author_key(p):
+    names = [str(a.get("last", "")).strip() for a in (p.get("authors") or []) if a.get("last")]
+    if not names:
+        return "Anon"
+    if len(names) == 1:
+        base = names[0]
+    elif len(names) == 2:
+        base = names[0] + "-" + names[1]
+    else:
+        base = names[0] + "-et-al"
+    base = _fold_ascii(base)
+    base = re.sub(r"[^\w一-鿿]+", "-", base).strip("-")
+    return base[:42] or "Anon"
+
+
+def make_slug(p):
+    year = re.search(r"(19|20)\d{2}", str(p.get("year") or ""))
+    year = year.group(0) if year else "nd"
+    journal = p.get("journal_abbr") or p.get("journal") or p.get("publisher") or "NA"
+    if "Springer" in str(journal):
+        journal = "Springer"
+    elif CJK_RE.search(str(journal)):
+        journal = re.sub(r"[^一-鿿A-Za-z0-9]+", "", str(journal))[:18]
+    else:
+        journal = re.sub(r"[^A-Za-z0-9]+", "", _fold_ascii(journal))[:22]
+    journal = journal or "NA"
+    slug = f"{_author_key(p)}-{year}-{journal}-{_key_words(p.get('title') or p.get('title_zh'))}"
+    slug = re.sub(r"-{2,}", "-", slug).strip("-._ ")
+    return slug[:150].rstrip("-._ ") or f"paper-{p.get('id')}"
+
+
+def attach_local_pdf(p):
+    """Copy the first available PDF into pdfs/<slug>.pdf and point the site at it."""
+    PDF_DIR.mkdir(exist_ok=True)
+    dst = PDF_DIR / f"{p['slug']}.pdf"
+    source = ""
+    if not (dst.exists() and dst.stat().st_size > 1024):
+        for raw in p.get("pdfs") or []:
+            src = Path(raw)
+            # Older generated records may point at the old DOI-named copies;
+            # those were moved to pdfs/_legacy when the keyword library was built.
+            if not src.is_file():
+                alt = PDF_DIR / "_legacy" / src.name
+                if alt.is_file():
+                    src = alt
+            try:
+                if src.is_file() and src.stat().st_size > 1024:
+                    shutil.copy2(src, dst)
+                    source = str(src)
+                    break
+            except OSError:
+                continue
+    if dst.exists() and dst.stat().st_size > 1024:
+        p["pdf_name"] = dst.name
+        p["pdf_local_abs"] = str(dst.resolve())
+        p["pdf_href"] = "pdfs/" + urlquote(dst.name, safe="")
+        p["pdf_source"] = source or str(p.get("pdfs", [""])[0] if p.get("pdfs") else "")
+        if "无全文pdf" in p["tags"]:
+            p["tags"].remove("无全文pdf")
+    else:
+        p["pdf_href"] = ""
+        p["pdf_name"] = ""
+        p["pdf_local_abs"] = ""
+        if "无全文pdf" not in p["tags"]:
+            p["tags"].append("无全文pdf")
+    p["tags"] = [t for t in TAG_ORDER if t in set(p["tags"])]
 
 
 def norm_content(meta_by_id, content):
@@ -1199,9 +1303,10 @@ def access_btn(p, small=True):
     return ""
 
 
-def pdf_btn(p, small=True, allow_upload=False):
+def pdf_btn(p, small=True, allow_upload=False, root=""):
     if p.get("pdf_href"):
-        return (f'<a class="btn {"small " if small else ""}ghost" data-pdf-link href="{e(p["pdf_href"])}" '
+        href = p["pdf_href"] if p["pdf_href"].startswith(("file:", "http:", "https:")) else root + p["pdf_href"]
+        return (f'<a class="btn {"small " if small else ""}ghost" data-pdf-link href="{e(href)}" '
                 f'target="_blank" rel="noopener">PDF ↗</a>')
     link = access_btn(p, small=small)
     if allow_upload:
@@ -2058,8 +2163,9 @@ def render_paper(p, prev, nxt):
     if p.get("abstract_orig"):
         orig = f'<details class="orig-abstract"><summary>原始摘要（英文/原文）</summary><p>{e(p["abstract_orig"])}</p></details>'
     doi = f'<a href="https://doi.org/{e(p["doi"])}" target="_blank" rel="noopener">DOI ↗</a>' if p.get("doi") else ""
-    pdf_action = pdf_btn(p, small=False, allow_upload=True)
-    copy_path = f'<button class="btn small ghost" type="button" data-copy-path="{e(p["pdfs"][0])}">复制 PDF 路径</button>' if p.get("pdfs") else ""
+    pdf_action = pdf_btn(p, small=False, allow_upload=True, root="../")
+    copy_value = p.get("pdf_local_abs") or (p["pdfs"][0] if p.get("pdfs") else "")
+    copy_path = f'<button class="btn small ghost" type="button" data-copy-path="{e(copy_value)}">复制 PDF 路径</button>' if copy_value else ""
     prev_link = f'<a href="{e(detail_href(prev, nested=True))}"><span class="pn-lab">上一篇</span>{e(prev["title"][:70])}</a>' if prev else "<span></span>"
     next_link = f'<a href="{e(detail_href(nxt, nested=True))}" style="text-align:right"><span class="pn-lab">下一篇</span>{e(nxt["title"][:70])}</a>' if nxt else "<span></span>"
     collections = "".join(f'<span class="tag">{e(c)}</span>' for c in p["collections"][:3])
@@ -2354,6 +2460,36 @@ def main():
 
     # sort for navigation: year ascending, then title
     papers.sort(key=lambda p: (year_int(p["year"]) or 9999, p["title"]))
+
+    # Human-readable filenames: first author + year + journal + short title.
+    # The id remains the internal key; it no longer appears in the URL.
+    used_slugs = set()
+    for p in papers:
+        base = make_slug(p)
+        slug = base
+        n = 2
+        while slug.lower() in used_slugs:
+            slug = f"{base}-{n}"
+            n += 1
+        used_slugs.add(slug.lower())
+        p["slug"] = slug
+        p["href"] = f"papers/{slug}.html"
+        attach_local_pdf(p)
+
+    # Local, portable PDF library. manifest.json is a convenience index.
+    pdf_manifest = [
+        {
+            "id": p["id"], "slug": p["slug"], "file": p["pdf_name"],
+            "title": p["title"], "title_zh": p["title_zh"],
+            "authors": p["author_display"], "year": p["year"],
+            "journal": p["venue"], "doi": p["doi"],
+        }
+        for p in papers if p.get("pdf_href")
+    ]
+    (PDF_DIR / "manifest.json").write_text(
+        json.dumps(pdf_manifest, ensure_ascii=False, indent=1), encoding="utf-8"
+    )
+
     DATA_PAPERS = papers
     by_id = {p["id"]: p for p in papers}
 
@@ -2454,10 +2590,14 @@ def main():
 
     papers_dir = ROOT / "papers"
     papers_dir.mkdir(exist_ok=True)
+    # Remove old numeric pages and any stale keyword pages so links cannot
+    # silently point at a previous build.
+    for old in papers_dir.glob("*.html"):
+        old.unlink()
     for i, p in enumerate(papers):
         prev = papers[i - 1] if i > 0 else None
         nxt = papers[i + 1] if i + 1 < len(papers) else None
-        (papers_dir / f"{p['id']}.html").write_text(render_paper(p, prev, nxt), encoding="utf-8")
+        (papers_dir / f"{p['slug']}.html").write_text(render_paper(p, prev, nxt), encoding="utf-8")
 
     print(f"wrote {len(papers)} papers, {len(papers)} detail pages")
     print("boards:", board_counts)
