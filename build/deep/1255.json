@@ -1,0 +1,693 @@
+{
+  "id": 1255,
+  "read_note": "类型：期刊论文（Physics of Fluids 36, 073609, 2024，14页）。材料为14页全文文本与5幅抓取图件；PDF文本层基本完整，但公式中的负号、上下标与希腊字母在OCR中经常丢失或错位（如 κ 的负号、Eq.(14) 的指数、Eq.(21) 的 Gamma 函数），已用原PDF第5–7、12页图像核对。信息完整度高：控制方程、级数递推、渐近展开、系数表、误差图与文献对比齐全；无实验数据。",
+  "one_line": "精确级数解与Laplace大Pr渐近拼成复合解，使Sakiadis壁面温度梯度在全Pr内达O(10^-10)精度。",
+  "three_sentence": [
+    {
+      "text": "Sakiadis 边界层伴随的换热问题需要壁面温度梯度 h'(0)，它只依赖 Pr，但既有研究多给出离散 Pr 的数值或半解析值，缺少全 Pr 的显式精确表达。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "本文把 Barlow 等的 Sakiadis 精确幂级数代入热边界层方程，得到 h'(0) 的精确积分与级数表达 (7)、(10b)，并指出该精确解在较大 Pr 下数值不稳定。",
+      "attr": "原文明确"
+    },
+    {
+      "text": "作者用 Laplace 方法导出大 Pr 渐近级数 (13)–(14)，与精确解组成复合解 (15)，在全 Pr 内与数值解相比误差约 O(10^-10)，并证明发散的壁面幂级数可给出全部高阶系数。",
+      "attr": "原文明确"
+    }
+  ],
+  "imrad": {
+    "introduction": "第1节（p2–4）介绍 Sakiadis 边界层：运动平板穿过静止流体，控制方程与 Blasius 同形但边界条件互换，不能由 Blasius 解平移得到；该流动是涂层、连续片材传热传质的基础。作者回顾 Sakiadis 的数值与 Pohlhausen 近似、后续数值/半解析工作，指出原始论文近五年被引超过1000次。传热方面，Nusselt 数由壁面无量纲温度梯度 h'(0) 决定，而 h'(0) 只依赖 Pr；既有研究（Table I）多在离散 Pr 下给出数值或近似值（0.6、0.7、1、2、5.5、7、10、50、100 等），中间 Pr 需插值，且精度受限。Naghshineh 等给出 Sakiadis 流动的精确幂级数，Barlow 等将其显式化；本文利用该精确解构造任意 Pr 的 h'(0) 解析表达，发现精确解在中等及以上 Pr 数值不稳定，进而用 Laplace 方法做大 Pr 展开，并证明壁面发散的经典幂级数也能给出全部高阶渐近系数（p2–3）。",
+    "methods": "控制方程（p3）：二维定常不可压缩牛顿流体，运动平板速度 Uw、温度 Tw，远处流体静止、温度 T∞；相似变换后速度场由 f'''+½ff''=0、f(0)=0、f'(0)=1、f'(∞)=0 描述 (1a,b)，温度 h=(T−Tw)/(T∞−Tw) 满足 h''+½Pr f h'=0、h(0)=0、h(∞)=1 (2a,b)。精确解（p3）：f=Σ ã_n e^{-nCη/2}，系数按 (3b) 递推，C=ã0=1.6161254468…、ã1=−2.131345924047… (3a–c)。热解（p3–4）：把 (2a) 写成对数导数并积分，得 h'(0)=[∫_0^∞ exp(−½Pr∫_0^η f dξ)dη]^{-1} (7)；代入 (3) 并令 u=e^{-Cη/2}，得 (8)；用指数级数递推 (9)–(10a) 逐项积分，得精确级数 (10b)。大 Pr（p4–6）：把 (8) 的分母积分记为 I=∫_0^1 u^{-1}e^{φ(u)Pr}du，φ(u)=ln u+Σ(ã_n/(nC))u^n (11a,b)；φ 在 u=1 取极大，按 Laplace 方法在 u=1 泰勒展开并把积分下限延到 −∞，得 I 的渐近式 (12)，进而 h'(0)~Σ c_n Pr^{-n/2} (13)；对 (13) 取倒数级数得 h'(0)~Pr^{1/2}Σ δ_n Pr^{-n/2} (14a,b)。复合（p5–6）：以数值解（Simpson 法，容差约10^-11）为基准比较截断误差，取 (10b) 的80项用于 Pr<6、(14) 的15项用于 Pr≥6，得 (15a,b)。Pohlhausen 路线（p6–7）：大 Pr 下热边界层远薄于速度边界层，近壁速度线性，f=κη²/2+η (16a)，ηt=−2/κ (18b)，积分得 (18a)、(19)、(20)；对 (20) 作 Laplace/Gamma 展开得 (21)，其括号级数与 (13) 的倒数展开前三项一致。发散级数路线（p7、附录C）：以壁面处收敛半径 R≈4.0722 的经典幂级数 (C1) 代替 (3)，仍可复现 (13) 的全部系数与附录B的 c_n。系数（附录B）：c1=√π、c2=−(2/3)κ、c3=√π(5/12)κ²、c4=−(1/135)(160κ³−18κ) 等，κ=f''(0)=−0.443748313368861…。",
+    "results": "精确解与数值稳定性（p3–4；图2，p6）：(10b) 是逐点收敛的精确表示，但 b_n 递推在 Pr 较大时病态；在双精度下 Pr>12 后级数条件变差（p4）。大 Pr 渐近（p4–6）：(12) 的系数只依赖 κ，C 在最终 c_n 中消去；固定截断 N 时，(10b) 误差随 Pr 增大，(14) 误差随 Pr 减小，N 增大使适用 Pr 向大 Pr 移动；15→16 项时某些 Pr 误差反而增大，说明存在最优截断（图2、p6）。复合解（p5–6、图2）：80项 (10b) 与15项 (14) 拼接后，全 Pr 最大误差约 10^-10，最大误差出现在 Pr=6（图2、p8）。h'(0) 行为（p7–8、图3）：Pr→0 时 h'(0)~CPr/2；Pr→∞ 时 h'(0)~π^{-1/2}Pr^{1/2}；Table I 的离散文献值与 (15) 曲线在图上不可区分（p7–8）。与文献比较（p8、图4）：本文模型与数值解相比全 Pr 误差 O(10^-10)；Girgin (2011) 的 h'(0) 最接近，误差低至 10^-9，原因是他给出的 κ 与本文一致；κ 误差大的文献（如 Takhar、Pop、Pantokratoras）h'(0) 误差也大。Pohlhausen/发散级数（p6–7、p12–13）：线性速度近似 (20)–(21) 的括号级数与 (13) 的倒数展开前三项相同；用壁面发散的经典级数 (C1) 也能得到与附录B完全一致的 c_n，说明大 Pr 渐近只依赖近壁流动，不需要整个半无限域的收敛解。",
+    "discussion": "第3节（p6–9）把数学结果与物理图像联系：大 Pr 时 δt≪δ，热边界层只看到近壁线性速度剖面，因此渐近系数只含壁面剪切参数 κ，而不含描述远场衰减的 C；这解释了为什么 C 在 c_n 中消去。作者强调，若用多项式速度剖面近似传热，高阶约束必须由边界层方程在壁面处生成（如 (A13b)、(C1) 的递推），不能在边界层外缘强加零斜率/零曲率；后者虽常用于 Pohlhausen 壁面剪切估计，却会破坏大 Pr 渐近。精确解虽好，但在双精度下 Pr>12 不稳定；复合解以 Pr=6 为切换点，把精确级数与渐近级数各自用在误差最小的区间。作者还指出结果可借热质类比推广到高 Sc 的稀溶液传质，但动量传递不可忽略时类比会失效（p3）。"
+  },
+  "core_points": [
+    {
+      "point": "热边界层方程 (2a,b) 可积分为 h'(0) 的精确积分表达 (7)，其中只含 Sakiadis 精确解 f 与 Pr。",
+      "type": "精确解",
+      "grade": "A",
+      "source": "p3，Sec. II A，Eqs. (2)、(7)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "代入精确级数 (3) 并令 u=e^{-Cη/2} 后，可逐项积分得到精确收敛级数 (10b)，它是 h'(0) 的逐点收敛表示。",
+      "type": "精确解",
+      "grade": "A",
+      "source": "p3–4，Eqs. (8)–(10b)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "精确级数 (10b) 的 b_n 递推在双精度下 Pr>12 后病态，精确解在较大 Pr 数值不稳定。",
+      "type": "数值性质",
+      "grade": "A",
+      "source": "p4，Sec. II A；p8 结论",
+      "attr": "原文明确"
+    },
+    {
+      "point": "对 (8) 的分母积分用 Laplace 方法，可得 h'(0) 的大 Pr 渐近级数 (13) 与倒数形式 (14)；系数只依赖 κ。",
+      "type": "渐近解",
+      "grade": "A",
+      "source": "p4–5，Eqs. (11)–(14)，Appendix A",
+      "attr": "原文明确"
+    },
+    {
+      "point": "复合解 (15)：Pr<6 用 (10b) 的80项，Pr≥6 用 (14) 的15项；与数值解相比全 Pr 最大误差 O(10^-10)，最大误差在 Pr=6。",
+      "type": "核心结果",
+      "grade": "A",
+      "source": "p5–6，Eq. (15)，Fig. 2；p8 结论",
+      "attr": "原文明确"
+    },
+    {
+      "point": "渐近级数 (13) 是发散的，存在最优截断；15→16 项时某些 Pr 的误差反而增大。",
+      "type": "渐近性质",
+      "grade": "A",
+      "source": "p5，Fig. 2 图注；p6",
+      "attr": "原文明确"
+    },
+    {
+      "point": "大 Pr 渐近系数只含 κ=f''(0)，描述远场衰减的 C 在 c_n 中完全消去，说明壁面附近流动主导渐近行为。",
+      "type": "机理解释",
+      "grade": "A",
+      "source": "p5、p7–8，Sec. III C，Appendix B",
+      "attr": "原文明确"
+    },
+    {
+      "point": "壁面处发散的经典幂级数 (C1) 可替代收敛级数 (3)，给出与附录B完全一致的全部高阶系数。",
+      "type": "替代推导",
+      "grade": "A",
+      "source": "p7、p12–13，Appendix C",
+      "attr": "原文明确"
+    },
+    {
+      "point": "极限行为：Pr→0 时 h'(0)~CPr/2；Pr→∞ 时 h'(0)~π^{-1/2}Pr^{1/2}。",
+      "type": "渐近极限",
+      "grade": "A",
+      "source": "p7–8，Eq. (14)，Fig. 3",
+      "attr": "原文明确"
+    },
+    {
+      "point": "与 Table I 文献相比，Girgin (2011) 的 h'(0) 最接近本文模型（误差低至 10^-9），因其 κ 与本文一致；κ 误差大的文献 h'(0) 误差也大。",
+      "type": "文献对比",
+      "grade": "A",
+      "source": "p8，Sec. III C，Fig. 4，Table I",
+      "attr": "原文明确"
+    },
+    {
+      "point": "Pohlhausen 线性速度近似 (16)–(21) 可复现 (13) 倒数展开的前三项（低阶渐近一致）；高阶多项式近似必须采用壁面导出的约束，不能在边界层外缘强加约束。",
+      "type": "方法学结论",
+      "grade": "A",
+      "source": "p6–7，Sec. III A–B；p8–9",
+      "attr": "原文明确"
+    },
+    {
+      "point": "模型限于常物性、二维定常不可压缩层流、等温壁、无粘性耗散/压力梯度；精度是与同一ODE的数值解比较，非实验验证。",
+      "type": "适用边界",
+      "grade": "C",
+      "source": "p2–3；全文",
+      "attr": "AI概括"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "流动构型",
+      "value": "二维定常不可压缩层流；等温运动平板穿过静止流体（Sakiadis 边界层）",
+      "source": "p2–3，Sec. I–II"
+    },
+    {
+      "item": "速度边界条件",
+      "value": "f(0)=0；f'(0)=1；f'(∞)=0",
+      "source": "p3，Eq. (1b)"
+    },
+    {
+      "item": "热边界条件",
+      "value": "h(0)=0；h(∞)=1（等温壁 Tw、远场 T∞）",
+      "source": "p3，Eq. (2b)"
+    },
+    {
+      "item": "物性假设",
+      "value": "常物性；无粘性耗散、无压力梯度、无体积力",
+      "source": "p2–3，Sec. I–II",
+      "note": "由方程 (1)–(2) 的形式与文中物性假设可得"
+    },
+    {
+      "item": "Prandtl 数范围",
+      "value": "全 Pr（复合解声称 valid for all Prandtl numbers）",
+      "source": "p2 摘要；p6 Eq. (15)"
+    },
+    {
+      "item": "精确级数适用性",
+      "value": "双精度下 Pr>12 后病态；Pr<12 可用 (10b)",
+      "source": "p4，Sec. II A"
+    },
+    {
+      "item": "渐近级数适用性",
+      "value": "Pr→∞；发散级数，取最优截断",
+      "source": "p5–6，Eqs. (13)–(14)，Fig. 2"
+    },
+    {
+      "item": "复合解切换点",
+      "value": "Pr<6 用 (15a)；Pr≥6 用 (15b)",
+      "source": "p6，Eq. (15)"
+    },
+    {
+      "item": "精确级数截断",
+      "value": "80项（(10b) 的 b_n 和）",
+      "source": "p6，Eq. (15a)；p6 正文"
+    },
+    {
+      "item": "渐近级数截断",
+      "value": "15项（(14) 的 δ_n 和）",
+      "source": "p6，Eq. (15b)；Fig. 2"
+    },
+    {
+      "item": "数值基准",
+      "value": "对 (8) 用 Simpson 法，误差容限约 10^-11",
+      "source": "p6，Sec. II C"
+    },
+    {
+      "item": "壁面剪切参数 κ",
+      "value": "κ=f''(0)=−0.443748313368861…",
+      "source": "p12，Appendix B",
+      "note": "负号按PDF图像核对；OCR丢失负号"
+    },
+    {
+      "item": "级数常数 C",
+      "value": "C=ã0=1.6161254468…；ã1=−2.131345924047…",
+      "source": "p3，Eq. (3c)"
+    },
+    {
+      "item": "Table I 文献 Pr 集合",
+      "value": "0.6、0.7、1、2、5.5、7、10、50、100（不同作者不等）",
+      "source": "p3–4，Table I",
+      "note": "各文献仅覆盖其中部分Pr"
+    },
+    {
+      "item": "精度指标",
+      "value": "全 Pr 最大误差 O(10^-10)；最大误差在 Pr=6；Girgin 文献对比误差低至 10^-9",
+      "source": "p8，Fig. 4；p8 结论"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "Pr",
+      "definition": "Prandtl 数，Pr=ν/α（运动粘度/热扩散率）",
+      "value": "复合解覆盖全 Pr；精确级数双精度下 Pr<12；渐近用于大 Pr",
+      "relation": "h'(0) 仅随 Pr 变化",
+      "source": "p3，Eq. (2a)；p6 Eq. (15)"
+    },
+    {
+      "name": "Re_x",
+      "definition": "基于流向坐标与壁速的当地雷诺数，Re_x=xUw/ν",
+      "value": "Nusselt 数中标度 Re_x^{1/2}",
+      "relation": "Nu_x=h'(0)Re_x^{1/2}",
+      "source": "p3，Eq. (5)"
+    },
+    {
+      "name": "Nu_x",
+      "definition": "当地 Nusselt 数，Nu_x=hx/k",
+      "value": "由 h'(0) 与 Re_x 决定",
+      "relation": "Nu_x=h'(0)Re_x^{1/2}",
+      "source": "p3，Eq. (5)"
+    },
+    {
+      "name": "h'(0)",
+      "definition": "壁面无量纲温度梯度（=换热系数标度）",
+      "value": "由复合解 (15) 给出；小 Pr ~CPr/2，大 Pr ~π^{-1/2}Pr^{1/2}",
+      "relation": "Nu_x=h'(0)Re_x^{1/2}",
+      "source": "p3、p6、p8"
+    },
+    {
+      "name": "κ",
+      "definition": "壁面剪切参数，κ=f''(0)",
+      "value": "−0.443748313368861…",
+      "relation": "决定大 Pr 渐近系数 c_n 与 ηt=−2/κ",
+      "source": "p12，Appendix B；p6 Eq. (18b)"
+    },
+    {
+      "name": "C",
+      "definition": "Sakiadis 远场渐近常数，f~C as η→∞；C=ã0",
+      "value": "1.6161254468…",
+      "relation": "在 c_n 中消去；小 Pr 极限 h'(0)~CPr/2",
+      "source": "p3，Eq. (3c)；p5、p7"
+    },
+    {
+      "name": "ã_n",
+      "definition": "精确收敛级数 f=Σã_n e^{-nCη/2} 的系数",
+      "value": "ã0=C、ã1=−2.131345924047…，按 (3b) 递推",
+      "relation": "代入 (7) 得 (8)/(10b)",
+      "source": "p3，Eqs. (3a–c)"
+    },
+    {
+      "name": "b_n",
+      "definition": "指数级数 exp(PrΣ(ã_n/(nC))u^n)=Σb_nu^n 的系数",
+      "value": "b0=1，按 (10a) 递推",
+      "relation": "精确级数 (10b) 的分子项",
+      "source": "p4，Eqs. (9)–(10a)"
+    },
+    {
+      "name": "c_n",
+      "definition": "大 Pr 渐近 h'(0)~Σc_nPr^{-n/2} 的系数",
+      "value": "c1=√π、c2=−(2/3)κ、c3=√π(5/12)κ²、c4=−(1/135)(160κ³−18κ)…",
+      "relation": "只依赖 κ；由 Laplace 方法/附录B给出",
+      "source": "p5，Eq. (13)；p12 Appendix B"
+    },
+    {
+      "name": "δ_n",
+      "definition": "倒数渐近 h'(0)~Pr^{1/2}Σδ_nPr^{-n/2} 的系数",
+      "value": "δ0=c1^{-1}，按 (14b) 递推",
+      "relation": "由 c_n 的倒数级数得到",
+      "source": "p5，Eqs. (14a,b)"
+    },
+    {
+      "name": "η_t",
+      "definition": "热边界层边缘的相似坐标（线性速度近似下 h''=0 处）",
+      "value": "ηt=−2/κ",
+      "relation": "δt=ηt√(νx/Uw)",
+      "source": "p6，Eqs. (16b)、(18b)"
+    },
+    {
+      "name": "δ_t",
+      "definition": "热边界层厚度",
+      "value": "δt=ηt√(νx/Uw)",
+      "relation": "大 Pr 时 δt≪δ",
+      "source": "p6，Eq. (16b)；Fig. 1"
+    },
+    {
+      "name": "φ(u)",
+      "definition": "Laplace 积分 I=∫_0^1u^{-1}e^{φ(u)Pr}du 的指数函数",
+      "value": "φ(u)=ln u+Σ(ã_n/(nC))u^n；在 u=1 取极大",
+      "relation": "φ'(1)=0；φ(1) 与 κ 相关",
+      "source": "p5，Eqs. (11a,b)；Fig. 5"
+    },
+    {
+      "name": "N",
+      "definition": "级数截断阶数",
+      "value": "精确级数80项；渐近级数15项；最优截断",
+      "relation": "误差随N与Pr变化，见 Fig. 2",
+      "source": "p6，Eq. (15)；Fig. 2"
+    }
+  ],
+  "methods": [
+    {
+      "item": "相似变换",
+      "value": "与 Blasius 相同的相似变量；速度场 f(η)、温度场 h(η)",
+      "source": "p3，Sec. II"
+    },
+    {
+      "item": "精确速度解",
+      "value": "Naghshineh/Barlow 的收敛幂级数 f=Σã_n e^{-nCη/2}，系数递推 (3b)",
+      "source": "p3，Eqs. (3a–c)"
+    },
+    {
+      "item": "热方程积分",
+      "value": "把 (2a) 写成 (ln h')'= −½Pr f，积分两次并用边界条件得 (7)",
+      "source": "p3–4，Eqs. (6)–(7)"
+    },
+    {
+      "item": "变量替换",
+      "value": "u=e^{-Cη/2}，把半无限积分变为 [0,1] 上的积分 (8)",
+      "source": "p4，Eq. (8)"
+    },
+    {
+      "item": "指数级数递推",
+      "value": "用 b_n 递推 (10a) 展开 exp(PrΣ…)，逐项积分得精确级数 (10b)",
+      "source": "p4，Eqs. (9)–(10b)"
+    },
+    {
+      "item": "Laplace 方法",
+      "value": "φ(u) 在 u=1 取极大；在 u=1 泰勒展开，积分下限延到 −∞，逐阶收集 Pr 幂",
+      "source": "p4–5，Eqs. (11)–(12)，Appendix A"
+    },
+    {
+      "item": "渐近级数与倒数级数",
+      "value": "得 (13)；对 (13) 用幂级数倒数递推得 (14a,b)；取最优截断",
+      "source": "p5，Eqs. (13)–(14)"
+    },
+    {
+      "item": "复合拼接",
+      "value": "以数值解为基准比较两种展开误差，Pr<6用(10b)80项、Pr≥6用(14)15项",
+      "source": "p5–6，Eq. (15)，Fig. 2"
+    },
+    {
+      "item": "Pohlhausen/线性速度近似",
+      "value": "大 Pr 下近壁速度线性，f=κη²/2+η；由 h''=0 定 ηt=−2/κ；积分得 (20)，再作 Gamma 展开得 (21)",
+      "source": "p6–7，Eqs. (16)–(21)"
+    },
+    {
+      "item": "发散级数替代",
+      "value": "用壁面经典幂级数 (C1)（收敛半径 R≈4.0722）代替 (3)，仍复现全部 c_n",
+      "source": "p7、p12（附录C）"
+    },
+    {
+      "item": "数值验证",
+      "value": "对 (8) 用 Simpson 法（容差约10^-11）作基准；比较截断误差与文献值",
+      "source": "p6，Sec. II C；Figs. 2–4"
+    },
+    {
+      "item": "误差与文献对比",
+      "value": "相对误差随 Pr 与截断 N 变化；与 Table I 的离散文献值及线性速度近似对比",
+      "source": "p6–8，Figs. 2–4，Table I"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "先用 Sakiadis 流动的精确收敛级数 f 把热边界层方程积分为 h'(0) 的精确积分/级数；再对 h'(0) 分母积分作 Laplace 大 Pr 展开，得到发散的渐近级数；最后按 Pr 分段拼接精确解与渐近解，并用壁面发散的经典幂级数证明大 Pr 渐近只依赖近壁流动。",
+    "assumptions": [
+      "二维定常不可压缩牛顿流体，常物性，无粘性耗散、无压力梯度、无体积力。",
+      "等温运动平板：壁速 Uw、壁温 Tw 恒定；远场静止、温度 T∞ 恒定。",
+      "相似变换成立，f 与 h 仅是相似坐标 η 的函数。",
+      "热边界层与速度边界层可由同一相似变换描述；h'(0) 只依赖 Pr。",
+      "大 Pr 时热边界层厚度远小于速度边界层厚度，近壁速度可线性化，f≈κη²/2+η。",
+      "Laplace 方法：φ(u) 的唯一极大在 u=1，贡献集中在 u=1 附近；将积分下限延到 −∞/上限延到 ∞ 只引入次主导误差。",
+      "渐近级数发散，按最优截断取值；精确级数在双精度下 Pr>12 病态。",
+      "Pohlhausen 近似中把 h(∞)=1 位移到 η=ηt，并以 h'(ηt)=0 定义热边界层边缘。"
+    ],
+    "steps": [
+      {
+        "title": "Sakiadis 速度与热边界层的相似方程",
+        "text": "运动平板穿过静止流体，采用与 Blasius 相同的相似变换，得到三阶非线性速度方程与线性温度方程；速度边界条件与 Blasius 相反（壁面 f'=1、远场 f'=0）。",
+        "latex": [
+          "f''' + \\frac{1}{2} f f'' = 0, \\tag{1a}",
+          "f(0)=0,\\quad f'(0)=1,\\quad f'(\\infty)=0, \\tag{1b}",
+          "h'' + \\frac{1}{2} Pr f h' = 0, \\tag{2a}",
+          "h(0)=0,\\quad h(\\infty)=1, \\tag{2b}"
+        ],
+        "source": "p3，Sec. II，Eqs. (1)–(2)"
+      },
+      {
+        "title": "精确收敛的 Sakiadis 速度级数",
+        "text": "Naghshineh 等给出、Barlow 等显式化的精确级数用指数基函数展开，系数按 (3b) 递推计算；C 与 ã1 给到双精度。",
+        "latex": [
+          "f(\\eta)=\\sum_{n=0}^{\\infty}\\tilde a_n e^{-nC\\eta/2},\\quad \\eta\\in[0,\\infty), \\tag{3a}",
+          "\\tilde a_{n+1}=\\frac{1}{Cn(n+1)^2}\\sum_{k=1}^{n} k^2\\tilde a_k\\tilde a_{n+1-k},\\quad n\\ge 1, \\tag{3b}",
+          "C=\\tilde a_0=1.6161254468\\ldots,\\quad \\tilde a_1=-2.131345924047\\ldots \\tag{3c}"
+        ],
+        "source": "p3，Sec. II A，Eq. (3)"
+      },
+      {
+        "title": "Nusselt 数与壁面温度梯度的关系",
+        "text": "当地 Nusselt 数由壁面无量纲温度梯度与当地雷诺数决定；因此求换热系数归结为求 h'(0)(Pr)。",
+        "latex": [
+          "Nu_x=h'(0)Re_x^{1/2}, \\tag{5}",
+          "Nu_x=\\frac{hx}{k},\\quad Re_x=\\frac{xU_w}{\\nu}"
+        ],
+        "source": "p3，Sec. II，Eq. (5)"
+      },
+      {
+        "title": "热方程积分：h'(0) 的精确积分表达",
+        "text": "把温度方程写成对数导数 (ln h')'=−½Pr f，积分并利用边界条件 h(0)=0、h(∞)=1 定出两个积分常数，得到 h'(0) 的倒数积分。",
+        "latex": [
+          "\\frac{h''}{h'}=\\left(\\ln h'\\right)'=-\\frac{1}{2}Pr f,",
+          "h'(\\eta)=H\\exp\\left(-\\frac{1}{2}Pr\\int_0^{\\eta}f(\\xi)\\,d\\xi\\right),",
+          "h'(0)=\\left[\\int_0^{\\infty}\\exp\\left(-\\frac{1}{2}Pr\\int_0^{\\eta}f(\\xi)\\,d\\xi\\right)d\\eta\\right]^{-1} \\tag{7}"
+        ],
+        "source": "p3–4，Eqs. (6)–(7)"
+      },
+      {
+        "title": "代入精确解并换元 u=e^{-Cη/2}",
+        "text": "把 (3a) 代入 (7) 的内层积分，得到含 Σ(ã_n/(nC))e^{-nCη/2} 的指数；令 u=e^{-Cη/2}，把 η∈[0,∞) 映射到 u∈(0,1]，得到 h'(0) 的有限区间积分。",
+        "latex": [
+          "\\int_0^{\\eta}f(\\xi)\\,d\\xi=C\\eta+\\frac{2}{C}\\sum_{n=1}^{\\infty}\\frac{\\tilde a_n}{nC}\\left(1-e^{-nC\\eta/2}\\right),",
+          "h'(0)=\\left\\{\\frac{C}{2}\\int_0^1 u^{Pr-1}\\exp\\left(Pr\\sum_{n=1}^{\\infty}\\frac{\\tilde a_n}{nC}u^n\\right)du\\right\\}^{-1}\\exp\\left(Pr\\sum_{n=1}^{\\infty}\\frac{\\tilde a_n}{nC}\\right) \\tag{8}"
+        ],
+        "source": "p4，Eq. (8)"
+      },
+      {
+        "title": "指数级数递推与精确收敛级数 (10b)",
+        "text": "用 b_n 的递推展开 (8) 中的指数，再逐项积分；分母的 Σb_n/(n+Pr) 给出精确的逐点收敛表示。",
+        "latex": [
+          "\\sum_{n=0}^{\\infty}b_nu^n=\\exp\\left(Pr\\sum_{n=1}^{\\infty}\\frac{\\tilde a_n}{nC}u^n\\right), \\tag{9}",
+          "b_{n+1}=\\frac{Pr}{C(n+1)}\\sum_{k=0}^{n}\\tilde a_{k+1}b_{n-k},\\quad b_0=1, \\tag{10a}",
+          "h'(0)=\\frac{C}{2}\\exp\\left(Pr\\sum_{n=1}^{\\infty}\\frac{\\tilde a_n}{nC}\\right)\\left[\\sum_{n=0}^{\\infty}\\frac{b_n}{n+Pr}\\right]^{-1} \\tag{10b}"
+        ],
+        "source": "p4，Eqs. (9)–(10b)"
+      },
+      {
+        "title": "Laplace 积分与大 Pr 渐近展开",
+        "text": "把 (8) 的分母记作 I；φ(u) 在 u=1 取极大，按 Laplace 方法在 u=1 泰勒展开，将积分下限延到 −∞，逐阶收集 Pr 幂，得到 I 的渐近式与 h'(0) 的渐近级数。",
+        "latex": [
+          "I=\\int_0^1\\frac{1}{u}\\exp(\\phi(u)Pr)\\,du, \\tag{11a}",
+          "\\phi(u)=\\ln u+\\sum_{n=1}^{\\infty}\\frac{\\tilde a_n}{nC}u^n, \\tag{11b}",
+          "I\\sim\\frac{C}{2}e^{\\phi(1)Pr}\\left[\\frac{c_1}{Pr^{1/2}}+\\frac{c_2}{Pr}+\\frac{c_3}{Pr^{3/2}}+\\frac{c_4}{Pr^{2}}+\\cdots\\right],\\quad Pr\\to\\infty \\tag{12}",
+          "h'(0)\\sim\\sum_{n=1}^{\\infty}c_nPr^{-n/2},\\quad Pr\\to\\infty \\tag{13}"
+        ],
+        "source": "p4–5，Eqs. (11)–(13)，Appendix A"
+      },
+      {
+        "title": "倒数级数与可计算的渐近形式 (14)",
+        "text": "对 (13) 取倒数，用幂级数倒数递推消去 c1 的显式除法，得到 h'(0)~Pr^{1/2}Σδ_nPr^{-n/2}，便于按 Pr 截断。",
+        "latex": [
+          "h'(0)\\sim Pr^{1/2}\\sum_{n=0}^{\\infty}\\delta_nPr^{-n/2},\\quad Pr\\to\\infty \\tag{14a}",
+          "\\delta_n=-\\frac{1}{c_1}\\sum_{k=1}^{n}c_{k+1}\\delta_{n-k},\\quad \\delta_0=c_1^{-1} \\tag{14b}"
+        ],
+        "source": "p5，Eqs. (14a,b)"
+      },
+      {
+        "title": "复合解 (15)：精确解与渐近解分段拼接",
+        "text": "以 (8) 的 Simpson 数值解为基准比较两种截断的误差：Pr<6 用精确级数 (10b) 的80项，Pr≥6 用渐近级数 (14) 的15项；拼接后全 Pr 最大误差约 10^-10，最大误差在 Pr=6。",
+        "latex": [
+          "h'(0)=\\frac{C}{2}\\exp\\left(Pr\\sum_{n=1}^{80}\\frac{\\tilde a_n}{nC}\\right)\\left[\\sum_{n=0}^{80}\\frac{b_n}{n+Pr}\\right]^{-1},\\quad Pr<6 \\tag{15a}",
+          "h'(0)=Pr^{1/2}\\sum_{n=0}^{15}\\delta_nPr^{-n/2},\\quad Pr\\ge 6 \\tag{15b}"
+        ],
+        "source": "p5–6，Eq. (15)，Fig. 2"
+      },
+      {
+        "title": "Pohlhausen 线性速度近似",
+        "text": "大 Pr 时热边界层远薄于速度边界层，近壁速度线性；由 f(0)=0、f'(0)=1、f''(0)=κ 得抛物线流函数。令 h''=0 定义热边界层边缘 ηt，并在 η<ηt 内积分温度方程。",
+        "latex": [
+          "f=\\frac{\\kappa\\eta^2}{2}+\\eta,\\quad \\eta<\\eta_t, \\tag{16a}",
+          "y=\\delta_t=\\eta_t\\sqrt{\\frac{\\nu x}{U_w}}, \\tag{16b}",
+          "\\frac{h''}{h'}=-Pr\\left(\\frac{\\kappa\\eta^2}{2}+\\frac{\\eta}{2}\\right),\\quad \\eta<\\eta_t \\tag{17}",
+          "h'=h'(0)\\exp\\left[-Pr\\left(\\frac{\\kappa\\eta^3}{12}+\\frac{\\eta^2}{4}\\right)\\right],\\quad \\eta<\\eta_t \\tag{18a}",
+          "\\eta_t=-\\frac{2}{\\kappa} \\tag{18b}"
+        ],
+        "source": "p6，Eqs. (16)–(18)"
+      },
+      {
+        "title": "跨热边界层积分与 h'(0) 的 Gamma 展开",
+        "text": "把 (18a) 从0积到 ηt，并用 h(ηt)=1 得 h'(0) 的积分倒数；把 exp(−Pr κη³/12) 展开为幂级数并将上限延到 ∞，得到 Gamma 函数级数 (21)，其括号级数与 (13) 的倒数展开前三项完全一致。",
+        "latex": [
+          "h(\\eta_t)-h(0)=h'(0)\\int_0^{\\eta_t}\\exp\\left[-Pr\\left(\\frac{\\kappa\\eta^3}{12}+\\frac{\\eta^2}{4}\\right)\\right]d\\eta \\tag{19}",
+          "h'(0)=\\left[\\int_0^{\\eta_t}\\exp\\left(-Pr\\left(\\frac{\\kappa\\eta^3}{12}+\\frac{\\eta^2}{4}\\right)\\right)d\\eta\\right]^{-1} \\tag{20}",
+          "h'(0)\\sim\\left[\\sum_{n=0}^{\\infty}\\frac{\\Gamma\\left(\\frac{3n+1}{2}\\right)}{n!}\\left(-\\frac{2\\kappa}{3}\\right)^n Pr^{-(n+1)/2}\\right]^{-1} \\tag{21}"
+        ],
+        "source": "p6–7，Eqs. (19)–(21)"
+      },
+      {
+        "title": "用壁面发散的经典幂级数复现全部渐近系数",
+        "text": "经典 Sakiadis 幂级数在 |η|<R≈4.0722 收敛、之外发散；作者只用其在壁面附近的有限项，把它代入 (7) 并在小 η 上作 Laplace 展开，仍得到与附录B完全相同的 c_n，说明大 Pr 渐近只需近壁流场信息。",
+        "latex": [
+          "f(\\eta)=\\sum_{n=0}^{\\infty}a_n\\eta^n, \\tag{C1a}",
+          "a_{n+3}=\\frac{\\sum_{k=0}^{n}(k+1)(k+2)a_{k+1}a_{n-k}}{2(n+1)(n+2)(n+3)},\\quad n\\ge 0, \\tag{C1b}",
+          "a_0=0,\\quad a_1=1,\\quad a_2=\\frac{\\kappa}{2}, \\tag{C1c}",
+          "R\\approx 4.0722"
+        ],
+        "source": "p12，Appendix C，Eqs. (C1a–c)"
+      },
+      {
+        "title": "渐近系数与壁面剪切参数",
+        "text": "附录B给出 c1–c15 的显式多项式，全部只含 κ；κ 的数值为 −0.443748313368861…。前几个系数如下（未编号表，按原文转录）。",
+        "latex": [
+          "c_1=\\sqrt{\\pi}",
+          "c_2=-\\frac{2}{3}\\kappa",
+          "c_3=\\sqrt{\\pi}\\,\\frac{5}{12}\\kappa^2",
+          "c_4=-\\frac{1}{135}\\left(160\\kappa^3-18\\kappa\\right)",
+          "c_5=\\frac{\\sqrt{\\pi}}{288}\\left(385\\kappa^4-72\\kappa^2\\right)",
+          "c_6=-\\frac{1}{2835}\\left(15680\\kappa^5-4032\\kappa^3+162\\kappa\\right)",
+          "\\kappa=f''(0)=-0.443748313368861\\ldots"
+        ],
+        "source": "p12，Appendix B（未编号系数表）"
+      }
+    ],
+    "result": "复合解 (15) 在全 Pr 范围内与机器精度数值解相比最大误差 O(10^-10)，最大误差位于 Pr=6；小/大 Pr 极限分别为 h'(0)~CPr/2 与 h'(0)~π^{-1/2}Pr^{1/2}；κ=f''(0) 控制大 Pr 的全部渐近系数，C 在 c_n 中消去。",
+    "limits": "推导假设常物性、二维定常不可压缩层流、等温壁、无粘性耗散与压力梯度；大 Pr 展开依赖 Laplace 端点局部化与最优截断，级数本身发散；精确级数在双精度下 Pr>12 不稳定；复合解以 Pr=6 切换是按误差曲线选定的分段点，并非单一一致收敛的闭式公式。"
+  },
+  "mechanism": "大 Pr 时热边界层厚度 δt=ηt√(νx/Uw) 远小于速度边界层 δ；热边界层内的速度剖面可线性化为 f≈η+κη²/2（即 ux≈Uw(1+κη)），温度方程退化为 h''/h'=−Pr(κη²/2+η/2)，其解由壁面剪切 κ 与 Pr 控制。Laplace 积分 I 的权重集中在 u=1（即 η=0 壁面），因此只有近壁速度剖面进入渐近系数，描述远场衰减的常数 C 消去。精确级数在 Pr 大时因 b_n 递推的病态而失稳；渐近级数虽发散，但在最优截断处给出极高精度；两者在 Pr=6 附近误差相当，故拼接成复合解。",
+  "findings": [
+    {
+      "finding": "热边界层方程可积分为 h'(0) 的精确积分 (7)，把求换热系数化为对 Sakiadis 精确流场的积分。",
+      "evidence": "Eqs. (6)–(7) 的推导；h'(0) 只依赖 Pr。",
+      "type": "精确解",
+      "strength": "强",
+      "source": "p3–4，Sec. II A",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "代入精确级数并换元后，得到逐点收敛的精确级数 (10b)。",
+      "evidence": "Eqs. (8)–(10b)；b_n 递推 (10a)。",
+      "type": "精确解",
+      "strength": "强",
+      "source": "p4，Eqs. (8)–(10b)",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "精确级数在双精度下 Pr>12 后病态，不能直接用于大 Pr。",
+      "evidence": "b_n 递推的条件数随 Pr 恶化；p4 与 p8 结论均明确。",
+      "type": "数值限制",
+      "strength": "强",
+      "source": "p4，Sec. II A；p8 结论",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "Laplace 方法给出 h'(0) 的大 Pr 渐近级数 (13)/(14)，系数只依赖 κ。",
+      "evidence": "Eqs. (11)–(14)；附录A的逐阶展开；附录B的显式系数。",
+      "type": "渐近解",
+      "strength": "强",
+      "source": "p4–5，Eqs. (11)–(14)；p12 Appendix B",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "复合解 (15) 在全 Pr 内与数值解相比最大误差 O(10^-10)，最大误差在 Pr=6。",
+      "evidence": "Fig. 2 的误差曲线；p6 正文与 p8 结论。",
+      "type": "定量精度",
+      "strength": "强",
+      "source": "p5–6，Eq. (15)，Fig. 2；p8",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "渐近级数发散且存在最优截断；15→16 项时某些 Pr 的误差反而增大。",
+      "evidence": "Fig. 2 图注明确说明误差在15与16项之间增大。",
+      "type": "渐近性质",
+      "strength": "强",
+      "source": "p5–6，Fig. 2 图注",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "大 Pr 渐近只含 κ，C 消去；壁面附近流动主导渐近行为。",
+      "evidence": "附录B系数全为 κ 的多项式；正文指出 C 虽出现在 φ 中但不出现在 c_n。",
+      "type": "机理",
+      "strength": "强",
+      "source": "p5、p7–8，Sec. III C；p12 Appendix B",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "壁面发散的经典幂级数 (C1) 也能给出与附录B完全一致的 c_n，且推导步骤更少。",
+      "evidence": "附录C 的 (C1)、(C7)、(C8)；作者称其产生与附录B相同的 c_n。",
+      "type": "替代推导",
+      "strength": "强",
+      "source": "p7、p12–13，Appendix C",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "Girgin (2011) 的 h'(0) 与本文最接近（误差低至 10^-9），κ 误差大的文献 h'(0) 误差也大。",
+      "evidence": "Fig. 4 相对误差对比；Table I 的 κ 与 h'(0) 值。",
+      "type": "文献对比",
+      "strength": "强",
+      "source": "p8，Sec. III C，Fig. 4，Table I",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "作者给出四点：(1) 由 Sakiadis 精确解得到热边界层的精确 h'(0) 表达，但该精确解在较大 Pr 下数值不稳定；(2) 用 Laplace 方法得到大 Pr 渐近展开，并与精确解组成复合解，在全 Pr 内与机器精度数值解相比误差 O(10^-10)，最大误差在 Pr=6；(3) 发散的壁面幂级数可替代收敛级数给出全部高阶渐近系数，且只需近壁流场信息；(4) κ 的精度决定 h'(0) 的精度，Girgin 的 κ 最接近本文值，其 h'(0) 误差低至 10^-9；小 Pr 极限 h'(0)~CPr/2，大 Pr 极限 h'(0)~π^{-1/2}Pr^{1/2}；多项式近似必须使用壁面导出的约束，而非边界层外缘约束（p7–8）。",
+  "contributions": [
+    "给出 Sakiadis 热边界层壁面温度梯度的精确积分与精确级数表达，使 Nusselt 数可对任意 Pr 直接计算。",
+    "识别并量化精确级数在大 Pr 下的数值不稳定性（双精度下 Pr>12）。",
+    "用 Laplace 方法导出大 Pr 渐近展开到任意阶，并给出只依赖壁面剪切 κ 的显式系数。",
+    "构造精确解+渐近解的全 Pr 复合公式，最大误差 O(10^-10)，最大误差在 Pr=6。",
+    "证明壁面发散的经典幂级数足以获得全部高阶渐近系数，只需近壁流场信息。",
+    "从数学上解释大 Pr 渐近由 κ 控制、C 消去，并给出多项式近似应满足壁面约束的准则。"
+  ],
+  "limits": "（1）常物性、二维定常不可压缩层流、等温壁、无粘性耗散与压力梯度；不覆盖可压缩、变物性、强压力梯度或非等温壁；（2）只处理等温壁边界条件；常热流、绝热壁、吹吸/抽吸等边界未覆盖；（3）精确级数在双精度下 Pr>12 不稳定；复合解以 Pr=6 分段是按误差曲线选定的，且渐近级数发散、依赖最优截断；（4）精度是与同一 ODE 的机器精度数值解比较，不是实验验证；无实验数据、无测量不确定度；（5）未给出舍入误差/区间算术的严格误差界；O(10^-10) 是双精度数值观察值；（6）未覆盖三维/轴对称、变粘度、辐射、非牛顿流体或运动壁面抽吸等扩展；（7）只给出 h'(0)(Pr)；实际 Nu_x 还需 Re_x 与流体物性，文中未讨论物性温度依赖；（8）Table I 的文献 κ 值不一致，文献对比只能限于离散 Pr，不能作为独立精度基准。",
+  "significance": "本文把 Sakiadis 边界层传热从“逐 Pr 数值求解”推进为“全 Pr 的显式高精度公式”，为运动平板/连续片材冷却、涂层与传质计算提供了可直接使用的基准解；同时揭示了精确级数在大 Pr 下的数值不稳定，并证明 Laplace 渐近只依赖壁面剪切 κ，这对理解高 Pr/高 Sc 边界层的局部控制机制、以及设计多项式近似具有方法学价值。复合解 O(10^-10) 的精度也使其可作为其他数值方法的验证基准。",
+  "quotes": [
+    {
+      "text": "accurate to O(10−10)",
+      "supports": "复合解的全 Pr 精度。",
+      "source": "p8，Conclusions",
+      "use": "核心结果"
+    },
+    {
+      "text": "unstable at large Pr",
+      "supports": "精确解的主要限制。",
+      "source": "p8，Conclusions",
+      "use": "数值限制"
+    },
+    {
+      "text": "optimal truncation",
+      "supports": "渐近级数发散但可在最优截断处取高精度。",
+      "source": "p6，Fig. 2 图注",
+      "use": "渐近性质"
+    },
+    {
+      "text": "Although divergent",
+      "supports": "发散的壁面级数仍可用于获得渐近系数。",
+      "source": "p2，Abstract",
+      "use": "方法学结论"
+    },
+    {
+      "text": "wall shear stress parameter",
+      "supports": "κ 是控制大 Pr 渐近的关键量。",
+      "source": "p8，Sec. III C",
+      "use": "机理"
+    },
+    {
+      "text": "valid for all Prandtl numbers",
+      "supports": "模型的适用范围声明。",
+      "source": "p2，Abstract",
+      "use": "适用范围"
+    },
+    {
+      "text": "asymptotic expansion",
+      "supports": "大 Pr 渐近展开是复合解的另一分支。",
+      "source": "p5，Sec. II B",
+      "use": "分段公式"
+    },
+    {
+      "text": "CPr=2 (Pr → 0)",
+      "supports": "小 Pr 极限行为。",
+      "source": "p8，Fig. 3 图注",
+      "use": "渐近极限"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig01_p5.png",
+      "n": 1,
+      "page": 5,
+      "caption_zh": "Sakiadis 流动中速度边界层与热边界层发展示意图",
+      "caption_orig": "FIG. 1. Schematic of the development of both velocity and thermal boundary layers in Sakiadis flow.",
+      "why": "支撑大 Pr 下 δt≪δ 的物理图像，是线性速度近似与 Laplace 近壁局部化的几何基础。"
+    },
+    {
+      "file": "fig02_p6.png",
+      "n": 2,
+      "page": 6,
+      "caption_zh": "解析解相对数值解的误差随 Pr 与截断阶数 N 的变化",
+      "caption_orig": "FIG. 2. Error of analytical solutions relative to the numerical solution of (8). The solid curves indicate truncations of expansion (10b) (the exact solution), computed in double precision, while the dashed curves represent truncations of the asymptotic expansion (14). In both cases, N denotes the order of truncation. For certain values of Pr, the error increases between 15 and 16 terms of the asymptotic solution, indicating that there is an optimal truncation.",
+      "why": "直接支撑80项精确解+15项渐近解的全 Pr 最大误差约10^-10、Pr=6处误差最大以及最优截断现象。"
+    },
+    {
+      "file": "fig03_p8.png",
+      "n": 3,
+      "page": 8,
+      "caption_zh": "h'(0) 随 Pr 的变化及小/大 Pr 渐近线",
+      "caption_orig": "FIG. 3. Plot showing the effect of Pr on h0ð0Þ from the analytical solution (15). The asymptotic behavior h0ð0Þ  CPr=2 ðPr ! 0Þ and h0ð0Þ  p1=2Pr1=2 ðPr ! 1Þ is shown as dashed lines on the plot for comparison.",
+      "why": "支撑复合解覆盖全 Pr，并直观验证 h'(0)~CPr/2（Pr→0）与 h'(0)~π^{-1/2}Pr^{1/2}（Pr→∞）两条极限。"
+    },
+    {
+      "file": "fig04_p8.png",
+      "n": 4,
+      "page": 8,
+      "caption_zh": "本文模型与数值解及既有文献 h'(0) 的相对误差",
+      "caption_orig": "FIG. 4. Relative error in h0ð0Þ between the present model (15) and the numerical solution of (8). The error in numerically predicted h0ð0Þ from prior literature8–10,12–19,28 is presented for comparison as well as that of the linear velocity profile, which is a common first approximation for this type of problem. Note that the values given in previous work are restricted to discrete values of Pr, contrasting with Fig. 3.",
+      "why": "支撑全文精度声明（O(10^-10)）并显示 Girgin 的文献值最接近（误差低至10^-9），说明 κ 精度控制 h'(0) 精度。"
+    }
+  ],
+  "verification": {
+    "text_only": "仅使用 bundle 全文与原 PDF 第5–7、12页（共4页，≤6页）核对公式排版；未引入外部文献、教材推导或未给出的数值。",
+    "a_grade_supported": "A级要点均可回溯：Eqs. (1)–(3)、(5)、(7)–(15)、(16)–(21)、附录B系数、Table I、Figs. 2–4；κ 值与 O(10^-10) 误差均取自原文。",
+    "attributes_marked": "three_sentence、core_points、findings 均逐条标注【原文明确】【AI概括】【AI推断】；AI概括只用于组织原文，未把推断写成原文结论。",
+    "no_fabrication": "未编造页码、图号、公式或数据；OCR丢失的负号/上下标已按PDF图像核对（κ 为负、c_n 记号而非 γ_n）；未能逐字确认的排版在 derivation 中说明；未虚构实验或不确定度。",
+    "coverage": "覆盖 Abstract、Sec. I–IV、Appendices A–C、Table I、Figs. 1–5；重点核对 Eqs. (3)、(7)–(15)、(21) 与附录B的 c1–c8。",
+    "open_questions": [
+      "精确级数在双精度下 Pr>12 不稳定；若用任意精度算术，能否把精确分支推到更大 Pr，计算成本如何？",
+      "复合解以 Pr=6 分段；是否存在平滑混合函数，使全 Pr 误差进一步降低且不需要硬切换？",
+      "模型只处理等温壁；常热流、绝热壁、吹吸/抽吸边界下 h'(0) 的对应精确解与复合解如何构造？",
+      "常物性假设在真实高 Pr 流体（油、某些液体）中是否成立？变粘度/变导热系数会如何改变 O(10^-10) 精度？",
+      "本文精度是与同一 ODE 的数值解比较；是否有实验数据可用于独立验证 h'(0) 与 Nu_x？",
+      "发散壁面级数只需近壁信息这一结论，能否推广到 Blasius、楔形流、非牛顿等其它相似边界层？",
+      "Table I 中不同作者的 κ 值差异较大；应以哪个 κ 为基准，κ 的不确定度如何传播到 h'(0)？",
+      "三维/轴对称运动表面、有限平板前缘效应与流向压力梯度下，二维相似解与复合公式的适用边界是什么？"
+    ]
+  }
+}

@@ -1,0 +1,629 @@
+{
+  "id": 1110,
+  "read_note": "数值模拟研究（二维定常层流斜坡诱导 SWBLI）。全文 9 页、17 项抓图（其中 Table 1 被清单误标为“图1”，使用时按原图注校正）。正文公式在 PDF 文本层严重错位，已用原 PDF 第 44–49 页逐式核对；公式编号、页码以原刊为准。信息完整度较高，但部分图注只给趋势、未给定量误差；个别试验工况（如 Re∞/m）参考长度未明示。",
+  "one_line": "用二维层流NS模拟检验斜坡SWBLI经典关联式，指出其壁温/总温缩放缺陷并给出修正。",
+  "three_sentence": [
+    {
+      "text": "斜坡诱导 SWBLI 的工程预测依赖少量关联式，但既有关联式对上游影响范围、分离泡长度与峰值热流的定量预测缺乏统一性，尤其不能正确缩放壁温与总温。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "作者用自研 USHAS 二维层流可压缩 NS 求解器复现 Holden、Marini、Grasso 等工况，发现上游影响随壁温与斜坡角增大、随马赫数与总焓减小，且 Needham–Stollery 与 Grasso–Marini 两式给出的斜率相反、都无法整理不同壁温/总温比的数据。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "作者在 Needham–Stollery 式中引入 β*=(Tw/T0)^0.5(T1/T0)^0.5 得到式(10)，并给出修正分离泡关联式（F_lb=0.13）、峰值 Stanton 数关联式(22) 及自由相互作用系数 F_sep=1.04、F_plat=1.84。",
+      "attr": "AI概括"
+    }
+  ],
+  "imrad": {
+    "introduction": "【原文明确】SWBLI 是高超声速飞行器进气道、舵面、拐角等部位设计的关键问题，斜坡构型是典型代表；分离泡长度 Lb、上游影响范围 Lui、分离点/平台压力与峰值热流是核心特征量（p42）。作者指出，已有实验、理论、数值研究虽多，但能同时给出分离泡尺寸与上游影响范围、并显含几何与来流参数的定量关联式很少；Needham–Stollery 与 Katzer 的关联式较重要，但各家标度律“not unique in nature”（p43）。因此本文目标是：用统一数值方法评估文献关联式对上述特征量的适用性，并在必要时修改关联式以纳入更多参数（p43）。【AI概括】这是“关联式评估+经验修正”型研究，不是新物理模型。",
+    "methods": "【原文明确】采用自研 USHAS（Unstructured Solver for Hypersonic Aerothermodynamic Simulations）二维平面可压缩层流 NS 求解器；有限体积法，无粘通量用 AUSM 格式配 Venkatakrishnan 限制器，粘性通量按 Blazek 方法，显式 Euler 时间推进，Sutherland 律求粘度，方程无量纲化；入口给均匀高超声速来流（p43）。用 Holden Case A 做网格无关性与验证：120×60、190×80、230×120 三套网格，比较壁面压力、Stanton 数与摩阻，结论是 190×80 已足以复现实验（p44，Figs. 3–4）。随后按 Table 1 的 Case A/B/C 计算（p44）。边界层厚度 δ0 由 Mallinson 等 Blasius 解给出；参考温度按式(5)；分离泡用壁面剪切分布判定；初始分离压力 p2 取 p_inc，后者用 Inger 三层理论计算（p46–47）。",
+    "results": "【原文明确】1）上游影响 Lui 随壁温 Tw 与斜坡角 θ 增大，随 M∞ 与来流总焓/总温减小；只要存在斜坡干扰，Lui 总存在；干扰强度随 θ 近似线性增强（p44–45）。2）Needham–Stollery 式(3) 与 Grasso–Marini 式(6) 在固定来流/壁面条件下都把 Lui 与 θ 线性联系，但两者对 M∞ 的斜率符号相反；两者都把不同 Tw/T0 的曲线竖直平移，却不能使不同总焓的数据落到同一路径（p45，Figs. 6–7）。3）引入 β* 后式(10) 使所有数据（含 Holden–Moselle 实验点）呈线性（p45–46，Fig. 8）。4）分离泡：Needham 式(12)、Needham–Stollery 式(13) 仅适用于变 M∞ 或变 θ；Katzer 式(14) 不适用于斜坡分离，式(15) 较好；Davis–Sturtevant 式(16) 对 Tw/T0 线性但对 M∞ 偏离；修正 Needham 式(18) 配合 β_lb 使数据与 Holden–Moselle、Grasso–Marini 点共线，F_lb=0.13（p46–48，Figs. 9–14）。5）自由相互作用理论式(20) 给出分离/平台压力系数两族不同斜率直线，数据随壁温/总温比偏离，拟合 F_sep=1.04、F_plat=1.84（p48–49，Fig. 15）。6）峰值 Stanton 数：Grasso–Marini 式(21) 对变 M∞ 失效；用本文 Lui 关联式替代后式(22) 使各工况点靠近同一直线，并得到额外实验点支持（p49，Figs. 16–17）。",
+    "discussion": "【原文明确】作者把偏差归因于两点：一是原关联式只用 Lui 或 Lb 与压力升、Re、Cf 的幂次关系，未显式区分壁温与总温的作用；二是各家标度律形式不同，导致同一物理量出现不同斜率（p45–49）。修正策略是用压力升项 (p3/p1−1) 体现斜坡角，用 Cf0 体现 Re 与壁温，再额外乘温度因子 β* 或 β_lb；这些是经验拟合，不是从守恒方程严格导出（p45–48）。【AI概括】方法学价值在于给出“统一数据整理 + 逐步加温度因子”的关联式评估流程；局限是数据点仍主要来自本文同一求解器，独立实验验证很少。",
+    "conclusion": "【原文明确】没有一种已报道关联式能对所有参数变化给出唯一趋势；Needham–Stollery 的上游影响关联式总体优于 Grasso–Marini，但两者都不能预测不同壁温/来流总温比；修正后的式(10) 明显改善 Lui 的定量预测。分离泡方面，除 Davis–Sturtevant 外，原关联式只对 M∞ 或 θ 变化呈线性，修正 Needham 式(18) 扩大了适用范围。自由相互作用理论需补充斜坡角与壁温缩放；峰值 Stanton 数关联式通过引入本文 Lui 关系得到改善（p50）。"
+  },
+  "core_points": [
+    {
+      "point": "研究目标是评估并修正斜坡诱导层流 SWBLI 的工程关联式，而非提出新的湍流/转捩模型。",
+      "type": "研究定位",
+      "grade": "A",
+      "source": "p42–43，Introduction",
+      "attr": "原文明确"
+    },
+    {
+      "point": "采用自研 USHAS 二维层流可压缩 NS 求解器，AUSM+Venkatakrishnan 限制器，显式 Euler，Sutherland 粘度。",
+      "type": "数值方法",
+      "grade": "A",
+      "source": "p43，§2",
+      "attr": "原文明确"
+    },
+    {
+      "point": "网格 190×80 已足以复现 Case A 的壁压、St 与 Cf 分布，作为后续计算网格。",
+      "type": "网格无关性/验证",
+      "grade": "A",
+      "source": "p44，Figs. 3–4",
+      "attr": "原文明确"
+    },
+    {
+      "point": "计算工况覆盖 M∞=5–11.63、Tw=290–500 K、θ=10–25°、T0=1080–1880.84 K，共 4 组试验构型。",
+      "type": "工况范围",
+      "grade": "A",
+      "source": "p44，Table 1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "初始分离判据用 M1θ_inc=80√χ_L，部分工况落在分离区、部分落在附着区。",
+      "type": "分离判据",
+      "grade": "A",
+      "source": "p42 式(1)；p44，Fig. 5",
+      "attr": "原文明确"
+    },
+    {
+      "point": "Lui 随 Tw 与 θ 增大、随 M∞ 与总焓减小；对给定来流，Lui 总存在。",
+      "type": "参数趋势",
+      "grade": "A",
+      "source": "p44–45，§3",
+      "attr": "原文明确"
+    },
+    {
+      "point": "Needham–Stollery 与 Grasso–Marini 两式对 M∞ 的斜率相反，且都不能整理不同 Tw/T0 数据。",
+      "type": "关联式缺陷",
+      "grade": "A",
+      "source": "p45，Figs. 6–7",
+      "attr": "原文明确"
+    },
+    {
+      "point": "修正 Needham–Stollery 式(10) 引入 β*=(Tw/T0)^m(T1/T0)^n，取 m=n=0.5 后数据线性化。",
+      "type": "关联式修正",
+      "grade": "A",
+      "source": "p45–46，式(10)–(11)，Fig. 8",
+      "attr": "原文明确"
+    },
+    {
+      "point": "分离泡关联式中，Katzer 式(15) 优于式(14)；Davis–Sturtevant 式(16) 对 Tw/T0 线性但变 M∞ 失效。",
+      "type": "关联式评估",
+      "grade": "A",
+      "source": "p47，Figs. 11–13",
+      "attr": "原文明确"
+    },
+    {
+      "point": "修正 Needham 分离泡式(18) 加 β_lb 后使数据共线，拟合常数 F_lb=0.13。",
+      "type": "关联式修正",
+      "grade": "A",
+      "source": "p48，式(18)–(19)，Fig. 14",
+      "attr": "原文明确"
+    },
+    {
+      "point": "自由相互作用理论拟合得 F_sep=1.04、F_plat=1.84；两族直线斜率不同，壁温/总温变化时数据偏离。",
+      "type": "压力系数",
+      "grade": "B",
+      "source": "p48–49，式(20)，Fig. 15",
+      "attr": "原文明确"
+    },
+    {
+      "point": "峰值 Stanton 数关联式(22) 用本文 Lui 关系替代 Grasso–Marini 的 Lui 后，各工况点靠近同一直线。",
+      "type": "热流关联式",
+      "grade": "A",
+      "source": "p49，式(21)–(22)，Figs. 16–17",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "Case A（Holden [23]）来流、壁面与几何",
+      "value": "M∞=11.63；T0=1880.84 K；Tw=294.38 K；Re∞/m=55,2116 m⁻¹（按原文排版）；斜坡角 θ=15°；前平板长度 L=0.4394 m",
+      "source": "p44，Table 1",
+      "note": "原文单位列写作 Re∞/m，参考长度未在表中明示；55,2116 的千位分隔疑为排版问题，需回原文核对。"
+    },
+    {
+      "item": "Case B 低总焓（Marini [24]）来流、壁面与几何",
+      "value": "M∞=5、6、7、8；T0=1080 K；Tw=300、400、500 K；Re∞/m=800,000 m⁻¹；θ=10°、12.5°、15°；L=0.05 m",
+      "source": "p44，Table 1",
+      "note": "三档壁温×四档马赫数×三档斜坡角组合计算，原文未逐组合列点。"
+    },
+    {
+      "item": "Case B 高总焓（Marini [24]）来流、壁面与几何",
+      "value": "M∞=5、6、7、8；T0=1800 K；Tw=300、400、500 K；Re∞/m=800,000 m⁻¹；θ=10°、12.5°、15°；L=0.05 m",
+      "source": "p44，Table 1",
+      "note": "与低总焓组仅 T0 不同，用于隔离总焓影响。"
+    },
+    {
+      "item": "Case C（Grasso [25]）来流、壁面与几何",
+      "value": "M∞=10；T0=1102.5 K；Tw=290 K；Re∞/m=165,000 m⁻¹；θ=15°、20°、25°；L=0.179 m",
+      "source": "p44，Table 1",
+      "note": "变斜坡角工况组。"
+    },
+    {
+      "item": "来流边界条件",
+      "value": "入口给定均匀高超声速来流（uniform hypersonic freestream）；二维平面流动；层流",
+      "source": "p43，§2",
+      "note": "未提及来流湍流度、噪声或攻角。"
+    },
+    {
+      "item": "壁面热条件",
+      "value": "等壁温 Tw，按 Table 1 给定；未给出壁面催化条件",
+      "source": "p44，Table 1",
+      "note": "壁温比 Tw/T0 是本文重点考察参数。"
+    },
+    {
+      "item": "气体模型与比热比",
+      "value": "可压缩理想气体框架；γ 以符号出现；具体 γ 数值文中未提及",
+      "source": "p43–46，式(2)、(6)–(7)",
+      "note": "未说明是否量热完全气体、是否考虑高温真实气体效应。"
+    },
+    {
+      "item": "计算网格",
+      "value": "120×60、190×80、230×120 三套；采用 190×80；壁面、前缘与斜坡-平板拐角加密",
+      "source": "p44，§2",
+      "note": "二维结构化网格。"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "χ_L（平板-斜坡接点处粘性干扰参数）",
+      "definition": "χ_L=M1^3√C*/√Re_L，C*=(μw/μ1)(T1/Tw)",
+      "value": "逐工况由 M1、Re_L、Tw 计算；文中未给数值表",
+      "relation": "用于式(1) 的初始分离角判据 M1θ_inc=80√χ_L",
+      "source": "p42，式(1)–(2)"
+    },
+    {
+      "name": "χ_0（上游影响起始位置 x0 处粘性干扰参数）",
+      "definition": "χ_0=M0^3√C*/√Re_x0",
+      "value": "逐工况计算；文中未列表",
+      "relation": "式(3)、(13) 的长度尺度",
+      "source": "p45，式(4)"
+    },
+    {
+      "name": "δ0（x0 处边界层厚度）",
+      "definition": "由 Mallinson 等给出的 Blasius 解计算",
+      "value": "逐工况计算；文中未列表",
+      "relation": "Lui/δ0、Lb/δ0 的无量纲长度尺度",
+      "source": "p45，§3"
+    },
+    {
+      "name": "Lui（上游影响范围）",
+      "definition": "斜坡脚到最上游受扰动位置的距离",
+      "value": "由壁面压力分布提取；逐工况见图 6–8",
+      "relation": "随 Tw、θ 增大，随 M∞、T0 减小",
+      "source": "p42 图2；p44–45"
+    },
+    {
+      "name": "Lb（分离泡长度）",
+      "definition": "分离点 S 与再附点 R 之间距离",
+      "value": "由壁面剪切分布提取；逐工况见图 9–14",
+      "relation": "随 Tw、θ 增大，随 M∞、T0 减小",
+      "source": "p42 图1；p46–47"
+    },
+    {
+      "name": "p3/p1（斜坡后/来流压力比）",
+      "definition": "p3 近似为无粘附着斜激波后压力",
+      "value": "由式(7) 按 M0、β 计算",
+      "relation": "高 Mach 下 p3/p1 ∝ M0^2 sin^2β ∝ M0^2θ^2",
+      "source": "p46，式(7)"
+    },
+    {
+      "name": "β*（上游影响温度修正因子）",
+      "definition": "β*=(Tw/T0)^m(T1/T0)^n",
+      "value": "m=n=0.5（拟合值）",
+      "relation": "乘在式(9) 压力升项后得到式(10)",
+      "source": "p46，式(11)"
+    },
+    {
+      "name": "β_lb（分离泡温度修正因子）",
+      "definition": "β_lb=(Tw/Te)^0.5(Te/T0)",
+      "value": "按工况计算",
+      "relation": "式(18) 的温度缩放项",
+      "source": "p48，式(19)"
+    },
+    {
+      "name": "F_lb（修正 Needham 分离泡关联式常数）",
+      "definition": "LbM0^3/(x0√Re_x0)=F_lb(p3/p2)^2β_lb 中的比例常数",
+      "value": "0.13",
+      "relation": "拟合本文数据得到",
+      "source": "p48，式(18)"
+    },
+    {
+      "name": "F_sep / F_plat（自由相互作用压力系数常数）",
+      "definition": "Cp,sep/plat=F_sep/plat[2Cf0/(M0^2−1)]^0.5 中的比例常数",
+      "value": "F_sep=1.04；F_plat=1.84",
+      "relation": "分离压力与平台压力两族直线",
+      "source": "p49，式(20)"
+    },
+    {
+      "name": "St_peak/St_0（归一化峰值 Stanton 数）",
+      "definition": "再附后峰值 Stanton 数与上游未扰动参考值之比",
+      "value": "逐工况见图 16–17",
+      "relation": "式(22)：与 (Lui/δ0)(M0^3/√Re_x0)C_w+1 的 1.13 次方成正比",
+      "source": "p49，式(21)–(22)"
+    },
+    {
+      "name": "C*（Chapman–Rubesin 常数）",
+      "definition": "C*=(μw/μ1)(T1/Tw)，参考温度按式(5) 计算",
+      "value": "逐工况计算；文中未列表",
+      "relation": "出现在 χ_L、χ_0 及多个关联式中",
+      "source": "p42 式(2)；p45 式(4)–(5)"
+    }
+  ],
+  "methods": [
+    {
+      "item": "求解器",
+      "value": "USHAS（Unstructured Solver for Hypersonic Aerothermodynamic Simulations），二维平面可压缩层流 NS",
+      "source": "p43，§2",
+      "note": "自研代码；非结构网格框架。"
+    },
+    {
+      "item": "空间离散",
+      "value": "有限体积法；无粘通量 AUSM 格式 + Venkatakrishnan 限制器；粘性通量按 Blazek 方法",
+      "source": "p43，§2",
+      "note": "二阶精度细节文中未展开。"
+    },
+    {
+      "item": "时间推进",
+      "value": "显式 Euler；求定常解",
+      "source": "p43，§2",
+      "note": "未给 CFL 数与收敛判据。"
+    },
+    {
+      "item": "粘性",
+      "value": "Sutherland 律计算动力粘度",
+      "source": "p43，§2",
+      "note": "未给 Sutherland 常数。"
+    },
+    {
+      "item": "无量纲化",
+      "value": "方程无量纲化；入口均匀高超声速来流",
+      "source": "p43，§2",
+      "note": "参考量未逐一列出。"
+    },
+    {
+      "item": "网格无关性",
+      "value": "120×60、190×80、230×120；以 190×80 为最终网格",
+      "source": "p44，§2，Figs. 3–4",
+      "note": "判据为壁面压力、Stanton 数和 Cf 分布与实验一致。"
+    },
+    {
+      "item": "验证工况",
+      "value": "Holden Case A：M∞=11.63、Tw=294.38 K、θ=15°、L=0.4394 m",
+      "source": "p44，Table 1；Figs. 3–4",
+      "note": "实验数据来自文献[23]。"
+    },
+    {
+      "item": "初始分离判据",
+      "value": "M1θ_inc=80√χ_L；θ>θ_inc 判为分离",
+      "source": "p42 式(1)；p44 图5",
+      "note": "用于筛选可测分离泡的工况。"
+    },
+    {
+      "item": "边界层厚度",
+      "value": "x0 处 δ0 由 Mallinson 等 Blasius 解计算",
+      "source": "p45，§3",
+      "note": "用于 Lui/δ0、Lb/δ0。"
+    },
+    {
+      "item": "参考温度",
+      "value": "T*/Te=1+0.032Me^2+0.58(Tw/Te−1)",
+      "source": "p45，式(5)",
+      "note": "用于求 Chapman–Rubesin 常数与参考温度物性。"
+    },
+    {
+      "item": "位移厚度",
+      "value": "Katzer 式所需 x0 处位移厚度由 Bertram–Blackstock 关联式给出",
+      "source": "p46–47，§4",
+      "note": "原文未给该关联式具体形式。"
+    },
+    {
+      "item": "初始分离压力",
+      "value": "p2 取 p_inc；p_inc/p1 用 Inger 三层解计算",
+      "source": "p46–47，§4",
+      "note": "用于式(12)、(14)–(16)。"
+    },
+    {
+      "item": "特征量提取",
+      "value": "Lui 由壁面压力分布提取；Lb 由壁面剪切分布提取",
+      "source": "p44–47，§3–§4",
+      "note": "未给数值不确定度或提取阈值。"
+    },
+    {
+      "item": "关联式拟合",
+      "value": "将本文数据按各文献关联式的无量纲坐标作图，线性拟合求斜率/常数；修正式用试凑温度因子后最小化散布",
+      "source": "p45–49，§3–§6",
+      "note": "拟合优度未给定量指标（如 R²）。"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "以 Needham–Stollery 上游影响关联式 Lui/δ0=Fui(M0θ)^2/χ0 为起点，用高 Mach 斜激波关系把 (M0θ)^2 改写为压力升 (p3/p1−1)，使 θ→0 时 Lui→0；再乘温度因子 β* 以纳入壁温与总温。分离泡则从 Needham 式(12) 出发，保留其压力比平方与 Re/Mach 标度，另乘 β_lb 并重新组合成式(18)，由数据拟合 F_lb。峰值 Stanton 数把 Grasso–Marini 式中的 Lui 替换为本文修正的 Lui 关系。",
+    "assumptions": [
+      "定常、二维、平面、层流边界层；无湍流、无转捩、无三维效应",
+      "来流为量热完全气体，γ 为常数（具体数值文中未提及）",
+      "斜坡诱导激波为无粘附体斜激波，p3 近似激波后压力",
+      "高 Mach 近似 M0^2≫1，且激波角 β 与斜坡角 θ 成正比（β∝θ）",
+      "x0 处边界层可用 Blasius 解描述，δ0 与位移厚度由经验/相似解给出",
+      "p2 取初始分离压力 p_inc，p_inc/p1 由 Inger 三层解给出",
+      "修正项 β*、β_lb 的形式与指数由本文数据拟合确定，不是从守恒方程导出",
+      "各关联式的比例常数对本文工况族为常数，未验证其随 γ、几何的普适性"
+    ],
+    "steps": [
+      {
+        "title": "初始分离判据与粘性干扰参数",
+        "text": "用 Needham–Stollery 的初始分离关系判断工况是否分离：M1θ_inc=80√χ_L；χ_L 由 M1、Re_L、壁温与来流温度通过 Chapman–Rubesin 常数给出。",
+        "latex": [
+          "M_1\\theta_{inc}=80\\sqrt{\\chi_L} \\qquad (1)",
+          "\\chi_L=M_1^3\\frac{\\sqrt{C^*}}{\\sqrt{Re_L}},\\qquad C^*=\\frac{\\mu_w}{\\mu_1}\\frac{T_1}{T_w} \\qquad (2)"
+        ],
+        "source": "p42，式(1)–(2)"
+      },
+      {
+        "title": "上游影响基线关联式",
+        "text": "Needham–Stollery 把 Lui 用 x0 处边界层厚度 δ0 与粘性干扰参数 χ0 无量纲化，并令其与 (M0θ)^2/χ0 成比例；δ0 由 Blasius 解给出。",
+        "latex": [
+          "\\frac{L_{ui}}{\\delta_0}=F_{ui}\\frac{(M_0\\theta)^2}{\\chi_0} \\qquad (3)",
+          "\\chi_0=\\frac{M_0^3\\sqrt{C^*}}{\\sqrt{Re_{x_0}}} \\qquad (4)"
+        ],
+        "source": "p45，式(3)–(4)"
+      },
+      {
+        "title": "参考温度与 Chapman–Rubesin 常数",
+        "text": "用参考温度法把壁温与来流温度纳入物性：T*/Te=1+0.032Me^2+0.58(Tw/Te−1)，再由参考温度求 μ*、C*。",
+        "latex": [
+          "\\frac{T^*}{T_e}=1+0.032M_e^2+0.58\\left(\\frac{T_w}{T_e}-1\\right) \\qquad (5)"
+        ],
+        "source": "p45，式(5)"
+      },
+      {
+        "title": "Grasso–Marini 上游影响基线",
+        "text": "另一条被评估的上游影响关联式由 Grasso–Marini 给出：用 L 与 δ0 的无量纲长度、χ、M1 与 Cf0 组合，并把压力升 (p3/p1−1) 作为驱动项；它与 Needham–Stollery 式对 M∞ 的斜率符号相反。",
+        "latex": [
+          "\\frac{L_{ui}}{L}M_1^{1/2}\\approx\\left(\\frac{\\delta_0}{L}\\right)^2\\frac{1}{\\chi M_1^{3/2}C_{f0}}\\left(\\frac{p_3}{p_1}-1\\right) \\qquad (6)"
+        ],
+        "source": "p45，式(6)，Fig. 7"
+      },
+      {
+        "title": "高 Mach 斜激波压力比",
+        "text": "为显式引入斜坡角，作者用高 Mach 近似 M0^2≫1，把无粘附着斜激波压力比写成式(7)；因 β∝θ，得到 p3/p1∝M0^2θ^2。",
+        "latex": [
+          "\\frac{p_3}{p_1}=\\frac{2\\gamma}{\\gamma+1}M_0^2\\sin^2\\beta \\qquad (7)",
+          "\\frac{p_3}{p_1}\\propto M_0^2\\theta^2"
+        ],
+        "source": "p46，式(7) 及其后文字"
+      },
+      {
+        "title": "把 (M0θ)^2 换成压力升",
+        "text": "将式(7) 代入式(3) 的分子，得到式(8)；为满足无斜坡时 Lui=0，把 p3/p1 改为 (p3/p1−1)，得式(9)。",
+        "latex": [
+          "\\frac{L_{ui}}{\\delta_0}\\propto\\frac{\\sqrt{Re_{x_0}}}{M_0^3\\sqrt{C^*}}\\frac{p_3}{p_1} \\qquad (8)",
+          "\\frac{L_{ui}}{\\delta_0}\\propto\\frac{\\sqrt{Re_{x_0}}}{M_0^3\\sqrt{C^*}}\\left(\\frac{p_3}{p_1}-1\\right) \\qquad (9)"
+        ],
+        "source": "p46，式(8)–(9)"
+      },
+      {
+        "title": "引入壁温/总温修正 β*",
+        "text": "在式(9) 右端乘温度因子 β*=(Tw/T0)^m(T1/T0)^n，得到修正 Needham–Stollery 式(10)；对本文数据取 m=n=0.5 时线性拟合最好。",
+        "latex": [
+          "\\frac{L_{ui}}{\\delta_0}\\propto\\frac{\\sqrt{Re_{x_0}}}{M_0^3\\sqrt{C^*}}\\left(\\frac{p_3}{p_1}-1\\right)\\beta^* \\qquad (10)",
+          "\\beta^*=\\left(\\frac{T_w}{T_0}\\right)^m\\left(\\frac{T_1}{T_0}\\right)^n,\\qquad m=n=0.5 \\qquad (11)"
+        ],
+        "source": "p46，式(10)–(11)，Fig. 8"
+      },
+      {
+        "title": "分离泡的四类基线关联式",
+        "text": "Needham 式(12) 用 (p3/p2)^2 与 √Re_x0/M0^3；Needham–Stollery 式(13) 直接借用上游影响形式；Katzer 式(14) 及等价式(15) 用 (p3−p_inc)/p1；Davis–Sturtevant 式(16) 用 Λ0（式17，含 μw/μe、Tr/Te 与 (Tw/Te)^0.5）与 3/2 次方压力项。",
+        "latex": [
+          "\\frac{L_b}{x_0}\\propto\\frac{\\sqrt{Re_{x_0}}}{M_0^3}\\left(\\frac{p_3}{p_2}\\right)^2 \\qquad (12)",
+          "\\frac{L_b}{\\delta_0}=\\frac{(M_0\\theta)^2}{\\chi_0} \\qquad (13)",
+          "\\frac{L_b}{\\delta_0}\\propto\\frac{\\sqrt{Re_{x_0}}}{\\sqrt{C^*}M_0^3}\\left(\\frac{p_3}{p_1}-\\frac{p_{inc,p}}{p_1}\\right) \\qquad (14)",
+          "\\frac{L_b\\sqrt{C^*}M_0^3}{\\delta_0\\sqrt{Re_{x_0}}}\\propto\\left(\\frac{p_3}{p_1}-\\frac{p_{inc,p}}{p_1}\\right) \\qquad (15)",
+          "\\frac{L_b}{x_0}\\propto\\frac{\\Lambda_0}{\\gamma^{3/2}M_0^3}\\left(\\frac{p_3}{p_1}-\\frac{p_{inc,p}}{p_1}\\right)^{3/2} \\qquad (16)",
+          "\\Lambda_0=\\frac{\\mu_w}{\\mu_e}\\frac{T_r}{T_e}\\left(\\frac{T_w}{T_e}\\right)^{1/2} \\qquad (17)"
+        ],
+        "source": "p46–47，式(12)–(17)"
+      },
+      {
+        "title": "修正 Needham 分离泡关联式",
+        "text": "在式(12) 上增加温度因子 β_lb，并把方程重排为式(18)；β_lb=(Tw/Te)^0.5(Te/T0)。对本文及文献点拟合得 F_lb=0.13。",
+        "latex": [
+          "\\frac{L_bM_0^3}{x_0\\sqrt{Re_{x_0}}}=F_{lb}\\left(\\frac{p_3}{p_2}\\right)^2\\beta_{lb} \\qquad (18)",
+          "\\beta_{lb}=\\left(\\frac{T_w}{T_e}\\right)^{1/2}\\frac{T_e}{T_0} \\qquad (19)"
+        ],
+        "source": "p48，式(18)–(19)，Fig. 14"
+      },
+      {
+        "title": "自由相互作用压力系数",
+        "text": "按 Chapman 自由相互作用理论，分离点与平台压力系数均由上游局部 Cf0 与 M0 组合成单一相似参数；拟合得 F_sep=1.04、F_plat=1.84。",
+        "latex": [
+          "C_{p,sep/plat}=F_{sep/plat}\\left(\\frac{2C_{f0}}{M_0^2-1}\\right)^{1/2} \\qquad (20)"
+        ],
+        "source": "p48–49，式(20)，Fig. 15"
+      },
+      {
+        "title": "峰值 Stanton 数关联式",
+        "text": "Grasso–Marini 把 Hung–Barnett 的 (p3/p0)^1.13 关系用 Lui 改写为式(21)；本文用修正后的 Lui/δ0 替换，得到式(22)，使不同 M∞、θ、壁温/总温工况归一。",
+        "latex": [
+          "\\frac{St_{peak}}{St_0}\\propto\\left(\\frac{L_{ui}}{\\delta_0}M_1^2C_{f0}+1\\right)^{1.13} \\qquad (21)",
+          "\\frac{St_{peak}}{St_0}\\propto\\left(\\frac{L_{ui}}{\\delta_0}\\frac{M_0^3}{\\sqrt{Re_{x_0}}}C_w+1\\right)^{1.13} \\qquad (22)"
+        ],
+        "source": "p49，式(21)–(22)，Figs. 16–17"
+      }
+    ],
+    "result": "式(10) 为上游影响范围的修正关联式，β* 取 m=n=0.5；式(18) 为分离泡长度的修正关联式，F_lb=0.13；式(22) 为峰值 Stanton 数关联式。三者均以本文数值数据线性化，并吸收少量文献实验/数值点；自由相互作用拟合给出 F_sep=1.04、F_plat=1.84。",
+    "limits": "全部修正项与指数是经验拟合，不是守恒方程推导结果；数据主要来自同一求解器与同一类斜坡构型，独立验证点很少（Holden–Moselle、Grasso–Marini 等）；γ 数值、壁面催化、三维与湍流效应均未覆盖；F_lb、F_sep、F_plat 是否随 γ 或几何变化文中未提及。"
+  },
+  "mechanism": "【原文明确】上游影响通过边界层亚声速层向上游传播压力升：斜坡角越大，无粘激波压力升越大，Lui 越长；Re 与壁温通过 x0 处 Cf0 和边界层厚度进入标度，壁温升高使关联式曲线整体上移，故 Lui、Lb 增大；来流 Mach 数与总焓升高则使 Lui、Lb 减小（p44–45）。【原文明确】分离泡存在的必要条件是 θ>θ_inc；足够大的上游影响并不自动保证分离泡（p46）。【AI概括】作者把壁温效应全部塞进 β*、β_lb 与 Cf0，并未给出“壁温如何改变近壁密度/剪切层稳定性”的细节机制；因此本文是标度律层面的解释，而非流动物理层面的因果链。",
+  "findings": [
+    {
+      "finding": "190×80 网格足以复现 Case A 的壁面压力、Stanton 数与摩阻分布，验证了求解器对分离点、平台压力与再附点的预测能力。",
+      "evidence": "三套网格结果几乎重合；与 Holden 实验对比“encouraging agreement”（p44，Figs. 3–4）",
+      "type": "数值验证",
+      "strength": "强",
+      "source": "p44，§2，Figs. 3–4",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "初始分离判据把 Table 1 工况分成分离区与附着区，后续分离泡关联式只用分离区工况。",
+      "evidence": "Fig. 5 的 θ_inc–80√χ_L/M∞ 图；Case A、Case B 的 M=5–7/θ=15°、Case C 的 θ=20°/25° 落在分离区（p44、p46）",
+      "type": "工况筛选",
+      "strength": "强",
+      "source": "p44 图5；p46 §4",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "Lui 随 Tw 和斜坡角增大、随 M∞ 和来流总焓/总温减小；对任何斜坡干扰 Lui 均存在。",
+      "evidence": "§3 文字结论；Figs. 6–8 中不同 Tw/T0、T0 的数据族位置",
+      "type": "参数趋势",
+      "strength": "强",
+      "source": "p44–45，§3",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "Needham–Stollery 与 Grasso–Marini 对 Lui 的预测在变 M∞ 时斜率符号相反，且都不能把不同 Tw/T0 数据整理到同一曲线。",
+      "evidence": "Figs. 6–7 中不同壁温比曲线竖直平移但不重合；正文明确“disparity in slopes”（p45）",
+      "type": "关联式对比",
+      "strength": "强",
+      "source": "p45，Figs. 6–7",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "引入 β*=(Tw/T0)^0.5(T1/T0)^0.5 的修正 Needham–Stollery 式(10) 使全部数据（含 Holden–Moselle 实验点）呈线性，可视为 Lui 的广义关联式。",
+      "evidence": "Fig. 8 中所有数据点落在一条直线附近；原文称“excellent prediction with linear fit”（p45–46）",
+      "type": "关联式修正",
+      "strength": "强",
+      "source": "p45–46，式(10)–(11)，Fig. 8",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "四种分离泡关联式中，Needham 式(12)/式(13) 和 Katzer 式(15) 仅适用于变 M∞ 或变 θ；Davis–Sturtevant 式(16) 对 Tw/T0 线性但变 M∞ 偏离；修正 Needham 式(18)（F_lb=0.13）使本文与文献点共线。",
+      "evidence": "Figs. 9–14 的线性拟合与偏离；F_lb=0.13（p48）",
+      "type": "关联式评估/修正",
+      "strength": "中",
+      "source": "p46–48，Figs. 9–14",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "自由相互作用理论给出的分离压力与平台压力两族直线斜率不同，且数据随壁温/总温比偏离；拟合常数 F_sep=1.04、F_plat=1.84。",
+      "evidence": "Fig. 15：空心泡/虚线为分离压力，实线/实心泡为平台压力；两族斜率不同（p48–49）",
+      "type": "压力系数",
+      "strength": "中",
+      "source": "p48–49，式(20)，Fig. 15",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "Grasso–Marini 峰值 Stanton 数关联式对变 M∞ 工况失效；用本文 Lui 关联式替换后的式(22) 使不同 θ、M∞、壁温/总温数据靠近同一直线，并得到额外实验点支持。",
+      "evidence": "Figs. 16–17 对比：Fig. 16 数据分散、趋势随 M∞ 改变；Fig. 17 数据靠近拟合线（p49）",
+      "type": "热流关联式",
+      "strength": "中",
+      "source": "p49，式(21)–(22)，Figs. 16–17",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "【原文明确】没有任何已报道关联式能对所有参数变化给出唯一趋势。上游影响方面，Needham–Stollery 式优于 Grasso–Marini 式，但两者都不能处理不同壁温/来流总温比；引入 β* 的式(10) 改善了 Lui 的定量预测。分离泡方面，除 Davis–Sturtevant 外，原关联式只对 M∞ 或 θ 变化呈线性；修正 Needham 式(18) 扩大了适用范围。自由相互作用理论需补充斜坡角与壁温缩放；峰值 Stanton 数关联式通过引入本文 Lui 关系得到改善（p50）。",
+  "contributions": [
+    "用同一套二维层流 NS 解系统评估了上游影响、分离泡、分离/平台压力与峰值 Stanton 数的多组文献关联式。",
+    "提出含 β*=(Tw/T0)^0.5(T1/T0)^0.5 的修正 Needham–Stollery 上游影响关联式（式10）。",
+    "提出含 β_lb 的修正 Needham 分离泡关联式（式18），拟合常数 F_lb=0.13。",
+    "给出自由相互作用压力系数常数 F_sep=1.04、F_plat=1.84。",
+    "提出以本文 Lui 关系为基础的峰值 Stanton 数关联式（式22）。"
+  ],
+  "limits": "【原文明确】数据主要来自本文数值解，独立实验验证有限；修正项为经验拟合；只考虑二维层流、单一气体与斜坡构型；γ 的影响未单独考察；壁温比范围有限（Tw=290–500 K）。【AI识别】Table 1 的 Re∞/m 参考长度未注明，部分工况组合未逐点列出；图 8、14、17 的拟合优度没有定量指标；式(22) 中 C_w 的定义与取值未明确；把 p2 取为 p_inc 会引入三层理论误差。",
+  "significance": "【AI概括】对高超声速进气道、隔离器、舵面等斜坡/压缩拐角的热防护与分离预测，本文提供了可直接套用的 Lui、Lb 与 St_peak 修正标度，尤其提醒：只按 M∞ 与 θ 拟合的关联式在壁温/总温变化时会系统性失准。方法上，“统一数据 + 逐项加温度因子 + 线性化检验”的流程可迁移到其他 SWBLI 构型。【AI推断】由于验证主要依赖同一求解器，工程使用前应先用目标构型的实验或高保真 CFD 校核 F_lb、F_sep、F_plat 等常数。",
+  "quotes": [
+    {
+      "text": "none of the reported correlations predict unique trend",
+      "supports": "全文核心判断：既有关联式不具唯一性",
+      "source": "p50，Conclusions",
+      "use": "用于说明本文动机与结论，适合放在引言或结论对比处"
+    },
+    {
+      "text": "upstream influence increases with increase in wall temperature",
+      "supports": "壁温升高使上游影响范围增大",
+      "source": "p44，§3 首段",
+      "use": "引用参数趋势时使用，需与“随 M∞、总焓减小”并列"
+    },
+    {
+      "text": "both correlations fail in the prediction for different wall to freestream temperature ratios",
+      "supports": "Needham–Stollery 与 Grasso–Marini 均不能处理壁温比",
+      "source": "p50，Conclusions",
+      "use": "支撑修正关联式的必要性"
+    },
+    {
+      "text": "grid size of 190 × 80 is sufficient to reproduce experimental measurements",
+      "supports": "网格无关性结论",
+      "source": "p44，§2",
+      "use": "引用数值设置时使用"
+    },
+    {
+      "text": "The value of Flb is observed as 0.13.",
+      "supports": "修正分离泡关联式的拟合常数",
+      "source": "p48，§4",
+      "use": "复现式(18) 时引用"
+    },
+    {
+      "text": "Fsep = 1.04 and Fplat = 1.84",
+      "supports": "自由相互作用压力系数拟合值",
+      "source": "p49，§5",
+      "use": "引用分离/平台压力关联式时使用"
+    },
+    {
+      "text": "almost all the present data points lie closer to the fitted line",
+      "supports": "式(22) 对峰值 Stanton 数的归一化效果",
+      "source": "p49，§6",
+      "use": "支撑峰值热流关联式改进"
+    },
+    {
+      "text": "p2 is taken as the incipient pressure, pinc",
+      "supports": "分离泡关联式中 p2 的处理方式",
+      "source": "p46，§4",
+      "use": "复现式(12) 时说明 p2 取值"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig01_p2.png",
+      "n": 1,
+      "page": 2,
+      "caption_zh": "斜坡诱导 SWBLI 示意图：分离点 S、再附点 R、分离泡长度 Lb、上游影响范围 Lui 及区域 1/2/3",
+      "caption_orig": "Fig. 1. Schematic diagram representing ramp based SWBLI.",
+      "why": "定义全文核心几何量与分区，是理解 Lui、Lb 提取和关联式无量纲化的基础。"
+    },
+    {
+      "file": "fig06_p4.png",
+      "n": 5,
+      "page": 4,
+      "caption_zh": "初始分离条件分析：以 80√χ_L/M∞ 为横坐标、θ_inc 为纵坐标，标出分离区与附着区及 Table 1 各工况位置",
+      "caption_orig": "Fig. 5. Incipient separation condition analysis.",
+      "why": "支撑“部分工况分离、部分附着”的筛选结论，并说明为何分离泡关联式只用部分工况。"
+    },
+    {
+      "file": "fig09_p5.png",
+      "n": 8,
+      "page": 5,
+      "caption_zh": "按本文修正的上游影响关联式整理的数据点：(p3/p1−1)β* 与 Lui/δ0 呈线性，含 Holden–Moselle 实验点",
+      "caption_orig": "Fig. 8. Data points fitted according to present modification for extent of upstream influence.",
+      "why": "直接支撑式(10) 与 β* 修正的有效性，是本文最主要的关联式修正证据。"
+    },
+    {
+      "file": "fig16_p8.png",
+      "n": 17,
+      "page": 8,
+      "caption_zh": "按本文峰值 Stanton 数关联式整理的数据点：归一化 St_peak/St_0 与 (Lui/δ0)(M0^3/√Re_x0)C_w+1 的关系",
+      "caption_orig": "Fig. 17. Data points fitted according to present correlation for peak Stanton number.",
+      "why": "支撑式(22) 能将不同斜坡角、马赫数与壁温/总温工况归一到同一直线，并含额外实验点验证。"
+    }
+  ],
+  "verification": {
+    "text_only": "是——仅使用 bundle 全文、抓图清单与原 PDF 第 44–49 页核对公式；未引入外部知识或文献结论。",
+    "a_grade_supported": "是——A 级要点均有页码、图号或公式支撑：Table 1（p44）、式(1)–(22)（p42–49）、Figs. 5/8/14/17（p44–49）。",
+    "attributes_marked": "是——three_sentence、core_points、findings 均逐条标注【原文明确】/【AI概括】/【AI推断】。",
+    "coverage": "全文 9 页已读完；IMRaD、工况表、关键参数、方法、推导链、2–4 幅图件、引文与核验项均覆盖。",
+    "no_fabrication": "未编造页码、图号、公式或数据；Table 1 图号错位、Re∞/m 参考长度、γ 数值等缺失或存疑处已注明“文中未提及/需回原文核对”。",
+    "open_questions": [
+      "Table 1 中 Case A 的 Re∞/m 写作 55,2116，是否为 552,116 m⁻¹ 的排版错误？参考长度是什么？",
+      "F_lb=0.13、F_sep=1.04、F_plat=1.84 是否随 γ、斜坡几何或 Re 范围变化？文中未给敏感性分析。",
+      "式(22) 中 C_w 的定义、取值与参考温度未明确，复现时如何计算？",
+      "分离泡关联式统一用 p2=p_inc，Inger 三层解在强干扰、低 Re 下的误差有多大？",
+      "修正关联式的指数 m=n=0.5 是否唯一？文中未给拟合优度或置信区间。",
+      "本文数据几乎全部来自 USHAS 同一求解器，独立实验验证仅少量文献点，普适性需进一步确认。",
+      "二维层流假设对 Case A（M∞=11.63）是否成立？原文未讨论三维/转捩效应。"
+    ]
+  }
+}

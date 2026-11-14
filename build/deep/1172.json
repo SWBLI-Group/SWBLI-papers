@@ -1,0 +1,637 @@
+{
+ "id": 1172,
+ "read_note": "类型：理论分析（精确解、对称性与群论），J. Fluid Mech. 655 (2010) 327–343，共17页。材料为带页码全文和1幅抓取图件；正文与参考文献完整，但PDF文本层的分式、根号、多行公式大量错位，已回读PDF第4、5、10–13页核对式(3.5)(3.7)(5.2)–(5.6)(7.1)–(7.14)。全文只有Figure 1（p.339）一幅图，图件清单亦仅此一项，故figures仅1条。信息完整度：假设、方程、三个算例完整；无实验/数值数据，无传热与可压缩效应。页码用期刊印刷页，figures.page为bundle图件清单页码（PDF页）。",
+ "one_line": "拉伸面边界层方程对 y→y+y0(x) 平移不变，已知精确解由此构成连续群并可生成新解。",
+ "three_sentence": [
+  {
+   "text": "连续运动表面诱导的边界层精确解数量庞大，且不可渗透与可渗透表面两条研究线彼此独立、缺乏统一的生成机制。",
+   "attr": "AI概括"
+  },
+  {
+   "text": "作者证明控制方程与远场条件对任意横向平移 y→y+y0(x) 不变，壁面条件按 Ũw=u[x,y0]、Ṽw=v[x,y0]−y0'Ũw 改变，平移解构成连续交换群，并以Crane、Bickley和后向通用解为例给出群元素。",
+   "attr": "原文明确"
+  },
+  {
+   "text": "由此，许多已发表的“新”精确解只是既有primary solution的平移对应解；任意目标拉伸速度都可由u的反函数反解位移，并以相应的抽吸/吹除实现。",
+   "attr": "AI概括"
+  }
+ ],
+ "imrad": {
+  "introduction": "Sakiadis型（连续运动表面诱导）定常平面边界层自1961年以来积累了大量精确解，但不可渗透表面与可渗透表面两条研究线看似独立，解空间高度多样、难以归类（pp.327–328）。作者提出：控制方程对横向坐标的任意平移 y→y+y0(x) 不变，故一个已知解可生成无穷多新解，并可把大量解约化为少数生成解（primary solutions）。目标是建立平移群框架并给出Crane、Bickley、后向通用解三个算例。适用边界：定常、二维、不可压缩、环境静止、无流向压力梯度的层流边界层（式2.1–2.2，p.328）。",
+  "methods": "纯理论工作。以(2.1)–(2.4)的边界层方程及流函数形式为起点，直接对ψ作变换 ψ̃(x,y)=ψ[x,y+y0(x)]，用链式法则证明方程与远场条件不变（3.1–3.6）；由壁面条件导出Ũw、Ṽw（3.5），并由u的反函数给出匹配任意目标Ũw的位移（3.7、5.11）；再逐条检验群公理（第4节）；随后把变换作用于幂律相似解（5.1–5.19），并逐例计算Crane（第6节）、Bickley（第7节）与通用后向解（第8节）。验证方式是与文献中已发表的精确解逐式对照（Gupta & Gupta 1977、Magyari & Keller 2000、Weidman & Magyari 2010、Fang & Zhang 2010），没有实验或数值验证。",
+  "results": "核心结果：(i) 方程与u(x,∞)=0对任意y→y+y0(x)不变，壁面条件变为Ũw=u[x,y0(x)]、Ṽw=v[x,y0(x)]−y0'Ũw（p.330）；(ii) 平移解构成连续交换群（p.330）；(iii) 当f'可反解时 η0=f'^{-1}(Ũw/Uw)，可对任意目标拉伸速度构造解（p.333）；(iv) η0=常数保持相似性，只把a重标定为ã=af'(η0)并产生非零质量传递参数f̃w=f(η0)/√f'(η0)（pp.333–334）；(v) y0=常数一般破坏相似性，Bickley例中Ũw=ax^{-1/3}sech²(√(a/6υ)y0x^{-2/3})，小x处显著偏离Uw、远下游趋近之（式7.14、Fig.1、p.339）；(vi) Crane群给出同一e^{-η}剖面及补偿抽吸/吹除（6.5–6.7，p.335）；(vii) 后向通用解在m>-1需抽吸、m<-1需吹除，故非primary，但仍可平移（p.340）。",
+  "discussion": "机制上，边界层方程不显含y，且Prandtl理论忽略曲率项，使非均匀平移也成为对称性；平移把壁面移到原流场内部，原流场的u、v在y=y0处共同决定新的Ũw、Ṽw，等价于用抽吸/吹除补偿拉伸速度分布的改变（pp.329–330）。作者据此主张许多“新”精确解只是平移对应解（pp.336、338、340–341），并把平移自由度视为边界层控制与多孔材料制造的可能工具，还指出结果可推广到含F(u)项的动量方程（如MHD Hartmann阻力，p.341）。局限：仅定常二维不可压缩、无压力梯度与传热；m=−1被排除；要求u对y可反解；对y0=常数破坏相似性的情形只给形式解，未讨论稳定性与工程可实现性。"
+ },
+ "core_points": [
+  {
+   "point": "控制方程(2.3)与远场条件u(x,∞)=0对任意非均匀平移 y→y+y0(x) 不变；壁面条件则实质改变。",
+   "type": "理论结论",
+   "grade": "A",
+   "source": "p.329–330，§3，式(3.1)–(3.6)",
+   "attr": "原文明确"
+  },
+  {
+   "point": "变换后壁面速度满足Ũw=u[x,y0(x)]、Ṽw=v[x,y0(x)]−y0'Ũw，横向平移等价于附加抽吸/吹除。",
+   "type": "理论结论",
+   "grade": "A",
+   "source": "p.330，式(3.5)",
+   "attr": "原文明确"
+  },
+  {
+   "point": "所有平移解构成连续群：合成律y03=y01+y02，满足结合律与交换律，恒元为零平移，逆元为−y0。",
+   "type": "群论论证",
+   "grade": "A",
+   "source": "p.330，§4",
+   "attr": "原文明确"
+  },
+  {
+   "point": "若u(x,y)对y可反解，则η0=f'^{-1}(Ũw/Uw)给出匹配任意目标拉伸速度分布的位移。",
+   "type": "理论结论",
+   "grade": "A",
+   "source": "p.333，式(5.11)",
+   "attr": "原文明确"
+  },
+  {
+   "point": "η0=常数保持自相似，只重标定尺度因子并使不可渗透primary解变为带质量传递的解；故fw≠0的解不是基本新解。",
+   "type": "理论结论",
+   "grade": "A",
+   "source": "pp.333–334，式(5.13)–(5.19)",
+   "attr": "原文明确"
+  },
+  {
+   "point": "Crane群：任意Ũw(x)配合Ṽw=−√(aυ)[1−(1/a)dŨw/dx]都给出同一e^{-η}速度剖面，自相似性完全保持。",
+   "type": "精确解算例",
+   "grade": "A",
+   "source": "p.335，式(6.5)–(6.7)",
+   "attr": "原文明确"
+  },
+  {
+   "point": "Bickley群由(7.2)–(7.6)给出；常位移y0时Ũw=ax^{-1/3}sech²(√(a/6υ)y0x^{-2/3})，近缝区明显低于Uw、远下游趋于Uw。",
+   "type": "精确解算例",
+   "grade": "A",
+   "source": "pp.337–339，式(7.3)–(7.6)、式(7.14)、Fig.1",
+   "attr": "原文明确"
+  },
+  {
+   "point": "后向通用解 f=−fw²/(η−fw)、fw=−√(3|m+1|) 本身需要抽吸(m>−1)或吹除(m<−1)，故不是primary solution，但经平移仍可生成任意Ũw的解。",
+   "type": "精确解算例",
+   "grade": "B",
+   "source": "p.340，式(8.1)–(8.8)",
+   "attr": "原文明确"
+  },
+  {
+   "point": "Gupta & Gupta(1977)、Magyari & Keller(2000)、Weidman & Magyari(2010)、Fang & Zhang(2010)等解可分别视为Crane或后向通用解的平移对应解，而非独立新解。",
+   "type": "文献重分类",
+   "grade": "A",
+   "source": "pp.336、338、340；p.341 §9(d)",
+   "attr": "原文明确"
+  },
+  {
+   "point": "平移自由度被作者视为边界层控制手段，并推测可用于多孔材料制造；该工程外推属作者设想。",
+   "type": "作者展望",
+   "grade": "C",
+   "source": "p.341，§9",
+   "attr": "原文明确"
+  },
+  {
+   "point": "结果可直接推广到动量方程含F(u)的情形（如横向磁场下的Hartmann阻力项−u）。",
+   "type": "作者展望",
+   "grade": "B",
+   "source": "p.341，§9",
+   "attr": "原文明确"
+  },
+  {
+   "point": "全文无传热方程、无压力梯度、无稳定性分析，且排除m=−1；不能据此判断解的物理可实现性。",
+   "type": "材料局限",
+   "grade": "C",
+   "source": "全文；p.331",
+   "attr": "AI概括"
+  }
+ ],
+ "conditions": [
+  {
+   "item": "流动类型",
+   "value": "定常、二维平面、不可压缩层流边界层；环境流体静止，u(x,∞)=0",
+   "source": "p.328，§2，式(2.1)–(2.2)"
+  },
+  {
+   "item": "压力梯度",
+   "value": "无流向压力梯度：动量方程为u ux+v uy=υ uyy，未含−p_x/ρ项",
+   "source": "p.328，式(2.1)",
+   "note": "对应均匀静止环境"
+  },
+  {
+   "item": "表面状态（primary）",
+   "value": "不可渗透连续运动表面，Vw(x)≡0；拉伸速度Uw(x)给定",
+   "source": "p.330，§3；p.328式(2.2)"
+  },
+  {
+   "item": "表面状态（变换后）",
+   "value": "可渗透表面，壁面拉伸与抽吸/吹除分布同时改变为Ũw、Ṽw",
+   "source": "p.330，式(3.5)",
+   "note": "平移一般使Vw≠0"
+  },
+  {
+   "item": "拉伸速度分布",
+   "value": "幂律Uw(x)=a x^m，a=Uw(1 m)为有量纲尺度因子；m可为±∞间任意值，但m≠−1",
+   "source": "p.331，式(5.1)",
+   "note": "逆线性拉伸Uw=a/x需特殊处理，本文不讨论"
+  },
+  {
+   "item": "尺度因子符号",
+   "value": "a>0：表面由狭缝向+x运动（拉伸，前向边界层）；a<0：表面由+x向狭缝运动（收缩，后向边界层）",
+   "source": "p.331，§5.1"
+  },
+  {
+   "item": "符号因子",
+   "value": "s=sgn(a)sgn(m+1)",
+   "source": "p.331，式(5.5)"
+  },
+  {
+   "item": "Crane算例",
+   "value": "m=1，s=1，a>0，Uw=ax，f=1−e^{−η}，f∞=1，边界层厚度δ=√(υ/a)为常数",
+   "source": "pp.334–335，式(6.1)",
+   "note": "前向边界层"
+  },
+  {
+   "item": "Bickley算例",
+   "value": "m=−1/3，a>0，Uw=a x^{−1/3}，f=√2 tanh(η/√2)，f∞=√2",
+   "source": "p.336，式(7.1)"
+  },
+  {
+   "item": "后向通用解算例",
+   "value": "a<0，Uw=ax^m，s=−sgn(m+1)，fw=−√(3|m+1|)<0（m≠−1）",
+   "source": "p.340，式(8.1)–(8.3)"
+  },
+  {
+   "item": "横向平移类型",
+   "value": "任意y0(x)；特例η0=常数保持相似性（对应y0∝x^{−(m−1)/2}）；特例y0=常数在m≠1时破坏相似性（η0∝x^{(m−1)/2}）",
+   "source": "pp.333–334，§5.2–5.3",
+   "note": "m=1时y0=√(υ/|a|)η0，两特例等价"
+  },
+  {
+   "item": "坐标与几何",
+   "value": "x沿表面运动方向、由狭缝起算；y垂直表面；半无限域y≥0；忽略表面曲率项",
+   "source": "pp.328–329，§2–§3"
+  },
+  {
+   "item": "流体物性",
+   "value": "常运动黏度υ；无能量方程，不涉及温度、热流或可压缩性",
+   "source": "p.328，式(2.1)"
+  },
+  {
+   "item": "雷诺数/参考长度",
+   "value": "文中未定义整体雷诺数；局部相似变量η含√(Uw/(υx))；Crane情形δ=√(υ/a)",
+   "source": "p.331式(5.2)；p.335",
+   "note": "无实验工况表"
+  }
+ ],
+ "key_parameters": [
+  {
+   "name": "m",
+   "definition": "幂律拉伸速度指数，Uw=ax^m",
+   "value": "任意实数（m≠−1）；算例取m=1（Crane）、m=−1/3（Bickley）",
+   "relation": "决定相似解族与前/后向性质",
+   "source": "p.331，式(5.1)"
+  },
+  {
+   "name": "a",
+   "definition": "拉伸速度尺度因子，a=Uw(1 m)",
+   "value": "算例中Crane/Bickley取a>0，后向解取a<0",
+   "relation": "Ũw变换后重标定为ã=af'(η0)",
+   "source": "p.331，式(5.1)；p.333，式(5.14)"
+  },
+  {
+   "name": "s",
+   "definition": "相似解符号因子",
+   "value": "s=sgn(a)sgn(m+1)",
+   "relation": "控制v分量与Vw的符号",
+   "source": "p.331，式(5.5)"
+  },
+  {
+   "name": "fw",
+   "definition": "壁面无量纲质量传递（抽吸/吹除）参数，f(0)=fw",
+   "value": "primary解fw=0；Crane群f̃w=f̃∞−1/f̃∞；Bickley群f̃w=√2 sinh(η0/√2)",
+   "relation": "与Vw通过式(5.6)联系",
+   "source": "p.331，式(5.4)、(5.6)；p.336式(6.8)；p.338式(7.7)"
+  },
+  {
+   "name": "f∞",
+   "definition": "无量纲卷吸速度f(∞)",
+   "value": "Crane f∞=1；Bickley f∞=√2；变换后f̃∞=f∞/√f'(η0)",
+   "relation": "V∞=−s√(υ|(m+1)Uw|/(2x))f∞",
+   "source": "p.331，式(5.6)；p.334式(5.17)；pp.336、338"
+  },
+  {
+   "name": "η",
+   "definition": "相似自变量",
+   "value": "η=√(|(m+1)Uw(x)|/(2υx))·y",
+   "relation": "变换后出现η+η0(x)",
+   "source": "p.331，式(5.2)"
+  },
+  {
+   "name": "η0(x)",
+   "definition": "相似变量位移，η0=√(|(m+1)a|/(2υ))x^{(m−1)/2}y0(x)",
+   "value": "由目标Ũw反解：η0=f'^{-1}(Ũw/Uw)",
+   "relation": "η0=常数⇔相似性保持",
+   "source": "p.332式(5.8)；p.333式(5.11)"
+  },
+  {
+   "name": "y0(x)",
+   "definition": "横向坐标y的平移量",
+   "value": "任意函数；常数y0对应η0∝x^{(m−1)/2}",
+   "relation": "壁面条件按(3.5)变换",
+   "source": "p.329，式(3.1)；p.334，§5.3"
+  },
+  {
+   "name": "f'(η0)",
+   "definition": "变换后与原始拉伸速度之比",
+   "value": "Ũw/Uw=f'(η0)",
+   "relation": "决定新尺度因子与质量传递参数",
+   "source": "p.332，式(5.10)"
+  },
+  {
+   "name": "f̃w（Crane）",
+   "definition": "Crane群变换后的质量传递参数",
+   "value": "f̃w=f̃∞−1/f̃∞；f̃∞=½(f̃w+√(f̃w²+4))",
+   "relation": "给定f̃w可唯一确定f̃∞",
+   "source": "p.336，式(6.8)、(6.10)"
+  },
+  {
+   "name": "f̃∞（Bickley）",
+   "definition": "Bickley群变换后的无量纲卷吸速度",
+   "value": "f̃∞=√(f̃w²+2)；ã=2a/(2+f̃w²)",
+   "relation": "式(7.9)、(7.10)",
+   "source": "p.338，式(7.9)–(7.10)"
+  },
+  {
+   "name": "δ（Crane）",
+   "definition": "常厚度前向边界层厚度",
+   "value": "δ=√(υ/a)",
+   "relation": "与x无关",
+   "source": "p.335，§6"
+  },
+  {
+   "name": "Vw/V∞",
+   "definition": "壁面法向（抽吸/吹除）速度与卷吸速度",
+   "value": "Vw(x)=−s√(υ|(m+1)Uw|/(2x))fw；V∞同式以f∞替代fw",
+   "relation": "符号由s与fw/f∞组合决定",
+   "source": "p.331，式(5.6)；p.340"
+  }
+ ],
+ "methods": [
+  {
+   "item": "研究类型",
+   "value": "理论分析：边界层方程的对称性、连续群与精确解生成",
+   "source": "p.327，Abstract；pp.328–330"
+  },
+  {
+   "item": "控制方程",
+   "value": "定常二维不可压缩边界层：u_x+v_y=0，u ux+v uy=υ uyy；无压力梯度项",
+   "source": "p.328，式(2.1)"
+  },
+  {
+   "item": "流函数表述",
+   "value": "u=ψ_y，v=−ψ_x；ψ_yψ_xy−ψ_xψ_yy=υψ_yyy",
+   "source": "p.329，式(2.3)–(2.4)"
+  },
+  {
+   "item": "变换方法",
+   "value": "y→y+y0(x)，ψ̃(x,y)=ψ[x,y+y0(x)]；链式法则证明方程不变，交叉项±y0'ψ_yψ_yy相消",
+   "source": "p.329，式(3.1)–(3.3)"
+  },
+  {
+   "item": "群论检验",
+   "value": "验证封闭性（位移相加）、结合律、交换律、恒元（零平移）与逆元（−y0）",
+   "source": "p.330，§4"
+  },
+  {
+   "item": "相似解框架",
+   "value": "幂律Uw=ax^m；引入f(η)得s f'''+f f''−(2m/(m+1))f'^2=0，f(0)=fw，f'(0)=1，f'(∞)=0",
+   "source": "p.331，式(5.1)–(5.4)"
+  },
+  {
+   "item": "反解构造",
+   "value": "由Ũw=Uw f'(η0)反解η0=f'^{-1}(Ũw/Uw)，再代回(5.9)得目标流场；(3.7)给出对应Ṽw",
+   "source": "pp.332–333，式(5.9)–(5.11)"
+  },
+  {
+   "item": "算例1：Crane",
+   "value": "f=1−e^{−η}，Uw=ax；导出广义Crane解(6.5)–(6.6)及常η0的Gupta–Gupta解(6.11)",
+   "source": "pp.334–336，§6"
+  },
+  {
+   "item": "算例2：Bickley",
+   "value": "f=√2 tanh(η/√2)，Uw=ax^{−1/3}；导出(7.2)–(7.6)、(7.11)–(7.12)及常y0的(7.13)–(7.14)",
+   "source": "pp.336–339，§7"
+  },
+  {
+   "item": "算例3：后向通用解",
+   "value": "f=−fw²/(η−fw)，fw=−√(3|m+1|)；给出平移后的(8.6)–(8.8)",
+   "source": "p.340，§8",
+   "note": "式(8.6)–(8.8)在文本层根号错位，精确形式未逐字核对"
+  },
+  {
+   "item": "验证方式",
+   "value": "与已发表精确解逐式对照：Gupta & Gupta(1977)、Magyari & Keller(2000)、Weidman & Magyari(2010)、Fang & Zhang(2010)",
+   "source": "pp.336、338、340",
+   "note": "无实验或数值验证"
+  },
+  {
+   "item": "数值/实验",
+   "value": "文中未涉及",
+   "source": "全文"
+  },
+  {
+   "item": "不确定度",
+   "value": "理论工作，无测量不确定度；未讨论截断误差或数值误差",
+   "source": "全文"
+  }
+ ],
+ "derivation": {
+  "exists": true,
+  "idea": "从定常二维边界层方程出发，利用方程不显含y、且忽略曲率项的事实，把横向坐标的任意平移y→y+y0(x)作为对称变换；证明方程与远场条件不变而壁面条件改变，从而由任一已知解生成新解，并用壁面条件中u的反函数把变换反解为对目标拉伸速度的构造。随后把变换施加于幂律相似解，区分η0=常数（保持相似）与y0=常数（破坏相似）两种特例。",
+  "assumptions": [
+   "定常、二维平面、不可压缩层流边界层，常运动黏度υ",
+   "环境静止且压力均匀，动量方程不含−p_x/ρ项，u(x,∞)=0",
+   "Prandtl边界层假设成立，表面曲率项已忽略，故允许非均匀平移y0(x)",
+   "表面为连续运动/拉伸表面，壁面速度Uw(x)与法向速度Vw(x)给定",
+   "幂律拉伸Uw=ax^m，m≠−1；逆线性情形m=−1被排除",
+   "构造目标Ũw时要求u(x,y)对y单调可反解，即f'可逆"
+  ],
+  "steps": [
+   {
+    "title": "控制方程与边界条件",
+    "text": "定常二维不可压缩边界层，环境静止，动量方程无压力梯度项；以u=ψ_y、v=−ψ_x引入流函数后化为三阶方程，壁面与远场条件如(2.4)。",
+    "latex": [
+     "u_x+v_y=0,\\qquad u\\,u_x+v\\,u_y=\\upsilon\\,u_{yy}",
+     "\\psi_y\\psi_{xy}-\\psi_x\\psi_{yy}=\\upsilon\\,\\psi_{yyy}",
+     "\\psi_y(x,0)=U_w(x),\\quad \\psi_x(x,0)=-V_w(x),\\quad \\psi_y(x,\\infty)=0"
+    ],
+    "source": "pp.328–329，§2，式(2.1)–(2.4)"
+   },
+   {
+    "title": "平移变换的提法",
+    "text": "把横向坐标平移任意函数y0(x)，并对流函数作复合：新流函数在原坐标y+y0(x)处取值。",
+    "latex": [
+     "y\\rightarrow y+y_0(x)",
+     "\\tilde{\\psi}(x,y)=\\psi[x,y+y_0(x)]"
+    ],
+    "source": "p.329，式(3.1)–(3.2)"
+   },
+   {
+    "title": "链式法则与交叉项抵消",
+    "text": "y方向导数形式不变；x方向导数除ψ_x外多出y0'ψ_y。代入(2.3)后，左端产生的±y0'ψ_yψ_yy两项相消，方程形式不变，右端仍为υψ̃_yyy。",
+    "latex": [
+     "\\tilde{\\psi}_y=\\psi_y[x,y+y_0],\\qquad \\tilde{\\psi}_{xy}=\\psi_{xy}[x,y+y_0]+y_0'(x)\\,\\psi_{yy}[x,y+y_0]",
+     "\\tilde{\\psi}_x=\\psi_x[x,y+y_0]+y_0'(x)\\,\\psi_y[x,y+y_0]",
+     "\\tilde{\\psi}_y\\tilde{\\psi}_{xy}-\\tilde{\\psi}_x\\tilde{\\psi}_{yy}=\\upsilon\\,\\tilde{\\psi}_{yyy}"
+    ],
+    "source": "p.329，式(3.3)"
+   },
+   {
+    "title": "速度场与壁面条件的变换",
+    "text": "对ψ̃求导得速度变换；在y=0处取值即得新的拉伸速度与抽吸速度分布。远场条件u(x,∞)=0保持不变，但壁面条件因y0'Ũw项而实质改变。",
+    "latex": [
+     "\\tilde{u}(x,y)=u[x,y+y_0(x)]",
+     "\\tilde{v}(x,y)=v[x,y+y_0(x)]-y_0'(x)\\,\\tilde{u}(x,y)",
+     "\\tilde{U}_w(x)=u[x,y_0(x)],\\qquad \\tilde{V}_w(x)=v[x,y_0(x)]-y_0'(x)\\,\\tilde{U}_w(x)"
+    ],
+    "source": "p.330，式(3.4)–(3.6)"
+   },
+   {
+    "title": "反解位移以匹配目标拉伸速度",
+    "text": "若已知u(x,y)且其对y可反解，则由Ũw=u[x,y0(x)]解出y0=u^{-1}(x,Ũw)，代回得对应的Ṽw；在相似解框架下等价于η0=f'^{-1}(Ũw/Uw)。",
+    "latex": [
+     "\\tilde{V}_w(x)=v[x,u^{-1}(x,\\tilde{U}_w)]-\\tilde{U}_w(x)\\,\\frac{d}{dx}u^{-1}(x,\\tilde{U}_w)",
+     "\\eta_0(x)=f'^{-1}\\!\\left(\\frac{\\tilde{U}_w(x)}{U_w(x)}\\right)"
+    ],
+    "source": "p.330式(3.7)；p.333式(5.11)"
+   },
+   {
+    "title": "连续群结构",
+    "text": "两次相继平移等价于位移相加；该合成律满足结合律与交换律，零平移为恒元，相反位移为逆元，故平移解集构成连续交换群（平移群）。",
+    "latex": [
+     "y_{03}(x)=y_{01}(x)+y_{02}(x)"
+    ],
+    "source": "p.330，§4"
+   },
+   {
+    "title": "幂律相似解及其变换",
+    "text": "取Uw=ax^m，引入相似变量η与无量纲流函数f，得相似ODE与壁面/远场条件；速度分量由(5.2)给出，符号因子s=sgn(a)sgn(m+1)。",
+    "latex": [
+     "U_w(x)=a x^m,\\qquad \\eta=\\sqrt{\\frac{|(m+1)U_w(x)|}{2\\upsilon x}}\\,y",
+     "u=U_w f'(\\eta),\\qquad v=-s\\sqrt{\\frac{\\upsilon|(m+1)U_w(x)|}{2x}}\\left[f(\\eta)+\\frac{m-1}{m+1}\\eta f'(\\eta)\\right]",
+     "s f'''+f f''-\\frac{2m}{m+1}f'^2=0,\\qquad f(0)=f_w,\\ f'(0)=1,\\ f'(\\infty)=0",
+     "s=\\operatorname{sgn}(a)\\,\\operatorname{sgn}(m+1)"
+    ],
+    "source": "p.331，式(5.1)–(5.5)"
+   },
+   {
+    "title": "变换后的相似速度场与壁面速度",
+    "text": "把η替换为η+η0(x)，其中η0由y0按(5.8)换算；由此得到变换后的速度场、拉伸速度与抽吸速度。",
+    "latex": [
+     "\\eta_0(x)=\\sqrt{\\frac{|(m+1)a|}{2\\upsilon}}\\,x^{(m-1)/2}y_0(x)",
+     "\\tilde{u}=U_w(x)f'[\\eta+\\eta_0(x)],\\qquad \\tilde{U}_w(x)=U_w(x)f'[\\eta_0(x)]",
+     "\\tilde{v}=-s\\sqrt{\\frac{\\upsilon|(m+1)U_w(x)|}{2x}}\\left\\{f[\\eta+\\eta_0]+\\frac{(m-1)\\eta+2x\\eta_0'(x)}{m+1}f'[\\eta+\\eta_0]\\right\\}",
+     "\\tilde{V}_w=-s\\sqrt{\\frac{\\upsilon|(m+1)U_w(x)|}{2x}}\\left[f(\\eta_0)+\\frac{m-1}{m+1}\\eta_0 f'(\\eta_0)\\right]-y_0'(x)\\,\\tilde{U}_w"
+    ],
+    "source": "pp.332–333，式(5.7)–(5.10)"
+   },
+   {
+    "title": "η0=常数：相似性保持与参数重标定",
+    "text": "当η0为常数时，变换后的拉伸速度仍为幂律且仅改变幅值；引入ã、f̃、η̃后新解与primary解同形式，但带有非零质量传递参数，故可视为同一相似族的平移元素。",
+    "latex": [
+     "\\tilde{a}=a f'(\\eta_0),\\qquad \\tilde{f}_w=\\frac{f(\\eta_0)}{\\sqrt{f'(\\eta_0)}},\\qquad \\tilde{f}_\\infty=\\frac{f_\\infty}{\\sqrt{f'(\\eta_0)}}",
+     "\\tilde{f}(\\tilde{\\eta})=\\frac{f(\\eta+\\eta_0)}{\\sqrt{f'(\\eta_0)}},\\qquad \\tilde{\\eta}=\\sqrt{f'(\\eta_0)}\\,\\eta",
+     "\\tilde{U}_w=\\tilde{a}x^m,\\qquad \\tilde{V}_w=-s\\sqrt{\\frac{\\upsilon(m+1)\\tilde{U}_w(x)}{2x}}\\,\\tilde{f}_w"
+    ],
+    "source": "pp.333–334，式(5.13)–(5.19)"
+   },
+   {
+    "title": "算例：Crane与Bickley的平移群",
+    "text": "Crane解f=1−e^{−η}经变换后仍给出同一e^{−η}剖面，任意Ũw只需补偿抽吸Ṽw；Bickley解f=√2tanh(η/√2)的群元素由(7.2)–(7.3)给出，反解位移为(7.4)，常y0时相似性破坏。",
+    "latex": [
+     "f=1-e^{-\\eta},\\quad U_w=ax,\\quad \\tilde{u}=\\tilde{U}_w e^{-\\eta},\\quad \\tilde{V}_w=-\\sqrt{a\\upsilon}\\left[1-\\frac{1}{a}\\frac{d\\tilde{U}_w}{dx}\\right]",
+     "f=\\sqrt{2}\\tanh\\frac{\\eta}{\\sqrt{2}},\\qquad U_w=a x^{-1/3}",
+     "\\tilde{U}_w=U_w\\operatorname{sech}^2\\frac{\\eta_0}{\\sqrt{2}},\\qquad \\tilde{V}_w=-\\sqrt{\\frac{\\upsilon U_w}{3x}}\\left[\\sqrt{2}\\tanh\\frac{\\eta_0}{\\sqrt{2}}+3x\\eta_0'\\operatorname{sech}^2\\frac{\\eta_0}{\\sqrt{2}}\\right]",
+     "\\eta_0=\\sqrt{2}\\operatorname{arctanh}\\sqrt{1-\\frac{\\tilde{U}_w}{U_w}}"
+    ],
+    "source": "pp.334–337，式(6.1)–(7.6)"
+   },
+   {
+    "title": "算例：后向通用解",
+    "text": "对a<0取s=−sgn(m+1)，相似ODE有代数衰减的通用解f=−fw²/(η−fw)，其中fw=−√(3|m+1|)；该解要求壁面抽吸/吹除，故非primary，但同样可经平移生成任意目标Ũw的解。",
+    "latex": [
+     "f(\\eta)=-\\frac{f_w^2}{\\eta-f_w},\\qquad f_w=-\\sqrt{3|m+1|}<0",
+     "u(x,y)=\\frac{f_w^2\\,U_w(x)}{(\\eta-f_w)^2},\\qquad \\eta=\\sqrt{\\frac{|a(m+1)|}{2\\upsilon}}\\,x^{(m-1)/2}y",
+     "V_w(x)=-(m+1)\\sqrt{\\frac{3\\upsilon|U_w(x)|}{2x}}"
+    ],
+    "source": "p.340，式(8.1)–(8.5)"
+   }
+  ],
+  "result": "平移不变性把解空间组织为以primary solution为生成元的连续群：任意y0(x)按(3.4)–(3.5)给出新解；η0=常数时保持自相似，等价于把a重标定为ã=af'(η0)并施加(5.15)的抽吸/吹除；y0=常数时相似性一般破坏。Crane群给出(6.5)–(6.7)的同一e^{−η}剖面与补偿Ṽw；Bickley群给出(7.3)–(7.6)，常y0时Ũw在近缝区显著偏离Uw、远下游趋于Uw（式7.14、Fig.1，p.339）。因此多个已发表精确解被识别为既有解的平移对应解。",
+  "limits": "推导依赖定常、二维、不可压缩、常黏度、无压力梯度与环境静止；允许非均匀平移的前提是忽略曲率项；m=−1被排除；(3.7)/(5.11)要求u对y单调可反解；未讨论稳定性、物理可实现性与传热。后向通用解的式(8.6)–(8.8)在PDF文本层根号与分式错位，本记录不引用其精确形式（受限于材料，无法确认）。"
+ },
+ "mechanism": "作者论证的链条为：边界层方程(2.3)不显含y → 均匀平移不变；又因Prandtl理论忽略曲率项，x动量方程对非均匀平移y→y+y0(x)也不变 → 远场条件u(x,∞)=0不变；但壁面位于y=0，平移后壁面处的速度为原流场在y=y0(x)处的值，且x方向导数产生−y0'u项 → 新的Ũw、Ṽw同时由原流场的u、v决定。物理上，这相当于把原流场的某条流线当作新的壁面：若要保持同样的速度剖面，就必须以抽吸/吹除补偿壁面法向速度。对相似解，常数η0位移只改变拉伸幅值与质量传递参数，故不产生新的相似族；常数y0位移则使η0随x变化，破坏自相似。上述为原文证明与AI概括的结合；文中未讨论该对称性在真实黏性流中的稳定性或可实现性误差。",
+ "findings": [
+  {
+   "finding": "控制方程与远场条件对任意非均匀横向平移y→y+y0(x)严格不变。",
+   "evidence": "式(3.3)与(3.6)的逐步推导，交叉项相消",
+   "type": "理论证明",
+   "strength": "强",
+   "source": "pp.329–330，§3",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "平移不改变方程但改变壁面条件，新抽吸速度含−y0'Ũw项；因此平移一般生成可渗透表面上的新流动。",
+   "evidence": "式(3.5)；式(3.7)的反解形式",
+   "type": "理论结论",
+   "strength": "强",
+   "source": "p.330，式(3.5)–(3.7)",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "由给定解生成的平移解构成连续交换群（加法合成、零恒元、相反位移为逆元）。",
+   "evidence": "第4节群公理逐条检验",
+   "type": "群论论证",
+   "strength": "强",
+   "source": "p.330，§4",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "只要速度剖面可反解，任意目标拉伸速度分布都可由一个已知解经单一平移构造出来。",
+   "evidence": "η0=f'^{-1}(Ũw/Uw)；Crane、Bickley、后向解三例的具体反解式",
+   "type": "理论构造",
+   "strength": "强",
+   "source": "p.333，式(5.11)；pp.335–340",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "非零质量传递参数fw的相似解不是基本新解，而是fw=0的primary解在η0=常数下的平移。",
+   "evidence": "式(5.14)–(5.19)与(5.2)同形式；f̃w=f(η0)/√f'(η0)",
+   "type": "理论结论",
+   "strength": "强",
+   "source": "pp.333–334，§5.2",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "Crane解的平移群表明：任意Ũw(x)配合式(6.6)的抽吸/吹除，都给出同一条e^{−η}速度剖面。",
+   "evidence": "式(6.5)–(6.7)；e^{−η}=u/Uw=ũ/Ũw",
+   "type": "精确解",
+   "strength": "强",
+   "source": "p.335，§6.1",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "Bickley解在常数y0平移下相似性破坏；Ũw在近缝区可远低于Uw，但远下游两者趋于一致。",
+   "evidence": "式(7.14)与Fig.1的Uw、Ũw曲线",
+   "type": "精确解+图示",
+   "strength": "强",
+   "source": "p.339，式(7.14)、Fig.1",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "若干已发表精确解（Gupta–Gupta、Magyari–Keller、Weidman–Magyari、Fang–Zhang）可归并为既有primary解的平移对应解。",
+   "evidence": "逐例与(6.11)、(7.9)–(7.12)、(8.2)对照",
+   "type": "文献重分类",
+   "strength": "中",
+   "source": "pp.336、338、340；p.341 §9(d)",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "后向通用解本身需要壁面抽吸(m>−1)或吹除(m<−1)，不满足primary定义，但仍可作为平移群的生成元。",
+   "evidence": "式(8.5)第二式及随后的讨论",
+   "type": "理论结论",
+   "strength": "中",
+   "source": "p.340，§8",
+   "attr": "原文明确"
+  }
+ ],
+ "conclusions": "作者结论（p.341，§9）：(a) 边界层方程与u(x,∞)=0对任意y→y+y0(x)不变，而Ũw=u[x,y0]、Ṽw=v[x,y0]−y0'u[x,y0]发生实质改变；(b) 由此可从任一已知解生成无穷多新解，构成连续平移群；(c) 当Ũw的定义式可反解时，可由目标Ũw反求y0(x)，从而按需构造解；(d) 过去发现的若干精确解并非基本新解，而是既有解的平移对应解。作者据此强调抽吸/吹除速度分布在边界层控制中的重要性，并指出结果可推广到含F(u)项的动量方程。",
+ "contributions": [
+  "证明定常平面拉伸面边界层方程对任意非均匀横向平移y→y+y0(x)不变，并给出壁面条件的变换规则。",
+  "建立平移群框架，把大量精确解约化为少数primary solutions的群元素。",
+  "给出Crane、Bickley、后向通用解三个完整算例及反解构造公式。",
+  "识别Gupta–Gupta、Magyari–Keller、Weidman–Magyari、Fang–Zhang等解为平移对应解。",
+  "指出该对称性可推广到含F(u)的动量方程（如MHD流动）。"
+ ],
+ "limits": "作者承认的局限较少，主要在§5.1排除m=−1的逆线性拉伸，并说明只讨论幂律相似（p.331）。AI识别的局限：全文为定常二维不可压缩、无压力梯度、无能量方程的理想化模型，不能直接给出高速可压缩SBLI的结论；未讨论平移解在真实流动中的稳定性、可实现性及抽吸/吹除的能量代价；反解要求u对y单调，强抽吸/吹除或分离时可能失效；后向通用解的(8.6)–(8.8)排版不清，未能逐字核对；仅一幅图，且无任何定量误差或与实验的对比。",
+ "significance": "对边界层理论与工程的意义：提供了一种“生成解”的方法，可把已知相似解扩展到任意拉伸速度分布与任意抽吸/吹除分布，减少重复求解；把表面质量传递识别为拉伸速度改变的对偶机制，对聚合物/玻璃纤维/金属板材连续成型中的冷却与膜厚控制有潜在价值（作者设想，p.341）。方法层面，群不变性思路可推广到含体积力F(u)的边界层方程。需要强调：本文不涉及可压缩、高速、激波/边界层干扰或热流，不能直接外推到高超声速SBLI；其对“新解”的重新分类只在该理想化模型内成立。上述工程外推属AI推断。",
+ "quotes": [
+  {
+   "text": "invariant under arbitrary translations y → y + y0(x) of the transverse coordinate y",
+   "supports": "任意非均匀平移不变性",
+   "source": "p.327，Abstract",
+   "use": "作为核心symmetry结论的直接引文"
+  },
+  {
+   "text": "The wall conditions ... however, undergo in general substantial changes",
+   "supports": "壁面条件实质改变",
+   "source": "p.327，Abstract",
+   "use": "强调方程不变而边界条件变"
+  },
+  {
+   "text": "inﬁnitely many translated solutions can be generated which form a continuous group",
+   "supports": "无穷多解构成连续群",
+   "source": "p.327，Abstract",
+   "use": "概括群结构"
+  },
+  {
+   "text": "the set of solutions ... forms a continuous group",
+   "supports": "平移群的封闭性",
+   "source": "p.330，§4",
+   "use": "群公理讨论处引用"
+  },
+  {
+   "text": "do not represent basically new solutions of the boundary value problem",
+   "supports": "fw≠0解非基本新解",
+   "source": "p.334，§5.2",
+   "use": "文献重分类的关键句"
+  },
+  {
+   "text": "the similar velocity ﬁeld e−η is the same for the whole translation group",
+   "supports": "Crane群保持同一剖面",
+   "source": "p.335，§6.1",
+   "use": "说明抽吸/吹除的补偿作用"
+  },
+  {
+   "text": "several exact solutions discovered in the past are not basically new solutions",
+   "supports": "历史解重分类",
+   "source": "p.341，§9(d)",
+   "use": "结论部分引用"
+  },
+  {
+   "text": "the paramount importqance of the transpiration velocity distribution in the boundary-layer control",
+   "supports": "抽吸/吹除的工程意义",
+   "source": "p.341，§9",
+   "use": "引用时注明原文拼写如此"
+  }
+ ],
+ "figures": [
+  {
+   "file": "fig01_p13.png",
+   "n": 1,
+   "page": 13,
+   "caption_zh": "Bickley解及其经常数横向平移y0得到的变换解的拉伸速度分布Uw与Ũw",
+   "caption_orig": "Figure 1. Shapes of the stretching velocity distributions Uw and ˜Uw corresponding to the Bickley solution (7.1) and its transformed counterpart (7.14) obtained by a constant translation y0 of the transverse coordinate y (the velocities have been expressed in units of (6a3υ/y2 0)1/4 and the coordinate x in units of (a y2 0/6υ)3/4).",
+   "why": "唯一图件；支撑“常数y0平移破坏相似性、Ũw在近缝区显著低于Uw而远下游趋近Uw”的结论（p.339）。"
+  }
+ ],
+ "verification": {
+  "text_only": "是：仅使用bundle全文、图注与图件清单，并回读原PDF第4、5、10–13页核对公式；未引入外部知识。",
+  "a_grade_supported": "是：A级条目均给出印刷页码、节号与式号/图号；平移不变性、壁面条件、群结构、反解式及两个算例均可在pp.329–339逐式对应。",
+  "attributes_marked": "是：three_sentence、core_points、findings均标注原文明确/AI概括/AI推断；作者展望与AI推断分开。",
+  "coverage": "覆盖Introduction、Basic equations、Translation invariance、Translation group、Translations of self-similar solutions、Crane/Bickley/backward三算例与Summary；IMRaD四节均实质填写。",
+  "no_fabrication": "是：未编造页码、图号、公式或数据；全文仅1幅图，figures如实只列1条；式(8.6)–(8.8)文本层不清处已注明“受限于材料，无法确认”。",
+  "open_questions": [
+   "常数η0平移保持相似，但它对应的y0(x)∝x^{−(m−1)/2}在x→0或x→∞时是否有物理意义？",
+   "非均匀平移解在真实黏性流中是否稳定、能否用有限长度的抽吸/吹除段实现？",
+   "作者排除m=−1，逆线性拉伸Uw=a/x是否也存在相应的平移群？",
+   "当u(x,y)对y不单调（如存在局部速度极大）时，反解(3.7)/(5.11)如何处理多值？",
+   "该对称性是否适用于含压力梯度的Falkner–Skan类流动，还是仅限零压力梯度？",
+   "后向通用解(8.6)–(8.8)的根号与分式确切形式为何？文本层无法确认。",
+   "抽吸/吹除的能量代价与实际可实现速度范围文中未讨论，工程可用性如何？"
+  ]
+ }
+}

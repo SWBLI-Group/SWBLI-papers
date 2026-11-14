@@ -1,0 +1,683 @@
+{
+  "id": 696,
+  "read_note": "理论分析+CFD 的定常二维超声速马赫反射研究（非粘性为主，附 CFD 对照）。全文 22 页、16 项抓图，正文与公式完整；式(2.1)–(3.5) 已用原 PDF 第 35–37、46–47 页核对。图件清晰；Table 1 的“CFD/Theory”列标题排版略含混，已结合正文与 Fig. 4 的 CFD 值校正。信息完整度高；M2<1 只做流场诊断，未给全局马赫杆高度算法。",
+  "one_line": "CFD揭示马赫反射滑移线非直线，滑移线上的膨胀/压缩波控制滑移线、反射激波与马赫杆高度。",
+  "three_sentence": [
+    {
+      "text": "既有马赫反射模型多假定反射激波后为均匀流、滑移线为直线，所得马赫杆高度相对 CFD 偏大或偏小，且未研究滑移线与反射激波形状。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "作者先用精细 CFD 显示滑移线上存在一系列膨胀/压缩波，再用三激波理论、准一维管流、Prandtl–Meyer 关系与 Mach 波追踪建立全局迭代算法，预测滑移线、反射激波形状与马赫杆高度。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "计算表明滑移线先凸后凹、在首道透射膨胀波处出现拐点 B，反射激波在 F 点后上偏、在 Q 点后重新变直；所得 Hm/H0 多数工况比 Li–Ben-Dor 与 Mouton–Hornung 更接近 CFD，M2<1 时声速线近似与首道透射膨胀波重合。",
+      "attr": "AI概括"
+    }
+  ],
+  "imrad": {
+    "introduction": "【原文明确】斜激波在水平面上的反射分为规则反射（RR）与马赫反射（MR）；MR 由三波点 T 连接入射激波 i、反射激波 r、马赫杆 m 与滑移线 s（p29–30，Fig. 1）。von Neumann 三激波理论给出 RR→MR 的脱体判据与力学平衡判据，两者之间为双解区（p29）。已有马赫杆高度模型：Azevedo–Liu（1993）假定声速喉道位于膨胀扇首道 Mach 波与滑移线交点，把亚声速袋当准一维等熵收缩流、滑移线当直线；Li–Ben-Dor（1997）把声速喉道下移并允许激波/滑移线微弯；Mouton–Hornung（2007）用直线段几何关系预测过渡期增长（p30–31）。【原文明确】作者指出三个未解决问题：已有模型给出的 Hm 相对 CFD 偏大或偏小；CFD 显示反射激波前缘后流动并非均匀；滑移线与反射激波形状缺乏研究（p31）。【AI概括】本文因此把“滑移线上波系”作为核心，重建 MR 的波系结构与全局算法。",
+    "methods": "【原文明确】CFD 采用与 Tan et al. (2006) 相同、由 Ren (2003) 提出的数值方法；用 300×200 与 600×400 两套网格做网格细化研究，前者用于全文（p32，Fig. 4）。理论部分：以经典斜激波关系式(2.1) 与三激波理论给出三波点上游三区参数；用准一维管流式(2.2)–(2.3) 联系滑移线高度 Hs 与声速喉道 Hs*；用 Prandtl–Meyer 关系式(2.5) 描述滑移线上方膨胀波 Rs；用激波关系式(2.7) 描述压缩波 Cs；用式(2.9)–(2.18) 处理 Rs/Rc 与反射激波 r 的透射/反射，用式(2.19)–(2.21) 处理透射波 Rt 与滑移线波 Rs/Cs 的相交；最后以式(2.22) 的 Hm*/Hs*=σ(Mm) 为闭合条件，迭代 Hm* 直到滑移线与反射面最小距离等于 Hs*（p35–39）。膨胀扇与滑移线波用有限道 Mach 波离散。M2<1 时另用准一维式(3.1)–(3.3) 与 Tan et al. 小扰动速度场式(3.4)–(3.5) 定位声速点（p46–47）。",
+    "results": "【原文明确】CFD 显示反射激波前缘后流动非均匀：滑移线上方存在一系列膨胀波（M2>1）或下方压力降低（M2<1）（p32–34，Fig. 5）。滑移线下方的流管先收缩，按准一维亚声速流压力持续下降，为平衡压降，滑移线上方必须产生膨胀波，滑移线因而向反射面偏转（p34）。滑移线形状先凸后凹：在首道透射 Mach 波与滑移线交点 B 处二阶导数由负突变为正，形成拐点；继续上偏至 P 点一阶导数为零、滑移线水平（p41，Fig. 11）。反射激波在 F 点前保持直线，F 点后受膨胀波作用逐渐减弱并上偏，至 Q 点（最后一道 Mach 波交点）重新变直（p41–42，Fig. 13）。压力梯度沿滑移线理论均值与 CFD 一致，但 CFD 因 Kelvin–Helmholtz 不稳定出现振荡（p41，Fig. 12）。马赫杆高度：Table 1 六个工况，CFD 为 0.191、0.110、0.213、0.052、0.283、0.203；本文理论为 0.202、0.121、0.223、0.058、0.292、0.213；Li–Ben-Dor 为 0.118、0.076、0.167、0.036、0.269、0.191；Mouton–Hornung 为 0.140、0.106、0.300、0.051、0.395、0.296（p43）。多数工况本文理论最接近 CFD，但 Hm 很小时声速喉道位置难定（p43）。M2<1：声速线不与滑移线垂直，而近似与首道透射膨胀波 Rt 重合；式(3.3) 与式(3.5) 给出的滑移线声速点均接近 CFD（p46–47，Fig. 18）。",
+    "discussion": "【原文明确】作者把已有模型的 Hm 偏差归因于忽略滑移线上波系：这些波使反射激波后流动非均匀，并与透射膨胀波共同决定滑移线形状，从而改变声速喉道与 Hm（p43、p48）。对 M2<1，亚声速袋内 Mach 数接近 1，遇到透射膨胀波即迅速加速为超声速，因此声速线可视为位于首道透射膨胀波附近（p47–48）。【原文明确】局限：理论忽略滑移线卷起（KH 不稳定）及由此产生的寄生波、忽略 Rs 在反射激波上的反射波 Cr 与 Rt–Cs 产生的二次滑移线 ct；准一维理论在靠近马赫杆、亚声速袋很小时不准确；M2<1 无全局 Hm 算法（p38–39、p46–48）。【AI概括】本文的贡献是“波系结构诊断 + 几何/一维耦合算法”，而非粘性/稳定性建模；因此对滑移线卷起只能回避。",
+    "conclusion": "【原文明确】把滑移线上由下方压力变化产生的一系列膨胀/压缩波纳入模型，是本文主要贡献；这些波使反射激波后流动非均匀，并与透射膨胀波共同决定滑移线形状。研究不仅揭示非均匀性，也表明包括马赫杆高度在内的全局结构受滑移线波系显著影响；前者可指导 CFD 解释，后者可解释并补救已有模型与 CFD 的偏差。M2<1 的结果表明亚声速区在遇到透射膨胀波时立即终止，声速线可视为位于首道透射膨胀波附近（p48）。"
+  },
+  "core_points": [
+    {
+      "point": "研究定常二维超声速马赫反射的波系结构，重点是滑移线上产生的膨胀/压缩波及其与其它波的相互作用。",
+      "type": "研究定位",
+      "grade": "A",
+      "source": "p29 摘要；p31 §1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "CFD 显示反射激波前缘后流动并非均匀，与既有模型的核心假设相反。",
+      "type": "关键现象",
+      "grade": "A",
+      "source": "p32–34，Fig. 5",
+      "attr": "原文明确"
+    },
+    {
+      "point": "滑移线下方流管收缩导致压力下降，从而在滑移线上方产生膨胀波，滑移线向反射面偏转。",
+      "type": "机制",
+      "grade": "A",
+      "source": "p34，§2.1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "滑移线先凸后凹，在首道透射 Mach 波交点 B 出现拐点，二阶导数由负突变到正，至 P 点变为水平。",
+      "type": "滑移线形状",
+      "grade": "A",
+      "source": "p41，Fig. 11",
+      "attr": "原文明确"
+    },
+    {
+      "point": "反射激波在 F 点前为直线，F 点后减弱并上偏，至 Q 点后重新变直。",
+      "type": "反射激波形状",
+      "grade": "A",
+      "source": "p41–42，Fig. 13",
+      "attr": "原文明确"
+    },
+    {
+      "point": "理论给出的滑移线压力梯度均值与 CFD 一致，差异主要来自 CFD 中 KH 不稳定引起的滑移线振荡。",
+      "type": "验证/差异来源",
+      "grade": "B",
+      "source": "p41，Fig. 12",
+      "attr": "原文明确"
+    },
+    {
+      "point": "全局算法以三激波理论、准一维管流、Prandtl–Meyer 与激波关系逐波推进，并以声速喉道面积条件迭代 Hm。",
+      "type": "方法",
+      "grade": "A",
+      "source": "p38–39，§2.2.5，式(2.22)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "六个工况的 Hm/H0：本文理论普遍比 Li–Ben-Dor 与 Mouton–Hornung 更接近 CFD，但整体略高估。",
+      "type": "定量结果",
+      "grade": "A",
+      "source": "p43，Table 1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "Hm 在 von Neumann 转变点为零，随 M0 与 θw 增大；反射激波触及楔面时 MR 失稳，故存在最大楔角。",
+      "type": "参数趋势/稳定性",
+      "grade": "A",
+      "source": "p43–44，Fig. 16",
+      "attr": "原文明确"
+    },
+    {
+      "point": "M2<1 时出现声速线；其位置近似与首道透射膨胀波重合，而非垂直于滑移线。",
+      "type": "M2<1 结构",
+      "grade": "A",
+      "source": "p46–47，Fig. 18",
+      "attr": "原文明确"
+    },
+    {
+      "point": "M2<1 的声速点可由准一维式(3.3) 或 Tan 等小扰动速度场式(3.5) 预测，二者均接近 CFD。",
+      "type": "定量验证",
+      "grade": "B",
+      "source": "p47，式(3.3)、(3.5)，Fig. 18",
+      "attr": "原文明确"
+    },
+    {
+      "point": "模型忽略滑移线卷起、寄生波、Cr 反射波与二次滑移线 ct，且 M2<1 无全局 Hm 算法。",
+      "type": "局限",
+      "grade": "A",
+      "source": "p38–39、p46–48",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "Case 1 来流与几何",
+      "value": "M0=2.84；θw=20.8°；w/H0=1.42",
+      "source": "p43，Table 1",
+      "note": "Hm/H0：CFD 0.191，本文理论 0.202。"
+    },
+    {
+      "item": "Case 2 来流与几何",
+      "value": "M0=4.0；θw=23.0°；w/H0=1.28",
+      "source": "p43，Table 1",
+      "note": "Hm/H0：CFD 0.110，本文理论 0.121。"
+    },
+    {
+      "item": "Case 3 来流与几何",
+      "value": "M0=4.0；θw=25.0°；w/H0=1.19",
+      "source": "p43，Table 1",
+      "note": "Hm/H0：CFD 0.213，本文理论 0.223。"
+    },
+    {
+      "item": "Case 4 来流与几何",
+      "value": "M0=4.5；θw=23.0°；w/H0=1.10",
+      "source": "p43，Table 1",
+      "note": "Hm/H0：CFD 0.052，本文理论 0.058；Hm 很小，声速喉道定位困难。"
+    },
+    {
+      "item": "Case 5 来流与几何",
+      "value": "M0=4.96；θw=28.0°；w/H0=1.10",
+      "source": "p43，Table 1",
+      "note": "Hm/H0：CFD 0.283，本文理论 0.292。"
+    },
+    {
+      "item": "Case 6 来流与几何",
+      "value": "M0=5.0；θw=26.9°；w/H0=1.10",
+      "source": "p43，Table 1",
+      "note": "Hm/H0：CFD 0.203，本文理论 0.213。"
+    },
+    {
+      "item": "附加验证工况（与实验/早期 CFD 对比）",
+      "value": "M0=3.98；Ht/L=0.37；θw 变化（Fig. 15 横轴扫过约 20°–26°，纵轴 Hm/H0）",
+      "source": "p45，Fig. 15",
+      "note": "Ht/L 的几何定义文中未展开；对比对象含 Hornung–Robinson 实验与 Vuillon 等 CFD。"
+    },
+    {
+      "item": "M2>1 典型工况（全场结构对比）",
+      "value": "M0=4.5；θw=25°；w/H0=1.1（反射激波后纯超声速）",
+      "source": "p33，Fig. 5(a)；p40，Fig. 10(b)",
+      "note": "另两个对比工况为 (2.84, 20.8°, 1.42) 与 (4.96, 28°, 1.1)。"
+    },
+    {
+      "item": "M2<1 工况 (a)",
+      "value": "M0=2.2；θw=19°；w/H0=0.6",
+      "source": "p48，Fig. 18(a)",
+      "note": "反射激波后存在亚声速区。"
+    },
+    {
+      "item": "M2<1 工况 (b)",
+      "value": "M0=2.2；θw=21°；w/H0=0.6",
+      "source": "p48，Fig. 18(b)",
+      "note": "同上。"
+    },
+    {
+      "item": "M2<1 工况 (c)",
+      "value": "M0=2.0；θw=19°；w/H0=0.6",
+      "source": "p48，Fig. 18(c)",
+      "note": "同上。"
+    },
+    {
+      "item": "M2<1 工况 (d)",
+      "value": "M0=2.0；θw=17°；w/H0=0.6",
+      "source": "p48，Fig. 18(d)",
+      "note": "另 Fig. 17 给出 (2.0,17°,0.6) 与 (2.2,21°,0.6) 的 Mach 数云图。"
+    },
+    {
+      "item": "CFD 网格",
+      "value": "300×200 与 600×400 两套；全文采用 300×200",
+      "source": "p32，Fig. 4",
+      "note": "网格无关性：Case (2.84,20.8°,1.42) 的 Hm/H0 两套均为 0.191；Case (4.5,25°,1.1) 为 0.131 与 0.132。"
+    },
+    {
+      "item": "气体与流动假设",
+      "value": "定常、二维、无粘超声速理想气体；γ 为常数；具体 γ 数值文中未提及",
+      "source": "p35，§2.2",
+      "note": "CFD 为 Euler/无粘？原文只说同 Tan et al. 方法，未在此列明粘性设置。"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "Hm（马赫杆高度）",
+      "definition": "三波点 T 到反射面（马赫杆根部）的法向高度",
+      "value": "逐工况见表 1；无量纲 Hm/H0 见 p43",
+      "relation": "由全局算法迭代得到，并与 CFD、Li–Ben-Dor、Mouton–Hornung 对比",
+      "source": "p30、p38–39、p43"
+    },
+    {
+      "name": "Hm/H0（无量纲马赫杆高度）",
+      "definition": "马赫杆高度除以模型特征高度 H0",
+      "value": "Case 1–6 本文理论：0.202、0.121、0.223、0.058、0.292、0.213",
+      "relation": "随 M0 与 θw 增大；von Neumann 点处为零",
+      "source": "p43，Table 1；p43–44，Fig. 16"
+    },
+    {
+      "name": "Hs（滑移线到反射面的局部截面高度）",
+      "definition": "滑移线下流管的当地高度",
+      "value": "沿 x 分布，由算法给出",
+      "relation": "dHs=−θdx；与声速喉道 Hs* 通过 σ(Mb) 联系",
+      "source": "p36，式(2.3)–(2.4)"
+    },
+    {
+      "name": "Hs*（声速喉道高度）",
+      "definition": "流管最小截面处高度",
+      "value": "由 Hm* 与 σ(Mm) 反算",
+      "relation": "Hm*/Hs*=σ(Mm)（式2.22），迭代闭合条件",
+      "source": "p39，式(2.22)"
+    },
+    {
+      "name": "σ(M)（面积比函数）",
+      "definition": "σ(M)=(1/M)[1+(γ−1)M²/2]^{(γ+1)/(2(γ−1))}",
+      "value": "按当地 M 计算",
+      "relation": "准一维等熵流面积–Mach 关系",
+      "source": "p36，式(2.3)"
+    },
+    {
+      "name": "Mb（滑移线下方平均 Mach 数）",
+      "definition": "准一维理论中沿流管高度平均的 Mach 数",
+      "value": "沿 x 变化；文中未列表",
+      "relation": "出现在式(2.2)、(2.8)、(3.1)",
+      "source": "p35–37、p46"
+    },
+    {
+      "name": "Ma（滑移线上方当地 Mach 数）",
+      "definition": "滑移线上方膨胀/压缩波计算用的当地 Mach 数",
+      "value": "沿 x 变化；文中未列表",
+      "relation": "Prandtl–Meyer 关系式(2.5)、(2.6)",
+      "source": "p36"
+    },
+    {
+      "name": "ν(M)（Prandtl–Meyer 函数）",
+      "definition": "ν(M)=√((γ+1)/(γ−1))arctan√((γ−1)(M²−1)/(γ+1))−arctan√(M²−1)",
+      "value": "按当地 M 计算",
+      "relation": "膨胀波与透射波转向",
+      "source": "p36，式(2.5) 后"
+    },
+    {
+      "name": "χ(M0,M1)（等熵压力比）",
+      "definition": "χ=[(2+(γ−1)M0²)/(2+(γ−1)M1²)]^{γ/(γ−1)}",
+      "value": "按波前/波后 M 计算",
+      "relation": "Prandtl–Meyer 膨胀的压力变化",
+      "source": "p36，式(2.5) 后"
+    },
+    {
+      "name": "θ1、θ2、θ3（三波点处流向角）",
+      "definition": "入射激波、反射激波、马赫杆后的流向偏角",
+      "value": "由三激波理论求得；逐工况未列表",
+      "relation": "标准构型 θ3=θ1−θ2；非标准构型 θ3=θ1+θ2；p2=p3",
+      "source": "p35，§2.2.1"
+    },
+    {
+      "name": "β（激波角）",
+      "definition": "激波与来流方向夹角",
+      "value": "由斜激波关系与偏角耦合求解",
+      "relation": "式(2.1) 中 f、g、h、A、S 的自变量",
+      "source": "p35，式(2.1)"
+    },
+    {
+      "name": "θN、θM、θS（转变/分界楔角）",
+      "definition": "θN 为 von Neumann 判据，θM 为入射激波脱体判据，θS 为 M2=1 对应的楔角",
+      "value": "随 M0 变化；Fig. 1、Fig. 16 给出分界线",
+      "relation": "MR 发生于 θN≤θw≤θM；θw<θS 时 M2>1",
+      "source": "p29–30，Fig. 1；p43–44，Fig. 16"
+    },
+    {
+      "name": "w/H0（模型几何比）",
+      "definition": "模型尺度 w 与特征高度 H0 之比",
+      "value": "Table 1 为 1.42、1.28、1.19、1.10、1.10、1.10",
+      "relation": "影响 Hm 的几何参数；Mouton–Hornung 模型也用到 w、H0",
+      "source": "p30–31、p43"
+    },
+    {
+      "name": "Ht/L（楔高/长度比）",
+      "definition": "附加验证工况的几何比",
+      "value": "0.37",
+      "relation": "用于与 Hornung–Robinson 实验对比",
+      "source": "p45，Fig. 15"
+    },
+    {
+      "name": "声速线",
+      "definition": "M2<1 时反射激波后亚声速区与超声速区的分界",
+      "value": "位置近似与首道透射膨胀波重合",
+      "relation": "由式(3.3) 或式(3.5) 预测滑移线上的声速点",
+      "source": "p46–47，Fig. 18"
+    }
+  ],
+  "methods": [
+    {
+      "item": "CFD 方法",
+      "value": "与 Tan et al. (2006) 相同、由 Ren (2003) 提出的数值方法（旋转 Riemann 求解器框架）",
+      "source": "p32，§2.1",
+      "note": "原文未在此列出具体通量格式、限制器与 CFL。"
+    },
+    {
+      "item": "网格与细化",
+      "value": "300×200 与 600×400；采用 300×200",
+      "source": "p32，Fig. 4",
+      "note": "两套网格的 Hm/H0 分别 0.191/0.191 与 0.131/0.132。"
+    },
+    {
+      "item": "斜激波关系",
+      "value": "式(2.1)：M1²、p1/p0、ρ1/ρ0、a1/a0 与偏角关系 S(M,β,θ)=0",
+      "source": "p35，式(2.1)",
+      "note": "用于三波点与各波系前后参数。"
+    },
+    {
+      "item": "三激波理论",
+      "value": "入射激波取弱解；反射激波通常取弱解、M2<1 时取强解；马赫杆取强解；p2=p3；θ3=θ1−θ2 或 θ3=θ1+θ2",
+      "source": "p35，§2.2.1",
+      "note": "以 θ2 初值迭代求解。"
+    },
+    {
+      "item": "准一维管流",
+      "value": "式(2.2) dp/p=γMb²/(1−Mb)dHs/Hs；式(2.3) Hs/Hs*=σ(Mb)；式(2.4) dHs=−θdx",
+      "source": "p35–36，式(2.2)–(2.4)",
+      "note": "用于滑移线下方流管；原文分母印为 1−Mb。"
+    },
+    {
+      "item": "膨胀波关系",
+      "value": "式(2.5)：dθ=ν(Ma+dMa)−ν(Ma)，(p+dp)/p=χ，sinμa=1/Ma",
+      "source": "p36，式(2.5)",
+      "note": "用于滑移线上方 Rs。"
+    },
+    {
+      "item": "压缩波 Cs 的处理",
+      "value": "式(2.7) 用斜激波关系描述 Cs，并用式(2.8) 补充 dp/p 与 θ、Hs 的关系；θ 平滑时也可用 Prandtl–Meyer 关系",
+      "source": "p37，式(2.7)–(2.8)",
+      "note": "θ3>0 为膨胀、θ3<0 为压缩的判别在 §2.2.3。"
+    },
+    {
+      "item": "反射激波处的透射/反射",
+      "value": "式(2.9)–(2.13) 处理 Rs 与 r；式(2.14)–(2.18) 处理 Rc 与 r；以压力与偏角连续闭合",
+      "source": "p37–38，§2.2.3",
+      "note": "产生 Rt、Cr、ct、r′ 等波。"
+    },
+    {
+      "item": "波–波相互作用",
+      "value": "式(2.19)–(2.21)：Rt 与 Rs 相交产生 Rt′、Rs′；Rt 与 Cs 相交按 Rt–r 同类处理",
+      "source": "p38–39，§2.2.4",
+      "note": "偏角连续 θ1−θ13=−θ2+θ24。"
+    },
+    {
+      "item": "全局迭代算法",
+      "value": "假定 Hm* → 三激波理论给三区参数 → 由左到右、由上到下逐波求解 → 检查最小截面是否等于 Hs* → 更新 Hm* 直至收敛",
+      "source": "p39，§2.2.5",
+      "note": "膨胀扇与滑移线波用有限道 Mach 波离散。"
+    },
+    {
+      "item": "M2<1 的声速点定位",
+      "value": "式(3.1)–(3.3) 准一维压力分布；式(3.4)–(3.5) 用 Tan et al. (2006) 小扰动速度场与等熵/总焓守恒求滑移线声速点",
+      "source": "p46–47，§3.3",
+      "note": "式(3.5) 结果与 CFD 接近，但未给定量误差。"
+    },
+    {
+      "item": "数值与理论对比",
+      "value": "对比滑移线/反射激波形状、压力梯度、Hm/H0、声速线位置；Hm 另与 Li–Ben-Dor、Mouton–Hornung、Azevedo–Liu、Hornung–Robinson 实验、Vuillon 等 CFD 对比",
+      "source": "p40–45，Figs. 10–16",
+      "note": "对比为图形与表格，未给误差统计。"
+    },
+    {
+      "item": "KH 不稳定的处理",
+      "value": "CFD 中滑移线卷起产生寄生波；理论中忽略卷起，认为其影响为次级",
+      "source": "p32、p41–42",
+      "note": "作者承认这是理论与 CFD 小幅差异的主因之一。"
+    },
+    {
+      "item": "边界/初始条件",
+      "value": "文中未提及（CFD 具体入口、出口与壁面条件未在本文展开）",
+      "source": "p32，§2.1",
+      "note": "只说明采用与 Tan et al. 相同的方法。"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "把 MR 分解为若干局部波系：三波点用三激波理论；滑移线下方的流管用准一维等熵面积–Mach 关系；滑移线上方用 Prandtl–Meyer 膨胀与斜激波压缩；各波在反射激波与滑移线处的透射/反射用压力与流向角连续闭合。给定 Hm* 后可自左向右、自上而下求出整个波系与滑移线形状，再以声速喉道最小截面条件迭代 Hm*。",
+    "assumptions": [
+      "定常、二维、无粘超声速流动；忽略粘性与边界层",
+      "理想气体、比热比 γ 为常数（具体数值文中未提及）",
+      "三激波理论：入射激波取弱解；反射激波通常取弱解，M2<1 时取强解；马赫杆取强解",
+      "滑移线两侧压力连续、流向角按标准/非标准三激波构型闭合",
+      "滑移线下方流动可用准一维管流近似，Mb 沿截面高度平均",
+      "滑移线曲率对管流的影响为次级；忽略滑移线卷起（KH 不稳定）与寄生波",
+      "忽略 Rs 在反射激波上产生的反射波 Cr，以及 Rt–Cs 产生的二次滑移线 ct 的强影响",
+      "膨胀扇与滑移线波可用有限道 Mach 波离散；θ 平滑时压缩波可用 Prandtl–Meyer 关系代替激波关系",
+      "M2<1 时亚声速袋内流动非等熵，但压力沿滑移线可近似用准一维或小扰动速度场描述"
+    ],
+    "steps": [
+      {
+        "title": "斜激波关系与三激波闭合",
+        "text": "对连接上游 0 与下游 1 的斜激波，用式(2.1) 给出 M1、p1/p0、ρ1/ρ0、a1/a0 及偏角关系 S=0；在三波点 T 对 i、r、m 分别取弱/强解，并以 p2=p3 与 θ3=θ1∓θ2 闭合。",
+        "latex": [
+          "M_1^2=f(M_0,\\beta_1),\\quad p_1/p_0=g(M_0,\\beta_1),\\quad \\rho_1/\\rho_0=h(M_0,\\beta_1),\\quad a_1/a_0=A(M_0,\\beta_1),\\quad S(M_0,\\beta_1,\\theta_1)=0 \\qquad (2.1)",
+          "f(M,\\beta)=\\frac{M^2+\\frac{2}{\\gamma-1}}{\\frac{2\\gamma}{\\gamma-1}M^2\\sin^2\\beta-1}+\\frac{M^2\\cos^2\\beta}{\\frac{\\gamma-1}{2}M^2\\sin^2\\beta+1}",
+          "g(M,\\beta)=\\frac{2\\gamma}{\\gamma+1}M^2\\sin^2\\beta-\\frac{\\gamma-1}{\\gamma+1},\\qquad h(M,\\beta)=\\frac{(\\gamma+1)M^2\\sin^2\\beta}{(\\gamma-1)M^2\\sin^2\\beta+2}",
+          "A(M,\\beta)=\\frac{[(\\gamma-1)M^2\\sin^2\\beta+2]^{1/2}[2\\gamma M^2\\sin^2\\beta-(\\gamma-1)]^{1/2}}{(\\gamma+1)M\\sin\\beta},\\qquad S(M,\\beta,\\theta)=2\\cot\\beta\\frac{M^2\\sin^2\\beta-1}{M^2(\\gamma+\\cos2\\beta)+2}-\\tan\\theta"
+        ],
+        "source": "p35，式(2.1) 及 f、g、h、A、S 定义"
+      },
+      {
+        "title": "滑移线下方准一维管流",
+        "text": "把滑移线与反射面之间的流管当准一维流：截面高度 Hs 变化引起压力变化式(2.2)；Hs 与声速喉道 Hs* 满足面积–Mach 关系式(2.3)；几何上 dHs=−θdx。",
+        "latex": [
+          "\\frac{dp}{p}=\\frac{\\gamma M_b^2}{1-M_b}\\frac{dH_s}{H_s} \\qquad (2.2)",
+          "\\frac{H_s}{H_s^*}=\\sigma(M_b),\\qquad \\sigma(M)=\\frac{1}{M}\\left(1+\\frac{\\gamma-1}{2}M^2\\right)^{(\\gamma+1)/(2(\\gamma-1))} \\qquad (2.3)",
+          "dH_s=-\\theta\\,dx \\qquad (2.4)"
+        ],
+        "source": "p35–36，式(2.2)–(2.4)"
+      },
+      {
+        "title": "滑移线上方膨胀波 Rs",
+        "text": "给定 Hs* 后，滑移线当地偏角 θ 通过 Prandtl–Meyer 关系式(2.5) 产生膨胀波：流向角增量等于 ν 的变化，压力按等熵比 χ 下降，Mach 角 sinμa=1/Ma。该方程组闭合，可积分出交点 B 之前的滑移线形状与 Rs 强度/方向。",
+        "latex": [
+          "d\\theta=\\nu(M_a+dM_a)-\\nu(M_a),\\qquad \\frac{p+dp}{p}=\\chi(M_a,M_a+dM_a),\\qquad \\sin\\mu_a=\\frac{1}{M_a} \\qquad (2.5)",
+          "\\nu(M)=\\sqrt{\\frac{\\gamma+1}{\\gamma-1}}\\arctan\\sqrt{\\frac{\\gamma-1}{\\gamma+1}(M^2-1)}-\\arctan\\sqrt{M^2-1}",
+          "\\chi(M_0,M_1)=\\left(\\frac{2+(\\gamma-1)M_0^2}{2+(\\gamma-1)M_1^2}\\right)^{\\gamma/(\\gamma-1)}"
+        ],
+        "source": "p36，式(2.5) 及 ν、χ 定义"
+      },
+      {
+        "title": "透射波后压缩波 Cs 的闭合",
+        "text": "B 点之后，滑移线下方压降由入射透射波 Rt 与反射压缩波 Cs 共同平衡。设 Cs 为压缩波，用式(2.7) 的斜激波关系；再用式(2.8)（由式(2.2)–(2.4) 消去 dHs）补充第四个关系，从而解出 dMa、dp、dθ 与 β_Cs。",
+        "latex": [
+          "(M_a+dM_a)^2=f(M_a+dM_{a1},\\beta_{Cs}),\\qquad \\frac{p+dp}{p+dp_1}=g(M_a+dM_{a1},\\beta_{Cs}),\\qquad S(M_a+dM_{a1},\\beta_{Cs},d\\theta-d\\theta_1)=0 \\qquad (2.7)",
+          "\\frac{dp}{p}=-\\frac{\\gamma M_b^2}{1-M_b}\\frac{\\theta}{H_s}\\,dx \\qquad (2.8)"
+        ],
+        "source": "p37，式(2.7)–(2.8)"
+      },
+      {
+        "title": "反射激波处的透射与反射",
+        "text": "Rs 打在反射激波 r 上，产生反射波 Cr 与新滑移线 cr。波前区 1 由 r 的激波关系式(2.9) 给出；跨 Rs 用式(2.10)，跨 Cr 用式(2.11)；反射后 r′ 用式(2.12)；最后以 cr 两侧压力与流向角连续式(2.13) 闭合。",
+        "latex": [
+          "M_1^2=f(M_0,\\beta_1),\\quad p_1/p_0=g(M_0,\\beta_1),\\quad S(M_0,\\beta_1,\\theta_1)=0 \\qquad (2.9)",
+          "\\nu(M_2)-\\nu(M_1)=\\theta_2,\\qquad p_2/p_1=\\chi(M_1,M_2) \\qquad (2.10)",
+          "\\nu(M_3)-\\nu(M_2)=\\theta_3,\\qquad p_3/p_2=\\chi(M_2,M_3) \\qquad (2.11)",
+          "M_4^2=f(M_0,\\beta_4),\\quad p_4/p_0=g(M_0,\\beta_4),\\quad S(M_0,\\beta_4,\\theta_4)=0 \\qquad (2.12)",
+          "\\theta_1-\\theta_2+\\theta_3=\\theta_4,\\qquad p_3=p_4 \\qquad (2.13)"
+        ],
+        "source": "p37–38，式(2.9)–(2.13)"
+      },
+      {
+        "title": "上拐角膨胀扇 Rc 的透射",
+        "text": "Rc 穿过反射激波 r 产生透射膨胀波 Rt、滑移线 ct 与透射激波 r′。Rc 与 r 的波前参数由式(2.14)、(2.15) 给出；跨 Rt 用式(2.16)，跨 r′ 用式(2.17)；以 ct 两侧连续式(2.18) 闭合。",
+        "latex": [
+          "\\nu(M_1)-\\nu(M_0)=\\theta_1,\\qquad p_1/p_0=\\chi(M_0,M_1) \\qquad (2.14)",
+          "M_2^2=f(M_0,\\beta_2),\\quad p_2/p_0=g(M_0,\\beta_2),\\quad S(M_0,\\beta_2,\\theta_2)=0 \\qquad (2.15)",
+          "\\nu(M_4)-\\nu(M_2)=\\theta_4,\\qquad p_4/p_2=\\chi(M_2,M_4) \\qquad (2.16)",
+          "M_3^2=f(M_1,\\beta_3),\\quad p_3/p_1=g(M_1,\\beta_3),\\quad S(M_1,\\beta_3,\\theta_3)=0 \\qquad (2.17)",
+          "\\theta_1+\\theta_3=\\theta_2+\\theta_4,\\qquad p_3=p_4 \\qquad (2.18)"
+        ],
+        "source": "p38，式(2.14)–(2.18)"
+      },
+      {
+        "title": "透射波 Rt 与滑移线波的相交",
+        "text": "Rt 与 Rs 相交产生 Rt′ 与 Rs′；入射波后参数由式(2.19)，跨两道透射膨胀波由式(2.20)（四式中三式独立），再由偏角连续式(2.21) 闭合。Rt 与 Cs 相交按 Rt–r 同类处理。",
+        "latex": [
+          "\\nu(M_1)-\\nu(M_0)=\\theta_1,\\quad p_1/p_0=\\chi(M_0,M_1),\\qquad \\nu(M_2)-\\nu(M_0)=\\theta_2,\\quad p_2/p_0=\\chi(M_0,M_2) \\qquad (2.19)",
+          "\\nu(M_3)-\\nu(M_1)=\\theta_{13},\\quad p_3/p_1=\\chi(M_1,M_3),\\qquad \\nu(M_3)-\\nu(M_2)=\\theta_{23},\\quad p_3/p_2=\\chi(M_2,M_3) \\qquad (2.20)",
+          "\\theta_1-\\theta_{13}=-\\theta_2+\\theta_{24} \\qquad (2.21)"
+        ],
+        "source": "p38–39，式(2.19)–(2.21)"
+      },
+      {
+        "title": "以声速喉道条件迭代马赫杆高度",
+        "text": "假定 Hm* 得三波点位置与三区参数；由准一维关系 Hm*/Hs*=σ(Mm) 得声速喉道高度；逐波求出滑移线与反射激波后，检查二者最小距离是否等于 Hs*；不等则更新 Hm* 重算，直至收敛。",
+        "latex": [
+          "\\frac{H_m^*}{H_s^*}=\\sigma(M_m) \\qquad (2.22)",
+          "\\min_x\\,H_s(x)=H_s^* \\quad\\Longrightarrow\\quad H_m=H_m^*"
+        ],
+        "source": "p39，式(2.22) 及 §2.2.5"
+      },
+      {
+        "title": "M2<1 时声速线的定位",
+        "text": "滑移线下按准一维式(3.1)；滑移线上方等熵，式(3.2)；联立得式(3.3)，令 Ms,a=1 得滑移线声速点 ξs。因亚声速袋很小，另用 Tan 等小扰动速度场式(3.4) 与等熵/总焓守恒式(3.5) 求声速点。",
+        "latex": [
+          "\\frac{p_s}{p_{T3}}=\\chi(M_{T3},M_s),\\qquad \\frac{H_s(\\xi)}{H_s^*}=\\sigma(M_s) \\qquad (3.1)",
+          "\\frac{p_s}{p_{T2}}=\\chi(M_{T2},M_{s,a}),\\qquad \\frac{p_s}{p_{T2}}=\\frac{\\rho_s^\\gamma}{\\rho_{T2}^\\gamma} \\qquad (3.2)",
+          "p_{T2}\\chi(M_{T2},M_{s,a})=p_{T3}\\chi(M_{T3},M_s(\\xi)) \\qquad (3.3)",
+          "V_x=V_0+\\frac{[(\\gamma-1)M_0^2+2][2\\gamma M_0^2-(\\gamma-1)]}{H_m(\\gamma+1)^2(M_0^2-1)}a_0\\theta_{T3}(x-x_T),\\qquad V_y=-\\frac{(\\gamma-1)M_0^2+2}{\\gamma+1}\\frac{\\theta_{T3}}{H_m}a_0y \\qquad (3.4)",
+          "\\rho_s=\\rho_{T3}(p_s/p_{T3})^{1/\\gamma},\\qquad \\frac{2\\gamma}{\\gamma+1}\\frac{p_s}{\\rho_s}+\\frac{\\gamma-1}{\\gamma+1}(V_x+V_y)^2=\\frac{2\\gamma}{\\gamma+1}\\frac{p_{T3}}{\\rho_{T3}}+\\frac{\\gamma-1}{\\gamma+1}M_{T3}^2a_{T3}^2 \\qquad (3.5)"
+        ],
+        "source": "p46–47，式(3.1)–(3.5)"
+      }
+    ],
+    "result": "算法输出滑移线形状、反射激波形状与 Hm。滑移线呈先凸后凹、在 B 点拐折、在 P 点水平；反射激波在 F 点前直、F–Q 间上偏、Q 点后重新变直。Hm/H0 在六个工况上与 CFD 的偏差约 0.006–0.011，优于 Li–Ben–Dor 与 Mouton–Hornung 的多数预测（p43，Table 1）。M2<1 时式(3.3)、(3.5) 可定位滑移线声速点，声速线近似沿首道透射膨胀波。",
+    "limits": "推导是准一维/局部波系耦合，不是完整 Euler/NS 解：忽略滑移线卷起与寄生波、忽略 Cr 与二次滑移线 ct 的强影响；准一维近似在靠近马赫杆或亚声速袋很小时失效；M2<1 仅诊断声速线，未建立全局 Hm 迭代；Hm 很小时声速喉道位置对结果敏感；γ 的具体值与气体模型未说明。"
+  },
+  "mechanism": "【原文明确】滑移线与反射面之间形成流管。由于滑移线先向反射面偏转，流管沿流向收缩；按准一维亚声速流，收缩使压力连续下降。为在滑移线上方平衡这一压降，必须产生一系列膨胀波 Rs，这使反射激波后流动变为非均匀，同时使滑移线进一步向反射面偏转。首道透射膨胀波 Rt 与滑移线相交于 B 后，滑移线上方出现压缩波 Cs（原文证明 Cs 始终为压缩波），使滑移线由凸转凹、二阶导数突变，形成拐点；随后滑移线继续上偏至水平点 P。反射激波在 F 点前不受膨胀扇影响而保持直线，F 点后逐渐减弱并上偏，Q 点后重新变直（p34、p41–42、p48）。【原文明确】声速喉道由滑移线与反射面的最小截面控制，因此滑移线波系改变喉道位置，进而改变 Hm（p39）。【原文明确】M2<1 时，亚声速袋内 M≈1，遇到透射膨胀波即迅速转为超声速，故声速线近似沿首道透射膨胀波（p47–48）。",
+  "findings": [
+    {
+      "finding": "反射激波前缘后流动并非均匀：滑移线上方存在一系列膨胀波，使该区域密度、压力与 Mach 数均非均匀。",
+      "evidence": "Fig. 5 给出 (M0=4.5, θw=25°, w/H0=1.1) 与 (M0=2.2, θw=22°, w/H0=0.6) 的密度、压力、Mach 数云图，反射激波后等值线明显弯曲（p32–33）",
+      "type": "CFD 现象",
+      "strength": "强",
+      "source": "p32–34，Fig. 5",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "滑移线先凸后凹，在首道透射 Mach 波与滑移线交点 B 处二阶导数由负突变为正；继续上偏至 P 点一阶导数为零、滑移线水平。",
+      "evidence": "Fig. 11 三工况的 Y、DY/DX、D²Y/DX² 曲线；B 点与 P 点标注（p41）",
+      "type": "滑移线几何",
+      "strength": "强",
+      "source": "p41，Fig. 11",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "反射激波在 F 点前保持直线，F 点后受膨胀波作用减弱并上偏，至 Q 点后恢复直线。",
+      "evidence": "Fig. 13 两工况的反射激波形状与一二阶导数；F、Q 点标注（p41–42）",
+      "type": "反射激波几何",
+      "strength": "强",
+      "source": "p41–42，Fig. 13",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "滑移线压力梯度的理论均值与 CFD 一致，CFD 的振荡来自 KH 不稳定导致的滑移线卷起与寄生波。",
+      "evidence": "Fig. 12 中理论曲线平滑、CFD 曲线振荡，但平均值贴合（p41）",
+      "type": "理论与 CFD 差异",
+      "strength": "中",
+      "source": "p41，Fig. 12",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "本文理论给出的 Hm/H0 在六个工况上均接近 CFD（偏差约 0.006–0.011），多数情况下比 Li–Ben–Dor 与 Mouton–Hornung 更准；整体略高估。",
+      "evidence": "Table 1：Case 5 CFD 0.283、本文 0.292、Li 0.269、Mouton 0.395；Case 3 CFD 0.213、本文 0.223、Mouton 0.300（p43）",
+      "type": "定量对比",
+      "strength": "强",
+      "source": "p43，Table 1",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "Hm 随 M0 与 θw 增大，在 von Neumann 转变点为零；MR 在反射激波触及楔面时失稳，因此存在最大楔角 θmax。",
+      "evidence": "Fig. 16 的 Hm/H0 等值线与 θN、θD、θmax 分界；正文 p43–44",
+      "type": "参数趋势/稳定性",
+      "strength": "中",
+      "source": "p43–44，Fig. 16",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "M2<1 时声速线不垂直于滑移线，而近似与首道透射膨胀波 Rt 重合；亚声速区在遇到 Rt 后立即终止。",
+      "evidence": "Fig. 18 四个工况的 Mach 数云图与声速线；式(3.5) 预测的声速点与 CFD 接近（p47–48）",
+      "type": "M2<1 结构",
+      "strength": "中",
+      "source": "p46–48，Fig. 18",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "已有模型与 CFD 的 Hm 偏差主要来自忽略滑移线上波系，而非三激波理论本身。",
+      "evidence": "本文在相同三激波框架下加入滑移线波系后 Hm 明显改善；作者在 p43 明确此判断（p43、p48）",
+      "type": "机制归因",
+      "strength": "中",
+      "source": "p43、p48",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "【原文明确】把滑移线上由下方压力变化产生的一系列膨胀/压缩波纳入模型，是本文主要贡献；这些波使反射激波后流动非均匀，并与透射膨胀波共同决定滑移线形状。研究既揭示了非均匀性（可指导 CFD 解释），也表明包括 Hm 在内的全局结构受滑移线波系显著影响（可解释并补救已有模型的偏差）。M2<1 时亚声速区在遇到透射膨胀波时立即终止，声速线可视为位于首道透射膨胀波附近。作者同时承认算法比已有模型复杂（p48）。",
+  "contributions": [
+    "用精细 CFD 揭示反射激波前缘后流动非均匀，推翻“均匀流”假设。",
+    "识别滑移线上的一系列膨胀/压缩波及其与反射激波、透射波的相互作用。",
+    "建立包含滑移线波系的全局迭代算法，同时预测滑移线、反射激波形状与马赫杆高度。",
+    "证明滑移线先凸后凹、存在拐点 B 与水平点 P；反射激波存在 F、Q 两个特征点。",
+    "给出 Hm/H0 的六工况定量对比，多数优于 Li–Ben–Dor 与 Mouton–Hornung。",
+    "对 M2<1 识别声速线位置，并给出式(3.3)、(3.5) 两种声速点预测方法。"
+  ],
+  "limits": "【原文明确】理论忽略滑移线卷起（KH 不稳定）与寄生波，忽略 Rs 在反射激波上的反射波 Cr 及 Rt–Cs 产生的二次滑移线 ct；准一维近似在靠近马赫杆、亚声速袋很小时不准确；M2<1 未建立全局 Hm 算法；Hm 很小时声速喉道位置难定。实验对比受三维效应影响（Irving Brown & Skews 2004 指出 Hm 随展弦比减小），早期 CFD 可能网格未收敛（p44–45）。【AI识别】γ 值与气体模型未说明；CFD 的边界条件、通量格式细节未展开；Table 1 列标题含混；理论与 CFD 的误差未做统计；未讨论粘性/边界层对滑移线与声速线的影响。",
+  "significance": "【AI概括】本文把“滑移线不是直线”这一被长期忽略的结构引入马赫反射全局预测，解释了三激波类模型 Hm 偏差的来源；其波系分解 + 声速喉道迭代的思路可用于超声速进气道、隔离器内激波反射/马赫杆高度的快速预估，也可为 CFD 后处理提供波系判读依据。【AI推断】由于模型无粘、二维且忽略 KH 卷起，直接用于真实三维、粘性、非定常反射流时需重新标定；M2<1 的声速线结论更适合作为定性/半定量判据。",
+  "quotes": [
+    {
+      "text": "the flow immediately behind the leading part of the reflected shock wave is not a uniform one",
+      "supports": "本文最核心的 CFD 观察，直接否定旧模型假设",
+      "source": "p30，Abstract",
+      "use": "引言或机制段引用，适合作为研究缺口的核心证据"
+    },
+    {
+      "text": "previously regarded as a uniform flow",
+      "supports": "旧模型把反射激波后当均匀流",
+      "source": "p29，Abstract",
+      "use": "与上一条并列，形成“旧假设—新观察”对比"
+    },
+    {
+      "text": "the slipline is first convex and then concave with an inflexion point B",
+      "supports": "滑移线几何的核心结论",
+      "source": "p41，§3.1.2",
+      "use": "描述滑移线形状时直接引用"
+    },
+    {
+      "text": "Cs is always compressive even near the point B",
+      "supports": "滑移线反射波 Cs 的性质",
+      "source": "p34，§2.1",
+      "use": "说明 B 点后压缩波来源"
+    },
+    {
+      "text": "the present predictions seem to be better than those of Li & Ben-Dor (1997) and Mouton & Hornung (2007) for most of the conditions",
+      "supports": "Hm 预测精度优于旧模型",
+      "source": "p43，§3.2",
+      "use": "定量对比结论引用，注意作者紧接着声明这不是模型优劣的绝对判断"
+    },
+    {
+      "text": "the sonic line can be simply regarded as in the close vicinity of the first transmitted expansion wave",
+      "supports": "M2<1 声速线位置结论",
+      "source": "p48，§3.4",
+      "use": "引用 M2<1 结论时使用"
+    },
+    {
+      "text": "The inclusion of a series of expansion and compression waves over the slipline ... is the main contribution of this work",
+      "supports": "本文贡献自述",
+      "source": "p48，§3.4",
+      "use": "写研究贡献时引用"
+    },
+    {
+      "text": "the deviation of the previous models from CFD results come from the ignorance of the waves over the slipline",
+      "supports": "旧模型偏差的归因",
+      "source": "p43，§3.2",
+      "use": "机制归因段引用"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig06_p6.png",
+      "n": 6,
+      "page": 6,
+      "caption_zh": "马赫反射波系示意图：入射激波 i、反射激波 r、马赫杆 m、滑移线 s、三波点 T，以及上拐角膨胀扇 Rc、滑移线波 Rs/Cs、透射波 Rt、反射波 Cr、声速线等",
+      "caption_orig": "Figure 6. Schematic illustration of the Mach reflection wave configuration.",
+      "why": "定义全文所有波系与特征点，是理解 §2.2 物理模型和全局算法的总图。"
+    },
+    {
+      "file": "fig08_p12.png",
+      "n": 10,
+      "page": 12,
+      "caption_zh": "解析构型与 CFD 的对比：(a) M0=2.84, θw=20.8°, w/H0=1.42；(b) M0=4.5, θw=25°, w/H0=1.1；(c) M0=4.96, θw=28°, w/H0=1.1",
+      "caption_orig": "Figure 10. Comparison of analytical configuration with the numerical results. (a) M0 = 2.84, θw = 20.8o, w/H0 = 1.42; (b) M0 = 4.5, θw = 25o, w/H0 = 1.1; and (c) M0 = 4.96, θw = 28o, w/H0 = 1.1.",
+      "why": "直接支撑“理论能预测滑移线与反射激波整体形状”的核心结论，并显示透射波细节的差异。"
+    },
+    {
+      "file": "fig12_p16.png",
+      "n": 14,
+      "page": 16,
+      "caption_zh": "本文无量纲马赫杆高度与 Li–Ben-Dor、Mouton–Hornung 及本文 CFD 的对比（w/H0=1.1）：(a) θw=26°，(b) θw=28°，(c) M0=4.5，(d) M0=6",
+      "caption_orig": "Figure 14. Comparisons of the current non-dimensional Mach stem height with those of Li & Ben-dor (1997), of Mouton & Hornung (2007) and current numerical results (w/H0 = 1.1). (a) θw = 26o, (b) θw = 28o, (c) M0 = 4.5 and (d) M0 = 6.",
+      "why": "支撑 Hm 预测在宽广 M0/θw 范围内更接近 CFD，是定量验证的主要图件。"
+    },
+    {
+      "file": "fig16_p20.png",
+      "n": 18,
+      "page": 20,
+      "caption_zh": "M2<1 时的 Mach 数云图（w/H0=0.6）：(a) M0=2.2, θw=19°，(b) M0=2.2, θw=21°，(c) M0=2.0, θw=19°，(d) M0=2.0, θw=17°",
+      "caption_orig": "Figure 18. Mach contours for M2 < 1 (w/H0 = 0.6). (a) M0 = 2.2, θw = 19o, (b) M0 = 2.2, θw = 21o, (c) M0 = 2.0, θw = 19o and (d) M0 = 2.0, θw = 17o.",
+      "why": "支撑 M2<1 时声速线近似沿首道透射膨胀波、式(3.5) 声速点接近 CFD 的结论。"
+    }
+  ],
+  "verification": {
+    "text_only": "是——仅使用 bundle 全文、图注及原 PDF 第 35–37、46–47 页核对公式；未引入外部知识。",
+    "a_grade_supported": "是——A 级要点均有页码/图/式支撑：式(2.1)–(2.22)、式(3.1)–(3.5)；Figs. 5/6/10/11/13/14/16/18；Table 1（p43）。",
+    "attributes_marked": "是——three_sentence、core_points、findings 均逐条标注【原文明确】/【AI概括】/【AI推断】。",
+    "coverage": "全文 22 页已读完；IMRaD、工况表、关键参数、方法、推导链（9 步）、4 幅图件、引文与核验项均覆盖。",
+    "no_fabrication": "未编造页码、图号、公式或数据；Table 1 列标题含混、γ 数值、CFD 边界条件等缺失处已注明“文中未提及/需核对”。",
+    "open_questions": [
+      "Table 1 中“CFD/Theory”列标题与实际四列数值的对应关系是否如本文所读（0.191 为 CFD、0.202 为本文理论）？建议回原表核对。",
+      "全文未给 γ 的具体数值，是否取空气 1.4？这会影响 χ、σ 与三激波解。",
+      "300×200 网格是否足以解析滑移线上的短波长波系？KH 卷起被数值耗散抑制到什么程度？",
+      "M2<1 的全局 Hm 算法未给出，式(3.3)/(3.5) 只定位声速点，如何闭合 Hm 仍待解决。",
+      "理论忽略的 Cr 与二次滑移线 ct 对 Hm 的定量影响有多大？文中仅称“很弱”。",
+      "实验对比中三维效应（展弦比）会使 Hm 降低，本文二维理论略高估是否主要由此造成？",
+      "式(3.5) 中 Vx 表达式的系数与 Tan et al. (2006) 原文是否一致？扫描件分辨受限，已按 PDF 核读。"
+    ]
+  }
+}

@@ -1,0 +1,601 @@
+{
+  "id": 789,
+  "read_note": "conferencePaper（1971），13页；bundle 723行已全读。正文为数值方法论文，含稳定性分析、网格设计、分裂格式与两个M=2激波/层流边界层干扰算例；无表格。公式OCR严重乱码，已用PDF第1–3、5–7页核对式(1)–(11)；图6–9有裁剪图，图2–5未在bundle图件清单中，只能依据正文描述。实验对比数据来自Hakkinen等(1959)，本文未重复实验。",
+  "one_line": "M=2斜激波/层流边界层干扰的MacCormack二阶分裂格式数值模拟与网格设计准则。",
+  "three_sentence": [
+    {
+      "text": "当时对Lax-Wendroff类二阶格式在激波/边界层干扰中的精度、稳定性与网格配置缺乏系统检验，本文针对该问题改造MacCormack格式。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "采用二维非定常Navier-Stokes方程、两步二阶格式、线性von Neumann稳定性分析、网格雷诺数Re_Δy=2的网格估计和交替方向分裂，计算M=2、Pf/Po=1.2与1.4两个工况并与Hakkinen实验对比；粗网格摩阻严重偏离，细化后压力/摩阻总体吻合，但分离区长度与压力平台仍预测不足。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "分裂格式保持二阶精度，计算总时间约为未分裂格式的0.75；但非线性收敛无理论保证，分离区预测仍受网格分辨率限制。",
+      "attr": "AI概括"
+    }
+  ],
+  "imrad": {
+    "introduction": "【原文明确】问题：有限差分求解流体动力学时，精度取决于格式相容性、数值稳定性、数值与物理依赖域匹配以及对所有物理过程的模拟，但这些问题的答案很少（p.151）。缺口：需要检验一种高效二阶Lax-Wendroff/MacCormack格式的数值行为，并针对激波与层流边界层干扰的法向小尺度进行改造（p.151）。目标：分析该格式的稳定性与精度，提出网格间距估计和分裂算法，并用M=2斜激波/平板层流边界层干扰算例验证（p.151、157）。",
+    "methods": "【原文明确】控制方程为二维非定常Navier-Stokes方程（式1，p.151）；离散采用两步预测-校正二阶格式（式2，p.151），并给出四种循环变体（式6，p.153）；稳定性用线性化Fourier/von Neumann分析（式4–5，p.152–153），并做M=2、20×20网格、40–400时间步的数值稳定试验（p.154）。网格设计令对流项与黏性项差分系数同量级，得网格雷诺数Re_Δy=2及式(8)(9)（p.155）。为处理Δy≪Δx，采用Peaceman-Rachford型分裂（式10），并用LyLxLxLy恢复二阶精度；大M时用冻结∂F/∂x的Lxy算子（式11，p.156–157）。计算采用Sutherland黏性、完全气体、Pr=0.72、绝热平板与镜像边界（p.157–158）。实验对比用Hakkinen等(1959)的表面压力与摩阻数据（p.157）。",
+    "results": "【原文明确】未分离工况Pf/Po=1.2、xs=4.88 cm、Re_xs=2.84×10^5：34×12粗网格（Δx=0.254、Δy=0.127 cm）算128步，摩阻与实验明显不符，解本质为无黏流（p.158，图4）。改用34×32嵌套网格（细网格34×22，Δy=0.00685 cm；粗网格Δy=0.127 cm，M=20），推进256个Δt_x后表面压力与摩阻总体吻合，速度剖面随时间渐近（p.158，图6）。分离工况Pf/Po=1.40、xs=4.953 cm、Re_xs=2.96×10^5：细网格Δy=0.00635 cm、320个Δt_x，分离点与实验一致，但分离区长度偏短、实验压力平台未出现；作者归因于分离区仅4个网格、Δx超过式(9)估计10倍以上（p.159，图7）。将Δx减半为38×32、Δt_x减半、M=10，再推进约256步，结果改善（p.159，图8）。同一34×12网格上分裂与未分裂稳态压力剖面几乎重合；Δt_x/Δt=1.45，单步时间比0.924，总计算时间为未分裂的0.75（p.159，图9）。",
+    "discussion": "【原文明确】作者强调：相容性与稳定性只保证线性适定问题收敛，非线性问题无保证，只能假设并靠算例支持（p.159）。网格越接近式(8)(9)估计，图8压力平台差异应越小（p.159）。分裂法优点是可匹配依赖域、允许更大时间步；未决问题是实际网格下是否仍更不准确、单步计算量是否更大（p.159）。【AI推断】本文的核心贡献不只是某个算例，而是把“数值依赖域—网格雷诺数—算子分裂”串联成一套可操作的SBLI数值设置流程；其主要薄弱点是网格无关性只做了一次减半试验，且分离区定量误差未给出。"
+  },
+  "core_points": [
+    {
+      "point": "研究目的是检验高效二阶Lax-Wendroff/MacCormack格式在激波/层流边界层干扰中的数值行为，并通过分裂改造适应边界层法向小尺度。",
+      "type": "研究目的",
+      "grade": "A",
+      "source": "p.151，Introduction",
+      "attr": "原文明确"
+    },
+    {
+      "point": "二维非定常Navier-Stokes方程写成守恒向量形式，包含正应力、剪应力与热传导项（式1）。",
+      "type": "控制方程",
+      "grade": "B",
+      "source": "p.151，式(1)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "两步格式先用前向差分预测、再用后向差分校正，达到二阶精度（式2）。",
+      "type": "数值格式",
+      "grade": "A",
+      "source": "p.151，式(2)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "数值依赖域必须包含物理依赖域，且不宜远大于物理依赖域；由主依赖域得到CFL条件（式3）。",
+      "type": "稳定性条件",
+      "grade": "A",
+      "source": "p.152，式(3)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "线性化分析表明式(2)二阶精度；CFL是四变体循环格式（式6）稳定的充分条件，而式(2)在速度方向3π/4与7π/4处特征值可大于1。",
+      "type": "稳定性结论",
+      "grade": "A",
+      "source": "p.153–154，式(4)(5)(6)，图2",
+      "attr": "原文明确"
+    },
+    {
+      "point": "非线性不稳定案例(d)：相邻两单元都成为动量接收者，差分方程因速度平方丢失符号而自加剧；用面速度二阶平均((u_i^n+u_{i+1}^{n+1})/2)替代可保持精度并抑制失稳。",
+      "type": "非线性不稳定",
+      "grade": "B",
+      "source": "p.154–155",
+      "attr": "原文明确"
+    },
+    {
+      "point": "令对流项与黏性项差分系数同量级，得到网格雷诺数Re_Δy=ρvΔy/μ=2，并导出Δy与Δx的估计式(8)(9)。",
+      "type": "网格设计",
+      "grade": "A",
+      "source": "p.155，式(8)(9)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "直接二维分裂LxLy只有一阶精度，采用LyLxLxLy可恢复二阶；大M时用M个子步与冻结∂F/∂x的Lxy算子（式11）。",
+      "type": "分裂算法",
+      "grade": "A",
+      "source": "p.156–157，式(10)(11)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "未分离工况：34×12粗网格摩阻与实验明显不符，解本质为无黏流；34×32嵌套网格（细网格Δy=0.00685 cm）256个Δt_x后压力与摩阻总体吻合。",
+      "type": "算例结果",
+      "grade": "A",
+      "source": "p.158，图4、图6",
+      "attr": "原文明确"
+    },
+    {
+      "point": "分离工况：分离点与实验一致，但分离区长度被低估、实验压力平台未出现；作者归因于分离区仅4个网格且Δx超过式(9)估计10倍以上。",
+      "type": "算例结果",
+      "grade": "A",
+      "source": "p.159，图7",
+      "attr": "原文明确"
+    },
+    {
+      "point": "Δx减半为38×32、Δt_x减半、M=10后结果改善，但作者仍认为需按式(8)(9)量级继续加密才能消除压力平台差异。",
+      "type": "网格敏感性",
+      "grade": "A",
+      "source": "p.159，图8、Concluding Remarks",
+      "attr": "原文明确"
+    },
+    {
+      "point": "分裂与未分裂格式稳态压力剖面几乎重合；Δt_x/Δt=1.45、单步时间比0.924，总计算时间为0.75倍。",
+      "type": "效率评估",
+      "grade": "A",
+      "source": "p.159，图9",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "来流马赫数M∞",
+      "value": "2.0",
+      "source": "p.157，Numerical Results"
+    },
+    {
+      "item": "介质与物性",
+      "value": "空气；Sutherland黏性律；完全气体状态方程；常数Prandtl数0.72",
+      "source": "p.158"
+    },
+    {
+      "item": "壁面热条件",
+      "value": "绝热壁（由密度与温度镜像边界实现）",
+      "source": "p.158"
+    },
+    {
+      "item": "几何与计算域",
+      "value": "平板；矩形域8.636 cm×1.270 cm，其中平板长7.874 cm；二维",
+      "source": "p.157"
+    },
+    {
+      "item": "边界层状态",
+      "value": "层流（Hakkinen实验在整个干扰区为层流）",
+      "source": "p.157"
+    },
+    {
+      "item": "工况1（未分离）",
+      "value": "Pf/Po=1.2；xs=4.88 cm；Re_xs=2.84×10^5",
+      "source": "p.158"
+    },
+    {
+      "item": "工况1初始粗网格",
+      "value": "34×12单元；Δx=0.254 cm；Δy=0.127 cm；Δt取0.9倍最大值；128步；IBM 360/67约5 min",
+      "source": "p.158"
+    },
+    {
+      "item": "工况1嵌套网格",
+      "value": "总体34×32；细网格34×22，Δx=0.254 cm、Δy=0.00685 cm；粗网格Δx=0.254 cm、Δy=0.127 cm；M=20；推进256个Δt_x；约4 h",
+      "source": "p.158"
+    },
+    {
+      "item": "工况2（分离）",
+      "value": "Pf/Po=1.40；xs=4.953 cm；Re_xs=2.96×10^5",
+      "source": "p.158–159"
+    },
+    {
+      "item": "工况2嵌套网格",
+      "value": "细网格Δx=0.254 cm、Δy=0.00635 cm；粗网格Δx=0.254 cm、Δy=0.127 cm；推进320个Δt_x",
+      "source": "p.159"
+    },
+    {
+      "item": "工况2加密网格",
+      "value": "38×32单元；计算域从平板前缘下游2.54 cm开始，覆盖4.826 cm×1.270 cm；Δt_x减半；M=10；再推进约256步",
+      "source": "p.159"
+    },
+    {
+      "item": "参考网格估计（工况1）",
+      "value": "Δx=0.0848 cm；Δy=0.0024 cm",
+      "source": "p.158，式(8)(9)估算"
+    },
+    {
+      "item": "参考网格估计（工况2）",
+      "value": "Δx=0.0238 cm；Δy=0.00127 cm",
+      "source": "p.158–159，式(8)(9)估算"
+    },
+    {
+      "item": "边界条件",
+      "value": "上游：初始均匀流后固定；上边界：按无黏斜激波理论给定后固定；下游出口：每步取上游邻点值（外推）；平板：虚拟网格加镜像对称",
+      "source": "p.157–158"
+    },
+    {
+      "item": "时间推进与定常判据",
+      "value": "时间渐近至流场变化很小；未给定量收敛阈值",
+      "source": "p.158–159"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "网格雷诺数Re_Δy",
+      "definition": "Re_Δy=ρvΔy/μ，令对流项与黏性项差分系数同量级",
+      "value": "2",
+      "relation": "pvΔy/μ=2 ⇒ 式(8)",
+      "source": "p.155"
+    },
+    {
+      "name": "法向网格Δy估计",
+      "definition": "由Re_Δy=2与自由流Reynolds数比较得到",
+      "value": "Δy≈(Re_Δy/Re_xs)(u0/v)xs≈2u0xs/(vRe_xs)",
+      "relation": "式(8)",
+      "source": "p.155"
+    },
+    {
+      "name": "流向网格Δx估计",
+      "definition": "令∂ρu²/∂x与∂ρvu/∂y的差分系数相等",
+      "value": "Δx=(u/v)Δy",
+      "relation": "式(9)",
+      "source": "p.155"
+    },
+    {
+      "name": "CFL时间步",
+      "definition": "二维主依赖域条件",
+      "value": "Δt≤(|u|/Δx+|v|/Δy+c√(1/Δx^2+1/Δy^2))^{-1}",
+      "relation": "式(3)",
+      "source": "p.152"
+    },
+    {
+      "name": "循环变体子步数M（工况1）",
+      "definition": "细网格一个Δt_x内y方向子步数",
+      "value": "20",
+      "relation": "Δt_x=0.9Δx/(|u0|+c0)，M≈Δt_x/Δt_y",
+      "source": "p.158"
+    },
+    {
+      "name": "循环变体子步数M（工况2加密）",
+      "definition": "细网格一个Δt_x内y方向子步数",
+      "value": "10",
+      "relation": "Δt_x=0.9Δx/(|u0|+c0)，M≈Δt_x/Δt_y",
+      "source": "p.159"
+    },
+    {
+      "name": "分裂/未分裂时间步比",
+      "definition": "Δt_x/Δt",
+      "value": "1.45",
+      "relation": "同一34×12网格、M=2",
+      "source": "p.159"
+    },
+    {
+      "name": "单步计算时间比",
+      "definition": "t_unsplit/t_split",
+      "value": "0.924",
+      "relation": "分裂单步更贵，但步数更少",
+      "source": "p.159"
+    },
+    {
+      "name": "总计算时间比",
+      "definition": "推进到同一物理时间的split/unsplit",
+      "value": "0.75",
+      "relation": "由1.45与0.924综合",
+      "source": "p.159"
+    },
+    {
+      "name": "分离区网格数（基准工况2）",
+      "definition": "分离区内流向单元数",
+      "value": "4个单元",
+      "relation": "作者判为分辨率不足的原因之一",
+      "source": "p.159"
+    },
+    {
+      "name": "压力比Pf/Po（未分离工况）",
+      "definition": "反射后最终压力与初始压力之比",
+      "value": "1.2",
+      "relation": "入射斜激波强度参数",
+      "source": "p.158"
+    },
+    {
+      "name": "压力比Pf/Po（分离工况）",
+      "definition": "反射后最终压力与初始压力之比",
+      "value": "1.40",
+      "relation": "入射斜激波强度参数",
+      "source": "p.158–159"
+    }
+  ],
+  "methods": [
+    {
+      "item": "控制方程",
+      "value": "二维非定常Navier-Stokes方程，忽略体力与热源，守恒向量形式（式1）",
+      "source": "p.151"
+    },
+    {
+      "item": "空间离散",
+      "value": "两步二阶MacCormack格式：前向差分预测、后向差分校正（式2）；四种等价变体循环使用（式6）",
+      "source": "p.151–153"
+    },
+    {
+      "item": "稳定性分析",
+      "value": "线性化Fourier分析，放大矩阵特征值满足von Neumann条件|λi|≤1+O(Δt)（式4–5）；另做20×20网格、M=2、40–400步的数值试验",
+      "source": "p.152–154"
+    },
+    {
+      "item": "非线性不稳定处理",
+      "value": "检测案例(d)（两单元均为接收者）时，用面速度平均((u_i^n+u_{i+1}^{n+1})/2)乘通量，保持二阶精度",
+      "source": "p.154–155"
+    },
+    {
+      "item": "网格设计",
+      "value": "以Re_Δy=2与式(9)估计Δy、Δx；实际网格可比估计粗3–10倍以上",
+      "source": "p.155、158–159"
+    },
+    {
+      "item": "分裂格式",
+      "value": "Peaceman-Rachford交替方向；LxLy仅一阶，LyLxLxLy二阶；大M时M个y子步加一次x推进，并冻结∂F/∂x（式10–11）",
+      "source": "p.156–157"
+    },
+    {
+      "item": "嵌套网格耦合",
+      "value": "细网格边界j=22由内外网格线性插值；界面通量与应力保存并作为外区边界条件，保证总质量/动量/能量守恒",
+      "source": "p.158"
+    },
+    {
+      "item": "物性与壁面",
+      "value": "Sutherland黏性、完全气体、Pr=0.72、绝热壁、平板镜像虚网格",
+      "source": "p.158"
+    },
+    {
+      "item": "验证数据",
+      "value": "Hakkinen、Greber、Trilling、Abarbanel (1959) 的表面压力与摩阻实验数据",
+      "source": "p.157、References"
+    },
+    {
+      "item": "网格无关性",
+      "value": "仅对分离工况做一次Δx减半（0.254→0.127 cm）；无系统三套网格研究",
+      "source": "p.159"
+    },
+    {
+      "item": "计算平台",
+      "value": "IBM 360/67；粗网格128步约5 min，嵌套网格256个Δt_x约4 h",
+      "source": "p.158"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "以二阶两步Lax-Wendroff/MacCormack格式为基础，用线性化von Neumann分析确定稳定域与二阶精度；再用“对流项与黏性项差分系数同量级”的思想构造网格雷诺数准则；最后用交替方向分裂把二维算子拆成一维序列，并通过对称算子积恢复二阶精度。",
+    "assumptions": [
+      "二维、无体力、无热源；完全气体；Sutherland黏性；常数Prandtl数0.72",
+      "线性稳定性分析假设边界条件不影响稳定、精确解光滑、Jacobian矩阵JF与JG局部为常值",
+      "网格估计假设运动黏度μ/ρ在边界层内与自由流相差不大",
+      "边界层内y方向动量方程近似∂p/∂y=0，故只分析x方向动量方程（脚注4）",
+      "一个前向加一个后向差分在每个时间步内等效于中心差分（脚注5）",
+      "定常解由时间推进渐近获得"
+    ],
+    "steps": [
+      {
+        "title": "二维非定常Navier-Stokes方程",
+        "text": "将连续方程、x/y动量方程与能量方程写成守恒形式，黏性正应力与剪应力按牛顿流体给出，压力由状态方程p(e,ρ)确定。",
+        "latex": [
+          "\\frac{\\partial U}{\\partial t}+\\frac{\\partial F}{\\partial x}+\\frac{\\partial G}{\\partial y}=0",
+          "U=\\left(\\rho,\\ \\rho u,\\ \\rho v,\\ e\\right)^{T}",
+          "F=\\left(\\rho u,\\ \\rho u^{2}+\\sigma_x,\\ \\rho uv+\\tau_{yx},\\ (e+\\sigma_x)u+\\tau_{yx}v+k\\frac{\\partial T}{\\partial x}\\right)^{T}",
+          "G=\\left(\\rho v,\\ \\rho uv+\\tau_{xy},\\ \\rho v^{2}+\\sigma_y,\\ (e+\\sigma_y)v+\\tau_{xy}u+k\\frac{\\partial T}{\\partial y}\\right)^{T}",
+          "\\sigma_x=p-\\lambda\\left(\\frac{\\partial u}{\\partial x}+\\frac{\\partial v}{\\partial y}\\right)-2\\mu\\frac{\\partial u}{\\partial x}",
+          "\\tau_{xy}=\\tau_{yx}=-\\mu\\left(\\frac{\\partial u}{\\partial y}+\\frac{\\partial v}{\\partial x}\\right)",
+          "\\sigma_y=p-\\lambda\\left(\\frac{\\partial u}{\\partial x}+\\frac{\\partial v}{\\partial y}\\right)-2\\mu\\frac{\\partial v}{\\partial y}"
+        ],
+        "source": "p.151，式(1)"
+      },
+      {
+        "title": "两步预测-校正格式",
+        "text": "第一步在每个点用两个前向空间差分得到预测值；第二步用预测值构造通量，并以两个后向差分校正，得到新时刻值。该形式为四种等价二阶变体之一。",
+        "latex": [
+          "\\tilde{U}_{i,j}^{n+1}=U_{i,j}^{n}-\\frac{\\Delta t}{\\Delta x}\\left(F_{i+1,j}^{n}-F_{i,j}^{n}\\right)-\\frac{\\Delta t}{\\Delta y}\\left(G_{i,j+1}^{n}-G_{i,j}^{n}\\right)",
+          "U_{i,j}^{n+1}=\\frac{1}{2}\\left[U_{i,j}^{n}+\\tilde{U}_{i,j}^{n+1}-\\frac{\\Delta t}{\\Delta x}\\left(\\tilde{F}_{i,j}^{n+1}-\\tilde{F}_{i-1,j}^{n+1}\\right)-\\frac{\\Delta t}{\\Delta y}\\left(\\tilde{G}_{i,j}^{n+1}-\\tilde{G}_{i,j-1}^{n+1}\\right)\\right]"
+        ],
+        "source": "p.151，式(2)"
+      },
+      {
+        "title": "依赖域与CFL条件",
+        "text": "格式在(xi,yj)推进Δt只用到七个邻点，其主依赖域由A点构成。要求数值依赖域包含物理依赖域，且不应远大于物理依赖域；由此得到二维CFL条件，c为局部绝热聲速。",
+        "latex": [
+          "\\Delta t\\leq\\left(\\frac{|u|}{\\Delta x}+\\frac{|v|}{\\Delta y}+c\\sqrt{\\frac{1}{\\Delta x^{2}}+\\frac{1}{\\Delta y^{2}}}\\right)^{-1}"
+        ],
+        "source": "p.152，式(3)"
+      },
+      {
+        "title": "线性化放大矩阵与二阶精度",
+        "text": "将方程局部线性化，JF、JG视为常值；对单个Fourier分量求放大矩阵。当ξ=k1Δx、η=k2Δy远小于1时，放大矩阵与精确解的双线性展开相差三阶小量，故格式二阶精度；稳定性要求所有特征值满足von Neumann条件。",
+        "latex": [
+          "\\frac{\\partial U}{\\partial t}+J_F\\frac{\\partial U}{\\partial x}+J_G\\frac{\\partial U}{\\partial y}=0",
+          "\\mathcal{G}=I-i\\Delta t\\left(\\frac{J_F}{\\Delta x}\\sin\\xi+\\frac{J_G}{\\Delta y}\\sin\\eta\\right)-\\frac{1}{2}\\Delta t^{2}\\left[\\frac{J_F}{\\Delta x}(1-e^{-i\\xi})+\\frac{J_G}{\\Delta y}(1-e^{-i\\eta})\\right]\\left[\\frac{J_F}{\\Delta x}(1-e^{i\\xi})+\\frac{J_G}{\\Delta y}(1-e^{i\\eta})\\right]",
+          "|\\lambda_i|\\leq 1+O(\\Delta t)"
+        ],
+        "source": "p.152–153，式(4)(5)"
+      },
+      {
+        "title": "四变体循环格式",
+        "text": "为消除单一变体在不利速度方向上的严格时间步限制，让四种差分方向组合按模2循环；ii、jj由时间步n决定，每步后更新。作者用数值试验检验该循环格式的稳定性。",
+        "latex": [
+          "ii=\\mathrm{mod}(n,2),\\qquad jj=\\mathrm{mod}(n-ii,4)/2",
+          "\\tilde{U}_{i,j}^{n+1}=U_{i,j}^{n}-\\frac{\\Delta t}{\\Delta x}\\left(F_{ii,j}^{n}-F_{ii-1,j}^{n}\\right)-\\frac{\\Delta t}{\\Delta y}\\left(G_{i,jj}^{n}-G_{i,jj-1}^{n}\\right)",
+          "ii=\\mathrm{mod}(ii+1,2),\\qquad jj=\\mathrm{mod}(jj+1,2)",
+          "U_{i,j}^{n+1}=\\frac{1}{2}\\left[U_{i,j}^{n}+\\tilde{U}_{i,j}^{n+1}-\\frac{\\Delta t}{\\Delta x}\\left(\\tilde{F}_{ii,j}^{n+1}-\\tilde{F}_{ii-1,j}^{n+1}\\right)-\\frac{\\Delta t}{\\Delta y}\\left(\\tilde{G}_{i,jj}^{n+1}-\\tilde{G}_{i,jj-1}^{n+1}\\right)\\right]"
+        ],
+        "source": "p.153，式(6)"
+      },
+      {
+        "title": "网格雷诺数Re_Δy=2与网格间距估计",
+        "text": "把x方向动量方程中的对流项∂ρvu/∂y与黏性项∂τyx/∂y线性化并中心差分，令两者的差分系数相等，得到ρvΔy/μ=2，即网格雷诺数为2。再与自由流Reynolds数Re_xs比较，得到Δy估计；对∂ρu²/∂x与∂ρvu/∂y作同样处理，得到Δx=(u/v)Δy。",
+        "latex": [
+          "\\frac{\\rho v\\Delta y}{\\mu}=2\\quad\\Longrightarrow\\quad Re_{\\Delta y}=2",
+          "\\Delta y\\approx\\frac{Re_{\\Delta y}}{Re_{x_s}}\\frac{u_0}{v}x_s\\approx\\frac{2u_0x_s}{vRe_{x_s}}",
+          "\\Delta x=\\frac{u}{v}\\Delta y"
+        ],
+        "source": "p.155，式(8)(9)"
+      },
+      {
+        "title": "交替方向分裂",
+        "text": "当Δy≪Δx时，CFL由y方向小网格控制，数值域在x方向远大于物理域。将式(6)拆成先y后x的两个一维扫描（式10）。由于Lx与Ly不可交换，LxLy仅一阶；采用对称积LyLxLxLy可抵消一阶误差，恢复二阶精度。",
+        "latex": [
+          "\\tilde{U}_{i,j}^{n+1/2}=U_{i,j}^{n}-\\frac{\\Delta t}{\\Delta y}\\left(G_{i,jj}^{n}-G_{i,jj-1}^{n}\\right)",
+          "U_{i,j}^{n+1/2}=\\frac{1}{2}\\left[U_{i,j}^{n}+\\tilde{U}_{i,j}^{n+1/2}-\\frac{\\Delta t}{\\Delta y}\\left(\\tilde{G}_{i,jj}^{n+1/2}-\\tilde{G}_{i,jj-1}^{n+1/2}\\right)\\right]",
+          "\\tilde{U}_{i,j}^{n+1}=U_{i,j}^{n+1/2}-\\frac{\\Delta t}{\\Delta x}\\left(F_{i,j}^{n+1/2}-F_{i-1,j}^{n+1/2}\\right)",
+          "U_{i,j}^{n+1}=\\frac{1}{2}\\left[U_{i,j}^{n+1/2}+\\tilde{U}_{i,j}^{n+1}-\\frac{\\Delta t}{\\Delta x}\\left(\\tilde{F}_{i,j}^{n+1}-\\tilde{F}_{i-1,j}^{n+1}\\right)\\right]",
+          "U^{n+2}=L_yL_xL_xL_yU^{n}"
+        ],
+        "source": "p.156，式(10)"
+      },
+      {
+        "title": "大M子步与冻结x导数算子",
+        "text": "当Δt_y远小于Δt_x时，在一个Δt_x内做M个y方向子步，并在子步中冻结由式(6)算出的∂F/∂x，得到Lxy(m,Δt)；整个推进为各子步算子乘积，仍为二阶。",
+        "latex": [
+          "\\left(\\frac{\\partial F}{\\partial x}\\right)_{i,j}^{n+1/2}=\\frac{1}{2\\Delta x}\\left(F_{ii,j}^{n}-F_{ii-1,j}^{n}+F_{ii,j}^{n+1}-F_{ii-1,j}^{n+1}\\right)",
+          "\\tilde{U}_{i,j}^{n+\\frac{m+1}{M}}=U_{i,j}^{n+\\frac{m}{M}}-\\frac{\\Delta t}{\\Delta y}\\left(G_{i,jj}^{n+\\frac{m}{M}}-G_{i,jj-1}^{n+\\frac{m}{M}}\\right)-\\Delta t\\left(\\frac{\\partial F}{\\partial x}\\right)_{i,j}^{n+1/2}",
+          "\\tilde{U}_{i,j}^{n+\\frac{m+1}{M}}=\\frac{1}{2}\\left[U_{i,j}^{n+\\frac{m}{M}}+\\tilde{U}_{i,j}^{n+\\frac{m+1}{M}}-\\frac{\\Delta t}{\\Delta y}\\left(\\tilde{G}_{i,jj}^{n+\\frac{m+1}{M}}-\\tilde{G}_{i,jj-1}^{n+\\frac{m+1}{M}}\\right)-\\Delta t\\left(\\frac{\\partial F}{\\partial x}\\right)_{i,j}^{n+1/2}\\right]",
+          "U^{n+1}=\\prod_{m=0}^{M-1}L_{xy}(m,\\Delta t_x/M)\\,U^{n}"
+        ],
+        "source": "p.157，式(11)"
+      }
+    ],
+    "result": "式(2)为二阶精度；式(6)的循环格式在CFL条件（式3）下经数值试验验证稳定；式(10)的对称分裂与式(11)的Lxy算子均保持二阶精度，并允许Δt_x由x方向而非更小的Δy控制。两个M=2算例表明：粗网格下黏性项被截断/舍入误差淹没，细化后压力与摩阻总体接近Hakkinen实验；但分离区长度与压力平台仍受网格分辨率限制。",
+    "limits": "【原文明确】稳定性分析只对线性化方程成立，非线性情形无收敛保证；网格估计基于量级假设与运动黏度近似，只称“保守”而未定量验证；算例仅M=2、层流、绝热平板，未做系统网格无关性；分裂法在实用网格下的精度与单步成本仍是开放问题（p.159）。【AI推断】因此本文的“二阶+稳定”结论不能直接外推到强分离、高M或湍流SBLI。"
+  },
+  "mechanism": "【原文明确】机制链条为：①二阶两步格式的截断误差小，但若网格过粗，黏性通量的差分被截断与舍入误差淹没，解退化为无黏流，摩阻严重失真（p.158）；②在边界层内Δy需满足Re_Δy≈2，才能让对流与黏性差分项同量级；Δx则按u/v比例放大（p.155）；③当Δy≪Δx时，CFL由Δy控制，数值依赖域在x方向远大于物理域，直接推进既浪费又不准，因此用分裂把y子步与x推进解耦，并用对称积保二阶（p.156–157）；④分离区需要足够的流向网格（本算例仅4个单元）才能分辨分离泡与压力平台，否则分离长度被低估（p.159）。【AI推断】这套机制解释了为什么同一格式在粗网格下“看起来像无黏解”、在细化后恢复黏性特征。",
+  "findings": [
+    {
+      "finding": "34×12粗网格（Δx=0.254、Δy=0.127 cm）虽差分完整Navier-Stokes方程，但黏性项被截断与舍入误差淹没，解本质为无黏流，摩阻与实验明显不符。",
+      "evidence": "图4：数值与Hakkinen表面压力/摩阻对比；正文称激波角、强度与无黏理论差几个百分点。",
+      "type": "网格分辨率效应",
+      "strength": "强",
+      "source": "p.158，图4",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "34×32嵌套网格（细网格Δy=0.00685 cm）推进256个Δt_x后，表面压力与摩阻总体接近实验，x=4.699 cm处速度剖面随时间渐近。",
+      "evidence": "图6(a)时间收敛、图6(b)压力/摩阻对比；细网格与粗网格分别推进并守恒耦合。",
+      "type": "验证结果",
+      "strength": "中",
+      "source": "p.158，图6",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "分离工况的分离点与实验一致，但分离区长度被低估，实验压力平台未在数值结果中出现。",
+      "evidence": "图7压力与摩阻分布；作者给出两个原因：分离区仅4个单元、Δx超过式(9)估计10倍以上。",
+      "type": "分离区预测",
+      "strength": "强",
+      "source": "p.159，图7",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "将Δx减半至0.127 cm、采用38×32网格并以M=10推进后，分离区与压力分布改善，但作者仍认为需按式(8)(9)量级继续加密才能消除压力平台差异。",
+      "evidence": "图8为加密后结果；结论第1条明确预期更细网格可减小差异。",
+      "type": "网格敏感性",
+      "strength": "中",
+      "source": "p.159，图8及Concluding Remarks",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "CFL条件是四变体循环格式（式6）稳定的充分条件；未循环的式(2)在速度方向3π/4与7π/4处放大矩阵特征值可大于1。",
+      "evidence": "M=2、20×20网格的数值稳定试验（图2），开/闭符号区分有界与指数增长，闭曲线为CFL等号。",
+      "type": "稳定性",
+      "strength": "强",
+      "source": "p.154，图2",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "网格雷诺数Re_Δy=2给出Δy与Δx的参考估计；实际采用的细网格比估计粗约3倍（工况1）至5–10倍（工况2）。",
+      "evidence": "工况1估计Δy=0.0024 cm、实用0.00685 cm；工况2估计Δy=0.00127 cm、实用0.00635 cm。",
+      "type": "网格设计",
+      "strength": "强",
+      "source": "p.155、158–159，式(8)(9)",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "分裂格式与未分裂格式在同一34×12网格上的稳态压力剖面几乎相同，但分裂格式总计算时间仅为未分裂的0.75。",
+      "evidence": "图9：y=0.5715 cm处压力剖面；Δt_x/Δt=1.45，单步时间比0.924。",
+      "type": "效率",
+      "strength": "强",
+      "source": "p.159，图9",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "差分方程在案例(d)（相邻两单元均为动量接收者）会因速度平方丢失符号而自加剧失稳；用面速度平均可保持二阶精度并抑制该失稳。",
+      "evidence": "四个案例(a)–(d)的单元通量分析；修正项((u_i^n+u_{i+1}^{n+1})/2)(ρu)_{i+1/2}。",
+      "type": "非线性不稳定",
+      "strength": "中",
+      "source": "p.154–155",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "【原文明确】作者结论：①相容性与稳定性对线性适定问题充分，但非线性问题无收敛保证；本文算例支持该格式可用，且更接近式(8)(9)估计的网格应能减小图8压力平台差异，总体已取得良好吻合（p.159）。②分裂技术不仅适用于坐标网格间距悬殊的问题，还能更好匹配依赖域并允许更大时间步；但其在实用网格下是否更不准确、单步成本是否更高仍未完全回答（p.159）。③同一算例中分裂格式总计算时间为未分裂的0.75（p.159）。",
+  "contributions": [
+    "系统分析了二阶MacCormack格式在激波/层流边界层干扰中的稳定性与精度，指出CFL对循环变体是充分条件。",
+    "提出以网格雷诺数Re_Δy=2平衡对流与黏性差分项的网格设计准则（式8–9）。",
+    "给出保持二阶精度的交替方向分裂及大M子步Lxy算法（式10–11）。",
+    "用M=2未分离/分离两个工况与Hakkinen实验对比，明确粗网格会把黏性解“洗成”无黏解。",
+    "量化了分裂格式相对未分裂格式的效率收益（总时间0.75倍）。"
+  ],
+  "limits": "【原文明确】非线性收敛无理论保证；网格估计只是量级上的“保守”估计；分离区压力平台仍未预测出；分裂法在实用网格下的精度与成本未定；只比较了一个减半网格，未做系统网格无关性（p.159）。【AI推断】此外，算例仅M=2、层流、绝热平板、两个压力比，未涉及湍流、强分离、高焓/真实气体、三维或轴对称；图2–5未提供裁剪图，稳定性与网格示意只能依据正文。",
+  "significance": "【AI推断】对高速流动数值模拟的意义：①提醒SBLI计算中“差分完整NS方程”不等于“解析黏性”，网格必须按Re_Δy量级设计，否则摩阻与分离区不可信；②分裂格式为边界层法向小尺度与流向大尺度并存的问题提供了可操作的时间推进方案；③其“数值依赖域与物理依赖域匹配”的分析框架可直接用于进气道/隔离器SBLI的网格与时间步设置；④本文的分离区欠预测说明，用粗网格CFD评估 separation bubble/压力平台会偏乐观或偏短，工程判断需谨慎。不能回答：湍流SBLI、高M/高Re、热流与壁温效应、三维效应。",
+  "quotes": [
+    {
+      "text": "its numerical domain include the physical domain of dependence",
+      "supports": "数值格式必须满足依赖域包含关系，是CFL条件的物理基础",
+      "source": "p.152",
+      "use": "可用于说明CFL条件的本质，而非仅看作经验公式"
+    },
+    {
+      "text": "the C.F.L. condition is a sufficient condition for the stability",
+      "supports": "循环四变体格式在CFL内稳定",
+      "source": "p.154",
+      "use": "引用为本文稳定性结论"
+    },
+    {
+      "text": "viscous terms to be swamped by truncation and round-off error",
+      "supports": "粗网格下黏性项被误差淹没，解退化为无黏",
+      "source": "p.158",
+      "use": "说明网格不足的后果"
+    },
+    {
+      "text": "the length of the separated region is underpredicted",
+      "supports": "分离区长度预测不足",
+      "source": "p.159",
+      "use": "作为分离泡预测局限的证据"
+    },
+    {
+      "text": "the characteristic plateau ... is not found in the numerical data",
+      "supports": "压力平台缺失",
+      "source": "p.159",
+      "use": "说明粗网格无法再现分离平台"
+    },
+    {
+      "text": "good agreement in general has been achieved",
+      "supports": "总体压力/摩阻吻合",
+      "source": "p.159",
+      "use": "作者对结果的总体评价"
+    },
+    {
+      "text": "0.75 that of the unsplit technique",
+      "supports": "分裂格式总计算时间为未分裂的75%",
+      "source": "p.159",
+      "use": "效率对比的关键数字"
+    },
+    {
+      "text": "no guarantee that this will occur in nonlinear problems",
+      "supports": "非线性收敛无理论保证",
+      "source": "p.159",
+      "use": "提醒不要把线性稳定性结论外推"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig02_p12.png",
+      "n": 7,
+      "page": 12,
+      "caption_zh": "Pf/Po=1.4工况的数值结果：细网格Δx=0.254 cm、Δy=0.00635 cm，粗网格Δx=0.254 cm、Δy=0.127 cm。",
+      "caption_orig": "Fig. 7. Numerical results for Pf/Po = 1.4; Δx = 0.254 and Δy = 0.00635 cm in fine mesh, Δx = 0.254 and Δy = 0.127 cm in coarse mesh.",
+      "why": "支撑“分离点与实验一致，但分离区长度被低估、实验压力平台未出现”的核心结论；同时展示表面摩阻与压力分布两条证据链。"
+    },
+    {
+      "file": "fig03_p13.png",
+      "n": 8,
+      "page": 13,
+      "caption_zh": "Pf/Po=1.4工况下Δx减半后的数值结果：细网格Δx=0.127 cm、Δy=0.00635 cm，粗网格Δx=0.127 cm、Δy=0.127 cm。",
+      "caption_orig": "Fig. 8. Numerical results for Pf/Po = 1.4; Δx = 0.127 and Δy = 0.00635 cm in fine mesh, Δx = 0.127 and Δy = 0.127 cm in coarse mesh.",
+      "why": "支撑“将Δx减半后分离区与压力分布改善，但压力平台仍未完全恢复”的网格敏感性结论。"
+    },
+    {
+      "file": "fig04_p13.png",
+      "n": 9,
+      "page": 13,
+      "caption_zh": "距板面y=0.5715 cm处压力剖面的未分裂格式与分裂格式对比。",
+      "caption_orig": "Fig. 9. Comparison of pressure profiles at y = 0.5715 cm from plate.",
+      "why": "支撑“分裂格式与未分裂格式稳态解几乎相同、但计算时间降至0.75倍”的效率结论。"
+    }
+  ],
+  "verification": {
+    "text_only": "是。仅使用bundle正文、图注与PDF核对页；未引入外部文献结论或教科书推导。",
+    "a_grade_supported": "是。全部A级要点均给出页码、式号或图号；式(1)–(11)已逐式核对PDF第1–3、5–7页。",
+    "attributes_marked": "是。原文明确、AI概括、AI推断逐条标注；quote使用建议属AI推断性质但未混入原文。",
+    "coverage": "全文13页、bundle 723行已读完；正文、图注、参考文献均覆盖，图2–5无裁剪图故仅据正文。",
+    "no_fabrication": "是。未编造页码、图号、公式或数据；缺失值写“文中未提及”，OCR不清处已核对PDF。",
+    "open_questions": [
+      "分离区压力平台缺失是否仅由网格分辨率造成？本文只做了一次Δx减半，未给系统网格无关性。",
+      "式(8)(9)的“保守”程度没有定量验证；若按估计网格计算，分离区结果会改善多少？",
+      "式(6)循环格式的稳定性只有数值试验，能否给出解析证明？",
+      "分离区长度与实验的定量误差未给出，仅称“underpredicted”。",
+      "绝热壁假设对分离区与热流的影响未讨论。",
+      "仅M=2、两个Pf/Po，结论能否外推到更高M、湍流或强分离？",
+      "第158页称初始Δt取“Eq.(8)允许的最大值”，但式(8)是网格估计、式(3)才是CFL；疑为笔误，需回原文核对。"
+    ]
+  }
+}

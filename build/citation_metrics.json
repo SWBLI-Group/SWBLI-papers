@@ -1,0 +1,3746 @@
+{
+ "846": {
+  "id": 846,
+  "cited_by": 36,
+  "reference_count": 31,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1098/rspa.1953.0067",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 36,
+    "references": 31,
+    "url": "https://doi.org/10.1098/rspa.1953.0067",
+    "title": "On boundary layers and upstream influence. I. A comparison between subsonic and supersonic flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "1199": {
+  "id": 1199,
+  "cited_by": 58,
+  "reference_count": 18,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1098/rspa.1954.0251",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 58,
+    "references": 18,
+    "url": "https://doi.org/10.1098/rspa.1954.0251",
+    "title": "An experimental investigation of the interaction between shock waves and boundary layers",
+    "match": "doi"
+   }
+  ]
+ },
+ "1275": {
+  "id": 1275,
+  "cited_by": 62,
+  "reference_count": 34,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/8.3088",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 62,
+    "references": 34,
+    "url": "https://doi.org/10.2514/8.3088",
+    "title": "Effect of Large Temperature Changes (including Viscous Heating) Upon Laminar Boundary Layers with Variable Free-Stream Velocity",
+    "match": "doi"
+   }
+  ]
+ },
+ "1277": {
+  "id": 1277,
+  "cited_by": 738,
+  "reference_count": 41,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/8.6977",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 738,
+    "references": 41,
+    "url": "https://doi.org/10.2514/8.6977",
+    "title": "Laminar Heat Transfer Over Blunt-Nosed Bodies at Hypersonic Flight Speeds",
+    "match": "doi"
+   }
+  ]
+ },
+ "746": {
+  "id": 746,
+  "cited_by": 638,
+  "reference_count": 22,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W1554470383",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W1554470383",
+    "cited_by": 638,
+    "references": 22,
+    "title": "Investigation of separated flows in supersonic and subsonic streams with emphasis on the effect of transition",
+    "year": 1958,
+    "type": "article",
+    "match": "title",
+    "url": "https://openalex.org/W1554470383",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "1458": {
+  "id": 1458,
+  "cited_by": 56,
+  "reference_count": 0,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W780194806",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W780194806",
+    "cited_by": 56,
+    "references": 0,
+    "title": "Experimental Investigation of the Pressure Rise Required for the Incipient Separation of Turbulent Boundary Layers in Two-Dimensional Supersonic Flow",
+    "year": 1959,
+    "type": "article",
+    "match": "title",
+    "url": "https://openalex.org/W780194806",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "850": {
+  "id": 850,
+  "cited_by": 193,
+  "reference_count": 2,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W754622462",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W754622462",
+    "cited_by": 193,
+    "references": 2,
+    "title": "The Interaction of an Oblique Shock Wave with a Laminar Boundary Layer",
+    "year": 1959,
+    "type": "article",
+    "match": "title",
+    "url": "https://openalex.org/W754622462",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "1242": {
+  "id": 1242,
+  "cited_by": 1217,
+  "reference_count": 3,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1002/aic.690070211",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 1217,
+    "references": 3,
+    "url": "https://doi.org/10.1002/aic.690070211",
+    "title": "Boundary‐layer behavior on continuous solid surfaces: II. The boundary layer on a continuous flat surface",
+    "match": "doi"
+   }
+  ]
+ },
+ "1259": {
+  "id": 1259,
+  "cited_by": 14,
+  "reference_count": 81,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1964-4",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 14,
+    "references": 81,
+    "url": "https://doi.org/10.2514/6.1964-4",
+    "title": "Supersonic separated and reattaching laminar flows- i - general theory and application to adiabatic boundary layer-shock wave interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "764": {
+  "id": 764,
+  "cited_by": 80,
+  "reference_count": 36,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1966-455",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 80,
+    "references": 36,
+    "url": "https://doi.org/10.2514/6.1966-455",
+    "title": "Boundary layer separation in hypersonic flow",
+    "match": "doi"
+   }
+  ]
+ },
+ "1316": {
+  "id": 1316,
+  "cited_by": 39,
+  "reference_count": 17,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.3548",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 39,
+    "references": 17,
+    "url": "https://doi.org/10.2514/3.3548",
+    "title": "Experimental studies of separated flows at hypersonic speeds. II - Two-dimensional wedge separated flow studies.",
+    "match": "doi"
+   }
+  ]
+ },
+ "1256": {
+  "id": 1256,
+  "cited_by": 5,
+  "reference_count": 6,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.4043",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 5,
+    "references": 6,
+    "url": "https://doi.org/10.2514/3.4043",
+    "title": "Approximate closed-form solutions for supersonic laminar separated flows.",
+    "match": "doi"
+   }
+  ]
+ },
+ "1222": {
+  "id": 1222,
+  "cited_by": 585,
+  "reference_count": 11,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/0017-9310(67)90100-7",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 585,
+    "references": 11,
+    "url": "https://doi.org/10.1016/0017-9310(67)90100-7",
+    "title": "Flow and heat transfer in the boundary layer on a continuous moving surface",
+    "match": "doi"
+   }
+  ]
+ },
+ "1056": {
+  "id": 1056,
+  "cited_by": 0,
+  "reference_count": 13,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.3977",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 13,
+    "url": "https://doi.org/10.2514/3.3977",
+    "title": "Laminar boundary-layer separation in hypersonic flow.",
+    "match": "doi"
+   }
+  ]
+ },
+ "1174": {
+  "id": 1174,
+  "cited_by": 28,
+  "reference_count": 5,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0305004100041840",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 28,
+    "references": 5,
+    "url": "https://doi.org/10.1017/s0305004100041840",
+    "title": "On the laminar compressible boundary layer with stationary origin on a moving flat wall",
+    "match": "doi"
+   }
+  ]
+ },
+ "768": {
+  "id": 768,
+  "cited_by": 18,
+  "reference_count": 3,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.3973",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 18,
+    "references": 3,
+    "url": "https://doi.org/10.2514/3.3973",
+    "title": "Prediction of incipient separation in shock- boundary-layer interactions.",
+    "match": "doi"
+   }
+  ]
+ },
+ "474": {
+  "id": 474,
+  "cited_by": 36,
+  "reference_count": 15,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.29432",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 36,
+    "references": 15,
+    "url": "https://doi.org/10.2514/3.29432",
+    "title": "Correlation of peak heating for reattachment of separated flows.",
+    "match": "doi"
+   }
+  ]
+ },
+ "1188": {
+  "id": 1188,
+  "cited_by": 6,
+  "reference_count": 8,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W229892691",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W229892691",
+    "cited_by": 6,
+    "references": 8,
+    "title": "Experimental investigation of laminar-flow separation on a flat plate induced by deflected trailing-edge flap at Mach 19",
+    "year": 1968,
+    "type": "article",
+    "match": "title",
+    "url": "https://openalex.org/W229892691",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "1204": {
+  "id": 1204,
+  "cited_by": 122,
+  "reference_count": 16,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.4434",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 122,
+    "references": 16,
+    "url": "https://doi.org/10.2514/3.4434",
+    "title": "Experimental investigation of supersonic laminar, two-dimensional boundary-layer separation in a compression corner with and without cooling.",
+    "match": "doi"
+   }
+  ]
+ },
+ "794": {
+  "id": 794,
+  "cited_by": 174,
+  "reference_count": 24,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/0020-7462(68)90014-0",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 174,
+    "references": 24,
+    "url": "https://doi.org/10.1016/0020-7462(68)90014-0",
+    "title": "The interaction of a shock wave with a laminar boundary layer†",
+    "match": "doi"
+   }
+  ]
+ },
+ "822": {
+  "id": 822,
+  "cited_by": 369,
+  "reference_count": 25,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1098/rspa.1969.0148",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 369,
+    "references": 25,
+    "url": "https://doi.org/10.1098/rspa.1969.0148",
+    "title": "Self-induced separation",
+    "match": "doi"
+   }
+  ]
+ },
+ "1194": {
+  "id": 1194,
+  "cited_by": 71,
+  "reference_count": 28,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.6127",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 71,
+    "references": 28,
+    "url": "https://doi.org/10.2514/3.6127",
+    "title": "Boundary-layer displacement and leading-edge bluntness effects on attached and separated laminar boundary layers in a compression corner. II - Experimental study",
+    "match": "doi"
+   }
+  ]
+ },
+ "789": {
+  "id": 789,
+  "cited_by": 249,
+  "reference_count": 5,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/3-540-05407-3_24",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 249,
+    "references": 5,
+    "url": "https://doi.org/10.1007/3-540-05407-3_24",
+    "title": "Numerical solution of the interaction of a shock wave with a laminar boundary layer",
+    "match": "doi"
+   }
+  ]
+ },
+ "1477": {
+  "id": 1477,
+  "cited_by": 1,
+  "reference_count": 42,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1971-128",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 1,
+    "references": 42,
+    "url": "https://doi.org/10.2514/6.1971-128",
+    "title": "Results of a strong interaction, wake-like model of supersonic separated and reattaching turbulent flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "1291": {
+  "id": 1291,
+  "cited_by": 78,
+  "reference_count": 10,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W4242082276",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W4242082276",
+    "cited_by": 78,
+    "references": 10,
+    "title": "Laminar separation",
+    "year": 1972,
+    "type": "article",
+    "match": "title",
+    "url": "https://openalex.org/W4242082276",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "772": {
+  "id": 772,
+  "cited_by": 86,
+  "reference_count": 107,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1972-74",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 86,
+    "references": 107,
+    "url": "https://doi.org/10.2514/6.1972-74",
+    "title": "Shock wave-turbulent boundary layer interaction in hypersonic flow",
+    "match": "doi"
+   }
+  ]
+ },
+ "868": {
+  "id": 868,
+  "cited_by": 114,
+  "reference_count": 19,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112072000060",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 114,
+    "references": 19,
+    "url": "https://doi.org/10.1017/s0022112072000060",
+    "title": "Turbulent hypersonic flow at a wedge-compression corner",
+    "match": "doi"
+   }
+  ]
+ },
+ "476": {
+  "id": 476,
+  "cited_by": 10,
+  "reference_count": 32,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1973-678",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 10,
+    "references": 32,
+    "url": "https://doi.org/10.2514/6.1973-678",
+    "title": "Interference heating due to shock wave impingement on laminar boundary layers",
+    "match": "doi"
+   }
+  ]
+ },
+ "1202": {
+  "id": 1202,
+  "cited_by": 27,
+  "reference_count": 33,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112074001716",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 27,
+    "references": 33,
+    "url": "https://doi.org/10.1017/s0022112074001716",
+    "title": "The hypersonic laminar boundary layer near sharp compression and expansion corners",
+    "match": "doi"
+   }
+  ]
+ },
+ "1485": {
+  "id": 1485,
+  "cited_by": 117,
+  "reference_count": 7,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1975-1",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 117,
+    "references": 7,
+    "url": "https://doi.org/10.2514/6.1975-1",
+    "title": "A numerical method for solving the                                                   Navier-Stokes equations with application to                                                   shock-boundary layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "1482": {
+  "id": 1482,
+  "cited_by": 178,
+  "reference_count": 35,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1137/0128018",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 178,
+    "references": 35,
+    "url": "https://doi.org/10.1137/0128018",
+    "title": "Boundary-Layer Separation in Unsteady Flow",
+    "match": "doi"
+   }
+  ]
+ },
+ "1462": {
+  "id": 1462,
+  "cited_by": 52,
+  "reference_count": 22,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1975-7",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 52,
+    "references": 22,
+    "url": "https://doi.org/10.2514/6.1975-7",
+    "title": "Incipient separation of a supersonic                                                   turbulent boundary layer at moderate to high                                                   Reynolds numbers",
+    "match": "doi"
+   }
+  ]
+ },
+ "1166": {
+  "id": 1166,
+  "cited_by": 64,
+  "reference_count": 6,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112076000670",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 64,
+    "references": 6,
+    "url": "https://doi.org/10.1017/s0022112076000670",
+    "title": "A moving-wall boundary layer with reverse flow",
+    "match": "doi"
+   }
+  ]
+ },
+ "776": {
+  "id": 776,
+  "cited_by": 91,
+  "reference_count": 22,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.61331",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 91,
+    "references": 22,
+    "url": "https://doi.org/10.2514/3.61331",
+    "title": "Incipient Separation of a Supersonic Turbulent Boundary Layer at High Reynolds Numbers",
+    "match": "doi"
+   }
+  ]
+ },
+ "1078": {
+  "id": 1078,
+  "cited_by": 2,
+  "reference_count": 27,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1976-377",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 27,
+    "url": "https://doi.org/10.2514/6.1976-377",
+    "title": "Laminar boundary-layer separation from an upstream moving wall",
+    "match": "doi"
+   }
+  ]
+ },
+ "1126": {
+  "id": 1126,
+  "cited_by": 4,
+  "reference_count": 7,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.60730",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 4,
+    "references": 7,
+    "url": "https://doi.org/10.2514/3.60730",
+    "title": "Prediction of Hypersonic Laminar Boundary-Layer/Shock-Wave Interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "1299": {
+  "id": 1299,
+  "cited_by": 2,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1115/77-gt-34",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 0,
+    "url": "https://doi.org/10.1115/77-gt-34",
+    "title": "Transonic Normal Shock-Turbulent Boundary Layer Interaction in Pressure Gradient Flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "1190": {
+  "id": 1190,
+  "cited_by": 51,
+  "reference_count": 28,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1978-1169",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 51,
+    "references": 28,
+    "url": "https://doi.org/10.2514/6.1978-1169",
+    "title": "A study of flow separation in regions of shock wave-boundary layer interaction in hypersonic flow",
+    "match": "doi"
+   }
+  ]
+ },
+ "1290": {
+  "id": 1290,
+  "cited_by": 8,
+  "reference_count": 25,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/bf01051983",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 25,
+    "url": "https://doi.org/10.1007/bf01051983",
+    "title": "Asymptotic theory of nonstationary separation",
+    "match": "doi"
+   }
+  ]
+ },
+ "1069": {
+  "id": 1069,
+  "cited_by": 15,
+  "reference_count": 16,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.7848",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 15,
+    "references": 16,
+    "url": "https://doi.org/10.2514/3.7848",
+    "title": "MRS criterion for flow separation over moving walls",
+    "match": "doi"
+   }
+  ]
+ },
+ "475": {
+  "id": 475,
+  "cited_by": 27,
+  "reference_count": 24,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112082002262",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 27,
+    "references": 24,
+    "url": "https://doi.org/10.1017/s0022112082002262",
+    "title": "The effect of the upstream boundary-layer state on the shock interaction at a compression corner",
+    "match": "doi"
+   }
+  ]
+ },
+ "1460": {
+  "id": 1460,
+  "cited_by": 70,
+  "reference_count": 142,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.1986-267",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 70,
+    "references": 142,
+    "url": "https://doi.org/10.2514/6.1986-267",
+    "title": "A review of aerothermal problems associated with hypersonic flight",
+    "match": "doi"
+   }
+  ]
+ },
+ "807": {
+  "id": 807,
+  "cited_by": 80,
+  "reference_count": 33,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112087000946",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 80,
+    "references": 33,
+    "url": "https://doi.org/10.1017/s0022112087000946",
+    "title": "The interaction of an oblique shock wave with a laminar boundary layer revisited. An experimental and numerical study",
+    "match": "doi"
+   }
+  ]
+ },
+ "477": {
+  "id": 477,
+  "cited_by": 116,
+  "reference_count": 40,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112089002375",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 116,
+    "references": 40,
+    "url": "https://doi.org/10.1017/s0022112089002375",
+    "title": "On the lengthscales of laminar shock/boundary-layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "1210": {
+  "id": 1210,
+  "cited_by": 23,
+  "reference_count": 28,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112090003275",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 23,
+    "references": 28,
+    "url": "https://doi.org/10.1017/s0022112090003275",
+    "title": "Inviscid–viscous interaction on triple-deck scales in a hypersonic flow with strong wall cooling",
+    "match": "doi"
+   }
+  ]
+ },
+ "1123": {
+  "id": 1123,
+  "cited_by": 22,
+  "reference_count": 0,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W95654588",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W95654588",
+    "cited_by": 22,
+    "references": 0,
+    "title": "Experimental Investigations of Hypersonic Shock-Boundary Layer Interaction",
+    "year": 1993,
+    "type": "article",
+    "match": "title",
+    "url": "https://openalex.org/W95654588",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "473": {
+  "id": 473,
+  "cited_by": 50,
+  "reference_count": 36,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.11985",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 50,
+    "references": 36,
+    "url": "https://doi.org/10.2514/3.11985",
+    "title": "Experimental, analytical, and computational methods applied to hypersonic compression ramp flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "1034": {
+  "id": 1034,
+  "cited_by": 254,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/4.470363",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 254,
+    "references": 0,
+    "url": "https://doi.org/10.2514/4.470363",
+    "title": "Hypersonic Aerothermodynamics",
+    "match": "doi"
+   }
+  ]
+ },
+ "1350": {
+  "id": 1350,
+  "cited_by": 19274,
+  "reference_count": 24,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.12149",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 19274,
+    "references": 24,
+    "url": "https://doi.org/10.2514/3.12149",
+    "title": "Two-equation eddy-viscosity turbulence models for engineering applications",
+    "match": "doi"
+   }
+  ]
+ },
+ "472": {
+  "id": 472,
+  "cited_by": 82,
+  "reference_count": 47,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112095002229",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 82,
+    "references": 47,
+    "url": "https://doi.org/10.1017/s0022112095002229",
+    "title": "Experimental and computational investigations of hypersonic flow about compression ramps",
+    "match": "doi"
+   }
+  ]
+ },
+ "770": {
+  "id": 770,
+  "cited_by": 6,
+  "reference_count": 14,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/3.12356",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 6,
+    "references": 14,
+    "url": "https://doi.org/10.2514/3.12356",
+    "title": "Scaling of incipient separation in high speed laminar flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "482": {
+  "id": 482,
+  "cited_by": 43,
+  "reference_count": 32,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/0045-7930(96)00019-9",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 43,
+    "references": 32,
+    "url": "https://doi.org/10.1016/0045-7930(96)00019-9",
+    "title": "Analysis of hypersonic shock-wave laminar boundary-layer interaction phenomena",
+    "match": "doi"
+   }
+  ]
+ },
+ "1064": {
+  "id": 1064,
+  "cited_by": 6,
+  "reference_count": 37,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112096001449",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 6,
+    "references": 37,
+    "url": "https://doi.org/10.1017/s0022112096001449",
+    "title": "Concerning marginal singularities in the boundary-layer flow on a downstream-moving surface",
+    "match": "doi"
+   }
+  ]
+ },
+ "1216": {
+  "id": 1216,
+  "cited_by": 7,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0001924000067154",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 7,
+    "references": 0,
+    "url": "https://doi.org/10.1017/s0001924000067154",
+    "title": "Hypersonic control flap\n                                                effectiveness",
+    "match": "doi"
+   }
+  ]
+ },
+ "1286": {
+  "id": 1286,
+  "cited_by": 133,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/cbo9780511983764",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 133,
+    "references": 0,
+    "url": "https://doi.org/10.1017/cbo9780511983764",
+    "title": "Asymptotic Theory of Separated Flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "1116": {
+  "id": 1116,
+  "cited_by": 58,
+  "reference_count": 126,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/1.1289553",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 58,
+    "references": 126,
+    "url": "https://doi.org/10.1063/1.1289553",
+    "title": "Separation length in high-enthalpy shock/boundary-layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "478": {
+  "id": 478,
+  "cited_by": 53,
+  "reference_count": 20,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/s1270-9638(01)01109-9",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 53,
+    "references": 20,
+    "url": "https://doi.org/10.1016/s1270-9638(01)01109-9",
+    "title": "Analysis of hypersonic compression ramp laminar flows under sharp leading edge conditions",
+    "match": "doi"
+   }
+  ]
+ },
+ "1162": {
+  "id": 1162,
+  "cited_by": 48,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/1.1407604",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 48,
+    "references": 0,
+    "url": "https://doi.org/10.1063/1.1407604",
+    "title": "Blasius boundary layer solution with slip flow conditions",
+    "match": "doi"
+   }
+  ]
+ },
+ "501": {
+  "id": 501,
+  "cited_by": 1137,
+  "reference_count": 79,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/2.1476",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 1137,
+    "references": 79,
+    "url": "https://doi.org/10.2514/2.1476",
+    "title": "Fifty Years of Shock-Wave/Boundary-Layer Interaction Research: What Next?",
+    "match": "doi"
+   }
+  ]
+ },
+ "1071": {
+  "id": 1071,
+  "cited_by": 102,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112004009929",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 102,
+    "references": 0,
+    "url": "https://doi.org/10.1017/s0022112004009929",
+    "title": "Exact theory of unsteady separation for two-dimensional flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "925": {
+  "id": 925,
+  "cited_by": 0,
+  "reference_count": 15,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1023/b:flui.0000038567.54882.7a",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 15,
+    "url": "https://doi.org/10.1023/b:flui.0000038567.54882.7a",
+    "title": "Study of the Interaction of a Streamwise-Oscillating Shock with the Boundary Layer on a Flat Plate",
+    "match": "doi"
+   }
+  ]
+ },
+ "835": {
+  "id": 835,
+  "cited_by": 308,
+  "reference_count": 122,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1146/annurev.fluid.38.050304.092041",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 308,
+    "references": 122,
+    "url": "https://doi.org/10.1146/annurev.fluid.38.050304.092041",
+    "title": "CRITICAL HYPERSONIC AEROTHERMODYNAMIC PHENOMENA",
+    "match": "doi"
+   }
+  ]
+ },
+ "491": {
+  "id": 491,
+  "cited_by": 9,
+  "reference_count": 68,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.2006-494",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 9,
+    "references": 68,
+    "url": "https://doi.org/10.2514/6.2006-494",
+    "title": "Historical Review of Experimental Studies and Prediction Methods to Describe Laminar and Turbulent Shock Wave/Boundary Layer Interactions in Hypersonic Flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "1282": {
+  "id": 1282,
+  "cited_by": 859,
+  "reference_count": 512,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/4.861956",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 859,
+    "references": 512,
+    "url": "https://doi.org/10.2514/4.861956",
+    "title": "Hypersonic and High-Temperature Gas Dynamics, Second Edition",
+    "match": "doi"
+   }
+  ]
+ },
+ "1297": {
+  "id": 1297,
+  "cited_by": 3,
+  "reference_count": 38,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/s00193-006-0044-z",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 3,
+    "references": 38,
+    "url": "https://doi.org/10.1007/s00193-006-0044-z",
+    "title": "Incipient separation in shock wave/boundary layer interactions as induced by sharp fin",
+    "match": "doi"
+   }
+  ]
+ },
+ "1112": {
+  "id": 1112,
+  "cited_by": 62,
+  "reference_count": 20,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/s00193-006-0025-2",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 62,
+    "references": 20,
+    "url": "https://doi.org/10.1007/s00193-006-0025-2",
+    "title": "On the influence of elevated surface temperatures on hypersonic shock wave/boundary layer interaction at a heated ramp model",
+    "match": "doi"
+   }
+  ]
+ },
+ "719": {
+  "id": 719,
+  "cited_by": 307,
+  "reference_count": 0,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W4301093709",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W4301093709",
+    "cited_by": 307,
+    "references": 0,
+    "title": "Shock Wave Reflection Phenomena",
+    "year": 2007,
+    "type": "book",
+    "match": "title",
+    "url": "https://openalex.org/W4301093709",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "1306": {
+  "id": 1306,
+  "cited_by": 50,
+  "reference_count": 37,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/1.2720831",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 50,
+    "references": 37,
+    "url": "https://doi.org/10.1063/1.2720831",
+    "title": "The effect of Mach number on unstable disturbances in shock/boundary-layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "1150": {
+  "id": 1150,
+  "cited_by": 53,
+  "reference_count": 25,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.cnsns.2006.04.008",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 53,
+    "references": 25,
+    "url": "https://doi.org/10.1016/j.cnsns.2006.04.008",
+    "title": "Dual solutions of boundary layer flow over an upstream moving plate",
+    "match": "doi"
+   }
+  ]
+ },
+ "488": {
+  "id": 488,
+  "cited_by": 219,
+  "reference_count": 33,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/s00193-009-0220-z",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 219,
+    "references": 33,
+    "url": "https://doi.org/10.1007/s00193-009-0220-z",
+    "title": "Some physical aspects of shock wave/boundary layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "696": {
+  "id": 696,
+  "cited_by": 49,
+  "reference_count": 34,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112010001011",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 49,
+    "references": 34,
+    "url": "https://doi.org/10.1017/s0022112010001011",
+    "title": "A study of the flow structure for Mach reflection in steady supersonic flow",
+    "match": "doi"
+   }
+  ]
+ },
+ "1172": {
+  "id": 1172,
+  "cited_by": 10,
+  "reference_count": 39,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0022112010000911",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 10,
+    "references": 39,
+    "url": "https://doi.org/10.1017/s0022112010000911",
+    "title": "Translation groups of the boundary-layer flows induced by continuous moving surfaces",
+    "match": "doi"
+   }
+  ]
+ },
+ "1089": {
+  "id": 1089,
+  "cited_by": 16,
+  "reference_count": 49,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2011.104",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 16,
+    "references": 49,
+    "url": "https://doi.org/10.1017/jfm.2011.104",
+    "title": "On unsteady boundary-layer separation in supersonic flow. Part 1. Upstream moving separation point",
+    "match": "doi"
+   }
+  ]
+ },
+ "1132": {
+  "id": 1132,
+  "cited_by": 581,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/cbo9780511842757",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 581,
+    "references": 0,
+    "url": "https://doi.org/10.1017/cbo9780511842757",
+    "title": "Shock Wave-Boundary-Layer Interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "1086": {
+  "id": 1086,
+  "cited_by": 14,
+  "reference_count": 57,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2012.261",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 14,
+    "references": 57,
+    "url": "https://doi.org/10.1017/jfm.2012.261",
+    "title": "Numerical solution of unsteady boundary-layer separation in supersonic flow: upstream moving wall",
+    "match": "doi"
+   }
+  ]
+ },
+ "1002": {
+  "id": 1002,
+  "cited_by": 52,
+  "reference_count": 16,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.paerosci.2011.08.001",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 52,
+    "references": 16,
+    "url": "https://doi.org/10.1016/j.paerosci.2011.08.001",
+    "title": "Rarefied hypersonic flow simulations using the Navier–Stokes equations with non-equilibrium boundary conditions",
+    "match": "doi"
+   }
+  ]
+ },
+ "744": {
+  "id": 744,
+  "cited_by": 12,
+  "reference_count": 60,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/s0001924000007740",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 12,
+    "references": 60,
+    "url": "https://doi.org/10.1017/s0001924000007740",
+    "title": "A computational investigation of laminar shock/wave boundary layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "461": {
+  "id": 461,
+  "cited_by": 175,
+  "reference_count": 71,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2012.495",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 175,
+    "references": 71,
+    "url": "https://doi.org/10.1017/jfm.2012.495",
+    "title": "A scaling analysis for turbulent shock-wave/boundary-layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "623": {
+  "id": 623,
+  "cited_by": 23,
+  "reference_count": 53,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2013.467",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 23,
+    "references": 53,
+    "url": "https://doi.org/10.1017/jfm.2013.467",
+    "title": "Shock reflection in the presence of an upstream expansion wave and a downstream shock wave",
+    "match": "doi"
+   }
+  ]
+ },
+ "1176": {
+  "id": 1176,
+  "cited_by": 4,
+  "reference_count": 71,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.euromechflu.2014.01.006",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 4,
+    "references": 71,
+    "url": "https://doi.org/10.1016/j.euromechflu.2014.01.006",
+    "title": "Laminar boundary-layer separation control by Görtler-scale blowing",
+    "match": "doi"
+   }
+  ]
+ },
+ "1110": {
+  "id": 1110,
+  "cited_by": 31,
+  "reference_count": 32,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.compfluid.2013.11.011",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 31,
+    "references": 32,
+    "url": "https://doi.org/10.1016/j.compfluid.2013.11.011",
+    "title": "Numerical assessment of correlations for shock wave boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "1200": {
+  "id": 1200,
+  "cited_by": 73,
+  "reference_count": 28,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.ijheatmasstransfer.2013.10.072",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 73,
+    "references": 28,
+    "url": "https://doi.org/10.1016/j.ijheatmasstransfer.2013.10.072",
+    "title": "Shock wave boundary layer interactions in hypersonic flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "1022": {
+  "id": 1022,
+  "cited_by": 59,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/978-3-319-14373-6",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 59,
+    "references": 0,
+    "url": "https://doi.org/10.1007/978-3-319-14373-6",
+    "title": "Basics of Aerothermodynamics",
+    "match": "doi"
+   }
+  ]
+ },
+ "462": {
+  "id": 462,
+  "cited_by": 17,
+  "reference_count": 17,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j053271",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 17,
+    "references": 17,
+    "url": "https://doi.org/10.2514/1.j053271",
+    "title": "Correlation for Length of Impinging Shock-Induced Large Separation Bubble at Hypersonic Speed",
+    "match": "doi"
+   }
+  ]
+ },
+ "452": {
+  "id": 452,
+  "cited_by": 3,
+  "reference_count": 17,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W992036338",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W992036338",
+    "cited_by": 3,
+    "references": 17,
+    "title": "Experimental Results on Shock-Wave/Boundary-Layer Interaction Induced by a Movable Wedge",
+    "year": 2015,
+    "type": "conference-paper",
+    "match": "title",
+    "url": "https://openalex.org/W992036338",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "1033": {
+  "id": 1033,
+  "cited_by": 4,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1002/9781119113126",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 4,
+    "references": 0,
+    "url": "https://doi.org/10.1002/9781119113126",
+    "title": "High Enthalpy Gas Dynamics",
+    "match": "doi"
+   }
+  ]
+ },
+ "839": {
+  "id": 839,
+  "cited_by": 110,
+  "reference_count": 51,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.paerosci.2014.09.009",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 110,
+    "references": 51,
+    "url": "https://doi.org/10.1016/j.paerosci.2014.09.009",
+    "title": "Hypersonics into the 21st century: A perspective on AFOSR-sponsored research in aerothermodynamics",
+    "match": "doi"
+   }
+  ]
+ },
+ "489": {
+  "id": 489,
+  "cited_by": 669,
+  "reference_count": 182,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.paerosci.2014.09.002",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 669,
+    "references": 182,
+    "url": "https://doi.org/10.1016/j.paerosci.2014.09.002",
+    "title": "Progress in shock wave/boundary layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "975": {
+  "id": 975,
+  "cited_by": 84,
+  "reference_count": 47,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.3390/aerospace3040034",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 84,
+    "references": 47,
+    "url": "https://doi.org/10.3390/aerospace3040034",
+    "title": "A Two-Temperature Open-Source CFD Model for Hypersonic Reacting Flows, Part One: Zero-Dimensional Analysis",
+    "match": "doi"
+   }
+  ]
+ },
+ "874": {
+  "id": 874,
+  "cited_by": 45,
+  "reference_count": 34,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/s12567-015-0102-4",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 45,
+    "references": 34,
+    "url": "https://doi.org/10.1007/s12567-015-0102-4",
+    "title": "Experimental results on unsteady shock-wave/boundary-layer interaction induced by an impinging shock",
+    "match": "doi"
+   }
+  ]
+ },
+ "843": {
+  "id": 843,
+  "cited_by": 69,
+  "reference_count": 87,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2015.729",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 69,
+    "references": 87,
+    "url": "https://doi.org/10.1017/jfm.2015.729",
+    "title": "Instabilities in oblique shock wave/laminar boundary-layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "451": {
+  "id": 451,
+  "cited_by": 8,
+  "reference_count": 26,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j055575",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 26,
+    "url": "https://doi.org/10.2514/1.j055575",
+    "title": "Establishment Times of Hypersonic Shock-Wave/Boundary-Layer Interactions in Intermittent Facilities",
+    "match": "doi"
+   }
+  ]
+ },
+ "1466": {
+  "id": 1466,
+  "cited_by": 25,
+  "reference_count": 35,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/6.2017-3463",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 25,
+    "references": 35,
+    "url": "https://doi.org/10.2514/6.2017-3463",
+    "title": "Experimental investigation of Görtler vortices in hypersonic ramp flows behind sharp and blunt leading edges",
+    "match": "doi"
+   }
+  ]
+ },
+ "1324": {
+  "id": 1324,
+  "cited_by": 66,
+  "reference_count": 25,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j054939",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 66,
+    "references": 25,
+    "url": "https://doi.org/10.2514/1.j054939",
+    "title": "Numerical Study on Wall Temperature Effects on Shock Wave/Turbulent Boundary-Layer Interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "1073": {
+  "id": 1073,
+  "cited_by": 7,
+  "reference_count": 14,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/s10483-018-2350-8",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 7,
+    "references": 14,
+    "url": "https://doi.org/10.1007/s10483-018-2350-8",
+    "title": "A Lagrangian criterion of unsteady flow separation for two-dimensional periodic flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "286": {
+  "id": 286,
+  "cited_by": 1,
+  "reference_count": 65,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.12677/ijm.2018.74015",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 1,
+    "references": 65,
+    "url": "https://doi.org/10.12677/ijm.2018.74015",
+    "title": "Developments of Chemical Non-Equilibrium Effects in Numerical Simulation of Aerodynamic Heating in Hypersonic Flow",
+    "match": "doi"
+   }
+  ]
+ },
+ "895": {
+  "id": 895,
+  "cited_by": 89,
+  "reference_count": 48,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/1.5022598",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 89,
+    "references": 48,
+    "url": "https://doi.org/10.1063/1.5022598",
+    "title": "Investigation of unsteady, hypersonic, laminar separated flows over a double cone geometry using a kinetic approach",
+    "match": "doi"
+   }
+  ]
+ },
+ "459": {
+  "id": 459,
+  "cited_by": 14,
+  "reference_count": 36,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1103/physrevfluids.3.114702",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 14,
+    "references": 36,
+    "url": "https://doi.org/10.1103/physrevfluids.3.114702",
+    "title": "Mass entrainment-based model for separating flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "2009": {
+  "id": 2009,
+  "cited_by": 94,
+  "reference_count": 55,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1103/physrevfluids.3.013906",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 94,
+    "references": 55,
+    "url": "https://doi.org/10.1103/physrevfluids.3.013906",
+    "title": "Simulation and stability analysis of oblique shock-wave/boundary-layer interactions at Mach 5.92",
+    "match": "doi"
+   }
+  ]
+ },
+ "2038": {
+  "id": 2038,
+  "cited_by": 60,
+  "reference_count": 49,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2019.558",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 60,
+    "references": 49,
+    "url": "https://doi.org/10.1017/jfm.2019.558",
+    "title": "Direct numerical simulation of conical shock wave–turbulent boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "1182": {
+  "id": 1182,
+  "cited_by": 8,
+  "reference_count": 47,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2019.876",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 47,
+    "url": "https://doi.org/10.1017/jfm.2019.876",
+    "title": "Material spike formation in highly unsteady separated flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "834": {
+  "id": 834,
+  "cited_by": 312,
+  "reference_count": 74,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1146/annurev-fluid-010518-040258",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 312,
+    "references": 74,
+    "url": "https://doi.org/10.1146/annurev-fluid-010518-040258",
+    "title": "Rate Effects in Hypersonic Flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "2010": {
+  "id": 2010,
+  "cited_by": 128,
+  "reference_count": 49,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2019.702",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 128,
+    "references": 49,
+    "url": "https://doi.org/10.1017/jfm.2019.702",
+    "title": "Reattachment streaks in hypersonic compression ramp flow: an input–output analysis",
+    "match": "doi"
+   }
+  ]
+ },
+ "2024": {
+  "id": 2024,
+  "cited_by": 21,
+  "reference_count": 21,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j058334",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 21,
+    "references": 21,
+    "url": "https://doi.org/10.2514/1.j058334",
+    "title": "Turbulent Heat Flux Model for Hypersonic Shock–Boundary Layer Interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "2012": {
+  "id": 2012,
+  "cited_by": 13,
+  "reference_count": 55,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0029150",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 13,
+    "references": 55,
+    "url": "https://doi.org/10.1063/5.0029150",
+    "title": "Bistable states and separation hysteresis in curved compression ramp flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "660": {
+  "id": 660,
+  "cited_by": 10,
+  "reference_count": 35,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2020.677",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 10,
+    "references": 35,
+    "url": "https://doi.org/10.1017/jfm.2020.677",
+    "title": "Mach reflection promoted by an upstream shock wave",
+    "match": "doi"
+   }
+  ]
+ },
+ "803": {
+  "id": 803,
+  "cited_by": 4,
+  "reference_count": 16,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1134/s0015462820050055",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 4,
+    "references": 16,
+    "url": "https://doi.org/10.1134/s0015462820050055",
+    "title": "Numerical Simulation of the Interaction between a Shock and the Boundary Layer on a Flat Plate in Motion",
+    "match": "doi"
+   }
+  ]
+ },
+ "1091": {
+  "id": 1091,
+  "cited_by": 4,
+  "reference_count": 48,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2020.486",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 4,
+    "references": 48,
+    "url": "https://doi.org/10.1017/jfm.2020.486",
+    "title": "On quasi-steady boundary-layer separation in supersonic flow. Part 2. Downstream moving separation point",
+    "match": "doi"
+   }
+  ]
+ },
+ "460": {
+  "id": 460,
+  "cited_by": 11,
+  "reference_count": 46,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0024101",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 11,
+    "references": 46,
+    "url": "https://doi.org/10.1063/5.0024101",
+    "title": "Prediction of plateau and peak of pressure in a compression ramp flow with large separation",
+    "match": "doi"
+   }
+  ]
+ },
+ "742": {
+  "id": 742,
+  "cited_by": 13,
+  "reference_count": 37,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/s00348-020-02989-5",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 13,
+    "references": 37,
+    "url": "https://doi.org/10.1007/s00348-020-02989-5",
+    "title": "Scaling for steady and traveling shock wave/turbulent boundary layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "387": {
+  "id": 387,
+  "cited_by": 8,
+  "reference_count": 39,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.ijheatmasstransfer.2020.119434",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 39,
+    "url": "https://doi.org/10.1016/j.ijheatmasstransfer.2020.119434",
+    "title": "Theoretical modeling of heat transfer to flat plate under vibrational excitation freestream conditions",
+    "match": "doi"
+   }
+  ]
+ },
+ "2008": {
+  "id": 2008,
+  "cited_by": 21,
+  "reference_count": 57,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1103/physrevfluids.5.063904",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 21,
+    "references": 57,
+    "url": "https://doi.org/10.1103/physrevfluids.5.063904",
+    "title": "Transient growth analysis of oblique shock-wave/boundary-layer interactions at Mach 5.92",
+    "match": "doi"
+   }
+  ]
+ },
+ "893": {
+  "id": 893,
+  "cited_by": 30,
+  "reference_count": 49,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j059590",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 30,
+    "references": 49,
+    "url": "https://doi.org/10.2514/1.j059590",
+    "title": "Hypersonic Oscillating Shock-Wave/Boundary-Layer Interaction on a Flat Plate",
+    "match": "doi"
+   }
+  ]
+ },
+ "2034": {
+  "id": 2034,
+  "cited_by": 7,
+  "reference_count": 40,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j060076",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 7,
+    "references": 40,
+    "url": "https://doi.org/10.2514/1.j060076",
+    "title": "Influence of Finite Width of Shock Generator on Shock-Wave/Boundary-Layer Interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "809": {
+  "id": 809,
+  "cited_by": 0,
+  "reference_count": 18,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0052130",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 18,
+    "url": "https://doi.org/10.1063/5.0052130",
+    "title": "Investigation of shock wave boundary layer interaction over the moving flat plate",
+    "match": "doi"
+   }
+  ]
+ },
+ "2006": {
+  "id": 2006,
+  "cited_by": 2,
+  "reference_count": 28,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/978-3-030-67902-6_57",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 28,
+    "url": "https://doi.org/10.1007/978-3-030-67902-6_57",
+    "title": "Linear Instability of Shock-Dominated Laminar Hypersonic Separated Flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "2026": {
+  "id": 2026,
+  "cited_by": 28,
+  "reference_count": 69,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/s00193-021-01018-6",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 28,
+    "references": 69,
+    "url": "https://doi.org/10.1007/s00193-021-01018-6",
+    "title": "Numerical strategy to perform direct numerical simulations of hypersonic shock/boundary-layer interaction in chemical nonequilibrium",
+    "match": "doi"
+   }
+  ]
+ },
+ "346": {
+  "id": 346,
+  "cited_by": 4,
+  "reference_count": 43,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1139/cjp-2020-0314",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 4,
+    "references": 43,
+    "url": "https://doi.org/10.1139/cjp-2020-0314",
+    "title": "Physical modeling and correlation of separation length in hypersonic laminar ramp flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "2033": {
+  "id": 2033,
+  "cited_by": 15,
+  "reference_count": 48,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j060243",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 15,
+    "references": 48,
+    "url": "https://doi.org/10.2514/1.j060243",
+    "title": "Quasi-Conical Free Interaction in Fin-Induced Shock Wave/Laminar Boundary-Layer Interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "878": {
+  "id": 878,
+  "cited_by": 8,
+  "reference_count": 23,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.cja.2020.12.009",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 23,
+    "url": "https://doi.org/10.1016/j.cja.2020.12.009",
+    "title": "Reflected shock/turbulent boundary layer interaction structure analysis based on large eddy simulation",
+    "match": "doi"
+   }
+  ]
+ },
+ "911": {
+  "id": 911,
+  "cited_by": 47,
+  "reference_count": 54,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.3390/aerospace8070193",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 47,
+    "references": 54,
+    "url": "https://doi.org/10.3390/aerospace8070193",
+    "title": "SU2-NEMO: An Open-Source Framework for High-Mach Nonequilibrium Multi-Species Flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "2042": {
+  "id": 2042,
+  "cited_by": 26,
+  "reference_count": 34,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.cja.2020.12.028",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 26,
+    "references": 34,
+    "url": "https://doi.org/10.1016/j.cja.2020.12.028",
+    "title": "Scaling of interaction lengths for hypersonic shock wave/turbulent boundary layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "2043": {
+  "id": 2043,
+  "cited_by": 11,
+  "reference_count": 36,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.actaastro.2021.06.010",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 11,
+    "references": 36,
+    "url": "https://doi.org/10.1016/j.actaastro.2021.06.010",
+    "title": "The scaling of separation bubble in the conical shock wave/turbulent boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "932": {
+  "id": 932,
+  "cited_by": 7,
+  "reference_count": 45,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0062526",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 7,
+    "references": 45,
+    "url": "https://doi.org/10.1063/5.0062526",
+    "title": "Theory-based prediction of separation angle and peak pressure for laminar separated hypersonic compression corner flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "2044": {
+  "id": 2044,
+  "cited_by": 79,
+  "reference_count": 40,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2020.1093",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 79,
+    "references": 40,
+    "url": "https://doi.org/10.1017/jfm.2020.1093",
+    "title": "Unsteady effects in a hypersonic compression ramp flow with laminar separation",
+    "match": "doi"
+   }
+  ]
+ },
+ "2023": {
+  "id": 2023,
+  "cited_by": 52,
+  "reference_count": 38,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.actaastro.2020.08.042",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 52,
+    "references": 38,
+    "url": "https://doi.org/10.1016/j.actaastro.2020.08.042",
+    "title": "Wall temperature effects on shock wave/turbulent boundary layer interaction via direct numerical simulation",
+    "match": "doi"
+   }
+  ]
+ },
+ "2022": {
+  "id": 2022,
+  "cited_by": 23,
+  "reference_count": 43,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0118578",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 23,
+    "references": 43,
+    "url": "https://doi.org/10.1063/5.0118578",
+    "title": "Direct numerical simulation of shock wave/turbulent boundary layer interaction in a swept compression ramp at Mach 6",
+    "match": "doi"
+   }
+  ]
+ },
+ "1476": {
+  "id": 1476,
+  "cited_by": 44,
+  "reference_count": 41,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j061708",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 44,
+    "references": 41,
+    "url": "https://doi.org/10.2514/1.j061708",
+    "title": "Effects of Wall Temperature on Hypersonic Impinging Shock-Wave/Turbulent-Boundary-Layer Interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "799": {
+  "id": 799,
+  "cited_by": 17,
+  "reference_count": 80,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2022.827",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 17,
+    "references": 80,
+    "url": "https://doi.org/10.1017/jfm.2022.827",
+    "title": "Hypersonic shock impingement studies on a flat plate: flow separation of laminar boundary layers",
+    "match": "doi"
+   }
+  ]
+ },
+ "2007": {
+  "id": 2007,
+  "cited_by": 43,
+  "reference_count": 86,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2022.390",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 43,
+    "references": 86,
+    "url": "https://doi.org/10.1017/jfm.2022.390",
+    "title": "Low-frequency resolvent analysis of the laminar oblique shock wave/boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "2005": {
+  "id": 2005,
+  "cited_by": 44,
+  "reference_count": 92,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2022.276",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 44,
+    "references": 92,
+    "url": "https://doi.org/10.1017/jfm.2022.276",
+    "title": "On the synchronisation of three-dimensional shock layer and laminar separation bubble instabilities in hypersonic flow over a double wedge",
+    "match": "doi"
+   }
+  ]
+ },
+ "2032": {
+  "id": 2032,
+  "cited_by": 8,
+  "reference_count": 44,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/s00193-022-01102-5",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 44,
+    "url": "https://doi.org/10.1007/s00193-022-01102-5",
+    "title": "Relationship between secondary separation and surface pressure structure in swept shock-wave/boundary-layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "880": {
+  "id": 880,
+  "cited_by": 2,
+  "reference_count": 29,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.3389/fenrg.2022.854019",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 29,
+    "url": "https://doi.org/10.3389/fenrg.2022.854019",
+    "title": "Unsteady Motion of Shock Wave for a Supersonic Compression Ramp Flow Based on Large Eddy Simulation",
+    "match": "doi"
+   }
+  ]
+ },
+ "2017": {
+  "id": 2017,
+  "cited_by": 35,
+  "reference_count": 41,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0094070",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 35,
+    "references": 41,
+    "url": "https://doi.org/10.1063/5.0094070",
+    "title": "Wall heat flux in a supersonic shock wave/turbulent boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "2020": {
+  "id": 2020,
+  "cited_by": 32,
+  "reference_count": 53,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.ijheatfluidflow.2022.109071",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 32,
+    "references": 53,
+    "url": "https://doi.org/10.1016/j.ijheatfluidflow.2022.109071",
+    "title": "Wall-modeled LES of shock-wave/boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "2027": {
+  "id": 2027,
+  "cited_by": 103,
+  "reference_count": 204,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.paerosci.2023.100953",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 103,
+    "references": 204,
+    "url": "https://doi.org/10.1016/j.paerosci.2023.100953",
+    "title": "A review of three-dimensional shock wave–boundary-layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "490": {
+  "id": 490,
+  "cited_by": 168,
+  "reference_count": 119,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1146/annurev-fluid-120720-022542",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 168,
+    "references": 119,
+    "url": "https://doi.org/10.1146/annurev-fluid-120720-022542",
+    "title": "Dynamics of Three-Dimensional Shock-Wave/Boundary-Layer Interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "793": {
+  "id": 793,
+  "cited_by": 17,
+  "reference_count": 55,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0160648",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 17,
+    "references": 55,
+    "url": "https://doi.org/10.1063/5.0160648",
+    "title": "Global instability of the interaction between an oblique shock and a laminar boundary layer",
+    "match": "doi"
+   }
+  ]
+ },
+ "2047": {
+  "id": 2047,
+  "cited_by": 30,
+  "reference_count": 61,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j062521",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 30,
+    "references": 61,
+    "url": "https://doi.org/10.2514/1.j062521",
+    "title": "Hypersonic Shock Wave/Turbulent Boundary Layer Interaction over a Compression Ramp",
+    "match": "doi"
+   }
+  ]
+ },
+ "503": {
+  "id": 503,
+  "cited_by": 8,
+  "reference_count": 48,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2023.357",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 48,
+    "url": "https://doi.org/10.1017/jfm.2023.357",
+    "title": "Interaction of a moving shock wave with a turbulent boundary layer",
+    "match": "doi"
+   }
+  ]
+ },
+ "2021": {
+  "id": 2021,
+  "cited_by": 9,
+  "reference_count": 68,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0147829",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 9,
+    "references": 68,
+    "url": "https://doi.org/10.1063/5.0147829",
+    "title": "Large eddy simulation of shock wave/turbulent boundary layer interaction under incipient and fully separated conditions",
+    "match": "doi"
+   }
+  ]
+ },
+ "928": {
+  "id": 928,
+  "cited_by": 8,
+  "reference_count": 63,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0133708",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 63,
+    "url": "https://doi.org/10.1063/5.0133708",
+    "title": "Peak heat flux prediction of hypersonic flow over compression ramp under vibrationally excited free-stream condition",
+    "match": "doi"
+   }
+  ]
+ },
+ "2015": {
+  "id": 2015,
+  "cited_by": 60,
+  "reference_count": 74,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2022.1038",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 60,
+    "references": 74,
+    "url": "https://doi.org/10.1017/jfm.2022.1038",
+    "title": "Unsteadiness characterisation of shock wave/turbulent boundary-layer interaction at moderate Reynolds number",
+    "match": "doi"
+   }
+  ]
+ },
+ "884": {
+  "id": 884,
+  "cited_by": 3,
+  "reference_count": 31,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0198982",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 3,
+    "references": 31,
+    "url": "https://doi.org/10.1063/5.0198982",
+    "title": "A study on shock-wave/boundary-layer interaction with varying flow deflection angle",
+    "match": "doi"
+   }
+  ]
+ },
+ "1480": {
+  "id": 1480,
+  "cited_by": 9,
+  "reference_count": 62,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2024.864",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 9,
+    "references": 62,
+    "url": "https://doi.org/10.1017/jfm.2024.864",
+    "title": "A universal scaling for the length scales of shock-induced separation",
+    "match": "doi"
+   }
+  ]
+ },
+ "2016": {
+  "id": 2016,
+  "cited_by": 28,
+  "reference_count": 87,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2024.641",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 28,
+    "references": 87,
+    "url": "https://doi.org/10.1017/jfm.2024.641",
+    "title": "Aerodynamic heating in hypersonic shock wave and turbulent boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "1255": {
+  "id": 1255,
+  "cited_by": 0,
+  "reference_count": 42,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0218229",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 42,
+    "url": "https://doi.org/10.1063/5.0218229",
+    "title": "Exact solution for heat transfer across the Sakiadis boundary layer",
+    "match": "doi"
+   }
+  ]
+ },
+ "2030": {
+  "id": 2030,
+  "cited_by": 2,
+  "reference_count": 49,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.3390/aerospace11090760",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 49,
+    "url": "https://doi.org/10.3390/aerospace11090760",
+    "title": "Görtler Vortices in the Shock Wave/Boundary-Layer Interaction Induced by Curved Swept Compression Ramp",
+    "match": "doi"
+   }
+  ]
+ },
+ "339": {
+  "id": 339,
+  "cited_by": 3,
+  "reference_count": 34,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0226542",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 3,
+    "references": 34,
+    "url": "https://doi.org/10.1063/5.0226542",
+    "title": "Heat transfer to a flat plate with arbitrary surface catalysis under partially dissociated nitrogen freestream",
+    "match": "doi"
+   }
+  ]
+ },
+ "2041": {
+  "id": 2041,
+  "cited_by": 8,
+  "reference_count": 50,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j064204",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 50,
+    "url": "https://doi.org/10.2514/1.j064204",
+    "title": "Interaction Length Analysis of Hypersonic Shock–Boundary-Layer Interaction Including High-Enthalpy Effects",
+    "match": "doi"
+   }
+  ]
+ },
+ "1156": {
+  "id": 1156,
+  "cited_by": 0,
+  "reference_count": 0,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.22541/au.170667421.15277022/v1",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 0,
+    "url": "https://doi.org/10.22541/au.170667421.15277022/v1",
+    "title": "Numerical Transformation Methods for a Moving-Wall Boundary Layer Flow of a Rarefied Gas Free Stream over a Moving Flat Plate",
+    "match": "doi"
+   }
+  ]
+ },
+ "2039": {
+  "id": 2039,
+  "cited_by": 7,
+  "reference_count": 28,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.ast.2023.108769",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 7,
+    "references": 28,
+    "url": "https://doi.org/10.1016/j.ast.2023.108769",
+    "title": "Numerical investigations on interactions between 2D/3D conical shock wave and axisymmetric boundary layer at Ma=2.2",
+    "match": "doi"
+   }
+  ]
+ },
+ "680": {
+  "id": 680,
+  "cited_by": 4,
+  "reference_count": 54,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0187112",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 4,
+    "references": 54,
+    "url": "https://doi.org/10.1063/5.0187112",
+    "title": "On the shock wave boundary layer interaction in slightly rarefied gas",
+    "match": "doi"
+   }
+  ]
+ },
+ "2028": {
+  "id": 2028,
+  "cited_by": 39,
+  "reference_count": 147,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.jppr.2024.08.003",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 39,
+    "references": 147,
+    "url": "https://doi.org/10.1016/j.jppr.2024.08.003",
+    "title": "Recent progress in conical shock wave/boundary layer interaction with spanwise pressure gradient",
+    "match": "doi"
+   }
+  ]
+ },
+ "645": {
+  "id": 645,
+  "cited_by": 9,
+  "reference_count": 20,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2024.826",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 9,
+    "references": 20,
+    "url": "https://doi.org/10.1017/jfm.2024.826",
+    "title": "Regular reflection to Mach reflection (RR–MR) transition in short wedges",
+    "match": "doi"
+   }
+  ]
+ },
+ "2029": {
+  "id": 2029,
+  "cited_by": 2,
+  "reference_count": 50,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0189960",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 50,
+    "url": "https://doi.org/10.1063/5.0189960",
+    "title": "Three-dimensional characteristics of separation vortex generated by crossing shock/boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "2037": {
+  "id": 2037,
+  "cited_by": 6,
+  "reference_count": 59,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j064700",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 6,
+    "references": 59,
+    "url": "https://doi.org/10.2514/1.j064700",
+    "title": "Analysis of Free-Interaction Theory in Swept Shock Wave/Turbulent Boundary Layer Interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "1120": {
+  "id": 1120,
+  "cited_by": 4,
+  "reference_count": 76,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0288609",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 4,
+    "references": 76,
+    "url": "https://doi.org/10.1063/5.0288609",
+    "title": "Control of incident shock wave/boundary layer interaction by concave surface",
+    "match": "doi"
+   }
+  ]
+ },
+ "2018": {
+  "id": 2018,
+  "cited_by": 10,
+  "reference_count": 46,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0256817",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 10,
+    "references": 46,
+    "url": "https://doi.org/10.1063/5.0256817",
+    "title": "Coupling effects of flow separation and aerodynamic heating in hypersonic shock wave and turbulent boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "1009": {
+  "id": 1009,
+  "cited_by": 0,
+  "reference_count": 24,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/978-981-96-4767-5_37",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 24,
+    "url": "https://doi.org/10.1007/978-981-96-4767-5_37",
+    "title": "Experimental Study on Unsteadiness in Hypersonic Shock Wave/Turbulent Boundary Layer Interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "902": {
+  "id": 902,
+  "cited_by": 0,
+  "reference_count": 40,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0296257",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 40,
+    "url": "https://doi.org/10.1063/5.0296257",
+    "title": "Experimental investigation of the effects of a moving wall on the separation bubble in a hypersonic ramp–flat plate configuration",
+    "match": "doi"
+   }
+  ]
+ },
+ "856": {
+  "id": 856,
+  "cited_by": 8,
+  "reference_count": 80,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2025.10597",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 80,
+    "url": "https://doi.org/10.1017/jfm.2025.10597",
+    "title": "Instabilities in shock-wave–boundary-layer interactions at Mach 6",
+    "match": "doi"
+   }
+  ]
+ },
+ "2019": {
+  "id": 2019,
+  "cited_by": 3,
+  "reference_count": 41,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0251558",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 3,
+    "references": 41,
+    "url": "https://doi.org/10.1063/5.0251558",
+    "title": "Mechanisms of hypersonic shock wave and turbulent boundary layer interaction on a cone/flare",
+    "match": "doi"
+   }
+  ]
+ },
+ "2004": {
+  "id": 2004,
+  "cited_by": 9,
+  "reference_count": 54,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2025.236",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 9,
+    "references": 54,
+    "url": "https://doi.org/10.1017/jfm.2025.236",
+    "title": "Modal analysis of the triadic interactions in the dynamics of a transitional shock wave boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "635": {
+  "id": 635,
+  "cited_by": 0,
+  "reference_count": 48,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.ast.2025.110266",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 48,
+    "url": "https://doi.org/10.1016/j.ast.2025.110266",
+    "title": "Shock reflection with the influence of wave structures near the intersection point in confined-space double-wedge",
+    "match": "doi"
+   }
+  ]
+ },
+ "1094": {
+  "id": 1094,
+  "cited_by": 0,
+  "reference_count": 12,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2025.377",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 12,
+    "url": "https://doi.org/10.1017/jfm.2025.377",
+    "title": "Singularity in the boundary layer on an upstream-sliding wall",
+    "match": "doi"
+   }
+  ]
+ },
+ "643": {
+  "id": 643,
+  "cited_by": 8,
+  "reference_count": 24,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2025.41",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 8,
+    "references": 24,
+    "url": "https://doi.org/10.1017/jfm.2025.41",
+    "title": "Transition of shock reflection with downstream expansion fan interference",
+    "match": "doi"
+   }
+  ]
+ },
+ "2035": {
+  "id": 2035,
+  "cited_by": 0,
+  "reference_count": 46,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1103/8pky-fnkx",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 46,
+    "url": "https://doi.org/10.1103/8pky-fnkx",
+    "title": "Analysis of a swept impinging shock-turbulent boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "2014": {
+  "id": 2014,
+  "cited_by": 1,
+  "reference_count": 23,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.cja.2026.104145",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 1,
+    "references": 23,
+    "url": "https://doi.org/10.1016/j.cja.2026.104145",
+    "title": "Decoupling translation and rotation motion of separation shock in a hypersonic compression ramp flow",
+    "match": "doi"
+   }
+  ]
+ },
+ "2048": {
+  "id": 2048,
+  "cited_by": 0,
+  "reference_count": 59,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1063/5.0329426",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 59,
+    "url": "https://doi.org/10.1063/5.0329426",
+    "title": "Effect of Mach number on shock wave/turbulent boundary layer interaction over a hypersonic compression corner",
+    "match": "doi"
+   }
+  ]
+ },
+ "2040": {
+  "id": 2040,
+  "cited_by": 0,
+  "reference_count": 87,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W7165378899",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W7165378899",
+    "cited_by": 0,
+    "references": 87,
+    "title": "Hypersonic Shock-Wave/Boundary-Layer Interaction on a Three-Dimensional Expansion-Compression Geometry",
+    "year": 2026,
+    "type": "preprint",
+    "match": "title",
+    "url": "https://openalex.org/W7165378899",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "2013": {
+  "id": 2013,
+  "cited_by": 2,
+  "reference_count": 67,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.compfluid.2026.107016",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 67,
+    "url": "https://doi.org/10.1016/j.compfluid.2026.107016",
+    "title": "Nonlinear causal relationship between separation bubbles and reflected shock wave in shock wave/turbulent boundary layer interaction based on information theory",
+    "match": "doi"
+   }
+  ]
+ },
+ "2046": {
+  "id": 2046,
+  "cited_by": 0,
+  "reference_count": 89,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2026.11644",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 89,
+    "url": "https://doi.org/10.1017/jfm.2026.11644",
+    "title": "On low-frequency unsteadiness in shock-wave–turbulent boundary layer interaction with varying corner curvature",
+    "match": "doi"
+   }
+  ]
+ },
+ "2002": {
+  "id": 2002,
+  "cited_by": 0,
+  "reference_count": 74,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2026.12060",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 74,
+    "url": "https://doi.org/10.1017/jfm.2026.12060",
+    "title": "On the significance of absolute and convective instabilities in transitional hypersonic compression ramp flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "2045": {
+  "id": 2045,
+  "cited_by": 2,
+  "reference_count": 73,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2026.11284",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 73,
+    "url": "https://doi.org/10.1017/jfm.2026.11284",
+    "title": "Onset of separation unsteadiness in hypersonic shock–boundary-layer interaction on a cone-step",
+    "match": "doi"
+   }
+  ]
+ },
+ "2011": {
+  "id": 2011,
+  "cited_by": 0,
+  "reference_count": 0,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W7160933300",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W7160933300",
+    "cited_by": 0,
+    "references": 0,
+    "title": "Optimal non-linear mechanisms for laminar-turbulent transition of a shock-induced separated shear layer",
+    "year": 2026,
+    "type": "preprint",
+    "match": "title",
+    "url": "https://openalex.org/W7160933300",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ },
+ "1039": {
+  "id": 1039,
+  "cited_by": 0,
+  "reference_count": 75,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.cja.2026.104153",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 75,
+    "url": "https://doi.org/10.1016/j.cja.2026.104153",
+    "title": "Prediction of separation length for hypersonic shock wave/turbulent boundary layer interactions",
+    "match": "doi"
+   }
+  ]
+ },
+ "2025": {
+  "id": 2025,
+  "cited_by": 2,
+  "reference_count": 39,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.ijheatfluidflow.2026.110263",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 39,
+    "url": "https://doi.org/10.1016/j.ijheatfluidflow.2026.110263",
+    "title": "RANS CFD applied to 2D canonical shock wave turbulent boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "2003": {
+  "id": 2003,
+  "cited_by": 2,
+  "reference_count": 55,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j066062",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 55,
+    "url": "https://doi.org/10.2514/1.j066062",
+    "title": "Receptivity of a Transitional Shock/Boundary-Layer Interaction to Shock Oscillations in Hypersonic Flow",
+    "match": "doi"
+   }
+  ]
+ },
+ "1303": {
+  "id": 1303,
+  "cited_by": 0,
+  "reference_count": 35,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1186/s42774-025-00221-8",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 35,
+    "url": "https://doi.org/10.1186/s42774-025-00221-8",
+    "title": "Research on the flow separation characteristics of shock wave-boundary layer interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "2001": {
+  "id": 2001,
+  "cited_by": 0,
+  "reference_count": 75,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1017/jfm.2026.12013",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 0,
+    "references": 75,
+    "url": "https://doi.org/10.1017/jfm.2026.12013",
+    "title": "Secondary global instabilities in shock-wave–boundary-layer interactions: direct numerical simulations and three-dimensional global stability analysis",
+    "match": "doi"
+   }
+  ]
+ },
+ "2036": {
+  "id": 2036,
+  "cited_by": 2,
+  "reference_count": 62,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.2514/1.j065924",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 2,
+    "references": 62,
+    "url": "https://doi.org/10.2514/1.j065924",
+    "title": "Separation Criterion in Hypersonic Swept Shock Wave/Turbulent Boundary Layer Interaction",
+    "match": "doi"
+   }
+  ]
+ },
+ "934": {
+  "id": 934,
+  "cited_by": 1,
+  "reference_count": 39,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1007/s10409-025-25114-x",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 1,
+    "references": 39,
+    "url": "https://doi.org/10.1007/s10409-025-25114-x",
+    "title": "Theoretical modelling for effects of arbitrary surface catalysis on peak heat flux in laminar compression corner flows",
+    "match": "doi"
+   }
+  ]
+ },
+ "2031": {
+  "id": 2031,
+  "cited_by": 3,
+  "reference_count": 64,
+  "reference_source": "Crossref",
+  "source": "Crossref",
+  "source_url": "https://doi.org/10.1016/j.ast.2026.112249",
+  "as_of": "2026-11-09",
+  "match": "doi",
+  "sources": [
+   {
+    "name": "Crossref",
+    "cited_by": 3,
+    "references": 64,
+    "url": "https://doi.org/10.1016/j.ast.2026.112249",
+    "title": "Three-Dimensional Flow Topology of Double-Fin Shock-Wave/Boundary-Layer Interaction Using Volumetric Velocity Measurements",
+    "match": "doi"
+   }
+  ]
+ },
+ "752": {
+  "id": 752,
+  "cited_by": 0,
+  "reference_count": 0,
+  "source": "OpenAlex",
+  "source_url": "https://openalex.org/W7167170786",
+  "as_of": "2026-11-09",
+  "match": "title",
+  "sources": [
+   {
+    "name": "OpenAlex",
+    "id": "https://openalex.org/W7167170786",
+    "cited_by": 0,
+    "references": 0,
+    "title": "高超声速两楔分离非定常流动的数值研究",
+    "year": 2026,
+    "type": "article",
+    "match": "title",
+    "url": "https://openalex.org/W7167170786",
+    "title_similarity": 1.0
+   }
+  ],
+  "reference_source": "OpenAlex"
+ }
+}

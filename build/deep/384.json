@@ -1,0 +1,574 @@
+{
+  "id": 384,
+  "read_note": "期刊论文（《气体物理》2025, 10(3):18–26），理论分析+CFD。材料含9页PDF文本与12个抓图文件；抓图清单把表1、表2误标为“图1/图2”，本文按原表题使用。公式OCR有个别分式与下标乱码，已用原PDF第6–7页（印刷页23–24）核对主要判据；式(1)与图9题注中σ的位置仍有歧义，已在open_questions注明；C的分式排布在扫描件中也有歧义，已在key_parameters与limits注明。",
+  "one_line": "用高超声速相似参数K与湍流黏性干扰参数χσ建立平板STBLI初始分离显式判据K²=χσ。",
+  "three_sentence": [
+    {
+      "text": "论文以斜激波入射平板湍流边界层为模型，用RANS计算一系列Ma∞、单位Re和壁温比工况，并按Lb–θ线性插值确定初始分离角。",
+      "attr": "原文明确"
+    },
+    {
+      "text": "作者把层流压缩拐角的Needham/Holden判据推广到湍流，采用Stollery的χ=(Ma∞^9 C/ReL)^{2/7}，提出K²=χσ并用CFD数据拟合σ=0.438（R²=0.99）。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "计算显示θi随Ma∞增大、随Re增大而减小，冷壁范围内壁温比影响很弱；作者用Schülein实验和Volpiani DNS做了外部验证。",
+      "attr": "原文明确"
+    }
+  ],
+  "imrad": {
+    "introduction": "研究问题：高超声速STBLI初始分离缺少基于来流参数的显式预测式。作者回顾Kuehn、Holden、Settles等关于Ma、Re、壁温影响的实验，指出已有工作多为压缩拐角、以定性规律为主；平板入射构型与压缩拐角具有等价性。目标是建立以Ma∞、ReL、Tw/T∞为输入的θi预测式（印刷页19）。假设：初始分离可由壁面剪切应力恰为零（时均意义）定义，且高超声速相似参数与黏性干扰参数可跨层流/湍流推广（印刷页19、23–24）。",
+    "methods": "数值：二维斜激波入射平板湍流边界层，激波入射点距前缘L=0.35 m；OpenFOAM rhoCentralFoam，有限体积，KNP中心迎风通量，VanLeer限制器，RANS k-ω SST，y+<1；Sutherland黏性，S=110.4 K。网格200×200、380×300、460×400，并比较CFL。验证：与Schülein实验对比，实验分离/再附点S=334 mm、R=345 mm，计算S=332 mm、R=344 mm。初始分离角：每个工况取3个偏转角，计算Lb–θ，在Lb→0附近线性插值；A4用7.8°–24°数据得θi=7.94°，且7.8°时cf无分离。理论：汇总表2数据，拟合K²=χσ。",
+    "results": "表2给出各工况θi：A1/B1/C1 6.48°，A2 7.19°，A3 7.65°，A4 8.00°；B2 7.32°，B3 5.80°，B4 5.28°；C2 6.53°，C3 6.57°，C4 6.60°；Schülein 5.93°，Volpiani等DNS 4.04°。随Ma∞由6增至12，θi由6.48°增至8.00°；随单位Re由1×10^7增至8×10^7，θi由6.48°降至5.28°；Tw/T∞由5降至2，θi仅由6.48°变至6.60°。拟合得σ=0.438、R²=0.99；预测式θi=√σ(Ma∞²C/ReL)^{1/7}。",
+    "discussion": "机制：K=Ma∞θ表征激波逆压梯度强度，χσ表征湍流边界层黏性抗分离能力，二者平衡给出初始分离。因湍流χ的指数为2/7、预测式θi的指数为1/7，湍流对Ma、Re、壁温的依赖弱于层流的1/4。冷壁下C=0.98–1.01，故壁温影响小。局限：仅平板、仅冷壁、Tw范围有限、RANS对强干扰区有局限；式(1)中σ与χσ的定义位置有歧义；初始分离由稀疏偏转角插值得到。"
+  },
+  "core_points": [
+    {
+      "point": "已有STBLI初始分离研究多基于压缩拐角，且以定性规律为主，缺少以来流参数表达的预测式。",
+      "type": "研究缺口",
+      "grade": "B",
+      "source": "印刷页19，引言",
+      "attr": "原文明确"
+    },
+    {
+      "point": "采用斜激波入射平板湍流边界层模型，激波入射点固定在前缘下游L=0.35 m，θ越大激波越强、逆压梯度越大。",
+      "type": "物理模型",
+      "grade": "A",
+      "source": "印刷页20，1.1节，图1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "初始分离定义为壁面剪切应力恰有一点降为零；湍流情形取时均值，S与R重合。",
+      "type": "定义",
+      "grade": "A",
+      "source": "印刷页19，引言",
+      "attr": "原文明确"
+    },
+    {
+      "point": "数值方案为rhoCentralFoam/KNP/VanLeer/RANS k-ω SST，壁面y+<1，Sutherland黏性S=110.4 K。",
+      "type": "数值方法",
+      "grade": "A",
+      "source": "印刷页20–21，1.2节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "三套网格200×200、380×300、460×400及不同CFL的壁面压力被用于网格/时间步验证；与Schülein实验的S/R位置吻合（334/345 mm对332/344 mm）。",
+      "type": "验证",
+      "grade": "A",
+      "source": "印刷页21–22，1.3节，图3–图5",
+      "attr": "原文明确"
+    },
+    {
+      "point": "初始分离角由Lb–θ曲线在Lb=0附近线性插值确定；A4组7.8°–24°数据得7.94°，7.8°时cf分布无分离。",
+      "type": "方法/结果",
+      "grade": "A",
+      "source": "印刷页22，2.1节，图6–图7",
+      "attr": "原文明确"
+    },
+    {
+      "point": "Ma∞增大使θi增大：Ma6→12（A组）θi由6.48°→8.00°。",
+      "type": "定量规律",
+      "grade": "A",
+      "source": "印刷页23，表2",
+      "attr": "原文明确"
+    },
+    {
+      "point": "单位Re增大使θi减小：1×10^7→8×10^7（B组）θi由6.48°→5.28°，高Re时影响变弱。",
+      "type": "定量规律",
+      "grade": "A",
+      "source": "印刷页23，表2",
+      "attr": "原文明确"
+    },
+    {
+      "point": "冷壁范围内壁温比影响很小：Tw/T∞=5→2（C组）θi仅6.48°→6.60°；T∞=60 K、Tw=120–300 K时C=0.98–1.01。",
+      "type": "定量规律",
+      "grade": "A",
+      "source": "印刷页23–24，表2、2.4节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "层流判据为(Ma∞θw)²=β Ma∞³/√ReL，β=β*√C，即K²=χβ；Needham与Holden分别给出系数2.07与1.95。",
+      "type": "理论",
+      "grade": "A",
+      "source": "印刷页23–24，2.3节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "湍流采用Stollery的χ=(Ma∞^9 C/ReL)^{2/7}，保持K=Ma∞θ形式，得到(Ma∞θi)²=σ(Ma∞^9 C/ReL)^{2/7}，即K²=χσ（式(1)）。",
+      "type": "理论/判据",
+      "grade": "A",
+      "source": "印刷页24，2.3节，式(1)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "对CFD数据拟合得σ=0.438、R²=0.99；反解预测式θi=√σ(Ma∞²C/ReL)^{1/7}，并用Schülein实验与Volpiani DNS验证。",
+      "type": "结果/验证",
+      "grade": "A",
+      "source": "印刷页24，式(1)、图9–图10",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "公共设置",
+      "value": "激波入射点距平板前缘L=0.35 m；Sutherland常数S=110.4 K；各工况来流参数见表1",
+      "source": "印刷页20，1.1节",
+      "note": "激波发生器位置调整以保持入射点O不变"
+    },
+    {
+      "item": "A1",
+      "value": "Ma∞=6；Reunit=2×10^7 /m；T∞=60 K；Tw/T∞=5；θ=7°–8°",
+      "source": "表1，印刷页19–20（PDF第3页）",
+      "note": "表1中与B1、C1同列一行"
+    },
+    {
+      "item": "B1",
+      "value": "Ma∞=6；Reunit=2×10^7 /m；T∞=60 K；Tw/T∞=5；θ=7°–8°",
+      "source": "表1，印刷页19–20（PDF第3页）",
+      "note": "与A1、C1同列一行"
+    },
+    {
+      "item": "C1",
+      "value": "Ma∞=6；Reunit=2×10^7 /m；T∞=60 K；Tw/T∞=5；θ=7°–8°",
+      "source": "表1，印刷页19–20（PDF第3页）",
+      "note": "与A1、B1同列一行"
+    },
+    {
+      "item": "A2",
+      "value": "Ma∞=8；Reunit=2×10^7 /m；T∞=60 K；Tw/T∞=5；θ=7.5°–8.5°",
+      "source": "表1，印刷页19–20（PDF第3页）"
+    },
+    {
+      "item": "A3",
+      "value": "Ma∞=10；Reunit=2×10^7 /m；T∞=60 K；Tw/T∞=5；θ=8.3°–8.7°",
+      "source": "表1，印刷页19–20（PDF第3页）"
+    },
+    {
+      "item": "A4",
+      "value": "Ma∞=12；Reunit=2×10^7 /m；T∞=60 K；Tw/T∞=5；θ=8.5°–9.5°",
+      "source": "表1，印刷页19–20（PDF第3页）"
+    },
+    {
+      "item": "B2",
+      "value": "Ma∞=6；Reunit=1×10^7 /m；T∞=60 K；Tw/T∞=5；θ=7.5°–8.5°",
+      "source": "表1，印刷页19–20（PDF第3页）"
+    },
+    {
+      "item": "B3",
+      "value": "Ma∞=6；Reunit=4×10^7 /m；T∞=60 K；Tw/T∞=5；θ=6°–6.5°",
+      "source": "表1，印刷页19–20（PDF第3页）"
+    },
+    {
+      "item": "B4",
+      "value": "Ma∞=6；Reunit=8×10^7 /m；T∞=60 K；Tw/T∞=5；θ=6°–6.5°",
+      "source": "表1，印刷页19–20（PDF第3页）"
+    },
+    {
+      "item": "C2",
+      "value": "Ma∞=6；Reunit=2×10^7 /m；T∞=60 K；Tw/T∞=2；θ=7°–8°",
+      "source": "表1，印刷页19–20（PDF第3页）"
+    },
+    {
+      "item": "C3",
+      "value": "Ma∞=6；Reunit=2×10^7 /m；T∞=60 K；Tw/T∞=3；θ=7°–8°",
+      "source": "表1，印刷页19–20（PDF第3页）"
+    },
+    {
+      "item": "C4",
+      "value": "Ma∞=6；Reunit=2×10^7 /m；T∞=60 K；Tw/T∞=4；θ=7°–8°",
+      "source": "表1，印刷页19–20（PDF第3页）"
+    },
+    {
+      "item": "D1",
+      "value": "Ma∞=5；Reunit=3.7×10^7 /m；T∞=68.8 K；Tw/T∞=4.36；θ=10°",
+      "source": "表1，印刷页19–20（PDF第3页）",
+      "note": "与Schülein实验条件一致"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "Ma∞",
+      "definition": "来流Mach数",
+      "value": "6（A1、B、C组）；8/10/12（A2–A4）；5（D1）",
+      "relation": "高超声速相似参数K=Ma∞θ",
+      "source": "表1，印刷页19–20"
+    },
+    {
+      "name": "Reunit",
+      "definition": "单位长度Reynolds数ρ∞u∞/μ∞",
+      "value": "1×10^7–8×10^7 /m",
+      "relation": "以L为参考的ReL=Reunit·L",
+      "source": "印刷页20，1.1节；表1"
+    },
+    {
+      "name": "T∞",
+      "definition": "来流静温",
+      "value": "60 K（A/B/C组）；68.8 K（D1）",
+      "relation": "用于Sutherland黏性与C",
+      "source": "表1"
+    },
+    {
+      "name": "Tw/T∞",
+      "definition": "壁温比",
+      "value": "2–5（A/B/C组）；4.36（D1）",
+      "relation": "进入Chapman–Rubesin常数C",
+      "source": "表1"
+    },
+    {
+      "name": "θ",
+      "definition": "斜激波后的气流偏转角，也用作拐角角度的类比量",
+      "value": "6°–10°（各工况分列见表1）",
+      "relation": "θ越大，激波越强、逆压梯度越大",
+      "source": "印刷页20，1.1节；表1"
+    },
+    {
+      "name": "L",
+      "definition": "无干扰时斜激波入射点至平板前缘的距离",
+      "value": "0.35 m",
+      "relation": "ReL的参考长度",
+      "source": "印刷页20，1.1节"
+    },
+    {
+      "name": "K",
+      "definition": "高超声速相似参数",
+      "value": "K=Ma∞θi（初始分离时）",
+      "relation": "K²=χσ（湍流判据）",
+      "source": "印刷页24，2.3节"
+    },
+    {
+      "name": "χσ",
+      "definition": "湍流黏性干扰参数（按式(1)与上下文，具体是否含σ受限于材料无法完全确认）",
+      "value": "σ(Ma∞^9 C/ReL)^{2/7}",
+      "relation": "K²=χσ；图9题注写作K²=0.438χσ",
+      "source": "印刷页24，式(1)、图9题注"
+    },
+    {
+      "name": "C",
+      "definition": "Chapman–Rubesin常数（分式排布受限于扫描件，无法完全确认）",
+      "value": "0.98–1.01（T∞=60 K、Tw=120–300 K）",
+      "relation": "原文按Sutherland公式给出C，并称T∞=60 K、Tw=120–300 K时C=0.98–1.01",
+      "source": "印刷页24，2.4节"
+    },
+    {
+      "name": "σ",
+      "definition": "湍流初始分离判据的拟合常数",
+      "value": "0.438（R²=0.99）",
+      "relation": "θi=√σ(Ma∞²C/ReL)^{1/7}",
+      "source": "印刷页24，图9"
+    },
+    {
+      "name": "θi",
+      "definition": "初始分离角",
+      "value": "5.28°–8.00°（本文工况，表2）",
+      "relation": "由Lb–θ插值得到",
+      "source": "表2，印刷页23"
+    },
+    {
+      "name": "S",
+      "definition": "Sutherland公式常数",
+      "value": "110.4 K",
+      "relation": "μ=μref(T/Tref)^{3/2}(Tref+S)/(T+S)",
+      "source": "印刷页20，1.1节"
+    }
+  ],
+  "methods": [
+    {
+      "item": "几何与来流",
+      "value": "二维斜激波入射平板湍流边界层，入射点L=0.35 m；通过激波发生器位置保持入射点不变",
+      "source": "印刷页20，1.1节，图1"
+    },
+    {
+      "item": "求解器",
+      "value": "OpenFOAM rhoCentralFoam，有限体积法离散N-S方程",
+      "source": "印刷页20，1.2节"
+    },
+    {
+      "item": "通量格式",
+      "value": "Kurganov–Noelle–Petrova（KNP）中心迎风格式，VanLeer限制器",
+      "source": "印刷页20，1.2节"
+    },
+    {
+      "item": "湍流模型",
+      "value": "Menter k-ω SST两方程RANS模型，壁面加密满足y+<1",
+      "source": "印刷页21，1.2节"
+    },
+    {
+      "item": "黏性",
+      "value": "Sutherland公式，S=110.4 K",
+      "source": "印刷页20，1.1节"
+    },
+    {
+      "item": "网格与CFL",
+      "value": "200×200、380×300、460×400三套网格；比较不同CFL的壁面压力",
+      "source": "印刷页21，1.3节，图3–图4"
+    },
+    {
+      "item": "实验验证",
+      "value": "与Schülein高Mach数斜激波/湍流边界层实验对比；实验S=334 mm、R=345 mm，计算S=332 mm、R=344 mm",
+      "source": "印刷页21–22，1.3节，图5"
+    },
+    {
+      "item": "初始分离角提取",
+      "value": "每个工况3个偏转角，计算Lb，按Lb–θ在Lb=0附近线性插值；A4用7.8°–24°数据",
+      "source": "印刷页22，2.1节，图6–图8"
+    },
+    {
+      "item": "理论拟合",
+      "value": "把表2数据代入K²=χσ拟合σ，并用Schülein实验与Volpiani DNS验证预测式",
+      "source": "印刷页23–24，2.3节，图9–图10"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "把层流压缩拐角的自由干扰/黏性干扰标度推广到湍流：高超声速相似参数K=Ma∞θ保持形式不变，湍流黏性干扰参数改用Stollery的χ=(Ma∞^9 C/ReL)^{2/7}，令K²=σχ并用CFD初始分离数据标定σ，再反解θi。",
+    "assumptions": [
+      "二维斜激波入射平板湍流边界层，激波入射点固定L=0.35 m；初始分离由时均壁面剪切应力恰为零定义。",
+      "高超声速相似参数K=Ma∞θ在层流与湍流中形式一致。",
+      "湍流黏性干扰参数采用Stollery的χ=(Ma∞^9 C/ReL)^{2/7}。",
+      "Chapman–Rubesin常数C=√(Tw/T∞)(T∞+S)/(Tw+S)，S=110.4 K。",
+      "初始分离阈值可写为K²=σχ，σ为待定常数，在本文工况范围内不随Ma∞、Re、Tw/T∞变化。",
+      "层流对照采用Needham/Holden的(Ma∞θw)²=β Ma∞³/√ReL，β=β*√C。"
+    ],
+    "steps": [
+      {
+        "title": "定义高超声速相似参数",
+        "text": "以Ma∞与初始分离角θi定义K=Ma∞θi；θi为激波/湍流边界层干扰初始分离对应的气流偏转角（印刷页24）。",
+        "latex": [
+          "K = Ma_\\infty \\theta_i"
+        ],
+        "source": "印刷页24，2.3节"
+      },
+      {
+        "title": "层流Needham关联",
+        "text": "Needham等收集高超声速层流压缩拐角实验，拟合初始分离时(Ma∞θw)²与Ma∞³/√ReL成正比，系数2.07，C*由参考温度计算（印刷页23）。",
+        "latex": [
+          "(Ma_\\infty \\theta_w)^2 = 2.07\\sqrt{C^*}\\,\\dfrac{Ma_\\infty^3}{\\sqrt{Re_L}}"
+        ],
+        "source": "印刷页23，2.3节"
+      },
+      {
+        "title": "Holden关联",
+        "text": "Holden独立得到同形式关系，系数1.95，使用壁温Chapman–Rubesin常数Cw（印刷页23）。",
+        "latex": [
+          "(Ma_\\infty \\theta_w)^2 = 1.95\\sqrt{C_w}\\,\\dfrac{Ma_\\infty^3}{\\sqrt{Re_L}}"
+        ],
+        "source": "印刷页23，2.3节"
+      },
+      {
+        "title": "写成一般β形式",
+        "text": "将上述结果写成(Ma∞θw)²=β Ma∞³/√ReL，并推测β与√C成正比，即β=β*√C；由此定义K²=χβ，并反解出层流初始分离坡角θw（印刷页23–24）。",
+        "latex": [
+          "(Ma_\\infty \\theta_w)^2 = \\beta\\,\\dfrac{Ma_\\infty^3}{\\sqrt{Re_L}},\\qquad \\beta=\\beta^*\\sqrt{C}",
+          "K^2=\\bar{\\chi}_\\beta",
+          "\\theta_w=\\sqrt{\\beta^*}\\left(\\dfrac{Ma_\\infty^2 C}{Re_L}\\right)^{1/4}"
+        ],
+        "source": "印刷页23–24，2.3节"
+      },
+      {
+        "title": "采用湍流黏性干扰参数",
+        "text": "Stollery提出湍流中的黏性干扰参数为χ=(Ma∞^9 C/ReL)^{2/7}，其中C为Chapman–Rubesin常数（印刷页24）。",
+        "latex": [
+          "\\bar{\\chi}=\\left(\\dfrac{Ma_\\infty^9 C}{Re_L}\\right)^{2/7}"
+        ],
+        "source": "印刷页24，2.3节"
+      },
+      {
+        "title": "构造湍流判据",
+        "text": "认为K由无黏激波理论给出、层流/湍流形式一致，于是把χβ换成χσ，写出(Ma∞θi)²=σ(Ma∞^9 C/ReL)^{2/7}，并记为K²=χσ，即式(1)（印刷页24）。",
+        "latex": [
+          "(Ma_\\infty\\theta_i)^2=\\sigma\\left(\\dfrac{Ma_\\infty^9 C}{Re_L}\\right)^{2/7}",
+          "K^2=\\bar{\\chi}_\\sigma \\qquad (1)"
+        ],
+        "source": "印刷页24，式(1)"
+      },
+      {
+        "title": "用CFD数据拟合σ",
+        "text": "对表2各工况的θi与对应来流参数按式(1)拟合，得到σ=0.438，R²=0.99（图9）；图9题注给出的拟合线写作K²=0.438χσ（印刷页24）。",
+        "latex": [
+          "\\sigma=0.438,\\qquad R^2=0.99"
+        ],
+        "source": "印刷页24，图9及题注"
+      },
+      {
+        "title": "反解预测式",
+        "text": "将式(1)两边开方并解出θi，得到以Ma∞、C、ReL为输入的显式预测式；因指数为1/7，湍流对参数的依赖弱于层流的1/4（印刷页24）。",
+        "latex": [
+          "\\theta_i=\\sqrt{\\sigma}\\left(\\dfrac{Ma_\\infty^2 C}{Re_L}\\right)^{1/7}"
+        ],
+        "source": "印刷页24，2.3–2.4节"
+      },
+      {
+        "title": "计算Chapman–Rubesin常数",
+        "text": "按Sutherland公式把C写成壁温与来流温度的函数；本文T∞=60 K、Tw=120–300 K时原文给出C=0.98–1.01，故冷壁范围内壁温比对θi影响很小（印刷页24）。C的具体分式排布受限于扫描件，无法完全确认。",
+        "latex": [
+          "C=\\sqrt{\\dfrac{T_w}{T_\\infty}}\\,\\dfrac{T_\\infty+S}{T_w+S}"
+        ],
+        "source": "印刷页24，2.4节"
+      }
+    ],
+    "result": "得到平板STBLI初始分离判据K²=χσ与预测式θi=√σ(Ma∞²C/ReL)^{1/7}；σ=0.438、R²=0.99，经Schülein实验与Volpiani DNS验证（印刷页24，图9–图10）。",
+    "limits": "推导依赖层流标度的直接推广、Stollery湍流χ形式与常数σ；σ仅由本文冷壁平板工况标定。式(1)中χσ是否已含σ、图9题注的K²=0.438χσ与正文K²=χσ如何统一，受限于材料无法完全确认。 C的具体分式排布在扫描件中也有歧义。"
+  },
+  "mechanism": "【原文明确】激波入射产生逆压梯度；θ越大激波越强，逆压梯度越大，直至边界层分离。作者用K=Ma∞θi表征激波强度，用χσ=(Ma∞^9 C/ReL)^{2/7}（含拟合常数σ）表征湍流边界层黏性抵抗分离的能力，初始分离对应二者平衡K²=χσ。【AI概括】这相当于把层流自由干扰/黏性干扰标度换成湍流的2/7指数：Ma、Re增大都提高χσ，但θi∝(Ma²C/ReL)^{1/7}，故θi随Ma增大、随Re减小；冷壁C≈1使壁温影响弱。【AI推断】σ=0.438可视为湍流STBLI的标定常数，其物理含义是分离阈值，但仍依赖具体来流/壁面条件。",
+  "findings": [
+    {
+      "finding": "θi随Ma∞增大而增大。",
+      "evidence": "A组Ma6→12，θi由6.48°→8.00°（表2）；与Kuehn、Holden等实验趋势一致（印刷页19、23）。",
+      "type": "参数趋势",
+      "strength": "强",
+      "source": "表2，印刷页23",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "θi随单位Re增大而减小，且高Re时影响变弱。",
+      "evidence": "B组Reunit=1×10^7→8×10^7，θi由6.48°→5.28°；B3/B4的θi仅5.80°/5.28°。",
+      "type": "参数趋势",
+      "strength": "强",
+      "source": "表2，印刷页23",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "冷壁范围内壁温比对θi影响很小。",
+      "evidence": "C组Tw/T∞=5→2，θi仅6.48°→6.60°；T∞=60 K、Tw=120–300 K时C=0.98–1.01。",
+      "type": "参数趋势",
+      "strength": "强",
+      "source": "表2，印刷页23–24",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "Lb–θ线性插值可稳定提取初始分离角。",
+      "evidence": "A4用7.8°–24°数据得θi=7.94°，且7.8°时cf分布无分离（图6–图7）；表2汇总11个算例。",
+      "type": "方法",
+      "strength": "强",
+      "source": "印刷页22，2.1节，图6–图7",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "K²与χσ近似线性，拟合σ=0.438、R²=0.99。",
+      "evidence": "图9给出K²随χσ的变化及红色拟合线；正文明确σ=0.438（印刷页24）。",
+      "type": "判据",
+      "strength": "强",
+      "source": "印刷页24，图9",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "预测式可复现本文CFD及外部实验/DNS数据。",
+      "evidence": "图10把表2数据、Schülein实验（θi=5.93°）与Volpiani DNS（4.04°）代入θi=√σ(Ma∞²C/ReL)^{1/7}，验证结果较好。",
+      "type": "验证",
+      "strength": "中",
+      "source": "印刷页24，图10；表2",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "湍流判据对Ma、Re、壁温的依赖弱于层流。",
+      "evidence": "层流θw∝(Ma∞²C/ReL)^{1/4}，湍流θi∝(Ma∞²C/ReL)^{1/7}；指数由1/4降至1/7（印刷页24）。",
+      "type": "理论比较",
+      "strength": "中",
+      "source": "印刷页24，2.4节",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "平板STBLI初始分离可用K²=χσ描述，σ=0.438（R²=0.99）；预测式为θi=√σ(Ma∞²C/ReL)^{1/7}。θi随Ma∞增大、随Re增大而减小；冷壁范围壁温比影响小。判据经Schülein实验与Volpiani DNS验证，可用于后续分离尺度预测。",
+  "limits": "仅二维平板、斜激波入射；壁温仅冷壁（Tw/T∞=2–5，T∞=60 K），未覆盖热壁；RANS k-ω SST对强干扰/再附区有局限；初始分离由3个偏转角插值，角度分辨率有限；σ=0.438基于本文工况拟合，外推需谨慎；式(1)与图9题注中σ/χσ的定义位置存在歧义，受限于材料无法完全确认。",
+  "significance": "给出基于Ma∞、Re、Tw/T∞的平板STBLI初始分离显式判据，便于工程快速估算；把层流压缩拐角标度推广到湍流，揭示1/7指数使参数依赖减弱；为分离尺度预测和流动控制提供入口。",
+  "quotes": [
+    {
+      "text": "初始分离并不是突然发生的，而是逐渐发生的",
+      "supports": "说明为何用Lb–θ外推而不是单点判定初始分离",
+      "source": "印刷页22，2.1节",
+      "use": "方法依据"
+    },
+    {
+      "text": "壁温对初始分离的影响相对较小",
+      "supports": "C组θi几乎不随Tw/T∞变化",
+      "source": "印刷页23，2.2节",
+      "use": "结果"
+    },
+    {
+      "text": "Mach 数和Ｒeynolds 数对初始分离的影响相对较大",
+      "supports": "A组与B组的系统性趋势",
+      "source": "印刷页23，2.2节",
+      "use": "结果"
+    },
+    {
+      "text": "K²=χσ",
+      "supports": "湍流初始分离判据的核心表达式",
+      "source": "印刷页24，式(1)",
+      "use": "判据"
+    },
+    {
+      "text": "得到σ=0.438",
+      "supports": "判据的定量标定值",
+      "source": "印刷页24，2.3节",
+      "use": "结果"
+    },
+    {
+      "text": "C取值为0.98～1.01",
+      "supports": "冷壁下Chapman–Rubesin常数近似为1，解释壁温影响弱",
+      "source": "印刷页24，2.4节",
+      "use": "机制"
+    },
+    {
+      "text": "均属于冷壁范围内",
+      "supports": "限定判据的适用壁温范围",
+      "source": "印刷页24，2.4节",
+      "use": "局限"
+    },
+    {
+      "text": "对于更大范围的壁温比对初始分离的影响还有待进一步研究",
+      "supports": "作者自述的未解决问题",
+      "source": "印刷页25，结论",
+      "use": "局限/展望"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig01_p3.png",
+      "n": 1,
+      "page": 3,
+      "caption_zh": "入射激波/湍流边界层干扰流场示意图",
+      "caption_orig": "图1 入射激波/湍流边界层干扰的流场示意图 Fig．1 Sketch of shock wave/turbulent boundary layer interaction",
+      "why": "定义O、U、S、R、Lb与θ，说明初始分离对应S与R重合、Lb=0，是全文几何与判据的基础。"
+    },
+    {
+      "file": "fig10_p6.png",
+      "n": 8,
+      "page": 6,
+      "caption_zh": "初始分离角的确定",
+      "caption_orig": "图8 初始分离角的确定 Fig．8 Determination of incipient separation angle",
+      "why": "展示由Lb–θ外推/插值到Lb=0得到θi，支撑表2各工况θi的提取方法。"
+    },
+    {
+      "file": "fig11_p7.png",
+      "n": 9,
+      "page": 7,
+      "caption_zh": "初始分离判据：K²随χσ的变化",
+      "caption_orig": "图9 初始分离判据: K2 随χ－σ的变化 Fig．9 Incipient separation criterion: Variation of K2 and χ－σ (the red line is the fitted line: K2 = 0．438 χ－σ，Ｒ2 = 0．99)",
+      "why": "给出K²与χσ的近线性关系及拟合斜率0.438、R²=0.99，是判据的核心定量证据。"
+    },
+    {
+      "file": "fig12_p7.png",
+      "n": 10,
+      "page": 7,
+      "caption_zh": "初始分离角预测式的验证",
+      "caption_orig": "图10 初始分离角预测式的验证 Fig．10 Validation of incipient separation angle prediction formula",
+      "why": "把表2数据与Schülein实验、Volpiani DNS代入θi预测式，显示预测与数据一致。"
+    }
+  ],
+  "verification": {
+    "text_only": "仅使用bundle文本、图注与抓图清单；未引入外部文献或数据。",
+    "a_grade_supported": "A级条目均对应表1、表2、图3–图10或式(1)的明确数值/文字；B级为跨段概括。",
+    "attributes_marked": "three_sentence、core_points、findings均带attr；机制段用【原文明确】【AI概括】【AI推断】标注。",
+    "coverage": "覆盖引言、物理模型、数值方法、验证、结果、理论判据、讨论与结论；未逐条复述参考文献。",
+    "no_fabrication": "页码、图号、表号、公式与数值均来自bundle；无法确认处写“受限于材料，无法完全确认”或列入open_questions。",
+    "open_questions": [
+      "式(1)中的χσ是否已包含σ？图9题注写K²=0.438χσ，与正文K²=χσ的记号如何统一？",
+      "图9横坐标χσ的具体数值与按完整χ=(Ma∞^9 C/ReL)^{2/7}估算是否一致、是否另做了σ缩放，受限于材料无法确认。",
+      "σ=0.438是否依赖具体壁温/来流范围，能否外推到热壁或其他气体？",
+      "初始分离角由3个偏转角插值，角度步长对θi不确定度的影响有多大？",
+      "RANS k-ω SST在强干扰/再附区的偏差是否会影响θi的提取？",
+      "平板入射与压缩拐角的等价角度如何定量换算，判据能否直接用于压缩拐角？",
+      "高Re时B组θi变化变弱是物理饱和还是计算/提取误差？"
+    ]
+  }
+}

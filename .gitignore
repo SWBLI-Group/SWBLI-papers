@@ -1,0 +1,42 @@
+# Local full-text PDFs: copyrighted and large; not part of the public repo
+pdfs/
+
+# Build-time source figures and extracted text
+build/figs/
+build/pdftext/
+build/pdftext_all/
+build/pdftext_paged/
+build/deep_input/
+build/enhance_packets/
+build/enhance_out/
+build/tmpcrops/
+build/crawl/
+build/katex_tmp/
+build/assets/
+build/_newtxt/
+
+# Scratch / temporary files
+build/_*
+build/__pycache__/
+build/*.bak*
+build/*.pyc
+build/*.pdf
+build/*.png
+build/*.jpg
+build/*.jpeg
+F:文献工具builddeep_tmp884_bbox.txt
+
+# Local databases and OS files
+*.sqlite
+*.sqlite-*
+*.pyc
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# More scratch outputs
+build/focus_agent_*.json
+build/focus_tags.draft.json
+build/external_meta.before_supplement.json
+build/deep_notes/
+*bbox*.txt

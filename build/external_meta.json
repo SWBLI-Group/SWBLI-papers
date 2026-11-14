@@ -1,0 +1,5124 @@
+[
+ {
+  "id": 250,
+  "key": "",
+  "type": "thesis",
+  "title": "典型粗糙壁高速流动的壁面阻力与热流研究",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "李玉川"
+   }
+  ],
+  "author_display": "李玉川",
+  "year": "2018",
+  "journal": "中国科学院大学",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "针对可重复使用近空间飞行器微粗糙表面的高速流动与传热问题，以半无穷长正弦波状板、半波形板、三角形粗糙壁及部分波状壁为模型，采用 OpenFOAM 数值求解可压缩 Navier–Stokes 方程，研究壁面热流与摩擦阻力、压差阻力之间的关系。发现一个波长内的平均热流系数与平均总阻力系数之比是刻画流动与传热的关键参数；附着流动时该比值只取决于等效粗糙度（粗糙元高度与边界层厚度之比），发生分离后则取决于相似变换后的流向位置。三类粗糙元以及部分波状壁在附着条件下均遵循同一热流–阻力关联，说明等效粗糙度可统一描述微粗糙壁的力热耦合。",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 学位论文"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\Q55SES6F\\李玉川 - 典型粗糙壁高速流动的壁面阻力与热流研究.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 346,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Physical modeling and correlation of separation length in hypersonic laminar ramp flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "Fang",
+    "last": "Fang"
+   },
+   {
+    "first": "Xian-Dong",
+    "last": "Li"
+   },
+   {
+    "first": "Lin",
+    "last": "Bao"
+   }
+  ],
+  "author_display": "Fang Fang, Xian-Dong Li, Lin Bao",
+  "year": "2021",
+  "journal": "Canadian Journal of Physics",
+  "journal_abbr": "Can. J. Phys.",
+  "volume": "99",
+  "issue": "6",
+  "pages": "470-480",
+  "doi": "10.1139/cjp-2020-0314",
+  "url": "",
+  "publisher": "NRC Research Press",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\CEQVCHLR\\Fang 等 - 2021 - Physical modeling and correlation of separation le.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 474,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Correlation of peak heating for reattachment of separated flows.",
+  "season": "",
+  "authors": [
+   {
+    "first": "Dennis M.",
+    "last": "Bushnell"
+   },
+   {
+    "first": "Leonard M.",
+    "last": "Weinstein"
+   }
+  ],
+  "author_display": "Dennis M. Bushnell, Leonard M. Weinstein",
+  "year": "1968",
+  "journal": "Journal of Spacecraft and Rockets",
+  "journal_abbr": "J. Spacecr. Rockets",
+  "volume": "5",
+  "issue": "9",
+  "pages": "1111-1112",
+  "doi": "10.2514/3.29432",
+  "url": "",
+  "publisher": "AIAA",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\8S7F93MV\\Bushnell和Weinstein - 1968 - Correlation of peak heating for reattachment of separated flows..pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 492,
+  "key": "",
+  "type": "report",
+  "title": "Shock-Wave/Boundary-Layer Interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Neil D.",
+    "last": "Sandham"
+   }
+  ],
+  "author_display": "Neil D. Sandham",
+  "year": "2012",
+  "journal": "RTO-EN-AVT-195",
+  "journal_abbr": "RTO-EN-AVT-195",
+  "volume": "",
+  "issue": "",
+  "pages": "5-1-5-17",
+  "doi": "",
+  "url": "",
+  "publisher": "NATO Research and Technology Organization",
+  "place": "Neuilly-sur-Seine, France",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\6PUWI4CG\\Sandham - Shock-WaveBoundary-Layer Interactions.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 680,
+  "key": "",
+  "type": "journalArticle",
+  "title": "On the shock wave boundary layer interaction in slightly rarefied gas",
+  "season": "",
+  "authors": [
+   {
+    "first": "Hualin",
+    "last": "Liu"
+   },
+   {
+    "first": "Qi",
+    "last": "Li"
+   },
+   {
+    "first": "Weifang",
+    "last": "Chen"
+   },
+   {
+    "first": "Lei",
+    "last": "Wu"
+   }
+  ],
+  "author_display": "Hualin Liu, Qi Li, Weifang Chen, Lei Wu",
+  "year": "2024",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "Phys. Fluids",
+  "volume": "36",
+  "issue": "2",
+  "pages": "026115",
+  "doi": "10.1063/5.0187112",
+  "url": "",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\V9TC2B53\\Liu 等 - 2024 - On the shock wave boundary layer interaction in slightly rarefied gas.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 754,
+  "key": "",
+  "type": "thesis",
+  "title": "典型高超声速流动中任意催化壁面传热的模型理论",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "居光敬"
+   }
+  ],
+  "author_display": "居光敬",
+  "year": "2025",
+  "journal": "中国科学院大学",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "针对高超声速平板与压缩拐角在任意催化壁面下的传热问题，理论分析热化学冻结边界层中组分浓度与平–转动温度的相似性，提出组分扩散热流与平–转动热流的比拟关系，并推导任意催化壁面的达姆科勒数作为非平衡催化判据，建立组分扩散热流预测公式。进一步把再附区视为斜驻点边界层，将比拟关系推广到压缩拐角再附峰值热流，并用数值模拟验证。结果表明，壁面催化几乎不改变分离–再附流场结构，却显著影响壁面热流；比拟关系对不同来流参数和气体种类适用。还研究了壁温效应：壁温从 300 K 提高到 1500 K 时比拟关系仍成立，但分离尺度增大、再附峰值热流减小。",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 学位论文"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\MDD9UQ33\\2025 - 居光敬硕士毕业论文.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 755,
+  "key": "",
+  "type": "thesis",
+  "title": "高超声速激波/湍流边界层干扰的分离尺度预测研究",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "王浩东"
+   }
+  ],
+  "author_display": "王浩东",
+  "year": "2025",
+  "journal": "中国科学院大学",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "针对斜激波入射平板湍流边界层，采用理论分析与 RANS 数值模拟相结合的方法研究初始分离条件与分离尺度预测。首先通过不同马赫数、雷诺数、壁温比和偏转角算例确定初始分离对应的气流偏转角，发现其与高超声速相似参数和湍流黏性干扰参数相关，据此建立初始分离判据；由判据导出的初始分离角随马赫数增大而增大、随雷诺数增大而减小，受壁温比影响较小。其次引入激波干扰强度与边界层抗干扰强度，拓展干扰–抗干扰模型，建立分离尺度的显式预测式，指出逆压梯度与黏性干扰是控制分离尺度的主要因素。最后把模型推广到层流干扰，比较层流与湍流的分离尺度随雷诺数的变化，指出转捩干扰可能呈现不同规律。",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 学位论文"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\QNAAI5AB\\2025 - 王浩东硕士毕业论文.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 803,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Numerical Simulation of the Interaction between a Shock and the Boundary Layer on a Flat Plate in Motion",
+  "season": "",
+  "authors": [
+   {
+    "first": "I. V.",
+    "last": "Egorov"
+   },
+   {
+    "first": "I. M.",
+    "last": "Ilyukhin"
+   },
+   {
+    "first": "V. Ya.",
+    "last": "Neiland"
+   }
+  ],
+  "author_display": "I. V. Egorov, I. M. Ilyukhin, V. Ya. Neiland",
+  "year": "2020",
+  "journal": "Fluid Dynamics",
+  "journal_abbr": "Fluid Dyn.",
+  "volume": "55",
+  "issue": "5",
+  "pages": "681-688",
+  "doi": "10.1134/S0015462820050055",
+  "url": "",
+  "publisher": "Pleiades Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\HQIHZ6EN\\Egorov 等 - 2020 - Numerical Simulation of the Interaction between a Shock and the Boundary Layer on a Flat Plate in Mo.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 809,
+  "key": "",
+  "type": "conferencePaper",
+  "title": "Investigation of shock wave boundary layer interaction over the moving flat plate",
+  "season": "",
+  "authors": [
+   {
+    "first": "I. V.",
+    "last": "Egorov"
+   },
+   {
+    "first": "I. M.",
+    "last": "Ilyukhin"
+   },
+   {
+    "first": "V. Ya.",
+    "last": "Neiland"
+   }
+  ],
+  "author_display": "I. V. Egorov, I. M. Ilyukhin, V. Ya. Neiland",
+  "year": "2021",
+  "journal": "AIP Conference Proceedings",
+  "journal_abbr": "AIP Conf. Proc.",
+  "volume": "2351",
+  "issue": "",
+  "pages": "040029",
+  "doi": "10.1063/5.0052130",
+  "url": "",
+  "publisher": "AIP Publishing",
+  "place": "Novosibirsk, Russia",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\52RRTQGS\\Egorov 等 - 2021 - Investigation of shock wave boundary layer interaction over the moving flat plate.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 874,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Experimental results on unsteady shock-wave/boundary-layer interaction induced by an impinging shock",
+  "season": "",
+  "authors": [
+   {
+    "first": "Dennis",
+    "last": "Daub"
+   },
+   {
+    "first": "Sebastian",
+    "last": "Willems"
+   },
+   {
+    "first": "Ali",
+    "last": "Gülhan"
+   }
+  ],
+  "author_display": "Dennis Daub, Sebastian Willems, Ali Gülhan",
+  "year": "2016",
+  "journal": "CEAS Space Journal",
+  "journal_abbr": "CEAS Space J.",
+  "volume": "8",
+  "issue": "1",
+  "pages": "3-12",
+  "doi": "10.1007/s12567-015-0102-4",
+  "url": "",
+  "publisher": "Springer",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\U6PIPAA8\\Daub 等 - 2016 - Experimental results on unsteady shock-waveboundary-layer interaction induced by an impinging shock.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 909,
+  "key": "",
+  "type": "thesis",
+  "title": "壁面效应对高超声速压缩拐角流动与传热特性的影响研究",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "徐敬惟"
+   }
+  ],
+  "author_display": "徐敬惟",
+  "year": "2026",
+  "journal": "中国科学院大学",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "围绕高超声速压缩拐角的振动能适应、有限速率催化与壁面温度效应开展数值与理论研究。中等焓值、来流振动激发且部分离解时，流场近似热化学冻结，振动能适应与催化几乎不改变分离–再附结构，但可使峰值热流变化 10%–27%；平–转动热流、振动热流与催化热流近似解耦，据此建立峰值热流预测公式，最大误差不超过 8%，并给出振动能适应系数与催化系数的等效关系。量热完全气体条件下，分离尺度随壁温–总温比近似线性增大，而峰值热流系数对壁温不敏感，原因是分离尺度与壁面热流两种作用相互抵消。高焓来流下再附区出现明显振动–平动弛豫，分离尺度随振动能适应系数增大而增大，峰值热流受影响较小。",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 学位论文"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\FFVSAV64\\壁面效应对高超声速压缩拐角流动与传热特性的影响研究.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 989,
+  "key": "",
+  "type": "journalArticle",
+  "title": "基于鼓包的激波/边界层干扰控制研究进展",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "田珊珊"
+   },
+   {
+    "first": "",
+    "last": "金亮"
+   },
+   {
+    "first": "",
+    "last": "杜兆波"
+   },
+   {
+    "first": "",
+    "last": "钟翔宇"
+   },
+   {
+    "first": "",
+    "last": "黄伟"
+   },
+   {
+    "first": "",
+    "last": "刘远洋"
+   }
+  ],
+  "author_display": "田珊珊, 金亮, 杜兆波, 钟翔宇, 黄伟, 刘远洋",
+  "year": "2023",
+  "journal": "航空学报",
+  "journal_abbr": "航空学报",
+  "volume": "44",
+  "issue": "18",
+  "pages": "37-60",
+  "doi": "10.7527/S1000-6893.2023.28411",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\DL8UFL8T\\基于鼓包的激波_边界层干扰控制研究进展_田珊珊.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 990,
+  "key": "",
+  "type": "journalArticle",
+  "title": "宽域飞行器进气道内激波/边界层干扰控制技术的新进展",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "王子运"
+   },
+   {
+    "first": "",
+    "last": "薛洪超"
+   },
+   {
+    "first": "",
+    "last": "张健"
+   },
+   {
+    "first": "",
+    "last": "陈明珠"
+   },
+   {
+    "first": "",
+    "last": "陈卫东"
+   }
+  ],
+  "author_display": "王子运, 薛洪超, 张健, 陈明珠, 陈卫东",
+  "year": "2025",
+  "journal": "航空动力",
+  "journal_abbr": "航空动力",
+  "volume": "",
+  "issue": "3",
+  "pages": "75-78",
+  "doi": "",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\BCIWIISL\\宽域飞行器进气道内激波_边界层干扰控制技术的新进展_王子运.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 995,
+  "key": "",
+  "type": "journalArticle",
+  "title": "后掠唇罩前缘型线对入射激波/边界层干扰流动控制影响",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "李灿民"
+   },
+   {
+    "first": "",
+    "last": "蔡佳"
+   },
+   {
+    "first": "",
+    "last": "黄河峡"
+   },
+   {
+    "first": "",
+    "last": "刘梦莹"
+   },
+   {
+    "first": "",
+    "last": "谭慧俊"
+   },
+   {
+    "first": "",
+    "last": "孙姝"
+   }
+  ],
+  "author_display": "李灿民, 蔡佳, 黄河峡, 刘梦莹, 谭慧俊, 孙姝",
+  "year": "2025",
+  "journal": "海军航空大学学报",
+  "journal_abbr": "海军航空大学学报",
+  "volume": "40",
+  "issue": "3",
+  "pages": "447-454",
+  "doi": "",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 1005,
+  "key": "",
+  "type": "journalArticle",
+  "title": "高超声速动态压缩拐角热流特性试验研究",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "任军豪"
+   },
+   {
+    "first": "",
+    "last": "叶瑞"
+   },
+   {
+    "first": "",
+    "last": "陈农"
+   },
+   {
+    "first": "",
+    "last": "贾广森"
+   },
+   {
+    "first": "",
+    "last": "沙心国"
+   }
+  ],
+  "author_display": "任军豪, 叶瑞, 陈农, 贾广森, 沙心国",
+  "year": "2026",
+  "journal": "",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "2278-2290",
+  "doi": "",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\3PIUYSGY\\高超声速动态压缩拐角热流特性试验研究.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1120,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Control of incident shock wave/boundary layer interaction by concave surface",
+  "season": "",
+  "authors": [
+   {
+    "first": "Hong-Chao",
+    "last": "Xue"
+   },
+   {
+    "first": "Yue",
+    "last": "Zhang"
+   },
+   {
+    "first": "Liang",
+    "last": "Chen"
+   },
+   {
+    "first": "Hui-Jun",
+    "last": "Tan"
+   },
+   {
+    "first": "Hao",
+    "last": "Zhang"
+   },
+   {
+    "first": "Hang",
+    "last": "Yu"
+   }
+  ],
+  "author_display": "Hong-Chao Xue, Yue Zhang, Liang Chen, Hui-Jun Tan, Hao Zhang, Hang Yu",
+  "year": "2025",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "Phys. Fluids",
+  "volume": "37",
+  "issue": "9",
+  "pages": "096107",
+  "doi": "10.1063/5.0288609",
+  "url": "https://doi.org/10.1063/5.0288609",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 1132,
+  "key": "",
+  "type": "book",
+  "title": "Shock Wave-Boundary-Layer Interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Holger",
+    "last": "Babinsky"
+   },
+   {
+    "first": "John K.",
+    "last": "Harvey"
+   }
+  ],
+  "author_display": "Holger Babinsky, John K. Harvey",
+  "year": "2011",
+  "journal": "",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "480",
+  "doi": "10.1017/CBO9780511842757",
+  "url": "https://doi.org/10.1017/CBO9780511842757",
+  "publisher": "Cambridge University Press",
+  "place": "Cambridge",
+  "edition": "",
+  "isbn": "978-0-521-84852-7",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 1192,
+  "key": "",
+  "type": "report",
+  "title": "A Real-Gas Study of Low-Density Wedge-Induced Laminar Separation on a Highly Cooled Blunt Flat Plate at M∞ = 12",
+  "season": "",
+  "authors": [
+   {
+    "first": "John B.",
+    "last": "Anders"
+   },
+   {
+    "first": "C. L. W.",
+    "last": "Edwards"
+   }
+  ],
+  "author_display": "John B. Anders, C. L. W. Edwards",
+  "year": "1968",
+  "journal": "NASA TN D-4320",
+  "journal_abbr": "NASA TN D-4320",
+  "volume": "",
+  "issue": "",
+  "pages": "42",
+  "doi": "",
+  "url": "",
+  "publisher": "NASA",
+  "place": "Washington, D.C.",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 1286,
+  "key": "",
+  "type": "book",
+  "title": "Asymptotic Theory of Separated Flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "Vladimir V.",
+    "last": "Sychev"
+   },
+   {
+    "first": "Anatoly I.",
+    "last": "Ruban"
+   },
+   {
+    "first": "Victor V.",
+    "last": "Sychev"
+   },
+   {
+    "first": "Georgi L.",
+    "last": "Korolev"
+   }
+  ],
+  "author_display": "Vladimir V. Sychev, Anatoly I. Ruban, Victor V. Sychev, Georgi L. Korolev",
+  "year": "1998",
+  "journal": "",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "478",
+  "doi": "10.1017/CBO9780511983764",
+  "url": "https://doi.org/10.1017/CBO9780511983764",
+  "publisher": "Cambridge University Press",
+  "place": "Cambridge",
+  "edition": "",
+  "isbn": "978-0-521-45530-5",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 1472,
+  "key": "",
+  "type": "report",
+  "title": "Two-Dimensional Shock Wave-Boundary Layer Interactions in High Speed Flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "W. L.",
+    "last": "Hankey Jr."
+   },
+   {
+    "first": "M. S.",
+    "last": "Holden"
+   }
+  ],
+  "author_display": "W. L. Hankey Jr., M. S. Holden",
+  "year": "1975",
+  "journal": "AGARDograph No. 203",
+  "journal_abbr": "AGARDograph No. 203",
+  "volume": "",
+  "issue": "",
+  "pages": "122",
+  "doi": "",
+  "url": "",
+  "publisher": "AGARD",
+  "place": "Neuilly-sur-Seine, France",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\F6BYLUT4\\Hankey - Two-Dimensional Shock Wave-Boundary Layer Interactions in High Speed Flows.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1476,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Effects of Wall Temperature on Hypersonic Impinging Shock-Wave/Turbulent-Boundary-Layer Interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   },
+   {
+    "first": "Jia-Rui",
+    "last": "Wei"
+   },
+   {
+    "first": "Shu-Ling",
+    "last": "Hu"
+   },
+   {
+    "first": "Sergio",
+    "last": "Pirozzoli"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo, Jia-Rui Wei, Shu-Ling Hu, Sergio Pirozzoli",
+  "year": "2022",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA J.",
+  "volume": "60",
+  "issue": "9",
+  "pages": "5109-5122",
+  "doi": "10.2514/1.J061708",
+  "url": "",
+  "publisher": "AIAA",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\VJC7VGZN\\Zuo 等 - 2022 - Effects of Wall Temperature on Hypersonic Impinging Shock-WaveTurbulent-Boundary-Layer Interactions.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1477,
+  "key": "",
+  "type": "conferencePaper",
+  "title": "Results of a strong interaction, wake-like model of supersonic separated and reattaching turbulent flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "Louis G.",
+    "last": "Hunter Jr."
+   },
+   {
+    "first": "Barry L.",
+    "last": "Reeves"
+   }
+  ],
+  "author_display": "Louis G. Hunter Jr., Barry L. Reeves",
+  "year": "1971",
+  "journal": "AIAA Paper 71-128",
+  "journal_abbr": "AIAA Paper 71-128",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "10.2514/6.1971-128",
+  "url": "",
+  "publisher": "AIAA",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\FFZUZFEP\\Hunter - 1971 - Results of a strong interaction, wake-like model of supersonic separated and reattaching turbulent f.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1480,
+  "key": "",
+  "type": "journalArticle",
+  "title": "A universal scaling for the length scales of shock-induced separation",
+  "season": "",
+  "authors": [
+   {
+    "first": "Nikhil",
+    "last": "Mahalingesh"
+   },
+   {
+    "first": "Sébastien",
+    "last": "Piponniau"
+   },
+   {
+    "first": "Pierre",
+    "last": "Dupont"
+   }
+  ],
+  "author_display": "Nikhil Mahalingesh, Sébastien Piponniau, Pierre Dupont",
+  "year": "2024",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "1000",
+  "issue": "",
+  "pages": "A5",
+  "doi": "10.1017/jfm.2024.864",
+  "url": "",
+  "publisher": "Cambridge University Press",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\YZB5C3TB\\Mahalingesh 等 - 2024 - A universal scaling for the length scales of shock-induced separation.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1482,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Boundary-Layer Separation in Unsteady Flow",
+  "season": "",
+  "authors": [
+   {
+    "first": "W. R.",
+    "last": "Sears"
+   },
+   {
+    "first": "D. P.",
+    "last": "Telionis"
+   }
+  ],
+  "author_display": "W. R. Sears, D. P. Telionis",
+  "year": "1975",
+  "journal": "SIAM Journal on Applied Mathematics",
+  "journal_abbr": "SIAM J. Appl. Math.",
+  "volume": "28",
+  "issue": "1",
+  "pages": "215-235",
+  "doi": "10.1137/0128018",
+  "url": "",
+  "publisher": "SIAM",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\GVGHVL7W\\Sears和Telionis - 1975 - Boundary-Layer Separation in Unsteady Flow.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1485,
+  "key": "",
+  "type": "conferencePaper",
+  "title": "A numerical method for solving the Navier-Stokes equations with application to shock-boundary layer interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "R. W.",
+    "last": "MacCormack"
+   },
+   {
+    "first": "B. S.",
+    "last": "Baldwin"
+   }
+  ],
+  "author_display": "R. W. MacCormack, B. S. Baldwin",
+  "year": "1975",
+  "journal": "AIAA Paper 75-1",
+  "journal_abbr": "AIAA Paper 75-1",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "10.2514/6.1975-1",
+  "url": "",
+  "publisher": "AIAA",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 本轮补充"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\PEB4N7FX\\Maccormack和Baldwin - 1975 - A numerical method for solving the Navier-Stokes equations with application to shock-boundary layer.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2001,
+  "key": "",
+  "type": "journal-article",
+  "title": "Secondary global instabilities in shock-wave–boundary-layer interactions: direct numerical simulations and three-dimensional global stability analysis",
+  "season": "",
+  "authors": [
+   {
+    "first": "Ziming",
+    "last": "Song"
+   },
+   {
+    "first": "Jiaao",
+    "last": "Hao"
+   },
+   {
+    "first": "Ismaïl",
+    "last": "Ben Hassan Saïdi"
+   },
+   {
+    "first": "Jean-Christophe",
+    "last": "Robinet"
+   }
+  ],
+  "author_display": "Ziming Song et al.",
+  "year": "2026",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "1043",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2026.12013",
+  "url": "https://doi.org/10.1017/jfm.2026.12013",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Secondary instabilities developing from the stationary primary global mode are investigated for an incident shock flow at Mach 2.15. Direct numerical simulations (DNS) and three-dimensional global stability analysis (3-D GSA) are combined to elucidate the evolution and characteristics of the associated secondary branches. Two spanwise domain widths are considered, lamda Subscript m λ m $\\lambda _m$ and 2 lamda Subscript m 2 λ m $2\\lambda _m$ , where lamda Subscript m λ m $\\lambda _m$ denotes the spanwise wavelength of the primary global mode. In the lamda Subscript m λ m $\\lambda _m$ domain, a time-periodic unsteadiness emerges as a secondary instability after saturation of the primary global mode, which is identified as a supercritical Hopf bifurcation. In the 2 lamda Subscript m 2 λ m $2\\lambda _m$ domain, an additional secondary growth accompanied by wavelength doubling is observed following the onset of unsteadiness. A corresponding stationary secondary instability with wavelength 2 lamda Subscript m 2 λ m $2\\lambda _m$ is determined to be the mechanism underlying this secondary growth, which is a subcritical pitchfork bifurcation. Overall, DNS and 3-D GSA provide a consistent interpretation of the secondary-instability scenario, and highlight the sensitivity of the observed dynamics to the spanwise domain width.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1017_jfm.2026.12013.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2002,
+  "key": "",
+  "type": "journal-article",
+  "title": "On the significance of absolute and convective instabilities in transitional hypersonic compression ramp flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "Changye",
+    "last": "Huang"
+   },
+   {
+    "first": "Peixu",
+    "last": "Guo"
+   },
+   {
+    "first": "Shibin",
+    "last": "Cao"
+   },
+   {
+    "first": "Chih-Yung",
+    "last": "Wen"
+   }
+  ],
+  "author_display": "Changye Huang et al.",
+  "year": "2026",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "1044",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2026.12060",
+  "url": "https://doi.org/10.1017/jfm.2026.12060",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "In real-life tunnel or flight environments, the laminar–turbulent transition of compression ramp flows can be initiated by absolute and/or convective instabilities. Currently, the relative significance of the two instabilities in such flows remains unclear. This paper addresses this issue by decoupling the effects of absolute and convective instabilities, which is an extension of our previous research (Huang et al. Phys. Fluids, vol. 37, 2025, p. 034110). Hypersonic flows over a compression ramp with a 15 Superscript ring ∘ $^\\circ$ ramp angle at Mach number 8.0 and Reynolds number italic Re Subscript upper L Baseline equals 9.2 times 10 Superscript 5 Re L = 9.2 × 10 5 ${{\\textit{Re}}_{L}}=9.2\\times {{10}^{5}}$ based on the flat plate length are investigated using direct numerical simulation (DNS) and several stability analysis tools. Global stability analysis (GSA) reports that the flow is intrinsically unstable. Without external disturbances, DNS shows a good agreement with GSA regarding the growth rate and the disturbance shape. The flow in DNS is dominated by the most amplified stationary mode and the low-frequency oscillatory mode. However, transition in this case cannot be accomplished in the computational domain purely by the absolute instability. With external forcing, the coexistence of absolute and convective instabilities triggers the transition. For the forcing amplitudes examined in this study, which are representative of moderately to strongly noisy wind tunnel environments, the absolute instability is not significant in affecting the transition onset location. Nonetheless, the interplay between absolute and convective instabilities can profoundly alter the dominant spanwise wavelengths, the pronounced frequency band, the shape of coherent structures, etc. In summary, the interplay between the two types of instabilities recasts the transition scenario, albeit the transition onset location is dominated by the convective instability.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2003,
+  "key": "",
+  "type": "journal-article",
+  "title": "Receptivity of a Transitional Shock/Boundary-Layer Interaction to Shock Oscillations in Hypersonic Flow",
+  "season": "",
+  "authors": [
+   {
+    "first": "Adriano",
+    "last": "Cerminara"
+   },
+   {
+    "first": "Deborah",
+    "last": "Levin"
+   },
+   {
+    "first": "Vassilis",
+    "last": "Theofilis"
+   }
+  ],
+  "author_display": "Adriano Cerminara, Deborah Levin and Vassilis Theofilis",
+  "year": "2026",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA Journal",
+  "volume": "64",
+  "issue": "5",
+  "pages": "2439-2456",
+  "doi": "10.2514/1.j066062",
+  "url": "https://doi.org/10.2514/1.j066062",
+  "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The present work studies the complex dynamics of an oscillating shock impinging on a laminar/transitional supersonic boundary layer, with emphasis on the radiated post-shock waves and a coherent wave structure induced in the turbulent boundary layer (TBL) downstream of the separation bubble. Fully resolved direct numerical simulations (DNS) have been carried out at Mach 5, with imposed shock-oscillation frequency matching that predicted by earlier direct simulation Monte Carlo (DSMC) studies of the internal shock structure. Shock oscillations are found to produce a field of post-shock waves efficiently transmitted through the reattachment shock into the downstream TBL. The flow response consists of two-dimensional amplified planar waves propagating downstream with sustained amplitude. Increasing shock-oscillation amplitudes progressively enhance this phenomenon, while increasing frequencies, within the DSMC-predicted range, are found to promote a greater disturbance amplification, with amplitudes larger by 50% compared to lower frequencies. This indicates a high susceptibility of the wave transmission mechanism to the shock-oscillation frequencies. Conversely, the region between separation and reattachment shock is found to be sensitive to frequencies different from those of the shock oscillations. This previously unknown generation mechanism of a two-dimensional planar wave system within the TBL is altogether absent when the impinging shock is steady.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2004,
+  "key": "",
+  "type": "journal-article",
+  "title": "Modal analysis of the triadic interactions in the dynamics of a transitional shock wave boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Ismaïl",
+    "last": "Ben Hassan Saïdi"
+   },
+   {
+    "first": "Stéphane",
+    "last": "Wang"
+   },
+   {
+    "first": "Guillaume",
+    "last": "Fournier"
+   },
+   {
+    "first": "Christian",
+    "last": "Tenaud"
+   },
+   {
+    "first": "Jean-Christophe",
+    "last": "Robinet"
+   }
+  ],
+  "author_display": "Ismaïl Ben Hassan Saïdi et al.",
+  "year": "2025",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "1009",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2025.236",
+  "url": "https://doi.org/10.1017/jfm.2025.236",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "This work is a numerical study of a transitional shock wave boundary layer interaction (SWBLI). The main goal is to improve our understanding of the well-known low-frequency SWBLI unsteadiness and especially the suspected role of triadic interactions in the underlying physical mechanism. To this end, a direct numerical simulation is performed using a high-order finite-volume scheme equipped with a suitable shock capturing procedure. The resulting database is then extensively post-processed in order to extract the main dynamical features of the interaction zone dynamics (involved characteristic frequencies, characteristics of the vortical structures, etc.). The dynamical organisation and space–time evolution of the flow at dominant frequencies are then further characterised by mean of an spectral proper orthogonal decomposition analysis. In order to study the role of triadic interactions occurring in the interaction region, a bispectral mode decomposition analysis is applied to the database. It allows us to extract the significant triadic interactions, their location and the resulting physical spatial modes. Strong triadic interactions are detected in the downstream part of the separation bubble whose role on the low-frequency unsteadiness is characterised. All the results of the various analyses are then discussed and integrated to formulate a possible mechanism fuelling low-frequency SWBLI unsteadiness.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1017_jfm.2025.236.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2005,
+  "key": "",
+  "type": "journal-article",
+  "title": "On the synchronisation of three-dimensional shock layer and laminar separation bubble instabilities in hypersonic flow over a double wedge",
+  "season": "",
+  "authors": [
+   {
+    "first": "Saurabh S.",
+    "last": "Sawant"
+   },
+   {
+    "first": "V.",
+    "last": "Theofilis"
+   },
+   {
+    "first": "D.A.",
+    "last": "Levin"
+   }
+  ],
+  "author_display": "Saurabh S. Sawant, V. Theofilis and D.A. Levin",
+  "year": "2022",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "941",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2022.276",
+  "url": "https://doi.org/10.1017/jfm.2022.276",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Linear three-dimensional instability is studied in the shock layer and the laminar separation bubble (LSB) induced by shock-wave/boundary-layer interactions in a Mach 7 flow of nitrogen over a double wedge with a $30^{\\circ }\\text {--}55^{\\circ }$ cross-sectional profile. At a free-stream unit Reynolds number $Re=5.2\\times 10^{4}\\,{\\rm m}^{-1}$ this flow exhibits rarefaction effects and has shock thicknesses comparable to the thickness of the boundary layer at separation. Flow features have been fully resolved using a high-fidelity massively parallel implementation of the direct simulation Monte Carlo method that captures the flow evolution from the inception of three-dimensionality, through linear growth of instabilities, to the early stages of nonlinear saturation. It is shown that the LSB sustains self-excited, small-amplitude perturbations that originate past the primary separation line and lead to spanwise-periodic wall striations inside the bubble and downstream of the primary reattachment line, as known from earlier experiments, simulations and instability analyses. A spanwise-periodic instability, synchronised with that in the separation zone, is identified herein for the first time, which exists in the internal structure of the separation and detached shock layers, and manifests itself as spanwise-periodic cats-eyes patterns in the global mode amplitude functions. The growth rate and the spanwise-periodicity length of linear disturbances in the shock layers and the LSB are found to be identical. Linear amplification of the most unstable three-dimensional flow perturbations leads to synchronised low-frequency unsteadiness of the triple point, with a Strouhal number of $St\\approx 0.028$ .",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1017_jfm.2022.276.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2006,
+  "key": "",
+  "type": "conferencePaper",
+  "title": "Linear Instability of Shock-Dominated Laminar Hypersonic Separated Flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "Saurabh S.",
+    "last": "Sawant"
+   },
+   {
+    "first": "Ozgur",
+    "last": "Tumuklu"
+   },
+   {
+    "first": "Vassilis",
+    "last": "Theofilis"
+   },
+   {
+    "first": "Deborah A.",
+    "last": "Levin"
+   }
+  ],
+  "author_display": "Saurabh S. Sawant et al.",
+  "year": "2021",
+  "journal": "IUTAM Bookseries",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "651-660",
+  "doi": "10.1007/978-3-030-67902-6_57",
+  "url": "https://doi.org/10.1007/978-3-030-67902-6_57",
+  "publisher": "Springer International Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1007_978-3-030-67902-6_57.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2007,
+  "key": "",
+  "type": "journal-article",
+  "title": "Low-frequency resolvent analysis of the laminar oblique shock wave/boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "B.",
+    "last": "Bugeat"
+   },
+   {
+    "first": "J.-Ch.",
+    "last": "Robinet"
+   },
+   {
+    "first": "J.-C.",
+    "last": "Chassaing"
+   },
+   {
+    "first": "P.",
+    "last": "Sagaut"
+   }
+  ],
+  "author_display": "B. Bugeat et al.",
+  "year": "2022",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "942",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2022.390",
+  "url": "https://doi.org/10.1017/jfm.2022.390",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Resolvent analysis is used to study the low-frequency behaviour of the laminar oblique shock wave/boundary layer interaction (SWBLI). It is shown that the computed optimal gain, which can be seen as a transfer function of the system, follows a first-order low-pass filter equation, recovering the results of Touber & Sandham ( J. Fluid Mech. , vol. 671, 2011, pp. 417–465). This behaviour is understood as proceeding from the excitation of a single stable, steady global mode whose damping rate sets the time scale of the filter. Different Mach and Reynolds numbers are studied, covering different recirculation lengths $L$ . This damping rate is found to scale as $1/L$ , leading to a constant Strouhal number $St_{L}$ as observed in the literature. It is associated with a breathing motion of the recirculation bubble. This analysis furthermore supports the idea that the low-frequency dynamics of the SWBLI is a forced dynamics, in which background perturbations continuously excite the flow. The investigation is then carried out for three-dimensional perturbations for which two regimes are identified. At low wavenumbers of the order of $L$ , a modal mechanism similar to that of two-dimensional perturbations is found and exhibits larger values of the optimal gain. At larger wavenumbers, of the order of the boundary layer thickness, the growth of streaks, which results from a non-modal mechanism, is detected. No interaction with the recirculation region is observed. Based on these results, the potential prevalence of three-dimensional effects in the low-frequency dynamics of the SWBLI is discussed.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1017_jfm.2022.390.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2008,
+  "key": "",
+  "type": "journal-article",
+  "title": "Transient growth analysis of oblique shock-wave/boundary-layer interactions at Mach 5.92",
+  "season": "",
+  "authors": [
+   {
+    "first": "Anubhav",
+    "last": "Dwivedi"
+   },
+   {
+    "first": "Nathaniel",
+    "last": "Hildebrand"
+   },
+   {
+    "first": "Joseph W.",
+    "last": "Nichols"
+   },
+   {
+    "first": "Graham V.",
+    "last": "Candler"
+   },
+   {
+    "first": "Mihailo R.",
+    "last": "Jovanović"
+   }
+  ],
+  "author_display": "Anubhav Dwivedi et al.",
+  "year": "2020",
+  "journal": "Physical Review Fluids",
+  "journal_abbr": "Phys. Rev. Fluids",
+  "volume": "5",
+  "issue": "6",
+  "pages": "",
+  "doi": "10.1103/physrevfluids.5.063904",
+  "url": "https://doi.org/10.1103/physrevfluids.5.063904",
+  "publisher": "American Physical Society (APS)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Experimental studies of a transitional shock-wave--boundary-layer interaction identify robust streaklike flow structures. In order to account for the emergence of these three-dimensional flow features, growth of small initial perturbations around the two-dimensional laminar base flow is examined. The most significant transient amplification originates from the upstream streamwise vortices, which are not related to modal instabilities. Unique to separated high-speed flows, the impinging shock compresses the boundary layer, thereby causing the growth of the streaks.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1103_physrevfluids.5.063904.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2009,
+  "key": "",
+  "type": "journal-article",
+  "title": "Simulation and stability analysis of oblique shock-wave/boundary-layer interactions at Mach 5.92",
+  "season": "",
+  "authors": [
+   {
+    "first": "Nathaniel",
+    "last": "Hildebrand"
+   },
+   {
+    "first": "Anubhav",
+    "last": "Dwivedi"
+   },
+   {
+    "first": "Joseph W.",
+    "last": "Nichols"
+   },
+   {
+    "first": "Mihailo R.",
+    "last": "Jovanović"
+   },
+   {
+    "first": "Graham V.",
+    "last": "Candler"
+   }
+  ],
+  "author_display": "Nathaniel Hildebrand et al.",
+  "year": "2018",
+  "journal": "Physical Review Fluids",
+  "journal_abbr": "Phys. Rev. Fluids",
+  "volume": "3",
+  "issue": "1",
+  "pages": "",
+  "doi": "10.1103/physrevfluids.3.013906",
+  "url": "https://doi.org/10.1103/physrevfluids.3.013906",
+  "publisher": "American Physical Society (APS)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Above a critical angle, an oblique shock impinging on a Mach 5.92 boundary layer causes the resulting separated flow to become unstable. Direct numerical simulation and global stability analysis reveal the physical mechanism that drives this three-dimensional instability.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1103_physrevfluids.3.013906.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2010,
+  "key": "",
+  "type": "journal-article",
+  "title": "Reattachment streaks in hypersonic compression ramp flow: an input–output analysis",
+  "season": "",
+  "authors": [
+   {
+    "first": "Anubhav",
+    "last": "Dwivedi"
+   },
+   {
+    "first": "G. S.",
+    "last": "Sidharth"
+   },
+   {
+    "first": "Joseph W.",
+    "last": "Nichols"
+   },
+   {
+    "first": "Graham V.",
+    "last": "Candler"
+   },
+   {
+    "first": "Mihailo R.",
+    "last": "Jovanović"
+   }
+  ],
+  "author_display": "Anubhav Dwivedi et al.",
+  "year": "2019",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "880",
+  "issue": "",
+  "pages": "113-135",
+  "doi": "10.1017/jfm.2019.702",
+  "url": "https://doi.org/10.1017/jfm.2019.702",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "We employ global input–output analysis to quantify amplification of exogenous disturbances in compressible boundary layer flows. Using the spatial structure of the dominant response to time-periodic inputs, we explain the origin of steady reattachment streaks in a hypersonic flow over a compression ramp. Our analysis of the laminar shock–boundary layer interaction reveals that the streaks arise from a preferential amplification of upstream counter-rotating vortical perturbations with a specific spanwise wavelength. These streaks are associated with heat-flux striations at the wall near flow reattachment and they can trigger transition to turbulence. The streak wavelength predicted by our analysis compares favourably with observations from two different hypersonic compression ramp experiments. Furthermore, our analysis of inviscid transport equations demonstrates that base-flow deceleration contributes to the amplification of streamwise velocity and that the baroclinic effects are responsible for the production of streamwise vorticity. Finally, the appearance of the temperature streaks near reattachment is triggered by the growth of streamwise velocity and streamwise vorticity perturbations as well as by the amplification of upstream temperature perturbations by the reattachment shock.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1017_jfm.2019.702.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2011,
+  "key": "",
+  "type": "preprint",
+  "title": "Optimal non-linear mechanisms for laminar-turbulent transition of a shock-induced separated shear layer",
+  "season": "",
+  "authors": [
+   {
+    "first": "Flavio",
+    "last": "Savarino"
+   },
+   {
+    "first": "Denis",
+    "last": "Sipp"
+   },
+   {
+    "first": "Georgios",
+    "last": "Rigas"
+   }
+  ],
+  "author_display": "Flavio Savarino, Denis Sipp and Georgios Rigas",
+  "year": "2026",
+  "journal": "arXiv preprint",
+  "journal_abbr": "arXiv",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2605.09559",
+  "publisher": "arXiv",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Laminar-turbulent transition in shock wave-boundary-layer interactions (SWBLI) remains a major challenge for hypersonic vehicle design, with implications for drag, heat transfer, and structural loads. Linear optimal perturbation analyses can identify candidate instabilities, but the full route to breakdown in SWBLI requires nonlinear optimisation. Here, we characterise the optimal transition pathway in a globally stable yet convectively unstable Mach 2.15 oblique SWBLI using a nonlinear input-output optimisation framework based on the space-time spectral Navier-Stokes formulation of Poulain et al. (Comput. Fluids, 2024). The nonlinear frequency-domain approach captures mean-flow distortion, resolves triadic energy transfers, and extracts intrinsic nonlinear stresses that activate additional instability mechanisms. We identify a four-stage pathway: (1) optimal forcing of oblique first Mack mode waves at moderate frequencies; (2) nonlinear self-interaction of counter-propagating Mack waves, generating streamwise Gortler-like vortices in the reattachment region where streamline curvature peaks; (3) lift-up of streamwise velocity streaks by these vortices; and (4) subharmonic sinuous secondary instability leading to streak breakdown. Optimisation across forcing amplitudes from infinitesimal to transitional levels yields quasi-invariant optimal forcing structures, showing that exciting the oblique first Mack mode alone can trigger the turbulent cascade. Parametric studies over frequency-wavenumber space and forcing configurations confirm this preferential pathway. By resolving nonlinear energy transfers with a finite number of harmonics, this work provides a tractable framework for transition prediction and control strategy development in high-speed separated flows, bridging linear stability theory and fully turbulent simulation.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\arXiv_2605.09559.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2012,
+  "key": "",
+  "type": "journal-article",
+  "title": "Bistable states and separation hysteresis in curved compression ramp flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "Yan-Chao",
+    "last": "Hu"
+   },
+   {
+    "first": "Wen-Feng",
+    "last": "Zhou"
+   },
+   {
+    "first": "Gang",
+    "last": "Wang"
+   },
+   {
+    "first": "Yan-Guang",
+    "last": "Yang"
+   },
+   {
+    "first": "Zhi-Gong",
+    "last": "Tang"
+   }
+  ],
+  "author_display": "Yan-Chao Hu et al.",
+  "year": "2020",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "",
+  "volume": "32",
+  "issue": "11",
+  "pages": "",
+  "doi": "10.1063/5.0029150",
+  "url": "https://doi.org/10.1063/5.0029150",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The separation hysteresis of the boundary layer induced by the variation of the angle of attack (AOA) is observed and investigated numerically in curved compression ramp (CCR) flows. The occurrence of this new phenomenon is based on the bistable states of CCR flows even for the same free-stream and boundary conditions, indicating that the boundary layer’s state (attachment/separation) depends on its evolutionary history with AOA varying. Specifically, beginning with an attachment state, the boundary layer remains attached as AOA increases slowly and suddenly separates once AOA reaches a marginal angle αs. However, if we decrease AOA back from this angle, the boundary layer will not attach and remain separated until AOA reaches a small enough angle αa. The AOA extent [αa, αs] is called the dual-solution region. Three characteristic adverse pressure gradients (APGs), Isb, Icw, and Ib, are proposed to explain the existence of this dual-solution region, where Icw and Isb (Icw &lt; Isb) are induced by the curved wall and the separation bubble, respectively, and Ib is the maximum APG that the boundary layer can resist. (i) When Ib &gt; Isb, the flow must be attached, (ii) when Ib &lt; Icw, the flow must be separated, and (iii) when Icw &lt; Ib &lt; Isb, both of these two states are theoretically possible. Since AOA-variation can make (i), (ii), and (iii) occur alternately, it could induce the separation hysteresis of CCR flows, which has been observed in this paper.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2013,
+  "key": "",
+  "type": "journal-article",
+  "title": "Nonlinear causal relationship between separation bubbles and reflected shock wave in shock wave/turbulent boundary layer interaction based on information theory",
+  "season": "",
+  "authors": [
+   {
+    "first": "Jun",
+    "last": "Hatayama"
+   },
+   {
+    "first": "Kento",
+    "last": "Tanaka"
+   },
+   {
+    "first": "Toshinori",
+    "last": "Kouchi"
+   }
+  ],
+  "author_display": "Jun Hatayama, Kento Tanaka and Toshinori Kouchi",
+  "year": "2026",
+  "journal": "Computers & Fluids",
+  "journal_abbr": "Computers & Fluids",
+  "volume": "310",
+  "issue": "",
+  "pages": "107016",
+  "doi": "10.1016/j.compfluid.2026.107016",
+  "url": "https://doi.org/10.1016/j.compfluid.2026.107016",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2014,
+  "key": "",
+  "type": "journal-article",
+  "title": "Decoupling translation and rotation motion of separation shock in a hypersonic compression ramp flow",
+  "season": "",
+  "authors": [
+   {
+    "first": "Qingfu",
+    "last": "ZHANG"
+   },
+   {
+    "first": "Chong",
+    "last": "PAN"
+   },
+   {
+    "first": "Hongwei",
+    "last": "WANG"
+   },
+   {
+    "first": "Xiaohui",
+    "last": "LI"
+   },
+   {
+    "first": "Zhan",
+    "last": "HUANG"
+   },
+   {
+    "first": "Jinjun",
+    "last": "WANG"
+   }
+  ],
+  "author_display": "Qingfu ZHANG et al.",
+  "year": "2026",
+  "journal": "Chinese Journal of Aeronautics",
+  "journal_abbr": "Chinese Journal of Aeronautics",
+  "volume": "39",
+  "issue": "11",
+  "pages": "104145",
+  "doi": "10.1016/j.cja.2026.104145",
+  "url": "https://doi.org/10.1016/j.cja.2026.104145",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The statistical characteristics of the translation and rotation motion of a separation shock in a hypersonic compression ramp flow are studied based on a time-resolved Schlieren image dataset. Both spectral analysis and Proper Orthogonal Decomposition (POD) indicate that the unsteady shock motion can be decoupled as low-frequency shock translation mode and high-frequency shock rotation mode. A statistical dual-Gaussian model is then proposed, in which the shock motion is described as a linear combination of two independent Gaussian processes corresponding to shock translation and shock rotation. Through a POD-mode-exclusion evaluation, it is found that this model can generally predict the statistics of full-order shock motion except for the asymmetry nature of the forth-and-back translation of the separation shock. Meanwhile, the statistics of reduced-order shock motion corresponding to pure shock rotation can be accurately predicted by the dual-Gaussian model. Additionally, a transitional shock motion characterized by strong intermittency is identified during the transition from biased shock translation to normal shock rotation.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2015,
+  "key": "",
+  "type": "journal-article",
+  "title": "Unsteadiness characterisation of shock wave/turbulent boundary-layer interaction at moderate Reynolds number",
+  "season": "",
+  "authors": [
+   {
+    "first": "Matteo",
+    "last": "Bernardini"
+   },
+   {
+    "first": "Giacomo",
+    "last": "Della Posta"
+   },
+   {
+    "first": "Francesco",
+    "last": "Salvadore"
+   },
+   {
+    "first": "Emanuele",
+    "last": "Martelli"
+   }
+  ],
+  "author_display": "Matteo Bernardini et al.",
+  "year": "2023",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "954",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2022.1038",
+  "url": "https://doi.org/10.1017/jfm.2022.1038",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "A direct numerical simulation of an oblique shock wave impinging on a turbulent boundary layer at Mach number 2.28 is carried out at moderate Reynolds number, simulating flow conditions similar to those of the experiment by Dupont et al. ( J. Fluid Mech. , vol. 559, 2006, pp. 255–277). The low-frequency shock unsteadiness, whose characteristics have been the focus of considerable research efforts, is here investigated via the Morlet wavelet transform. Owing to its compact support in both physical and Fourier spaces, the wavelet transformation makes it possible to track the time evolution of the various scales of the wall-pressure fluctuations. This property also makes it possible to define a local intermittency measure, representing a frequency-dependent flatness factor, to pinpoint the bursts of energy that characterise the shock intermittency scale by scale. As a major result, wavelet decomposition shows that the broadband shock movement is actually the result of a collection of sparse events in time, each characterised by its own temporal scale. This feature is hidden by the classical Fourier analysis, which can only show the time-averaged behaviour. Then, we propose a procedure to process any relevant time series, such as the time history of the wall pressure or that of the separation bubble extent, in which we use a condition based on the local intermittency measure to filter out the turbulent content in the proximity of the shock foot and to isolate only the intermittent component of the signal. In addition, wavelet analysis reveals the intermittent behaviour also of the breathing motion of the recirculation bubble behind the reflected shock, and allows us to detect a direct, partial correspondence between the most significant intermittent events of the separation region and those of the wall pressure at the foot of the shock.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1017_jfm.2022.1038.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2016,
+  "key": "",
+  "type": "journal-article",
+  "title": "Aerodynamic heating in hypersonic shock wave and turbulent boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Zhenyuan",
+    "last": "Tang"
+   },
+   {
+    "first": "Haonan",
+    "last": "Xu"
+   },
+   {
+    "first": "Xueying",
+    "last": "Li"
+   },
+   {
+    "first": "Jing",
+    "last": "Ren"
+   }
+  ],
+  "author_display": "Zhenyuan Tang et al.",
+  "year": "2024",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "999",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2024.641",
+  "url": "https://doi.org/10.1017/jfm.2024.641",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "In hypersonic flight the shock wave and turbulent boundary layer interaction (STBLI) sharply increases wall heat transfer that intensifies the aerodynamic heating problems. In this work the STBLI is modelled by compression ramp flow with a Mach number of 5, a Reynolds number based on momentum thickness of 4652 and a wall to recovery temperature ratio of 0.5. The aerodynamic heat generation and transport mechanisms are investigated in the interaction based on theoretical analysis and direct numerical simulation (DNS) that agrees with previous studies. A prediction correlation of wall heat flux in STBLI is deduced theoretically and validated by some representative data including the present DNS, which improves the prediction accuracy and can be applied to a wider $Ma$ range compared with the canonical Q-P theory. The correlation indicates that the sharp increase of wall heat transfer in the STBLI can be explained by the boundary layer compression and the convection transport enhancement. Based on the DNS results, the aerodynamic heat generation and transport mechanisms are revealed in the separation, recirculation and reattachment zones in the STBLI. From this perspective, the peak heat flux can be further explained by the enhancement of near-wall turbulent energy dissipation, compression aerodynamic heat generation and the near-wall turbulent transport. The generation and transport of compression aerodynamic heat reveal the underlying mechanism of the strong correlation between the peak heat flux ratios and the pressure ratios in STBLIs.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2017,
+  "key": "",
+  "type": "journal-article",
+  "title": "Wall heat flux in a supersonic shock wave/turbulent boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Fulin",
+    "last": "Tong"
+   },
+   {
+    "first": "Xianxu",
+    "last": "Yuan"
+   },
+   {
+    "first": "Jiang",
+    "last": "Lai"
+   },
+   {
+    "first": "Junyi",
+    "last": "Duan"
+   },
+   {
+    "first": "Dong",
+    "last": "Sun"
+   },
+   {
+    "first": "Siwei",
+    "last": "Dong"
+   }
+  ],
+  "author_display": "Fulin Tong et al.",
+  "year": "2022",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "",
+  "volume": "34",
+  "issue": "6",
+  "pages": "",
+  "doi": "10.1063/5.0094070",
+  "url": "https://doi.org/10.1063/5.0094070",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The characteristics of wall heat flux (WHF) beneath a supersonic turbulent boundary layer interacting with an impinging shock wave with a 33.2° angle at Mach 2.25 are analyzed using direct numerical simulation. It is found that the QP85 scaling, defined as the ratio of the mean WHF and wall pressure, changes across the interaction. The probability density function of the WHF fluctuations normalized by the local root-mean-squared value is similar to that of wall shear stress. Comparing the WHF and wall pressure spectra shows that the low-frequency shock unsteadiness exhibits little influence on the spectrum. The space–time correlation of the fluctuating WHF reveals that both the streamwise correlation length scale and the convection velocity experience a sharp decrease in the separation region and subsequent recovery in the downstream region. Moreover, the mean WHF in an incident shock interaction is decomposed for the first time. An analysis of the velocity and temperature fluctuations based on bidimensional empirical mode decomposition is performed to evaluate the contribution of turbulent structures with specific spanwise length scales to the mean WHF generation. The decomposed results indicate that the contribution associated with the large-scale structures in the outer region is greatly amplified by the shock interaction and has the leading role in the generation downstream of the interaction.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2018,
+  "key": "",
+  "type": "journal-article",
+  "title": "Coupling effects of flow separation and aerodynamic heating in hypersonic shock wave and turbulent boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Zhenyuan",
+    "last": "Tang"
+   },
+   {
+    "first": "Du",
+    "last": "Li"
+   },
+   {
+    "first": "Haonan",
+    "last": "Xu"
+   },
+   {
+    "first": "Xueying",
+    "last": "Li"
+   },
+   {
+    "first": "Jing",
+    "last": "Ren"
+   }
+  ],
+  "author_display": "Zhenyuan Tang et al.",
+  "year": "2025",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "",
+  "volume": "37",
+  "issue": "3",
+  "pages": "",
+  "doi": "10.1063/5.0256817",
+  "url": "https://doi.org/10.1063/5.0256817",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "In hypersonic flight, the flow separation and aerodynamic heating induced by shock wave turbulent boundary layer interaction (STBLI) pose a severe threat to the aircraft safety. Based on the verified direct numerical simulation, this paper investigates STBLI generated by 25°–35° compression ramps for cold walls at Ma of 5, with the focus on the coupling effect of the flow separation and aerodynamic heating. On the one hand, the results show that as the shock intensity increases, the flow field turns from a small separation into a large separation. However, compared with adiabatic walls, cold walls reduce separation scales, resulting in the separation state differences. This paper proposes a wall temperature-corrected Mach number Ma* to predict separation types of STBLI for nonadiabatic walls, and the results prove that Ma* is accurate. On the other hand, this paper discovers the sharp heat flux peak for the small separation and the local heat flux drop in the recirculation region for the large separation and reveals the similarities and differences in the aerodynamic heating mechanisms. For small separations, the sharp heat flux peak is caused by the sharp turbulent dissipation peak, while for all cases, the wide heat flux peaks downstream are caused by the combination of turbulent and mean dissipation peaks, along with continuous compression heating. The heat flux valleys near the separation points are all due to the outward transport of aerodynamic heat, while the heat flux valleys in the large-scale separation are attributed to the weak turbulence at the recirculation center.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2019,
+  "key": "",
+  "type": "journal-article",
+  "title": "Mechanisms of hypersonic shock wave and turbulent boundary layer interaction on a cone/flare",
+  "season": "",
+  "authors": [
+   {
+    "first": "Xuecheng",
+    "last": "Sun"
+   },
+   {
+    "first": "Changping",
+    "last": "Yu"
+   },
+   {
+    "first": "Xinliang",
+    "last": "Li"
+   },
+   {
+    "first": "Chuanhong",
+    "last": "Zhang"
+   }
+  ],
+  "author_display": "Xuecheng Sun et al.",
+  "year": "2025",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "",
+  "volume": "37",
+  "issue": "2",
+  "pages": "",
+  "doi": "10.1063/5.0251558",
+  "url": "https://doi.org/10.1063/5.0251558",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "A direct numerical simulation of a hypersonic 7°–34° cone/flare model at the Mach number Ma∞ = 6 and unit Reynolds number Re∞ = 10 800/mm is performed to investigate the shock wave/turbulent boundary layer interaction of three-dimensional configuration. To study the influence of spanwise curvature, the differences between the cone/flare configuration and the double wedge configuration are discussed. Compared to the double wedge, the height of the separation bubble of the cone/flare is lower, and the skin friction coefficient and Stanton number in both the upstream undisturbed region and the downstream reattachment region are smaller. The Görtler vortex analysis shows that the cone/flare configuration produces more Görtler vortices, but with lower intensity. The turbulent kinetic energy budget is analyzed, and the results indicate that the distribution of turbulent kinetic energy in the interaction region differs significantly from that in the upstream undisturbed region, the peak values of each term increase notably, with the influence of the turbulent transport term being significantly enhanced and the influence of the viscous dissipation term notably weakened. The spectral proper orthogonal decomposition analysis reveals that in the streamwise/wall-normal plane, the low-frequency characteristics of the flow are associated with the separation bubble and the shear layer in the reattachment region, while the high-frequency characteristics are primarily linked to turbulent fluctuations. In the streamwise/spanwise plane, the low-frequency characteristics are associated with the upstream velocity streaky structures and the large-scale alternating positive and negative streaky structures that form along the spanwise direction after the flow reattaches.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2020,
+  "key": "",
+  "type": "journal-article",
+  "title": "Wall-modeled LES of shock-wave/boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Francesco",
+    "last": "De Vanna"
+   },
+   {
+    "first": "Matteo",
+    "last": "Bernardini"
+   },
+   {
+    "first": "Francesco",
+    "last": "Picano"
+   },
+   {
+    "first": "Ernesto",
+    "last": "Benini"
+   }
+  ],
+  "author_display": "Francesco De Vanna et al.",
+  "year": "2022",
+  "journal": "International Journal of Heat and Fluid Flow",
+  "journal_abbr": "International Journal of Heat and Fluid Flow",
+  "volume": "98",
+  "issue": "",
+  "pages": "109071",
+  "doi": "10.1016/j.ijheatfluidflow.2022.109071",
+  "url": "https://doi.org/10.1016/j.ijheatfluidflow.2022.109071",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2021,
+  "key": "",
+  "type": "journal-article",
+  "title": "Large eddy simulation of shock wave/turbulent boundary layer interaction under incipient and fully separated conditions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Xiangxin",
+    "last": "Ji"
+   },
+   {
+    "first": "Xinliang",
+    "last": "Li"
+   },
+   {
+    "first": "Fulin",
+    "last": "Tong"
+   },
+   {
+    "first": "Chang-Ping",
+    "last": "Yu"
+   }
+  ],
+  "author_display": "Xiangxin Ji et al.",
+  "year": "2023",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "",
+  "volume": "35",
+  "issue": "4",
+  "pages": "",
+  "doi": "10.1063/5.0147829",
+  "url": "https://doi.org/10.1063/5.0147829",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Large eddy simulations of shock wave/turbulent boundary layer interaction on a compression ramp at the Mach number M a ∞ = 5 and Reynolds number R e ∞ = 14 000 are performed to investigate the impact of the incipient and fully separated conditions on the development of the flow field. The quasi-dynamic subgrid-scale kinetic energy equation model, which combines the benefits of the gradient model with the eddy-viscosity model, has been applied. Compared with the previous experimental and numerical results, the simulation was validated. The flow structures, turbulence properties, vortex structures, and low-frequency unsteadiness are all investigated. The flow field of the incipient separation is attached and rarely impacted by shock. An evident separation bubble and localized high wall temperatures in fully separated flow are caused by the separation shock's significant reverse pressure gradient. The Reynolds stress components exhibit significant amplification in both cases, and the peak outward shifts from the near-wall region to the center of the free shear layer. Turbulent kinetic energy terms were analyzed, and the two scenarios show a significant difference. The power spectral density of the wall pressure fluctuations shows that the low-frequency motion of the incipient separation is not apparent relative to the fully separated flow.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2022,
+  "key": "",
+  "type": "journal-article",
+  "title": "Direct numerical simulation of shock wave/turbulent boundary layer interaction in a swept compression ramp at Mach 6",
+  "season": "",
+  "authors": [
+   {
+    "first": "Ji",
+    "last": "Zhang"
+   },
+   {
+    "first": "Tongbiao",
+    "last": "Guo"
+   },
+   {
+    "first": "Guanlin",
+    "last": "Dang"
+   },
+   {
+    "first": "Xinliang",
+    "last": "Li"
+   }
+  ],
+  "author_display": "Ji Zhang et al.",
+  "year": "2022",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "",
+  "volume": "34",
+  "issue": "11",
+  "pages": "",
+  "doi": "10.1063/5.0118578",
+  "url": "https://doi.org/10.1063/5.0118578",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Swept compression ramps widely exist in supersonic/hypersonic vehicles and have become a typical standard model for studying three-dimensional (3D) shock wave/turbulent boundary layer interactions (STBLIs). In this paper, we conduct a direct numerical simulation of swept compression ramp STBLI with a 34° compression angle and a 45° sweep angle at Mach 6 using a heterogeneous parallel finite difference solver. Benefitting from the powerful computing performance of the graphics processing unit, the computational grid number exceeds 5 × 106 with the spatiotemporal evolution data of hypersonic 3D STBLI obtained. The results show that the flow of the hypersonic swept compression ramp follows the quasi-conical symmetry. A supersonic crossflow with helical motion appears in the interaction region, and its velocity increases along the spanwise direction. Fluids from the high-energy-density region pass through the bow shock at the head of the main shock and crash into the wall downstream of the reattachment, resulting in the peaks in skin friction and heat flux. The peak friction and heating increase along the spanwise direction because of the spanwise variation in the shock wave inclination. In the interaction region, the unsteadiness is dominated by the mid-frequency motion, whereas the low-frequency large-scale motion is nearly absent. Two reasons for the lack of low-frequency unsteadiness are given: (1) The separation shock is significantly weaker than the reattachment shock and main shock; and (2) because of the supersonic crossflow, the perturbations propagating at the sound speed are not self-sustaining but flow along the r-direction and toward the spanwise boundary.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2023,
+  "key": "",
+  "type": "journal-article",
+  "title": "Wall temperature effects on shock wave/turbulent boundary layer interaction via direct numerical simulation",
+  "season": "",
+  "authors": [
+   {
+    "first": "Ke",
+    "last": "Zhu"
+   },
+   {
+    "first": "Lu-Xin",
+    "last": "Jiang"
+   },
+   {
+    "first": "Wei-Dong",
+    "last": "Liu"
+   },
+   {
+    "first": "Ming-Bo",
+    "last": "Sun"
+   },
+   {
+    "first": "Qian-Cheng",
+    "last": "Wang"
+   },
+   {
+    "first": "Zhi-Wei",
+    "last": "Hu"
+   }
+  ],
+  "author_display": "Ke Zhu et al.",
+  "year": "2021",
+  "journal": "Acta Astronautica",
+  "journal_abbr": "Acta Astronautica",
+  "volume": "178",
+  "issue": "",
+  "pages": "499-510",
+  "doi": "10.1016/j.actaastro.2020.08.042",
+  "url": "https://doi.org/10.1016/j.actaastro.2020.08.042",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2024,
+  "key": "",
+  "type": "journal-article",
+  "title": "Turbulent Heat Flux Model for Hypersonic Shock–Boundary Layer Interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Subhajit",
+    "last": "Roy"
+   },
+   {
+    "first": "Krishnendu",
+    "last": "Sinha"
+   }
+  ],
+  "author_display": "Subhajit Roy and Krishnendu Sinha",
+  "year": "2019",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA Journal",
+  "volume": "57",
+  "issue": "8",
+  "pages": "3624-3629",
+  "doi": "10.2514/1.j058334",
+  "url": "https://doi.org/10.2514/1.j058334",
+  "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2025,
+  "key": "",
+  "type": "journal-article",
+  "title": "RANS CFD applied to 2D canonical shock wave turbulent boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Paul",
+    "last": "Canoville"
+   },
+   {
+    "first": "Andrew",
+    "last": "Lewis"
+   }
+  ],
+  "author_display": "Paul Canoville and Andrew Lewis",
+  "year": "2026",
+  "journal": "International Journal of Heat and Fluid Flow",
+  "journal_abbr": "International Journal of Heat and Fluid Flow",
+  "volume": "119",
+  "issue": "",
+  "pages": "110263",
+  "doi": "10.1016/j.ijheatfluidflow.2026.110263",
+  "url": "https://doi.org/10.1016/j.ijheatfluidflow.2026.110263",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2026,
+  "key": "",
+  "type": "journal-article",
+  "title": "Numerical strategy to perform direct numerical simulations of hypersonic shock/boundary-layer interaction in chemical nonequilibrium",
+  "season": "",
+  "authors": [
+   {
+    "first": "P. S.",
+    "last": "Volpiani"
+   }
+  ],
+  "author_display": "P. S. Volpiani",
+  "year": "2021",
+  "journal": "Shock Waves",
+  "journal_abbr": "Shock Waves",
+  "volume": "31",
+  "issue": "4",
+  "pages": "361-378",
+  "doi": "10.1007/s00193-021-01018-6",
+  "url": "https://doi.org/10.1007/s00193-021-01018-6",
+  "publisher": "Springer Science and Business Media LLC",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2027,
+  "key": "",
+  "type": "journal-article",
+  "title": "A review of three-dimensional shock wave–boundary-layer interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Kshitij",
+    "last": "Sabnis"
+   },
+   {
+    "first": "Holger",
+    "last": "Babinsky"
+   }
+  ],
+  "author_display": "Kshitij Sabnis and Holger Babinsky",
+  "year": "2023",
+  "journal": "Progress in Aerospace Sciences",
+  "journal_abbr": "Progress in Aerospace Sciences",
+  "volume": "143",
+  "issue": "",
+  "pages": "100953",
+  "doi": "10.1016/j.paerosci.2023.100953",
+  "url": "https://doi.org/10.1016/j.paerosci.2023.100953",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The vast majority of shock wave–boundary-layer interactions in practical applications like supersonic aircraft intakes are three dimensional in nature. The complex behaviour of such interactions can generally be understood by combining the flow physics of a limited number of canonical cases. The physical understanding of these flow fields developed by numerous investigators over the last half century is reviewed, focusing predominantly on steady aspects of turbulent, uncontrolled interactions in the transonic and supersonic regimes, i.e. for Mach number less than 5. Key physical features of the flow fields and recent developments are described for swept compression corners, various fin interactions, semi-cones, vertical cylinder-induced interactions, swept oblique shock reflections and flared cylinders. In addition to the canonical geometries, a different type of three dimensionality concerning sidewall effects in duct flows, like intakes or propulsion systems, is also reviewed. The underlying mechanisms, centred on pressure waves propagating from the corner regions, are introduced and the implications for separation unsteadiness and flow control are discussed.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2028,
+  "key": "",
+  "type": "journal-article",
+  "title": "Recent progress in conical shock wave/boundary layer interaction with spanwise pressure gradient",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   },
+   {
+    "first": "Sergio",
+    "last": "Pirozzoli"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo and Sergio Pirozzoli",
+  "year": "2024",
+  "journal": "Propulsion and Power Research",
+  "journal_abbr": "Propulsion and Power Research",
+  "volume": "13",
+  "issue": "3",
+  "pages": "295-318",
+  "doi": "10.1016/j.jppr.2024.08.003",
+  "url": "https://doi.org/10.1016/j.jppr.2024.08.003",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "A common denominator between conical-symmetry and conical shock interaction is the spanwise pressure gradient , which perform more non-uniformity and its interaction flow is more complicated than the spanwise-homogeneous planar shock wave. Recent advances in conical-symmetry and conical shock interactions with turbulent boundary layer are reviewed in specific areas: (i) quasi-conical swept interactions due to compression ramps and sharp fins, (ii) impinging conical shock wave with interactions of plate wall, (iii) laminar double cone interactions with consideration of real-gas effects. Substantial success has been achieved in describing the phenomena of the time averaged and instantaneous flow features and the low-frequency unsteadiness, including correlations and coherent structures in the separation bubble, through complementary experimental and numerical studies of swept shock interactions. All available observations are here scrutinized to infer underlying mechanisms of interactions in conical flow , and provide theoretical foundation and hints for fluidic control techniques. Comparison with high-fidelity direct numerical simulations is used to quantified the uncertainty of RANS turbulence models in complex interactions. Regarding heat transfer, extensive studies of hypersonic flow over double cone geometries have shown that those can be predicted with reasonable accuracy, even in the presence of high-temperature effects.",
+  "notes": [
+   "开放获取（CC BY-NC-ND），但本机未能下载 ScienceDirect/IRIS 正式 PDF；保留 DOI 链接。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2029,
+  "key": "",
+  "type": "journal-article",
+  "title": "Three-dimensional characteristics of separation vortex generated by crossing shock/boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Yi-long",
+    "last": "Zhao"
+   },
+   {
+    "first": "Yong-yi",
+    "last": "Zhou"
+   },
+   {
+    "first": "Yu-xin",
+    "last": "Zhao"
+   }
+  ],
+  "author_display": "Yi-long Zhao, Yong-yi Zhou and Yu-xin Zhao",
+  "year": "2024",
+  "journal": "AIP Advances",
+  "journal_abbr": "",
+  "volume": "14",
+  "issue": "3",
+  "pages": "",
+  "doi": "10.1063/5.0189960",
+  "url": "https://doi.org/10.1063/5.0189960",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Three-dimensional shock/boundary layer interactions (SBLIs) in the hypersonic inlet generate the separation vortex, which affects the flow uniformity of the inlet and can even cause the inlet to unstart. This study experimentally investigates the separation vortex produced by a crossing SBLI in a supersonic quiet wind tunnel. Using a nanoparticle-based planar laser scattering method, the tomography-like three-dimensional structures of the separation vortex on the transverse, streamwise, and horizontal planes are demonstrated. The semi-elliptical separation vortex is formed from a pair of anti-rotating vortices and exhibits eddies around the vortex core; it remains stable in the absence of the expansion effect. Additionally, fractal dimension analysis reveals that the separation vortex core experiences stable streamwise development, while its outer edge is fragmented and dissipated due to the shearing effect of the mainstream. This investigation provides valuable insight for potential flow control to mitigate separation issues in hypersonic inlets.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2030,
+  "key": "",
+  "type": "journal-article",
+  "title": "Görtler Vortices in the Shock Wave/Boundary-Layer Interaction Induced by Curved Swept Compression Ramp",
+  "season": "",
+  "authors": [
+   {
+    "first": "Liang",
+    "last": "Chen"
+   },
+   {
+    "first": "Yue",
+    "last": "Zhang"
+   },
+   {
+    "first": "Juanjuan",
+    "last": "Wang"
+   },
+   {
+    "first": "Hongchao",
+    "last": "Xue"
+   },
+   {
+    "first": "Yixuan",
+    "last": "Xu"
+   },
+   {
+    "first": "Ziyun",
+    "last": "Wang"
+   },
+   {
+    "first": "Huijun",
+    "last": "Tan"
+   }
+  ],
+  "author_display": "Liang Chen et al.",
+  "year": "2024",
+  "journal": "Aerospace",
+  "journal_abbr": "Aerospace",
+  "volume": "11",
+  "issue": "9",
+  "pages": "760",
+  "doi": "10.3390/aerospace11090760",
+  "url": "https://doi.org/10.3390/aerospace11090760",
+  "publisher": "MDPI AG",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "This study builds on previous research into the basic flow structure of a separated curved swept compression ramp shock wave/turbulence boundary layer interaction (CSCR-SWBLI) at the leading edge of an inward-turning inlet. We employ the ice-cluster-based planar laser scattering (IC-PLS) technique, which integrates multiple observation directions and positions, to experimentally investigate a physical model with typical parameter states at a freestream Mach number of 2.85. This study captures the fine structure of some sections of the flow field and identifies the presence of Görtler vortices (GVs) in the CSCR-SWBLI. It is observed that due to the characteristics of variable sweep angle, variable intensity interaction, and centrifugal force, GVs exhibit strong three-dimensional characteristics in the curved section. Additionally, their position is not fixed in the spanwise direction, demonstrating strong intermittence. As the vortices develop downstream, their size gradually increases while the number decreases, always corresponding to the local boundary layer thickness. When considering the effects of coupling of bilateral walls, it is noted that the main difference between double-sided coupling and single-sided uncoupling conditions is the presence of a large-scale vortex in the central plane and an odd number of GVs in the double-sided model. Finally, the existence of GVs in CSCR-SWBLI is verified through the classical determine criteria Görtler number (GT) and Floryan number (F) decision basis.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2031,
+  "key": "",
+  "type": "journal-article",
+  "title": "Three-Dimensional Flow Topology of Double-Fin Shock-Wave/Boundary-Layer Interaction Using Volumetric Velocity Measurements",
+  "season": "",
+  "authors": [
+   {
+    "first": "Serdar",
+    "last": "Seçkin"
+   },
+   {
+    "first": "MyungJun",
+    "last": "Song"
+   },
+   {
+    "first": "Fernando",
+    "last": "Zigunov"
+   },
+   {
+    "first": "Farrukh S.",
+    "last": "Alvi"
+   }
+  ],
+  "author_display": "Serdar Seçkin et al.",
+  "year": "2026",
+  "journal": "Aerospace Science and Technology",
+  "journal_abbr": "Aerospace Science and Technology",
+  "volume": "177",
+  "issue": "",
+  "pages": "112249",
+  "doi": "10.1016/j.ast.2026.112249",
+  "url": "https://doi.org/10.1016/j.ast.2026.112249",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Shock-Wave/Boundary-Layer Interaction (SBLI) poses inherent challenges for supersonic/hypersonic aircraft, including flow separation, unsteady pressure loading, vibration, and engine unstart. A symmetric Double-Fin is a canonical configuration often used in high-speed aircraft components and subsystems, such as vertical tails and ramjet/scramjet inlets. Experiments to investigate SBLI induced by Double-Fin with fin angles of 10 ∘ , 12 ∘ , and 15 ∘ , resulting in increasingly stronger interactions, are conducted at Mach 2. Using Scanning-Stereoscopic Particle Image Velocimetry (S-SPIV), three-dimensional, three-component velocity fields are acquired, facilitating a deeper exploration of highly three-dimensional multi-shock interactions. The evolution of this complex flow, such as the interaction of λ -shocks generated by the fins, is comprehensively examined for improved understanding of the governing flow physics. In particular, the interaction between the front-foot of the reflected-shock and the fin-shock gives rise to a distinct, stronger shock referred to as Shock-Tangle , accompanied by a localized low-velocity region. Three-dimensional slip surfaces are identified at shock–shock intersections, and a streamwise counter-rotating vortex pair forms in the near-wall region downstream of the interaction. Through S-SPIV, key flow features are resolved in unprecedented detail, enabling quantitative comparison of the Double-Fin and Single-Fin flow topologies and revealing differences in quasi-conical symmetry and shock organization. The findings advance the fundamental understanding of fin-generated SBLI, with practical implications for current and next-generation high-speed vehicles.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2032,
+  "key": "",
+  "type": "journal-article",
+  "title": "Relationship between secondary separation and surface pressure structure in swept shock-wave/boundary-layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "T.",
+    "last": "Liu"
+   },
+   {
+    "first": "D. M.",
+    "last": "Salazar"
+   },
+   {
+    "first": "L. J.",
+    "last": "Mears"
+   },
+   {
+    "first": "A.",
+    "last": "Baldwin"
+   }
+  ],
+  "author_display": "T. Liu et al.",
+  "year": "2022",
+  "journal": "Shock Waves",
+  "journal_abbr": "Shock Waves",
+  "volume": "32",
+  "issue": "7",
+  "pages": "665-678",
+  "doi": "10.1007/s00193-022-01102-5",
+  "url": "https://doi.org/10.1007/s00193-022-01102-5",
+  "publisher": "Springer Science and Business Media LLC",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2033,
+  "key": "",
+  "type": "journal-article",
+  "title": "Quasi-Conical Free Interaction in Fin-Induced Shock Wave/Laminar Boundary-Layer Interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Jiss J.",
+    "last": "Sebastian"
+   },
+   {
+    "first": "Frank K.",
+    "last": "Lu"
+   }
+  ],
+  "author_display": "Jiss J. Sebastian and Frank K. Lu",
+  "year": "2021",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA Journal",
+  "volume": "59",
+  "issue": "12",
+  "pages": "4858-4868",
+  "doi": "10.2514/1.j060243",
+  "url": "https://doi.org/10.2514/1.j060243",
+  "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "A numerical study was performed on the three-dimensional interaction between a laminar boundary layer and the shock wave induced by a sharp, unswept fin mounted perpendicularly on a flat plate at freestream Mach numbers of 2.64, 2.95, 3.44, and 3.93. The fin angles were 13, 16, and 19 deg. All the interactions were strong enough for the boundary layer to separate, and the separated flow features displayed a quasi-conical nature emanating from a virtual conical origin. The concept of quasi-conical fin-induced interactions, initially developed for turbulent interactions, was used to extend the free interaction theory to three-dimensional laminar interactions considered in the present study. The well-established scaling functions in free interaction theory were extended, and the results were found to agree reasonably with the theoretical trend. Surface-pressure distributions were plotted for the different cases studied and were found to have a plateau and dip that is typical of separated flows. The overlapping of the scaled pressure distributions reinforced the concept of quasi-conical free interactions for the range of Mach numbers and fin angles considered.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2034,
+  "key": "",
+  "type": "journal-article",
+  "title": "Influence of Finite Width of Shock Generator on Shock-Wave/Boundary-Layer Interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Surya Prakash",
+    "last": "Baskaran"
+   },
+   {
+    "first": "T. M.",
+    "last": "Muruganandam"
+   }
+  ],
+  "author_display": "Surya Prakash Baskaran and T. M. Muruganandam",
+  "year": "2021",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA Journal",
+  "volume": "59",
+  "issue": "9",
+  "pages": "3387-3397",
+  "doi": "10.2514/1.j060076",
+  "url": "https://doi.org/10.2514/1.j060076",
+  "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The influence of a finite-width shock generator on the incident shock in the impinging shock-wave/boundary-layer interaction is investigated using different widths of the shock generator. The shock-wave generator widths are kept at 80, 50, and 20% of the total width of the bottom wall. A highly three-dimensional incident oblique shock wave is observed. Experimental and numerical studies are used to understand the nature of three-dimensional shock downstream of the leading edge of the shock generator. The incident shock curved downstream in the streamwise and spanwise directions, and the curvature increased with the decreasing width of the shock generator. The local strength of the incident shock at the bottom wall varied significantly due to this curvature for each of the cases. Consequently, even for shock generators with the same flow deflection, the shock-wave/boundary-layer interaction nature transitioned from separated to unseparated. An explanation and a model for the three-dimensionality of the incident shock are presented, and numerical simulations validate the model. The model shows that the shape of the incident shock is a function of the freestream Mach number, the flow deflection angle, and the width of the shock generator.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2035,
+  "key": "",
+  "type": "journal-article",
+  "title": "Analysis of a swept impinging shock-turbulent boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Thomas",
+    "last": "Bergier"
+   },
+   {
+    "first": "Stéphane",
+    "last": "Jamme"
+   },
+   {
+    "first": "Jérémie",
+    "last": "Gressier"
+   },
+   {
+    "first": "Romain",
+    "last": "Gojon"
+   },
+   {
+    "first": "Laurent",
+    "last": "Joly"
+   }
+  ],
+  "author_display": "Thomas Bergier et al.",
+  "year": "2026",
+  "journal": "Physical Review Fluids",
+  "journal_abbr": "Phys. Rev. Fluids",
+  "volume": "11",
+  "issue": "2",
+  "pages": "",
+  "doi": "10.1103/8pky-fnkx",
+  "url": "https://doi.org/10.1103/8pky-fnkx",
+  "publisher": "American Physical Society (APS)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "We study how the presence of a sweep angle affects the behavior of a shock-boundarylayer interaction. The study is carried out using spanwise-periodic Large-eddy Simulationswith a freestream Mach number of M= 2.7 and a Reynolds number based on the mo-mentum thickness of Reθ ≃ 3200. Several sweep angle values are investigated, namely,β= 0◦, 15◦, 20◦, and 40◦. The mean flow is first analyzed, showing an enlargement of theseparation area, both in longitudinal and wall-normal directions when the sweep angleis increased. Strong flow deviation is also recovered downstream of the reattachmentpoint for swept cases. With regard to the unsteady dynamics of the interaction, energyis found near the mean separation location for intermediate frequencies (corresponding toa Strouhal number StLsep ≈ 0.15 for β= 15◦ and 20◦ and StLsep ≈ 0.23 for β= 40◦ in the wide domain). The latter are significantly higher than the very low frequencies(0.01 < StLsep < 0.1) usually associated with the unswept interaction. We relate theseintermediate frequencies to spanwise-traveling structures, using the Proper OrthogonalDecomposition of velocity fluctuations in a volume located around the interaction region.The influence of the spanwise extent of the computational domain is also examined. Thisleads to the conclusion that a sufficiently wide computational domain is necessary toallow for the development of these structures and the appearance of the aforementionedintermediate frequencies.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2036,
+  "key": "",
+  "type": "journal-article",
+  "title": "Separation Criterion in Hypersonic Swept Shock Wave/Turbulent Boundary Layer Interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Si-Qi",
+    "last": "Wang"
+   },
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   }
+  ],
+  "author_display": "Si-Qi Wang and Feng-Yuan Zuo",
+  "year": "2026",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA Journal",
+  "volume": "64",
+  "issue": "4",
+  "pages": "1795-1812",
+  "doi": "10.2514/1.j065924",
+  "url": "https://doi.org/10.2514/1.j065924",
+  "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The flow characteristics of fin-induced hypersonic swept-shock-wave/turbulent-boundary-layer interaction have been studied at a Mach number of [Formula: see text] and a moderate inflow Reynolds number of [Formula: see text]. By means of Reynolds-averaged Navier–Stokes (RANS), the interactions have been systematically analyzed under different cooled-wall conditions. Generally, the flow exhibits quasi-conical symmetry and reveals a complex separation structure, including primary and secondary separation regions. Both separation and reattachment behaviors can be quantified based on the proposed key parameters. The wall thermal effects have been discussed, and the findings exhibit a certain thermal sensitivity. As the temperature decreases, the separation region is weakened, and quasi-conical symmetry is more difficult to achieve. The primary separation seems to be less sensitive to the wall thermal condition, while the secondary separation region displays non-monotonic temperature dependence, whose size initially increases and then decreases as the temperature rises. The separation behavior is discussed in detail, including the flow features at different stages for primary and secondary separations. The high-pressure region around the primary reattachment would affect the reverse-flow region, causing acceleration and near-wall-normal shock, which would finally result in secondary separation.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2037,
+  "key": "",
+  "type": "journal-article",
+  "title": "Analysis of Free-Interaction Theory in Swept Shock Wave/Turbulent Boundary Layer Interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Si-Qi",
+    "last": "Wang"
+   },
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   }
+  ],
+  "author_display": "Si-Qi Wang and Feng-Yuan Zuo",
+  "year": "2025",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA Journal",
+  "volume": "63",
+  "issue": "5",
+  "pages": "1716-1731",
+  "doi": "10.2514/1.j064700",
+  "url": "https://doi.org/10.2514/1.j064700",
+  "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The flow structures of swept shock wave/turbulent boundary layer interactions are parametrically studied over the sharp fin and swept compression ramp, by means of the Reynolds-averaged Navier–Stokes equation at the same moderate Reynolds number. The general flow characteristics and quasi-conical symmetry are presented in the context of a spherical coordinate system for clarity. The commonality of these two flow patterns is performed at the same incoming conditions of Mach number [Formula: see text]. The quasi-conical symmetry of wall-surface pressure is discussed. Besides, a mathematical formula of wall pressure makes an acceptable agreement with the numerical results in the spherical coordinate system, providing a potential mathematical method for rapid prediction of wall pressure. Finally, the derivation of free-interaction theory is extended on the polar coordinate system to describe the swept interaction, and its independence from radial position is also verified. All numerical data collapse well with theoretical line for the pressure jump across the separation. Hence, the extension of free-interaction theory is also applicable to the swept shock wave/turbulent boundary layer interaction.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2038,
+  "key": "",
+  "type": "journal-article",
+  "title": "Direct numerical simulation of conical shock wave–turbulent boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   },
+   {
+    "first": "Antonio",
+    "last": "Memmolo"
+   },
+   {
+    "first": "Guo-ping",
+    "last": "Huang"
+   },
+   {
+    "first": "Sergio",
+    "last": "Pirozzoli"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo et al.",
+  "year": "2019",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "877",
+  "issue": "",
+  "pages": "167-195",
+  "doi": "10.1017/jfm.2019.558",
+  "url": "https://doi.org/10.1017/jfm.2019.558",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Direct numerical simulation of the Navier–Stokes equations is carried out to investigate the interaction of a conical shock wave with a turbulent boundary layer developing over a flat plate at free-stream Mach number $M_{\\infty }=2.05$ and Reynolds number $Re_{\\unicode[STIX]{x1D703}}\\approx 630$ , based on the upstream boundary layer momentum thickness. The shock is generated by a circular cone with half opening angle $\\unicode[STIX]{x1D703}_{c}=25^{\\circ }$ . As found in experiments, the wall pressure exhibits a distinctive N-wave signature, with a sharp peak right past the precursor shock generated at the cone apex, followed by an extended zone with favourable pressure gradient, and terminated by the trailing shock associated with recompression in the wake of the cone. The boundary layer behaviour is strongly affected by the imposed pressure gradient. Streaks are suppressed in adverse pressure gradient (APG) zones, but re-form rapidly in downstream favourable pressure gradient (FPG) zones. Three-dimensional mean flow separation is only observed in the first APG region associated with the formation of a horseshoe vortex, whereas the second APG region features an incipient detachment state, with scattered spots of instantaneous reversed flow. As found in canonical geometrically two-dimensional wedge-generated shock–boundary layer interactions, different amplification of the turbulent stress components is observed through the interacting shock system, with approach to an isotropic state in APG regions, and to a two-component anisotropic state in FPG. The general adequacy of the Boussinesq hypothesis is found to predict the spatial organization of the turbulent shear stresses, although different eddy viscosities should be used for each component, as in tensor eddy-viscosity models, or in full Reynolds stress closures.",
+  "notes": [
+   "本地 PDF 为 arXiv:1809.01439 预印本（2018-09-05）；正式出版版本为 J. Fluid Mech. 877:167–195。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1017_jfm.2019.558.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2039,
+  "key": "",
+  "type": "journal-article",
+  "title": "Numerical investigations on interactions between 2D/3D conical shock wave and axisymmetric boundary layer at Ma=2.2",
+  "season": "",
+  "authors": [
+   {
+    "first": "Yihui",
+    "last": "Weng"
+   },
+   {
+    "first": "Qin",
+    "last": "Li"
+   },
+   {
+    "first": "Guozhuo",
+    "last": "Tan"
+   },
+   {
+    "first": "Wei",
+    "last": "Su"
+   },
+   {
+    "first": "Yancheng",
+    "last": "You"
+   }
+  ],
+  "author_display": "Yihui Weng et al.",
+  "year": "2024",
+  "journal": "Aerospace Science and Technology",
+  "journal_abbr": "Aerospace Science and Technology",
+  "volume": "144",
+  "issue": "",
+  "pages": "108769",
+  "doi": "10.1016/j.ast.2023.108769",
+  "url": "https://doi.org/10.1016/j.ast.2023.108769",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1016_j.ast.2023.108769.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2040,
+  "key": "",
+  "type": "preprint",
+  "title": "Hypersonic Shock-Wave/Boundary-Layer Interaction on a Three-Dimensional Expansion-Compression Geometry",
+  "season": "",
+  "authors": [
+   {
+    "first": "Anshuman",
+    "last": "Pandey"
+   },
+   {
+    "first": "Katya",
+    "last": "Casper"
+   },
+   {
+    "first": "Steven",
+    "last": "Beresh"
+   },
+   {
+    "first": "Rajkumar",
+    "last": "Bhakta"
+   },
+   {
+    "first": "Marie",
+    "last": "De Zetter"
+   },
+   {
+    "first": "Russell",
+    "last": "Spillers"
+   }
+  ],
+  "author_display": "Anshuman Pandey et al.",
+  "year": "2026",
+  "journal": "arXiv preprint",
+  "journal_abbr": "arXiv",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "10.48550/arXiv.2606.19592",
+  "url": "https://arxiv.org/abs/2606.19592",
+  "publisher": "arXiv",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "This experimental work explores the flow field around a three-dimensional expansion-compression geometry on a slender cone at Mach 5 and 8 using high-frequency pressure sensors, high-framerate schlieren, temperature-sensitive paint, shear-stress measurements and oil-flow visualizations. The $7^\\circ$ cone geometry has a hyperbolic slice acting as an expansion corner which is then followed by a $30^\\circ$ finite-span compression ramp. The freestream Reynolds number was varied so that the boundary layer approaching the expansion corner was either laminar, transitional or turbulent. At laminar or early transitional conditions, the separation shock locks onto the expansion corner and the separation region encompasses most of the slice, with the separation shear layer flapping at a preferred frequency. As Reynolds number is increased, the separation shock moves downstream onto the slice, the separation bubble shrinks, and the shear layer flapping frequency increases while its amplitude drops. In all cases, large-scale low-frequency breathing motions are observed. The strong relaminarization across the expansion corner at Mach 8 prevents the shock/boundary-layer interaction from reaching truly turbulent conditions and fundamentally changes its behavior on this non-canonical geometry.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2041,
+  "key": "",
+  "type": "journal-article",
+  "title": "Interaction Length Analysis of Hypersonic Shock–Boundary-Layer Interaction Including High-Enthalpy Effects",
+  "season": "",
+  "authors": [
+   {
+    "first": "Harsha",
+    "last": "Rathi"
+   },
+   {
+    "first": "Krishnendu",
+    "last": "Sinha"
+   }
+  ],
+  "author_display": "Harsha Rathi and Krishnendu Sinha",
+  "year": "2024",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA Journal",
+  "volume": "62",
+  "issue": "12",
+  "pages": "4500-4517",
+  "doi": "10.2514/1.j064204",
+  "url": "https://doi.org/10.2514/1.j064204",
+  "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Shock-induced flow separation plays an important role in practical applications of hypersonic flows, like intake unstart and unsteady aeroelastic phenomena. The size of the shock–boundary-layer interaction (SBLI) region determines the extent of choking in engine inlet ducts. Recent scaling studies have shown that interaction length is a function of shock-induced pressure jump, upstream Mach number, Reynolds number, wall heating/cooling, and flow deflection angle at the shock wave. In this work, we analyze the interaction length scaling for different hypersonic SBLI cases at varying flow enthalpies. We perform Reynolds-averaged Navier–Stokes (RANS) simulations, using a shock-strength-dependent turbulence model, of hypersonic SBLI flows over a range of Mach numbers and at flow enthalpies where vibrational nonequilibrium starts to be important. The numerical results closely match the experimental data, validating the RANS predictions. The size of the separation bubble in such high-enthalpy cases is found to not follow the known scaling relations. We propose a modified scaling that collapses a wide range of hypersonic Mach numbers and freestream enthalpy conditions. We also derive the high-Mach-number limit to demonstrate that wall cooling/heating and geometry are the main factors affecting the size of the SBLI region in hypersonic flows.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2042,
+  "key": "",
+  "type": "journal-article",
+  "title": "Scaling of interaction lengths for hypersonic shock wave/turbulent boundary layer interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Yuting",
+    "last": "HONG"
+   },
+   {
+    "first": "Zhufei",
+    "last": "LI"
+   },
+   {
+    "first": "Jiming",
+    "last": "YANG"
+   }
+  ],
+  "author_display": "Yuting HONG, Zhufei LI and Jiming YANG",
+  "year": "2021",
+  "journal": "Chinese Journal of Aeronautics",
+  "journal_abbr": "Chinese Journal of Aeronautics",
+  "volume": "34",
+  "issue": "5",
+  "pages": "504-509",
+  "doi": "10.1016/j.cja.2020.12.028",
+  "url": "https://doi.org/10.1016/j.cja.2020.12.028",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The interaction length induced by Shock Wave/Turbulent Boundary-Layer Interactions (SWTBLIs) in the hypersonic flow was investigated using a scaling analysis, in which the interaction length normalized by the displacement thickness of boundary layer was correlated with a corrected non-dimensional separation criterion across the interaction after accounting for the wall temperature effects. A large number of hypersonic SWTBLIs were compiled to examine the scaling analysis over a wide range of Mach numbers, Reynolds numbers, and wall temperatures. The results indicate that the hypersonic SWTBLIs with low Reynolds numbers collapse on the supersonic SWTBLIs, while the hypersonic cases with high Reynolds numbers show a more rapid growth of the interaction length than that with low Reynolds numbers. Thus, two scaling relationships are identified according to different Reynolds numbers for the hypersonic SWTBLIs. The scaling analysis provides valuable guidelines for engineering prediction of the interaction length, and thus, enriches the knowledge of hypersonic SWTBLIs.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2043,
+  "key": "",
+  "type": "journal-article",
+  "title": "The scaling of separation bubble in the conical shock wave/turbulent boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo",
+  "year": "2021",
+  "journal": "Acta Astronautica",
+  "journal_abbr": "Acta Astronautica",
+  "volume": "186",
+  "issue": "",
+  "pages": "418-425",
+  "doi": "10.1016/j.actaastro.2021.06.010",
+  "url": "https://doi.org/10.1016/j.actaastro.2021.06.010",
+  "publisher": "Elsevier BV",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [
+   "出版商付费，无本地全文；摘要未在公开题录中获取，内容依据题目与期刊元数据。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2044,
+  "key": "",
+  "type": "journal-article",
+  "title": "Unsteady effects in a hypersonic compression ramp flow with laminar separation",
+  "season": "",
+  "authors": [
+   {
+    "first": "Shibin",
+    "last": "Cao"
+   },
+   {
+    "first": "Jiaao",
+    "last": "Hao"
+   },
+   {
+    "first": "Igor",
+    "last": "Klioutchnikov"
+   },
+   {
+    "first": "Herbert",
+    "last": "Olivier"
+   },
+   {
+    "first": "Chih-Yung",
+    "last": "Wen"
+   }
+  ],
+  "author_display": "Shibin Cao et al.",
+  "year": "2021",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "912",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2020.1093",
+  "url": "https://doi.org/10.1017/jfm.2020.1093",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Abstract",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2045,
+  "key": "",
+  "type": "journal-article",
+  "title": "Onset of separation unsteadiness in hypersonic shock–boundary-layer interaction on a cone-step",
+  "season": "",
+  "authors": [
+   {
+    "first": "Chase",
+    "last": "Jenquin"
+   },
+   {
+    "first": "Eric",
+    "last": "Cui"
+   },
+   {
+    "first": "Anubhav",
+    "last": "Dwivedi"
+   },
+   {
+    "first": "G.S.",
+    "last": "Sidharth"
+   },
+   {
+    "first": "Joseph S.",
+    "last": "Jewell"
+   }
+  ],
+  "author_display": "Chase Jenquin et al.",
+  "year": "2026",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "1033",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2026.11284",
+  "url": "https://doi.org/10.1017/jfm.2026.11284",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Shock–boundary-layer interactions on hypersonic cone-step flows exhibit a range of intrinsic unsteady behaviours, from shear-layer oscillations to large-scale pulsations. This work investigates the unsteadiness in a cone-step geometry at Mach 6 under quiet-flow conditions at different free-stream Reynolds numbers using time-resolved schlieren imaging and spectral proper orthogonal decomposition. Experimental results are compared with high-fidelity axisymmetric and three-dimensional simulations. Results demonstrate regime transition in the parameter space, across the unsteadiness boundary, all the way from shear-layer breakdown to shock system oscillations and ultimately to large-amplitude pulsations. The dominant mode in the experiments and the simulations corresponds to a Strouhal number St $\\approx 0.17$ for small oscillations reducing to St $ \\approx 0.13$ for large pulsations. A detailed description of the unsteady shock dynamics and an analysis of the nonlinear limit cycle is presented.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1017_jfm.2026.11284.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2046,
+  "key": "",
+  "type": "journal-article",
+  "title": "On low-frequency unsteadiness in shock-wave–turbulent boundary layer interaction with varying corner curvature",
+  "season": "",
+  "authors": [
+   {
+    "first": "Yujoo",
+    "last": "Kang"
+   },
+   {
+    "first": "Sang",
+    "last": "Lee"
+   }
+  ],
+  "author_display": "Yujoo Kang and Sang Lee",
+  "year": "2026",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "1036",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1017/jfm.2026.11644",
+  "url": "https://doi.org/10.1017/jfm.2026.11644",
+  "publisher": "Cambridge University Press (CUP)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The physical mechanism of low-frequency unsteadiness in shock-wave/turbulent boundary layer interaction (STBLI) is studied using direct numerical simulations at Mach 2.9 with momentum-thickness Reynolds number ${\\textit{Re}}_\\theta \\approx 2400$ over three ramp configurations with varying corner curvature. The configurations include a sharp $24^\\circ$ compression ramp (R24) and two curved ramps with radii of 7 (C7) and 14 (C14) times the boundary layer thickness. By varying the ramp curvature, the extent of separation is controlled while maintaining sufficient streamline concavity to ensure that the Görtler number remains above its critical threshold. Cases R24 and C7 exhibit a mean separation with a detached shear layer accompanied by pronounced low-frequency unsteadiness, whereas C14 shows only incipient separation with markedly attenuated low-frequency unsteadiness. Sparsity-promoting dynamic mode decomposition reveals the emergence and downstream growth of counter-rotating structures in both low- and mid-frequency bands in all cases. In R24 and C7, these structures undergo growth and merging within the detached shear layer, giving rise to large-scale low-frequency motion, while in C14, their growth remains gradual and largely frequency-independent. The interactions between the counter-rotating structures and detached shear layer redistribute energy toward lower wavenumbers with a reduction at mid-wavenumbers. During this phase, the streamwise enstrophy dominates the enstrophy magnitude. Enstrophy transport analysis shows that the wall-normal-to-streamwise enstrophy tilting dominates the initial generation of streamwise enstrophy, whereas stretching is the primary source of the subsequent downstream growth and alignment. The results suggest that the interaction between the detached shear layer and counter-rotating structures develops into large-scale structures that govern the low-frequency unsteadiness in STBLI.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\10.1017_jfm.2026.11644.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2047,
+  "key": "",
+  "type": "journal-article",
+  "title": "Hypersonic Shock Wave/Turbulent Boundary Layer Interaction over a Compression Ramp",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo",
+  "year": "2023",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA Journal",
+  "volume": "61",
+  "issue": "4",
+  "pages": "1579-1595",
+  "doi": "10.2514/1.j062521",
+  "url": "https://doi.org/10.2514/1.j062521",
+  "publisher": "American Institute of Aeronautics and Astronautics (AIAA)",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "A parametric study of ramp-induced planar shock-wave/turbulent-boundary-layer interactions (SBLIs) is carried out at hypersonic conditions (Mach number 6.0) by means of numerical simulation of the Reynolds-averaged Navier–Stokes (RANS) equations, with the eventual goal of establishing wall temperature and Reynolds number effects. Comparison with available experimental data shows that RANS is capable of predicting the main features of hypersonic oblique SBLI, namely, typical size and distribution of the wall-surface pressure, and heat transfer. A large number of flow cases, at low ([Formula: see text]) and high Reynolds number ([Formula: see text]), were computed to examine the scaling of the heat transfer over a wide range of wall temperatures. As expected, the interaction zone of hypersonic ramp-induced SBLI is reduced as the wall is cooled. A simple power law for heat transfer originally introduced by Back and Cuffel (AIAA Journal, Vol. 8, No. 10, 1970, pp. 1871–1873) is here considered to account for hypersonic ramp-induced SBLI, which is found to successfully collapse the data to the distributions obtained for supersonic, cold/hot interactions.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2048,
+  "key": "",
+  "type": "journal-article",
+  "title": "Effect of Mach number on shock wave/turbulent boundary layer interaction over a hypersonic compression corner",
+  "season": "",
+  "authors": [
+   {
+    "first": "Xiaohang",
+    "last": "Dai"
+   },
+   {
+    "first": "Xiangxin",
+    "last": "Ji"
+   },
+   {
+    "first": "Xinliang",
+    "last": "Li"
+   },
+   {
+    "first": "Chuanhong",
+    "last": "Zhang"
+   },
+   {
+    "first": "Changping",
+    "last": "Yu"
+   }
+  ],
+  "author_display": "Xiaohang Dai et al.",
+  "year": "2026",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "",
+  "volume": "38",
+  "issue": "7",
+  "pages": "",
+  "doi": "10.1063/5.0329426",
+  "url": "https://doi.org/10.1063/5.0329426",
+  "publisher": "AIP Publishing",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "This paper adopts direct numerical simulation to investigate the effect of Mach number on shock wave/turbulent boundary layer interaction over a hypersonic compression corner with inflow Mach numbers Ma∞=3,5,7. It systematically characterizes the flow phenomena in the interaction region at different inflow Mach numbers, including the flow structure and the evolution of the turbulent boundary layer. The mean skin friction decomposition method is employed to investigate the impact of Mach number on skin friction generation in the interaction region. Additionally, bidimensional empirical mode decomposition (BEMD) is used to quantify how turbulent structures with different spanwise scales contribute to wall friction. The results indicate that an increase in the inflow Mach number shrinks the size of the separation zone, causes the main shock wave closer to the wall, and suppresses the development of the downstream turbulent boundary layer. Furthermore, increasing the Mach number suppresses the turbulence amplification caused by the interaction. To explain these observations, the transport equation of the turbulent kinetic energy (TKE) is analyzed. It is found that the turbulence production term primarily contributes to the TKE generation in the separation zone, and both the turbulence production term and the TKE gradually decrease as the inflow Mach number increases. Additionally, friction decomposition research conducted under varying flow conditions indicates that the turbulence-related term is a dominant contributor to skin friction. BEMD is utilized to decompose the turbulence-related term into four modes with specific spanwise scales. The results indicate that wall friction upstream of the corner is primarily influenced by small-scale structures near the wall. In contrast, wall friction in the interaction and reattachment region is dominated by large-scale structures in the outer region.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 稳定性与湍流"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2049,
+  "key": "",
+  "type": "journalArticle",
+  "title": "On wall pressure fluctuations in conical shock wave/turbulent boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   },
+   {
+    "first": "Antonio",
+    "last": "Memmolo"
+   },
+   {
+    "first": "Sergio",
+    "last": "Pirozzoli"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo, Antonio Memmolo and Sergio Pirozzoli",
+  "year": "2023",
+  "journal": "Journal of Fluid Mechanics",
+  "journal_abbr": "J. Fluid Mech.",
+  "volume": "967",
+  "issue": "",
+  "pages": "A3",
+  "doi": "10.1017/jfm.2023.480",
+  "url": "https://doi.org/10.1017/jfm.2023.480",
+  "publisher": "Cambridge University Press",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The structure and the frequency spectra of wall pressure fluctuations beneath a planar turbulent boundary layer interacting with a conical shock wave at Mach number M∞ = 2.05 and Reynolds number Reθ ≈ 630 (based on the upstream boundary layer momentum thickness) are examined to elucidate the effects of pressure gradient and flow separation on the characteristics of the wall pressure fluctuations, by exploiting a direct numerical simulation database. Upstream of the interaction, in the zero pressure gradient region, wall pressure statistics compare well with canonical compressible boundary layers in terms of fluctuation intensities and frequency spectra. Across the main interaction zone (APG1), the root-mean-square of wall pressure fluctuations becomes very large (corresponding to approximately 173.3 dB), with maximum increase approximately 12.7 dB from the incoming level. In the second adverse pressure gradient zone (APG2), the root-mean-square of wall pressure fluctuations attains a second peak (corresponding to 164.7 dB), with an increase of 8.4 dB from the upstream level. Both the APG1 and APG2 regions feature a substantial fraction of flow reversal events, which are, however, scattered and interspersed with regions of attached flow. The wall pressure power spectral density exhibits a broadband and energetic low-frequency component associated with the global unsteadiness of the separation bubble/conical shock system. Analysis of the two-point correlations and wavenumber/frequency spectra of wall pressure fluctuations further suggests that the typical eddies become more elongated along the spanwise direction, as the flow in the separated region tends to escape the centreline, and the convection velocity is significantly reduced.",
+  "notes": [
+   "开放获取（CC BY 4.0）；本地 PDF 为 Cambridge University Press 正式版。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\2049_Zuo_2023_JFM_wall_pressure.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2050,
+  "key": "",
+  "type": "conferencePaper",
+  "title": "CFD Validation Experiment of a Mach 2.5 Axisymmetric Shock-Wave/Boundary-Layer Interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "David O.",
+    "last": "Davis"
+   }
+  ],
+  "author_display": "David O. Davis",
+  "year": "2015",
+  "journal": "Proceedings of the ASME-JSME-KSME Joint Fluids Engineering Conference 2015",
+  "journal_abbr": "AJKFluids 2015",
+  "volume": "1",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1115/AJKFLUIDS2015-6342",
+  "url": "https://ntrs.nasa.gov/citations/20150015493",
+  "publisher": "American Society of Mechanical Engineers",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Preliminary results of an experimental investigation of a Mach 2.5 two-dimensional axisymmetric shock-wave/boundary-layer interaction (SWBLI) are presented. The purpose of the investigation is to create a SWBLI dataset specifically for CFD validation purposes. Presented herein are the details of the facility and preliminary measurements characterizing the facility and interaction region. These results will serve to define the region of interest where more detailed mean and turbulence measurements will be made.",
+  "notes": [
+   "NASA NTRS 标记为开放获取；本机脚本访问 NTRS 返回 403，未能下载，保留官方链接。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2051,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Interaction Between a Conical Shock Wave and a Plane Turbulent Boundary Layer",
+  "season": "",
+  "authors": [
+   {
+    "first": "S. L.",
+    "last": "Gai"
+   },
+   {
+    "first": "S. L.",
+    "last": "Teh"
+   }
+  ],
+  "author_display": "S. L. Gai and S. L. Teh",
+  "year": "2000",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA J",
+  "volume": "38",
+  "issue": "5",
+  "pages": "804-811",
+  "doi": "10.2514/2.1060",
+  "url": "https://doi.org/10.2514/2.1060",
+  "publisher": "American Institute of Aeronautics and Astronautics",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "An investigation into the interaction between an incident conical shock wave and a plane two-dimensional turbulent boundary layer is reported. The study provides information on the interaction pattern and the surface flow field under both attached and separated flow conditions. The existence of significant pressure gradients in the spanwise direction after the shock leads to strong crossflows. A horseshoe pattern of separation whose strength and size are reduced away from the plane of symmetry is identified. The interaction produces upstream influence, which is curved as a result of decreasing influence of the conical shock away from the plane of symmetry. Incipient separation is inferred, and it is shown that criteria for its existence are similar to other three-dimensional interactions.",
+  "notes": [
+   "出版商付费，无本地全文；摘要据 OpenAlex/Crossref 题录整理。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2052,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Modal Analysis of Separation Bubble Unsteadiness in Conical Shock Wave/Turbulent Boundary Layer Interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   },
+   {
+    "first": "Ming",
+    "last": "Yu"
+   },
+   {
+    "first": "Sergio",
+    "last": "Pirozzoli"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo, Ming Yu and Sergio Pirozzoli",
+  "year": "2022",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA J",
+  "volume": "60",
+  "issue": "9",
+  "pages": "5123-5135",
+  "doi": "10.2514/1.J061855",
+  "url": "https://doi.org/10.2514/1.J061855",
+  "publisher": "American Institute of Aeronautics and Astronautics",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The frequency properties and the typical flow features within the interaction zone in conical shock-wave/turbulent boundary-layer interactions (CSBLIs) are analyzed by performing proper orthogonal decomposition (POD) and dynamic mode decomposition (DMD) on a time-resolved direct numerical simulation database. The streamwise velocity and pressure fluctuations are processed according to their energy and frequency, respectively. As is the case of planar shock-wave/boundary-layer interactions, fluctuations in some bands of frequencies are more energetic downstream of the flow separation zone. The energetic low-frequency modes of the streamwise velocity fluctuations are reminiscent of Görtler-like vortices, whereas those of pressure fluctuations are connected with the “breathing” motion of the separation bubble. Higher-frequency modes, on the other hand, are related to wrinkling of the impinging conical shock. Although they bear resemblance with those in planar shock/turbulent boundary-layer interactions, it was found that the flow structures herein are less coherent owing to spanwise inhomogeneity of the impinging shock strength. The POD and DMD results of CSBLI support the notion that Görtler-like vortices might be an intrinsic mechanism of the interaction zone, which is probably responsible for the low-frequency unsteadiness of CSBLI. The present results may serve as a basic guidance for the design of fluidic control strategies of shock-induced flow separation.",
+  "notes": [
+   "出版商付费，无本地全文；摘要来自 OpenAlex 题录。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2053,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Hypersonic Conical Shock-Wave/Turbulent-Boundary-Layer Interaction at High Reynolds Number",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo",
+  "year": "2023",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA J",
+  "volume": "61",
+  "issue": "9",
+  "pages": "3743-3760",
+  "doi": "10.2514/1.J062953",
+  "url": "https://doi.org/10.2514/1.J062953",
+  "publisher": "American Institute of Aeronautics and Astronautics",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "A parametric study of hypersonic impinging conical-shock-wave/turbulent-boundary-layer interaction (CSBLI) is carried out at hypersonic high-Reynolds-number conditions (Mach number 6.0, Reynolds number based on the freestream momentum boundary-layer thickness and wall viscosity) by means of numerical simulation of the Reynolds-averaged Navier–Stokes (RANS) equations, with the eventual goal of establishing wall temperature effects. Comparison with available experimental data shows that RANS is capable of predicting the main features of hypersonic oblique shock-wave/turbulent-boundary-layer interaction, namely, typical size and distribution of the wall properties. A large number of flow cases, especially at high Reynolds number, were computed to examine the scaling of the heat transfer over a wide range of wall temperatures. As expected, the interaction zone of hypersonic CSBLI is reduced as the wall is cooled. A simple power of heat transfer originally introduced by Back and Cuffel for planar shock-induced interactions is here considered to account for hypersonic CSBLIs, which is found to successfully collapse the data to the distributions obtained for supersonic/hypersonic, cold/hot interactions. The value range of the power exponent is within 0.75–0.95.",
+  "notes": [
+   "出版商付费，无本地全文；摘要来自 OpenAlex 题录。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2054,
+  "key": "",
+  "type": "conferencePaper",
+  "title": "Numerical Simulations of an Axisymmetric Shock-Wave/Boundary-Layer Interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "David J.",
+    "last": "Friedlander"
+   },
+   {
+    "first": "Nicholas J.",
+    "last": "Georgiadis"
+   },
+   {
+    "first": "Layton W.",
+    "last": "Howerton"
+   },
+   {
+    "first": "Heath H.",
+    "last": "Reising"
+   }
+  ],
+  "author_display": "David J. Friedlander, Nicholas J. Georgiadis, Layton W. Howerton and Heath H. Reising",
+  "year": "2025",
+  "journal": "AIAA SCITECH 2025 Forum",
+  "journal_abbr": "AIAA SciTech 2025",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "10.2514/6.2025-2065",
+  "url": "https://doi.org/10.2514/6.2025-2065",
+  "publisher": "American Institute of Aeronautics and Astronautics",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "A series of Reynolds-averaged Navier-Stokes (RANS) simulations were performed of two Mach 2.5 axisymmetric shock-wave/boundary-layer interactions (SWBLIs) based off the NASA Turbulent Computational Fluid Dynamics Validation Experiment (TCFDVE). The goals of the simulations were to (1) determine how well RANS can predict the flow physics of an axisymmetric SWBLI and (2) generate a new validation case for the NASA Turbulence Modeling Resource (TMR). The simulations were run with two different turbulence models and three different computational fluid dynamics (CFD) codes while looking at two different conical shock generator angles, one of which was shown to cause flow separation in the experiment. The results in this paper show that, as expected, the CFD simulations agreed well with each other and the experiment when SWBLI-induced separation was not present. When separation was present, differences in the predicted separation characteristics were noted in comparison to experimental measurements. These included a stronger interaction and subsequently longer separation extent for the Menter Shear-Stress Transport k-ω (SST) turbulence model simulations compared to both the Spalart-Allmaras (SA) turbulence model simulations and the experiment.",
+  "notes": [
+   "AIAA SciTech 会议论文，出版商付费，无本地全文；摘要来自 OpenAlex 题录。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2055,
+  "key": "",
+  "type": "conferencePaper",
+  "title": "Shock-induced three-dimensional separation of an axisymmetric hypersonic turbulent boundary layer",
+  "season": "",
+  "authors": [
+   {
+    "first": "R.",
+    "last": "Boyce"
+   },
+   {
+    "first": "R.",
+    "last": "Hillier"
+   }
+  ],
+  "author_display": "R. Boyce and R. Hillier",
+  "year": "2000",
+  "journal": "Fluids 2000 Conference and Exhibit",
+  "journal_abbr": "AIAA 2000-2226",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "10.2514/6.2000-2226",
+  "url": "https://doi.org/10.2514/6.2000-2226",
+  "publisher": "American Institute of Aeronautics and Astronautics",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Measurements of axisymmetric and three-dimensional shock interactions with an axisymmetric high Mach number (M ≈ 9), high Reynolds number (Re ≈ 50×10^6/m) turbulent boundary layer have been made. Both attached and separated flows were investigated. Axisymmetric CFD computations using the Baldwin-Lomax turbulence model generated good agreement with the experimental data where the flow was attached, but poor where it was separated. The three-dimensional separated flow exhibits a reversal in the separation upstream edge location as a function of circumferential position.",
+  "notes": [
+   "AIAA 会议论文，出版商付费，无本地全文；摘要来自 OpenAlex 题录。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2056,
+  "key": "",
+  "type": "bookSection",
+  "title": "Axisymmetric separated shock-wave boundary-layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "N.",
+    "last": "Murray"
+   },
+   {
+    "first": "R.",
+    "last": "Hillier"
+   }
+  ],
+  "author_display": "N. Murray and R. Hillier",
+  "year": "2009",
+  "journal": "Shock Waves",
+  "journal_abbr": "Shock Waves",
+  "volume": "",
+  "issue": "",
+  "pages": "1225-1230",
+  "doi": "10.1007/978-3-540-85181-3_69",
+  "url": "https://doi.org/10.1007/978-3-540-85181-3_69",
+  "publisher": "Springer",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [
+   "题录级：无摘要、无本地全文。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2057,
+  "key": "",
+  "type": "bookSection",
+  "title": "Turbulent Properties of Axisymmetric Shock-Wave/Boundary-Layer Interaction Flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "J. L.",
+    "last": "Brown"
+   },
+   {
+    "first": "M. I.",
+    "last": "Kussoy"
+   },
+   {
+    "first": "T. J.",
+    "last": "Coakley"
+   }
+  ],
+  "author_display": "J. L. Brown, M. I. Kussoy and T. J. Coakley",
+  "year": "1986",
+  "journal": "Turbulent Shear-Layer/Shock-Wave Interactions",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "137-148",
+  "doi": "10.1007/978-3-642-82770-9_12",
+  "url": "https://doi.org/10.1007/978-3-642-82770-9_12",
+  "publisher": "Springer",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [
+   "题录级：无摘要、无本地全文。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2058,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Reynolds-Averaged Numerical Simulations of Conical Shock-Wave/Boundary-Layer Interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   },
+   {
+    "first": "Antonio",
+    "last": "Memmolo"
+   },
+   {
+    "first": "Sergio",
+    "last": "Pirozzoli"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo, Antonio Memmolo and Sergio Pirozzoli",
+  "year": "2021",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA J",
+  "volume": "59",
+  "issue": "5",
+  "pages": "1645-1659",
+  "doi": "10.2514/1.J059582",
+  "url": "https://doi.org/10.2514/1.J059582",
+  "publisher": "American Institute of Aeronautics and Astronautics",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "We carry out a parametric study of conical shock-wave/turbulent boundary-layer interactions by means of numerical simulation of the Reynolds-averaged Navier–Stokes (RANS) equations, with the eventual goal of establishing the predictive capabilities of standard turbulence models. Preliminary assessment of several linear-eddy-viscosity models for the case of planar interactions shows that the model and its variants as well as the Spalart–Allmaras model yield accurate prediction of the typical interaction length scale. Numerical simulations of conical interactions at high Reynolds numbers under attached and separated flow conditions generally support good capability of RANS to predict the gross flow features, including conditions of incipiently and fully separated flow. Comparison with direct numerical simulation data at low Reynolds numbers suggests that caution should be made because certain turbulence models may yield unrealistic incoming velocity profiles. With this caveat, we again find that RANS models yield satisfactory prediction of the three-dimensional flow organization and associated length scales. The N-wave mean wall pressure signature is quantitatively predicted, and accurate information about the fluctuating pressure variance can be obtained from RANS data in a postprocessing stage by extension of correlations developed for low-speed separation bubbles.",
+  "notes": [
+   "出版商付费，无本地全文；摘要来自 OpenAlex 题录。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称平板入射激波"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2059,
+  "key": "",
+  "type": "journalArticle",
+  "title": "圆锥激波与平板边界层干扰的数值模拟研究",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "杨柳青"
+   },
+   {
+    "first": "",
+    "last": "李沁"
+   },
+   {
+    "first": "",
+    "last": "尤延铖"
+   }
+  ],
+  "author_display": "杨柳青, 李沁, 尤延铖",
+  "year": "2022",
+  "journal": "南京航空航天大学学报",
+  "journal_abbr": "J. Nanjing Univ. Aeronaut. Astronaut.",
+  "volume": "54",
+  "issue": "4",
+  "pages": "599-610",
+  "doi": "10.16356/j.1005-2615.2022.04.007",
+  "url": "https://doi.org/10.16356/j.1005-2615.2022.04.007",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "为研究参数变化以及三维效应对圆锥激波/平板边界层相互干扰的影响，使用两方程 Menter-SST 模型，针对来流马赫数为 2 时的三维圆锥激波与平板边界层的相互干扰现象进行了数值模拟与定性、定量分析。分别研究了圆锥激波发生器半锥角和来流单位雷诺数变化对干扰区流动的影响，总结了参数变化引起的流动分离变化规律；此外，还计算了与三维计算中心对称面上的入射激波等效的二维情形，并将三维结果与二维情形进行对比，对比结果显示中心对称面上的壁面压力系数、分离涡尺寸、涡量分布等与相应的二维情形存在明显差异。",
+  "notes": [
+   "中文期刊；PDF 全文来自 Zotero 本地库。",
+   "关键词：圆锥激波；激波边界层干扰；三维效应；数值模拟。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\4HA4JKBB\\杨柳青 等 - 2022 - 圆锥激波与平板边界层干扰的数值模拟研究.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2060,
+  "key": "",
+  "type": "journalArticle",
+  "title": "斜激波与轴对称边界层干扰的数值模拟",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "杨柳青"
+   },
+   {
+    "first": "",
+    "last": "李沁"
+   },
+   {
+    "first": "",
+    "last": "尤延铖"
+   }
+  ],
+  "author_display": "杨柳青, 李沁, 尤延铖",
+  "year": "2023",
+  "journal": "气体物理",
+  "journal_abbr": "Phys. Gases",
+  "volume": "8",
+  "issue": "1",
+  "pages": "36-47",
+  "doi": "10.19527/j.cnki.2096-1642.0982",
+  "url": "https://doi.org/10.19527/j.cnki.2096-1642.0982",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "使用两方程 Menter-SST 模型，对来流马赫数为 3 时的斜激波与轴对称边界层的相互干扰现象进行了数值模拟与定性、定量分析。研究了斜楔激波发生器楔角和来流单位雷诺数变化对干扰区流动的影响，总结了参数变化引起的流动分离变化规律；此外，还计算了与三维计算中心对称面上的入射激波等效的二维情形，并将三维结果与二维情形进行对比，对比结果显示中心对称面上的壁面压力系数、分离涡尺寸、涡量分布等与相应的二维情形存在明显差异。",
+  "notes": [
+   "中文期刊；PDF 全文来自 Zotero 本地库。",
+   "关键词：斜激波；激波/边界层干扰；三维效应；数值模拟；参数研究。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\3F3BXMFQ\\斜激波与轴对称边界层干扰的数值模拟.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2061,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Analytical reconstruction of axisymmetric curved shock wave/boundary layer interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Jianrui",
+    "last": "Cheng"
+   },
+   {
+    "first": "Tao",
+    "last": "Zhang"
+   },
+   {
+    "first": "Chongguang",
+    "last": "Shi"
+   },
+   {
+    "first": "Xingya",
+    "last": "Da"
+   },
+   {
+    "first": "Chengxiang",
+    "last": "Zhu"
+   },
+   {
+    "first": "Yancheng",
+    "last": "You"
+   }
+  ],
+  "author_display": "Jianrui Cheng, Tao Zhang, Chongguang Shi, Xingya Da, Chengxiang Zhu and Yancheng You",
+  "year": "2024",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "Phys. Fluids",
+  "volume": "36",
+  "issue": "4",
+  "pages": "046125",
+  "doi": "10.1063/5.0199292",
+  "url": "https://doi.org/10.1063/5.0199292",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "In practical aerodynamic scenarios, interactions between curved shock waves and boundary layers with composite shock curvatures in both streamwise and spanwise directions are encountered more frequently than those induced by planar oblique shocks. To gain a more systematic understanding of this phenomenon in physics, internal and external axisymmetric curved shock wave/boundary layer interactions (AC-SBLI) are being studied analytically by establishing the underlying relations within the flow structures. Specifically, based on reconstructing the dominant structures of AC-SBLI as a semi-analytical model, this study focuses on the impacts of shock spanwise curvatures on separation and the mechanism of their action. It reveals that spanwise curvatures affect the separation in both internal and external AC-SBLI, but each exhibits a different influence pattern, emphasizing apparent axisymmetric characteristic. The spanwise curvatures exert influence indirectly by altering the compression ratio and directly by affecting the distribution of streamwise shock intensities. These findings propose a new approach to estimating the flow structures in AC-SBLI, where analyzing the spanwise curvatures will assist with comprehending other more intricate three-dimensional separation phenomena.",
+  "notes": [
+   "Crossref/出版社摘要。",
+   "题目中的 AC-SBLI 指 axisymmetric curved shock wave/boundary layer interaction。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2062,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Fully appreciating the impossibility of shock wave regular reflection from the axis of symmetry in axisymmetric internal flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "Tao",
+    "last": "Zhang"
+   },
+   {
+    "first": "Waner",
+    "last": "Hu"
+   },
+   {
+    "first": "Xingya",
+    "last": "Da"
+   },
+   {
+    "first": "Chongguang",
+    "last": "Shi"
+   },
+   {
+    "first": "Chengxiang",
+    "last": "Zhu"
+   },
+   {
+    "first": "Yancheng",
+    "last": "You"
+   }
+  ],
+  "author_display": "Tao Zhang, Waner Hu, Xingya Da, Chongguang Shi, Chengxiang Zhu and Yancheng You",
+  "year": "2024",
+  "journal": "Physics of Fluids",
+  "journal_abbr": "Phys. Fluids",
+  "volume": "36",
+  "issue": "7",
+  "pages": "076110",
+  "doi": "10.1063/5.0220314",
+  "url": "https://doi.org/10.1063/5.0220314",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "This study investigates the reflection of shock waves in internal axisymmetric flows and conclusively shows that regular reflection cannot occur over the axis of symmetry. The analysis employs the curved shock theory to examine flow gradients behind the axisymmetric shock. The curved shock equations are presented in explicit form using influence coefficients, which establish a direct relation between flow gradients in polar coordinates and shock curvatures. The gradient information reveals that the flow behind the incident shock around the reflection point is governed by the Taylor-Maccoll equation, indicating that the flow pattern is locally conical. By analyzing the singularity of internal conical flows, the only possible structure of conical shock reflection with a smooth singularity is constructed. After a thorough theoretical analysis of this conical shock reflection structure, the study concludes with definitive proof that this specific flow pattern cannot occur in practical applications because it requires the incident shock angle to be less than the freestream Mach angle. This suggests that regular reflection is impossible to occur over the axis of symmetry in internal axisymmetric flows.",
+  "notes": [
+   "纯无粘轴对称内流激波反射，不含边界层；作为轴对称效应与锥形流理论背景收入。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2063,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Mach reflection in axisymmetric internal supersonic flow",
+  "season": "",
+  "authors": [
+   {
+    "first": "Tao",
+    "last": "Zhang"
+   },
+   {
+    "first": "Jianrui",
+    "last": "Cheng"
+   },
+   {
+    "first": "Haochen",
+    "last": "Xiong"
+   },
+   {
+    "first": "Ralf",
+    "last": "Deiterding"
+   },
+   {
+    "first": "Chongguang",
+    "last": "Shi"
+   },
+   {
+    "first": "Chengxiang",
+    "last": "Zhu"
+   },
+   {
+    "first": "Yancheng",
+    "last": "You"
+   }
+  ],
+  "author_display": "Tao Zhang, Jianrui Cheng, Haochen Xiong, Ralf Deiterding, Chongguang Shi, Chengxiang Zhu and Yancheng You",
+  "year": "2026",
+  "journal": "Physical Review Fluids",
+  "journal_abbr": "Phys. Rev. Fluids",
+  "volume": "11",
+  "issue": "6",
+  "pages": "064803",
+  "doi": "10.1103/rbtm-hhcc",
+  "url": "https://doi.org/10.1103/rbtm-hhcc",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "An analytical model is developed for Mach reflection in axisymmetric internal supersonic flow, based on a recent planar model, curved shock theory and the method of curved shock characteristics. The center body is included as a unique geometry. The model accurately predicts the primary flow configurations and is used to study the slip line shape and Mach disk size. At a specific wedge angle and sufficiently small outlet radius, the trailing-edge expansion fan interacts with the slip line downstream of the sonic throat, making the Mach disk size independent of the outlet radius. A sonic throat can form without trailing-edge expansion due to the negative pressure gradient behind the reflection shock; flatter slip lines give a stronger negative pressure gradient. An independent sonic throat is more feasible at small wedge angles near the von Neumann criterion.",
+  "notes": [
+   "APS/出版社摘要；纯无粘轴对称内流，不含边界层。",
+   "题目中的 Mach reflection 指马赫反射，不是马赫数效应。",
+   "摘要据 APS/出版社页面整理，非逐字原文；纯无粘轴对称内流，不含边界层。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2064,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Three-dimensional curved conical shock wave/plate boundary layer interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Jianrui",
+    "last": "Cheng"
+   },
+   {
+    "first": "Tao",
+    "last": "Zhang"
+   },
+   {
+    "first": "Zhenqi",
+    "last": "Sun"
+   },
+   {
+    "first": "Chongguang",
+    "last": "Shi"
+   },
+   {
+    "first": "Chengxiang",
+    "last": "Zhu"
+   },
+   {
+    "first": "Yancheng",
+    "last": "You"
+   }
+  ],
+  "author_display": "Jianrui Cheng, Tao Zhang, Zhenqi Sun, Chongguang Shi, Chengxiang Zhu and Yancheng You",
+  "year": "2025",
+  "journal": "Chinese Journal of Aeronautics",
+  "journal_abbr": "Chin. J. Aeronaut.",
+  "volume": "38",
+  "issue": "12",
+  "pages": "103580",
+  "doi": "10.1016/j.cja.2025.103580",
+  "url": "https://doi.org/10.1016/j.cja.2025.103580",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Three-dimensional curved shock wave/boundary layer interaction with streamwise and spanwise curvatures widely exists in practical aerodynamic design. To explore the effects of composite shock curvatures on boundary layer separation, a canonical model with a cone placed above plate was utilized as a reference. Configurations of straight, convex, and concave conical shock waves inducing the curved conical shock wave/boundary layer interactions were studied, using CFD based on Reynolds-averaged numerical simulation method. The flow structure and separation region of each case were discussed quantitively on the symmetry plane, flat plate, and plane perpendicular to flow direction, respectively. The focus of the analysis was on the characteristic patterns of separation scale variation in the streamwise and spanwise directions, which were observed to consistently change with respect to both directions with alterations in the incident shock wave shape. A simplified control volume model was established to qualitatively discuss the influence source of curved shock waves on separation scales, based on mass conservation equations. The results suggest that the curved shock wave has a holistic effect on separation, which is not solely dependent on the shock foot strength.",
+  "notes": [
+   "OpenAlex 摘要；CJA 2025 为混合开放获取，但 ScienceDirect 页面被 Cloudflare 拦截，未取得本地 PDF。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2065,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Investigation of conical shock wave/boundary layer interaction in axisymmetric internal flow",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   },
+   {
+    "first": "Antonio",
+    "last": "Memmolo"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo and Antonio Memmolo",
+  "year": "2020",
+  "journal": "Aerospace Science and Technology",
+  "journal_abbr": "Aerosp. Sci. Technol.",
+  "volume": "106",
+  "issue": "",
+  "pages": "106106",
+  "doi": "10.1016/j.ast.2020.106106",
+  "url": "https://doi.org/10.1016/j.ast.2020.106106",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "A RANS (Reynolds-averaged Navier-Stokes simulation) study is performed on an internal duct at a free-stream Mach number 4.0, to investigate the internal conical shock wave/boundary layer interaction (CSBLI) developing from an axisymmetric wall surface. An effort is devoted on the analysis of the flow features of the internal CSBLI phenomena through a simple physical model. The work aims to extend the investigation of Zuo et al. on external CSBLI. The numerical strategy is first described and the capability of turbulence models to capture SBLI physics is then assessed by comparison with experiments. In the interacted region a small recirculation bubble is identified, and the foot of the conical shock forms a lambda system. Unlike the external CSBLI case, a horseshoe pattern of separation whose strength and size are reduced away from the symmetry plane is observed. The topology of flow separation is similar to the one of two-dimensional closed separation. The pressure in the pipe increases rapidly by the effect of multi-reflected conical shock waves. The wall-surface pressure in the separation bubble continues to increase due to three-dimensional area compression effect.",
+  "notes": [
+   "Semantic Scholar/出版社摘要。",
+   "将外部 CSBLI 研究扩展到轴对称内流。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2066,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Suppression separation in conical shock wave/turbulent boundary layer interactions through porous bleed control",
+  "season": "",
+  "authors": [
+   {
+    "first": "Feng-Yuan",
+    "last": "Zuo"
+   },
+   {
+    "first": "Lai-Jian",
+    "last": "Ma"
+   },
+   {
+    "first": "Si-Qi",
+    "last": "Wang"
+   },
+   {
+    "first": "Sergio",
+    "last": "Pirozzoli"
+   }
+  ],
+  "author_display": "Feng-Yuan Zuo, Lai-Jian Ma, Si-Qi Wang and Sergio Pirozzoli",
+  "year": "2026",
+  "journal": "Propulsion and Power Research",
+  "journal_abbr": "Propuls. Power Res.",
+  "volume": "15",
+  "issue": "1",
+  "pages": "1-15",
+  "doi": "10.1016/j.jppr.2026.01.001",
+  "url": "https://doi.org/10.1016/j.jppr.2026.01.001",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "The separation control of conical shock wave/boundary layer interaction (CSBLI) has been investigated at Mach number M = 2.05 with Reynolds number Re_tau approximately 150. Simulations of both controlled and uncontrolled CSBLI flow have been performed using the RANS equations with Spalart-Allmaras (S-A) turbulence model. According to the comprehensive quantitative comparison with a high-fidelity DNS database, the S-A model accurately enables to reproduce the separation behaviors under the low-Reynolds-number condition. Due to the well arranged porous bleed method, the separation bubble has been effectively suppressed, together with the evolution of conical shock-induced horseshoe vortices. Furthermore, a corrected method for describing porous bleed control performance is developed for the CSBLI flow with spanwise pressure gradient. All data collapse well along with the predicted curve, which means it can be conveniently fitted by a simple quadratic function. This modified model also exhibits well collapse in swept-fin SBLI by porous bleed control, suggesting its potential universality with effect of spanwise pressure gradient.",
+  "notes": [
+   "OpenAlex 摘要；金色开放获取。",
+   "多孔抽吸控制 CSBLI。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2067,
+  "key": "",
+  "type": "journalArticle",
+  "title": "尖楔和半锥引起的激波/边界层干扰中相关特性研究",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "邓学蓥"
+   },
+   {
+    "first": "",
+    "last": "廖锦华"
+   }
+  ],
+  "author_display": "邓学蓥, 廖锦华",
+  "year": "1993",
+  "journal": "北京航空航天大学学报",
+  "journal_abbr": "J. Beijing Univ. Aeronaut. Astronaut.",
+  "volume": "",
+  "issue": "1",
+  "pages": "",
+  "doi": "",
+  "url": "https://www.cnki.com.cn/Article/CJFDTotal-BJHK199301000.htm",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "本文对于由尖楔和半锥等引起的后掠激波/边界层干扰中相关特性进行了实验研究。实验雷诺数 Re=2.4×10^7/m，自由流马赫数 Ma_inf=1.79、2.04 和 2.50。相关性研究的结果表明：在锥形干扰区域内，上游影响线和主分离线的斜率仅仅依赖于无粘激波强度。",
+  "notes": [
+   "CNKI 公开摘要（摘要被平台截断，仅取可见部分）；未获得页码与 DOI。",
+   "关键词：激波/边界层干扰；分离特性；上游影响特性；相关特性；无粘激波强度。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2068,
+  "key": "",
+  "type": "conferencePaper",
+  "title": "Improvement of conical similarity rule in swept shock wave/boundary layer interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Xueying",
+    "last": "Deng"
+   },
+   {
+    "first": "Jinhua",
+    "last": "Liao"
+   },
+   {
+    "first": "Hua",
+    "last": "Zhang"
+   }
+  ],
+  "author_display": "Xueying Deng, Jinhua Liao and Hua Zhang",
+  "year": "1993",
+  "journal": "23rd Fluid Dynamics, Plasmadynamics, and Lasers Conference",
+  "journal_abbr": "AIAA Paper",
+  "volume": "",
+  "issue": "",
+  "pages": "AIAA 93-2941",
+  "doi": "10.2514/6.1993-2941",
+  "url": "https://doi.org/10.2514/6.1993-2941",
+  "publisher": "American Institute of Aeronautics and Astronautics",
+  "place": "Orlando, FL",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [
+   "仅题录：Crossref 与 AIAA 页面均未提供摘要，未获得全文。",
+   "题名指向后掠激波/边界层干扰中锥形相似律的改进，具体模型与结论待全文核实。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2069,
+  "key": "",
+  "type": "thesis",
+  "title": "高超声速流动中典型构型的激波/湍流边界层干扰及流动控制",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "洪雨婷"
+   }
+  ],
+  "author_display": "洪雨婷",
+  "year": "2023",
+  "journal": "国防科技大学",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "10.27517/d.cnki.gzkju.2023.000542",
+  "url": "https://doi.org/10.27517/d.cnki.gzkju.2023.000542",
+  "publisher": "国防科技大学",
+  "place": "长沙",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "吸气式高超声速飞行器的内外流场中存在复杂的激波/湍流边界层干扰现象，一旦激波引起流动分离，不仅会造成壁面的气动力/热载荷急剧升高，甚至会诱发非定常流动现象。本文紧密结合数值模拟、风洞实验和理论方法，围绕高超声速条件下典型构型的激波/湍流边界层干扰的波系结构、流动分离以及流动控制展开研究。针对二维、轴对称和三维扫掠激波/湍流边界层干扰开展了标度律研究，涵盖了宽范围的马赫数、雷诺数和壁温条件。针对压缩拐角和斜激波入射平板二维构型，通过修正壁温对分离准则的影响，建立了高超声速条件下激波/湍流边界层干扰长度的标度律，发现高雷诺数和低雷诺数工况的干扰长度满足不同的标度律，高雷诺数工况的干扰长度相较于低雷诺数工况增长更快。针对圆柱-尾裙和尖锥-尾裙两种构型，建立了轴对称干扰长度的标度律，发现轴对称构型的干扰长度相较于二维构型增长更快。针对立楔-平板构型产生的三维扫掠激波/湍流边界层干扰，通过修正雷诺数的影响，发展了一种适用于宽马赫数和雷诺数范围的上游影响线标度律。",
+  "notes": [
+   "博士学位论文；导师：杨基明教授、李祝飞副教授、罗喜胜教授；完成时间 2023-05-25。",
+   "PDF 全文来自 Zotero 本地库。",
+   "轴对称标度律见第 3 章 3.2.4 节与表 3.6。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\EUK88CP5\\高超声速流动中典型构型的激波_湍流边界层干扰及流动控制_洪雨婷.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 2070,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Scaling of Upstream Influence Line Induced by Shock Sweeping Concave Half-Cylinder",
+  "season": "",
+  "authors": [
+   {
+    "first": "Qi",
+    "last": "Huang"
+   },
+   {
+    "first": "Yuting",
+    "last": "Hong"
+   },
+   {
+    "first": "Zhufei",
+    "last": "Li"
+   }
+  ],
+  "author_display": "Qi Huang, Yuting Hong and Zhufei Li",
+  "year": "2024",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA J.",
+  "volume": "62",
+  "issue": "7",
+  "pages": "2800-2808",
+  "doi": "10.2514/1.j063924",
+  "url": "https://doi.org/10.2514/1.j063924",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [
+   "仅题录：AIAA 页面被 Cloudflare 拦截，Crossref/Semantic Scholar 均无摘要。",
+   "题名指向激波扫掠内凹半圆柱面诱导的上游影响线标度律；具体工况与结论待全文核实。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 2071,
+  "key": "",
+  "type": "journalArticle",
+  "title": "Wall Temperature Effects on Upstream Influence Line for Shock Sweeping Concave Cylinder",
+  "season": "",
+  "authors": [
+   {
+    "first": "Rong",
+    "last": "Fu"
+   },
+   {
+    "first": "Zhufei",
+    "last": "Li"
+   },
+   {
+    "first": "Qi",
+    "last": "Huang"
+   }
+  ],
+  "author_display": "Rong Fu, Zhufei Li and Qi Huang",
+  "year": "2025",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA J.",
+  "volume": "63",
+  "issue": "12",
+  "pages": "5607-5614",
+  "doi": "10.2514/1.j065845",
+  "url": "https://doi.org/10.2514/1.j065845",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [
+   "仅题录：AIAA 页面被 Cloudflare 拦截，Crossref/Semantic Scholar 均无摘要。",
+   "题名指向壁温对内凹圆柱面激波扫掠上游影响线的影响；具体工况与结论待全文核实。"
+  ],
+  "zotero_tags": [],
+  "collections": [
+   "新增检索 / 轴对称与锥形激波干扰"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 1468,
+  "key": "CRJSMS4N",
+  "type": "journalArticle",
+  "title": "Engineering Relations for Heat Transfer and Friction in High-Velocity Laminar and Turbulent Boundary-Layer Flow Over Surfaces With Constant Pressure and Temperature",
+  "season": "",
+  "authors": [
+   {
+    "first": "E. R. G.",
+    "last": "Eckert"
+   }
+  ],
+  "author_display": "",
+  "year": "1956",
+  "journal": "Journal of Fluids Engineering",
+  "journal_abbr": "J. Fluids Eng.",
+  "volume": "78",
+  "issue": "6",
+  "pages": "1273-1283",
+  "doi": "10.1115/1.4014011",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "理论建模"
+  ],
+  "pdfs": [],
+  "has_pdf": false,
+  "pdftext": ""
+ },
+ {
+  "id": 1494,
+  "key": "URNLCZKH",
+  "type": "journalArticle",
+  "title": "高超声速飞行器流动特征分析",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "吴子牛"
+   },
+   {
+    "first": "",
+    "last": "白晨媛"
+   },
+   {
+    "first": "",
+    "last": "李娟"
+   },
+   {
+    "first": "",
+    "last": "陈梓钧"
+   },
+   {
+    "first": "",
+    "last": "汲世祥"
+   },
+   {
+    "first": "",
+    "last": "王聃"
+   },
+   {
+    "first": "",
+    "last": "王文斌"
+   },
+   {
+    "first": "",
+    "last": "徐艺哲"
+   },
+   {
+    "first": "",
+    "last": "姚瑶"
+   }
+  ],
+  "author_display": "",
+  "year": "2015",
+  "journal": "航空学报",
+  "journal_abbr": "",
+  "volume": "36",
+  "issue": "1",
+  "pages": "58-85",
+  "doi": "",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "在非流线型构件或突起物的扰动效应、高马赫数和低雷诺数极限效应、低湍流度环境效应和由激波或摩擦导致的气动加热效应等4个方面的影响下,未来高超声速飞行器涉及的流动主要表现出这样的特点:典型流动结构强度高、尺度大,如强激波和厚边界层;局部流动结构数量多;激波、膨胀波和边界层结构之间相互干扰十分严重;转捩、压力脉动和一些流动结构对细微因素非常敏感;压力、摩擦应力和热流峰值现象普遍;升阻比屏障难以突破;流场同时依赖大量无量纲参数和有量纲参数,导致实验模拟难度大。本文在回顾传统高超声速流动主要流动现象的基础上,对上述7个方面涉及的典型流动现象的基础研究现状、问题本质和因果关系进行综合描述,讨论如何更有效地面对基础研究和工程实际问题。该文既可为解决典型流动现象中尚未解决的基础研究提供帮助,也可为如何合理地利用有限的已知知识解决工程应用问题提供指导。",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "综述进展"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\BLXJSJXC\\高超声速流动特征分析.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1495,
+  "key": "NCNUBHTG",
+  "type": "book",
+  "title": "Selected Aerothermodynamic Design Problems of Hypersonic Flight Vehicles",
+  "season": "",
+  "authors": [
+   {
+    "first": "Ernst Heinrich",
+    "last": "Hirschel"
+   },
+   {
+    "first": "Claus",
+    "last": "Weiland"
+   }
+  ],
+  "author_display": "",
+  "year": "2009",
+  "journal": "",
+  "journal_abbr": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1007/978-3-540-89974-7",
+  "url": "",
+  "publisher": "Springer Berlin Heidelberg",
+  "place": "Berlin, Heidelberg",
+  "edition": "",
+  "isbn": "978-3-540-89974-7",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "综述进展"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\GGG92JN6\\Hirschel和Weiland - 2009 - Selected Aerothermodynamic Design Problems of Hypersonic Flight Vehicles.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1503,
+  "key": "8SPU8EIF",
+  "type": "journalArticle",
+  "title": "Flow Separation in Shock Wave Boundary Layer Interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "A.",
+    "last": "Hamed"
+   },
+   {
+    "first": "A.",
+    "last": "Kumar"
+   }
+  ],
+  "author_display": "",
+  "year": "1994",
+  "journal": "Journal of Engineering for Gas Turbines and Power",
+  "journal_abbr": "J. Eng. Gas Turbines Power",
+  "volume": "116",
+  "issue": "1",
+  "pages": "98-103",
+  "doi": "10.1115/1.2906816",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "综述进展"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\7HR4UGTB\\Hamed和Kumar - 1994 - Flow Separation in Shock Wave Boundary Layer Interactions.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1505,
+  "key": "DL45AMJ2",
+  "type": "journalArticle",
+  "title": "Scaling of hypersonic shock/turbulent boundary layer interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "Clara M.",
+    "last": "Helm"
+   },
+   {
+    "first": "M. P.",
+    "last": "Martín"
+   }
+  ],
+  "author_display": "",
+  "year": "2021",
+  "journal": "Physical Review Fluids",
+  "journal_abbr": "Phys. Rev. Fluids",
+  "volume": "6",
+  "issue": "7",
+  "pages": "074607",
+  "doi": "10.1103/PhysRevFluids.6.074607",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "综述进展",
+   "轴对称"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\3SBS4MGB\\Helm和Martín - 2021 - Scaling of hypersonic shockturbulent boundary layer interactions.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1507,
+  "key": "LN22MMU2",
+  "type": "journalArticle",
+  "title": "Investigation of Negative Surface Curvature Effects in Axisymmetric Shock/Boundary-Layer Interaction",
+  "season": "",
+  "authors": [
+   {
+    "first": "Morgan L.",
+    "last": "Funderburk"
+   },
+   {
+    "first": "Venkateswaran",
+    "last": "Narayanaswamy"
+   }
+  ],
+  "author_display": "",
+  "year": "2019",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA J.",
+  "volume": "57",
+  "issue": "4",
+  "pages": "1594-1607",
+  "doi": "10.2514/1.J057275",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "轴对称"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\2TXSGGEZ\\Funderburk和Narayanaswamy - 2019 - Investigation of Negative Surface Curvature Effects in Axisymmetric ShockBoundary-Layer Interaction.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1511,
+  "key": "8FXRYM6N",
+  "type": "journalArticle",
+  "title": "Asymptotic theory of separation flows",
+  "season": "",
+  "authors": [
+   {
+    "first": "V. V.",
+    "last": "Sychev"
+   }
+  ],
+  "author_display": "",
+  "year": "1982",
+  "journal": "Fluid Dynamics",
+  "journal_abbr": "Fluid Dyn.",
+  "volume": "17",
+  "issue": "2",
+  "pages": "179-188",
+  "doi": "10.1007/BF01314493",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "轴对称"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\8M4B2Z8T\\Sychev - 1982 - Asymptotic theory of separation flows.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1521,
+  "key": "BBZT5GAP",
+  "type": "journalArticle",
+  "title": "高超声速进气道发展研究",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "徐锦"
+   },
+   {
+    "first": "",
+    "last": "罗金玲"
+   },
+   {
+    "first": "",
+    "last": "戴梧叶"
+   }
+  ],
+  "author_display": "",
+  "year": "2016",
+  "journal": "战术导弹技术",
+  "journal_abbr": "战术导弹技术",
+  "volume": "",
+  "issue": "5",
+  "pages": "25-32",
+  "doi": "10.16358/j.issn.1009-1300.2016.05.04",
+  "url": "http://lib.cqvip.com/Qikan/Article/Detail?id=90836868504849544853484853",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "论述了国内外高超声速进气道的最新研究动态，概括阐述了轴对称进气道、二维进气道、三维侧压式进气道和三维内收缩进气道的典型特点与性能，重点展开分析了三维内收缩进气道的设计原理与种类，包括基于流线追踪的内乘波进气道、几何变截面过渡的进气道和气动变截面过渡的进气道，介绍了该类进气道的优缺点与应用前景，最后对高超声速进气道研究应用方向进行了展望，指出三维内收缩进气道是目前新型高超声速飞行器研究与应用的热点，但其与机体一体化设计带来的内外流强耦合问题，值得深入研究。",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "进气道综述"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\SHSWQ9PK\\高超声速进气道发展研究_徐锦.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1535,
+  "key": "ZIPAQ2PW",
+  "type": "journalArticle",
+  "title": "高超声速三维内转进气道研究进展综述",
+  "season": "",
+  "authors": [
+   {
+    "first": "",
+    "last": "郑晓刚"
+   },
+   {
+    "first": "",
+    "last": "施崇广"
+   },
+   {
+    "first": "",
+    "last": "张加乐"
+   },
+   {
+    "first": "",
+    "last": "张咪"
+   },
+   {
+    "first": "",
+    "last": "朱文磊"
+   },
+   {
+    "first": "",
+    "last": "朱呈祥"
+   },
+   {
+    "first": "",
+    "last": "尤延铖"
+   }
+  ],
+  "author_display": "",
+  "year": "2025",
+  "journal": "航空学报",
+  "journal_abbr": "航空学报",
+  "volume": "46",
+  "issue": "8",
+  "pages": "631245",
+  "doi": "",
+  "url": "http://lib.cqvip.com/Qikan/Article/Detail?id=7201038990",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "zh",
+  "abstract_orig": "三维内转进气道凭借其结构紧凑、压缩效率高、流量捕获能力强、总压恢复系数高以及便于一体化等优势，已逐渐成为吸气式高超声速飞行器进气道设计的发展趋势。自概念提出以来，一直吸引着国内外众多学者与研究机构的广泛关注。首先，围绕三维内转进气道设计状态下的气动设计与性能优化，以激波为主线综述了激波解析理论、基本流场构建以及内转进气道设计3个方面的进展。随后，从低马赫数起动特性和抗反压特性两个角度分别梳理了改善三维内转进气道非设计性能方面的研究。接着，对三维内转进气道在TBCC组合动力系统中的应用现状进行介绍。最后，在对国内外研究现状分析总结的基础上，指出了三维内转进气道的4个未来核心研究方向。",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "进气道综述"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\WJKHV39G\\郑晓刚 等 - 2025 - 高超声速三维内转进气道研究进展综述.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1540,
+  "key": "VE4M6LTN",
+  "type": "journalArticle",
+  "title": "Recent advances and prospects in hypersonic inlet design and intelligent optimization",
+  "season": "",
+  "authors": [
+   {
+    "first": "Yue",
+    "last": "Ma"
+   },
+   {
+    "first": "Mingming",
+    "last": "Guo"
+   },
+   {
+    "first": "Ye",
+    "last": "Tian"
+   },
+   {
+    "first": "Jialing",
+    "last": "Le"
+   }
+  ],
+  "author_display": "",
+  "year": "2024",
+  "journal": "Aerospace Science and Technology",
+  "journal_abbr": "Aerosp. Sci. Technol.",
+  "volume": "146",
+  "issue": "",
+  "pages": "108953",
+  "doi": "10.1016/j.ast.2024.108953",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "As the “respiratory tract” of the air breathing engine, the hypersonic inlet plays the role of compressing, decelerating, and pressurizing flow. However, research on the traditional inlet design is mainly based on gas dynamics theory and experience, which not only leads to a long design period but also fails to ensure the performance of the inlet at non-design points under broad working conditions. In recent years, with the further development of flow physics, a variety of advanced inlet design methods have been proposed, and a large number of valuable data have been accumulated by applying high-fidelity computational fluid dynamics numerical simulation and ground wind tunnel tests. A new generation of machine learning technologies, typically represented by deep learning, is developing vigorously. By building a deep neural network structure and using data-driven methods to carry out model training, it can realize typical feature extraction automatically, efficiently, and accurately, which is helpful to deeply explore the hidden flow mechanism between data and establish a fast prediction model of inlet performance. The optimal inlet design scheme can be obtained by applying the performance intelligent prediction model and the multi-objective intelligent evolution algorithm. This paper provides a detailed overview of the latest progress in inlet design by applying traditional ideas, expounds the basic principles and typical applications of some representative and prospective machine learning methods, and especially reports the current research status of the combination of machine learning and inlet. Finally, the future development trends and potential applications of several research directions are summarized.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "进气道综述"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\5BY6CZKY\\Ma 等 - 2024 - Recent advances and prospects in hypersonic inlet design and intelligent optimization.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1551,
+  "key": "UJF9ESHU",
+  "type": "journalArticle",
+  "title": "Supersonic and hypersonic shock/boundary-layer interaction database",
+  "season": "",
+  "authors": [
+   {
+    "first": "Gary S.",
+    "last": "Settles"
+   },
+   {
+    "first": "Lori J.",
+    "last": "Dodson"
+   }
+  ],
+  "author_display": "",
+  "year": "1994",
+  "journal": "AIAA Journal",
+  "journal_abbr": "AIAA J.",
+  "volume": "32",
+  "issue": "7",
+  "pages": "1377-1383",
+  "doi": "10.2514/3.12205",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "轴对称"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\YXKIKIEZ\\Settles和Dodson - 1994 - Supersonic and hypersonic shockboundary-layer interaction database.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1563,
+  "key": "7UI39MPV",
+  "type": "journalArticle",
+  "title": "Numerical Investigation of Mach 2.5 Axisymmetric Turbulent Shock Wave Boundary Layer Interactions",
+  "season": "",
+  "authors": [
+   {
+    "first": "John-Paul",
+    "last": "Mosele"
+   },
+   {
+    "first": "Andreas",
+    "last": "Gross"
+   },
+   {
+    "first": "John",
+    "last": "Slater"
+   }
+  ],
+  "author_display": "",
+  "year": "2023",
+  "journal": "Aerospace",
+  "journal_abbr": "Aerospace",
+  "volume": "10",
+  "issue": "2",
+  "pages": "159",
+  "doi": "10.3390/aerospace10020159",
+  "url": "",
+  "publisher": "",
+  "place": "",
+  "edition": "",
+  "isbn": "",
+  "language": "en",
+  "abstract_orig": "Shock wave boundary layer interactions are common to both supersonic and hypersonic inlet ﬂows. Wall-resolved implicit large-eddy simulations of a canonical Mach 2.5 axisymmetric shock wave boundary layer interaction experiment at Glenn Research Center were carried out. A conical shock wave was generated with axisymmetric centerbodies with 16 deg half-angle cone. The centerbody radii were 9.2% and 14.7% of the test section diameter. The conical shock wave interacted with the turbulent boundary layer on the inside of the cylindrical test section. The experimental Reynolds number based on diameter was six million. For the simulations, the Reynolds number was reduced by a factor of 10 to lower the computational expense. The turbulent boundary layer separates for both centerbody radii and the separation is stronger for the larger centerbody radius. Frequency spectra of the spanwise-averaged wall-pressure coefﬁcient reveal low-frequency content at Strouhal numbers based on separation length between 0.02 and 0.05 in the vicinity of the separation shock and mid-frequency content between 0.1 and 0.2 downstream of separation. A proper orthogonal decomposition captures spanwise coherent structures with a Strouhal number of 0.03–0.04 over the interaction region and streamwise coherent structures inside and downstream of the interaction with a Strouhal number of 0.1–0.4.",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "轴对称"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\6KRR884A\\Mosele 等 - 2023 - Numerical Investigation of Mach 2.5 Axisymmetric Turbulent Shock Wave Boundary Layer Interactions.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ },
+ {
+  "id": 1566,
+  "key": "BZH22UAB",
+  "type": "book",
+  "title": "Advances in Shock Interactions: Proceedings of the 24th International Shock Interaction Symposium, SIS-2022, 17-20 October, Chennai, India",
+  "season": "",
+  "authors": [
+   {
+    "first": "G.",
+    "last": "Rajesh"
+   },
+   {
+    "first": "R.",
+    "last": "Sriram"
+   },
+   {
+    "first": "R. C.",
+    "last": "DiviaHarshaVardini"
+   }
+  ],
+  "author_display": "",
+  "year": "2024",
+  "journal": "",
+  "journal_abbr": "",
+  "volume": "408",
+  "issue": "",
+  "pages": "",
+  "doi": "10.1007/978-981-97-6099-2",
+  "url": "",
+  "publisher": "Springer Nature Singapore",
+  "place": "Singapore",
+  "edition": "",
+  "isbn": "978-981-97-6098-5",
+  "language": "en",
+  "abstract_orig": "",
+  "notes": [],
+  "zotero_tags": [],
+  "collections": [
+   "轴对称"
+  ],
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\KBB2BTWI\\Rajesh 等 - 2024 - Advances in Shock Interactions Proceedings of the 24th International Shock Interaction Symposium, S.pdf"
+  ],
+  "has_pdf": true,
+  "pdftext": ""
+ }
+]

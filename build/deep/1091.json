@@ -1,0 +1,581 @@
+{
+  "id": 1091,
+  "read_note": "bundle 共 1572 行，已全部读到 EOF。原文为 Ruban, Djehizian, Kirsten & Kravtsova, J. Fluid Mech. (2020) 900, A9, doi:10.1017/jfm.2020.486，共 32 页。所有公式、页码、图号均取自 bundle 文本与图注，未另读原 PDF。bundle 中 (5.34)、(5.38)、(6.26)、(6.27a) 等积分式排版错位，仅按可读部分记录其式号与物理角色，不擅自补全。",
+  "one_line": "上游运动壁面边界层中膨胀扇而非激波诱发分离，并出现二次奇异性",
+  "three_sentence": [
+    {
+      "text": "在随激波运动的坐标系中，上游运动壁面遇到入射激波不分离，遇到膨胀扇才分离。",
+      "attr": "原文明确"
+    },
+    {
+      "text": "triple-deck 数值解在 Uw=2.0 与 3.0 时给出下游主涡和上游次涡，主涡随壁速增大。",
+      "attr": "原文明确"
+    },
+    {
+      "text": "渐近分析把下层分为无黏 1a 与黏性 1b，并在分离点附近导出 region C 的积分微分方程与第二奇点。",
+      "attr": "AI概括"
+    }
+  ],
+  "imrad": {
+    "introduction": "【原文明确】边界层分离点位置必须由边界层本身决定；非定常分离与运动壁面分离存在类比，分离点运动方向决定壁面相对运动方向（p.1–5）。【原文明确】已有 triple-deck 计算（Zhuk 1982；Yapalparvi & van Dommelen 2012）表明壁速增大抑制激波诱导分离（p.6）。【原文明确】本文研究分离点向下游运动、即壁面相对向上游运动时，入射激波与 Prandtl–Meyer 膨胀扇的作用（p.1、p.6）。",
+    "methods": "【原文明确】在随激波/膨胀扇运动的坐标系建立 triple-deck 问题 (2.1)–(2.4)：Vsh~Re^-1/8 时直接数值求解，1≫Vsh/V∞≫Re^-1/8 时作渐近分析（p.6–9）。【原文明确】数值上采用 Kravtsova et al. (2005) 的有限差分格式与 Newton 迭代 (4.1)–(4.3)（p.14）。【原文明确】渐近上利用最小退化原则把 region 1 分为无黏 1a 与黏性 1b，再引入 1b′、1a′ 与 region C，最终得到积分微分方程 (6.27a)（p.10–30）。",
+    "results": "【原文明确】1a 解表明激波给逆流黏性层有利压差、不分离；膨胀扇给逆压差，P̄s=−1/2 时 Ue 在 X*=0 首次为零（p.13–14，式(3.16)–(3.19)）。【原文明确】Uw=2.0/3.0 的数值解出现下游主涡与上游次涡，主涡随 Uw 增大、次涡相对减小（p.14，图6）。【原文明确】region C 的压力由 (6.27a) 控制，数值上随 X 减小单调升高并在有限 X0 发散，渐近式(6.30)与数值吻合（p.28–30，图11）。",
+    "discussion": "【原文明确】双涡结构与 pseudo-shock、collisional separation 类似；第二奇点的物理机制与 Neiland (1969a)、Neiland & Sychev (1966) 的膨胀解奇点相同（p.30）。【AI推断】作者尚未分析自诱导压力升高后的新区域，留待后续论文，因此当前理论在 X0 邻域仍需补全。"
+  },
+  "core_points": [
+    {
+      "point": "上游运动壁面情形下，入射激波不导致分离，膨胀扇才导致分离。",
+      "type": "主结论",
+      "grade": "A",
+      "source": "p.10 第2节；p.13–14 第3.1节；p.30 第7节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "triple-deck 数值解在 Uw=2.0/3.0 时形成下游主涡与上游次涡，主涡随 Uw 增大、次涡相对减小。",
+      "type": "数值结果",
+      "grade": "A",
+      "source": "p.14 第4节，图6",
+      "attr": "原文明确"
+    },
+    {
+      "point": "膨胀扇强度 P̄s=−1/2 时 Ue 在 X*=0 首次为零，并给出 (3.18)、(3.19) 的解析解。",
+      "type": "定量结果",
+      "grade": "A",
+      "source": "p.13–14，式(3.16)–(3.19)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "1≫Uw≫Re^-1/8 时 region 1 分裂为无黏 1a 与黏性 1b；1a 的压力解由 (3.13)–(3.16) 给出。",
+      "type": "渐近结构",
+      "grade": "A",
+      "source": "p.10–13 第3节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "1b 解在膨胀扇情形于 X*=0 附近发生奇异；激波情形保持光滑。",
+      "type": "机制",
+      "grade": "A",
+      "source": "p.16–23 第5节；p.30 第7节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "X*→0 时 1b′ 的位移效应占优：V/U|1b≈−4(lnX*−1)/X*²，而 1a 仅贡献 1/(2Uw²)。",
+      "type": "渐近结果",
+      "grade": "A",
+      "source": "p.21–23，式(5.37)(5.42)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "region C 由 condensed-flow 条件与积分微分方程 (6.27a) 控制；压力随 X 减小单调升高并在有限 X0 发散。",
+      "type": "主结论",
+      "grade": "A",
+      "source": "p.26–30，式(6.17)–(6.30)，图11",
+      "attr": "原文明确"
+    },
+    {
+      "point": "数值方法用 (4.1)–(4.3) 的有限差分表示与 Newton 迭代求解位移函数和压力梯度。",
+      "type": "方法",
+      "grade": "B",
+      "source": "p.14 第4节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "双涡结构与 pseudo-shock、collisional separation 存在类比。",
+      "type": "解释",
+      "grade": "B",
+      "source": "p.30 第7节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "第二奇点的物理过程与 Neiland (1969a)、Neiland & Sychev (1966) 的膨胀解奇点相同。",
+      "type": "解释",
+      "grade": "B",
+      "source": "p.30 第7节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "自诱导压力升高后的新区域尚未分析，作者计划在后续论文中讨论。",
+      "type": "局限",
+      "grade": "C",
+      "source": "p.30 第6.1节末",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "几何与来流",
+      "value": "平板与超声速来流平行；激波/膨胀扇由平板上方斜坡产生",
+      "source": "p.6 第2节，图3"
+    },
+    {
+      "item": "运动学",
+      "value": "激波/膨胀扇相对平板向下游运动，速度 Vsh；随激波坐标系中壁面以 Uw 向上游运动",
+      "source": "p.6、p.8 第2节"
+    },
+    {
+      "item": "Reynolds 数",
+      "value": "Re=ρ∞V∞L/μ∞→∞；L 为前缘到相互作用点的距离",
+      "source": "p.7 第2节"
+    },
+    {
+      "item": "来流 Mach 数",
+      "value": "M∞>1 且有限；β=√(M∞²−1)",
+      "source": "p.7–8 第2节"
+    },
+    {
+      "item": "速度比（triple-deck）",
+      "value": "Vsh/V∞=O(Re^-1/8)",
+      "source": "p.6 第2节"
+    },
+    {
+      "item": "速度比（渐近）",
+      "value": "1≫Vsh/V∞≫Re^-1/8，等价于 Uw→∞",
+      "source": "p.6 式(2.1)；p.10 式(2.5)"
+    },
+    {
+      "item": "气体模型",
+      "value": "完全气体，γ 为常数；密度与黏度用壁面值 ρw、μw 作仿射变换",
+      "source": "p.7–9 第2节"
+    },
+    {
+      "item": "热边界条件",
+      "value": "绝热壁或局部等温壁均适用",
+      "source": "p.9 第2节"
+    },
+    {
+      "item": "壁面条件",
+      "value": "无滑移：U=−Uw、V=0（Y=0）",
+      "source": "p.8 式(2.3c)"
+    },
+    {
+      "item": "外部扰动",
+      "value": "跨激波/膨胀扇压跳 ∝(Vsh/V∞)²，外部用 Ackeret 理论",
+      "source": "p.6 第2节"
+    },
+    {
+      "item": "数值工况",
+      "value": "Uw=2.0 与 3.0；膨胀扇强度 Ps=−Uw²/2",
+      "source": "p.14 第4节，图6、图7"
+    },
+    {
+      "item": "region C 工况",
+      "value": "ΨM=−0.4；χ=3.0、4.0、5.0",
+      "source": "p.28 第6节，图11"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "Re",
+      "definition": "Reynolds 数",
+      "value": "Re=ρ∞V∞L/μ∞；Re→∞",
+      "relation": "L 为前缘到相互作用点的距离；小参数 Re^-1/8",
+      "source": "p.7 第2节"
+    },
+    {
+      "name": "Uw",
+      "definition": "按 Re^-1/8 缩放的壁面速度（随激波坐标系中向上游为正）",
+      "value": "O(1) 数值取 2.0、3.0；渐近 Uw→∞",
+      "relation": "Uw=Vsh Re^{1/8}μw^{-1/4}ρw^{1/2}/(V∞λ^{1/4}β^{-1/4})",
+      "source": "p.8–9 第2节；p.14"
+    },
+    {
+      "name": "Ps",
+      "definition": "激波/膨胀扇强度参数",
+      "value": "激波 Ps>0；膨胀扇 Ps<0；数值取 Ps=−Uw²/2",
+      "relation": "Ps=Δp_sh Re^{1/4}μw^{-1/2}/(ρ∞V∞²λ^{1/2}β^{-1/2})",
+      "source": "p.9 第2节；p.14"
+    },
+    {
+      "name": "P̄s",
+      "definition": "按 Uw² 归一的激波/膨胀扇强度",
+      "value": "Ps=Uw²P̄s；膨胀扇分离阈值 P̄s=−1/2",
+      "relation": "决定 Ue 是否在 X*=0 归零",
+      "source": "p.12 式(3.6)；p.13 式(3.17)"
+    },
+    {
+      "name": "β",
+      "definition": "可压缩相似参数",
+      "value": "β=√(M∞²−1)",
+      "source": "p.8 第2节"
+    },
+    {
+      "name": "λ、ρw、μw",
+      "definition": "相互作用区前常规边界层的无量纲壁面剪应力、壁面密度与黏度",
+      "value": "由可压缩 Blasius 解给出；具体数值文中未提及",
+      "source": "p.8 第2节"
+    },
+    {
+      "name": "σ",
+      "definition": "region C 的纵向缩放参数",
+      "value": "由 2|lnσ|/σ²=Uw² 定义",
+      "source": "p.23 式(6.1)(6.2)"
+    },
+    {
+      "name": "χ",
+      "definition": "region C 的奇异性参数",
+      "value": "χ=2|lnσ|；数值取 3.0、4.0、5.0",
+      "source": "p.24 式(6.8)；p.28"
+    },
+    {
+      "name": "ΨM",
+      "definition": "region C 中最大压力点 M 对应的流函数值",
+      "value": "−0.4（图11 工况）",
+      "source": "p.26 式(6.21)；p.28"
+    },
+    {
+      "name": "X0",
+      "definition": "region C 压力发散的位置",
+      "value": "有限值，随参数变化；文中未给出具体数值",
+      "relation": "P̄→8π²/[χ²(X̄−X̄0)²]",
+      "source": "p.29 式(6.30)"
+    },
+    {
+      "name": "Ue",
+      "definition": "region 1b 外缘速度",
+      "value": "P̄s=−1/2 时 Ue=−e^{−X*}/(1+e^{−X*})",
+      "relation": "X*→∞ 时 Ue→−1；X*→0+ 时 Ue→−X*/2",
+      "source": "p.13 式(3.18)；p.18 式(5.15)"
+    }
+  ],
+  "methods": [
+    {
+      "item": "随激波运动的坐标系",
+      "value": "把分离点下游运动问题转化为壁面向上游运动的准定常问题；壁面速度 Uw 作为相似参数",
+      "source": "p.1、p.6 第2节"
+    },
+    {
+      "item": "triple-deck 渐近展开",
+      "value": "对 Re^-1/8 作三层黏性-无黏相互作用展开，并用 ρw、μw、λ、β 的仿射变换消去物性参数",
+      "source": "p.7–8 式(2.2)"
+    },
+    {
+      "item": "有限差分数值解",
+      "value": "将 (2.3) 离散为 (4.1)–(4.3)，用 Newton 迭代求解 (M−N)A=R",
+      "source": "p.14 第4节"
+    },
+    {
+      "item": "von Mises 变换",
+      "value": "把动量与连续方程写成 (2.4a,b)，便于区域分裂与流函数匹配",
+      "source": "p.9 式(2.4)"
+    },
+    {
+      "item": "匹配渐近展开",
+      "value": "按最小退化原则确定 1a 尺度；在 1b 外缘作 X*→∞、X*→0+、Ψ=O(1) 等极限匹配，引出 1b′、1a′ 与 region C",
+      "source": "p.11–30 第3、5、6节"
+    },
+    {
+      "item": "积分微分方程数值解",
+      "value": "对 (6.27a) 作细网格离散，对 Ψ=ΨR 处奇异积分作线性化解析处理",
+      "source": "p.28 第6节"
+    },
+    {
+      "item": "理论-数值对比",
+      "value": "图7 用 (3.18)(3.19) 虚线对比 triple-deck 压力；图11 用 (6.30) 对比 region C 数值解",
+      "source": "p.16 图7；p.29–30 图11"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "在随激波/膨胀扇运动的坐标系中，用 triple-deck 理论描述边界层与外部压跳的相互作用。先对 Vsh=O(Re^-1/8) 数值求解；再对 1≫Vsh/V∞≫Re^-1/8 作匹配渐近展开，把下层 region 1 分为无黏 1a 与黏性 1b，追踪 X*→0 的奇异性，最后用 condensed-flow 条件导出 region C 的积分微分方程，并解析求出第二奇点。",
+    "assumptions": [
+      "二维定常可压缩层流边界层，平板与来流平行",
+      "激波/膨胀扇由平板上方斜坡产生，相对平板向下游以 Vsh 运动；随激波坐标系中壁面向上游运动",
+      "Re→∞、M∞>1 有限，完全气体、γ 为常数",
+      "Vsh/V∞=O(Re^-1/8) 时 triple-deck 适用；1≫Vsh/V∞≫Re^-1/8 时可作无黏准定常分析",
+      "跨激波/膨胀扇压跳 ∝(Vsh/V∞)²，外部扰动可用 Ackeret 理论",
+      "壁面绝热或局部等温，无滑移；除分离外不考虑其他非定常效应",
+      "渐近分析取 Uw→∞，用于 region 1 的分裂"
+    ],
+    "steps": [
+      {
+        "title": "建立 triple-deck 尺度与方程组",
+        "text": "对 Re^-1/8 作三层展开，得到近壁层边界层方程、无滑移条件、远场衰减条件与位移-压力相互作用律。",
+        "latex": [
+          "x=1+Re^{-3/8}X,\\quad y=Re^{-5/8}Y,\\quad u=Re^{-1/8}U,\\quad v=Re^{-3/8}V,\\quad p=Re^{-1/4}P,\\quad \\psi=Re^{-3/4}\\Psi \\tag{2.2}",
+          "U\\frac{\\partial U}{\\partial X}+V\\frac{\\partial U}{\\partial Y}=-\\frac{dP}{dX}+\\frac{\\partial^{2}U}{\\partial Y^{2}},\\qquad \\frac{\\partial U}{\\partial X}+\\frac{\\partial V}{\\partial Y}=0 \\tag{2.3a,b}",
+          "U=-U_w,\\ V=0\\ (Y=0);\\qquad U=Y-U_w\\ (X=\\pm\\infty);\\qquad P=P_sH(X)-\\frac{dA}{dX} \\tag{2.3c,d,f}"
+        ],
+        "source": "p.7–9 第2节"
+      },
+      {
+        "title": "确定 region 1a 的尺度",
+        "text": "用最小退化原则，从初始条件避免退化要求 Ψ~Uw²、U~Uw；非线性项平衡要求 P~Uw²；连续方程与相互作用律给出 V~Uw³、X~1/Uw。",
+        "latex": [
+          "U=U_wU^*+\\cdots,\\quad V=U_w^{3}V^*+\\cdots,\\quad P=U_w^{2}P^*+\\cdots \\tag{3.3a-c}",
+          "X=\\frac{1}{U_w}X^*,\\qquad \\Psi=U_w^{2}\\Psi^* \\tag{3.4a,b}",
+          "P_s=U_w^{2}\\bar P_s \\tag{3.6}"
+        ],
+        "source": "p.11–12 第3节"
+      },
+      {
+        "title": "积分 1a 动量方程得到 Bernoulli 关系",
+        "text": "1a 中黏性项消失，流动无黏；沿 X* 积分动量方程得到 Bernoulli 函数，并由 X*→∞ 条件确定。",
+        "latex": [
+          "\\frac{1}{2}U^{*2}+P^*=H^*(\\Psi^*) \\tag{3.7}",
+          "U^*=\\begin{cases}-\\sqrt{2\\Psi^*-2P^*+2\\left(\\frac{1}{2}+\\bar P_s\\right)}, & \\Psi^*\\in\\left[0,P^*-\\frac{1}{2}+\\bar P_s\\right]\\\\ \\sqrt{2\\Psi^*-2P^*+2\\left(\\frac{1}{2}+\\bar P_s\\right)}, & \\Psi^*>P^*-\\frac{1}{2}+\\bar P_s\\end{cases} \\tag{3.9}"
+        ],
+        "source": "p.12 第3节"
+      },
+      {
+        "title": "由连续方程导出压力方程并求解",
+        "text": "对连续方程沿 Ψ* 积分，分流动反向点上下两段计算；代入相互作用律得到 P* 的一阶微分方程，积分给出含常数 C 的解。",
+        "latex": [
+          "P^*=\\bar P_sH(X^*)-\\frac{1}{2\\sqrt{2+\\bar P_s-2P^*}}\\frac{dP^*}{dX^*} \\tag{3.13}",
+          "C=\\frac{1-\\sqrt{1+2\\bar P_s}}{1+\\sqrt{1+2\\bar P_s}} \\tag{3.15}",
+          "U_e=-\\frac{1-Ce^{-X^*}}{1+Ce^{-X^*}} \\tag{3.16}"
+        ],
+        "source": "p.12–13 第3节"
+      },
+      {
+        "title": "判别激波与膨胀扇的分离倾向",
+        "text": "激波 P̄s>0 时压力沿 X* 单调升高，逆流黏性层处于有利压差，不分离；膨胀扇 P̄s<0 时压力沿 X* 下降，黏性层处于逆压差。P̄s=−1/2 时 Ue 在 X*=0 首次为零。",
+        "latex": [
+          "\\bar P_s=-\\frac{1}{2} \\tag{3.17}",
+          "U_e=-\\frac{e^{-X^*}}{1+e^{-X^*}} \\tag{3.18}",
+          "P^*=-\\frac{1}{2}U_e^{2} \\tag{3.19}"
+        ],
+        "source": "p.13–14 第3.1节"
+      },
+      {
+        "title": "建立 region 1b 的 Prandtl 边界层问题",
+        "text": "1b 与 1a 同纵向尺度，U~Uw、V~Uw、Ψ=O(1)、P 不跨层变化；速度由经典边界层方程描述，外缘速度 Ue 由 (3.18) 给出。",
+        "latex": [
+          "U=U_wU(X^*,\\Psi)+\\cdots,\\quad V=U_wV(X^*,\\Psi)+\\cdots \\tag{5.1}",
+          "P=U_w^{2}P^*(X^*)+\\cdots \\tag{5.3}",
+          "U\\frac{\\partial U}{\\partial X^*}-U_e\\frac{dU_e}{dX^*}=\\frac{\\partial}{\\partial\\Psi}\\left(U\\frac{\\partial U}{\\partial\\Psi}\\right) \\tag{5.4a}"
+        ],
+        "source": "p.16–17 第5节"
+      },
+      {
+        "title": "求 X*→∞ 时 1b 的解",
+        "text": "把外缘速度展开，设 U=−1+f(Ψ)e^{−X*}，得到 f 的边值问题并解析求解。",
+        "latex": [
+          "U_e=-1+2e^{-X^*}+\\cdots \\tag{5.5}",
+          "U=-1+f(\\Psi)e^{-X^*}+\\cdots \\tag{5.6}",
+          "f''-f=-2,\\quad f(0)=0,\\quad f(-\\infty)=2;\\qquad f(\\Psi)=2-2e^{\\Psi} \\tag{5.7}",
+          "U=-1+2e^{-X^*}-2e^{-X^*+\\Psi}+\\cdots \\tag{5.8}"
+        ],
+        "source": "p.17 第5节"
+      },
+      {
+        "title": "引入修正 Bernoulli 函数并求外层解",
+        "text": "定义 H=U²/2−Ue²/2，导出 H 的输运方程；在 Ψ→−∞ 设 H=h(X*)e^Ψ，得到 h 的微分方程并解出，从而给出 1b 外缘速度。",
+        "latex": [
+          "H=\\frac{1}{2}U^{2}-\\frac{1}{2}U_e^{2},\\qquad \\frac{\\partial H}{\\partial X^*}=U\\frac{\\partial^{2}H}{\\partial\\Psi^{2}} \\tag{5.9,5.10}",
+          "H=h(X^*)e^{\\Psi}+\\cdots,\\qquad \\frac{h'}{h}=-\\frac{e^{-X^*}}{1+e^{-X^*}} \\tag{5.11,5.12}",
+          "h(X^*)=\\frac{2}{e^{X^*}+2+e^{-X^*}} \\tag{5.13}",
+          "U=-\\sqrt{U_e^{2}+\\frac{4e^{\\Psi}}{e^{X^*}+2+e^{-X^*}}}+\\cdots \\tag{5.14}"
+        ],
+        "source": "p.17–18 第5节"
+      },
+      {
+        "title": "分析 X*→0 并引入 region 1b′",
+        "text": "X*→0+ 时 Ue≈−X*/2，双层极限使 e^Ψ/X*² 成为 O(1)；取 η=Ψ−2lnX*、U=−X*F(η)，黏性项可忽略，F 满足一阶方程并解析求解。",
+        "latex": [
+          "U_e=-\\frac{1}{2}X^*+\\cdots \\tag{5.15}",
+          "\\frac{e^{\\Psi}}{X^{*2}}=\\varphi(\\eta)=O(1),\\qquad \\eta=\\Psi-2\\ln X^* \\tag{5.17,5.18}",
+          "U=-X^*F(\\eta)+\\cdots,\\qquad 2FF'-F^{2}=-\\frac{1}{4} \\tag{5.19,5.20}",
+          "F(\\eta)=\\sqrt{\\frac{1}{4}+e^{\\eta}},\\qquad U=-X^*\\sqrt{\\frac{1}{4}+e^{\\eta}}+\\cdots \\tag{5.21}"
+        ],
+        "source": "p.18–19 第5.1节"
+      },
+      {
+        "title": "计算 1b 与 1a 的位移效应",
+        "text": "积分连续方程得分层流线斜率；分区间积分表明 1b 的位移效应主要来自 1b′，其量级为 −4(lnX*−1)/X*²；1a 的贡献仅 1/(2Uw²)，故 X* 足够小时 1b 占优。",
+        "latex": [
+          "\\frac{V}{U}=-\\int_0^{\\Psi}\\frac{1}{U^{2}}\\frac{\\partial U}{\\partial X^*}\\,d\\psi \\tag{5.27}",
+          "\\left.\\frac{V}{U}\\right|_{1b}=-\\frac{4(\\ln X^*-1)}{X^{*2}}+\\cdots \\tag{5.37}",
+          "\\left.\\frac{V}{U}\\right|_{1a}=\\frac{1}{2U_w^{2}}+\\cdots \\tag{5.42}"
+        ],
+        "source": "p.20–23 第5.2–5.3节（(5.34)(5.38) 积分式在 bundle 中排版错位，仅取可读结论）"
+      },
+      {
+        "title": "建立 region C 的尺度与 Bernoulli 函数",
+        "text": "取 X*=σX̄ 使 1b 与 1a 的流线角同量级，定义 χ=2|lnσ|；region C 无黏，Bernoulli 函数由 1a′ 与 1b′ 匹配相加得到，速度由二次式给出。",
+        "latex": [
+          "X^*=\\sigma\\check X,\\qquad \\frac{2|\\ln\\sigma|}{\\sigma^{2}}=U_w^{2} \\tag{6.1,6.2}",
+          "U=U_w\\sigma\\check U+\\cdots,\\quad P=U_w^{2}\\sigma^{2}\\check P+\\cdots,\\quad \\Psi=U_w^{2}\\sigma^{2}\\check\\Psi \\tag{6.4}",
+          "\\eta=\\chi(\\check\\Psi+1)-2\\ln\\check X,\\qquad \\chi=2|\\ln\\sigma| \\tag{6.8}",
+          "\\check H=\\check\\Psi+\\frac{1}{2}e^{\\chi(\\check\\Psi+1)} \\tag{6.14}",
+          "\\check U=\\pm\\sqrt{2\\check\\Psi+e^{\\chi(\\check\\Psi+1)}-2\\check P} \\tag{6.15}"
+        ],
+        "source": "p.23–25 第6节"
+      },
+      {
+        "title": "用 condensed-flow 条件导出积分微分方程并求第二奇点",
+        "text": "region C 很短，外缘流线角保持常数，与 1a 匹配得 V̄/Ū=1/2；沿截面分三段积分连续方程，得到 P̄ 的积分微分方程 (6.27a)。忽略小项后解析积分，得到 P̄ 在有限 X̄0 处按 (X̄−X̄0)⁻² 发散。",
+        "latex": [
+          "\\frac{\\check V}{\\check U}\\Big|_{\\check Y=\\infty}=\\frac{1}{2} \\tag{6.19}",
+          "\\frac{1}{4}=\\frac{d}{d\\check X}\\int_{\\check\\Psi_R}^{\\infty}\\frac{d\\check\\Psi}{\\sqrt{e^{\\chi(\\check\\Psi+1)}-2\\check P}} \\tag{6.28}",
+          "\\int_{\\check\\Psi_R}^{\\infty}\\frac{d\\check\\Psi}{\\sqrt{e^{\\chi(\\check\\Psi+1)}-2\\check P}}=\\frac{\\pi}{\\chi\\sqrt{2\\check P}} \\tag{6.29}",
+          "\\check P=\\frac{8\\pi^{2}}{\\chi^{2}\\left(\\check X-\\check X_0\\right)^{2}}+\\cdots \\tag{6.30}"
+        ],
+        "source": "p.26–30 第6–6.1节（(6.27a) 完整右端在 bundle 中排版错位，未擅自补全）"
+      }
+    ],
+    "result": "得到：激波不分离、膨胀扇在 P̄s=−1/2 时于 X*=0 使 Ue 归零；1a 的解析压力解 (3.13)–(3.16)；1b 在膨胀扇情形于 X*=0 附近奇异，并由 1b′/region C 描述；region C 压力满足积分微分方程 (6.27a)，数值上在有限 X0 发散，渐近式 (6.30) 与数值吻合。",
+    "limits": "渐近结果主要针对 Uw→∞；有限 Uw 仅有 Uw=2.0、3.0 的 triple-deck 数值解；模型为二维、完全气体、平板、层流，未含真实气体、湍流、壁面曲率与三维效应；region C 的解终止于 X0，之后自诱导压力升高需要新的更短区域，作者明确留待后续论文；无实验或 DNS 验证。"
+  },
+  "mechanism": "在随激波/膨胀扇运动的坐标系中，壁面向上游运动，近壁流体相对壁面具有负速度。入射激波使压力沿 +X 升高，逆流的黏性层沿其运动方向遇到的是有利压差，因而被加速、不分离；膨胀扇使压力沿 +X 降低，逆流黏性层沿其运动方向遇到逆压差，速度在 X*=0 附近被压到零并发生分离。随着 Uw 增大，region 1 分裂为无黏 1a 与黏性 1b：1a 决定压力，1b 满足无滑移并产生位移。X*→0 时 1b 的位移效应按 −4lnX*/X*² 增强并超过 1a 的 1/(2Uw²)，形成 1b′；再往下进入很短的 region C，外缘流线角近似不变（condensed-flow），压力由积分微分方程控制并最终在有限 X0 处发散，说明需要引入新的局部区域。",
+  "findings": [
+    {
+      "finding": "上游运动壁面情形下，入射激波不导致分离，膨胀扇才导致分离。",
+      "evidence": "1a 解析解 (3.16) 表明激波 P̄s>0 时压力沿 X* 单调升高、逆流黏性层处于有利压差；膨胀扇 P̄s<0 时压力下降，P̄s=−1/2 时 Ue 在 X*=0 归零。",
+      "type": "主结论",
+      "strength": "强",
+      "source": "p.13–14 第3.1节；p.30 第7节",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "triple-deck 数值解形成下游主涡与上游次涡，主涡随 Uw 增大、次涡相对减小。",
+      "evidence": "Uw=2.0 与 3.0 的流线图（图6）及压力分布（图7）。",
+      "type": "数值结果",
+      "strength": "强",
+      "source": "p.14 第4节，图6（p.15）、图7（p.16）",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "图7 的数值压力与理论解 (3.18)(3.19) 的虚线吻合。",
+      "evidence": "图7 中不同 Uw 的压力曲线与虚线对照。",
+      "type": "验证",
+      "strength": "强",
+      "source": "p.16 图7",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "1b 的解在激波情形保持光滑，在膨胀扇情形发生 Neiland 型奇异。",
+      "evidence": "第5节对 1b 的匹配与 X*→0 分析；第7节明确对比两种情形。",
+      "type": "机制",
+      "strength": "强",
+      "source": "p.16–23 第5节；p.30 第7节",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "X*→0 时 1b′ 的位移效应占优，1a 的贡献相对可忽略。",
+      "evidence": "式(5.37) 与 (5.42) 的量级比较；p.23 明确“1b 的位移效应主要来自 1b′”。",
+      "type": "渐近结果",
+      "strength": "强",
+      "source": "p.21–23，式(5.37)(5.42)",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "region C 的压力随 X 减小单调升高，并在有限 X0 处发散；χ 越大压力越低，(6.30) 与数值吻合。",
+      "evidence": "ΨM=−0.4、χ=3.0/4.0/5.0 的数值解（图11）及 (6.30) 的渐近式。",
+      "type": "主结论",
+      "strength": "强",
+      "source": "p.28–30 第6–6.1节，图11（p.29）",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "双涡结构与 pseudo-shock、collisional separation 类似，第二奇点与 Neiland 的膨胀解奇点机制相同。",
+      "evidence": "第7节结论中的类比陈述。",
+      "type": "解释",
+      "strength": "中",
+      "source": "p.30 第7节",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "【原文明确】对于向下游运动的分离点（随激波坐标系中壁面向上游运动），入射激波抑制分离，膨胀扇才使边界层分离；这是与下游运动壁面（Part 1）相反的行为（p.30 第7节）。【原文明确】triple-deck 数值解给出两个涡：下游主涡随 |Uw| 增大，上游次涡相对变小；该结构与 pseudo-shock、collisional separation 类似（p.30）。【原文明确】在 1≫Vsh/V∞≫Re^-1/8 下，下层分为无黏层与黏性层；黏性层对激波保持光滑，对膨胀扇发展出 Neiland 型奇异；分离点附近需引入由 (6.27a) 控制的更短区域，该区域又出现 (6.30) 的第二奇点（p.30）。",
+  "contributions": [
+    "系统研究分离点向下游运动（壁面向上游运动）时的准定常边界层分离，补足 Part 1 的下游运动壁面情形。",
+    "澄清激波与膨胀扇在运动壁面上的相反作用：激波不分离、膨胀扇分离。",
+    "给出 Uw=2.0/3.0 的 triple-deck 数值解，揭示主涡/次涡结构及其随壁速的变化。",
+    "建立 1≫Uw≫Re^-1/8 的匹配渐近结构（1a、1b、1b′、1a′、region C），导出 region C 的积分微分方程。",
+    "解析求出 region C 的第二奇点 (6.30)，并指出其与 Neiland 膨胀解奇点的联系。"
+  ],
+  "limits": "渐近理论主要适用于 Uw→∞；有限 Uw 只有 Uw=2.0、3.0 的数值结果，未系统给出渐近解与有限 Uw 数值的衔接范围。模型为二维、完全气体、平板、层流，未包含真实气体效应、湍流、壁面曲率、三维效应与壁面热传导的具体分布；region C 的解在有限 X0 处终止，之后自诱导压力升高所需的新区域未分析，作者明确留待后续论文（p.30）。无实验或 DNS 直接验证，图7、图11 的对比均为理论/数值内部对比。",
+  "significance": "首次系统给出分离点下游运动时边界层的准定常分离理论：说明运动壁面条件下激波与膨胀扇的作用可以相反，并给出从 triple-deck 数值到渐近三层结构、再到分离点局部积分微分方程与第二奇点的完整链条。该结果为运动激波/膨胀扇与边界层干扰、非定常分离的类比研究提供了可检验的渐近框架，也把问题与 Neiland 的超声速分离理论联系起来（p.30）。",
+  "quotes": [
+    {
+      "text": "does not cause separation",
+      "supports": "上游运动壁面情形下激波不引起分离的主结论",
+      "source": "p.10 第2节",
+      "use": "结论"
+    },
+    {
+      "text": "exposed to an expansion fan",
+      "supports": "膨胀扇才是分离的驱动因素",
+      "source": "p.10 第2节",
+      "use": "结论"
+    },
+    {
+      "text": "two eddies are forming",
+      "supports": "数值解的双涡结构",
+      "source": "p.14 第4节",
+      "use": "结果"
+    },
+    {
+      "text": "primary eddy grows with Uw",
+      "supports": "主涡随壁速增大",
+      "source": "p.14 第4节",
+      "use": "结果"
+    },
+    {
+      "text": "terminates at a finite",
+      "supports": "region C 压力在有限 X0 发散",
+      "source": "p.28 第6节",
+      "use": "结果"
+    },
+    {
+      "text": "viscous layer remains smooth",
+      "supports": "激波情形黏性层无奇异",
+      "source": "p.30 第7节",
+      "use": "结论"
+    },
+    {
+      "text": "develops a singularity",
+      "supports": "膨胀扇情形出现奇异",
+      "source": "p.30 第7节",
+      "use": "结论"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig01_p4.png",
+      "n": 1,
+      "page": 4,
+      "caption_zh": "下游运动壁面上的边界层分离示意",
+      "caption_orig": "FIGURE 1. Boundary-layer separation on a downstream moving wall.",
+      "why": "定义分离点随壁面运动时的几何与坐标关系，是全文“分离点下游运动、壁面相对上游运动”问题的出发点。"
+    },
+    {
+      "file": "fig04_p8.png",
+      "n": 4,
+      "page": 8,
+      "caption_zh": "相互作用区的三层结构",
+      "caption_orig": "FIGURE 4. Three-tiered structure of the interaction region.",
+      "why": "给出 triple-deck 的三层黏性-无黏结构，说明非线性分离过程限于近壁 region 1，为 (2.2)–(2.3) 的尺度与区域划分提供依据。"
+    },
+    {
+      "file": "fig06_p15.png",
+      "n": 6,
+      "page": 15,
+      "caption_zh": "受入射膨胀扇作用的边界层流线图：(a) Uw=2.0；(b) Uw=3.0",
+      "caption_orig": "FIGURE 6. The streamline pattern in the boundary layer exposed to an impinging expansion fan. (a) Uw = 2.0. ... (b) Uw = 3.0. ...",
+      "why": "直接显示膨胀扇入射后形成的下游主涡与上游次涡，并显示 Uw 由 2.0 增至 3.0 时主涡扩大、次涡相对缩小，支撑双涡结论。"
+    },
+    {
+      "file": "fig11_p29.png",
+      "n": 11,
+      "page": 29,
+      "caption_zh": "区域 C 内压力变化：ΨM=−0.4，χ=3.0、4.0、5.0",
+      "caption_orig": "FIGURE 11. Pressure variation in region C for ΨM = −0.4 and χ = 3.0, 4.0 and 5.0.",
+      "why": "显示压力随 X 减小单调升高、χ 越大压力越低，并在有限 X0 处发散，支撑 (6.30) 的第二奇异性结论。"
+    }
+  ],
+  "verification": {
+    "text_only": "仅使用 bundle 的 metadata、图注与 1572 行带页码文本；未另读原 PDF，也未引用外部文献结论。个别积分式排版错位处只记录式号与可读结构。",
+    "a_grade_supported": "A 级要点均有页码/式号/图号支撑：激波/膨胀扇判别见 p.13–14、p.30；双涡见图6（p.15）；1a/1b 结构见 p.11–23；region C 与 (6.30) 见 p.28–30、图11。",
+    "attributes_marked": "three_sentence、core_points、findings 均逐条标注 原文明确/AI概括/AI推断；IMRaD 段落内亦用【】标注。",
+    "no_fabrication": "未补写原文没有的页码、图号、公式或数据；(5.34)、(5.38)、(6.26)、(6.27a) 等排版错位式未擅自补全；X0 等未给具体数值者写“文中未给出”。",
+    "coverage": "bundle 1572 行已读到 EOF；11 幅抓图清单全部登记，选用 4 幅；未读原 PDF。",
+    "open_questions": [
+      "自诱导压力升高后在 X0 附近应引入怎样的新区域？其尺度与方程尚未给出（p.30 明确留待后续）。",
+      "Uw→∞ 渐近解与有限 Uw（2.0、3.0）数值解的定量衔接范围有多大？",
+      "壁面绝热/等温条件会如何改变 X0 与双涡结构？",
+      "真实气体、湍流、壁面曲率与三维效应是否会破坏 region C 的 condensed-flow 假设？",
+      "(6.27a) 仅在 ΨM=−0.4、χ=3/4/5 下数值求解，更广参数范围的解与 (6.30) 的一致性如何？",
+      "是否存在实验或 DNS 可直接验证双涡结构与有限 X0 奇异性？"
+    ]
+  }
+}

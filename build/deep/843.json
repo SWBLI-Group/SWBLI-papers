@@ -1,0 +1,604 @@
+{
+ "id": 843,
+ "read_note": "数值+理论论文（二维基流、全局线性稳定性、全局预解、白噪声强迫的线性/非线性N-S），JFM 2016年789卷，全文35页；图1-25、表1-3清晰，表4排版错乱（仅采用正文可确认的强迫/探头设置）；公式经原PDF第6、7、9、15、20页核对。信息完整度高。",
+ "one_line": "斜激波/层流边界层干扰全局稳定、呈选择性噪声放大：低频随分离激波、中频随剪切层。",
+ "three_sentence": [
+  {
+   "text": "层流/转捩斜激波-边界层干扰的全局稳定性研究很少，Priebe & Martin提出的“低频为全局不稳定模态”假设尚未被证明（第3页）。",
+   "attr": "原文明确"
+  },
+  {
+   "text": "作者对M∞=2.10-3.00、Reδ*=1010-2700、θ=22.2°-32°的7个二维工况计算基流，做全局线性稳定性、全局预解和白噪声强迫响应；所有特征值实部为负，流动全局稳定，扰动以波包形式被选择性放大（第1、14页）。",
+   "attr": "AI概括"
+  },
+  {
+   "text": "低频结构贴近分离激波、按干扰长度Lint缩放并辐射马赫波，中频结构位于剪切层、按冲击处排移厚度δ*缩放；非线性使低频响应增强，作者据此推断湍流SWBLI低频非定常可能源于剪切层模态的非线性相互作用（第17-19、26-29页）。",
+   "attr": "AI概括"
+  }
+ ],
+ "imrad": {
+  "introduction": "湍流SWBLI普遍存在低频非定常（分离激波在St_Lint≈0.03附近自持振荡），其机理存在多种假说：上游大尺度结构、下游回流区影响、入射激波与分离激波之间的声反馈环、剪切层/回流区质量平衡（Piponniau等）、分离激波对白噪声的低通滤波（Touber & Sandham）。层流或转捩SWBLI的全局稳定性研究很少：局部稳定性方法只能覆盖中高频，低频动力学需要全局方法；Robinet(2007)只分析了三维定常全局不稳定，Priebe & Martin(2012)猜测低频是全局不稳定模态但未被证明。本文以Degrez等(1987)构型为起点，研究斜激波与平板层流边界层的二维干扰，目标是判断其全局稳定性、识别模态族、建立频率-空间尺度缩放，并用全局预解和强迫响应解释频率选择（第2-4页）。",
+  "methods": "控制方程为二维可压缩N-S方程（式2.1-2.4）：理想气体、Newtonian流体、Sutherland黏性（Ts=110.4 K）、γ=1.4、Pr=0.72，以激波后Ue和冲击处δ*无量纲。基流用PHOENIX有限体积程序：Roe通量分裂、MUSCL三阶、黏性项中心差分、双时间步；壁面无滑移绝热，顶部用Rankine-Hugoniot关系施加斜激波，出口与上边界用特征法，入口给定二维定常N-S解。线性化后得∂q'/∂t=Jq'（式2.7-2.8），用时间步进算子M=exp(JΔt)的Krylov-Arnoldi方法求Ritz对（式3.2-3.4），参数Δt=1.5×10⁻⁷、CFL=1、Δt_s=40Δt、N_s=400、ε_ev=1×10⁻⁶（表2）。计算域[0,400]×[0,80]，网格560×100，并用650×100、900×200做谱收敛性检查（附录A.1）。全局预解R(ω)由Arnoldi的Hessenberg矩阵近似（第25页），伪谱按式(A1)。强迫采用高斯包络白噪声（式4.3），4个壁面压力探头，PSD用三段50%重叠、记录长度1000；Fourier模态由10000个快照（间隔0.148）变换，并用100个全局模态做正交投影（式4.4）。",
+  "results": "7个工况A-G覆盖M∞=2.10-3.00、θ=22.2°-32°、Reδ*=1010-2700（表3）；θ增大时干扰区近线性增大，θ=32.5°时摩阻系数在x/δ*≈99.2处变正，提示二维平衡态上限约为32°（图4）。所有特征值实部为负，谱分为四族：I超声速Kelvin-Helmholtz（KH）模态、II亚声速KH模态、III边界层模态、IV声模态（图8-9）。低频I类结构位于分离区/分离激波附近，按Lint缩放；II/III类按δ*缩放，I与II/III的分界为St×Lint/δ*≈2.8，II类最弱阻尼模态St≈0.145（图12-14）。全局预解在St≈0.145出现峰值，且θ从30.8°增至32°不改变峰值位置（图19）。上游白噪声强迫下，P1/P3在St∈[0.05,0.5]呈宽带放大，P2呈低通、St>0.1后衰减（图15）；内部强迫对I类低频更有效，而II类中频在分离点附近接收性更强（第24页、图16）。非线性计算中中高频响应与线性接近，低频能量随强迫幅值增强，St=0.02模态局域于回流区且无明显声辐射（图20-22）。",
+  "discussion": "四族模态的物理分工：I类波在剪切层下侧相对亚声速、上侧相对超声速，向下游辐射马赫波；IV类为自由流声模态，以浅角向下游辐射。作者据此认为OSWBLI是“选择性噪声放大器”，其动力学由接收性和非模态暂态响应驱动，而不是单一全局不稳定模态；这也解释了为何所有模态衰减却仍可出现大幅值结构。与湍流对比：层流剪切层动力学对应St_Lint≈5，湍流约0.5，且δ*差约5倍，说明湍流不稳定性波长更长；层流结果支持“低频源于剪切层不稳定性非线性相互作用”的图景，但不能唯一判定上游强迫、声反馈、质量平衡等假说。局限：二维扰动、层流、低Re，Re与M不能独立变化，仅对Case A做强迫响应，低频非线性机制尚未辨识。"
+ },
+ "core_points": [
+  {
+   "point": "所有工况的所有全局模态增长率均为负，OSWBLI在给定参数范围内全局稳定",
+   "type": "核心结论",
+   "grade": "A",
+   "source": "第14页 §4.2.2、图8",
+   "attr": "原文明确"
+  },
+  {
+   "point": "脉冲扰动演化为沿剪切层向下游增长的波包，体现噪声放大器而非振荡器行为",
+   "type": "机理",
+   "grade": "A",
+   "source": "第12-14页 §4.2.1、图5-7",
+   "attr": "原文明确"
+  },
+  {
+   "point": "全局谱分为四族：超声速KH、亚声速KH、边界层模态、声模态",
+   "type": "分类",
+   "grade": "A",
+   "source": "第14-17页 图8-9",
+   "attr": "原文明确"
+  },
+  {
+   "point": "低频（I类）结构按干扰长度Lint缩放，I与II/III的分界为St×Lint/δ*≈2.8",
+   "type": "缩放律",
+   "grade": "A",
+   "source": "第17页 §4.2.3、图12",
+   "attr": "原文明确"
+  },
+  {
+   "point": "中频（II/III类）按冲击处排移厚度δ*缩放，II类最弱阻尼模态St≈0.145",
+   "type": "缩放律",
+   "grade": "A",
+   "source": "第17-18页 图12-13",
+   "attr": "原文明确"
+  },
+  {
+   "point": "I类能量集中于分离区，II类集中于再附点附近，III类在气泡下游附着区放大",
+   "type": "空间局域化",
+   "grade": "A",
+   "source": "第19页 图14",
+   "attr": "原文明确"
+  },
+  {
+   "point": "全局预解在St≈0.145达峰，θ由30.8°增至32°峰位不变",
+   "type": "定量结果",
+   "grade": "A",
+   "source": "第25页 图19",
+   "attr": "原文明确"
+  },
+  {
+   "point": "上游白噪声强迫在St∈[0.05,0.5]产生宽带选择性放大，分离激波处呈低通响应",
+   "type": "接收性",
+   "grade": "A",
+   "source": "第22-23页 图15-16",
+   "attr": "原文明确"
+  },
+  {
+   "point": "非线性使低频响应增强，St=0.02模态局域于回流区且无声辐射",
+   "type": "非线性",
+   "grade": "B",
+   "source": "第26-27页 图20-22",
+   "attr": "原文明确"
+  },
+  {
+   "point": "θ=32.5°时壁面摩阻变正，二维定常平衡态的上限约为θ=32°",
+   "type": "参数边界",
+   "grade": "B",
+   "source": "第11-12页 §4.1、图4",
+   "attr": "原文明确"
+  },
+  {
+   "point": "数值谱对St>0.16的高频收敛慢，伪谱显示特征值对扰动高度敏感",
+   "type": "数值方法",
+   "grade": "B",
+   "source": "第30页 附录A.1、图23-24",
+   "attr": "原文明确"
+  },
+  {
+   "point": "层流与湍流剪切层动力学的St_Lint相差约一个量级（5对0.5），δ*相差约5倍",
+   "type": "对比",
+   "grade": "C",
+   "source": "第29页 §5",
+   "attr": "原文明确"
+  }
+ ],
+ "conditions": [
+  {
+   "item": "算例A（Degrez构型）",
+   "value": "M∞=2.15；θ=30.8°（气流偏转角β=3.81°）；δ*=8.4×10⁻⁴ m；Reδ*=1050；Lint/δ*=36.7；Lsep/δ*=68；Lsep/H=35.77",
+   "source": "第5页表1、第10页表3"
+  },
+  {
+   "item": "算例B",
+   "value": "M∞=2.15；θ=31.4°；β文中未提及；δ*=8.4×10⁻⁴ m；Reδ*=1050；Lint/δ*=50.4；Lsep/δ*=92；Lsep/H=30.00",
+   "source": "第10页表3"
+  },
+  {
+   "item": "算例C",
+   "value": "M∞=2.15；θ=32.0°；β文中未提及；δ*=8.4×10⁻⁴ m；Reδ*=1050；Lint/δ*=64.1；Lsep/δ*=108；Lsep/H=25.98",
+   "source": "第10页表3"
+  },
+  {
+   "item": "算例D",
+   "value": "M∞=2.10；θ=30.8°；β文中未提及；δ*=8.0×10⁻⁴ m；Reδ*=1010；Lint/δ*=19.9；Lsep/δ*=37；Lsep/H=46.34",
+   "source": "第10页表3"
+  },
+  {
+   "item": "算例E",
+   "value": "M∞=2.20；θ=30.8°；β文中未提及；δ*=8.7×10⁻⁴ m；Reδ*=1090；Lint/δ*=53.6；Lsep/δ*=93；Lsep/H=29.34",
+   "source": "第10页表3"
+  },
+  {
+   "item": "算例F",
+   "value": "M∞=2.15；θ=30.8°；β文中未提及；δ*=1.56×10⁻³ m；Reδ*=1950；Lint/δ*=70.1；Lsep/δ*=109；Lsep/H=36.08",
+   "source": "第10页表3"
+  },
+  {
+   "item": "算例G",
+   "value": "M∞=3.00；θ=22.2°；β文中未提及；δ*=2.15×10⁻³ m；Reδ*=2700；Lint/δ*=25.0；Lsep/δ*=62；Lsep/H=23.00",
+   "source": "第10页表3"
+  },
+  {
+   "item": "来流总条件",
+   "value": "Ti,∞=287 K；Pi,∞=1.07×10⁴ Pa",
+   "source": "第5页表1"
+  },
+  {
+   "item": "气体与输运性质",
+   "value": "γ=1.4；Pr=0.72；Sutherland常数Ts=110.4 K；量热完全气体",
+   "source": "第6页 §2.2"
+  },
+  {
+   "item": "壁面与边界条件",
+   "value": "无滑移、绝热壁；入口给定二维定常N-S解；顶部用R-H关系施加斜激波；出口/上边界用特征法减小反射",
+   "source": "第7-8页 §3.1"
+  },
+  {
+   "item": "计算域与网格",
+   "value": "x/δ*∈[0,400]，y/δ*∈[0,80]；Nx×Ny=560×100；另用650×100和900×200验证",
+   "source": "第10页 §4.1、第29-30页附录A.1"
+  },
+  {
+   "item": "扰动维数",
+   "value": "基流与扰动均为二维；三维扰动未计算",
+   "source": "第4页 §1、第29页 §5"
+  }
+ ],
+ "key_parameters": [
+  {
+   "name": "St",
+   "definition": "基于δ*与Ue的Strouhal数",
+   "value": "St=(ωδ*/Ue)/2π",
+   "relation": "谱图横轴",
+   "source": "第14页 §4.2.2"
+  },
+  {
+   "name": "St×Lint/δ*",
+   "definition": "基于干扰长度的无量纲频率",
+   "value": "I类与II/III类的分界≈2.8",
+   "relation": "低频按Lint缩放",
+   "source": "第17页 §4.2.3、图12"
+  },
+  {
+   "name": "St（II类）",
+   "definition": "中频最强选择性频率",
+   "value": "≈0.145；预解峰值同在此处",
+   "relation": "按δ*缩放",
+   "source": "第17、25页 图12、图19"
+  },
+  {
+   "name": "Mr,i",
+   "definition": "剪切层上/下侧相对相速度（相对马赫数）",
+   "value": "Mr<1为亚声速KH，Mr>1为超声速KH",
+   "relation": "Mr,i=|ω/αr−Ui|/ai",
+   "source": "第15页 式(4.1)"
+  },
+  {
+   "name": "αr",
+   "definition": "附着于剪切层的曲线坐标s方向的波数",
+   "value": "由特征模态相位求得",
+   "relation": "αr=dφ/ds",
+   "source": "第15页 式(4.2)"
+  },
+  {
+   "name": "Lint/δ*",
+   "definition": "干扰长度与冲击处排移厚度之比",
+   "value": "A-G分别为36.7/50.4/64.1/19.9/53.6/70.1/25.0",
+   "relation": "低频缩放尺度",
+   "source": "第10页 表3"
+  },
+  {
+   "name": "Lsep/H",
+   "definition": "分离长度Lsep与H之比（H的定义文中未说明）",
+   "value": "A-G分别为35.77/30.00/25.98/46.34/29.34/36.08/23.00",
+   "relation": "表征分离区相对尺度",
+   "source": "第10页 表3"
+  },
+  {
+   "name": "选择性频带",
+   "definition": "线性响应被放大的频率范围",
+   "value": "St∈[0.05,0.5]；低频St∈[5×10⁻⁴,0.05]",
+   "relation": "上游强迫/非线性低频",
+   "source": "第22页 §4.3、第28页 §5"
+  },
+  {
+   "name": "St_Lint（层流/湍流）",
+   "definition": "剪切层动力学的无量纲频率",
+   "value": "层流≈5，湍流≈0.5",
+   "relation": "对比湍流SWBLI",
+   "source": "第29页 §5"
+  },
+  {
+   "name": "θ临界",
+   "definition": "二维定常平衡态可维持的最大入射激波角",
+   "value": "≈32.5°时摩阻变正，谱分析限于θ≤32°",
+   "relation": "二维性判据",
+   "source": "第11-12页 §4.1、图4"
+  }
+ ],
+ "methods": [
+  {
+   "item": "控制方程",
+   "value": "二维可压缩N-S，守恒形式，理想气体+Newtonian+Sutherland",
+   "source": "第5-6页 式(2.1)-(2.4)"
+  },
+  {
+   "item": "无量纲化",
+   "value": "长度δ*、速度Ue、时间δ*/Ue、压力ρ∞Ue²",
+   "source": "第6页 §2.2"
+  },
+  {
+   "item": "基流求解",
+   "value": "PHOENIX有限体积，Roe通量分裂，MUSCL三阶，黏性项中心差分，双时间步",
+   "source": "第7页 §3.1"
+  },
+  {
+   "item": "基流边界条件",
+   "value": "壁面无滑移绝热；顶部R-H斜激波；出口/上边界特征法；入口定常解",
+   "source": "第7-8页 §3.1"
+  },
+  {
+   "item": "基流验证",
+   "value": "Case A与Degrez等(1987)实验/数值的摩阻与壁压对比（图3）",
+   "source": "第10页 §4.1、图3"
+  },
+  {
+   "item": "稳定性分析",
+   "value": "小扰动代入得线性算子J，正则模态Jq̂=λq̂，λ=σ+iω",
+   "source": "第6-8页 式(2.6)-(2.9)、(3.1)"
+  },
+  {
+   "item": "特征值算法",
+   "value": "矩阵自由时间步进+Krylov子空间+Arnoldi/Gram-Schmidt，由Hessenberg矩阵Ritz对反算λ",
+   "source": "第8-9页 式(3.2)-(3.4)"
+  },
+  {
+   "item": "数值参数",
+   "value": "Δt=1.5×10⁻⁷，CFL=1，Δt_s=40Δt，N_s=400，ε_ev=1×10⁻⁶",
+   "source": "第10页 表2"
+  },
+  {
+   "item": "预解与伪谱",
+   "value": "R(ω)由Hessenberg矩阵近似；伪谱Λ_ε按式(A1)计算",
+   "source": "第25页 §4.3、第30页式(A1)"
+  },
+  {
+   "item": "强迫设置",
+   "value": "高斯包络壁面法向速度白噪声（式4.3），F1位于分离点上游、F2位于回流区中心；4个压力探头P1-P4",
+   "source": "第20页 §4.3、表4"
+  },
+  {
+   "item": "频谱估计",
+   "value": "PSD用三段50%重叠、记录长度1000；WPSD按强迫幅值归一化",
+   "source": "第20页 §4.3"
+  },
+  {
+   "item": "Fourier模态与投影",
+   "value": "10000个快照（间隔0.148）做Fourier变换；100个全局模态正交投影（式4.4）",
+   "source": "第20-23页 §4.3"
+  },
+  {
+   "item": "非线性计算",
+   "value": "同一强迫作用于全N-S方程，Af=10⁻⁸、10⁻⁴（F1）与10⁻⁶（F2）",
+   "source": "第25-26页 §4.4"
+  },
+  {
+   "item": "网格/谱收敛",
+   "value": "560×100与650×100几乎一致；900×200在St>0.16有差异；预解对N_s=320/360/400不敏感",
+   "source": "第29-31页 附录A.1-A.2、图23-25"
+  }
+ ],
+ "derivation": {
+  "exists": true,
+  "idea": "将二维定常基流代入可压缩N-S方程并做小扰动线性化，得到线性算子J的特征问题；用时间步进算子的Krylov-Arnoldi方法提取全局模态，再用相对相速度判别KH模态的亚声速/超声速性质，并用全局预解解释频率选择。",
+  "assumptions": [
+   "二维基流与二维扰动，扰动无穷小，忽略非线性项",
+   "量热完全气体、Newtonian流体、Sutherland黏性、Pr=0.72、γ=1.4",
+   "壁面无滑移、绝热；入口为定常二维N-S解；顶部斜激波由R-H关系给定",
+   "存在定常平衡基流 R(qb)=0",
+   "时间步进算子与本征值按Nyquist准则对应，快照长度足以捕捉最慢频率",
+   "预解由Arnoldi的Hessenberg矩阵近似，特征值对扰动敏感性用伪谱描述"
+  ],
+  "steps": [
+   {
+    "title": "无量纲可压缩N-S方程",
+    "text": "以守恒变量q=[ρ,ρu,ρE]写出二维可压缩N-S方程，并用δ*、Ue、ρ∞Ue²无量纲化；黏性应力与热流分别由Newtonian关系和Fourier导热给出。",
+    "latex": [
+     "\\frac{\\partial \\rho}{\\partial t}+\\nabla\\cdot(\\rho\\boldsymbol{u})=0",
+     "\\frac{\\partial}{\\partial t}(\\rho\\boldsymbol{u})+\\nabla\\cdot\\left[\\rho\\boldsymbol{u}\\otimes\\boldsymbol{u}+p\\boldsymbol{I}-\\frac{1}{Re}\\boldsymbol{\\tau}\\right]=\\boldsymbol{0}",
+     "\\frac{\\partial}{\\partial t}(\\rho E)+\\nabla\\cdot\\left[(\\rho E+p)\\boldsymbol{u}-\\frac{1}{Re}\\boldsymbol{\\tau}\\odot\\boldsymbol{u}+\\frac{\\kappa}{(\\gamma-1)ReM_\\infty^2}\\nabla T\\right]=0",
+     "p=\\frac{1}{\\gamma M_\\infty^2}\\rho T,\\quad E=\\frac{T}{\\gamma(\\gamma-1)M_\\infty^2}+\\frac{1}{2}\\boldsymbol{u}\\cdot\\boldsymbol{u}"
+    ],
+    "source": "第6页 式(2.1)(2.2)"
+   },
+   {
+    "title": "基流与守恒形式",
+    "text": "把方程组写成∂q/∂t=R(q)，基流满足R(qb)=0；基流假定为二维定常解。",
+    "latex": [
+     "\\frac{\\partial \\boldsymbol{q}}{\\partial t}=\\mathcal{R}(\\boldsymbol{q})",
+     "\\mathcal{R}(\\boldsymbol{q}_b)=0,\\quad \\boldsymbol{q}_b=\\boldsymbol{q}_b(x,y)"
+    ],
+    "source": "第6页 式(2.5)、§2.3"
+   },
+   {
+    "title": "小扰动线性化",
+    "text": "将瞬时流场分解为基流与小扰动，忽略非线性项，得到以Jacobian算子J表示的线性演化方程。",
+    "latex": [
+     "\\boldsymbol{q}(x,y,t)=\\boldsymbol{q}_b(x,y)+\\epsilon\\boldsymbol{q}'(x,y,t),\\quad \\epsilon\\ll1",
+     "\\frac{\\partial \\boldsymbol{q}'}{\\partial t}=\\mathcal{J}\\boldsymbol{q}'",
+     "\\mathcal{J}=\\left.\\frac{\\partial\\mathcal{R}}{\\partial\\boldsymbol{q}}\\right|_{\\boldsymbol{q}_b}"
+    ],
+    "source": "第6-7页 式(2.6)-(2.8)"
+   },
+   {
+    "title": "半离散特征问题",
+    "text": "线性化方程用与非线性N-S相同的Roe格式离散，得到大型常微分方程组；设正则模态解，问题化为特征值问题。",
+    "latex": [
+     "\\frac{\\mathrm{d}\\boldsymbol{q}'}{\\mathrm{d}t}=\\boldsymbol{J}\\boldsymbol{q}'",
+     "\\boldsymbol{q}'(x,t)=\\hat{\\boldsymbol{q}}(x)\\exp(\\lambda t)",
+     "\\boldsymbol{J}\\hat{\\boldsymbol{q}}=\\lambda\\hat{\\boldsymbol{q}},\\quad \\lambda=\\sigma+\\mathrm{i}\\omega"
+    ],
+    "source": "第8页 式(3.1)、§3.3"
+   },
+   {
+    "title": "时间步进算子与Krylov子空间",
+    "text": "为避免显式构造Jacobian，用指数传播算子M=exp(JΔt)作用于快照，构造Krylov子空间并正交化；将M投影到低维Hessenberg矩阵求Ritz对。",
+    "latex": [
+     "\\boldsymbol{M}(\\Delta t_s)\\boldsymbol{q}'=\\hat{\\lambda}\\boldsymbol{q}',\\quad \\boldsymbol{M}(\\Delta t_s)=\\exp(\\boldsymbol{J}\\Delta t_s)",
+     "K_m(\\boldsymbol{M},\\boldsymbol{q}'_0)=\\mathrm{span}[\\boldsymbol{q}'_0,\\boldsymbol{M}\\boldsymbol{q}'_0,\\ldots,\\boldsymbol{M}^{m-1}\\boldsymbol{q}'_0]",
+     "\\boldsymbol{M}\\boldsymbol{U}_k=\\boldsymbol{U}_k\\boldsymbol{H}_k+r_k\\boldsymbol{e}_k^{\\mathrm{T}}",
+     "\\lambda\\simeq\\frac{\\log(\\hat{\\lambda}_H)}{\\Delta t_s},\\quad \\hat{\\boldsymbol{q}}\\simeq\\boldsymbol{U}_k\\boldsymbol{X}"
+    ],
+    "source": "第9页 式(3.2)-(3.4)"
+   },
+   {
+    "title": "模态分类与相对相速度",
+    "text": "对每个特征模态，在附着于剪切层的曲线坐标中求波数与相速；上、下两侧相对马赫数Mr<1为亚声速KH，Mr>1为超声速KH并可辐射马赫波。",
+    "latex": [
+     "M_{r,i}=\\frac{|\\omega/\\alpha_r-U_i|}{a_i}",
+     "\\phi=\\tan^{-1}\\left(\\frac{\\hat{v}_i}{\\hat{v}_r}\\right),\\quad \\alpha_r=\\frac{\\mathrm{d}\\phi}{\\mathrm{d}s}"
+    ],
+    "source": "第15页 式(4.1)(4.2)"
+   },
+   {
+    "title": "全局预解与伪谱",
+    "text": "预解R(ω)表示频率ω的谐波强迫下流场的最大响应，与全局模态的非正交性有关；伪谱给出特征值对扰动的敏感度。",
+    "latex": [
+     "\\Lambda_\\epsilon=\\{\\omega\\in\\mathbb{C}:\\|R(\\omega)\\|>\\epsilon^{-1}\\}",
+     "\\|R(\\omega)\\|\\geqslant\\frac{1}{\\mathrm{dist}[z,\\mathrm{Sp}(\\boldsymbol{J})]}"
+    ],
+    "source": "第25页 §4.3、第30页 式(A1)"
+   },
+   {
+    "title": "白噪声强迫与Fourier分解",
+    "text": "在壁面施加高斯包络的白噪声法向速度，记录压力探头响应并计算WPSD；对单频Fourier模态用全局模态正交展开，判断各模态族的贡献。",
+    "latex": [
+     "v'_f(x^\\star,y^\\star)=A_f\\exp\\left[-\\left(\\frac{x^\\star-x^\\star_f}{\\xi_x}\\right)^2-\\left(\\frac{y^\\star-y^\\star_f}{\\xi_y}\\right)^2\\right]W_v(t)",
+     "\\boldsymbol{q}_{Fourier}(x,y)=\\sum_{i=1}^{N}W_i\\hat{\\boldsymbol{q}}_i(x,y)"
+    ],
+    "source": "第20页式(4.3)、第22页式(4.4)"
+   }
+  ],
+  "result": "给定参数范围内所有特征值σ<0，流动全局稳定；谱分为I-IV四族，I类按Lint缩放（分界St×Lint/δ*≈2.8），II/III类按δ*缩放（II类St≈0.145）；预解峰值St≈0.145；白噪声响应在St∈[0.05,0.5]被选择性放大，分离激波处呈低通；非线性仅显著增强低频。",
+  "limits": "仅二维基流与二维扰动；层流、低Re（1010-2700）；Re与M不能独立变化，缩放律的M/Re依赖未定；仅Case A做强迫/非线性计算；计算域截断使高频（St>0.16）谱收敛慢，III类模态受下游边界条件影响；预解由Hessenberg矩阵近似，特征值对扰动高度敏感；低频非线性机制未辨识。"
+ },
+ "mechanism": "前提：OSWBLI全局稳定但线性算子高度非正交，故存在非模态暂态增长。证据：所有模态σ<0（图8），脉冲扰动仍形成向下游增长的波包（图5-7），预解在St≈0.145出现峰值（图19）。推论：流动是选择性噪声放大器；频率选择性由模态的空间尺度决定——低频模态尺度为Lint、贴近分离激波，中频模态尺度为δ*、位于剪切层/再附点；I类模态相对上侧外流超声速、下侧亚声速，故向上游/远场辐射马赫波。结论：低频非定常不需要全局不稳定即可出现；非线性使能量向低频、回流区集中。以上“非正交导致暂态增长”的因果表述部分属AI概括，原文明确给出的是“selective noise amplifier”与“non-modal transient response”。",
+ "findings": [
+  {
+   "finding": "在M∞=2.10-3.00、Reδ*=1010-2700、θ=22.2°-32°范围内，OSWBLI全局稳定",
+   "evidence": "图8（Case A）中所有特征值增长率σδ*/Ue<0；正文明确“all of the modes are temporally damped”，并称该结论对宽参数范围成立",
+   "type": "全局稳定性",
+   "strength": "强",
+   "source": "第14-15页 §4.2.2、图8",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "脉冲扰动形成沿剪切层向下游增长的波包，随后流出计算域并松弛",
+   "evidence": "图5-7的快照与时空图；上游锋面在激波冲击点后减速、进入附着区再加速",
+   "type": "线性动力学",
+   "strength": "强",
+   "source": "第12-14页 §4.2.1、图5-7",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "全局谱含四族模态：超声速KH、亚声速KH、边界层模态、声模态",
+   "evidence": "图8分区与图9典型模态；I类上游Mr>1、下游Mr<1",
+   "type": "模态分类",
+   "strength": "强",
+   "source": "第14-17页 图8-11",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "低频I类按Lint缩放，中频II/III类按δ*缩放，分界为St×Lint/δ*≈2.8",
+   "evidence": "A-E工况谱在两种归一化下的坍缩；图12-13竖直线",
+   "type": "缩放分析",
+   "strength": "强",
+   "source": "第17-18页 §4.2.3、图12-13",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "I类能量集中于分离区，II类集中于再附点附近，III类在气泡下游附着区放大",
+   "evidence": "沿法向积分动能随x的分布（图14a,b），C工况分离区增大后更明显（图14c）",
+   "type": "空间局域化",
+   "strength": "中",
+   "source": "第19页 图14",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "全局预解在St≈0.145达峰，θ从30.8°增至32°峰位不变",
+   "evidence": "图19两条曲线；与线性强迫响应一致",
+   "type": "频响",
+   "strength": "中",
+   "source": "第25页 §4.3、图19",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "上游白噪声强迫在P1/P3产生St∈[0.05,0.5]宽带放大，P2呈低通",
+   "evidence": "图15 WPSD；P2在St>0.1后所有频率衰减",
+   "type": "接收性",
+   "strength": "强",
+   "source": "第22页 图15、第20页 §4.3",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "非线性对中高频响应影响小，但显著增强低频，St=0.02模态局域于回流区且无声辐射",
+   "evidence": "Af=10⁻⁸与10⁻⁴的WPSD对比（图20-21）；图22压力/涡量模态",
+   "type": "非线性",
+   "strength": "中",
+   "source": "第25-27页 §4.4、图20-22",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "θ=32.5°时摩阻系数变正，二维定常平衡态上限约为32°",
+   "evidence": "图4(a)在x/δ*≈99.2处Cf>0；据此稳定性分析限于θ≤32°",
+   "type": "参数边界",
+   "strength": "中",
+   "source": "第11-12页 §4.1、图4",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "层流与湍流剪切层动力学的St_Lint相差约一个量级",
+   "evidence": "层流St_Lint≈5，湍流≈0.5；Lint/δ*层流36.7、湍流13.2，δ*湍流/层流≈5",
+   "type": "对比",
+   "strength": "中",
+   "source": "第29页 §5",
+   "attr": "原文明确"
+  }
+ ],
+ "conclusions": "对斜激波与平板层流边界层的二维干扰，在M∞=2.10-3.00、Reδ*=1010-2700、θ=22.2°-32°范围内，OSWBLI全局稳定，其非定常性不是全局不稳定模态，而是选择性噪声放大：脉冲/宽带扰动被剪切层与分离激波附近的全局模态组成的波包选择性放大。低频结构贴近分离激波、按Lint缩放并辐射马赫波；中频结构位于剪切层、按δ*缩放；边界层模态在气泡下游附着区放大，声模态主要向下游辐射。全局预解在St≈0.145达峰，与强迫响应一致；非线性使低频、回流区相关响应增强。作者据此认为湍流SWBLI的低频非定常也可能源于剪切层不稳定模态的非线性相互作用，但需三维与湍流全局分析进一步验证。",
+ "contributions": [
+  "首次对斜激波/层流边界层干扰做系统的二维全局稳定性分析，覆盖7个工况",
+  "识别并分类四族全局模态（超声速KH、亚声速KH、边界层、声模态），给出空间局域化",
+  "建立基于Lint与δ*的双尺度频率缩放律，分界St×Lint/δ*≈2.8",
+  "用全局预解和白噪声强迫把线性稳定性与接收性、频率选择联系起来",
+  "通过非线性计算指出低频响应的增强机制，为湍流SWBLI低频非定常提供假设"
+ ],
+ "limits": "作者承认：仅二维扰动（Robinet 2007已指出层流OSWBLI可对三维扰动全局不稳定）；层流、低Re；Re与M不能独立变化，缩放律的依赖关系尚需更多工况；低频非线性机制未辨识；仅Case A做强迫响应。AI识别：计算域截断与下游边界条件影响III类模态；St>0.16谱收敛慢；预解由Hessenberg矩阵近似且特征值对扰动敏感；未与湍流DNS/LES做定量对比；表4参数排版错乱，强迫幅值与探头坐标需回原文核对。",
+ "significance": "为SWBLI低频非定常提供了“全局稳定+选择性放大”的替代框架，说明无需全局不稳定模态也能产生大幅值低频结构；双尺度缩放可直接用于比较层流/湍流实验与DNS的频谱。工程上提示：在分离点附近激励主要激发中频（St≈0.145），在回流区激励更易激发低频，对流动控制作动位置有参考价值（AI推断）。不能直接回答湍流SWBLI的定量频谱、三维/有限展长效应及真实飞行 Re 下的稳定性。",
+ "quotes": [
+  {
+   "text": "the oblique shock wave/boundary-layer interaction (OSWBLI) is seen to be globally stable",
+   "supports": "核心结论：全局稳定",
+   "source": "第1页 摘要",
+   "use": "引用稳定性判断"
+  },
+  {
+   "text": "the onset of two-dimensional large-scale structures is generated by selective noise amplification",
+   "supports": "非定常来源",
+   "source": "第1页 摘要",
+   "use": "引用机理概括"
+  },
+  {
+   "text": "The lowest frequencies correspond to structures mainly located near the separated shock",
+   "supports": "低频局域化",
+   "source": "第1页 摘要",
+   "use": "引用低频结构位置"
+  },
+  {
+   "text": "The medium frequencies are associated with structures mainly localized in the shear layer",
+   "supports": "中频局域化",
+   "source": "第1页 摘要",
+   "use": "引用中频结构位置"
+  },
+  {
+   "text": "the flow is globally stable and its dynamics is similar to a selective noise amplifier problem",
+   "supports": "噪声放大器图像",
+   "source": "第5页 §1",
+   "use": "引用全文定位"
+  },
+  {
+   "text": "all of the modes are temporally damped",
+   "supports": "所有模态衰减",
+   "source": "第14页 §4.2.2",
+   "use": "作为定量证据"
+  },
+  {
+   "text": "the separation between regions I and II/III occurs for St × Lint/δ⋆ ≈ 2.8",
+   "supports": "双尺度分界",
+   "source": "第17页 §4.2.3",
+   "use": "引用缩放律"
+  },
+  {
+   "text": "nonlinearities tend to favour the emergence of low-frequency modes strongly associated with the recirculation zone",
+   "supports": "非线性低频增强",
+   "source": "第26-27页 §4.4",
+   "use": "引用非线性结论"
+  }
+ ],
+ "figures": [
+  {
+   "file": "fig01_p5.png",
+   "n": 1,
+   "page": 5,
+   "caption_zh": "计算域与斜激波/边界层干扰示意图（入射激波、分离激波、膨胀波、压缩波与声速线）",
+   "caption_orig": "FIGURE 1. The computational domain and a schematic representation of oblique shock wave/boundary-layer interaction.",
+   "why": "界定计算域与干扰区结构，是理解Lint、Lsep及模态空间位置的基础。"
+  },
+  {
+   "file": "fig02_p11.png",
+   "n": 2,
+   "page": 11,
+   "caption_zh": "不同Re、M和入射角下计算基流的流线与流向速度（含入射激波、反射激波、膨胀扇、压缩波）",
+   "caption_orig": "FIGURE 2. (Colour online) Streamlines and streamwise velocity component of the computed steady base flow ...",
+   "why": "展示A-D工况的分离泡形态差异，支撑“改变θ、M、Re会改变气泡尺度”的前提。"
+  },
+  {
+   "file": "fig09_p19.png",
+   "n": 14,
+   "page": 19,
+   "caption_zh": "沿法向积分动能随流向位置的分布（按全局模态频率；A、C工况）",
+   "caption_orig": "FIGURE 14. (Colour online) Distribution of integrated kinetic energy along the wall normal direction ...",
+   "why": "证明I类能量在分离区、II类在再附点附近、III类在下游附着区，是双尺度缩放的空间证据。"
+  },
+  {
+   "file": "fig10_p22.png",
+   "n": 15,
+   "page": 22,
+   "caption_zh": "上游宽带白噪声强迫下的频率响应（分离点P1、分离激波P2、分离区P3的WPSD）",
+   "caption_orig": "FIGURE 15. ... Frequency response to upstream broadband white noise forcing (F1) ...",
+   "why": "支撑选择性放大频带St∈[0.05,0.5]及分离激波处低通响应的结论。"
+  }
+ ],
+ "verification": {
+  "text_only": "是。使用35页全文、图注与图件清单，并用原PDF第6、7、9、15、20页核对式(2.1)-(4.4)与表1-3数值。",
+  "a_grade_supported": "是。A级要点（全局稳定、波包、四族模态、双尺度缩放、空间局域化、预解峰值、强迫选择性）均有页码、图号或式号支撑。",
+  "attributes_marked": "是。three_sentence、core_points、findings均标注【原文明确】【AI概括】【AI推断】；机制段的因果解释已区分原文与AI概括。",
+  "coverage": "覆盖摘要、§1引言、§2控制方程与稳定性理论、§3数值方法、§4.1-4.4结果、§5讨论与结论、附录A.1-A.2；图1-25、表1-3纳入，表4仅用可确认信息。",
+  "no_fabrication": "未引入外部知识；数值取自表1-3、图4-22与正文。表4排版错乱，未编造其探头坐标与强迫幅值以外的参数；未编造页码、图号或文献。",
+  "open_questions": [
+   "表4中F1/F2与P1-P4的精确坐标、ξx/ξy及Af取值因排版错乱无法完全确认，需回原文核对。",
+   "算例B-G对应的气流偏转角β未在表3给出，是否与θ一一对应？",
+   "θ=32.5°已算出但被排除在稳定性分析之外，其三维分岔性质如何？",
+   "St=0.02的非线性模态是否已统计收敛？其与Piponniau质量平衡模型如何定量对应？",
+   "预解R(ω)的幅值归一化方式及其与WPSD的定量换算关系文中未给出。",
+   "三维扰动下是否会出现Robinet(2007)所述的定常全局不稳定，从而改变二维结论？",
+   "计算域下游截断对III类边界层模态及低频响应的定量影响有多大？"
+  ]
+ }
+}

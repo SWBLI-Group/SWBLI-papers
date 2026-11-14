@@ -1,0 +1,598 @@
+{
+  "id": 1222,
+  "read_note": "实验+解析（理论）研究，1967年 Int. J. Heat Mass Transfer 论文；bundle 含17页全文、11幅图与表1，完整性好。公式文本层存在 OCR 乱码，已用原 PDF 第3–8页核对式(1)–(34)的符号与编号；图9、图11为实验散点，可读性中等。提取口径：以解析结果、转鼓实验工况与对比结论为主线。",
+  "one_line": "连续运动表面边界层：解析给出层流/湍流摩擦与传热，转鼓实验证实层流速度场物理可实现。",
+  "three_sentence": [
+    {
+      "text": "连续运动表面边界层此前只有 Sakiadis 等的少量解析工作，缺少确定性实验，湍流传热与均匀热流工况亦未充分研究。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "用相似变换求层流精确解、用壁律加动量和能量积分求湍流解，并在旋转转鼓上测量层流/湍流速度与温度剖面。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "层流速度型与解析高度吻合，证实该流动物理可实现；湍流摩擦系数与 Stanton 数低于平板，实验 cf 约高6%。",
+      "attr": "AI概括"
+    }
+  ],
+  "imrad": {
+    "introduction": "研究对象是一块从狭缝抽出、在原本静止流体中连续运动的平面（图1左），其边界层沿运动方向增厚，与半无限平板相反。作者指出 Sakiadis[1-3]已给出层流近似与精确解、并用1/7幂律近似湍流；Koldenhof[4]研究圆柱（细丝）轴对称情形；Erickson 等[5]分析运动薄片因热容而冷却的层流换热。缺口是：缺少确定性实验，且湍流与热边界层分析不足。本文目标是同时给出层流（UWT 与 UHF）和湍流（UHF）的解析解，并用转鼓实验验证速度场、摩擦系数与温度场（p219–220）。",
+    "methods": "解析：层流采用相似变换式(1)，把动量与连续方程化为 Blasius 型方程(2)，边界条件为 f'(0)=1、f(0)=0、f'(∞)=0；能量方程对 UWT 与 UHF 分别化为式(6)、(7)，对 Pr=0.7、1、10、100 数值求解。湍流：采用壁律，近壁用 Deissler 涡扩散模型 εm/ν=n²u+y+（n=0.109），外层用对数律 u++=4.75+2.5ln y+；再由式(18)–(23)的动量积分得 cf(Re)，由式(26)–(34)的能量积分得 St(Re)。实验：以直径12.6 in、长24 in的立式旋转转鼓模拟连续运动平面，刮板固定边界层起点；转鼓内设三组加热器（上下护热、中间试验段），六支热敏电阻埋入壁面0.050 in以内，经滑环引信号；转速600–1500 r/min。速度用扁平冲击管（0.027×0.0286 in）配U形水柱微压计，温度用0.001 in 铬镍-康铜热电偶；探针可沿周向每10°定位，径向由千分头读数（p221–229）。",
+    "results": "层流：连续表面速度型在壁面更陡、边界层外缘更平（图2）；cf√Re=0.888，高于平板的0.664（p221）。传热系数随 Pr 增大而升高，UHF 比 UWT 高55%–70%（表1，p222）；Pr=0.7、UWT 时 Nu/√Re=0.349，高于平板的0.293（p223）。湍流：局部与平均 cf 均低于平板（图3、图4），Sakiadis 的1/7幂律结果比本文低10%–25%；St 亦低于平板，与层流相反（p225、p227）。实验：层流速度剖面在 Re=5×10^4–1.5×10^5 内被相似变量统一并与解析线吻合（图6）；14条湍流剖面（Re=10^5–6×10^5）用 Clauser 图定 cf，实测比解析高约6%，与 Sakiadis 差约15%（图8–10）；湍流温度剖面与解析大体满意但不如速度场（图9）；Re=1.1×10^5 时实验与解析 St 分别为0.00265与0.00304（p230–234）。",
+    "discussion": "机制上，运动表面通过黏性带动静止流体，壁面速度梯度大于平板，故层流摩擦与换热均增强；湍流时 u++、y+ 分布与平板相同，但 u+、y+ 分布不同，导致 cf 与 St 反而低于平板（p224、p227）。作者把层流实验视为“解析可描述的连续表面边界层是物理可实现流动”的直接证据（p230）。局限包括：实验为不可压、低亚声速流动，未涉及压缩性；湍流分析忽略尾迹区并取 εh=εm、Pr≈1；实验壁况接近 UWT 而湍流分析为 UHF；温度测量仅最低转速、Re 范围窄，未给出 St-Re 图；实验 St 系统性偏低，作者归因于热边界条件差异与测量困难（p233–234）。"
+  },
+  "core_points": [
+    {
+      "point": "层流相似解化为 f'''+½ff''=0，边界条件与 Blasius 互换，cf√Re=2f''(0)=0.888，高于平板0.664。",
+      "type": "解析结果",
+      "grade": "A",
+      "source": "式(2)–(4a)，p221",
+      "attr": "原文明确"
+    },
+    {
+      "point": "层流 UWT/UHF 传热由式(6)(7)数值求解，Nu/√(RePr) 列于表1；UHF 比 UWT 高55%–70%。",
+      "type": "解析结果",
+      "grade": "A",
+      "source": "表1，p222",
+      "attr": "原文明确"
+    },
+    {
+      "point": "Pr=0.7、UWT 时连续表面 Nu/√Re=0.349，平板为0.293；整个 Pr 范围内层流换热均高于平板。",
+      "type": "定量对比",
+      "grade": "B",
+      "source": "p223",
+      "attr": "原文明确"
+    },
+    {
+      "point": "湍流局部 cf 随 Re 下降且低于平板，与层流的大小关系相反；Sakiadis 1/7幂律结果偏低10%–25%。",
+      "type": "解析结果",
+      "grade": "A",
+      "source": "图3、p225",
+      "attr": "原文明确"
+    },
+    {
+      "point": "湍流 St 亦低于平板，作者明确称这与层流换热结果相反。",
+      "type": "解析结果",
+      "grade": "A",
+      "source": "图3下部、p227",
+      "attr": "原文明确"
+    },
+    {
+      "point": "实验用旋转转鼓模拟连续运动表面：直径12.6 in、长24 in，刮板定起点，曲率效应可忽略。",
+      "type": "实验装置",
+      "grade": "A",
+      "source": "p227–228、图5",
+      "attr": "原文明确"
+    },
+    {
+      "point": "层流速度剖面在 Re=5×10^4–1.5×10^5 内由相似变量统一，与解析线很好吻合，仅大 η 处略高（归因室内扰动）。",
+      "type": "实验验证",
+      "grade": "A",
+      "source": "图6、p230",
+      "attr": "原文明确"
+    },
+    {
+      "point": "14条湍流剖面（Re=10^5–6×10^5）经 Clauser 图定 cf，实测比本文解析高约6%，比 Sakiadis 高约15%。",
+      "type": "实验验证",
+      "grade": "A",
+      "source": "图8–10、p232",
+      "attr": "原文明确"
+    },
+    {
+      "point": "湍流温度剖面与解析“满意但不如速度场”，实验 St 在 Re=1.1×10^5 为0.00265，解析为0.00304（低约13%）。",
+      "type": "实验验证",
+      "grade": "A",
+      "source": "图9、p234",
+      "attr": "原文明确"
+    },
+    {
+      "point": "实验 qw 在下游站位基本不变，未出现理论预期的≤6%下降；作者认为这与测量/壁况有关。",
+      "type": "实验异常",
+      "grade": "B",
+      "source": "图11、p234",
+      "attr": "原文明确"
+    },
+    {
+      "point": "实验壁况更接近 UWT，而湍流分析按 UHF 进行，作者认为这是 St 偏低的部分原因。",
+      "type": "机理解释",
+      "grade": "B",
+      "source": "p234",
+      "attr": "原文明确"
+    },
+    {
+      "point": "转鼓半径足够大，曲率效应可忽略，流动近似平面连续表面。",
+      "type": "假设",
+      "grade": "C",
+      "source": "p227",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "来流",
+      "value": "环境流体静止（quiescent）；未给出马赫数，按不可压处理",
+      "source": "p219–220",
+      "note": "文中未提及 M∞、湍流度与噪声级"
+    },
+    {
+      "item": "表面运动",
+      "value": "连续表面速度 Us 恒定；转鼓转速600–1500 r/min",
+      "source": "p229",
+      "note": "图10图例给出 Us=34.6、56.5、76.9 ft/s 三种表面速度"
+    },
+    {
+      "item": "雷诺数范围（层流实验）",
+      "value": "Re=Usx/ν=5×10^4–1.5×10^5",
+      "source": "p230",
+      "note": "三个转速"
+    },
+    {
+      "item": "雷诺数范围（湍流实验）",
+      "value": "Re=10^5–6×10^5",
+      "source": "p232",
+      "note": "14条剖面"
+    },
+    {
+      "item": "Prandtl 数",
+      "value": "实验气体 Pr=0.7；解析取 Pr=0.7、1、10、100",
+      "source": "p222、p227",
+      "note": ""
+    },
+    {
+      "item": "层流热边界条件",
+      "value": "解析分别取均匀壁温 UWT 与均匀热流 UHF",
+      "source": "p221–222",
+      "note": "两组结果均给出"
+    },
+    {
+      "item": "湍流热边界条件",
+      "value": "解析按 UHF；实验壁况更接近 UWT",
+      "source": "p226、p234",
+      "note": "作者明确承认二者不一致"
+    },
+    {
+      "item": "实验加热",
+      "value": "两种加热率，壁面-环境温差约60 degF 与30 degF",
+      "source": "p233",
+      "note": "每工况4个周向站位"
+    },
+    {
+      "item": "几何",
+      "value": "旋转圆筒直径12.6 in、长24 in；刮板铝板宽12 in（厚度OCR缺失）；圆筒壁厚0.37 in",
+      "source": "p227–228",
+      "note": "二维、无压力梯度；刮板厚度受限于材料，无法确认"
+    },
+    {
+      "item": "边界层状态",
+      "value": "层流自然发展；湍流经直径0.006 in、距壁0.003 in 的绊线触发（20°–30°站位之间）",
+      "source": "p230",
+      "note": ""
+    },
+    {
+      "item": "壁面温度测量",
+      "value": "6支热敏电阻埋入壁面0.050 in以内；转鼓表面温度近似周向均匀",
+      "source": "p228",
+      "note": ""
+    },
+    {
+      "item": "环境控制",
+      "value": "塑料帘隔离实验台、铜网屏蔽支架，边界层温度脉动降为原来一半；仅在午夜后安静时段取数",
+      "source": "p232–233",
+      "note": ""
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "层流摩擦系数",
+      "definition": "cf=τw/(½ρUs²)，Re=Usx/ν",
+      "value": "cf√Re=0.888（连续表面）；平板0.664",
+      "relation": "cf√Re=2f''(0)",
+      "source": "式(4)(4a)，p221"
+    },
+    {
+      "name": "层流 Nu（UWT）",
+      "definition": "Nu/√(RePr)",
+      "value": "Pr=0.7:0.4174；1.0:0.4438；10:0.5314；100:0.5545",
+      "relation": "Nu/√Re=θ'(0)",
+      "source": "表1，p222"
+    },
+    {
+      "name": "层流 Nu（UHF）",
+      "definition": "Nu/√(RePr)",
+      "value": "Pr=0.7:0.7216；1.0:0.7512；10:0.8500；100:0.8753",
+      "relation": "Nu/√Re=1/φ(0)",
+      "source": "表1，p222"
+    },
+    {
+      "name": "层流 Nu/√Re（Pr=0.7）",
+      "definition": "UWT",
+      "value": "连续表面0.349；平板0.293",
+      "relation": "",
+      "source": "p223"
+    },
+    {
+      "name": "UHF/UWT 换热比",
+      "definition": "同一 Pr 下两壁况的传热系数比",
+      "value": "高55%–70%",
+      "relation": "",
+      "source": "p222"
+    },
+    {
+      "name": "Deissler 常数",
+      "definition": "εm/ν=n²u+y+",
+      "value": "n=0.109",
+      "relation": "",
+      "source": "式(13)，p223"
+    },
+    {
+      "name": "对数律",
+      "definition": "u++=u_s+−(1/κ)ln(y+/y_s+) 的数值形式",
+      "value": "u++=4.75+2.5ln y+；κ=0.4，u_s+=12.9，y_s+=26",
+      "relation": "",
+      "source": "式(16)(17)，p223"
+    },
+    {
+      "name": "湍流 cf 实验偏差",
+      "definition": "Clauser 图测得 cf 与解析比较",
+      "value": "实测高约6%；Sakiadis 低约15%",
+      "relation": "",
+      "source": "p232、图10"
+    },
+    {
+      "name": "Stanton 数对比",
+      "definition": "St=h/(ρcpUs)",
+      "value": "Re=1.1×10^5：实验0.00265，解析0.00304（低约13%）",
+      "relation": "St=1/(T_s+u_s+)",
+      "source": "式(34)，p227、p234"
+    },
+    {
+      "name": "湍流剖面数量与范围",
+      "definition": "Clauser 图分析的湍流速度剖面",
+      "value": "14条，Re=10^5–6×10^5",
+      "relation": "",
+      "source": "p232"
+    },
+    {
+      "name": "实验表面速度",
+      "definition": "图10图例",
+      "value": "34.6、56.5、76.9 ft/s",
+      "relation": "",
+      "source": "图10，p232"
+    }
+  ],
+  "methods": [
+    {
+      "item": "层流相似变换",
+      "value": "η=y√(Us/(νx))，u=Us f'(η)，v=½√(νUs/x)(ηf'−f)",
+      "source": "式(1)，p221"
+    },
+    {
+      "item": "层流动量方程",
+      "value": "f'''+½ff''=0；f'(0)=1、f(0)=0、f'(∞)=0",
+      "source": "式(2)(3)，p221"
+    },
+    {
+      "item": "层流能量方程",
+      "value": "UWT：θ''+½Pr fθ'=0；UHF：φ''−½Pr(f'φ−fφ')=0，均数值求解",
+      "source": "式(6)(7)，p221"
+    },
+    {
+      "item": "层流数值范围",
+      "value": "Pr=0.7、1、10、100",
+      "source": "p222"
+    },
+    {
+      "item": "湍流近壁模型",
+      "value": "Deissler 涡扩散：εm/ν=n²u+y+，n=0.109；积分得式(14)，y_s+=26处与对数律连续",
+      "source": "式(13)(14)，p223"
+    },
+    {
+      "item": "湍流外层",
+      "value": "对数律，κ=0.4，u_s+=12.9；u++=4.75+2.5ln y+",
+      "source": "式(16)(17)，p223"
+    },
+    {
+      "item": "湍流摩擦系数",
+      "value": "对控制体做动量平衡，式(18)–(23)数值积分得 cf(Re)；平均 cf 由式(24)(25)",
+      "source": "p224–225"
+    },
+    {
+      "item": "湍流换热",
+      "value": "取 εh=εm、Pr≈1、qw/q≈1，式(26)–(34)数值积分得 St(Re)，仅算 Pr=0.7",
+      "source": "p226–227"
+    },
+    {
+      "item": "实验装置",
+      "value": "旋转转鼓+刮板；三组独立加热器（上下护热、中间试验段）；六支热敏电阻；滑环传输",
+      "source": "p227–229、图5"
+    },
+    {
+      "item": "速度测量",
+      "value": "扁平冲击管0.027×0.0286 in，U形水柱微压计+移测显微镜（0.0001 in）；探针 Re<30 不测",
+      "source": "p229"
+    },
+    {
+      "item": "温度测量",
+      "value": "0.001 in 铬镍-康铜热电偶（结点厚度OCR不清，约0.002 in）；积分数字电压表（3 mV），每个位置25个1 s平均值",
+      "source": "p229、p233"
+    },
+    {
+      "item": "摩擦系数反演",
+      "value": "Clauser 图：将实测1−u/Us 对 yUs/ν 与参数 cf 的解析曲线拟合",
+      "source": "p231、式(35)"
+    },
+    {
+      "item": "局部热流反演",
+      "value": "类似 Clauser 图的 T+ 参数化拟合，取最佳 qw",
+      "source": "p233、式(36)"
+    },
+    {
+      "item": "不确定度/重复性",
+      "value": "温度25次平均标准差约1 degF（高热流）与0.5 degF（低热流）；转速由计数器+秒表；未给综合不确定度",
+      "source": "p233"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "先用相似变换把连续运动表面的层流动量/能量方程化为常微分方程并数值求解；湍流则用壁律给出 u++(y+)，再通过动量与能量控制体积分把壁面剪应力和热流与 Reynolds 数联系起来。",
+    "assumptions": [
+      "二维、定常、不可压、常物性连续介质",
+      "环境流体静止、无外部压力梯度，表面以恒定 Us 连续运动",
+      "层流能量方程为非耗散（nondissipative）形式",
+      "层流热边界条件分别取 UWT 与 UHF",
+      "湍流分析忽略边界层外缘尾迹区，采用壁律",
+      "近壁 εh=εm，Pr 不远离1，且 q/qw≈1、τ/τw≈1",
+      "湍流换热的解析只针对 UHF"
+    ],
+    "steps": [
+      {
+        "title": "相似变换与流函数",
+        "text": "引入相似变量 η 与仅依赖 η 的流函数 f，使 u=Us f'、v 由连续方程给出；表面 y=0 对应 η=0。",
+        "latex": [
+          "\\eta=y\\sqrt{\\frac{U_s}{\\nu x}}",
+          "u=U_s f'(\\eta)",
+          "v=\\frac{1}{2}\\sqrt{\\frac{\\nu U_s}{x}}\\,\\left[\\eta f'(\\eta)-f(\\eta)\\right]"
+        ],
+        "source": "式(1)，p221"
+      },
+      {
+        "title": "层流动量方程化为 Blasius 型",
+        "text": "代入动量与连续方程后得到与 Blasius 方程同形但边界条件互换的常微分方程；因非线性，不能把两个问题互相变换。数值解给出 f''(0)，从而得摩擦系数。",
+        "latex": [
+          "f'''+\\frac{1}{2}ff''=0",
+          "f'(0)=1,\\quad f(0)=0,\\quad f'(\\infty)=0",
+          "c_f\\sqrt{Re}=2f''(0)=0.888"
+        ],
+        "source": "式(2)–(4a)，p221"
+      },
+      {
+        "title": "层流能量方程与两种壁况",
+        "text": "对 UWT 定义 θ、对 UHF 定义 φ；相似变换后分别得到 θ 与 φ 的常微分方程，并在给定 Pr 下数值积分。",
+        "latex": [
+          "\\theta(\\eta)=\\frac{T-T_\\infty}{T_w-T_\\infty},\\qquad \\varphi(\\eta)=\\frac{(T-T_\\infty)\\sqrt{Re}}{q_w x/k}",
+          "\\theta''+\\frac{1}{2}Pr\\,f\\theta'=0,\\quad \\theta(0)=1,\\ \\theta(\\infty)=0",
+          "\\varphi''-\\frac{1}{2}Pr\\left(f'\\varphi-f\\varphi'\\right)=0,\\quad \\varphi'(0)=-1,\\ \\varphi(\\infty)=0",
+          "\\frac{Nu}{\\sqrt{Re}}=\\theta'(0)\\ (\\mathrm{UWT}),\\qquad \\frac{Nu}{\\sqrt{Re}}=\\frac{1}{\\varphi(0)}\\ (\\mathrm{UHF})"
+        ],
+        "source": "式(5)–(8a)，p221–222"
+      },
+      {
+        "title": "湍流速度的壁律解",
+        "text": "用壁面尺度定义 u+、y+ 及相对速度 u++；近壁取 Deissler 涡扩散模型，积分得 y+(u++) 的误差函数形式；外层取对数律，并在 y_s+=26 处与内层连续。",
+        "latex": [
+          "u^{+}=\\frac{u}{\\sqrt{\\tau_w/\\rho}},\\qquad y^{+}=\\frac{y\\sqrt{\\tau_w/\\rho}}{\\nu}",
+          "u^{++}=u_s^{+}-u^{+},\\qquad u_s^{+}=\\frac{U_s}{\\sqrt{\\tau_w/\\rho}}",
+          "\\frac{\\tau}{\\tau_w}=\\left(1+\\frac{\\varepsilon_m}{\\nu}\\right)\\frac{du^{++}}{dy^{+}}",
+          "\\frac{\\varepsilon_m}{\\nu}=n^{2}u^{+}y^{+},\\quad n=0.109",
+          "u^{++}=4.75+2.5\\ln y^{+},\\quad y^{+}\\ge y_s^{+}"
+        ],
+        "source": "式(9)–(17)，p223"
+      },
+      {
+        "title": "动量积分求 cf(Re)",
+        "text": "对跨边界层的控制体做动量平衡，利用 dx 与 d(Re) 的关系把方程写成 u++、y+ 的积分；对式(20)分部积分得到 Re 与 u_s+ 的关系，其中 I(χ) 由壁律速度型数值求得；最后由 cf=2/u_s+² 得 cf(Re)。",
+        "latex": [
+          "\\tau_w\\,dx=d\\left[\\int_0^{\\delta}\\rho u^{2}\\,dy\\right]",
+          "d(Re)=u_s^{+2}\\,d\\left[\\int_0^{u_s^{+}}\\frac{\\left(u_s^{+}-u^{++}\\right)^{2}}{u_s^{+2}}\\,dy^{+}\\right]",
+          "Re=u_s^{+2}I(u_s^{+})-2\\int_0^{u_s^{+}}I(\\tilde{u}_s^{+})\\,\\tilde{u}_s^{+}\\,d\\tilde{u}_s^{+}",
+          "I(\\chi)=\\int_0^{\\chi}\\frac{\\left(\\chi-u^{++}\\right)^{2}}{\\chi^{2}}\\,\\frac{dy^{+}}{du^{++}}\\,du^{++}",
+          "c_f=\\frac{2}{u_s^{+2}}"
+        ],
+        "source": "式(18)–(23)，p224"
+      },
+      {
+        "title": "能量积分求 St(Re)",
+        "text": "由湍流热流表达式与 T+ 定义，近壁用 εh=εm 得 dT+/du+ 的积分式，外层取 T+−T_s+=u++−u_s+；再对热边界层控制体做能量平衡，得到 T_s+ 的积分表达式，最终 St=1/(T_s+u_s+)。所有积分数值完成，取 Pr=0.7。",
+        "latex": [
+          "q=-\\left(k+\\rho c_p\\varepsilon_h\\right)\\frac{dT}{dy}",
+          "T^{+}=\\frac{\\left(T_w-T\\right)\\rho c_p\\sqrt{\\tau_w/\\rho}}{q_w}",
+          "\\frac{q}{q_w}=\\left(\\frac{1}{Pr}+\\frac{\\varepsilon_h}{\\nu}\\right)\\frac{dT^{+}}{dy^{+}}",
+          "dT^{+}=\\frac{1+n^{2}u^{+}y^{+}}{1/Pr+n^{2}u^{+}y^{+}}\\,du^{+},\\quad 0\\le y^{+}\\le y_s^{+}",
+          "T^{+}-T_s^{+}=u^{++}-u_s^{+},\\quad y^{+}\\ge y_s^{+}",
+          "q_w\\,dx=d\\left[\\int_0^{\\delta_h}\\rho c_p\\left(T-T_\\infty\\right)u\\,dy\\right]",
+          "T_s^{+}=\\frac{\\left(Re/u_s^{+}\\right)+\\int_0^{u_s^{+}}\\left(u_s^{+}-u^{++}\\right)T^{+}\\left(dy^{+}/du^{++}\\right)du^{++}}{\\int_0^{u_s^{+}}\\left(u_s^{+}-u^{++}\\right)\\left(dy^{+}/du^{++}\\right)du^{++}}",
+          "St=\\frac{h}{\\rho c_p U_s}=\\frac{1}{T_s^{+}u_s^{+}}"
+        ],
+        "source": "式(26)–(34)，p226–227"
+      }
+    ],
+    "result": "层流：cf√Re=0.888，Nu/√(RePr) 由表1给出，UHF 比 UWT 高55%–70%。湍流：由式(21)(23)得 cf(Re)，由式(32)(34)得 St(Re)；两者均低于同 Re 的平板值，St 在 Pr=0.7 下计算。",
+    "limits": "推导假设不可压、常物性、无压力梯度、环境静止；湍流部分依赖壁律与 εh=εm、Pr≈1，且只算 UHF；忽略尾迹区与曲率。原文未给出高 Mach 数、变物性、强压力梯度下的推广。"
+  },
+  "mechanism": "连续运动表面通过黏性把动量传入静止流体，形成沿运动方向增厚的边界层。层流时壁面速度梯度比平板大，故 cf 与 Nu 均高于平板；UHF 下壁面附近温度梯度更大，换热系数比 UWT 高55%–70%。湍流时无量纲 u++、y+ 分布与平板相同，但 u+、y+ 分布不同，使 cf 与 St 低于平板；作者没有给出更进一步的湍流结构解释。实验上，转鼓曲率、室内扰动与热边界条件差异是偏差的主要来源（p224、p227、p230、p234）。",
+  "findings": [
+    {
+      "finding": "层流速度剖面在 Re=5×10^4–1.5×10^5 内由相似变量统一，并与解析线高度吻合。",
+      "evidence": "图6中三个转速、多个周向站位的实测点落在同一条解析曲线上，仅大 η 处略高",
+      "type": "实验-解析对比",
+      "strength": "强",
+      "source": "图6、p230",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "连续运动表面的层流摩擦系数高于平板。",
+      "evidence": "cf√Re=0.888，对比 Blasius 的0.664",
+      "type": "解析定量",
+      "strength": "强",
+      "source": "式(4a)、p221",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "层流 UHF 的换热系数比 UWT 高55%–70%，且整个 Pr 范围内连续表面均高于平板。",
+      "evidence": "表1四组 Pr 数据；Pr=0.7 时 Nu/√Re 为0.349对0.293",
+      "type": "解析定量",
+      "strength": "强",
+      "source": "表1、p222–223",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "湍流局部与平均摩擦系数随 Re 增加而下降，且低于平板；Sakiadis 的1/7幂律近似偏低10%–25%。",
+      "evidence": "图3、图4中三条曲线（本文、Sakiadis、平板）的相对位置",
+      "type": "解析对比",
+      "strength": "强",
+      "source": "图3、图4、p225",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "湍流 Stanton 数低于平板，与层流换热的大小关系相反。",
+      "evidence": "图3下部 St 曲线；正文明确对比",
+      "type": "解析对比",
+      "strength": "强",
+      "source": "图3、p227",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "Clauser 图反演的湍流 cf 与本文解析相差约6%，明显优于 Sakiadis 的约15%。",
+      "evidence": "14条剖面、图8–10；正文给出6%与15%",
+      "type": "实验验证",
+      "strength": "强",
+      "source": "图8–10、p232",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "湍流温度场与解析的吻合程度不如速度场，实验 St 系统性偏低。",
+      "evidence": "图9下部 T+ 剖面；Re=1.1×10^5 时0.00265对0.00304",
+      "type": "实验-解析对比",
+      "strength": "中",
+      "source": "图9、p234",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "实测局部热流沿下游基本不变，未出现理论预期的下降。",
+      "evidence": "站位8、9、10、11的 Clauser 型 qw 拟合；理论预期降幅≤6%",
+      "type": "实验异常",
+      "strength": "中",
+      "source": "图11、p234",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "作者结论：(1) 层流实验与精确解的优秀吻合证明“解析可描述的连续运动表面边界层”是物理可实现的流动，转鼓是可行实验手段；(2) 湍流速度场解析得到实验的有力支持，Clauser 图反演的 cf 与解析相差约6%；(3) 湍流温度场解析与实验满意但支持度不如速度场；(4) 层流时连续表面的 cf 与 Nu 高于平板，湍流时 cf 与 St 低于平板（p230、p232、p234）。",
+  "contributions": [
+    "给出连续运动表面层流 UWT 与 UHF 的精确相似解及 Nu 表",
+    "把壁律与动量/能量积分结合，给出湍流 cf(Re) 与 St(Re) 的完整预测",
+    "搭建旋转转鼓实验，首次系统验证层流速度场、湍流速度/温度场与摩擦系数",
+    "明确指出层流与湍流摩擦/换热相对平板的反向关系"
+  ],
+  "limits": "作者承认：湍流分析忽略尾迹区、取 εh=εm 和 Pr≈1；实验为不可压低亚声速，未覆盖压缩性；温度测量仅最低转速、Re 范围窄；实验壁况接近 UWT 而湍流解析为 UHF；实验 St 偏低且 qw 下游不变的原因未完全查清。AI 识别的局限：未给测量综合不确定度；速度探针在低探针 Re 下不测，近壁数据可能缺失；转鼓曲率与周向压力梯度未定量评估；湍流温度剖面散点较少，图9可读性有限。",
+  "significance": "对高速流动的启示主要是方法层面：连续运动壁面（如运动带、旋转机械表面、连续铸造/拉膜、再入体表面材料运动）的边界层与静止平板有系统性差异，层流与湍流的偏差方向相反，不能直接用平板修正。其“解析+转鼓实验+Clauser 图”的组合可作为壁面运动效应实验验证的范式；但结果限于不可压、常物性、零压力梯度，不能直接回答高超声速可压缩、强激波干扰下的摩擦/热流问题（AI 推断）。",
+  "quotes": [
+    {
+      "text": "a mathematically describable boundary layer on a continuous moving surface is a physically realizable flow",
+      "supports": "层流实验验证的核心结论",
+      "source": "摘要，p219",
+      "use": "论证连续表面边界层的物理可实现性"
+    },
+    {
+      "text": "the friction coefficient for the present problem exceeds that for the flat plate",
+      "supports": "层流 cf 高于平板",
+      "source": "p221",
+      "use": "层流摩擦对比"
+    },
+    {
+      "text": "uniform heat flux exceeds that for uniform wall temperature by 55 to 70 per cent",
+      "supports": "UHF 与 UWT 的定量差异",
+      "source": "p222",
+      "use": "热边界条件敏感性"
+    },
+    {
+      "text": "the flat-plate results lie higher than those for the continuous surface",
+      "supports": "湍流 cf 低于平板",
+      "source": "p225",
+      "use": "湍流摩擦对比"
+    },
+    {
+      "text": "the Stanton number for the continuous surface is lower than that for the flat plate",
+      "supports": "湍流换热低于平板，与层流相反",
+      "source": "p227",
+      "use": "湍流换热对比"
+    },
+    {
+      "text": "the measured values of cf are about 6 per cent higher than the curve",
+      "supports": "实验与解析的6%偏差",
+      "source": "p232",
+      "use": "验证精度表述"
+    },
+    {
+      "text": "the experimental and analytical values of Stanton number are 0.00265 and 0.00304",
+      "supports": "St 的13%偏低",
+      "source": "p234",
+      "use": "定量偏差引用"
+    },
+    {
+      "text": "the analysis is for uniform wall heat flux, while the experimental condition more closely approximated uniform wall temperature",
+      "supports": "实验与解析热边界条件不一致",
+      "source": "p234",
+      "use": "解释偏差与局限"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig01_p2.png",
+      "n": 1,
+      "page": 2,
+      "caption_zh": "连续运动表面边界层示意图（左：无界平面从狭缝抽出；右：转鼓与刮板）",
+      "caption_orig": "FIG. 1. Schematic representation of the boundary layer on a continuous moving surface.",
+      "why": "定义研究对象与坐标：边界层沿表面运动方向增厚，与平板相反；右图给出转鼓实验构型。"
+    },
+    {
+      "file": "fig02_p4.png",
+      "n": 2,
+      "page": 4,
+      "caption_zh": "层流速度与温度剖面（连续表面实线，平板虚线；Pr=0.7、1、10、100）",
+      "caption_orig": "FIG. 2. Velocity and temperature profiles for laminar flow.",
+      "why": "支撑连续表面速度型更陡、热边界层随 Pr 变薄、层流换热高于平板的结论。"
+    },
+    {
+      "file": "fig04_p6.png",
+      "n": 3,
+      "page": 6,
+      "caption_zh": "湍流局部摩擦系数与 Stanton 数随 Reynolds 数变化（含 Sakiadis 与平板对比）",
+      "caption_orig": "FIG. 3. Local friction coefficients and Stanton numbers for turbulent flow.",
+      "why": "支撑湍流 cf 与 St 均低于平板、Sakiadis 1/7幂律偏低的核心结论。"
+    },
+    {
+      "file": "fig11_p14.png",
+      "n": 10,
+      "page": 14,
+      "caption_zh": "湍流摩擦系数实验值与解析及 Sakiadis 预测对比",
+      "caption_orig": "FIG. 10. Comparison of experimental and analytical turbulent friction coefficients.",
+      "why": "支撑实验 cf 比解析高约6%、比 Sakiadis 高约15%的验证结论。"
+    }
+  ],
+  "verification": {
+    "text_only": "是：仅使用 bundle 文本、图注与图件清单；公式因文本层乱码，按允许范围用原 PDF 第3–8页核对符号与式号，未引入外部知识。",
+    "a_grade_supported": "是：A级要点均有式号、表1、图3/4/6/10或具体页码支撑；定量值均回查正文/表。",
+    "attributes_marked": "是：three_sentence、core_points、findings 均标原文明确/AI概括/AI推断。",
+    "coverage": "17页全文、11幅图、表1均覆盖；结果、方法、讨论、局限完整；温度场图9为散点，细节可读性中等。",
+    "no_fabrication": "未编造页码、图号、公式或数据；无 M∞、来流湍流度、综合不确定度等信息处写文中未提及。",
+    "open_questions": [
+      "原文未给出来流马赫数与压缩性影响，结论能否外推到高速可压缩流？",
+      "实验 St 系统性偏低13%，除 UWT/UHF 差异外是否还有探针导热、辐射或壁面热损？",
+      "为何实测 qw 沿下游基本不变，与理论≤6%下降不符？",
+      "湍流温度剖面仅取最低转速，Re 范围窄，St(Re) 实验趋势是否可靠？",
+      "转鼓曲率与周向压力梯度对 cf、St 的定量影响未评估。",
+      "近壁速度数据因探针 Re<30 被舍弃，是否影响 Clauser 图拟合的壁面区？"
+    ]
+  }
+}

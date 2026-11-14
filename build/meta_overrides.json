@@ -1,0 +1,490 @@
+{
+  "746": {
+    "type": "report",
+    "year": "1958",
+    "journal": "NACA Report 1356",
+    "publisher": "National Advisory Committee for Aeronautics",
+    "place": "Washington, D.C."
+  },
+  "1458": {
+    "type": "report",
+    "year": "1959",
+    "journal": "NASA Memorandum 1-21-59A",
+    "publisher": "National Aeronautics and Space Administration",
+    "place": "Washington, D.C."
+  },
+  "850": {
+    "type": "report",
+    "year": "1959",
+    "journal": "NASA Memorandum 2-18-59W",
+    "publisher": "National Aeronautics and Space Administration",
+    "place": "Washington, D.C.",
+    "authors": [
+      {
+        "first": "R. J.",
+        "last": "Hakkinen"
+      },
+      {
+        "first": "I.",
+        "last": "Greber"
+      },
+      {
+        "first": "L.",
+        "last": "Trilling"
+      },
+      {
+        "first": "S. S.",
+        "last": "Abarbanel"
+      }
+    ],
+    "author_display": ""
+  },
+  "789": {
+    "type": "conferencePaper",
+    "year": "1971",
+    "journal": "Proceedings of the Second International Conference on Numerical Methods in Fluid Dynamics",
+    "publisher": "Springer",
+    "volume": "25",
+    "pages": "151-163",
+    "doi": "10.1007/3-540-05407-3_24"
+  },
+  "1156": {
+    "type": "preprint",
+    "year": "2024",
+    "journal": "Authorea Preprint",
+    "publisher": "Authorea"
+  },
+  "1291": {
+    "year": "1972",
+    "journal": "Fluid Dynamics",
+    "publisher": "Springer",
+    "volume": "7",
+    "issue": "3",
+    "pages": "407-417",
+    "authors": [
+      {
+        "first": "V. V.",
+        "last": "Sychev"
+      }
+    ],
+    "author_display": "V. V. Sychev"
+  },
+  "1188": {
+    "type": "report",
+    "title": "Experimental investigation of laminar-flow separation on a flat plate induced by deflected trailing-edge flap at Mach 19",
+    "year": "1968",
+    "journal": "NASA Technical Note D-4671",
+    "publisher": "National Aeronautics and Space Administration",
+    "place": "Washington, D.C.",
+    "authors": [
+      {
+        "first": "W. D.",
+        "last": "Harvey"
+      }
+    ],
+    "author_display": "W. D. Harvey"
+  },
+  "1009": {
+    "type": "bookSection",
+    "year": "2025",
+    "journal": "Proceedings of the 34th International Symposium on Shock Waves, Volume 1: Fundamentals",
+    "publisher": "Springer Nature Singapore",
+    "authors": [
+      {
+        "first": "Junyan",
+        "last": "Zhang"
+      },
+      {
+        "first": "Feng",
+        "last": "Ji"
+      },
+      {
+        "first": "Xinguo",
+        "last": "Sha"
+      },
+      {
+        "first": "Yue",
+        "last": "Guo"
+      },
+      {
+        "first": "Caijun",
+        "last": "Gan"
+      }
+    ],
+    "author_display": ""
+  },
+  "993": {
+    "type": "thesis",
+    "year": "2023",
+    "journal": "中国科学技术大学博士学位论文",
+    "publisher": "中国科学技术大学",
+    "place": "合肥",
+    "author_display": "洪雨婷"
+  },
+  "452": {
+    "type": "conferencePaper",
+    "title": "Experimental results on shock-wave/boundary-layer interaction induced by a movable wedge",
+    "year": "2015",
+    "journal": "DLR elib",
+    "publisher": "German Aerospace Center (DLR)",
+    "place": "Cologne",
+    "url": "https://elib.dlr.de/96120/",
+    "authors": [
+      {
+        "first": "Dennis",
+        "last": "Daub"
+      },
+      {
+        "first": "Sebastian",
+        "last": "Willems"
+      },
+      {
+        "first": "Ali",
+        "last": "Gülhan"
+      }
+    ],
+    "author_display": ""
+  },
+  "286": {
+    "authors": [
+      {
+        "first": "",
+        "last": "赵一朴"
+      }
+    ],
+    "author_display": "赵一朴"
+  },
+  "565": {
+    "type": "journalArticle",
+    "title": "非定常运动下的激波/边界层干扰分离特性研究",
+    "year": "2014",
+    "journal": "空气动力学学报",
+    "journal_abbr": "Acta Aerodynamica Sinica",
+    "volume": "32",
+    "issue": "5",
+    "pages": "610-617",
+    "doi": "10.7638/kqdlxxb-2014.0089",
+    "language": "zh",
+    "authors": [
+      {
+        "first": "",
+        "last": "赵云飞"
+      },
+      {
+        "first": "",
+        "last": "刘伟"
+      },
+      {
+        "first": "",
+        "last": "刘绪"
+      },
+      {
+        "first": "",
+        "last": "邓小刚"
+      }
+    ],
+    "author_display": "赵云飞, 刘伟, 刘绪, 邓小刚"
+  },
+  "1123": {
+    "journal": "Zeitschrift für Flugwissenschaften und Weltraumforschung",
+    "journal_abbr": "Z. Flugwiss. Weltraumforsch",
+    "volume": "17",
+    "issue": "2",
+    "pages": "116-124",
+    "year": "1993",
+    "authors": [
+      {
+        "first": "A.",
+        "last": "Henckels"
+      },
+      {
+        "first": "A. F.",
+        "last": "Kreins"
+      },
+      {
+        "first": "F.",
+        "last": "Maurer"
+      }
+    ],
+    "author_display": "A. Henckels, A. F. Kreins and F. Maurer"
+  },
+  "225": {
+    "type": "book",
+    "title": "流体力学",
+    "year": "2015",
+    "journal": "",
+    "publisher": "清华大学出版社",
+    "place": "北京",
+    "edition": "第3版",
+    "isbn": "978-7-302-39785-4",
+    "language": "zh",
+    "authors": [
+      {
+        "first": "",
+        "last": "张兆顺"
+      },
+      {
+        "first": "",
+        "last": "崔桂香"
+      }
+    ],
+    "author_display": "张兆顺, 崔桂香"
+  },
+  "226": {
+    "type": "book",
+    "title": "Viscous Fluid Flow",
+    "year": "2006",
+    "journal": "",
+    "publisher": "McGraw-Hill",
+    "place": "New York",
+    "edition": "3rd ed.",
+    "isbn": "007-124493-X",
+    "language": "en",
+    "authors": [
+      {
+        "first": "Frank M.",
+        "last": "White"
+      }
+    ],
+    "author_display": "Frank M. White"
+  },
+  "227": {
+    "type": "book",
+    "title": "Fundamentals of Aerodynamics",
+    "year": "2017",
+    "journal": "",
+    "publisher": "McGraw-Hill Education",
+    "place": "New York",
+    "edition": "6th ed.",
+    "language": "en",
+    "authors": [
+      {
+        "first": "John D.",
+        "last": "Anderson Jr."
+      }
+    ],
+    "author_display": "John D. Anderson Jr.",
+    "isbn": "978-1-259-12991-9"
+  },
+  "230": {
+    "type": "book",
+    "title": "气体动力学",
+    "year": "1990",
+    "journal": "",
+    "publisher": "高等教育出版社",
+    "place": "北京",
+    "edition": "第1版",
+    "isbn": "7-04-002895-6",
+    "language": "zh",
+    "authors": [
+      {
+        "first": "",
+        "last": "童秉纲"
+      },
+      {
+        "first": "",
+        "last": "孔祥言"
+      },
+      {
+        "first": "",
+        "last": "邓国华"
+      }
+    ],
+    "author_display": "童秉纲, 孔祥言, 邓国华"
+  },
+  "719": {
+    "type": "book",
+    "title": "Shock Wave Reflection Phenomena",
+    "year": "2007",
+    "journal": "",
+    "publisher": "Springer",
+    "place": "Berlin, Heidelberg",
+    "edition": "2nd ed.",
+    "isbn": "978-3-540-71381-4",
+    "language": "en",
+    "authors": [
+      {
+        "first": "Gabi",
+        "last": "Ben-Dor"
+      }
+    ],
+    "author_display": "Gabi Ben-Dor"
+  },
+  "1022": {
+    "type": "book",
+    "title": "Basics of Aerothermodynamics",
+    "year": "2015",
+    "journal": "",
+    "publisher": "Springer International Publishing",
+    "place": "Cham",
+    "edition": "2nd, revised ed.",
+    "isbn": "978-3-319-14372-9",
+    "language": "en"
+  },
+  "1030": {
+    "type": "book",
+    "title": "Viscous Hypersonic Flow: Theory of Reacting and Hypersonic Boundary Layers",
+    "year": "2017",
+    "journal": "",
+    "publisher": "Dover Publications",
+    "place": "Mineola, NY",
+    "edition": "Dover ed. (orig. McGraw-Hill, 1962)",
+    "isbn": "978-0-486-81288-5",
+    "language": "en",
+    "authors": [
+      {
+        "first": "William H.",
+        "last": "Dorrance"
+      }
+    ],
+    "author_display": "William H. Dorrance"
+  },
+  "1033": {
+    "type": "book",
+    "title": "High Enthalpy Gas Dynamics",
+    "year": "2015",
+    "journal": "",
+    "publisher": "Wiley",
+    "place": "Singapore",
+    "edition": "",
+    "isbn": "978-1-118-82189-3",
+    "language": "en"
+  },
+  "1034": {
+    "type": "book",
+    "title": "Hypersonic Aerothermodynamics",
+    "year": "1994",
+    "journal": "",
+    "publisher": "American Institute of Aeronautics and Astronautics",
+    "place": "Washington, DC",
+    "edition": "",
+    "isbn": "978-1-56347-036-3",
+    "language": "en",
+    "authors": [
+      {
+        "first": "John J.",
+        "last": "Bertin"
+      }
+    ],
+    "author_display": "John J. Bertin"
+  },
+  "1282": {
+    "type": "book",
+    "title": "Hypersonic and High-Temperature Gas Dynamics",
+    "year": "2006",
+    "journal": "",
+    "publisher": "American Institute of Aeronautics and Astronautics",
+    "place": "Reston, VA",
+    "edition": "2nd ed.",
+    "isbn": "978-1-56347-780-5",
+    "language": "en"
+  },
+  "764": {
+    "title": "Boundary layer separation in hypersonic flow",
+    "authors": [
+      {
+        "first": "D.",
+        "last": "Needham"
+      },
+      {
+        "first": "J. L.",
+        "last": "Stollery"
+      }
+    ],
+    "author_display": "D. Needham, J. L. Stollery"
+  },
+  "768": {
+    "title": "Prediction of incipient separation in shock-boundary-layer interactions",
+    "authors": [
+      {
+        "first": "W. L.",
+        "last": "Hankey"
+      }
+    ],
+    "author_display": "W. L. Hankey"
+  },
+  "770": {
+    "authors": [
+      {
+        "first": "George R.",
+        "last": "Inger"
+      }
+    ],
+    "author_display": "George R. Inger"
+  },
+  "772": {
+    "authors": [
+      {
+        "first": "Michael S.",
+        "last": "Holden"
+      }
+    ],
+    "author_display": "Michael S. Holden"
+  },
+  "776": {
+    "authors": [
+      {
+        "first": "Gary S.",
+        "last": "Settles"
+      },
+      {
+        "first": "Seymour M.",
+        "last": "Bogdonoff"
+      },
+      {
+        "first": "Irwin E.",
+        "last": "Vas"
+      }
+    ],
+    "author_display": "Gary S. Settles, Seymour M. Bogdonoff, Irwin E. Vas"
+  },
+  "1056": {
+    "title": "Laminar boundary-layer separation in hypersonic flow"
+  },
+  "1174": {
+    "authors": [
+      {
+        "first": "J. A. D.",
+        "last": "Ackroyd"
+      }
+    ],
+    "author_display": "J. A. D. Ackroyd"
+  },
+  "1182": {
+    "authors": [
+      {
+        "first": "Mattia",
+        "last": "Serra"
+      },
+      {
+        "first": "Seán",
+        "last": "Crouzat"
+      },
+      {
+        "first": "Gaël",
+        "last": "Simon"
+      },
+      {
+        "first": "Jérôme",
+        "last": "Vétel"
+      },
+      {
+        "first": "George",
+        "last": "Haller"
+      }
+    ],
+    "author_display": "Mattia Serra, Seán Crouzat, Gaël Simon, Jérôme Vétel, George Haller"
+  },
+  "1256": {
+    "title": "Approximate closed-form solutions for supersonic laminar separated flows"
+  },
+  "1259": {
+    "title": "Supersonic separated and reattaching laminar flows. I. General theory and application to adiabatic boundary layer-shock wave interactions"
+  },
+  "1316": {
+    "title": "Experimental studies of separated flows at hypersonic speeds. II. Two-dimensional wedge separated flow studies"
+  },
+  "835": {
+    "title": "Critical hypersonic aerothermodynamic phenomena"
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "id": 339,
+  "read_note": "文章类型：理论推导 + CFD（HyFLOW）研究，面向高焓激波风洞部分离解氮来流的平板有限速率催化传热。材料范围：PDF 共 10 页，bundle 全文完整（含表 I、表 II、参考文献）；式 (9)–(31) 经原 PDF 第6–7页（刊页 36,096120-5/6）与第9页（刊页 36,096120-8）核对，式 (8) 文本层严重错位，只能按上下文描述。图表可读性：图1、图2、图4 为示意图，可读；图3、图5–图9 为曲线/云图，坐标轴与图例可读，但具体数据点不可读，定量结论仅依据正文描述与表 I。信息完整度较高；表 I 的 12 组工况完整。",
+  "one_line": "部分离解氮来流下平板有限速率催化传热可用催化Damköhler数Da_c归一，并给出含黏性干扰修正的显式预测式。",
+  "three_sentence": [
+    {
+      "text": "高焓激波风洞中，来流处于热化学非平衡、壁面催化不完全，催化热可占总热流很大比例（N2 中通常 >15%），但既有平板理论多基于量热完全气体或需数值求解，且未计前缘黏性干扰。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "作者证明 V–T 松弛与气相复合在本文工况下冻结（Da_v≤3.5×10^-3、Da_r≤1.8×10^-4），用 Lees-Dorodnitsyn 变换求得含有限速率催化边界条件的自相似解，引入 Da_c 并导出 qc/qtr=Le^-0.6[α∞/(μ̃−α∞)]Da_c/(1+Da_c)，再用 HyFLOW 对 A–D 四组共 12 个工况验证。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "预测式与 CFD 在壁面离解度（图7）和非量纲催化热（图8）上吻合；引入黏性干扰修正 χ 后前缘预测明显改善（图9），但下游仍有偏差。",
+      "attr": "AI概括"
+    }
+  ],
+  "imrad": {
+    "introduction": "【原文明确】高焓激波风洞反射激波运行产生高温气体，喷管膨胀使流动在热化学非平衡状态（平动/转动温度低、振动温度高、气体部分离解），因此高超声速流动与气动加热受真实气体效应强烈影响（p2）。【原文明确】壁面催化复合放出的化学势能会显著增加热流：MacLean & Holden 报告 N2 中催化热通常超过总热流 15%、空气中 20%–40%、CO2 中极端情况下超过 50%；Yang et al. 在铜涂层表面测得相对二氧化硅涂层最高 61% 的热流升高（p2）。【原文明确】缺口：非平衡流通常只能数值求解，“obtaining a theoretical solution seems to be impossible”；既有平板理论（Van Driest、Yu et al.、Chung & Anderson、Vidal）或需数值辅助，或未计入对平板前缘至关重要的黏性干扰（p2–3）。【原文明确】目标：在“流场无化学反应、壁面有限速率催化”的假设下，给出部分离解氮来流平板边界层的理论解与热流预测式，并考虑黏性干扰（p2–3）。",
+    "methods": "【原文明确】几何：长 L0=0.2 m 的尖前缘平板，按真实激波风洞模型尺寸选取（p3，图1）。【原文明确】工况：四组共 12 个算例（A1–A4 变 Ma、B1–B4 变单位 Re、C1–C3 变离解度、D1 为真实实验来流），每组 ccat 依次取 0、0.001、0.01、0.1、1，D1 另加 0.003、0.03、0.3（p3，表I）。【原文明确】求解器：NNW-HyFLOW（基于 PHengLEI），结构网格有限体积，可解定常/非定常；时间一阶后向差分、Steger–Warming 通量分裂、LU-SGS 迭代、非平衡源项点隐处理；空间二阶；本文用定常层流 N–S + 化学反应，Minmod 限制器（p4）。【原文明确】物理模型：Dalton 分压 + 理想气体状态方程；Blottner 黏性拟合、Eucken 热导率、常数 Schmidt 数扩散、Wilke 混合律；Landau–Teller 振动松弛，Millikan–White 时间加 Park 修正；Park 5 组分空气模型（所有算例），Park 振动–离解耦合控制温度 Tc=TatrTv^(1−a)，a=0.6（p4–5）。【原文明确】壁面催化：反应速率 kw=ccat√(RTw/(2πMr))，由壁面质量守恒 −ρD(∂c/∂n)=kwρwcw 确定组分质量分数（p5，式6–7）。【原文明确】网格：前缘与壁面加密，首层法向尺度 10^-6 m 使壁面单元 Re<1（要求 <3）；网格无关性用 D1 的 120×140、200×200、300×300 三套，催化热与平动–转动热几乎不变，取中等网格（p5，图5）。【原文明确】验证：Run 77 圆柱算例（Ma=17.9、Re=3.4×10^5 m^-1、Ttr=156 K、Tw=300 K、空气）与实验及 DPLR 结果吻合（p5，表II、图3）。",
+    "results": "【原文明确】V–T 与气相复合冻结：表I 中最大 Da_v=3.5×10^-3（D1）、最大 Da_r=1.8×10^-4（D1），均远小于 1；图6 显示不同 ccat 下平动–转动温度剖面几乎不变，只有离解度剖面随 ccat 改变，故气相反应冻结（p4、p6–7）。【原文明确】理论解：含有限速率催化边界条件的边界层方程仍有自相似解；冷壁条件下 z(0)=αw/αe=1/(1+Da_c)（式27），Da_c 由式(28)定义（p7）。【原文明确】壁面离解度预测（式27）与 CFD 在 x=0.15 m 处吻合（图7，p8）。【原文明确】非量纲催化热预测（式29）与 CFD 在 A、B、C、D 四组均吻合（图8a–d，p8）。【原文明确】由图8(c) 得：Ma∞ 增大使 qc/qtr 下降（平动传热随来流速度增大）；ReL,∞ 增大使 qc/qtr 略升（来流密度增大）；α∞ 升高使 qc/qtr 约翻倍（固定 ccat）；真实实验 D1 中 ccat 从 0.01 到 0.1 可使 qc/qtr 翻倍（p8–9）。【原文明确】偏差归因：高 ccat 时理论对边界层外缘离解度 αe 与 Da_c 的估算不准；超催化壁（ccat→1）下 αw=0、Da_c 理论上应趋于无穷，但式(30) 给出有限值；A4 与 B1 还可能受未考虑的稀薄效应影响（p9）。【原文明确】黏性干扰：引入 χ 修正 Da_c（式30–31）后，前缘区域理论明显更接近 CFD；χ>3 时黏性干扰强；x 增大后修正理论反而偏离，因为修正主要改变前缘；若平板足够长，χ→1，修正理论退化为原理论（p8–9，图9）。",
+    "discussion": "【原文明确】作者论证可做黏性修正的理由：qc 与 qtr 都源于气体粒子向壁面的能量传递，机制可在同一框架内建模；qc/qtr 的比值“remains unaffected by the presence of a pressure gradient”，因此可保持式(29) 的形式，只把 Da_c 换成含 χ 的式(30)（p8）。【原文明确】实际飞行与地面实验的 αe、ccat 可能显著不同；300 K 不锈钢的 ccat 可在 0.0007–0.07 之间，给实验带来不确定性；但式(29) “does not rely on a direct fitting”，因此具有较强通用性（p8–9）。【原文明确】作者把本文定位为“qualitatively correct and quantitatively reasonable”，并希望用于地面–飞行外推（p8–9、p9 结论）。【AI概括】本文的“理论”仍是边界层自相似解加代数后处理，不是对 N–S 方程的解析求解；Da_c 把复杂的有限速率催化问题压缩为单一无量纲数，是全文的方法核心。",
+    "discussion_limits": "【原文明确】作者承认：高 ccat 下 αe 与 Da_c 的估算误差是主要偏差来源；稀薄效应未考虑；公式形式仍需实验与理论进一步改进（p9）。【AI概括】本文未给壁温的具体数值（仅冷壁假设），未讨论湍流/转捩，未做 ccat 不确定度的定量传播，图8 的“good agreement”缺少误差带或定量偏差指标。"
+  },
+  "core_points": [
+    {
+      "point": "指出高焓激波风洞来流处于热化学非平衡，壁面催化不完全，催化热可占总热流 >15%（N2）乃至 20%–40%（空气），必须计入化学非平衡。",
+      "type": "问题背景",
+      "grade": "A",
+      "source": "p2，第1节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "证明本文工况下 V–T 松弛与气相复合均可视为冻结：Da_v≤3.5×10^-3、Da_r≤1.8×10^-4，且图6 显示温度剖面对 ccat 不敏感。",
+      "type": "假设验证",
+      "grade": "A",
+      "source": "p4、p6–7，表I、图6",
+      "attr": "原文明确"
+    },
+    {
+      "point": "含有限速率催化边界条件的可压缩平板边界层方程存在自相似解，可用 Lees-Dorodnitsyn 变换化为常微分方程组。",
+      "type": "理论",
+      "grade": "A",
+      "source": "p6，式(15)–(18)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "引入催化 Damköhler 数 Da_c，并得到 αw/αe=1/(1+Da_c)，把壁面催化非平衡程度压缩为单一无量纲参数。",
+      "type": "理论",
+      "grade": "A",
+      "source": "p7，式(27)–(28)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "导出 qc/qtr=Le^-0.6[α∞/(μ̃−α∞)]Da_c/(1+Da_c)，其中 Le=0.6、μ̃=E∞/Ed≈V∞²/(2Rhd)。",
+      "type": "理论",
+      "grade": "A",
+      "source": "p7，式(24)、(29)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "式(27) 对壁面离解度的预测与 CFD 在 x=0.15 m 处吻合，说明用式(30) 的 Da_c 表征催化非平衡是合理的。",
+      "type": "验证",
+      "grade": "A",
+      "source": "p8，图7",
+      "attr": "原文明确"
+    },
+    {
+      "point": "式(29) 对 Ma、Re、α∞ 与真实实验来流四组工况均与 CFD 吻合，验证了预测式的适用性。",
+      "type": "验证",
+      "grade": "A",
+      "source": "p8，图8(a–d)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "qc/qtr 随 Ma∞ 增大而下降、随 ReL,∞ 增大而略升、随 α∞ 升高约翻倍；D1 中 ccat 由 0.01 增至 0.1 可使 qc/qtr 翻倍。",
+      "type": "参数规律",
+      "grade": "A",
+      "source": "p8–9",
+      "attr": "原文明确"
+    },
+    {
+      "point": "黏性干扰修正 χ 使前缘预测显著改善；χ>3 表示强黏性干扰；x 增大后修正理论偏差增大，χ→1 时退化为原理论。",
+      "type": "修正模型",
+      "grade": "A",
+      "source": "p8–9，式(30)–(31)、图9",
+      "attr": "原文明确"
+    },
+    {
+      "point": "高 ccat 偏差主要来自 αe 与 Da_c 的估算：超催化壁下 Da_c 应按理论趋于无穷，但式(30) 只给有限值；A4、B1 可能受稀薄效应影响。",
+      "type": "误差分析",
+      "grade": "B",
+      "source": "p9",
+      "attr": "原文明确"
+    },
+    {
+      "point": "公式不依赖对实验参数的直接拟合，作者据此主张其外推通用性；但 300 K 不锈钢 ccat 可在 0.0007–0.07 变化，仍带来实验不确定性。",
+      "type": "适用性",
+      "grade": "B",
+      "source": "p8–9",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "平板长度 L0",
+      "value": "0.2 m（按真实激波风洞模型尺寸）",
+      "source": "p3，第II.A节",
+      "note": "尖前缘、零攻角平板（图1）"
+    },
+    {
+      "item": "A1 来流条件",
+      "value": "Ma∞=8；ReL,∞=2×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4700 K；α∞=10%；ccat=0–1；Da_v=8.0×10^-5；Da_r=3.6×10^-5",
+      "source": "p3，表I",
+      "note": "ReL,∞ 按文中定义为单位雷诺数 ρ∞u∞/μ∞（表头单位 10^5 m^-1）"
+    },
+    {
+      "item": "A2 来流条件",
+      "value": "Ma∞=10；ReL,∞=2×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4700 K；α∞=10%；ccat=0–1；Da_v=5.1×10^-5；Da_r=1.8×10^-5",
+      "source": "p3，表I",
+      "note": "与 A1 仅 Ma 不同"
+    },
+    {
+      "item": "A3 来流条件",
+      "value": "Ma∞=12；ReL,∞=2×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4700 K；α∞=10%；ccat=0–1；Da_v=3.5×10^-5；Da_r=1.1×10^-5",
+      "source": "p3，表I",
+      "note": "与 A1 仅 Ma 不同"
+    },
+    {
+      "item": "A4 来流条件",
+      "value": "Ma∞=14；ReL,∞=2×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4700 K；α∞=10%；ccat=0–1；Da_v=2.6×10^-5；Da_r=6.7×10^-6",
+      "source": "p3，表I",
+      "note": "作者称该工况可能受稀薄效应影响（p9）"
+    },
+    {
+      "item": "B1 来流条件",
+      "value": "Ma∞=8；ReL,∞=0.4×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4700 K；α∞=10%；ccat=0–1；Da_v=1.6×10^-5；Da_r=1.4×10^-6",
+      "source": "p3，表I",
+      "note": "低 Re 端；作者称可能受稀薄效应影响（p9）"
+    },
+    {
+      "item": "B2 来流条件",
+      "value": "Ma∞=8；ReL,∞=0.8×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4700 K；α∞=10%；ccat=0–1；Da_v=3.2×10^-5；Da_r=5.7×10^-6",
+      "source": "p3，表I",
+      "note": "与 B1 仅 Re 不同"
+    },
+    {
+      "item": "B3 来流条件",
+      "value": "Ma∞=8；ReL,∞=2×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4700 K；α∞=10%；ccat=0–1；Da_v=8.0×10^-5；Da_r=3.6×10^-5",
+      "source": "p3，表I",
+      "note": "与 A1 条件相同"
+    },
+    {
+      "item": "B4 来流条件",
+      "value": "Ma∞=8；ReL,∞=4×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4700 K；α∞=10%；ccat=0–1；Da_v=1.6×10^-4；Da_r=1.4×10^-4",
+      "source": "p3，表I",
+      "note": "高 Re 端"
+    },
+    {
+      "item": "C1 来流条件",
+      "value": "Ma∞=8；ReL,∞=2×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4400 K；α∞=5%；ccat=0–1；Da_v=8.0×10^-5；Da_r=3.6×10^-5",
+      "source": "p3，表I",
+      "note": "低离解度、低振动温度"
+    },
+    {
+      "item": "C2 来流条件",
+      "value": "Ma∞=8；ReL,∞=2×10^5 m^-1；Ttr,∞=800 K；Tv,∞=4700 K；α∞=10%；ccat=0–1；Da_v=8.0×10^-5；Da_r=3.6×10^-5",
+      "source": "p3，表I",
+      "note": "与 A1 条件相同"
+    },
+    {
+      "item": "C3 来流条件",
+      "value": "Ma∞=8；ReL,∞=2×10^5 m^-1；Ttr,∞=800 K；Tv,∞=5000 K；α∞=15%；ccat=0–1；Da_v=8.0×10^-5；Da_r=3.6×10^-5",
+      "source": "p3，表I",
+      "note": "高离解度、高振动温度"
+    },
+    {
+      "item": "D1 来流条件（真实实验）",
+      "value": "Ma∞=6.94；ReL,∞=2.7×10^5 m^-1；Ttr,∞=1342 K；Tv,∞=4715 K；α∞=10%；ccat=0–1（另加 0.003、0.03、0.3）；Da_v=3.5×10^-3；Da_r=1.8×10^-4",
+      "source": "p3，表I；p3 正文",
+      "note": "对应 Ref. 17 的实验条件"
+    },
+    {
+      "item": "壁面温度 Tw",
+      "value": "主工况文中未提及；采用冷壁假设 Tw≪Te。验证算例 Tw=300 K",
+      "source": "p5、p6；表II（p5）",
+      "note": "实验运行时间极短，壁温近似不变（p5）"
+    },
+    {
+      "item": "壁面催化系数 ccat",
+      "value": "0、0.001、0.01、0.1、1（A–C 组）；D1 另加 0.003、0.03、0.3",
+      "source": "p3，第II.A节",
+      "note": "ccat 定义为 Nr/Ntot，不含化学与振动能量适应效应"
+    },
+    {
+      "item": "气体与化学模型",
+      "value": "氮来流；Park 5 组分空气模型；双温度模型；无电离",
+      "source": "p2、p4",
+      "note": "虽为氮来流，作者对全部算例采用 Park 5 组分空气模型"
+    },
+    {
+      "item": "来流湍流度/噪声",
+      "value": "文中未提及",
+      "source": "全文",
+      "note": "采用定常层流求解器；边界层状态为层流（Re 范围 10^4–10^5）"
+    },
+    {
+      "item": "单位雷诺数参考长度",
+      "value": "ReL,∞ 以 1 m 为单位（10^5 m^-1）；平板 Re_L 由 L0=0.2 m 换算",
+      "source": "p3，表I 表头",
+      "note": "文中称 ReL,∞ 为 unit Reynolds number"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "Da_v",
+      "definition": "振动–平动能量传递的非平衡判据，Da_v=τf/τv，τf=L0/u∞，τv 由 Landau–Teller 模型估计",
+      "value": "A1 8.0×10^-5 … D1 3.5×10^-3（均≪1）",
+      "relation": "Da_v≪1 ⇒ V–T 传递可视为冻结",
+      "source": "p3–4，式(1)–(2)；表I"
+    },
+    {
+      "name": "Da_r",
+      "definition": "边界层内复合反应的非平衡判据，Da_r=τf/τr，τr=[N]/vchem",
+      "value": "A1 3.6×10^-5 … D1 1.8×10^-4（均≪1）",
+      "relation": "Da_r≪1 ⇒ 气相复合可视为冻结",
+      "source": "p3–4，式(3)；表I"
+    },
+    {
+      "name": "Da_c",
+      "definition": "壁面异相催化反应的非平衡 Damköhler 数（流场特征时间与壁面反应特征时间之比）",
+      "value": "ccat=0 → 0；ccat→1 时按式(28)/(30) 为有限值（理论上应→∞）",
+      "relation": "与 ccat 成正比；控制 αw/αe 与 qc/qtr",
+      "source": "p7，式(28)；p8–9，式(30)"
+    },
+    {
+      "name": "αw/αe",
+      "definition": "壁面离解度与边界层外缘离解度之比",
+      "value": "=1/(1+Da_c)",
+      "relation": "Da_c→0 时→1（冻结）；Da_c→∞ 时→0（平衡）",
+      "source": "p7，式(27)"
+    },
+    {
+      "name": "qc/qtr",
+      "definition": "催化热流与平动–转动热流之比",
+      "value": "=Le^-0.6[α∞/(μ̃−α∞)]Da_c/(1+Da_c)",
+      "relation": "正比于 α∞ 与 Da_c/(1+Da_c)",
+      "source": "p7，式(29)"
+    },
+    {
+      "name": "μ̃",
+      "definition": "μ̃=E∞/Ed≈V∞²/(2Rhd)，Ed=ρ∞V∞Rhd 为氮的离解能",
+      "value": "随 Ma 增大而增大；文中未给具体数值",
+      "relation": "出现在式(24)、(29) 的分母",
+      "source": "p7"
+    },
+    {
+      "name": "Le",
+      "definition": "Lewis 数，Stc/Sttr=(Pr/Sc)^-0.6=Le^-0.6",
+      "value": "取 0.6（文献推荐值）",
+      "relation": "决定 qc 与 qtr 的输运类比",
+      "source": "p7"
+    },
+    {
+      "name": "hd",
+      "definition": "氮的特征离解温度",
+      "value": "hd=101325 K",
+      "relation": "Ed=ρ∞V∞Rhd",
+      "source": "p7"
+    },
+    {
+      "name": "χ",
+      "definition": "黏性干扰修正参数，χ=√(pw/p∞)",
+      "value": "式(31) 给出；文中示例区域 χ>3 表示强黏性干扰",
+      "relation": "以 χ 乘式(28) 得式(30)",
+      "source": "p8–9，式(31)"
+    },
+    {
+      "name": "壁面单元雷诺数",
+      "definition": "壁面第一层网格的单元雷诺数",
+      "value": "<1（要求 <3）；首层法向尺度 10^-6 m",
+      "relation": "保证壁面热流计算精度",
+      "source": "p5"
+    }
+  ],
+  "methods": [
+    {
+      "item": "求解器",
+      "value": "NNW-HyFLOW（基于 PHengLEI），结构网格有限体积，可解定常/非定常",
+      "source": "p4，第III.A节",
+      "note": "CARDC 自主开发的高超声速 CFD 软件"
+    },
+    {
+      "item": "离散格式",
+      "value": "时间一阶后向差分；Steger–Warming 矢量通量分裂；LU-SGS 迭代；非平衡源项点隐；空间二阶；Minmod 限制器",
+      "source": "p4",
+      "note": "本文选 Roe/Steger/AUSM 中的 Steger–Warming"
+    },
+    {
+      "item": "控制方程",
+      "value": "定常层流 N–S 方程 + 化学反应的完整方程组",
+      "source": "p4",
+      "note": "无湍流模型"
+    },
+    {
+      "item": "热力学与输运",
+      "value": "Dalton 分压 + 理想气体；Blottner 黏性、Eucken 热导率、常数 Sc 扩散、Wilke 混合律",
+      "source": "p4",
+      "note": "Sc 的具体取值文中未提及"
+    },
+    {
+      "item": "振动与化学动力学",
+      "value": "双温度模型；Landau–Teller 松弛；Millikan–White 时间 + Park 修正；Park 5 组分空气模型；Arrhenius 正/逆反应速率；Park 振动–离解耦合 Tc=TatrTv^(1−a)，a=0.6",
+      "source": "p4–5，式(5)",
+      "note": "温度范围不引起电离"
+    },
+    {
+      "item": "壁面催化模型",
+      "value": "有限速率催化：kw=ccat√(RTw/(2πMr))；由 −ρD(∂c/∂n)=kwρwcw 求壁面组分",
+      "source": "p5，式(6)–(7)",
+      "note": "ccat 不含能量适应效应"
+    },
+    {
+      "item": "边界条件",
+      "value": "来流为超音速入口；壁面无滑移、等温、有限速率催化；出口为超音速出口",
+      "source": "p5–6",
+      "note": "壁温近似不变"
+    },
+    {
+      "item": "网格与无关性",
+      "value": "前缘与壁面加密；首层 10^-6 m；D1 用 120×140、200×200、300×300 三套；取中等 200×200",
+      "source": "p5，图4、图5",
+      "note": "催化热与平动–转动热对网格不敏感"
+    },
+    {
+      "item": "程序验证",
+      "value": "圆柱绕流 Run 77：Ma=17.9、Re=3.4×10^5 m^-1、Ttr=156 K、Tw=300 K、空气；与实验及 DPLR 吻合",
+      "source": "p5，表II、图3",
+      "note": "验证有限速率催化壁边界条件"
+    },
+    {
+      "item": "理论方法",
+      "value": "Lees-Dorodnitsyn 变换 + 冷壁/常数 Sc 假设 + 参考焓法处理变 Chapman–Rubesin 因子；按 Goulard 方法解浓度方程",
+      "source": "p6–7，式(15)–(26)",
+      "note": "流场无化学反应，壁面一阶催化"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "在“流场冻结、壁面有限速率催化”的前提下，把可压缩平板边界层方程用 Lees-Dorodnitsyn 变换化为自相似常微分方程组；由冷壁解给出动量与能量方程的壁面梯度，再按 Goulard 的思路解浓度方程得到壁面离解度；把壁面反应速率与扩散通量之比归结为 Da_c，从而得到 qc/qtr 的显式表达式，最后用 χ 修正 Da_c 以计入前缘黏性干扰。",
+    "assumptions": [
+      "流场中 V–T 传递与气相复合冻结（Da_v、Da_r≪1，表I 与图6 验证）",
+      "壁面为有限速率催化，反应为一阶（Eley–Rideal 型），化学能量适应完全（p4）",
+      "边界层为层流、二维、定常，无压力梯度引起的分离（p5–6）",
+      "冷壁假设 Tw≪Te；Schmidt 数取常数；Lewis 数取 0.6",
+      "二元扩散、Fick 定律；混合气体满足 Dalton 分压与理想气体状态方程",
+      "不电离，采用 Park 5 组分模型；无稀薄效应（A4、B1 除外，但本文未建模）",
+      "式(29) 取边界层外缘量等于来流值（αe≈α∞），式(30) 进一步用 χ 修正"
+    ],
+    "steps": [
+      {
+        "title": "冻结边界层方程与有限速率催化边界条件",
+        "text": "流场无化学反应时，源项与反应项删去，方程退化为带组分输运的边界层方程（式8；该式在文本层严重错位，本文按其物理含义描述）。由 Fick 定律给出壁面质量通量；壁面质量守恒要求扩散通量等于一阶催化反应消耗；由此得到壁面浓度梯度边界条件。热流分为平动–转动热流与催化热流两部分。",
+        "latex": [
+          "j=\\rho_w D_w\\left(\\frac{\\partial c}{\\partial y}\\right)_w \\tag{9}",
+          "\\rho_w D_w\\left(\\frac{\\partial c}{\\partial y}\\right)_w=k_w\\rho_w c_w \\tag{10}",
+          "\\left(\\frac{\\partial c}{\\partial y}\\right)_w=\\frac{k_w c_w}{D_w}=\\frac{k_w\\rho_w c_w}{Sc\\,\\mu_w} \\tag{11}",
+          "q_{tr}=-k\\frac{\\partial T_{tr}}{\\partial y},\\qquad q_c=-\\rho\\sum_i D_i h_i\\frac{\\partial c_i}{\\partial y} \\tag{13,14}"
+        ],
+        "source": "p5–6，式(9)–(14)（经原PDF第6页核对）"
+      },
+      {
+        "title": "Lees-Dorodnitsyn 相似变换",
+        "text": "引入相似变量 ξ、η，并把速度、焓、浓度无量纲化。冷壁与常数 Sc 假设下，方程化为三个常微分方程：动量、能量、组分。Chapman–Rubesin 因子 C=ρμ/(ρeμe)；C 为变量时可用参考温度（焓）法处理。",
+        "latex": [
+          "\\xi=\\int_0^x \\rho_e u_e\\mu_e\\,dx,\\qquad \\eta=\\frac{u_e}{\\sqrt{2\\xi}}\\int_0^y\\rho\\,dy \\tag{15}",
+          "\\frac{u}{u_e}=f'(\\eta),\\qquad \\frac{h}{h_e}=g(\\eta),\\qquad \\frac{c}{c_e}=z(\\eta) \\tag{16}",
+          "(Cf'')'+ff''=0 \\tag{18a}",
+          "(Cg')'+Pr\\,fg'=0 \\tag{18b}",
+          "(Cz')'+Sc\\,fz'=0 \\tag{18c}"
+        ],
+        "source": "p6，式(15)–(18)（经原PDF第6页核对）"
+      },
+      {
+        "title": "冷壁自相似解与壁面梯度",
+        "text": "冷壁条件下动量与能量方程的壁面梯度为常数。原文同时给出 0.664 与 0.47 两组系数，二者相差约 √2（0.664/√2≈0.47）；文本层的根号分组不清楚，此处按化简后的 0.47 形式写出。这些梯度是后续把壁面热流写成 Stanton 数形式的依据。",
+        "latex": [
+          "f''(0)=\\frac{0.47}{\\sqrt{C}}",
+          "g'(0)=\\frac{0.47\\,Pr^{1/3}}{\\sqrt{C}} \\tag{19,26}"
+        ],
+        "source": "p6–7，式(19)、(26)（经原PDF第6页核对；原文中间系数的根号分组在文本层不清楚）"
+      },
+      {
+        "title": "浓度方程的解与壁面离解度",
+        "text": "式(18c) 与 (18a)(18b) 形式相同，只是第三类边界条件不同；按 Goulard 的方法可解出 z(0)，即壁面浓度（离解度）与边界层外缘值之比。解由一个分母给出，分母随壁面反应速率 kw 增大而增大。",
+        "latex": [
+          "z(0)=\\frac{1}{1+(2Re_{x,e})^{1/2}\\dfrac{\\mu_e}{\\mu_w}\\dfrac{1}{Sc}\\dfrac{k_w}{\\rho_e u_e}\\dfrac{1}{0.47Sc^{1/3}/\\sqrt{C}}} \\tag{25}"
+        ],
+        "source": "p6，式(25)（经原PDF第6页核对）"
+      },
+      {
+        "title": "定义催化 Damköhler 数与壁面离解度关系",
+        "text": "把式(25) 分母中的反应项归结为 Da_c，则 αw/αe=1/(1+Da_c)。Da_c 与 ccat 成正比，并含 Re、Ma、Ttr/Tw、Sc、C 等因子。极限行为：ccat→0 时 Da_c→0、αw→αe（冻结）；ccat→∞ 时 Da_c→∞、αw→0（平衡）。",
+        "latex": [
+          "\\frac{\\alpha_w}{\\alpha_e}=\\frac{1}{1+Da_c} \\tag{27}",
+          "Da_c=\\frac{Sc^{2/3}\\sqrt{C}}{0.332\\sqrt{2\\pi}\\,Ma_e}Re_{x,e}^{1/2}\\left(\\frac{T_{tr,e}}{T_w}\\right)^{1/2}\\gamma c_{cat} \\tag{28}"
+        ],
+        "source": "p7，式(27)–(28)（经原PDF第7页核对）"
+      },
+      {
+        "title": "热流分解与 qc/qtr 表达式",
+        "text": "把总热流写成平动–转动热流与催化热流之和，二者都用 Stanton 数形式；催化热正比于 (αe−αw) 与离解能 Ed。由 Stc/Sttr=(Pr/Sc)^-0.6=Le^-0.6 得热流比；代入 αw 关系即得式(29)。取边界层外缘量等于来流值（αe≈α∞）后，qc/qtr 只由 α∞ 与 Da_c 决定。",
+        "latex": [
+          "q_{tr}=St_{tr}\\,\\rho_\\infty V_\\infty\\left(h_{tr,aw}-h_w\\right) \\tag{21}",
+          "q_c=St_c\\,\\rho_\\infty V_\\infty\\left(\\alpha_e-\\alpha_w\\right)R h_d=St_c E_d\\left(\\alpha_e-\\alpha_w\\right) \\tag{22}",
+          "\\frac{q_c}{q_{tr}}=Le^{-0.6}\\,\\frac{\\alpha_e-\\alpha_w}{\\tilde\\mu-\\alpha_e} \\tag{24}",
+          "\\frac{q_c}{q_{tr}}=Le^{-0.6}\\,\\frac{\\alpha_\\infty}{\\tilde\\mu-\\alpha_\\infty}\\,\\frac{Da_c}{1+Da_c} \\tag{29}"
+        ],
+        "source": "p7，式(21)–(24)、(29)（经原PDF第7页核对）"
+      },
+      {
+        "title": "前缘黏性干扰修正",
+        "text": "边界层理论在前缘黏性干扰强时失效。作者利用 qc 与 qtr 的类比，认为 qc/qtr 不受压力梯度影响，因此保持式(29) 形式，只把 Da_c 中的边界层外缘量替换为来流值并乘以修正因子 χ。χ 由壁面/来流压力比给出，含 γ、Tw/Ttr,0 与黏性干扰参数；χ 在强干扰区大于 3，远下游趋于 1 时修正理论退化为原理论。",
+        "latex": [
+          "Da_c=\\chi\\,\\frac{Sc^{2/3}\\sqrt{C}}{0.332\\sqrt{2\\pi}\\,Ma_\\infty}Re_{x,\\infty}^{1/2}\\left(\\frac{T_{tr,\\infty}}{T_w}\\right)^{1/2}\\gamma c_{cat} \\tag{30}",
+          "\\chi=\\sqrt{\\frac{p_w}{p_\\infty}} \\tag{31}"
+        ],
+        "source": "p8–9，式(30)–(31)（经原PDF第9页核对）"
+      }
+    ],
+    "result": "壁面离解度 αw/αe=1/(1+Da_c)；总热流比 qc/qtr=Le^-0.6[α∞/(μ̃−α∞)]Da_c/(1+Da_c)；计入前缘黏性干扰时以 χ 修正 Da_c（式30）。该式仅依赖来流离解度、Ma、Re、温度比、γ 与 ccat，不依赖对实验数据的直接拟合（p7–9）。",
+    "limits": "推导建立在冻结流场、一阶壁面催化、层流边界层、冷壁与常数 Sc/Le 之上；式(31) 右端的具体组合在文本层缺损，本文只确认 χ=√(pw/p∞) 及两组因子 [1+0.332(γ−1)] 与 [1+2.6Tw/Ttr,0]，其加/乘关系“受限于材料，无法确认”；式(29) 用 α∞ 代替 αe 会引入误差（作者明确指出高 ccat 时 αe 与 Da_c 是主要偏差源）；超催化壁下 Da_c 不趋于无穷，说明模型在 ccat→1 附近不完备；未考虑稀薄效应、湍流、电离与壁温变化。"
+  },
+  "mechanism": "【原文明确】微观上，气体粒子与壁面碰撞把平动、转动、振动能量传给壁面；同时离解氮原子在壁面催化复合，把化学势能以催化热形式释放（p2、图2）。【原文明确】若壁面催化速率远快于流动特征时间（Da_c≫1），壁面离解度趋于零、催化复合接近平衡，催化热达到扩散极限；若催化很慢（Da_c≪1），壁面离解度接近外缘值，催化热很小。Da_c 正是这两种极限之间的插值参数（p7）。【原文明确】由于 qc 与 qtr 都由“气体向壁面的能量传递 + 近壁扩散”控制，二者可用同一 Stanton 数框架描述，差别只在 Pr 与 Sc 的类比（Le^-0.6）（p7）。【AI推断】qc/qtr 随 Ma 下降，是因为 qtr 随来流速度（焓）增长快于 qc 的 α∞Ed 项；随 Re 略升，是因为边界层变薄使扩散通量增大；随 α∞ 近线性增大，则直接来自 qc∝(αe−αw)。这些趋势与图8 的四组对比一致，但原文只给出定性解释。【原文明确】前缘黏性干扰通过压力梯度改变边界层外缘状态，作者用 χ 把该效应折算进 Da_c，从而在保持原式形式的同时改善前缘预测（p8–9）。",
+  "findings": [
+    {
+      "finding": "本文所有工况下 V–T 能量传递与气相复合均可视为冻结，因此平板传热问题可简化为“冻结流场 + 壁面有限速率催化”。",
+      "evidence": "表I：最大 Da_v=3.5×10^-3、Da_r=1.8×10^-4，均远小于 1；图6 显示不同 ccat 下平动–转动温度剖面几乎重合，仅离解度剖面改变。",
+      "type": "无量纲判据 + CFD 剖面",
+      "strength": "强",
+      "source": "p4、p6–7，表I、图6",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "壁面离解度可由 αw/αe=1/(1+Da_c) 预测，且与 CFD 在 x=0.15 m 处吻合。",
+      "evidence": "图7 数值模拟的壁面离解度散点与式(27)（原文此处称式30，见 open_questions）给出的曲线对比。",
+      "type": "理论–数值对比",
+      "strength": "强",
+      "source": "p8，图7",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "qc/qtr 的显式预测式在变 Ma、变 Re、变 α∞ 与真实实验来流四组工况下均与 CFD 吻合。",
+      "evidence": "图8(a)–(d)：式(29) 曲线与 CFD 数据点对比；正文称“good agreement”。",
+      "type": "理论–数值对比",
+      "strength": "中",
+      "source": "p8，图8",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "非量纲催化热随 Ma∞ 增大而下降，随 ReL,∞ 增大而略升，随 α∞ 升高约翻倍。",
+      "evidence": "图8(a–c) 及 p8–9 的三条定性解释；D1 中 ccat 由 0.01 到 0.1 可使 qc/qtr 翻倍。",
+      "type": "参数规律",
+      "strength": "中",
+      "source": "p8–9",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "计入前缘黏性干扰的修正理论（χ 修正 Da_c）在前缘明显优于原理论，但沿 x 增大偏差反而增大；χ>3 表示强黏性干扰。",
+      "evidence": "图9：CFD、原理论、修正理论三条曲线；正文对偏差原因的说明。",
+      "type": "模型修正验证",
+      "strength": "中",
+      "source": "p8–9，图9",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "高 ccat 下理论与 CFD 的偏差主要来自边界层外缘离解度 αe 与 Da_c 的估算；超催化壁下 Da_c 理论上应趋于无穷，但式(30) 只给有限值。",
+      "evidence": "正文对 A1（低 Ma、低 μ̃）、超催化壁、A4/B1 稀薄效应的逐条讨论。",
+      "type": "误差归因",
+      "strength": "中",
+      "source": "p9",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "高焓激波风洞中催化热可占总热流很大比例，N2 中通常 >15%，空气 20%–40%，CO2 极端情况 >50%。",
+      "evidence": "引言引用 MacLean & Holden 的实验数据；Yang et al. 测得铜涂层相对 SiO2 涂层最高 61% 热流升高。",
+      "type": "文献证据（二次引用）",
+      "strength": "中",
+      "source": "p2，第1节",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "【原文明确】作者结论：①V–T 能量传递与气相复合因特征时间远短于流动时间而可忽略；②引入 Da_c 表征异相反应的非平衡程度；③导出部分离解来流下平板气动加热的预测公式（式29）；④引入修正参数 χ 以计入黏性干扰，使式(29) 在前缘仍可用（p8–9）。【原文明确】理论结果可用于激波风洞实验的热流测量修正与地面–飞行外推（p9）。【AI概括】核心贡献是把“有限速率催化 + 部分离解来流 + 黏性干扰”压缩为一个可手算的 qc/qtr 表达式，并用 12 个 CFD 工况做了跨参数验证。",
+  "contributions": [
+    "给出含有限速率催化边界条件的平板边界层自相似解，避免了对每个工况做完整 N–S 计算（p6–7）。",
+    "提出催化 Damköhler 数 Da_c，把壁面催化非平衡程度与 αw/αe、qc/qtr 定量联系起来（p7，式27–28）。",
+    "导出仅依赖来流参数与 ccat 的显式催化热预测式 qc/qtr=Le^-0.6[α∞/(μ̃−α∞)]Da_c/(1+Da_c)（p7，式29）。",
+    "用 HyFLOW 在 12 个工况（变 Ma、Re、α∞ 与真实实验来流）上验证壁面离解度与催化热预测（p8，图7、图8）。",
+    "引入黏性干扰修正 χ，使边界层理论在前缘强干扰区仍能给出接近 CFD 的预测（p8–9，式30–31、图9）。",
+    "明确给出公式的适用边界与主要误差源，为激波风洞催化热测量与外推提供可操作工具（p9）。"
+  ],
+  "limits": "【原文明确】作者承认：高 ccat 时 αe 与 Da_c 估算不准是主要偏差源；超催化壁下 Da_c 不趋于无穷；A4、B1 可能受未建模的稀薄效应影响；公式仍需实验与理论进一步改进（p9）。【AI概括】其他局限：①主工况壁温 Tw 未给出，只声明冷壁假设，实际风洞壁温升高会改变 qc/qtr；②只用定常层流求解器，未考虑湍流/转捩，而真实前缘可能转捩；③Sc 取值未给出，Le 固定 0.6，未做敏感性分析；④假设化学能量适应完全，作者明确说该效应对催化热的影响超出本文范围；⑤式(29) 用 α∞ 代替 αe，在强离解/强催化下误差增大；⑥图8、图9 的“good agreement”没有给出误差带或最大偏差数值；⑦式(31) 的右端组合在文本层缺损，本文无法确认其加/乘结构。【AI推断】公式对 ccat 的线性依赖意味着 ccat 的不确定度（不锈钢 0.0007–0.07，约两个量级）会直接传到 qc/qtr，作者虽提及但未做误差传播。",
+  "significance": "【AI推断】对高焓激波风洞测热：本文提供了一个只用 Ma、Re、Ttr/Tw、α∞、ccat 就能估算催化热占比的手算公式，可用于判断测得热流中催化贡献的大小，并指导 ccat 涂层选择与数据外推。对地面–飞行外推：把 Da_c 作为相似参数，意味着只要地面与飞行的 Da_c、α∞、Ma、Re 组合相近，催化热占比就相近；但作者也指出实际飞行的 αe 与 ccat 可能显著偏离实验值。对热防护设计：qc/qtr 可随 ccat 从 0.01 到 0.1 翻倍，说明壁面材料催化特性是不可忽略的设计变量。【原文明确】作者希望结果有助于激波风洞实验研究与地面–飞行外推方法（p9）。【AI推断】本文不提供壁面热流绝对值、热流峰值位置或转捩/湍流效应，不能直接用于全机热环境预测。",
+  "quotes": [
+    {
+      "text": "energy transfer can be regarded as frozen in the flow field",
+      "supports": "本文核心简化假设：流场热化学冻结。",
+      "source": "p4，第II.B节",
+      "use": "用于引用“平板催化问题可简化为冻结流场 + 壁面反应”的依据"
+    },
+    {
+      "text": "the chemical reactions in the gas phase is frozen",
+      "supports": "图6 表明温度剖面对 ccat 不敏感，支持气相冻结。",
+      "source": "p7，第IV.B节",
+      "use": "与表I 的 Da_r 一起作为假设验证证据"
+    },
+    {
+      "text": "Dac is the specific Damköhler number for the catalysis nonequilibrium",
+      "supports": "Da_c 是表征壁面催化非平衡程度的无量纲参数。",
+      "source": "p7，式(28) 后",
+      "use": "用于定义本文核心参数"
+    },
+    {
+      "text": "can invalidate the predictions given by the boundary-layer theory",
+      "supports": "必须对边界层理论做黏性干扰修正。",
+      "source": "p8，第IV.C节",
+      "use": "用于引出式(30)–(31)"
+    },
+    {
+      "text": "unaffected by the presence of a pressure gradient",
+      "supports": "黏性修正只需改 Da_c，不必改式(29) 的形式。",
+      "source": "p8，第IV.C节",
+      "use": "用于解释修正方法的合理性"
+    },
+    {
+      "text": "this formula does not rely on a direct fitting to such parameters",
+      "supports": "预测式具有外推通用性。",
+      "source": "p8，第IV.C节",
+      "use": "用于说明公式相对经验关联式的优势"
+    },
+    {
+      "text": "catalytic heating usually contributed more than 15% of the total heat flux in N2 flows",
+      "supports": "催化热在氮来流中不可忽略。",
+      "source": "p2，第1节",
+      "use": "用于论证研究动机（注意为作者转引 MacLean & Holden）"
+    },
+    {
+      "text": "the discrepancy may also be attributed to the rarefaction effect",
+      "supports": "A4、B1 的偏差可能来自未建模的稀薄效应。",
+      "source": "p9，第IV.B节",
+      "use": "用于说明模型适用边界"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig02_p4.png",
+      "n": 2,
+      "page": 4,
+      "caption_zh": "壁面催化复合及化学/振动能量适应微观过程示意图：包括 Eley–Rideal 催化复合、化学能量不完全适应、均相碰撞、振动能量适应与可能的扩散。",
+      "caption_orig": "FIG. 2. Schematic of the microscopic process of catalytic recombination reactions as well as chemical and vibrational energy accommodation on a wall.",
+      "why": "支撑“催化热来自壁面复合放热、与平动/转动/振动能量传递并列”的物理图像，是引入 ccat、Da_c 与 qc/qtr 分解的概念基础。"
+    },
+    {
+      "file": "fig06_p8.png",
+      "n": 6,
+      "page": 8,
+      "caption_zh": "D1 工况 x=0.15 m 处不同催化系数下的平动–转动温度与离解度法向剖面。",
+      "caption_orig": "FIG. 6. Translational–rotational temperature and degree of dissociation profiles normal to the wall with different catalytic coefficients at x=0.15 m in D1 cases.",
+      "why": "支撑“气相反应冻结”的关键证据：ccat 改变只改变离解度剖面，几乎不改变平动–转动温度剖面。"
+    },
+    {
+      "file": "fig08_p8.png",
+      "n": 8,
+      "page": 8,
+      "caption_zh": "x=0.15 m 处非量纲催化热 qc/qtr 的数值结果与式(29) 预测对比：(a) 不同马赫数，(b) 不同单位雷诺数，(c) 不同离解度，(d) 真实实验来流。",
+      "caption_orig": "FIG. 8. Non-dimensional catalytic heating: comparison between numerical results and predicted results using Eq. (29) at x=0.15 m: (a) different Mach numbers, (b) different unit Reynolds numbers, (c) different degree of dissociation, and (d) real experiment inflow.",
+      "why": "全文核心验证图：四组跨参数工况下预测式与 CFD 吻合，支撑式(29) 的适用性与 qc/qtr 随 Ma、Re、α∞ 的变化规律。"
+    },
+    {
+      "file": "fig09_p9.png",
+      "n": 9,
+      "page": 9,
+      "caption_zh": "真实实验来流下 CFD、原理论与计入前缘黏性干扰的修正理论的 qc/qtr 沿平板分布对比（横轴为 x，顶部附局部放大与 χ 值）。",
+      "caption_orig": "FIG. 9. Comparison of CFD result, original theory, and modified theory considering viscous interaction at the leading edge of the flat plate at experimental inflow.",
+      "why": "支撑“χ 修正使前缘预测明显改善、但下游仍有偏差”的结论，是式(30)–(31) 有效性的直接证据。"
+    }
+  ],
+  "verification": {
+    "text_only": "是。仅使用 bundle 的带页码全文、表I/表II、图注与图件清单；式(9)–(31) 用原 PDF 第6、7、9页核对（本篇读 3 页，未超 6 页限额）。未引入外部知识。",
+    "a_grade_supported": "是。全部 A 级要点（冻结判据、自相似解、Da_c 与 αw/αe、qc/qtr 公式、图7/图8 验证、参数规律、χ 修正）均给出页码、式号或图号。",
+    "attributes_marked": "是。imrad、core_points、findings、quotes 均以【原文明确】【AI概括】【AI推断】或 attr 字段标注；图3、图5–图9 只按图注与正文描述，不臆造数据点。",
+    "coverage": "覆盖摘要、第I–V节、表I、表II、图1–图9 与参考文献；bundle 共 689 行，已从第1行读到第689行（EOF）。",
+    "no_fabrication": "未编造页码、图号、公式或数据；工况表逐项照录表I，单位与参考长度保留。壁温、Sc 取值、转捩状态等文中未给的量写“文中未提及”。式(31) 的组合关系明确标注“受限于材料，无法确认”。",
+    "open_questions": [
+      "式(31) 右端在文本层缺损，只可辨认 χ=√(pw/p∞)、[1+0.332(γ−1)] 与 [1+2.6Tw/Ttr,0] 三部分，其加法/乘法结构需回原文核对。",
+      "正文第IV.B节称“用 Eq. (30) 预测 Dac”，但式(30) 是含 χ 的黏性修正式、式(28) 才是基本定义；图7 图注写 Eq. (30)，正文又写 Eq. (27)，存在式号混用，需核对。",
+      "主工况壁温 Tw 未给出；冷壁假设下 qc/qtr 对 Tw 的敏感性未知，实际风洞壁温升高是否会显著改变预测？",
+      "Schmidt 数取常数的具体数值未给出，Le=0.6 的来源为 Fay & Kemp (1963)；Sc 变化对 Da_c 与 qc/qtr 的影响未做敏感性分析。",
+      "图8、图9 的“good agreement”无误差带或最大偏差数值；高 ccat 端偏差具体多大，正文只作定性描述。",
+      "表I 把 ReL,∞ 标为 10^5 m^-1 的单位雷诺数，但符号用 ReL 易与基于板长的雷诺数混淆；图8(b) 横轴的具体换算需确认。",
+      "作者称对全部算例采用 Park 5 组分空气模型，而实验气体为氮；5 组分模型中氮组分的选择与 N2 离解化学是否一致，文中未说明。"
+    ]
+  }
+}

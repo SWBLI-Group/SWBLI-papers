@@ -1,0 +1,662 @@
+{
+  "id": 975,
+  "read_note": "数值求解器开发与验证类期刊论文（Aerospace 2016, 3, 34，21页）。bundle 含完整正文、9项图件清单与带页码全文；文本层公式多处上下标错位，已回读 PDF 第3、5、8、11页核对式(1)、(18)、(19)、(33)–(41)的符号与编号。全部结果为零维绝热热浴，无网格、无空间梯度；工况参数、对比代码与主要定量结论均有交代，信息完整度较高。图3–图9为温度/数密度-时间曲线，只能依据图注、正文与图上标注读取平衡值。",
+  "one_line": "在OpenFOAM中实现双温hy2Foam，用零维热浴逐项验证，并主张CVDV+QK化学-振动耦合最贴近DSMC。",
+  "three_sentence": [
+    {
+      "text": "高超声速再入气动热预测需要区分平动-转动温度与振动-电子温度的双温CFD，而开源平台长期缺少经系统验证、含多振动温度与化学-振动耦合的求解器。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "作者在OpenFOAM 2.3.0上以rhoCentralFoam与reactingFoam为基础构建hy2Foam（Ttr加多个Tve,s，Landau-Teller V-T、Knab V-V、Park TTv或CVDV耦合、可选电子能），对纯N2、N2-N、N2-O2与5组分空气零维热浴逐项验证，结果与LeMANS、MONACO一致，CVDV-QK使反应N2-N的温度与组分演化较Park组合明显更接近dsmcFoam。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "作者据此推荐CVDV+QK作为混合CFD-DSMC求解器的化学-振动与速率组合，并指出电子能模式在10,000 K以上不可忽略（平衡温度差达23.7%）。",
+      "attr": "AI概括"
+    }
+  ],
+  "imrad": {
+    "introduction": "再入飞行器在60–80 km高度同时存在连续介质与稀薄区：NSF方程在非连续区失效，DSMC在连续区代价过高，因此需要双温连续介质求解器并与DSMC衔接。作者回顾Park双温模型及DPLR、LAURA、VULCAN、LeMANS、US3D等专用代码，指出它们多为闭源；同课题组的dsmcFoam已实现振动能与QK化学反应。hy2Foam的目标是最终与dsmcFoam组成混合CFD-DSMC求解器。本文属验证链的第一部分：用逐步复杂化的零维绝热热浴隔离各物理机制，与文献数据、LeMANS和dsmcFoam对比，并给出适用于混合求解器的化学-振动/速率模型组合（p1–3，§1）。",
+    "methods": "总能量按式(1)分解为动能、平动、转动、振动、电子、电子平动与化学能；平动与转动取同一Ttr，电子与电子能取参考分子的Tve,ref，每个振动激发组分各有Tve,s（式(3)–(7)）。V-T交换用Landau-Teller式(8)，弛豫时间取Millikan-White与Park修正之和的摩尔分数加权（式(9)–(17)）；V-V交换用Knab模型式(18)，交换概率取常数10^-2；另定义总温Tov式(19)–(21)。零维NSF写成dU/dt=Ẇ（式22–26），源项含Q_V-T、Q_V-V、Q_C-V，电子相关三项暂省略。化学用质量作用定律式(27)与Arrhenius式(28)；Park TTv以TP=Ttr^αP·Tve^(1-αP)（αP=0.7）作解离控制温度，各类反应的控制温度见表1；CVDV用Marrone-Treanor修正的kf（式33–40）。实现基于OpenFOAM 2.3.0：rhoCentralFoam（Kurganov-Tadmor中心迎风）加reactingFoam化学，先形成单温hyFoam并用H2-I2↔2HI（700 K、0.528 atm、C0=4.54 mol/m³）验证，再扩展为hy2Foam。热浴为边长1×10^-5 m的单个立方单元，CFD与DSMC时间步均1×10^-9 s，每次dsmcFoam计算至少50,000个粒子，取三次独立系综平均；dsmcFoam有平动、转动、振动三个温度，将转动碰撞数Zr设为1以便与双温CFD对比（p3–9，§2；p9，§3）。",
+    "results": "纯N2 V-T加热（Ttr0=10,000 K、Tv0=1000 K、p0=1 atm）：hy2Foam默认配置与LeMANS、MONACO吻合，dsmcFoam的弛豫慢48%；平衡温度7623.3 K，ζ0tot=0.240、ζeqtot=6.590，按式(41)得初始总温9588.0 K（p10–11，图3a）。冷却（Ttr0=3000 K、Tv0=10,000 K）：hy2Foam与MONACO完全一致，与dsmcFoam差异明显，作者归因于量子Larsen-Borgnakke与宏观一致的能量重分配（p11，图3b）。电子能算例把Ttr0提高到30,000 K：含电子能时弛豫快约26%，平衡温度由17.7×10^3 K升到21.9×10^3 K，相差23.7%（p11，图4）。N2-N等比例混合物（各5.0×10^22 m^-3）与LeMANS的差异被追查到式(15)中数密度与σm约定不同，按LeMANS约定（混合物数密度、σm=1×10^-20 m²）修改后曲线几乎重合（p12，图5）。N2-O2等比例、Ttr0=5000 K、Tv0=30,000 K、1 atm：V-V使弛豫加快，两个振动池始终分离，LeMANS的单一Tv落在两者之间（p13，图6）。反应N2-N（Ttr0=30,000 K、Tv0=1000 K）：Park TTv+Park 1993速率下化学反应影响比DSMC慢约10倍；CVDV-QK明显改善Ttr与组分，但早期Tv抬升仍偏高（p14–15，图7）。初始热平衡的同类算例重复该趋势，Park组合先热弛豫后起化学反应，造成Tv下降滞后（p15，图8）。5组分空气19个反应、p0=0.063 atm、T0=10,000 K、单温模式：hy2Foam与LeMANS的温度和数密度吻合（p16，图9）。",
+    "discussion": "作者把CFD与DSMC的残余差异归因于三点：流动显著偏离Boltzmann分布时多温CFD的固有局限、dsmcFoam的量子Larsen-Borgnakke能量重分配与CFD宏观处理不同、以及N2-N2/N2-N相互作用的多温建模。电子能结果说明再入高温段忽略电子模式会同时错估弛豫速率与平衡温度。V-V虽为次要机制，但保留多振动温度是使hy2Foam与dsmcFoam化学模块一致耦合的前提。综合比较后，作者明确推荐CVDV+QK用于未来混合求解器，因为二者都基于量子态/优先解离图像，与QK DSMC的化学一致；Park TTv+Park 1993虽是高超声速界最常用组合，却在零维反应热浴中系统性偏慢。作者同时承认本文只做零维验证，11组分空气与多维算例留待后续（p13–17，§3.4–4）。"
+  },
+  "core_points": [
+    {
+      "point": "hy2Foam在OpenFOAM 2.3.0中实现Ttr与多个Tve,s的双温框架，可开关电子能，支持11组分空气与V-T、V-V交换。",
+      "type": "求解器架构",
+      "grade": "A",
+      "source": "p1摘要；p3–6 §2.1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "V-T源项用Landau-Teller式(8)，弛豫时间用Millikan-White加Park修正、按摩尔分数加权（式9–15）；σm取3.0×10^-21 m²（N2、O2）与3.0×10^-22 m²（NO）。",
+      "type": "物理模型",
+      "grade": "A",
+      "source": "p4–5 §2.1.1，式(8)–(17)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "V-V源项用Knab模型式(18)，交换概率推荐常数10^-2；多振动温度保留主要是为了与dsmcFoam一致耦合。",
+      "type": "物理模型",
+      "grade": "B",
+      "source": "p5 §2.1.1，式(18)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "化学-振动耦合提供Park TTv（解离控制温度TP=Ttr^0.7·Tve^0.3）与CVDV两套模型，后者用Marrone-Treanor修正kf并区分前/后向振动能移除。",
+      "type": "物理模型",
+      "grade": "A",
+      "source": "p7–8 §2.2.2–2.2.3，式(29)–(40)，表1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "纯N2加热热浴中hy2Foam与LeMANS、MONACO吻合，dsmcFoam弛豫慢48%；平衡温度7623.3 K，初始总温9588.0 K。",
+      "type": "验证结果",
+      "grade": "A",
+      "source": "p10–11 §3.1.1，图3a，式(41)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "Ttr0=30,000 K时计入电子能使弛豫快约26%，平衡温度由17.7×10^3 K升至21.9×10^3 K（差23.7%），10,000 K以上必须考虑电子模式。",
+      "type": "定量结论",
+      "grade": "A",
+      "source": "p11 §3.1.2，图4",
+      "attr": "原文明确"
+    },
+    {
+      "point": "N2-N混合物的hy2Foam/LeMANS差异源于式(15)约定不同（LeMANS用混合物数密度且σm=1×10^-20 m²），统一约定后曲线几乎重合。",
+      "type": "验证/解释",
+      "grade": "A",
+      "source": "p12 §3.2，图5",
+      "attr": "原文明确"
+    },
+    {
+      "point": "N2-O2热浴中V-V加速振动能再分配，但N2与O2振动池始终分离；LeMANS单一Tv位于两者之间。",
+      "type": "机理/结果",
+      "grade": "B",
+      "source": "p13 §3.3，图6",
+      "attr": "原文明确"
+    },
+    {
+      "point": "反应N2-N中Park TTv+Park 1993速率的化学反应影响比DSMC慢约10倍；CVDV+QK显著改善Ttr与组分演化。",
+      "type": "核心结果",
+      "grade": "A",
+      "source": "p14–15 §3.4，图7",
+      "attr": "原文明确"
+    },
+    {
+      "point": "初始热平衡算例中Park组合先发生热弛豫再起化学反应，导致Tv下降滞后；CVDV-QK仍更接近dsmcFoam。",
+      "type": "核心结果",
+      "grade": "A",
+      "source": "p15 §3.4，图8",
+      "attr": "原文明确"
+    },
+    {
+      "point": "5组分空气19反应、单温降级模式下hy2Foam与LeMANS的温度与数密度吻合。",
+      "type": "验证结果",
+      "grade": "B",
+      "source": "p16 §3.5，图9",
+      "attr": "原文明确"
+    },
+    {
+      "point": "作者推荐CVDV+QK作为混合CFD-DSMC的化学-振动/速率组合，理由是二者与QK DSMC化学模块最一致。",
+      "type": "结论/建议",
+      "grade": "A",
+      "source": "p16–17 §3.4末、§4",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "计算域",
+      "value": "单个立方单元，边长1×10^-5 m，绝热零维热浴",
+      "source": "p9 §3"
+    },
+    {
+      "item": "时间步",
+      "value": "CFD与DSMC均为1×10^-9 s",
+      "source": "p9 §3"
+    },
+    {
+      "item": "DSMC采样",
+      "value": "每次≥50,000个dsmcFoam粒子；结果为三次统计独立计算的系综平均",
+      "source": "p9 §3"
+    },
+    {
+      "item": "对比代码",
+      "value": "CFD：LeMANS；DSMC：MONACO、dsmcFoam；另引用文献热浴数据",
+      "source": "p9 §3"
+    },
+    {
+      "item": "算例1：纯N2 V-T加热",
+      "value": "Ttr0=10,000 K，Tv,N2^0=1000 K，p0=1 atm",
+      "source": "p10 §3.1.1，图3a"
+    },
+    {
+      "item": "算例2：纯N2 V-T冷却",
+      "value": "Ttr0=3000 K，Tv,N2^0=10,000 K，p0=1 atm",
+      "source": "p10 §3.1.1，图3b"
+    },
+    {
+      "item": "算例3：N2含电子能",
+      "value": "Ttr0=30,000 K，Tv0=1000 K（沿用前述加热算例），p0=1 atm；对照为不含电子能",
+      "source": "p11 §3.1.2，图4；Tv0沿用属AI概括"
+    },
+    {
+      "item": "算例4：N2-N非反应混合",
+      "value": "N2与N等比例，各自数密度5.0×10^22 m^-3；初始温度“与上一段相同”（即Ttr0=30,000 K、Tv0=1000 K）",
+      "source": "p12 §3.2，图5"
+    },
+    {
+      "item": "算例5：N2-O2非反应混合",
+      "value": "N2与O2等比例，Ttr0=5000 K，Tv0=30,000 K，p0=1 atm",
+      "source": "p13 §3.3，图6"
+    },
+    {
+      "item": "算例6：反应N2-N",
+      "value": "Ttr0=30,000 K，Tv0=1000 K，N2与N数密度各5.0×10^22 m^-3；反应N2+N2→2N+N2（不可逆）",
+      "source": "p13–14 §3.4，图7"
+    },
+    {
+      "item": "算例7：反应空气",
+      "value": "5组分空气，19个反应（15个解离+4个交换），p0=0.063 atm，T0=10,000 K；假定各分子温度始终平衡，hy2Foam降级为单温",
+      "source": "p16 §3.5，图9"
+    },
+    {
+      "item": "Park 1993速率",
+      "value": "A=7.0×10^21，β=-1.6，Ta=113,200 K（A单位m³·mol⁻¹·s⁻¹）",
+      "source": "p14 表2，§3.4"
+    },
+    {
+      "item": "QK速率",
+      "value": "A=2.47×10^18，β=-0.62，Ta=113,500 K（A单位m³·mol⁻¹·s⁻¹）",
+      "source": "p14 表2，§3.4"
+    },
+    {
+      "item": "Park TTv指数",
+      "value": "αP=0.7（偏向平动-转动温度）",
+      "source": "p7 §2.2.2，式(29)"
+    },
+    {
+      "item": "碰撞截面σm",
+      "value": "N2、O2取3.0×10^-21 m²；NO取3.0×10^-22 m²（原文默认10^-21 m²）",
+      "source": "p5 §2.1.1，式(17)后"
+    },
+    {
+      "item": "V-V交换概率",
+      "value": "Pm,l推荐常数10^-2",
+      "source": "p5 §2.1.1，式(18)后"
+    },
+    {
+      "item": "dsmcFoam设置",
+      "value": "三温度（平动、转动、振动）；转动碰撞数Zr设为1以与双温CFD对比；QK化学与量子Larsen-Borgnakke",
+      "source": "p9 §3；p3 §1"
+    },
+    {
+      "item": "LeMANS约定差异",
+      "value": "式(15)中nm,s取混合物数密度，σm=1×10^-20 m²；hy2Foam默认取碰撞对数密度与3.0×10^-21 m²",
+      "source": "p12 §3.2"
+    },
+    {
+      "item": "hyFoam前置验证",
+      "value": "H2-I2↔2HI，700 K，0.528 atm，C0=4.54 mol/m³",
+      "source": "p9 §2.3，图2"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "Ttr",
+      "definition": "平动-转动平衡温度",
+      "value": "各算例初值3000–30,000 K",
+      "source": "p3 §2.1.1"
+    },
+    {
+      "name": "Tve,s",
+      "definition": "组分s的振动-电子温度；多振动温度模型",
+      "value": "各算例初值1000–30,000 K",
+      "source": "p3 §2.1.1"
+    },
+    {
+      "name": "Teq（纯N2加热）",
+      "definition": "V-T弛豫最终平衡温度",
+      "value": "7623.3 K",
+      "source": "p11 §3.1.1，图3a"
+    },
+    {
+      "name": "ζ0tot（振动部分）",
+      "definition": "初始振动自由度",
+      "value": "0.240",
+      "source": "p10–11 §3.1.1"
+    },
+    {
+      "name": "ζeqtot",
+      "definition": "平衡总自由度，ζt+ζr+ζv",
+      "value": "6.590（ζv=1.590）",
+      "source": "p11 §3.1.1"
+    },
+    {
+      "name": "Tov0",
+      "definition": "按式(41)由能量均分反推的初始总温",
+      "value": "9588.0 K",
+      "source": "p11 §3.1.1，式(41)"
+    },
+    {
+      "name": "弛豫时间差（dsmcFoam）",
+      "definition": "恢复99%平衡温度所需时间相对hy2Foam",
+      "value": "慢48%",
+      "source": "p11 §3.1.1，图3a"
+    },
+    {
+      "name": "电子能对弛豫的影响",
+      "definition": "含/不含电子能的平衡弛豫时间比",
+      "value": "含电子能快约26%",
+      "source": "p11 §3.1.2，图4"
+    },
+    {
+      "name": "电子能对平衡温度的影响",
+      "definition": "Ttr0=30,000 K时含与不含电子能的平衡温度",
+      "value": "21.9×10^3 K 对 17.7×10^3 K，差23.7%",
+      "source": "p11 §3.1.2，图4"
+    },
+    {
+      "name": "N2-N平衡温度",
+      "definition": "图5标注的平衡温度",
+      "value": "24.4×10^3 K",
+      "source": "p12 §3.2，图5"
+    },
+    {
+      "name": "N2-O2平衡温度",
+      "definition": "图6标注的平衡温度",
+      "value": "12.1×10^3 K",
+      "source": "p13 §3.3，图6"
+    },
+    {
+      "name": "N的电子自由度",
+      "definition": "平衡时N电子模式对混合物的自由度贡献",
+      "value": "1.39",
+      "source": "p13 §3.2"
+    },
+    {
+      "name": "反应滞后倍数",
+      "definition": "Park组合相对DSMC化学反应显著影响的时间比",
+      "value": "约10倍",
+      "source": "p15 §3.4，图7"
+    },
+    {
+      "name": "空气反应数",
+      "definition": "5组分空气中考虑的基元反应总数",
+      "value": "19（15解离+4交换）",
+      "source": "p16 §3.5"
+    }
+  ],
+  "methods": [
+    {
+      "item": "求解框架",
+      "value": "OpenFOAM 2.3.0；以rhoCentralFoam（Kurganov-Tadmor中心迎风格式）为流场基础，化学取自reactingFoam",
+      "source": "p8–9 §2.3"
+    },
+    {
+      "item": "双温封闭",
+      "value": "Ttr加多个Tve,s；电子与电子温度取参考分子的Tve,ref；离子温度跟随中性分子",
+      "source": "p3、p6 §2.1.1–2.1.2"
+    },
+    {
+      "item": "V-T模型",
+      "value": "Landau-Teller源项；Millikan-White加Park高温柔性碰撞截面修正；混合物按摩尔分数加权",
+      "source": "p4–5 §2.1.1，式(8)–(17)"
+    },
+    {
+      "item": "V-V模型",
+      "value": "Knab等模型，交换概率常数10^-2",
+      "source": "p5 §2.1.1，式(18)"
+    },
+    {
+      "item": "总温定义",
+      "value": "按各模式自由度加权的Tov，用于与DSMC的宏观温度比较",
+      "source": "p5–6 §2.1.1，式(19)–(21)"
+    },
+    {
+      "item": "化学模型",
+      "value": "质量作用定律+Arrhenius；解离控制温度用Park TTv；反应类型控制温度见表1；本文化学不可逆",
+      "source": "p6–7 §2.2.1–2.2.2，式(27)–(29)，表1"
+    },
+    {
+      "item": "化学-振动耦合",
+      "value": "非优先模型D'=ev；优先模型D'=αmDm（αm常数0.3或随Ttr线性）；CVDV用Marrone-Treanor修正",
+      "source": "p7–8 §2.2.2–2.2.3，式(30)–(40)"
+    },
+    {
+      "item": "零维方程",
+      "value": "dU/dt=Ẇ，U=(ρ,ρs,ρu,ρv,ρw,Eve,m,E)；电子相关源项暂省略",
+      "source": "p6 §2.1.2，式(22)–(26)"
+    },
+    {
+      "item": "验证策略",
+      "value": "按纯组分V-T→多组分V-T/V-V→反应混合物逐步隔离机制；与LeMANS、MONACO、dsmcFoam及文献数据对比",
+      "source": "p9–16 §3"
+    },
+    {
+      "item": "数值设置",
+      "value": "单单元1×10^-5 m；Δt=1×10^-9 s；DSMC≥50,000粒子、三次系综平均；Zr=1",
+      "source": "p9 §3"
+    },
+    {
+      "item": "验证局限",
+      "value": "仅零维绝热热浴，无空间离散、壁面、激波与多维效应；未做网格/时间步无关性研究",
+      "source": "p9 §3；p17 §4"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "把总能量分解到平动、转动、振动、电子与化学模式，令平动-转动共温Ttr、振动-电子按组分共温Tve,s；对每个振动池写Landau-Teller V-T松弛与Knab V-V交换，用Millikan-White/Park关联给出松弛时间，再用Park TTv或CVDV把化学反应与振动能移除耦合起来，最终形成零维守恒方程dU/dt=Ẇ的源项。",
+    "assumptions": [
+      "平动与转动在少数碰撞内达到平衡，始终共用Ttr",
+      "电子与电子能模式与振动模式平衡，取参考分子的Tve,ref",
+      "每个振动激发组分可有自己的Tve,s（多振动温度模型）",
+      "振动能级用简谐振荡器、等间距能级描述",
+      "V-T松弛用Landau-Teller线性弛豫，Millikan-White公式适用300–8000 K，误差不超过5倍",
+      "化学反应在本文中视为不可逆，后向速率不参与计算",
+      "零维、绝热、无空间通量；电子相关源项Qh-e、Qm,e-V、Qe-i暂省略"
+    ],
+    "steps": [
+      {
+        "title": "总能量与各模式能量分解",
+        "text": "总能量写成动能、平动、转动、振动、电子、电子平动与生成焓之和；振动模式总能量等于各组分部分密度与比振动能之积。",
+        "latex": [
+          "E = \\frac{1}{2}\\rho\\sum_i u_i^2 + \\sum_{s\\neq e} E_{t,s} + \\sum_{s\\neq e} E_{r,s} + \\sum_{s\\neq e} E_{v,s} + \\sum_{s\\neq e} E_{el,s} + E_e + \\sum_{s\\neq e} \\rho_s h_s^{\\circ} \\tag{1}",
+          "E_v = \\sum_{s\\neq e} E_{v,s} = \\sum_{s\\neq e} \\rho_s e_{v,s} \\tag{2}"
+        ],
+        "source": "p3 §2.1.1，式(1)–(2)"
+      },
+      {
+        "title": "各模式比内能",
+        "text": "平动3/2 RsTtr、转动RsTtr；振动用简谐振荡器的Planck-Einstein形式；电子平动ReTve,ref；电子激发用配分函数加权求和。",
+        "latex": [
+          "e_t = \\frac{3}{2} R_s T_{tr} \\tag{3}",
+          "e_r = R_s T_{tr} \\tag{4}",
+          "e_{v,s} = R_s \\frac{\\theta_{v,s}}{\\exp\\left(\\theta_{v,s}/T_{ve,s}\\right)-1} \\tag{5}",
+          "e_e = R_e T_{ve,ref} \\tag{6}",
+          "e_{el,s} = R_s \\frac{\\sum_{i=1}^{\\infty} g_{i,s}\\theta_{el,i,s}\\exp\\left(-\\theta_{el,i,s}/T_{ve,s}\\right)}{\\sum_{i=0}^{\\infty} g_{i,s}\\exp\\left(-\\theta_{el,i,s}/T_{ve,s}\\right)} \\tag{7}"
+        ],
+        "source": "p3–4 §2.1.1，式(3)–(7)"
+      },
+      {
+        "title": "V-T松弛源项",
+        "text": "按Landau-Teller方程，振动-电子能向平动-转动温度对应值指数松弛，时间常数为摩尔平均V-T弛豫时间。",
+        "latex": [
+          "Q_{m,V-T} = \\rho_m \\frac{\\partial e_{ve,m}(T_{ve,m})}{\\partial t} = \\rho_m \\frac{e_{ve,m}(T_{tr})-e_{ve,m}(T_{ve,m})}{\\tau_{m,V-T}} \\tag{8}"
+        ],
+        "source": "p4 §2.1.1，式(8)"
+      },
+      {
+        "title": "V-T弛豫时间的混合物平均",
+        "text": "混合物弛豫时间按摩尔分数加权；组分对弛豫时间为Millikan-White项与Park项之和，MW项含A、B系数与压力，Park项用限制碰撞截面修正高温截面。",
+        "latex": [
+          "\\tau_{m,V-T} = \\frac{\\sum_{s\\neq e} X_s}{\\sum_{s\\neq e} X_s/\\tau_{m-s,V-T}} \\tag{9}",
+          "\\tau_{m-s,V-T} = \\tau^{MW}_{m-s,V-T} + \\tau^{P}_{m-s,V-T} \\tag{10}",
+          "\\tau^{MW}_{m-s,V-T} = \\frac{1}{p}\\exp\\left[A_{m,s}T_{tr}^{-1/3}-B_{m,s}\\right]-18.42 \\tag{11}",
+          "A_{m,s} = 1.16\\times10^{-3}\\sqrt{\\mathcal{M}_{m,s}}\\,\\theta_{v,m}^{4/3} \\tag{12}",
+          "B_{m,s} = 0.015\\,\\mathcal{M}_{m,s}^{1/4} \\tag{13}",
+          "\\mathcal{M}_{m,s} = \\frac{M_m M_s}{M_m+M_s} \\tag{14}",
+          "\\tau^{P}_{m-s,V-T} = \\frac{1}{\\bar{c}_m\\sigma_{v,m}n_{m,s}} \\tag{15}",
+          "\\sigma_{v,m} = \\sigma_m\\left(\\frac{50{,}000}{T_{tr}}\\right)^2 \\tag{17}"
+        ],
+        "source": "p4–5 §2.1.1，式(9)–(15)、(17)"
+      },
+      {
+        "title": "V-V交换源项",
+        "text": "用Knab模型描述不同分子振动池之间的能量交换，源项与碰撞对截面、交换概率、约化质量、两者数密度及偏离平衡的振动能差成正比。",
+        "latex": [
+          "Q_{m,V-V} = \\sum_{\\substack{l\\neq m\\\\ l\\neq e}} N_A\\sigma_{m,l}P_{m,l}\\sqrt{\\frac{8\\mathcal{R}T_{tr}}{\\pi\\mathcal{M}_{m,l}}}\\frac{\\rho_l}{M_l}\\rho_m\\left(e_{v,m}(T_{tr})\\frac{e_{v,l}(T_{ve,l})}{e_{v,l}(T_{tr})}-e_{v,m}(T_{ve,m})\\right) \\tag{18}"
+        ],
+        "source": "p5 §2.1.1，式(18)"
+      },
+      {
+        "title": "总温与自由度",
+        "text": "为与DSMC比较，按各模式自由度加权定义总温；振动与电子自由度由比内能反算，平动3、转动2、电子3。",
+        "latex": [
+          "T_{ov} = \\frac{\\sum_{s\\neq e}\\left[Y_s(\\zeta_{t,s}+\\zeta_{r,s})T_{tr}\\right]+\\sum_{s\\neq e}\\left[Y_s(\\zeta_{v,s}+\\zeta_{el,s})T_{ve,s}\\right]+Y_e\\zeta_e T_{ve,ref}}{\\sum_{s\\neq e}\\left[Y_s(\\zeta_{t,s}+\\zeta_{r,s}+\\zeta_{v,s}+\\zeta_{el,s})\\right]+Y_e\\zeta_e} \\tag{19}",
+          "\\zeta_{v,s} = \\frac{2e_{v,s}(T_{ve,s})}{R_s T_{ve,s}} \\tag{20}",
+          "\\zeta_{el,s} = \\frac{2e_{el,s}(T_{ve,s})}{R_s T_{ve,s}} \\tag{21}"
+        ],
+        "source": "p5–6 §2.1.1，式(19)–(21)"
+      },
+      {
+        "title": "零维NSF方程与源项向量",
+        "text": "去掉空间通量散度后，守恒量对时间的导数等于源项向量；振动能源项汇总V-T、V-V、化学-振动及电子相关项，后者暂省略。",
+        "latex": [
+          "\\frac{\\partial U}{\\partial t} = \\dot{W} \\tag{22}",
+          "U = \\left(\\rho,\\rho_s,\\rho u,\\rho v,\\rho w,E_{ve,m},E\\right)^{T},\\quad s\\in N_s,\\; m\\in N_m \\tag{23}",
+          "\\dot{W} = \\left(0,\\dot{\\omega}_s,0,0,0,\\dot{\\omega}_{v,m},0\\right)^{T} \\tag{25}",
+          "\\dot{\\omega}_{v,m} = Q_{m,V-T}+Q_{m,V-V}+Q_{m,C-V}+Q_{h-e}+Q_{m,e-V}+Q_{e-i} \\tag{26}"
+        ],
+        "source": "p6 §2.1.2，式(22)–(26)"
+      },
+      {
+        "title": "Arrhenius速率、Park TTv与化学-振动源项",
+        "text": "净组分源由正/逆反应质量作用项相加；正反应速率常数取Arrhenius形式；解离反应控制温度取Ttr与Tve的Park加权；反应对振动能的贡献由D'与电子能给出，D'可按非优先或优先模型取值。",
+        "latex": [
+          "\\dot{\\omega}_s = M_s\\sum_{r=1}^{N_R}\\left(\\nu''_{s,r}-\\nu'_{s,r}\\right)\\left[k_{f,r}\\prod_{k=1}^{N_r}\\left(\\frac{\\rho_k}{M_k}\\right)^{\\nu'_{k,r}}-k_{b,r}\\prod_{k=1}^{N_r}\\left(\\frac{\\rho_k}{M_k}\\right)^{\\nu''_{k,r}}\\right] \\tag{27}",
+          "k_f = A\\,T_{c,f}^{\\beta}\\exp\\left(-\\frac{T_a}{T_{c,f}}\\right) \\tag{28}",
+          "T_P = T_{tr}^{\\alpha_P}\\,T_{ve}^{1-\\alpha_P} \\tag{29}",
+          "Q_{m,C-V} = \\dot{\\omega}_m\\left(D'_m+e_{el,m}\\right) \\tag{30}",
+          "D'_m = e_{v,m} \\tag{31}",
+          "D'_m = \\alpha_m D_m \\tag{32}"
+        ],
+        "source": "p6–7 §2.2.1–2.2.2，式(27)–(32)，表1"
+      },
+      {
+        "title": "CVDV模型",
+        "text": "CVDV用振动配分函数比修正前向速率常数，并引入Um与修正温度TF,m；再用配分函数加权的平均振动能之差构造化学-振动源项，正、逆反应分别对应不同平均能。",
+        "latex": [
+          "k_f = \\frac{Z(T_{tr})Z(T_{F,m})}{Z(T_{ve,m})Z(-U_m)}\\times A\\,T_{tr}^{\\beta}\\exp\\left(-\\frac{T_a}{T_{tr}}\\right) \\tag{33}",
+          "U_m = \\frac{D_m}{3R_m} \\tag{34}",
+          "T_{F,m}^{-1} = \\frac{1}{T_{ve,m}}-\\frac{1}{T_{tr}}-\\frac{1}{U_m} \\tag{35}",
+          "Z(T) = \\sum_{\\alpha=0}^{N}\\exp\\left(-\\frac{\\epsilon_{\\alpha,m}}{k_B T}\\right) \\tag{36}",
+          "\\epsilon_{\\alpha,m} = \\alpha k_B\\theta_{v,m} \\tag{37}",
+          "\\bar{E}(T_{tr},T_{ve,m}) = \\frac{1}{Z(T_{F,m})}\\sum_{\\alpha=0}^{N}\\epsilon_{\\alpha,m}\\exp\\left(-\\frac{\\epsilon_{\\alpha,m}}{k_B T_{F,m}}\\right) \\tag{38}",
+          "\\bar{E}(T_{tr},T_{tr}) = \\frac{1}{Z(-U_m)}\\sum_{\\alpha=0}^{N}\\epsilon_{\\alpha,m}\\exp\\left(\\frac{\\epsilon_{\\alpha,m}}{k_B U_m}\\right) \\tag{39}",
+          "Q_{m,C-V} = \\frac{1}{m_m}\\left[\\bar{E}(T_{tr},T_{ve,m})\\times\\dot{\\omega}_{f,m}+\\bar{E}(T_{tr},T_{tr})\\times\\dot{\\omega}_{b,m}\\right] \\tag{40}"
+        ],
+        "source": "p8 §2.2.3，式(33)–(40)"
+      },
+      {
+        "title": "能量均分反推初始总温",
+        "text": "零维绝热热浴的平衡总温可由能量守恒与自由度之比，从初始总自由度反推；用该式检验初始总温9588.0 K与DSMC一致。",
+        "latex": [
+          "T_{ov}^{0} = T^{eq}\\times\\frac{\\zeta_{tot}^{eq}}{\\zeta_{tot}^{0}} \\tag{41}"
+        ],
+        "source": "p11 §3.1.1，式(41)"
+      }
+    ],
+    "result": "双温零维模型闭合为dU/dt=Ẇ，其中振动-电子能源项为V-T、V-V与化学-振动三项之和。用纯N2、N2-N、N2-O2、反应N2-N与5组分空气热浴验证：V-T与LeMANS/MONACO一致；V-V使振动能再分配加快；CVDV+QK使反应N2-N的温度与组分演化与dsmcFoam的差距显著缩小，优于Park TTv+Park 1993；电子能在Ttr0=30,000 K时使平衡温度提高23.7%。",
+    "limits": "本文只有零维绝热热浴，方程中无空间通量、无壁面、无激波与边界层，不能据此判断多维/近壁精度。电子相关源项Qh-e、Qm,e-V、Qe-i在式(26)中明确省略；反应空气只算5组分19反应，11组分空气留待后续。CVDV与Park TTv均为经验/半经验模型，QK速率来自Bird理论，均未在本文重新标定。作者未给出时间步/收敛性研究（零维ODE），也未讨论强非Boltzmann分布下多温模型的系统性误差，只将其列为CFD/DSMC差异来源。"
+  },
+  "mechanism": "物理机制是能量在模式间与化学之间的再分配。平动-转动与振动-电子两套温度间的失衡由Landau-Teller线性松弛消除，松弛速率由Millikan-White/Park碰撞时间控制；不同分子的振动池通过V-V交换趋于一致，但本文条件下N2与O2的振动池始终保持可分辨的差异，说明V-V是次要而非主导通道。化学反应优先消耗高振动能级分子，Park TTv只用Ttr/Tve的加权温度近似这一选择性，CVDV则用配分函数显式计入高能级优先解离，因而在强非平衡反应热浴中给出更快的组分演化与更接近DSMC的Ttr下降。电子能模式在高温下提供额外自由度与储能，使平衡温度升高并加快弛豫。CFD与DSMC的残余差异来自dsmcFoam的量子Larsen-Borgnakke按态重分配能量、以及多温CFD假定每个模式服从Boltzmann分布，而实际流动可能偏离。",
+  "findings": [
+    {
+      "finding": "纯N2 V-T加热热浴中，hy2Foam默认配置与LeMANS、MONACO高度一致，而dsmcFoam的弛豫慢48%（以恢复99%平衡温度计）。",
+      "evidence": "图3a温度-时间曲线；正文给出48%与平衡温度7623.3 K。",
+      "type": "定量对比",
+      "strength": "强",
+      "source": "p10–11 §3.1.1，图3a",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "纯N2冷却热浴中hy2Foam与MONACO完全一致，与dsmcFoam差异显著，原因指向量子Larsen-Borgnakke与宏观一致能量重分配的不同。",
+      "evidence": "图3b；正文对MONACO与dsmcFoam碰撞模型的比较。",
+      "type": "对比/机理解释",
+      "strength": "中",
+      "source": "p11 §3.1.1，图3b",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "Ttr0=30,000 K时计入电子能使热弛豫快约26%，平衡温度由17.7×10^3 K升至21.9×10^3 K，相差23.7%；10,000 K以上应考虑电子模式。",
+      "evidence": "图4两条温度曲线及右侧标注的平衡温度。",
+      "type": "定量对比",
+      "strength": "强",
+      "source": "p11 §3.1.2，图4",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "N2-N混合物的hy2Foam与LeMANS差异可由式(15)的数密度/σm约定解释；按LeMANS约定修改后温度曲线几乎重合。",
+      "evidence": "图5默认与临时修改配置的曲线对比。",
+      "type": "验证/归因",
+      "strength": "强",
+      "source": "p12 §3.2，图5",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "N2-O2热浴中V-V交换加速振动能再分配，但N2与O2振动池始终分离；LeMANS的单振动温度落在两条曲线之间。",
+      "evidence": "图6含/不含V-V的Tv,N2、Tv,O2与LeMANS单一Tv曲线。",
+      "type": "机理验证",
+      "strength": "强",
+      "source": "p13 §3.3，图6",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "反应N2-N中Park TTv+Park 1993速率的化学反应影响比DSMC慢约10倍；CVDV+QK使Ttr和组分演化明显更接近dsmcFoam。",
+      "evidence": "图7a温度、图7b归一化数密度随时间变化。",
+      "type": "核心定量对比",
+      "strength": "强",
+      "source": "p14–15 §3.4，图7",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "初始热平衡的N2-N热浴重复上述趋势：Park组合先热弛豫后起化学反应，Tv下降滞后；CVDV-QK更接近dsmcFoam。",
+      "evidence": "图8a、8b的温度与数密度曲线。",
+      "type": "核心定量对比",
+      "strength": "强",
+      "source": "p15 §3.4，图8",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "5组分空气19反应的单温降级计算中，hy2Foam与LeMANS的温度和归一化数密度吻合。",
+      "evidence": "图9a温度、图9b N2/O2/NO/N/O数密度曲线。",
+      "type": "验证结果",
+      "strength": "强",
+      "source": "p16 §3.5，图9",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "作者推荐CVDV+QK作为混合CFD-DSMC求解器的化学-振动与速率组合，因其与QK DSMC化学模块最一致。",
+      "evidence": "反应N2-N两个算例的对比及结论段。",
+      "type": "结论/建议",
+      "strength": "中",
+      "source": "p16–17 §3.4末、§4",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "hy2Foam在OpenFOAM中实现了Ttr加多Tve,s的双温高超声速反应流模型，包含V-T、V-V、电子能开关以及Park TTv/CVDV两套化学-振动耦合。对纯N2、非反应混合物与反应混合物的零维绝热热浴验证表明：与已有热浴数据和LeMANS结果量级一致；与dsmcFoam的差异揭示了CFD在显著偏离Boltzmann分布流动中的局限；CVDV+QK是使CFD与QK DSMC化学模块一致的最佳组合。后续将评估11组分空气、多维算例，并发展开源混合CFD-DSMC求解器。",
+  "contributions": [
+    "在开源OpenFOAM平台上实现可处理多振动-电子温度、V-T/V-V交换与电子能的双温高超声速反应流求解器hy2Foam。",
+    "建立按机制逐项隔离的零维热浴验证链（纯组分→非反应混合物→反应混合物→空气），并与LeMANS、MONACO、dsmcFoam交叉对比。",
+    "定量证明电子能模式在10,000 K以上对弛豫速率与平衡温度的重要性（平衡温度差23.7%）。",
+    "给出面向混合CFD-DSMC的模型选择建议：CVDV化学-振动耦合配QK速率。"
+  ],
+  "limits": "作者承认：本文只完成零维验证，11组分空气与多维算例尚未评估；电子相关源项未实现；CFD在偏离Boltzmann分布时与DSMC仍有差异。AI补充的局限：零维结果不能外推到激波层、壁面催化/辐射等真实再入环境；CVDV与Park TTv的参数未重新标定；未给出数值误差与收敛性分析；5组分空气算例被降级为单温，未验证双温空气化学耦合；多振动温度模型的截断能级N与αm线性拟合细节未在正文展开。",
+  "significance": "对高超声速气动热CFD：提供了一个开源、可扩展的双温求解器与可复现的零维验证基准，便于课题组在OpenFOAM生态内开展再入、进气道隔离段与激波层计算。对混合CFD-DSMC：说明只有化学-振动模型与DSMC的QK/态分辨图像匹配时，两套方法的化学模块才能给出一致结果，这对未来连续-稀薄耦合的分区界面尤为重要。对工程判断：电子能在10,000 K以上不可忽略，否则平衡温度可低估约四分之一；Park TTv+Park 1993在强非平衡反应热浴中会显著延迟化学反应，选用时需谨慎。以上工程含义中，除定量数值外均为AI概括。",
+  "quotes": [
+    {
+      "text": "a new two-temperature CFD solver, hy2Foam",
+      "supports": "论文核心贡献是开源双温求解器",
+      "source": "p1 摘要",
+      "use": "引用求解器名称与定位"
+    },
+    {
+      "text": "48% slower",
+      "supports": "dsmcFoam与CFD在V-T弛豫上的差异",
+      "source": "p11 §3.1.1",
+      "use": "说明模型/方法差异而非错误"
+    },
+    {
+      "text": "around 26% faster",
+      "supports": "电子能加快热弛豫",
+      "source": "p11 §3.1.2",
+      "use": "电子能重要性的定量依据"
+    },
+    {
+      "text": "as large as 23.7%",
+      "supports": "电子能对平衡温度的影响",
+      "source": "p11 §3.1.2",
+      "use": "强调10,000 K以上必须计入电子能"
+    },
+    {
+      "text": "necessary above 10,000 K",
+      "supports": "电子能模式的适用阈值",
+      "source": "p11 §3.1.2",
+      "use": "工程适用条件"
+    },
+    {
+      "text": "about ten times longer",
+      "supports": "Park组合相对DSMC的化学反应滞后",
+      "source": "p15 §3.4",
+      "use": "批评常用Park设置"
+    },
+    {
+      "text": "a more suitable choice for use in a CFD solver",
+      "supports": "CVDV-QK优于Park组合",
+      "source": "p16 §3.4",
+      "use": "模型选择结论"
+    },
+    {
+      "text": "promote a satisfactory consistency between the CFD and DSMC chemistry modules",
+      "supports": "CVDV+QK用于混合求解器的理由",
+      "source": "p1 摘要；p17 §4",
+      "use": "混合CFD-DSMC论证"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig04_p10.png",
+      "n": 3,
+      "page": 10,
+      "caption_zh": "N2热浴的V-T弛豫：(a)振动加热（Ttr0=10,000 K、Tv0=1000 K、1 atm）；(b)振动冷却（Ttr0=3000 K、Tv0=10,000 K、1 atm），对比hy2Foam、dsmcFoam、LeMANS与MONACO。",
+      "caption_orig": "Figure 3. V–T relaxation towards equilibrium of a N2 heat bath. (a) Vibrational heating: T0 tr = 10,000 K, T0 v,N2 = 1000 K, and p0 = 1 atm; (b) Vibrational cooling: T0 tr = 3000 K, T0 v,N2 = 10,000 K, and p0 = 1 atm.",
+      "why": "支撑单组分V-T实现正确、hy2Foam与LeMANS/MONACO一致而dsmcFoam慢48%的核心验证结论。"
+    },
+    {
+      "file": "fig07_p13.png",
+      "n": 6,
+      "page": 13,
+      "caption_zh": "N2-O2热浴的V-T与V-V弛豫：含与不含V-V交换的Tv,N2、Tv,O2及LeMANS单振动温度对比。",
+      "caption_orig": "Figure 6. V–T and V–V relaxations of a N2−O2 heat bath.",
+      "why": "支撑V-V交换加速振动能再分配、但两个振动池保持分离的机理结论。"
+    },
+    {
+      "file": "fig09_p14.png",
+      "n": 7,
+      "page": 14,
+      "caption_zh": "化学-振动模型与速率常数对反应N2-N热浴的影响：(a)温度-时间；(b)归一化数密度-时间，对比dsmcFoam、Park TTv与CVDV-QK。",
+      "caption_orig": "Figure 7. Influence of the chemistry-vibration model and chemical rate constants on a chemically-reacting N2−N heat bath. (a)Temperature versus time; (b)Normalised number density versus time.",
+      "why": "支撑全文主结论：Park组合化学反应慢约10倍，CVDV-QK显著更接近DSMC。"
+    },
+    {
+      "file": "fig11_p16.png",
+      "n": 9,
+      "page": 16,
+      "caption_zh": "0.79 N2–0.21 O2空气热浴的热化学弛豫：(a)温度-时间；(b)归一化数密度-时间，含LeMANS、dsmcFoam与hy2Foam对比。",
+      "caption_orig": "Figure 9. Thermo-chemical relaxation of a 0.79 N2–0.21 O2 heat bath. (a) Temperature versus time; (b) Normalised number densities versus time, where the dsmcFoam symbols are represented as: N2 (+), O2 (×), NO (△), N (⊡), and O (⊙).",
+      "why": "支撑5组分空气19反应下单温降级模式与LeMANS一致的验证结论。"
+    }
+  ],
+  "verification": {
+    "text_only": "是。全部内容来自bundle文本/图注，并用PDF第3、5、8、11页核对式(1)、(18)、(19)、(33)–(41)；未引入外部文献结论。",
+    "a_grade_supported": "是。A级要点均对应摘要、§2模型式、§3.1–3.5的图3–图9与结论段的具体页码。",
+    "attributes_marked": "是。core_points、three_sentence、findings均标注原文明确/AI概括/AI推断；conditions中N2-N初始温度与电子能算例Tv0的沿用关系已注明为概括。",
+    "coverage": "bundle 1252行已全部读完（分两段至EOF）；正文21页全部覆盖；图3–图9的定量值依据正文和图上标注，未逐点读图。",
+    "no_fabrication": "未编造页码、图号、公式或数据；图4的17.7/21.9×10^3 K来自图上标注且与正文23.7%自洽；N2-N/N2-O2平衡温度来自图5/图6标注。无法确认处已注明。",
+    "open_questions": [
+      "§3.2称N2-N初始温度“与上一段相同”，但未明确是否包含电子能模式，图5的24.4×10^3 K对应哪种配置？",
+      "式(41)反推的9588.0 K与“9588 K”在正文中同时出现，ζ0tot=0.240是否仅指振动自由度？",
+      "优选模型中αm随Ttr的线性拟合系数与适用温区正文未给出，实际默认取常数还是线性？",
+      "5组分空气的19个反应列在Ref.[18]表1中，本文未复现，无法核对具体反应与速率。",
+      "CVDV截断振动能级数N的取值未在正文说明，对kf修正量的影响未知。",
+      "dsmcFoam慢48%被归因于量子Larsen-Borgnakke，但未做Zr或碰撞模型的敏感性隔离。",
+      "11组分空气与电离/电子源项尚未实现，电子能算例只到N2，结论中的通用性需保留。",
+      "零维结果未与任何激波管或飞行数据对比，向多维外推的有效性无法由本文确认。"
+    ]
+  }
+}

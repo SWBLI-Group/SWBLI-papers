@@ -1,0 +1,498 @@
+{
+ "id": 1112,
+ "read_note": "类型：实验研究（激波风洞可加热斜坡模型），并引用经验关联式与数值解作对比；材料范围：bundle 含第1–12页全文与16项抓图（图2、4、5、7–18及表2），图1、3、6未抓取；图表可读性：正文与图注完整，双栏OCR偶有错位，式(1)–(5)已用PDF第3、10页核对；信息完整度：表1–2工况、模型与测点、重复性、结果和结论齐全，数值方法细节因引用[14]未展开。",
+ "one_line": "15°加热斜坡实验表明，Tw/T∞升高显著增大高超声速层流分离泡，修正Katzer关联式可描述其缩放。",
+ "three_sentence": [
+  {
+   "text": "高超声速短时风洞模型难以达到飞行壁温，且壁温与总温对激波/边界层干扰分离区的独立影响尚不完全清楚（p.1–2）。",
+   "attr": "原文明确"
+  },
+  {
+   "text": "在TH2激波风洞中用可预热15°斜坡模型独立改变T0与Tw，结合纹影、压力、热流和红外测量，发现分离泡随Tw/T∞升高显著增大（p.4–8）。",
+   "attr": "AI概括"
+  },
+  {
+   "text": "分离位置近似抛物线、再附位置近似线性随Tw/T∞变化；修正Katzer关联式（KK=4.4−0.2Tw/T∞）比Davis–Sturtevant关联式更好地描述该缩放（p.6–11）。",
+   "attr": "AI概括"
+  }
+ ],
+ "imrad": {
+  "introduction": "高超声速飞行器进气道、体襟翼等部位存在大范围分离的激波/边界层干扰；短时激波风洞中模型壁温接近环境温度，无法复现飞行中的绝热壁温或辐射平衡壁温，导致风洞数据难以外推到飞行（p.1–2）。已有加热技术（VKI、CIRA等）虽提高了壁温，但壁温与总温/来流温度的独立作用仍不明确，且不同试验中改变温度比时往往同时改变了边界层温度剖面（p.2–3）。本文目标是利用可预热15°斜坡模型在TH2风洞中独立调节Tw与T0，量化Tw/T∞对分离泡尺寸、压力和热流的影响，并用Katzer与Davis–Sturtevant的缩放关联式检验实验数据（p.2–3、p.10）。",
+  "methods": "实验在TH2氦驱动激波风洞完成；模型为15°斜坡，平板前体长L=216 mm，W/L=0.92、R/L=1.18以保证二维性，平板与斜坡由不锈钢制成，8个独立电阻加热元件可将壁温加热至Tw,max≈840 K，热膨胀引起的坡角偏差<±0.1°（p.4）。测量包括42个Kulite压阻压力传感器（测压孔内径0.6 mm，传感器置于冷却装置）和20个自制同轴K型热电偶，另有彩色纹影与红外热像（预热阶段270 Hz，实验中线扫描38 kHz）（p.4–5）。来流由球头驻点热流与试验段静压标定；三个工况I–III的M∞=8.1/7.7/7.1、Re∞,l=4.6/3.5/3.1×10^6 m^-1、有效试验时间3.0/2.5/1.0 ms（表1，p.4）。每个工况至少重复2次，M∞、Re∞、Ts的标准差分别≤4%、13%、6%；压力系数不确定度为7%（p.5、p.7）。数据处理上将实验与斜激波理论、自由干扰理论及Reinartz等[14]的全层流Navier–Stokes解对比；缩放关联式中的δ1,L、U′0(0)、cf,L按van Driest方法计算，并将参考位置由铰链线改为分离点（p.8–10）。",
+  "results": "纹影（Fig.7）与压力系数分布（Fig.10）一致显示：Tw/T∞从0.64增至6.93时分离泡显著增大，分离点由x/L=−0.17上游移至−0.37，再附点以更大位移向下游移动（p.6–7）。Fig.8表明分离位置近似按抛物线、再附位置近似按线性随Tw/T∞变化。平台压力系数约为0.019；再附峰值压力随分离泡增大而升高，最大压力系数差约25%，而仅由工况Mach数差异预期的差值为4.3%（p.6–7）。热流方面，高壁温时铰链附近Stanton数较低；Tw/T∞=3.04时自由剪切层在x/L=0.1–0.15再附并呈转捩特征，红外图像显示再附区流向条纹，指示Görtler涡（Fig.12–13，p.8）。缩放方面，修正Katzer关联式KK=4.4−0.2Tw/T∞能同时关联长平板（L=216 mm，发生转捩）与短平板（L=105 mm，全层流）数据，而Davis–Sturtevant式(4)的KD分散明显更大（Fig.16–18，p.9–11）。",
+  "discussion": "作者将分离泡增大归因于壁温比升高导致平板边界层增厚、位移厚度增大：在相同几何与Mach数下，更厚的边界层更易被斜坡逆压梯度分离（p.2–3）。再附峰值压力随分离泡增大而升高，是因为更大的分离泡使自由剪切层从外层拾取更多动量，并在再附处转化为压力；该趋势在湍流干扰中也曾观察到（p.7）。热流测量表明再附区发生转捩，但长/短平板数据在修正Katzer关联式下重合，说明自由剪切层转捩对分离长度缩放无明显影响；作者推测分离泡内的膨胀可使流动再层流化（p.10–11）。局限包括：纹影沿光路积分，有限展长三维效应会影响分离/再附位置判读；前缘平板未加热，壁温沿流向不均匀；高壁温下压力系统上升时间增至3.5 ms，接近可用试验时间；热电偶横向布置造成热流散点（p.5–8）。作者还指出壁温与总温的独立作用、转捩起始条件及更宽Mach/Re范围仍需研究（p.2–3、p.11）。"
+ },
+ "core_points": [
+  {
+   "point": "建立可预热15°斜坡模型实验能力，在TH2风洞实现Tw/T∞=0.64–6.93的独立壁温/总温调节。",
+   "type": "实验能力",
+   "grade": "A",
+   "source": "p.4–7、Fig.10",
+   "attr": "原文明确"
+  },
+  {
+   "point": "纹影与压力分布一致表明：Tw/T∞升高使分离泡显著增大。",
+   "type": "核心现象",
+   "grade": "A",
+   "source": "Fig.7、Fig.10，p.6–7",
+   "attr": "原文明确"
+  },
+  {
+   "point": "分离点由x/L=−0.17上游移至−0.37，再附点更大幅度向下游移动。",
+   "type": "定量结果",
+   "grade": "A",
+   "source": "p.7",
+   "attr": "原文明确"
+  },
+  {
+   "point": "分离位置近似抛物线、再附位置近似线性依赖Tw/T∞（在三个工况Mach/Re接近的前提下）。",
+   "type": "参数规律",
+   "grade": "A",
+   "source": "Fig.8，p.6",
+   "attr": "原文明确"
+  },
+  {
+   "point": "再附峰值压力随分离泡增大而升高；最大压比差异约25%，仅Mach数差异只能解释4.3%。",
+   "type": "定量结果",
+   "grade": "A",
+   "source": "p.7、Fig.10–11",
+   "attr": "原文明确"
+  },
+  {
+   "point": "分离区平台压力系数约0.019，压力在测点9–13间连续上升至平台。",
+   "type": "压力特征",
+   "grade": "B",
+   "source": "Fig.9，p.6",
+   "attr": "原文明确"
+  },
+  {
+   "point": "高壁温时铰链附近Stanton数较低；Tw/T∞=3.04时自由剪切层在x/L=0.1–0.15再附并呈转捩特征。",
+   "type": "热流/转捩",
+   "grade": "B",
+   "source": "Fig.12，p.8",
+   "attr": "原文明确"
+  },
+  {
+   "point": "红外热像在再附区显示流向条纹，指示Görtler涡，支持自由剪切层转捩判断。",
+   "type": "测量证据",
+   "grade": "B",
+   "source": "Fig.13，p.8",
+   "attr": "原文明确"
+  },
+  {
+   "point": "修正Katzer关联式KK=4.4−0.2Tw/T∞可描述宽温度比下的分离泡缩放，优于Davis–Sturtevant式(4)。",
+   "type": "关联式",
+   "grade": "A",
+   "source": "式(5)、Fig.16–18，p.9–11",
+   "attr": "原文明确"
+  },
+  {
+   "point": "长平板（转捩）与短平板（全层流）数据在修正关联式下一致，说明自由剪切层转捩不影响分离长度缩放。",
+   "type": "对照实验",
+   "grade": "B",
+   "source": "Fig.16、Fig.18，p.10–11",
+   "attr": "原文明确"
+  },
+  {
+   "point": "时均压力显示分离泡在t≈4 ms充分发展，平台维持约1 ms；5.5 ms后来流参数变化使气泡再次增长。",
+   "type": "非定常/试验窗口",
+   "grade": "C",
+   "source": "Fig.9，p.6–7",
+   "attr": "原文明确"
+  }
+ ],
+ "conditions": [
+  {
+   "item": "来流工况 I（表1）",
+   "value": "p0=7.1 MPa；h0=1.68 MJ/kg；pt2=49 kPa；p∞=567 Pa；T∞=118 K；u∞=1,766 m/s；M∞=8.1；Re∞,l=4.6×10^6 m^-1；ttest=3.0 ms",
+   "source": "表1，p.4"
+  },
+  {
+   "item": "来流工况 II（表1）",
+   "value": "p0=21.2 MPa；h0=3.3 MJ/kg；pt2=131 kPa；p∞=1,680 Pa；T∞=254 K；u∞=2,465 m/s；M∞=7.7；Re∞,l=3.5×10^6 m^-1；ttest=2.5 ms",
+   "source": "表1，p.4"
+  },
+  {
+   "item": "来流工况 III（表1）",
+   "value": "p0=35.4 MPa；h0=5.0 MJ/kg；pt2=224 kPa；p∞=3,357 Pa；T∞=452 K；u∞=3,022 m/s；M∞=7.1；Re∞,l=3.1×10^6 m^-1；ttest=1.0 ms",
+   "source": "表1，p.4"
+  },
+  {
+   "item": "模型几何与加热",
+   "value": "15°斜坡；平板前体长L=216 mm；W/L=0.92；R/L=1.18；不锈钢平板与斜坡；Tw,max≈840 K；8个独立电阻加热元件；热膨胀导致坡角偏差<±0.1°",
+   "source": "p.4、Fig.4"
+  },
+  {
+   "item": "T0=1,520 K，α=0°",
+   "value": "Tw/T0=0.193、0.329、0.441、0.553",
+   "source": "表2，p.5"
+  },
+  {
+   "item": "T0=1,520 K，α=15°",
+   "value": "Tw/T0=0.193、0.329、0.441、0.553",
+   "source": "表2，p.5"
+  },
+  {
+   "item": "T0=2,500 K",
+   "value": "Tw/T0=0.117、0.218、0.328",
+   "source": "表2，p.5"
+  },
+  {
+   "item": "T0=3,640 K",
+   "value": "Tw/T0=0.080、0.231",
+   "source": "表2，p.5"
+  },
+  {
+   "item": "实现的壁温/来流温度比",
+   "value": "Tw/T∞=0.64–6.93；0.64对应无预热、最高来流温度，6.93对应Tw=840 K、最低来流温度",
+   "source": "p.7"
+  },
+  {
+   "item": "模型姿态与驱动方式",
+   "value": "斜坡模型零攻角置于试验段；TH2风洞氦驱动模式；斜坡角15°",
+   "source": "p.3–4、p.11"
+  }
+ ],
+ "key_parameters": [
+  {
+   "name": "M∞",
+   "definition": "来流Mach数",
+   "value": "8.1 / 7.7 / 7.1（工况 I/II/III）",
+   "relation": "Mach数与Reynolds数在三个工况间变化较小，残余影响由关联式消除",
+   "source": "表1，p.4"
+  },
+  {
+   "name": "Re∞,l",
+   "definition": "以来流单位长度定义的Reynolds数",
+   "value": "4.6 / 3.5 / 3.1 ×10^6 m^-1（工况 I/II/III）",
+   "relation": "层流分离；长平板工况在再附前/再附处转捩",
+   "source": "表1，p.4"
+  },
+  {
+   "name": "Tw/T∞",
+   "definition": "壁温与来流静温之比",
+   "value": "0.64–6.93",
+   "relation": "主控无量纲温度参数；增大使分离泡增大",
+   "source": "p.2、p.7"
+  },
+  {
+   "name": "Tw/T0",
+   "definition": "壁温与总温之比",
+   "value": "0.080–0.553（表2全部组合）",
+   "relation": "给定M∞与攻角时与Tw/T∞等效",
+   "source": "表2，p.5；p.2"
+  },
+  {
+   "name": "cp,plateau",
+   "definition": "分离区平台压力系数",
+   "value": "≈0.019（Cond. II，Tw=293 K）",
+   "relation": "平台压力与分离激波后压力对应",
+   "source": "p.6、Fig.9"
+  },
+  {
+   "name": "xsep/L",
+   "definition": "分离点位置（以平板前体长L=216 mm无量纲化）",
+   "value": "−0.17 → −0.37（Tw/T∞增大）",
+   "relation": "随Tw/T∞增大向上游移动",
+   "source": "p.7"
+  },
+  {
+   "name": "xreat/L",
+   "definition": "再附点位置（以L无量纲化）",
+   "value": "Tw/T∞=3.04时再附位于x/L≈0.1–0.15",
+   "relation": "随Tw/T∞增大向下游移动，近似线性",
+   "source": "p.8、Fig.8"
+  },
+  {
+   "name": "峰值压力系数差",
+   "definition": "不同温度比下再附区最大压力系数之差",
+   "value": "约25%；仅Mach数差异预期4.3%",
+   "relation": "分离泡越大，再附峰值压力越高",
+   "source": "p.7"
+  },
+  {
+   "name": "压力系数不确定度",
+   "definition": "实验压力系数的不确定度",
+   "value": "7%",
+   "relation": "图中以竖线表示",
+   "source": "p.7"
+  },
+  {
+   "name": "KK",
+   "definition": "Katzer关联式(1)的比例常数",
+   "value": "4.4−0.2Tw/T∞；原绝热壁值4.4",
+   "relation": "随Tw/T∞增大而略减；修正式将参考量取在分离点",
+   "source": "式(5)，p.10"
+  },
+  {
+   "name": "LB/δ1,L",
+   "definition": "分离泡长度与分离点处平板边界层位移厚度之比",
+   "value": "按式(1)缩放；δ1,L、ReL取分离点，cf,L取铰链线（初始分离）",
+   "relation": "与C/M_I^3、√ReL及(pIII−pinc)/pI成正比",
+   "source": "式(1)，p.3、p.10"
+  },
+  {
+   "name": "来流重复性",
+   "definition": "多次试验来流参数的标准差",
+   "value": "M∞≤4%；Re∞≤13%；Ts≤6%",
+   "relation": "每个工况至少2次试验",
+   "source": "p.5"
+  },
+  {
+   "name": "压力系统上升时间",
+   "definition": "空腔/压力传感器系统响应上升时间",
+   "value": "最高壁温时3.5 ms",
+   "relation": "接近工况II/III的可用试验时间",
+   "source": "p.5"
+  }
+ ],
+ "methods": [
+  {
+   "item": "实验设施",
+   "value": "TH2激波风洞，氦驱动模式；锥形喷管半角5.8°；试验段存在小的轴向自由流梯度并已标定",
+   "source": "p.3–4",
+   "note": "自由流参数用球头驻点热流与静压探针确定"
+  },
+  {
+   "item": "模型与加热",
+   "value": "15°斜坡；L=216 mm；W/L=0.92；R/L=1.18；不锈钢；8个独立电阻加热元件；Tw,max≈840 K",
+   "source": "p.4、Fig.4",
+   "note": "热膨胀使坡角偏差<±0.1°"
+  },
+  {
+   "item": "压力测量",
+   "value": "42个Kulite压阻传感器（高固有频率、高灵敏度）；测压孔内径0.6 mm；不锈钢管连接；传感器冷却装置维持室温",
+   "source": "p.4–5",
+   "note": "高壁温下系统上升时间3.5 ms"
+  },
+  {
+   "item": "热流测量",
+   "value": "20个自制同轴K型热电偶",
+   "source": "p.4",
+   "note": "用于Stanton数分布；横向布置造成散点"
+  },
+  {
+   "item": "流场显示",
+   "value": "彩色纹影，记录分离与再附位置",
+   "source": "p.5",
+   "note": "沿光路积分，受有限展长三维效应影响"
+  },
+  {
+   "item": "红外热像",
+   "value": "预热阶段270 Hz；实验阶段38 kHz线扫描；用黑体源做CCD均匀性标定",
+   "source": "p.5",
+   "note": "用于壁温分布与再附区Görtler条纹"
+  },
+  {
+   "item": "来流标定",
+   "value": "球头驻点热流+试验段静压；考虑喷管轴向梯度",
+   "source": "p.4",
+   "note": "引用[8,11,12]"
+  },
+  {
+   "item": "重复性",
+   "value": "每个工况至少2次；M∞、Re∞、Ts标准差≤4%、13%、6%；壁温分布散差在几个百分点内",
+   "source": "p.5",
+   "note": "激波风洞典型水平"
+  },
+  {
+   "item": "理论对比",
+   "value": "斜激波理论（pIII）、自由干扰理论（平台压力）、Katzer式(1)与Davis–Sturtevant式(4)",
+   "source": "p.3、p.8–9",
+   "note": "自由干扰理论结果计入喷管轴向梯度"
+  },
+  {
+   "item": "数值对比",
+   "value": "Reinartz等[14]的全层流Navier–Stokes解",
+   "source": "p.8–9",
+   "note": "未计入实验中的喷管轴向梯度"
+  },
+  {
+   "item": "边界层参数计算",
+   "value": "van Driest方法计算δ1、U′0(0)、cf；缩放参考位置取分离点，cf,L取铰链线",
+   "source": "p.10",
+   "note": "这是使Katzer关联式适用于本文数据的关键改动"
+  }
+ ],
+ "derivation": {
+  "exists": false,
+  "idea": "本文是实验研究，正文没有从控制方程出发的推导。第2节直接引用Katzer的层流分离泡缩放关联式（式1、2）和Davis–Sturtevant基于Roshko模型与自由干扰理论的关联式（式3、4）；第5节仅用实验数据拟合修正常数KK（式5），并用长/短平板数据检验。",
+  "assumptions": [
+   "Katzer关联式原针对绝热壁、层流边界层、斜激波反射；作者按自由干扰理论将其用于斜坡流（p.3）。",
+   "缩放时δ1,L、cf,L与ReL取铰链线处的值；cf,L按初始分离（incipient separation）取值（p.3、p.10）。",
+   "修正关联式把δ1与Re的参考位置改到分离点，cf,L仍取铰链线值（p.10）。",
+   "式(5)为经验线性拟合，其适用温度比范围由本文实验覆盖（约0.64–6.93）（p.10）。"
+  ],
+  "steps": [],
+  "result": "修正Katzer关联式：L_B/δ1,L=K_K(C/M_I^3)√Re_L(p_III−p_inc)/p_I，其中K_K=4.4−0.2T_w/T∞；分离位置近似抛物线、再附位置近似线性随T_w/T∞变化，长/短平板数据在修正关联式下一致（式1、式5，p.3、p.10–11）。",
+  "limits": "拟合基于15°斜坡、M∞≈7.1–8.1、层流分离的实验；式(4)中常数c的物理含义受限于材料，无法确认；作者未给出关联式系数的置信区间或不确定度传播，也未验证其他斜坡角、Mach数与湍流干扰工况。"
+ },
+ "mechanism": "斜坡逆压梯度使平板层流边界层分离，形成分离激波、分离泡、平台区和再附激波（Fig.2）。壁温比升高使边界层温度剖面改变、边界层增厚、位移厚度增大，因而在相同逆压梯度下更易分离，分离点上游移动、再附点下游移动，分离泡增大（p.2–3、p.7）【原文明确】。再附峰值压力随分离泡增大而升高：更大的分离泡使自由剪切层从外层拾取更多动量，并在再附处转化为压力；因此壁温效应可使最大压力系数差达到约25%，远超过仅由Mach数差异预期的4.3%（p.7）【原文明确】。热流测量与红外条纹表明再附区发生转捩并出现Görtler涡，但长/短平板对比显示自由剪切层转捩对分离长度缩放无显著影响，作者推测分离泡内膨胀导致再层流化（p.8、p.10–11）【原文明确+AI概括】。",
+ "findings": [
+  {
+   "finding": "Tw/T∞升高使高超声速15°斜坡层流分离泡显著增大，纹影与压力测量一致。",
+   "evidence": "Fig.7纹影对比；Fig.10压力系数分布中分离点上游移、再附点下游移",
+   "type": "实验现象",
+   "strength": "强",
+   "source": "p.6–7",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "分离点由x/L=−0.17移至−0.37，再附点移动幅度更大；分离位置近似抛物线、再附位置近似线性依赖Tw/T∞。",
+   "evidence": "Fig.8分离/再附位置随Tw/T∞的变化；正文给出−0.17→−0.37",
+   "type": "定量规律",
+   "strength": "强",
+   "source": "p.6–7、Fig.8",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "再附峰值压力随分离泡增大而升高，最大压力系数差约25%，而仅Mach数差异预期4.3%。",
+   "evidence": "Fig.10–11压力系数分布；正文比较理想斜激波理论",
+   "type": "定量结果",
+   "strength": "强",
+   "source": "p.7",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "高壁温使铰链附近Stanton数降低；再附区自由剪切层呈转捩特征，并伴随Görtler涡。",
+   "evidence": "Fig.12 Stanton数分布与层流/湍流理论对比；Fig.13红外流向条纹；Tw/T∞=3.04时再附位于x/L=0.1–0.15",
+   "type": "热流/稳定性",
+   "strength": "中",
+   "source": "p.8",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "修正Katzer关联式（KK=4.4−0.2Tw/T∞）能描述宽温度比下分离泡缩放，且优于Davis–Sturtevant式(4)。",
+   "evidence": "Fig.16中KK随Tw/T∞的线性趋势；Fig.17中KD分散更大；Fig.18长/短平板数据collapse",
+   "type": "关联式验证",
+   "strength": "强",
+   "source": "p.9–11、式(5)",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "长平板（L=216 mm，发生转捩）与短平板（L=105 mm，全层流）的分离泡数据在修正关联式下一致，转捩不影响分离长度缩放。",
+   "evidence": "Fig.16、Fig.18中空心/实心符号重合",
+   "type": "对照实验",
+   "strength": "中",
+   "source": "p.10–11",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "时均压力表明分离泡在t≈4 ms充分发展，平台维持约1 ms；5.5 ms后来流参数变化使气泡再次增长。",
+   "evidence": "Fig.9时间分辨压力；测点8在5.5 ms后压力上升",
+   "type": "非定常测量",
+   "strength": "中",
+   "source": "p.6–7",
+   "attr": "原文明确"
+  }
+ ],
+ "conclusions": "作者结论：在TH2风洞中用可预热15°斜坡模型成功扩展了壁温范围，并在试验时间内获得充分发展的分离泡；彩色纹影与压力测量清楚显示分离泡随Tw/T∞增大而增大，且可在提高T0的同时保持Tw/T∞近似不变（p.11）。再附区热流与理论/数值对比表明自由剪切层发生转捩，红外条纹指示Görtler涡；但长/短平板对比表明转捩对分离长度缩放无明显影响（p.11）。Katzer关联式经把参考量移到分离点并令KK=4.4−0.2Tw/T∞后，能较好描述壁温比对分离泡尺度的影响；Davis–Sturtevant关联式的数据分散更大（p.10–11）。",
+ "contributions": [
+  "建立了可独立调节壁温与总温的高超声速加热斜坡实验平台，将Tw/T∞扩展到0.64–6.93（p.4–7）。",
+  "给出了壁温比升高使分离泡增大、分离点上移、再附点下移、再附峰值压力升高的系统实验证据（p.6–7）。",
+  "提出修正Katzer关联式KK=4.4−0.2Tw/T∞，并用全层流短平板实验证明自由剪切层转捩不影响分离长度缩放（p.10–11）。",
+  "利用时间分辨压力确定了分离泡建立时间与有效试验窗口（p.6–7）。"
+ ],
+ "limits": "作者承认的局限：纹影沿光路积分，有限展长三维效应会影响分离/再附位置判读；前缘平板未加热导致壁温沿流向不均匀；高壁温下压力系统上升时间3.5 ms，接近可用试验时间；热电偶横向布置使热流散点较大（p.5–8）。此外，数值对比仅引用全层流解且未计入喷管轴向梯度，实验与数值的剩余偏差可能来自该梯度（p.9）。AI识别的局限：只研究15°斜坡与三个Mach数接近的工况，未覆盖其他斜坡角、湍流分离或更高焓真实气体效应；Katzer修正式为经验线性拟合，未给出系数不确定度；转捩判据与Görtler涡波长未定量。",
+ "significance": "对高速流动/工程的意义：说明短时风洞的冷壁条件会系统性低估分离泡尺寸与再附峰值压力，从而影响进气道、隔离器、体襟翼等部位的气动与热载荷外推；可借鉴的可预热模型、独立Tw/T0调节、时间分辨压力与红外热像组合，以及“参考量取分离点”的关联式修正方法【AI概括】。工程上可用修正Katzer关联式估计不同壁温比下的分离长度，但外推到其他几何/Mach数前需重新标定KK；本文不能回答湍流分离、真实气体效应及飞行辐射平衡壁温下的定量缩放【AI推断】。",
+ "quotes": [
+  {
+   "text": "the main driving temperature parameter is not the wall temperature itself but the wall-to-free-stream-temperature ratio",
+   "supports": "壁温效应的主控参数是Tw/T∞而非Tw本身",
+   "source": "p.1",
+   "use": "用于论证实验参数选择与风洞/飞行换算"
+  },
+  {
+   "text": "the extension of the interaction region LB grows with increasing wall temperature ratio",
+   "supports": "分离区随壁温比增大",
+   "source": "p.2",
+   "use": "作为研究假设/背景的直接引文"
+  },
+  {
+   "text": "the separation position moves upstream from x/L = −0.17 to −0.37",
+   "supports": "壁温比升高使分离点上移",
+   "source": "p.7",
+   "use": "定量引用分离位置变化"
+  },
+  {
+   "text": "The maximum value of Tw/T∞ = 6.93 follows for the maximum wall temperature of Tw = 840 K",
+   "supports": "实验达到的最高温度比",
+   "source": "p.7",
+   "use": "说明实验包线"
+  },
+  {
+   "text": "the larger the separation bubble the more the free shear layer picks up momentum from the outer flow",
+   "supports": "再附峰值压力随分离泡增大的机制",
+   "source": "p.7",
+   "use": "机制解释引用"
+  },
+  {
+   "text": "the modified correlation of Katzer describes the wall temperature influence on the separated ramp flow much better than the correlation given by Eq. 4",
+   "supports": "修正Katzer关联式优于Davis–Sturtevant式",
+   "source": "p.10",
+   "use": "关联式评价引用"
+  },
+  {
+   "text": "there is obviously no effect of laminar/turbulent transition of the separated boundary layer on the scaling of the separation length",
+   "supports": "转捩不影响分离长度缩放",
+   "source": "p.11",
+   "use": "讨论长/短平板对照结论"
+  },
+  {
+   "text": "separation takes place between the positions 8 and 9",
+   "supports": "压力测点与纹影判读的分离位置一致",
+   "source": "p.7",
+   "use": "说明测量互相验证"
+  }
+ ],
+ "figures": [
+  {
+   "file": "fig01_p3.png",
+   "n": 2,
+   "page": 3,
+   "caption_zh": "平板/斜坡构型上分离高超声速流动的主要结构示意",
+   "caption_orig": "Fig. 2 Details of a separated hypersonic flow on a flat plate/ramp configuration",
+   "why": "定义分离激波、分离泡长度LB、再附区及流场分区I/III，是全文压力与缩放分析的几何基础。"
+  },
+  {
+   "file": "fig05_p6.png",
+   "n": 7,
+   "page": 6,
+   "caption_zh": "不同壁温/来流温度比下斜坡流动的典型纹影照片",
+   "caption_orig": "Fig. 7 Typical schlieren pictures of the ramp flow showing the influence of the wall-to-free-stream-temperature ratio on the separation bubble size",
+   "why": "直接可视化显示高Tw/T∞时分离泡更大，支撑“壁温比增大分离泡”的核心结论。"
+  },
+  {
+   "file": "fig08_p7.png",
+   "n": 10,
+   "page": 7,
+   "caption_zh": "不同Tw/T∞下相互作用区压力系数分布",
+   "caption_orig": "Fig. 10 Scaling of the interaction region with Tw/T∞(α = 15◦)",
+   "why": "定量显示分离点上游移、再附点下游移及再附峰值压力随温度比升高，支撑压力测量结论。"
+  },
+  {
+   "file": "fig16_p11.png",
+   "n": 18,
+   "page": 11,
+   "caption_zh": "分离泡尺寸随壁温比的变化及修正Katzer关联式对比",
+   "caption_orig": "Fig. 18 Dependence of the separation bubble size on the wall temperature ratio",
+   "why": "展示长/短平板实验与修正Katzer关联式的collapse，支撑式(5)的缩放结论。"
+  }
+ ],
+ "verification": {
+  "text_only": "是。仅使用bundle全文、图注与抓图清单；公式(1)–(5)用PDF第3、10页核对；未引入外部文献或数据。",
+  "a_grade_supported": "是。A级要点均有原文页码/图号/式号支撑：分离泡增大（Fig.7、Fig.10，p.6–7）、分离/再附位置（Fig.8、p.7）、峰值压力差（p.7）、修正Katzer式（式5、Fig.16–18，p.9–11）。",
+  "attributes_marked": "是。three_sentence、core_points、findings均标注原文明确/AI概括/AI推断；机制段内也分别标注。",
+  "coverage": "覆盖IMRaD四节、表1–2、图2/4–5/7–18中的核心结果、式(1)–(5)、实验与数值/理论对比及作者结论；图1、3、6未抓取，未据其内容下结论。",
+  "no_fabrication": "是。未编造页码、图号、公式、数据；式(4)常数c的含义与表2粗体标记等不确定处已注明受限于材料，无法确认。",
+  "open_questions": [
+   "表2中粗体数字对应哪些有数值结果的工况，bundle无法辨认粗体，需回原文核对。",
+   "式(4)中常数c的物理含义与量纲受限于材料，无法确认。",
+   "Fig.10中不同Tw/T∞曲线是否全部为Cond. II，正文未逐条明示。",
+   "壁温沿流向不均匀（前缘未加热）对分离位置的定量影响未给出。",
+   "自由剪切层转捩起始Reynolds数及Görtler涡波长未定量。",
+   "修正Katzer关联式在其他斜坡角、Mach数与湍流分离下的适用性未验证。",
+   "压力系统3.5 ms上升时间对高壁温工况峰值压力的衰减修正未量化。"
+  ]
+ }
+}

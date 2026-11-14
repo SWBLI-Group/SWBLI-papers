@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>文献库 · 激波/边界层干扰</title>
+<meta name="description" content="高超声速激波/边界层干扰文献库：流动分离与峰值传热的知识地图。">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%231e5f63'/><text x='32' y='39' font-size='18' text-anchor='middle' fill='%23fff9ee' font-family='monospace'>SW</text></svg>">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/katex/katex.min.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="mark">SW</span>激波 / 边界层干扰文献图谱</a>
+    <nav class="nav"><a href="index.html" class="">总览</a><a href="library.html" class="active">文献库</a><a href="reviews.html" class="">综述与空白</a><a href="taxonomy.html" class="">方法与规范</a></nav>
+    <div class="top-actions"><button class="icon-btn" id="themeBtn" type="button" aria-label="切换主题">◐</button></div>
+  </div>
+</header>
+<main id="main">
+<section class="library-head"><div class="wrap">
+  <div class="eyebrow">Library · 254 records</div>
+  <h1>文献库</h1>
+  <p class="lede">标题保持原文，点开进入详情页；每张卡片可展开 12 种引用风格与 BibTeX，中文文献另有英文期刊的 in Chinese 格式。检索切面整体可拉起/收起，内部类别默认直接展开，仅“期刊目录”可再折叠；关注点按“参数覆盖范围 + 正文明确讨论”标注，不再从构型或流态自动回退。被引与参考文献数来自 OpenAlex（主）和 Crossref（辅），可按被引排序；筛选和排序条件会写入网址，便于收藏与分享。</p>
+</div></section>
+
+<div class="filter-shell"><div class="wrap">
+  <div class="filter-top">
+    <label class="searchbox"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+      <input id="libSearch" type="search" placeholder="搜索标题、作者、摘要、标签、DOI…" autocomplete="off">
+    </label>
+    <select id="libSort" aria-label="排序方式">
+      <option value="year-desc">年份：新 → 旧</option>
+      <option value="year-asc">年份：旧 → 新</option>
+      <option value="citations">被引：高 → 低</option>
+      <option value="references">参考文献：多 → 少</option>
+      <option value="connections">关联度</option>
+      <option value="title">标题 A → Z</option>
+    </select>
+    <span class="filter-count"><b id="libCount">254</b> / <span id="libTotal">254</span> 篇</span>
+    <button class="btn small ghost" id="libReset" type="button">重置</button>
+  </div>
+  <details class="facet-shell" id="facetShell">
+    <summary class="facet-shell-summary">
+      <span class="facet-shell-caret" aria-hidden="true"></span>
+      <span class="facet-shell-title">检索切面</span>
+      <span class="facet-shell-hint">板块、文章类型、关注点、标签、年代、流态、方法、构型、真实气体、期刊目录</span>
+      <span class="facet-state" id="facetShellState"></span>
+    </summary>
+    <div class="facet-rows">
+      <div class="facet-block" data-facets="board" data-label="板块">
+        <div class="facet-head"><span class="flabel">板块</span><span class="facet-state"></span></div>
+      </div>
+      <div class="facet-block" data-facets="articleType" data-label="文章类型">
+        <div class="facet-head"><span class="flabel">文章类型</span><span class="facet-state"></span></div>
+      </div>
+      <div class="facet-block" data-facets="focus" data-label="关注点">
+        <div class="facet-head"><span class="flabel">关注点</span><span class="facet-state"></span></div>
+      </div>
+      <details class="facet-block facet-journal" data-facets="tag" data-label="标签">
+        <summary class="facet-head"><span class="facet-caret" aria-hidden="true"></span><span class="flabel">标签</span><span class="facet-state"></span></summary>
+      </details>
+      <div class="facet-block" data-facets="era" data-label="年代">
+        <div class="facet-head"><span class="flabel">年代</span><span class="facet-state"></span></div>
+      </div>
+      <div class="facet-block" data-facets="regime" data-label="流态">
+        <div class="facet-head"><span class="flabel">流态</span><span class="facet-state"></span></div>
+      </div>
+      <div class="facet-block" data-facets="method" data-label="方法">
+        <div class="facet-head"><span class="flabel">方法</span><span class="facet-state"></span></div>
+      </div>
+      <div class="facet-block" data-facets="geometry" data-label="构型">
+        <div class="facet-head"><span class="flabel">构型</span><span class="facet-state"></span></div>
+      </div>
+      <div class="facet-block" data-facets="gas" data-label="真实气体">
+        <div class="facet-head"><span class="flabel">真实气体</span><span class="facet-state"></span></div>
+      </div>
+      <details class="facet-block facet-journal" data-facets="journal" data-label="期刊目录">
+        <summary class="facet-head"><span class="facet-caret" aria-hidden="true"></span><span class="flabel">期刊目录</span><span class="facet-state"></span></summary>
+      </details>
+    </div>
+  </details>
+  <div class="active-filters" id="activeFilters"></div>
+</div></div>
+
+<div class="wrap"><div class="library-list" id="libraryList"></div></div>
+<noscript><div class="wrap"><div class="noscript">文献库筛选需要启用 JavaScript。你仍可直接打开各篇详情页。</div></div></noscript>
+</main>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div><span class="fmark">SWBLI Literature Atlas</span> · 本地离线文献图谱 · 数据来自 Zotero 文献库</div>
+    <div>共 254 篇 · 生成于 2026-11-14 · <a href="taxonomy.html">分类与证据说明</a></div>
+  </div>
+</footer>
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/upload.js"></script>
+<script defer src="assets/katex/katex.min.js"></script>
+<script defer src="assets/katex/auto-render.min.js"></script>
+<script defer src="assets/katex/katex-init.js"></script>
+</body>
+</html>

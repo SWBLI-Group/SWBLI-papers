@@ -1,0 +1,513 @@
+{
+  "id": 490,
+  "read_note": "综述类论文（Annual Review of Fluid Mechanics, 2023, 55:291–321，共34页；正文31页，后3页为期刊目录）。材料为带页码全文、8张已抓图件；图注在双栏OCR中与正文交错，但图1–8的图号、页码与图注主体可读。文章不含实验/数值新数据的方法细节，定量信息散见于正文与图注；未给出系统检索式或纳入标准。提取口径：以“2D基线—3D锥形渐近—非渐近区域—未来方向”为主线。",
+  "one_line": "综述指出三维SBLI呈准锥形渐近结构，低频呼吸受抑、以斜剪切层对流不稳定性为主导。",
+  "three_sentence": [
+    {
+      "text": "问题与缺口：2D STBLI的低频非定常研究已较成熟，但3D构型多样、缺少统一描述，且3D分离拓扑与2D有本质差异。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "方法与发现：以尖鳍等半无限后掠构型为例，综述锥形渐近下的平均流自相似、分离流线不重新附、无全局分离长度尺度，谱内容以中频对流剪切层现象为主。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "结论与意义：锥形渐近框架可统一描述强后掠3D SBLI，但在起始区与对称面附近失效；未来需发展3D模态/非模态分析、运动激波、FSI与控制研究。",
+      "attr": "原文明确"
+    }
+  ],
+  "imrad": {
+    "introduction": "SBLI是高速飞行器性能的关键影响因素：激波与另一表面的边界层相交，导致分离、涡结构、湍流调制、流场畸变、多频段非定常与局部热流放大，进而引起操纵面效率下降、阻力增加、燃烧效率降低及结构响应（p292）。作者把SBLI按来流边界层状态分为层流、转捩与湍流，重点讨论激波/湍流边界层干扰（STBLI），并进一步限定为时均存在分离的强干扰（p292）。综述以Dolling(2001)、Clemens & Narayanaswamy(2014)、Gaitonde(2015)、Sandham(2016)等为里程碑，指出Dolling提出的两大未知——非定常性与热流——中，非定常性已有显著进展，而热流机制不在本文范围（p293–294）。核心缺口是：3D SBLI构型多样、激波与边界层相对取向多，2D框架不能直接套用；3D分离不一定伴随回流区、分离流线不重新附，甚至在对称面上也如此（p294）。文章目标是聚焦3D SBLI动力学的新认识，以半无限后掠构型的锥形渐近行为作为统一框架，再讨论起始区和对称面等偏离（p293–295）。综述覆盖Mach约2–5、基于来流边界层厚度的Reδ从模拟的O(10^5)到实验的O(10^6)（p295）。",
+    "methods": "本文是叙述性综述，不是实验或数值研究：作者明确说明“Key points are elaborated using figures from the authors’ own computational work”，选用自身计算图仅为方便，并承认因篇幅与视角所限遗漏了部分相关文献（p295）。综述范围限定于图1所示典型构型：入射激波、尖鳍（SF）、后掠压缩拐角（SCR）、双鳍（DF）、钝鳍/平板圆柱（BF/CoP）、平板上方圆锥（CaP）；以SF为主线讨论后掠渐近特征，再与其他构型比较（p293，p295）。方法学上综合了三类证据：经典油流/纹影与表面压力、摩阻、热流测量及皮托压力场测量；现代PSP、高速纹影、立体/层析PIV、光场相机等诊断；以及高保真模拟、全局稳定性/模态与非模态分析、resolvent分析、POD、动态线性响应和带通滤波（p295，p305，p307–308）。文章结构为：第2节总结2D SBLI并更新；第3.1节讨论渐近后掠相互作用的平均流结构，第3.2节讨论其非定常表征，第3.3节讨论起始区与对称面；第4节给出未来方向（p295）。文中未给出文献检索数据库、检索式、时间范围或纳入/排除标准（文中未提及）。",
+    "results": "2D基线（第2节）：入射激波与压缩拐角可互换使用；平均流拓扑含中心C与两个表面鞍点S'，表面流线由分离线LC与再附线LD界定，L为分离长度（p296–297，图2）。壁压预乘PSD显示四个频带：band I（StL~0.03）为相互作用呼吸与大尺度分离激波运动；band II（StL~0.1）为二次泡振荡；band III（StL~0.5）为分离剪切层大尺度相干结构脱落与反射激波拍动；band IV（Stδ~1）为来流边界层积分尺度湍流对流与调制（p297–298，图3）。3D平均流（第3.1节）：SF远场呈锥形对称，平均量在以虚拟锥原点VCO为中心的球坐标下坍塌，λ激波随径向距离r线性增长，三激波点轨迹在渐近极限下为从VCO出发的直线（p300–301，图4b）。3D分离拓扑与2D不同：分离流线偏转离开激波发生器且从不重新附；附体流来自外侧无粘流，形成“outer/inner regimes”与斜剪切层（p301–302，图5）。锥形相互作用无全局分离长度尺度，沿弧线定义的L3D随r增大（p304–306）。3D非定常（第3.2节）：SF在Mach 2、Reδ~1.6×10^4、22°鳍下，壁压谱沿VCO同心弧随θ变化；相对2D，低频band I被显著抑制，其峰值对应Stδ~0.006，主导内容为中频剪切层带，且在锥形坐标下有一定坍塌（p304–305，图6b–d）。实验（15° SF，Reδ~1.5×10^5，弧半径约13δ）显示中频分量在大部分相互作用区占主导，激波脚处中频与低频同时出现峰值；λ结构尺寸随时间变化，较小λ在统计上更可能（p305，图6e）。稳定性上，2D SBLI表现为绝对不稳定、自维持反馈；后掠3D SBLI中最大增益扰动为对流性，未发现绝对不稳定（p308）。剪切层结构对流速度约0.3U∞，与2D相近且对3D干扰强度不敏感（p308）。非渐近区域（第3.3节）：起始区长度Linc∝Mnδ^(2/3)，随法向Mach数与边界层厚度增大（p310）；近鳍前缘处出现更显著的低频峰，StL3D~0.05（图8b，p310–311）。对称面上，2D的中心点被稳定（向内螺旋）焦点取代，对应马蹄涡；分离流线即使在对称面上也不重新附（p311，图8c）。DF可视为两个准锥形相互作用的复合，中心区出现一对流向涡，并出现类似2D的低频带但不一定同机制（p312）。",
+    "discussion": "作者主张：3D SBLI的多样性可通过“锥形渐近+构型相关修正”来组织；强后掠渐近相互作用的动力学与2D有本质区别，低频呼吸被抑制而中频对流剪切层动力学更突出（p316）。机制上，3D分离流线不重新附、无闭合对流回路，且分离与附体流分别来自边界层与外层无粘流，形成斜剪切层与夹带流，这打破了2D中用单一分离长度L归一化低频的框架（p301–306）。稳定性分析进一步表明，2D的绝对不稳定在强后掠3D中变为对流不稳定，因此2D的呼吸机制在3D中不占主导（p308）。在起始区与对称面，锥形对称失效：起始区受前缘钝度、边界层增长与Reynolds数影响，对称面的拓扑（焦点、马蹄涡、无再附）与2D不同，不能简单把2D机理移植过来（p309–311）。局限：热流机制未覆盖（p294）；文献覆盖不完整且以作者自身计算图为主（p295）；起始区Reynolds数依赖尚未完整表征（p311）；DF、CoP、CaP等非渐近构型的Mach/Re依赖不足（p312）；3D稳定性/非模态分析计算代价大（p313）。未来方向包括：复杂3D SBLI与天地换算标度律、斜剪切层的稳定性/resolvent分析、运动激波/边界层干扰与不起动、角区/侧壁约束、FSI与气动热弹性、以及靠近起始区布置的被动/主动控制（p312–316）。",
+    "conclusions": "综述结论：2D SBLI的展向均匀性一旦被破坏，会产生多种3D干扰；以半无限后掠相互作用的锥形渐近行为可获得必要的统一描述，再叠加构型相关偏离。强后掠渐近3D SBLI的低频非定常具有更强的对流特征，与分离剪切层现象相关，而相互作用呼吸相对受抑；这些差异源于平均流中2D与3D剪切层长度尺度的空间混合（p316）。2D SBLI的稳定性认识为3D分析提供了框架，3D更强的对流性也体现在主导不稳定性质上。起始区与对称面的动力学变化具有启发性，但把2D特征与这些区域关联时必须谨慎。作者据此提出若干兼具基础与应用意义的下一步研究方向（p316）。"
+  },
+  "core_points": [
+    {
+      "point": "综述范围限定为时均分离的强STBLI，覆盖Mach约2–5、Reδ从模拟O(10^5)到实验O(10^6)。",
+      "type": "范围界定",
+      "grade": "A",
+      "source": "p292，p295",
+      "attr": "原文明确"
+    },
+    {
+      "point": "3D构型包括入射激波、尖鳍、后掠压缩拐角、双鳍、钝鳍/平板圆柱、平板上方圆锥；以尖鳍为主线。",
+      "type": "构型分类",
+      "grade": "A",
+      "source": "p293，图1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "2D SBLI存在四个特征频带：StL~0.03呼吸、~0.1二次泡、~0.5剪切层脱落、Stδ~1来流湍流。",
+      "type": "2D基线",
+      "grade": "A",
+      "source": "p297–298，图3",
+      "attr": "原文明确"
+    },
+    {
+      "point": "半无限后掠3D干扰在远场呈锥形渐近：平均量在VCO球坐标下坍塌，λ激波随r线性增长。",
+      "type": "平均流结构",
+      "grade": "A",
+      "source": "p300–301，图4b",
+      "attr": "原文明确"
+    },
+    {
+      "point": "3D分离不一定有回流区或零摩阻（除少数临界点），分离流线偏转且从不重新附。",
+      "type": "分离拓扑",
+      "grade": "A",
+      "source": "p294，p301–302，图5",
+      "attr": "原文明确"
+    },
+    {
+      "point": "锥形3D SBLI不存在可跨r通用的全局分离长度尺度，L3D沿弧随r增大。",
+      "type": "标度限制",
+      "grade": "A",
+      "source": "p304–306",
+      "attr": "原文明确"
+    },
+    {
+      "point": "3D SBLI低频band I受抑（峰值Stδ~0.006），主导谱内容为中频剪切层带。",
+      "type": "非定常特征",
+      "grade": "A",
+      "source": "p304–305，图6",
+      "attr": "原文明确"
+    },
+    {
+      "point": "15°尖鳍实验（Reδ~1.5×10^5）显示中频RMS在大部分干扰区占主导，激波脚处低频与中频同时出现峰值。",
+      "type": "实验证据",
+      "grade": "A",
+      "source": "p305，图6e",
+      "attr": "原文明确"
+    },
+    {
+      "point": "2D SBLI为绝对不稳定，强后掠3D SBLI最大增益扰动为对流性，未发现绝对不稳定。",
+      "type": "稳定性",
+      "grade": "A",
+      "source": "p308",
+      "attr": "原文明确"
+    },
+    {
+      "point": "起始区长度Linc∝Mnδ^(2/3)，且近前缘出现StL3D~0.05的显著低频峰。",
+      "type": "非渐近效应",
+      "grade": "B",
+      "source": "p310–311，图8b",
+      "attr": "原文明确"
+    },
+    {
+      "point": "3D对称面上2D的中心点被稳定焦点取代（马蹄涡），分离流线在对称面上也不重新附。",
+      "type": "拓扑",
+      "grade": "A",
+      "source": "p311，图8c",
+      "attr": "原文明确"
+    },
+    {
+      "point": "未来方向：3D模态/非模态分析、运动激波/边界层干扰与不起动、FSI、靠近起始区的流动控制。",
+      "type": "研究展望",
+      "grade": "B",
+      "source": "p312–316",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "来流Mach数范围",
+      "value": "约2–5",
+      "source": "p295",
+      "note": "综述覆盖范围，非单一工况"
+    },
+    {
+      "item": "Reynolds数范围",
+      "value": "基于来流边界层厚度Reδ：模拟O(10^5)，实验O(10^6)",
+      "source": "p295",
+      "note": "许多模拟为计算可行性低一个量级"
+    },
+    {
+      "item": "干扰强度",
+      "value": "重点为时均分离的强干扰",
+      "source": "p292",
+      "note": "弱/初始分离仅在说明问题时提及"
+    },
+    {
+      "item": "构型1",
+      "value": "入射激波（impinging shock）",
+      "source": "p293，图1a"
+    },
+    {
+      "item": "构型2",
+      "value": "尖鳍（sharp fin, SF）",
+      "source": "p293，图1b"
+    },
+    {
+      "item": "构型3",
+      "value": "后掠压缩拐角（swept compression ramp, SCR）",
+      "source": "p293，图1c"
+    },
+    {
+      "item": "构型4",
+      "value": "双鳍（double fin, DF）",
+      "source": "p293，图1d"
+    },
+    {
+      "item": "构型5",
+      "value": "钝鳍或平板圆柱（blunt fin / cylinder-on-plate, BF/CoP）",
+      "source": "p293，图1e"
+    },
+    {
+      "item": "构型6",
+      "value": "平板上方圆锥（cone above plate, CaP）",
+      "source": "p293，图1f"
+    },
+    {
+      "item": "SF谱计算工况",
+      "value": "22°鳍，Mach 2，Reδ≈1.6×10^4",
+      "source": "p304，图6b–d",
+      "note": "作者自身模拟"
+    },
+    {
+      "item": "SF谱实验工况",
+      "value": "15°鳍，Reδ≈1.5×10^5，VCO弧半径约13δ",
+      "source": "p305，图6e",
+      "note": "Arora等实验"
+    },
+    {
+      "item": "2D入射激波实验工况",
+      "value": "转折角7.1°<θ<9.5°",
+      "source": "p297，图3a"
+    },
+    {
+      "item": "谱探针位置",
+      "value": "VCO同心弧r/δ=2、6、10",
+      "source": "p304，图6b–d"
+    },
+    {
+      "item": "SCR谱分带",
+      "value": "Stδ<0.01、0.01<Stδ<0.1、Stδ>0.1",
+      "source": "p306",
+      "note": "Vanstone & Clemens(2019)的分带"
+    },
+    {
+      "item": "壁温/热流",
+      "value": "本文不讨论热流机制",
+      "source": "p294",
+      "note": "Dolling(2001)提出的热流问题留待未来"
+    },
+    {
+      "item": "二维/三维性质",
+      "value": "2D时均、瞬时三维；3D为后掠/锥形或圆柱形对称",
+      "source": "p292–293，p302–303"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "StL",
+      "definition": "以分离长度L为尺度的Strouhal数，StL=fL/U∞",
+      "value": "band I~0.03；band II~0.1；band III~0.5",
+      "relation": "2D低频归一化尺度；3D中无对应全局尺度",
+      "source": "p297–298，图3"
+    },
+    {
+      "name": "Stδ",
+      "definition": "以来流边界层厚度δ为尺度的Strouhal数，Stδ=fδ/U∞",
+      "value": "band IV~1；3D中低频峰对应Stδ~0.006",
+      "relation": "以来流湍流尺度归一化",
+      "source": "p298，p304–305"
+    },
+    {
+      "name": "StL3D",
+      "definition": "沿VCO弧线、以局部LC–LD距离L3D为尺度的Strouhal数",
+      "value": "图6右轴所用局部分离尺度；随r变化，文中未给统一数值（3D起始区低频峰约0.05）",
+      "relation": "锥形3D的局部分离尺度；与2D的StL不能直接等同",
+      "source": "p304，p310，图6、图8b"
+    },
+    {
+      "name": "L3D",
+      "definition": "沿VCO同心弧从LC到LD的距离，用作局部分离长度",
+      "value": "随r增大，无固定值",
+      "relation": "非全局尺度，不能跨r通用",
+      "source": "p304–306"
+    },
+    {
+      "name": "Linc",
+      "definition": "偏离锥形渐近的起始区长度",
+      "value": "Linc∝Mnδ^(2/3)",
+      "relation": "随法向Mach数与δ增大",
+      "source": "p310"
+    },
+    {
+      "name": "Uc",
+      "definition": "分离区相干结构对流速度",
+      "value": "约0.3U∞",
+      "relation": "与2D相近，对3D干扰强度不敏感",
+      "source": "p308"
+    },
+    {
+      "name": "r/δ",
+      "definition": "距VCO的径向距离以δ归一化",
+      "value": "2、6、10（谱）；14（图7球面）",
+      "relation": "检验锥形坍塌",
+      "source": "p304，p307，图6–7"
+    },
+    {
+      "name": "Reδ（SF模拟）",
+      "definition": "以来流边界层厚度为参考长度的Reynolds数",
+      "value": "≈1.6×10^4",
+      "relation": "22°鳍、Mach 2",
+      "source": "p304"
+    },
+    {
+      "name": "Reδ（SF实验）",
+      "definition": "同上",
+      "value": "≈1.5×10^5",
+      "relation": "15°鳍",
+      "source": "p305"
+    },
+    {
+      "name": "鳍角/后掠角",
+      "definition": "尖鳍相对来流的偏转角",
+      "value": "22°（模拟）、15°（实验）",
+      "relation": "控制干扰强度",
+      "source": "p304–305"
+    }
+  ],
+  "methods": [
+    {
+      "item": "综述类型",
+      "value": "叙述性综述，非系统检索；以作者自身计算图辅助说明",
+      "source": "p295",
+      "note": "承认遗漏部分文献"
+    },
+    {
+      "item": "证据来源",
+      "value": "经典油流/纹影、表面压力/摩阻/热流测量、皮托压力场；现代PSP、高速纹影、立体/层析PIV、光场测量",
+      "source": "p294–295"
+    },
+    {
+      "item": "数值手段",
+      "value": "高保真模拟（可分辨湍流时空尺度）、RANS历史结果、LES/DNS文献",
+      "source": "p294–295"
+    },
+    {
+      "item": "稳定性/动力学分析",
+      "value": "全局模态、非模态/resolvent、动态线性响应、POD、带通滤波",
+      "source": "p298–299，p307–308"
+    },
+    {
+      "item": "平均流拓扑",
+      "value": "临界点理论（center、saddle、focus、node）与表面流线LC/LD分析",
+      "source": "p296，p301，p311"
+    },
+    {
+      "item": "锥形坐标分析",
+      "value": "以VCO为原点的球坐标(r,θ)，在同心球面/弧线上比较平均量与谱",
+      "source": "p301，p304，图4、图6"
+    },
+    {
+      "item": "谱归一化",
+      "value": "预乘PSD；局部归一化与全局归一化；Stδ与StL3D双轴",
+      "source": "p298，p304"
+    },
+    {
+      "item": "带通分解",
+      "value": "按Stδ<0.01、0.01–0.2、>0.2分带计算RMS壁压",
+      "source": "p305，图6e"
+    },
+    {
+      "item": "检索范围/纳入标准",
+      "value": "文中未提及",
+      "source": "全文",
+      "note": "未给数据库、检索式、时间窗"
+    }
+  ],
+  "derivation": {
+    "exists": false,
+    "idea": "本文为综述，未从控制方程出发建立新的理论或给出推导链。正文只使用 StL=fL/U∞、Stδ=fδ/U∞、StL3D=fL3D/U∞ 等 Strouhal 数定义，以及俯仰角 arctan(v/u)、偏航角 arctan(w/u) 等量定义来组织实验/计算结果的比较，并引用经验标度 Linc∝Mnδ^(2/3) 与对流速度约 0.3U∞；这些均非推导。",
+    "assumptions": [
+      "无新增理论假设；综述以时均分离的强STBLI为对象（p292）",
+      "锥形渐近假设：远场平均量在以VCO为原点的球坐标下近似坍塌（p301）",
+      "2D与3D的对比以相同来流边界层厚度δ为参考（p295）"
+    ],
+    "steps": [],
+    "result": "无推导结果。综述的可检验结论是：锥形3D SBLI的低频带受抑、中频对流带突出，且不存在可跨r通用的全局分离长度；这些结论由谱、稳定性分析与拓扑观察支持（p304–308，p316）。",
+    "limits": "上述关系均为定义或经验标度，不能当作理论推导；Linc∝Mnδ^(2/3)引自经典文献，适用条件与系数原文未展开；StL3D随r变化，不能作为全局归一化尺度（p304–306）；综述未给出从Navier–Stokes方程到这些标度的推导。"
+  },
+  "mechanism": "论证链（前提→证据→推论→结论）：前提——3D后掠干扰中，分离流线与附体流来自不同区域：分离流来自来流边界层，附体流来自已被激波处理过的外层无粘流，二者形成斜剪切层与夹带流（p301–302，图5）。证据1——平均流呈锥形对称，λ激波与三激波点轨迹随r线性增长，表面LC/LD/IST均近似从VCO出发（p300–301，图4b）；但LC与LD发散，L3D随r增大（p304）。证据2——壁压谱在锥形框架下有一定坍塌，但低频band I受抑，主导为中频剪切层带；实验RMS也以中频为主（p304–305，图6）。证据3——动态线性响应显示2D最大增益扰动自维持并局限于分离区（绝对不稳定），3D最大增益扰动为对流性（p308）。推论——3D中缺少2D那样的闭合对流回路与全局分离长度，低频呼吸机制失去主导地位；中频内容由斜剪切层的对流不稳定性及内外两层斜向对流的分压干涉产生周期性（p307–308）。结论——3D SBLI动力学应以“锥形渐近+斜剪切层对流”描述，2D的呼吸图像只在起始区/对称面等局部区域有条件地类比（p316）。以上“失去主导地位”的因果表述为AI概括，原文明确说“breathing is relatively muted”和“convective in nature”。",
+  "findings": [
+    {
+      "finding": "半无限后掠3D SBLI在远场呈锥形渐近，平均流在VCO球坐标下坍塌，激波发生器细节变得不重要。",
+      "evidence": "摘要“conical asymptotic behavior where shock-generator specifics become insignificant”；图4b在VCO同心球面上绘平均压力，λ激波随r线性增长（p291，p301）。",
+      "type": "平均流结构",
+      "strength": "强",
+      "source": "p291摘要；p300–301，图4b",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "3D分离拓扑与2D本质不同：不必然出现回流或零摩阻，分离流线偏转且从不重新附。",
+      "evidence": "p294明确陈述；图5b显示分离流线与附体流来自不同区域，附体流不是再附流（p301–302）。",
+      "type": "拓扑",
+      "strength": "强",
+      "source": "p294；p301–302，图5",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "锥形3D SBLI不存在可跨径向距离通用的全局分离长度，L3D随r增大。",
+      "evidence": "原文称“no global length scale ... is apparent”，并以Stδ与StL3D双轴标示谱（p304–306，图6）。",
+      "type": "标度",
+      "strength": "强",
+      "source": "p304–306，图6",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "相对2D，3D后掠SBLI的低频band I受抑，主导谱内容为中频剪切层带；band I峰值对应Stδ~0.006。",
+      "evidence": "图6b–d的预乘壁压谱与图3对比；正文明确“suppressed low-frequency band”与“most prominent band ... mid-frequency”（p304–305）。",
+      "type": "谱特征",
+      "strength": "强",
+      "source": "p304–305，图6",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "15°尖鳍实验（Reδ~1.5×10^5）中，中频分量在大部分干扰区主导RMS壁压，激波脚处低频与中频同时出现峰值。",
+      "evidence": "图6e按Stδ<0.01、0.01–0.2、>0.2分带给出σp/Pw沿θ分布；正文说明较小λ统计上更可能（p305）。",
+      "type": "实验",
+      "strength": "强",
+      "source": "p305，图6e",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "2D SBLI为绝对不稳定，强后掠3D SBLI最大增益扰动为对流性，未发现绝对不稳定。",
+      "evidence": "对3D SCR施加随机脉冲强迫的动态线性响应分析；2D扰动自维持并局限于分离区，3D扰动对流传播（p308）。",
+      "type": "稳定性",
+      "strength": "中",
+      "source": "p308",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "3D分离区相干结构对流速度约0.3U∞，与2D相近且对干扰强度不敏感。",
+      "evidence": "正文给出“A representative convective speed ... is 0.3U∞”，并与Aubard等2D结果比较（p308）。",
+      "type": "定量",
+      "strength": "中",
+      "source": "p308",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "起始区偏离锥形渐近，其长度Linc∝Mnδ^(2/3)，近前缘出现StL3D~0.05的显著低频峰。",
+      "evidence": "Linc标度引自Settles & Lu(1985)；图8b在z/δ=0.5处绘PPSD随x变化，峰值靠近分离激波脚（p310–311）。",
+      "type": "非渐近",
+      "strength": "中",
+      "source": "p310–311，图8b",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "3D对称面上2D的中心点被稳定焦点取代，对应马蹄涡；分离流线在对称面上也不重新附。",
+      "evidence": "图8c,i的对称面流线示意与图2b对比；正文指出∂w/∂z非零、展向缓解效应在2D中不存在（p311）。",
+      "type": "拓扑",
+      "strength": "中",
+      "source": "p311，图8c",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "作者结论：3D SBLI的多样性可通过锥形渐近框架获得统一描述，再以构型相关偏离补全。强后掠渐近3D SBLI与2D的关键差别是：低频非定常更具对流性、与分离剪切层相关，而相互作用呼吸相对受抑；这源于平均流中2D与3D剪切层长度尺度的空间混合。2D稳定性研究为3D分析提供框架，3D更强的对流性也体现在主导不稳定性质上。起始区与对称面的动力学变化具有启发性，但把2D特征与这些区域关联时必须谨慎。作者据此提出复杂3D SBLI标度、运动激波/不起动、FSI与控制等未来方向（p316）。",
+  "contributions": [
+    "以锥形渐近为统一框架组织3D SBLI的平均流、非定常与稳定性认识，并明确其失效区域（p295，p316）。",
+    "系统对比2D与3D分离拓扑，指出3D分离无回流、无再附、无全局分离长度（p294，p301–306）。",
+    "综合谱分析、稳定性/非模态分析与实验RMS，给出3D中低频受抑、中频对流主导的图景（p304–308）。",
+    "区分起始区与对称面两类非渐近区域，并指出2D类比的适用边界（p309–311）。",
+    "提出运动激波/不起动、FSI与控制等未来研究方向，并强调起始区作动器布置（p312–316）。"
+  ],
+  "limits": "作者承认：热流机制不在综述范围（p294）；文献覆盖不完整，部分相关工作因篇幅与视角遗漏，且图解主要取自作者自身计算（p295）；起始区Reynolds数依赖尚未完整表征（p311）；DF、CoP、CaP等非渐近构型的Mach/Re依赖不足（p312）；3D稳定性/非模态分析计算代价大（p313）。AI识别：综述未给系统检索式与纳入标准，不能视为穷尽性综述；许多定量结论来自特定构型（22°/15°尖鳍、Mach 2），向其他Mach/Re/构型外推需谨慎（AI推断）；“2D与3D频率不能直接对应”这一点作者已明确，但3D中频带的统一长度尺度仍未解决（p306）。",
+  "significance": "对高速流动/工程的意义：3D SBLI是进气道、隔离器、角区与翼面/尾翼等实际构型的常态，而非例外；综述给出的锥形渐近框架可用于组织平均流标度、判断地面试验与飞行条件的差异，并提示不能用2D的分离长度L直接归一化3D低频载荷（p304–306，p316）。对进气道/隔离器：运动激波与不起动涉及3D分离与角区/侧壁耦合，是未来重点（p313）。对结构与控制：3D谱向中频偏移、相干结构随r增长而频率下降，可能与大尺寸面板频率重叠，FSI仍需研究；控制应靠近起始区布置，微射流质量流量比激励频率更关键（p314–316）。不能回答的问题：热流峰值机制、3D中频带的唯一归一化长度、起始区Re依赖的定量标度（文中未解决）。",
+  "quotes": [
+    {
+      "text": "specifics become insignificant",
+      "supports": "锥形渐近下激波发生器细节不影响远场",
+      "source": "p291，摘要",
+      "use": "说明锥形框架的普适性"
+    },
+    {
+      "text": "never reattach",
+      "supports": "3D分离流线不重新附",
+      "source": "p302",
+      "use": "对比2D分离拓扑"
+    },
+    {
+      "text": "no global length scale",
+      "supports": "锥形3D无通用分离长度",
+      "source": "p306",
+      "use": "讨论标度律局限"
+    },
+    {
+      "text": "convective in nature",
+      "supports": "3D最大增益扰动为对流性",
+      "source": "p308",
+      "use": "支撑3D以对流不稳定为主"
+    },
+    {
+      "text": "breathing is relatively muted",
+      "supports": "3D中相互作用呼吸受抑",
+      "source": "p316，结论",
+      "use": "概括3D与2D的核心差别"
+    },
+    {
+      "text": "Linc ∝ Mnδ2/3",
+      "supports": "起始区长度标度",
+      "source": "p310",
+      "use": "引用起始区效应"
+    },
+    {
+      "text": "0.3U∞",
+      "supports": "3D相干结构对流速度",
+      "source": "p308",
+      "use": "与2D剪切层速度对比"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig01_p3.png",
+      "n": 1,
+      "page": 3,
+      "caption_zh": "近期关注的典型激波/边界层干扰构型：(a)入射激波，(b)尖鳍，(c)后掠压缩拐角，(d)双鳍，(e)钝鳍或平板圆柱，(f)平板上方圆锥；金色为激波发生面，蓝色为孕育来流边界层的平板，虚线为激波，箭头为来流方向。",
+      "caption_orig": "Figure 1. Canonical shock-wave/boundary-layer-interaction configurations of recent interest: (a) impinging shock, (b) sharp fin, (c) swept compression ramp, (d) double fin, (e) blunt fin or cylinder on plate, (f) cone above plate. The shock-generating surfaces are gold, the plate surfaces fostering the incoming boundary layers are blue, and the shocks are outlined with dashed lines. The direction of each incoming flow is indicated by an arrow.",
+      "why": "界定综述的构型范围，说明3D SBLI相对2D的几何多样性，并为后文以尖鳍为主线、其他构型作对比提供索引。"
+    },
+    {
+      "file": "fig04_p11.png",
+      "n": 4,
+      "page": 11,
+      "caption_zh": "尖鳍激波/边界层干扰的三维结构：(a)以Q准则等值面着色的瞬时湍流结构与|u·∇p|等值面表示的瞬时激波结构，坐标以δ归一化；(b)在以虚拟锥原点(VCO)为中心的同心球面上绘平均压力等值线，显示平均流的锥形对称及四条特征线。",
+      "caption_orig": "Figure 4. 3D structure of the sharp-fin shock-wave/boundary-layer interaction. (a) An isosurface of Q-criterion colored by streamwise-velocity magnitude describes the instantaneous structure of the turbulence (red/blue colormap), with isosurfaces of |u · ▽p| to describe the instantaneous shock structure (transparent blue/purple colormap). The spatial coordinates are nondimensionalized by δ. The inset facilitates the comparison of the highlighted region to a shadowgraph image from the experiments of Arora et al. (2019), reproduced with permission. (b) Contours of the mean pressure on concentric, virtual conical origin (VCO)-centered, spherical surfaces illustrate the conical symmetry of the mean flow, with annotation of the fundamental lines of the interaction: (1) line of surface-flow coalescence, (2) projection to the plate of the inviscid shock, (3) shock-triple-point locus, and (4) line of surface-flow divergence.",
+      "why": "直接支撑“3D后掠干扰呈锥形渐近、λ激波随r线性增长、三激波点轨迹过VCO”的核心平均流结论，是全文统一框架的图形依据。"
+    },
+    {
+      "file": "fig06_p14.png",
+      "n": 6,
+      "page": 14,
+      "caption_zh": "以尖鳍为例的三维SBLI非定常表征：(a)沿VCO同心弧、以相对来流方向角θ定义表面压力测点；(b–d)r/δ=2、6、10三个半径上的预乘壁压功率谱随θ分布，左轴为Stδ、右轴为StL3D，红线标出高频湍流带与中频剪切层带；(e)15°干扰实验中各频带壁压脉动RMS随θ的分布。",
+      "caption_orig": "Figure 6. Characterization of unsteadiness in 3D shock-wave/boundary-layer interactions as exemplified by the sharp-fin interaction. (a) Schematic identifying the surface-pressure-probe locus (red) as a function of angle relative to the incoming flow direction (θ), at a given radius (r) from the virtual conical origin (VCO). (b–d) Premultiplied wall-pressure power spectral density (PPSD) as a function of θ at concentric radii: r/δ = 2, 6, and 10 for panels b, c, and d, respectively. Frequency normalization is provided by Strouhal numbers (St) on the basis of the boundary-layer thickness (Stδ) on the left axis and local separation length StL3D on the right axis. Bands demarcated by red lines outline the high-frequency (turbulence) and mid-frequency (shear-layer) bands. Blue arrows indicate lines of separation and attachment for the 22° interaction. Panels b–d adapted with permission from Adler & Gaitonde (2020). (e) Root-mean-square wall-pressure fluctuations as a function of θ for various frequency bands from the experiments of Arora et al. (2019) (adapted with permission) for the 15° interaction. The total spectrum (black) is shown along with constitutive components: middle frequencies (red), lower frequencies (purple), and higher frequencies (blue). UI denotes the upstream-influence line.",
+      "why": "支撑“3D低频带受抑、中频剪切层带主导、谱在锥形坐标下部分坍塌”的核心非定常结论，并给出实验RMS的分频带证据。"
+    },
+    {
+      "file": "fig08_p20.png",
+      "n": 8,
+      "page": 20,
+      "caption_zh": "起始区与对称面的非渐近效应：(a)尖鳍表面流线，黑线从VCO出发、紫线从起始原点出发；(b)距鳍面0.5δ处预乘壁压谱随流向距离的变化；(c)发散对称面(i)与汇聚对称面(ii)的平均流线拓扑示意。",
+      "caption_orig": "Figure 8. Nonasymptotic effects in regions of inception and symmetry planes. (a) Surface-flow lines for the SF SBLI. Lines emanating from the VCO (black) best align the surface-flow symmetry in the interior of the interaction. However, lines emanating from the inceptive conical origin (purple) best align inceptive features, such as the LC near the shock generator, with the inviscid shock. The red line indicates the infinitesimally thin fin surface. Panel a based on Adler & Gaitonde (2020), with permission. (b) Premultiplied wall-pressure power spectral density (PPSD) for the SF SBLI as a function of streamwise distance, offset from the fin surface by 0.5δ. The blue arrow indicates the separation location. A prominent peak in the spectra at StL ∼0.05 occurs beneath the shock in the inceptive region near the fin leading edge; this is reminiscent of the 2D scaling. The red band lines the high-frequency range and trace the peak of the low-frequency range. (c) Illustration of the complementary patterns of mean-flow streamlines (i) in a diverging symmetry plane, such as in front of an obstacle on a plate, and (ii) in a converging symmetry plane, such as in the double-fin SBLI. Abbreviations: F, focus; LC, line of coalescence; LD, line of convergence; S′, surface saddle point; SBLI, shock-wave/boundary-layer interactions; SF, sharp fin; St, Strouhal number; VCO, virtual conical origin.",
+      "why": "支撑“锥形渐近在起始区与对称面失效”的结论：起始区需用独立起始原点描述且出现StL3D~0.05低频峰；对称面拓扑为焦点/马蹄涡且分离流线不再附。"
+    }
+  ],
+  "verification": {
+    "text_only": "是。全部结论来自bundle全文、图注与图1–8；未引用外部文献结论；涉及他人工作时仅转述本文的引用与描述。",
+    "a_grade_supported": "是。A级要点均给出页码/节/图号：p291摘要、p294、p297–298图3、p300–302图4–5、p304–306图6、p308、p311图8。",
+    "attributes_marked": "是。three_sentence、core_points、findings均标【原文明确】【AI概括】【AI推断】；机制段对因果性概括已注明AI概括。",
+    "coverage": "覆盖IMRaD四节、2D基线、3D平均流/非定常/非渐近、稳定性、FSI、控制与未来方向；图注完整转录，定量结论均带位置。",
+    "no_fabrication": "未编造页码、图号、数据或公式；图中具体数值（如StL~0.03、Stδ~0.006、0.3U∞、Linc∝Mnδ2/3）均逐字取自bundle；未给出原文没有的Mach/Re具体值。",
+    "open_questions": [
+      "3D中频带是否存在类似2D分离长度L的统一归一化尺度？原文明确称尚未解决。",
+      "起始区效应的Reynolds数依赖如何定量标度？原文称尚未完整表征。",
+      "热流峰值与3D SBLI非定常的耦合机制是什么？本文明确不讨论。",
+      "DF/CaP/CoP等非渐近构型的Mach/Re依赖与天地换算如何建立？",
+      "3D绝对不稳定缺失的结论是否对所有后掠角与干扰强度成立？原文仅给SCR算例。",
+      "如何将3D稳定性/非模态分析用于作动器最优布置？",
+      "图6e中低频峰与中频峰在激波脚同时出现，哪个机制主导？原文未定论。"
+    ]
+  }
+}

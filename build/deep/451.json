@@ -1,0 +1,716 @@
+{
+  "id": 451,
+  "read_note": "30 页 AIAA 会议/期刊格式稿件（2017），实验与数值结合的建立时间（establishment time）基准研究。bundle 30 页全文完整，含 17 幅图、4 张表；图注与正文可读，但部分图轴 OCR 有缺字（如 Fig. 9/10 纵轴、Fig. 14-16 的 M1 下标）。未回读原 PDF；所有公式均取自 bundle 文本层，式(1)-(22) 符号清晰。抓图清单中 Fig. 5、6 等多幅图未使用。文章核心不是 SBLI 机理，而是间歇风洞中 SWBLI 建立时间的定义、测量与标度评估。",
+  "one_line": "M8.9 钝头体 8° 拐角间歇风洞中，实验压力/热流建立时间 0.2/2.1 ms，数值低估约 2 倍，现有标度均非普适。",
+  "three_sentence": [
+    {
+      "text": "问题与缺口：短时风洞中自由来流可能已建立而 SWBLI 尚未建立，文献中缺乏统一的建立判据，flow time、wave time、heat-transfer time、flow length 等标度各自只适用于部分实验。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "方法与发现：在 M∞=8.9、层流边界层的钝头圆柱-8° 拐角上联合实验与 CFD，提出基于“稳态值 ±10% 与 ±1σ、1 kHz 低通”的建立判据；扣除边界层建立后，实验压力/热流建立时间为 0.2/2.1 ms，数值为 0.111/0.771 ms，数值低估 1.8–2.7 倍。",
+      "attr": "AI概括"
+    },
+    {
+      "text": "结论：没有单一标度可全球适用；热流时间可作建立时间的上界，flow length/flow time 只在同一设施、相似几何的“实验族”内可插值，数值模拟必须尽量复现风洞启动过程。",
+      "attr": "AI概括"
+    }
+  ],
+  "imrad": {
+    "introduction": "引言指出：连续式风洞可等待流动建立后再取数，而间歇式高超声速风洞运行时间极短，分离泡内的特征时间远大于外流，因此可能出现自由来流已稳态、SWBLI 却尚未建立甚至在整个稳态窗口内都不建立的情况。早期研究（Holden、Rom、Ihrig 与 Korst 等）较严谨地考察建立时间，随后出现了以 flow time、wave time、flow length 等参数缩放建立时间的经验/解析关系，近期研究常直接引用这些指标而不再独立验证。作者认为问题根源之一是实验与数值对“建立”没有共同定义：数值常用收敛到机器精度的收敛时间，实验只能收敛到测量误差。本文目标是：先梳理已有建立时间预测方法；再提出一个可同时用于实验与数值的建立判据；用 M∞=8.9 钝头体-8° 拐角的实验与数值数据提取建立时间；最后评估各标度的适用性并给出使用建议（p1-2）。",
+    "methods": "实验在 Imperial College No. 2 Gun Tunnel 进行：自由活塞式、Mach 8.9、氮气试验气体、单位雷诺数 47×10^6 m^-1；来流 P∞=3 kPa、T∞=68 K、U∞=1491 m/s、h∞=1.2 MJ/kg；风洞在 10 ms 后视为建立、稳态窗口 6 ms（p7，表1）。模型为钝头轴对称圆柱，x=0.212 m 处接 8° 拐角；钝头半径 rn=25 mm、球头过渡 rb=273 mm、拐角后半径 ra=37.5 mm，鼻段长 103 mm（图3b）。边界层边缘条件由数值解给出：δ99=1.7 mm、Pe=4.6 kPa、Te=339 K、单位 Ree=3.01×10^6 m^-1、Ue=1283 m/s、Me=3.44、Lsep=0.023 m（表2，p7）。测量包括薄膜热流计（Schultz & Jones 法，MACOR 基底，流向分辨率 0.5 mm）、表面压阻传感器（Kulite，埋在 0.5 mm 引压孔后的腔体内）和高速纹影；每次运行两个传感器模块，分别位于圆柱段与拐角后锥段；64 通道、100 kHz 采样、50 kHz 低通，ADC 信噪比 120 dB；压力不确定度 2%、热流 10%；压力 10 次、热流 6 次重复运行（p7-10）。纹影用 Phantom v5.2 或 Photron SA1.1，最高 100,000 fps、曝光 0.01 ms、水平刀口（p9-10）。数值采用时间精确的分裂格式：二维 Euler 方程二阶 Strang 分裂，一维 Euler 用二阶迎风 Godunov 求解，黏性项显式二阶 Runge-Kutta；不考虑 N2 离解；曲线网格贴体并局部拟合弓形激波与边界层；网格加倍后分离泡长度变化小于 1%；建立时间计算受成本限制改用较粗网格，其分离长度与网格收敛解差 10%（p10-12、p18）。建立判据：0.9(Q̄ss-σss)<Q̂_1kHz<1.1(Q̄ss+σss)，即稳态值 ±10%、±1σ、1 kHz 低通（p17，式17）。实验建立时间先由上游边界层建立时间扣除，得到相对于边界层建立的 SWBLI 建立时间（p17-18）。",
+    "results": "风洞启动过程（图8）显示多次弱启动波：喉道压力分五级抬升（图7），最后一道强启动波在 t=6.51 ms，此后边界层才可认为建立；在此之前分离区多次被压塌为附着激波。实验上游（x<0.19 m）压力与热流建立时间分别为 6.3 ms 与 6.5 ms，与启动过程分析给出的 6.5 ms 一致；分离区平均建立时间为压力 6.5 ms、热流 8.6 ms（图9，p17）。扣除各自边界层建立时间后，SWBLI 压力建立 0.2 ms、热流建立 2.1 ms（表3，p20）。数值从收敛边界层解出发、脉冲启动，压力/热流建立时间为 0.111/0.771 ms；实验/数值比为 1.8（压力）与 2.7（热流），即数值低估约 2 倍，分离点处差异最大（图13，表3，p20）。解析标度：Lsep=0.023 m、āδ=384.2 m/s、Ue=1283.6 m/s、St=0.01，得 tw=0.060 ms、tH=1.790 ms；实验压力建立约 3.65 tw，热流建立约 1.175 tH（表4，p22）。变拐角数值试验（图11、12）表明：分离长度随拐角近似线性增加，而压力/热流建立时间呈非线性，两者不成比例，导致所有基于 Lsep 的标度在变几何时失效（p18-19、p24）。与文献对比（图14-16）：热流建立时间在 0.037–1.175 tH 之间，热流时间只能作上界；实验 tH/tw 不遵循 100/Me 的 Mach 标度，而近似为常数；flow length 标度（图17）在同类设施/几何内近似线性，但全局无统一趋势（p22-26）。",
+    "discussion": "作者强调“收敛时间”与“建立时间”本质不同：数值收敛是相对机器精度（双精度约 10^-16），实验建立只到测量误差（1–10%），因此数值收敛判据严格得多。文献中双锥数值研究给出 100–150 tc，而类似双锥实验约 1 tf，两者差两个数量级，不能直接比较；若统一采用本文判据，差异可能大幅缩小（p21-22）。对标度的评估是本文核心：wave time 与 heat-transfer time 属“局部”标度，依赖分离区局部条件，但未计入边界层建立时间，跨设施时失效；flow time 与 flow length 属“全局”标度，忽略局部条件，跨实验族失效，但在同一设施、相似几何内可较好插值；两者都不含几何因子，变拐角时散度很大（p24-28）。热流时间系统性高估热流建立时间，可作保守上界，但可能高估数量级，因此“低于上界”不能判定未建立（p26）。作者建议按数据量选择混合策略：新设施/新几何应做专门启动测量；有相似几何与设施数据时可用数值估计；仅改变来流条件时可用 flow length/flow time 在实验族内插值；任何情况下都应尽量模拟风洞启动过程，因为数值建立时间强烈依赖启动条件（p26-27）。作者还指出本文只研究氮气，空气的离解与非平衡会改变建立时间，需另做研究（p28）。"
+  },
+  "core_points": [
+    {
+      "point": "研究目标是间歇高超声速风洞中 SWBLI 的建立时间：给出可同时用于实验与数值的建立判据，并评估现有标度的适用性。",
+      "type": "研究目标",
+      "grade": "A",
+      "source": "p1 摘要；p1-2 引言",
+      "attr": "原文明确"
+    },
+    {
+      "point": "实验条件：Imperial College No.2 Gun Tunnel，氮气，M∞=8.91，P∞=3 kPa，T∞=68 K，U∞=1491 m/s，单位 Re=47×10^6/m，稳态窗口 6 ms。",
+      "type": "实验条件",
+      "grade": "A",
+      "source": "p7；表1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "模型为钝头轴对称圆柱加 8° 拐角（x=0.212 m），来流为层流边界层；设计目标是层流分离、湍流附着。",
+      "type": "几何/流动状态",
+      "grade": "A",
+      "source": "p5、p7-8；图3",
+      "attr": "原文明确"
+    },
+    {
+      "point": "提出建立判据 0.9(Q̄ss-σss)<Q̂_1kHz<1.1(Q̄ss+σss)：稳态值 ±10%、±1σ、1 kHz 低通。",
+      "type": "方法/判据",
+      "grade": "A",
+      "source": "p17，式(17)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "上游边界层建立约 6.5 ms，与最后一道强启动波时刻 6.51 ms 一致；实验压力/热流上游建立 6.3/6.5 ms。",
+      "type": "实验结果",
+      "grade": "A",
+      "source": "p14、p17；图8、图9",
+      "attr": "原文明确"
+    },
+    {
+      "point": "分离区平均建立时间：压力 6.5 ms、热流 8.6 ms；扣除边界层建立后为 0.2 ms 与 2.1 ms。",
+      "type": "核心结果",
+      "grade": "A",
+      "source": "p17-18；图9；表3",
+      "attr": "原文明确"
+    },
+    {
+      "point": "数值建立时间 0.111 ms（压力）与 0.771 ms（热流），实验/数值比 1.8 与 2.7，数值低估约 2 倍。",
+      "type": "数值-实验对比",
+      "grade": "A",
+      "source": "p18-20；图10、图13；表3",
+      "attr": "原文明确"
+    },
+    {
+      "point": "解析标度 tw=0.060 ms、tH=1.790 ms；实验压力建立约 3.65 tw、热流建立约 1.175 tH。",
+      "type": "定量标度",
+      "grade": "A",
+      "source": "p22；式(19)、(20)；表4",
+      "attr": "原文明确"
+    },
+    {
+      "point": "分离长度随拐角近似线性，建立时间随拐角非线性，两者不成比例，故所有基于 Lsep 的标度在变几何时失效。",
+      "type": "参数敏感性",
+      "grade": "A",
+      "source": "p18-19、p24；图11、图12",
+      "attr": "原文明确"
+    },
+    {
+      "point": "没有单一标度全球适用：热流时间只能作上界；flow length/flow time 只在同一设施、相似几何的实验族内可插值；两者都不含几何因子。",
+      "type": "结论",
+      "grade": "A",
+      "source": "p24-28；图14-图17",
+      "attr": "原文明确"
+    },
+    {
+      "point": "数值收敛时间与实验建立时间定义不同：文献双锥数值 100–150 tc，实验约 1 tf，差两个数量级，不能直接比较。",
+      "type": "概念辨析",
+      "grade": "A",
+      "source": "p21-22",
+      "attr": "原文明确"
+    },
+    {
+      "point": "实验 tH/tw 不遵循 Ihrig 与 Korst 的 100/Me 关系，而近似为常数，说明该 Mach 标度不全局成立。",
+      "type": "标度评估",
+      "grade": "B",
+      "source": "p23-24；图16；式(10)",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "风洞与试验气体",
+      "value": "Imperial College No. 2 Gun Tunnel；自由活塞式；氮气；间歇运行",
+      "source": "p7",
+      "note": "非燃烧加热风洞"
+    },
+    {
+      "item": "来流条件",
+      "value": "M∞=8.91；P∞=3 kPa；T∞=68 K；U∞=1491 m/s；单位 Re∞=47×10^6 m^-1；h∞=1.2 MJ/kg",
+      "source": "p7 表1",
+      "note": "由 Mallinson 等的风洞标定给出"
+    },
+    {
+      "item": "运行时间",
+      "value": "风洞在 10 ms 后视为建立；稳态窗口 6 ms",
+      "source": "p7",
+      "note": "与后文 6.5 ms 边界层建立存在表述冲突，见待确认项"
+    },
+    {
+      "item": "边界层边缘条件",
+      "value": "δ99=1.7 mm；Pe=4.6 kPa；Te=339 K；单位 Ree=3.01×10^6 m^-1；Ue=1283 m/s；Me=3.44；Lsep=0.023 m",
+      "source": "p7 表2",
+      "note": "取自数值解，边缘按 99% 热边界层定义"
+    },
+    {
+      "item": "模型几何",
+      "value": "钝头轴对称圆柱；8° 拐角位于 x=0.212 m；鼻尖半径 rn=25 mm；球头过渡半径 rb=273 mm；拐角后半径 ra=37.5 mm；鼻段长 103 mm",
+      "source": "p7-8；图3(b)",
+      "note": "钝头造成强熵梯度，近壁条件与外流差异大"
+    },
+    {
+      "item": "边界层状态",
+      "value": "层流边界层；设计为层流分离、湍流时附着（collapse）",
+      "source": "p5、p7",
+      "note": "所有本文工况均为层流"
+    },
+    {
+      "item": "压力测量",
+      "value": "Kulite XCQ-093×16、XCQ-062×16、XCQ-062×8；埋入腔体经 0.5 mm 引压孔；流向分辨率 0.5 mm；不确定度 2%",
+      "source": "p9；图3(c)",
+      "note": "两个压力模块分别位于圆柱段与锥段"
+    },
+    {
+      "item": "热流测量",
+      "value": "薄膜热流计 TFRT×32，铂膜喷涂于 MACOR 陶瓷；流向分辨率 0.5 mm；不确定度 10%",
+      "source": "p9；图3(c)",
+      "note": "Schultz & Jones 方法"
+    },
+    {
+      "item": "数据采集",
+      "value": "最多 64 通道；100 kHz 采样；50 kHz 低通；ADC 信噪比 120 dB",
+      "source": "p9",
+      "note": "Flyde FE-759-TA 放大、HGL Dragonfly DF24F 数字化"
+    },
+    {
+      "item": "纹影",
+      "value": "Phantom v5.2 或 Photron Fastcam SA1.1；最高 100,000 fps；曝光 0.01 ms；水平刀口",
+      "source": "p9-10",
+      "note": "用于诊断激波结构，视场见图3黑框"
+    },
+    {
+      "item": "重复运行次数",
+      "value": "压力 10 次；热流 6 次",
+      "source": "p17",
+      "note": "作者承认仍未必统计收敛，但优于文献常见单次"
+    },
+    {
+      "item": "数值模拟",
+      "value": "时间精确；二维 Euler 二阶 Strang 分裂；一维二阶迎风 Godunov；黏性项显式二阶 RK；不考虑 N2 离解；曲线贴体网格；脉冲启动",
+      "source": "p10、p12",
+      "note": "原文称 2D Euler 方程分裂，未明确轴对称假设"
+    },
+    {
+      "item": "网格收敛",
+      "value": "网格加倍后分离泡长度变化 <1%；建立时间计算用较粗网格，分离长度与收敛解差 10%",
+      "source": "p10、p18",
+      "note": "以分离长度作为网格收敛指标"
+    },
+    {
+      "item": "时间收敛判据",
+      "value": "所有测点达到最终值 99% 所需时间 < 总计算时间的 50%；实际运行至约 2 ms 后曲线不变，再算约 4 ms",
+      "source": "p11-12；图6",
+      "note": "比后续建立判据更严格"
+    },
+    {
+      "item": "建立判据参数",
+      "value": "A=0.1；n=1；低通截止 1 kHz",
+      "source": "p16-17，式(17)",
+      "note": "1 kHz 对应约 1 ms 的热流/扩散时间尺度"
+    },
+    {
+      "item": "变拐角数值工况",
+      "value": "8° 为实验基准；其余拐角见图11，横轴范围 4°–16°，具体角度文中未逐一列出",
+      "source": "p18-19；图11、图12",
+      "note": "来流条件保持不变，仅改几何"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "tf",
+      "definition": "flow time，t_f=L/U∞，特征长度除以自由来流速度",
+      "value": "各研究按模型/计算域长度计算；本文未单列数值",
+      "relation": "文献中 SWBLI 建立时间为 3tf–150tf",
+      "source": "p3，式(1)"
+    },
+    {
+      "name": "tw",
+      "definition": "wave time，t_w=Lsep/āδ，声波穿过分离区的时间",
+      "value": "0.060 ms（本文解析值，按 t_w=0.023/384.2 计算）",
+      "relation": "压力建立约 3.65 tw",
+      "source": "p4 式(3)、(6)；p22 式(19)；表4"
+    },
+    {
+      "name": "āδ",
+      "definition": "边界层平均声速，āδ=(γR T̄δ)^0.5",
+      "value": "384.2 m/s",
+      "relation": "由平均边界层温度经 Eckert 参考温度计算",
+      "source": "p4 式(4)；p22"
+    },
+    {
+      "name": "T̄δ",
+      "definition": "边界层平均温度，用 Eckert 参考温度近似",
+      "value": "文中未给数值",
+      "relation": "T̄δ=0.5(Tw+T∞)+0.11Pr^0.5(γ-1)M∞²T∞",
+      "source": "p4 式(5)"
+    },
+    {
+      "name": "tm",
+      "definition": "mass-transfer time，t_m=Lsep/(UeΓ)，Γ 为质量混合参数",
+      "value": "文中未给数值",
+      "relation": "Ihrig 与 Korst 三个时间尺度之一",
+      "source": "p4 式(7)"
+    },
+    {
+      "name": "tH",
+      "definition": "heat-transfer time，t_H=Lsep/(UeSt)",
+      "value": "1.790 ms（本文解析值）",
+      "relation": "热流建立约 1.175 tH；可作建立时间上界",
+      "source": "p4 式(8)；p22 式(20)；表4"
+    },
+    {
+      "name": "St",
+      "definition": "Stanton 数",
+      "value": "取 0.01（引文[2,3,10]的典型湍流值）",
+      "relation": "进入 tH 与 tH/tw=1/(MeSt)",
+      "source": "p5、p22"
+    },
+    {
+      "name": "Ue",
+      "definition": "边界层边缘速度",
+      "value": "1283.6 m/s（数值解）；表2 圆整为 1283 m/s",
+      "relation": "进入 tH 与 tm",
+      "source": "p7 表2；p22"
+    },
+    {
+      "name": "Lsep",
+      "definition": "分离区长度",
+      "value": "0.023 m",
+      "relation": "tw 与 tH 的长度尺度；随拐角近似线性变化",
+      "source": "p7 表2；图12"
+    },
+    {
+      "name": "Me",
+      "definition": "边界层边缘 Mach 数",
+      "value": "3.44",
+      "relation": "tH/tw=1/(MeSt)；St=0.01 时 =100/Me",
+      "source": "p7 表2；p5 式(9)、(10)"
+    },
+    {
+      "name": "实验建立时间（相对边界层）",
+      "definition": "扣除上游边界层建立后的 SWBLI 建立时间",
+      "value": "压力 0.2 ms（表4 为 0.219 ms）；热流 2.1 ms（表4 为 2.101 ms）",
+      "relation": "压力约 3.65 tw；热流约 1.175 tH",
+      "source": "p17-18；表3、表4"
+    },
+    {
+      "name": "数值建立时间",
+      "definition": "从收敛边界层解脉冲启动后的 SWBLI 建立时间",
+      "value": "压力 0.111 ms；热流 0.771 ms",
+      "relation": "实验/数值比 1.8 与 2.7",
+      "source": "p18-20；表3；图10"
+    },
+    {
+      "name": "边界层建立时间",
+      "definition": "上游压力/热流测点达到稳态的时间",
+      "value": "压力 6.3 ms；热流 6.5 ms；启动过程分析 6.5 ms / 6.51 ms",
+      "relation": "作为 SWBLI 建立时间的参考零点",
+      "source": "p14、p17；图8、图9"
+    },
+    {
+      "name": "建立判据阈值",
+      "definition": "A（稳态值比例）、n（标准差倍数）、低通截止频率",
+      "value": "A=0.1；n=1；1 kHz",
+      "relation": "Q̂ 须落在 0.9(Q̄ss-σss) 与 1.1(Q̄ss+σss) 之间",
+      "source": "p16-17，式(17)"
+    },
+    {
+      "name": "lf",
+      "definition": "flow length，l_f=t_test(2h0)^0.5，用总焓表达的无量纲流长",
+      "value": "图中按储气焓 0–22 MJ/kg 给出；本文点据图17",
+      "relation": "高焓极限下 l_f≈t_test U∞，除以模型长度即 flow time",
+      "source": "p5 式(11)；p25 式(21)、(22)；图17"
+    },
+    {
+      "name": "tc",
+      "definition": "数值特征时间，t_c=Ldom/Uinflow",
+      "value": "各数值研究自定；文献双锥建立/收敛时间 100–150 tc",
+      "relation": "类比 flow time，但域长常小于模型长",
+      "source": "p21 式(18)"
+    }
+  ],
+  "methods": [
+    {
+      "item": "研究类型",
+      "value": "实验与数值结合的基准研究（benchmark），辅以文献数据再分析",
+      "source": "p1-2、p20",
+      "note": "非单一机理研究"
+    },
+    {
+      "item": "实验设施",
+      "value": "Imperial College No. 2 Gun Tunnel，M8.9 自由活塞风洞，氮气",
+      "source": "p7",
+      "note": "多道反射压缩波逐级建立"
+    },
+    {
+      "item": "模型",
+      "value": "钝头轴对称圆柱 + 8° 拐角，x=0.212 m；两个传感器模块跨干扰区",
+      "source": "p7-8；图3",
+      "note": "模块可更换，覆盖圆柱段与锥段"
+    },
+    {
+      "item": "压力测量",
+      "value": "Kulite 压阻传感器，埋腔 + 0.5 mm 引压孔，0.5 mm 流向分辨率，误差 2%",
+      "source": "p9",
+      "note": "两种模块共 40 个压力测点（16+16+8）"
+    },
+    {
+      "item": "热流测量",
+      "value": "TFRT 薄膜热流计，铂膜/MACOR，0.5 mm 分辨率，误差 10%",
+      "source": "p9",
+      "note": "32 个热流测点"
+    },
+    {
+      "item": "纹影",
+      "value": "100,000 fps，0.01 ms 曝光，水平刀口；用于判别分离/附着激波结构",
+      "source": "p9-10、p13-14；图8",
+      "note": "分离结构较暗，附着结构更清晰"
+    },
+    {
+      "item": "数据采集",
+      "value": "64 通道、100 kHz、50 kHz 低通、120 dB SNR",
+      "source": "p9",
+      "note": "足以解析 ms 级建立过程"
+    },
+    {
+      "item": "数值格式",
+      "value": "时间精确算子分裂；二阶 Strang 分裂；二阶迎风 Godunov；黏性项显式二阶 RK",
+      "source": "p10",
+      "note": "求解器此前已发表，本文仅概述"
+    },
+    {
+      "item": "气体模型",
+      "value": "不考虑 N2 离解，流动视为“冷”且离解不显著",
+      "source": "p10",
+      "note": "限制了对空气/高焓的适用性"
+    },
+    {
+      "item": "网格",
+      "value": "曲线网格贴体拟合弓形激波与边界层，高梯度区加密；网格加倍分离长度变化 <1%",
+      "source": "p10；图5",
+      "note": "建立时间计算用粗网格，Lsep 差 10%"
+    },
+    {
+      "item": "时间推进验证",
+      "value": "99% 收敛时间 < 总时间 50%；约 2 ms 后曲线不变，再算 4 ms",
+      "source": "p11-12；图6",
+      "note": "强调时间收敛不等于建立"
+    },
+    {
+      "item": "建立判据",
+      "value": "式(12)-(17)：阈值判据→低通→稳态分解→正态近似→具体 10%/1σ/1 kHz",
+      "source": "p14-17",
+      "note": "A、n、截止频率可按设施调整"
+    },
+    {
+      "item": "实验建立时间提取",
+      "value": "对 10 次压力、6 次热流运行逐次应用判据后系综平均；再减去上游边界层建立时间",
+      "source": "p17-18",
+      "note": "以边界层建立为共同参考点"
+    },
+    {
+      "item": "数值建立时间提取",
+      "value": "从收敛边界层解脉冲启动带拐角模型，应用式(16)判据；并做 4°–16° 变拐角试验",
+      "source": "p18-19",
+      "note": "未能模拟风洞启动过程"
+    },
+    {
+      "item": "标度评估",
+      "value": "将本文与 Holden、Rom、Mallinson、Swantek 等数据分别用 tw、tH、lf、tf 归一，检查是否落在常数线",
+      "source": "p22-26；图14-图17",
+      "note": "区分局部标度与全局标度"
+    },
+    {
+      "item": "不确定度",
+      "value": "压力 2%、热流 10%；建立判据取 10% 上限；未给建立时间的置信区间",
+      "source": "p9、p16-17",
+      "note": "判据参数选择本身带来不确定性"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "先由“流动时间—声波时间—质量/热交换时间”给出 SWBLI 建立的特征时间尺度层级，再把“建立”形式化为信号进入稳态值邻域并保持的判据；对信号低通、把稳态值分解为均值与慢变偏差、用正态分布的标准差倍数界定允许波动，得到可同时用于实验与数值的阈值不等式；最后用 Lsep、āδ、Ue、St 计算 tw 与 tH，并用 lf 的高焓极限说明 flow length 与 flow time 等价。",
+    "assumptions": [
+      "分离区建立由局部时间尺度控制：声波传播（tw）、质量混合（tm）、热交换（tH），其中扩散/热交换最慢（p4-5）",
+      "边界层平均声速可由平均边界层温度按 āδ=(γR T̄δ)^0.5 计算，平均温度用 Eckert 参考温度近似（p4）",
+      "Stanton 数取典型湍流值 St=0.01，用于把 tH/tw 简化为 100/Me（p5）",
+      "存在可定义的稳态值 Qss；实验窗口内可近似为常数 Q̄ss 加低通慢变偏差 Q̂Var(t)（p16）",
+      "低通后的稳态波动近似正态分布，可用 ±nσss 界定（p16）",
+      "建立判据参数 A=0.1、n=1、截止 1 kHz 适用于本文设施；其他设施可不同（p16-17）",
+      "高焓条件下 h0≈U∞²/2，故 lf≈t_test U∞，flow length 与 flow time 等价（p25）"
+    ],
+    "steps": [
+      {
+        "title": "流动时间与层流平板建立时间",
+        "text": "以特征长度除以自由来流速度定义 flow time，作为最直观的建立时间尺度；引文给出激波管中半无限平板层流边界层的建立时间约为 3.333 个流动时间。该式只适用于层流平板，不能直接用于 SWBLI。",
+        "latex": [
+          "t_{f}=\\frac{L}{U_{\\infty}}",
+          "t_{l}=3.333\\frac{L}{U_{\\infty}}"
+        ],
+        "source": "p3，式(1)、(2)"
+      },
+      {
+        "title": "声波时间（wave time）",
+        "text": "Holden 提出以声波穿过分离区的速度归一，称为 wave time；声速由边界层平均温度经气体状态方程给出，平均温度用 Eckert 参考温度近似。该尺度使用分离区局部条件，比自由来流尺度更贴近干扰物理。",
+        "latex": [
+          "t_{w}=\\frac{L_{sep}}{\\bar{a}_{\\delta}}",
+          "\\bar{a}_{\\delta}=\\left(\\gamma R\\bar{T}_{\\delta}\\right)^{0.5}",
+          "\\bar{T}_{\\delta}=0.5\\left(T_{w}+T_{\\infty}\\right)+0.11\\,\\mathrm{Pr}^{0.5}\\left(\\gamma-1\\right)M_{\\infty}^{2}T_{\\infty}"
+        ],
+        "source": "p4，式(3)-(5)"
+      },
+      {
+        "title": "质量交换时间与热交换时间",
+        "text": "Ihrig 与 Korst 把建立分解为三个时间尺度：声波、质量交换与热交换。质量交换时间用边界层边缘速度与质量混合参数 Γ 归一；热交换时间用边缘速度与 Stanton 数归一。三者中热交换最慢。",
+        "latex": [
+          "t_{m}=\\frac{L_{sep}}{U_{e}\\Gamma}",
+          "t_{H}=\\frac{L_{sep}}{U_{e}\\,\\mathrm{St}}"
+        ],
+        "source": "p4，式(7)、(8)"
+      },
+      {
+        "title": "热流时间与声波时间之比",
+        "text": "把 tw 与 tH 相除，Lsep 消去，得到只含边缘 Mach 数与 Stanton 数的比值；代入 St=0.01 后得到 100/Me。该式预测热流建立时间随 Mach 数增大而缩短，并在高 Mach 数趋于渐近。",
+        "latex": [
+          "\\frac{t_{H}}{t_{w}}=\\frac{1}{M_{e}\\,\\mathrm{St}}",
+          "\\frac{t_{H}}{t_{w}}=\\frac{100}{M_{e}}"
+        ],
+        "source": "p4-5，式(9)、(10)"
+      },
+      {
+        "title": "建立判据的阈值形式",
+        "text": "把“建立”定义为信号 Q(t) 进入稳态值 Qss(t) 的 ±A 邻域并保持。由于 Q(t) 含非定常、噪声与测量误差，直接判据不稳健；先对信号低通，去掉高于建立相关频率的分量，得到 Q̂。",
+        "latex": [
+          "\\left(1-A\\right)Q_{ss}(t)<Q(t)<\\left(1+A\\right)Q_{ss}(t)",
+          "\\left(1-A\\right)\\hat{Q}_{ss}(t)<\\hat{Q}(t)<\\left(1+A\\right)\\hat{Q}_{ss}(t)"
+        ],
+        "source": "p14-16，式(12)、(13)"
+      },
+      {
+        "title": "稳态值的均值—慢变分解与统计界",
+        "text": "把低通后的稳态值拆成时间不变均值 Q̄ss 与低通慢变偏差 Q̂Var(t)。假设偏差服从正态分布，则稳态窗口内的波动幅度可写为 ±nσss；代回判据得到一般形式，n 相当于置信区间倍数。",
+        "latex": [
+          "\\hat{Q}(t)_{ss}=\\bar{Q}_{ss}+\\hat{Q}_{\\mathrm{Var}}(t)",
+          "\\hat{Q}(t)_{ss}\\approx\\bar{Q}_{ss}\\pm n\\sigma_{ss}",
+          "\\left(1-A\\right)\\left(\\bar{Q}_{ss}\\pm n\\sigma_{ss}\\right)<\\hat{Q}(t)<\\left(1+A\\right)\\left(\\bar{Q}_{ss}\\pm n\\sigma_{ss}\\right)"
+        ],
+        "source": "p16，式(14)-(16)"
+      },
+      {
+        "title": "本文的具体判据",
+        "text": "取实验准确度上限 A=0.1、n=1（约 70% 稳态波动被允许）、截止频率 1 kHz（对应约 1 ms 的扩散/热流时间尺度），得到本文使用的具体不等式。不同设施可改变这三个参数，作者称建立时间的量级对参数在较宽范围内不敏感。",
+        "latex": [
+          "0.9\\left(\\bar{Q}_{ss}-\\sigma_{ss}\\right)<\\hat{Q}(t)_{1\\mathrm{kHz}}<1.1\\left(\\bar{Q}_{ss}+\\sigma_{ss}\\right)"
+        ],
+        "source": "p16-17，式(17)"
+      },
+      {
+        "title": "flow length 与 flow time 的等价性",
+        "text": "Mallinson 等用总焓定义 flow length lf=test(2h0)^0.5。高焓时 CpT≪U∞²/2，故 2h0≈U∞²，lf≈test U∞；再除以模型长度 L 即得 test/tf，说明 flow length 标度本质上是未除以模型长度的 flow time。",
+        "latex": [
+          "l_{f}=t_{test}\\left(2h_{0}\\right)^{0.5}",
+          "l_{f}\\approx t_{test}\\left(2\\left[\\tfrac{1}{2}U_{\\infty}^{2}\\right]\\right)^{0.5}\\approx t_{test}U_{\\infty}",
+          "\\frac{l_{f}}{L}\\approx t_{test}\\frac{U_{\\infty}}{L}=\\frac{t_{test}}{t_{f}}"
+        ],
+        "source": "p5 式(11)；p25 式(21)、(22)"
+      },
+      {
+        "title": "代入本文条件计算 tw 与 tH",
+        "text": "用网格收敛数值解给出 Lsep=0.023 m、āδ=384.2 m/s、Ue=1283.6 m/s，并取 St=0.01，算得 tw=0.060 ms、tH=1.790 ms；与实验建立时间相比得到 3.65 tw 与 1.175 tH。",
+        "latex": [
+          "t_{w}=\\frac{0.023}{384.2}=6.0\\times10^{-5}\\ \\mathrm{s}",
+          "t_{H}=\\frac{0.023}{1283.6\\times0.01}=1.79\\times10^{-3}\\ \\mathrm{s}"
+        ],
+        "source": "p22，式(19)、(20)；表4"
+      }
+    ],
+    "result": "建立判据化为“稳态值 ±10%、±1σ、1 kHz 低通”的单一不等式；时间尺度层级为 tw < tm < tH，且 tH/tw=1/(MeSt)。本文条件下 tw=0.060 ms、tH=1.790 ms；实验压力建立约 3.65 tw、热流建立约 1.175 tH。flow length 在高焓极限下等价于 flow time。",
+    "limits": "判据中的 A、n、截止频率均为人为选择，换值会改变建立时间；稳态波动服从正态分布的假设未验证；tw、tH 使用局部平均量与常数 St=0.01，而本文边界层为层流，取湍流典型 St 存在概念不一致；解析式只给出量级，不含几何、边界层建立时间与激波结构；flow length 与 flow time 的等价只在 h0≈U∞²/2 的高焓极限成立。"
+  },
+  "mechanism": "SWBLI 的建立受分离区内最慢的扩散/热交换过程限制，而不是自由来流的对流时间。声波穿过分离区只需几个 tw，因而壁面压力可在约 0.2 ms 内建立；热流依赖边界层内热扩散与壁面热交换，需要约一个 tH（2.1 ms）。二者之前还必须先有边界层本身的建立：钝头体鼻部低速区使边界层建立缓慢，本设施中直到最后一道强启动波（6.51 ms）之后边界层才可认为建立，其上游压力/热流测点也在 6.3/6.5 ms 达到稳态。风洞的多道启动波会反复压塌分离区、 distort 弓形激波，使任何在最后一道强波之前提取的“建立时间”都偏短或不可信。变拐角时分离长度近似线性增加，但建立时间非线性增加，说明建立不仅取决于 Lsep，还取决于局部激波结构、分离泡形状与边界层状态；因此只含 Lsep 的局部标度（tw、tH）与完全不含局部条件的全局标度（tf、lf）都无法同时描述跨设施、跨几何的数据。【AI概括，依据 p4-5、p13-19、p24-26】",
+  "findings": [
+    {
+      "finding": "在本设施中，SWBLI 的建立必须晚于边界层建立；最后一道强启动波后边界层才建立，时间约 6.51 ms。",
+      "evidence": "图8 的纹影序列：6.51 ms 前分离区多次被压塌为附着激波；上游压力/热流在 6.3/6.5 ms 达到稳态（图9）；正文明确以 6.51 ms 作为边界层建立估计。",
+      "type": "实验观察",
+      "strength": "强",
+      "source": "p13-14、p17；图8、图9",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "扣除边界层建立后，实验表面压力建立时间约 0.2 ms，热流建立时间约 2.1 ms，热流慢约一个量级。",
+      "evidence": "表3：实验 0.2/2.1 ms；表4：0.219/2.101 ms；图9 分离区平均 6.5/8.6 ms。",
+      "type": "定量结果",
+      "strength": "强",
+      "source": "p17-18、p20；表3、表4；图9",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "同一工况的数值模拟给出压力 0.111 ms、热流 0.771 ms，比实验低估约 2 倍（比值 1.8 与 2.7）。",
+      "evidence": "表3 的 factor 行；图13 实验与数值建立时间对比；正文称 under predict by a factor of ≈2。",
+      "type": "数值-实验对比",
+      "strength": "强",
+      "source": "p18-20；表3；图13",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "实验压力建立约需 3.65 个 wave time，热流建立约需 1.175 个 heat-transfer time。",
+      "evidence": "表4：解析 tw=0.060 ms、tH=1.790 ms，实验 0.219/2.101 ms，比值为 3.650/1.175。",
+      "type": "标度验证",
+      "strength": "中",
+      "source": "p22；表4",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "分离长度随拐角近似线性变化，而建立时间随拐角非线性变化，两者不成比例。",
+      "evidence": "图11（建立时间 vs 拐角）与图12（分离长度 vs 拐角）对比；正文明确指出。",
+      "type": "参数敏感性",
+      "strength": "强",
+      "source": "p18-19、p24；图11、图12",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "没有任何单一标度可全球适用：wave time、heat-transfer time、flow time、flow length 均无法把全部文献数据归一到常数。",
+      "evidence": "图14-图17 的数据散度；正文明确 none of the scaling parameters investigated is universal。",
+      "type": "文献再分析",
+      "strength": "强",
+      "source": "p22-26；图14-图17",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "热流时间系统性高估热流建立时间，可作保守上界，但有时高估数量级。",
+      "evidence": "图14：热流建立时间分布在 0.037–1.175 tH，多数低于 1；正文称 reasonable upper estimate。",
+      "type": "标度评估",
+      "strength": "中",
+      "source": "p22-24；图14",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "flow length/flow time 在同一设施、相似几何的实验族内可较好插值，但跨几何失效。",
+      "evidence": "图17 中同类设施数据随储气焓近似线性，本文不同拐角的数值点则明显分散；正文给出实验族定义。",
+      "type": "标度评估",
+      "strength": "中",
+      "source": "p24-26；图17",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "实验 tH/tw 不遵循 100/Me 的 Mach 标度，而近似为常数。",
+      "evidence": "图16：实验点随 M1 近似水平，与式(10)的双曲线不符。",
+      "type": "标度评估",
+      "strength": "中",
+      "source": "p23-24；图16；式(10)",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "数值收敛时间与实验建立时间差两个数量级，根源是定义不同而非物理矛盾。",
+      "evidence": "文献双锥数值 100–150 tc，同类实验约 1 tf；正文用机器精度与测量误差的差异解释。",
+      "type": "概念辨析",
+      "strength": "中",
+      "source": "p21-22",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "本文以 M∞=8.9 钝头体-8° 拐角的实验与数值为基准，研究了间歇风洞中 SWBLI 的建立时间。主要结论：文献中不存在全球适用的建立时间标度；建立判据必须明确定义，作者提出“稳态值 ±10%、±1σ、1 kHz 低通”的判据并同时用于实验与数值；扣除边界层建立后，实验压力/热流建立时间为 0.2/2.1 ms，数值为 0.111/0.771 ms，数值低估约 2 倍；压力建立约 3.65 tw，热流建立约 1.175 tH；变拐角时分离长度线性而建立时间非线性，所有基于 Lsep 的标度在变几何时失效；热流时间可作保守上界，flow length/flow time 仅适用于同一设施、相似几何的实验族；数值模拟是最有前景的预测手段，但必须尽量复现风洞启动过程。",
+  "contributions": [
+    "提出一个可同时用于实验与数值的 SWBLI 建立判据（10%/1σ/1 kHz），并把“建立”与“收敛”明确区分。",
+    "在同一模型、同一来流下给出实验与数值建立时间的直接对比，构成 benchmark 数据集。",
+    "给出本设施中边界层建立（约 6.5 ms）与 SWBLI 建立（0.2/2.1 ms）的分解。",
+    "系统评估 flow time、wave time、heat-transfer time、flow length 四类标度，指出局部/全局标度各自的失效模式。",
+    "通过 4°–16° 变拐角数值试验证明分离长度与建立时间不成比例，揭示几何因子的缺失。",
+    "给出按可用数据量选择预测方法的混合策略。"
+  ],
+  "limits": "仅一个设施、一个模型、一个 Mach 数（8.9）与氮气；实验仅 10 次压力、6 次热流运行，统计收敛有限；建立判据的 A、n、截止频率为人为选择，未给敏感性分析；数值为二维、未模拟风洞启动过程、未考虑 N2 离解，且建立时间计算使用比网格收敛解粗的网格（Lsep 差 10%）；实验观察到 Görtler 型三维涡，二维求解器无法捕捉再附区差异；解析标度使用湍流典型 St=0.01，而本文边界层为层流，存在概念不一致；未研究空气与非平衡效应；未给出建立时间的置信区间或不确定度传播。",
+  "significance": "对短时高超声速风洞试验设计有直接工程价值：可用“边界层建立时间 + 热流时间”作保守运行时间预算，用 tw 快速估计压力建立量级，用 flow length/flow time 在同一设施内插值不同来流条件；提醒设计者不能仅凭文献标度宣称实验已建立，尤其不能跨几何外推。方法上，统一判据使实验与数值的建立时间首次可直接比较，并解释了文献中数值“100–150 tf”与实验“约 1 tf”的表观矛盾。对进气道/隔离器类 SWBLI 试验，本文结论提示：短时风洞中压力测点可能早已稳定而热流与分离区尚未建立，热流与分离长度应作为建立判据的关键量。不能回答空气/真实气体、湍流边界层、强三维几何、其他 Mach 数下的建立时间，也不能给出可跨几何的通用公式。【AI推断，基于原文结论与方法定位】",
+  "quotes": [
+    {
+      "text": "The global applicability of any single metric is poor",
+      "supports": "没有单一建立时间标度可全球适用",
+      "source": "p1 摘要",
+      "use": "引用全文核心判断"
+    },
+    {
+      "text": "neither the boundary-layer nor SWBLI could be considered established before the last strong starting shock",
+      "supports": "最后一道强启动波之前边界层与 SWBLI 均未建立",
+      "source": "p14",
+      "use": "说明启动过程对建立时间的影响"
+    },
+    {
+      "text": "6.5 ms for surface pressure and 8.6 ms for the heat-transfer",
+      "supports": "分离区平均建立时间",
+      "source": "p17；图9",
+      "use": "引用分离区建立时间"
+    },
+    {
+      "text": "numerical simulations seem to under predict establishment times by a factor of ≈2",
+      "supports": "数值低估实验建立时间约 2 倍",
+      "source": "p20",
+      "use": "引用数值-实验差异"
+    },
+    {
+      "text": "Surface-pressure establishment takes approximately 3.5 wave-times",
+      "supports": "压力建立约 3.5 tw",
+      "source": "p22",
+      "use": "引用 wave time 标度结果"
+    },
+    {
+      "text": "heat-transfer establishment times are approximately equal to the heat-transfer time",
+      "supports": "热流建立约 1 tH",
+      "source": "p22",
+      "use": "引用热流时间标度结果"
+    },
+    {
+      "text": "none of the scaling parameters investigated is universal",
+      "supports": "所有考察的标度均非普适",
+      "source": "p26",
+      "use": "引用标度评估结论"
+    },
+    {
+      "text": "the flow length is also not a universal scaling parameter",
+      "supports": "flow length 标度不具全球适用性",
+      "source": "p24；图17",
+      "use": "说明全局标度的局限"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig03_p8.png",
+      "n": 3,
+      "page": 8,
+      "caption_zh": "模型几何：(a) 钝头中心体、模块化传感器插件与 8° 拐角分解图；(b) 鼻段尺寸；(c) 模型装配与传感器模块位置",
+      "caption_orig": "Figure 3: Model Geometry. (a) Exploded diagram showing blunt-nosed centre body, modular sensor inserts and the flare. (b) Nose section with dimensions. (c) Picture of model assembly with sensor module locations overlaid and sensor configurations shown below (not to scale). Black box marks field of view in figure 8.",
+      "why": "给出钝头圆柱-8° 拐角尺寸、拐角位置 x=0.212 m 与压力/热流模块布置，是理解分离区跨拐角、传感器覆盖范围与边界层边缘条件的几何基础。"
+    },
+    {
+      "file": "fig07_p15.png",
+      "n": 8,
+      "page": 15,
+      "caption_zh": "风洞启动过程：(a) x=0.2135 m 与喉道压力历史；(b) 同位置热流历史；(c)-(n) 对应时刻的 100,000 fps 纹影",
+      "caption_orig": "Figure 8: Starting process for test facility. (a) Pressure history at x=0.2135 m (blue) and the nozzle throat (red). Throat history is arbitrarily scaled for comparison. (b) Heat-transfer history at x=0.2135 m. (c) - (n) Schlieren photographs (100,000 fps) of the model at times marked in (a) and (b). Time is offset such that zero coincides with the tunnel start time. Field of view from schlieren is shown in figure 3.",
+      "why": "直接支撑“边界层与 SWBLI 在最后一道强启动波 6.51 ms 前均未建立”的核心判断，并说明多道启动波会反复压塌分离区，是全文建立时间基准的物理依据。"
+    },
+    {
+      "file": "fig08_p19.png",
+      "n": 9,
+      "page": 19,
+      "caption_zh": "沿程平均建立时间：表面压力（蓝）与热流（红），灰区为分离区",
+      "caption_orig": "Figure 9: Run-averaged establishment times for surface-pressure (blue) and heat-transfer (red). Grey region shows separation region. Flat lines mark average times for their respective regions.",
+      "why": "给出上游 6.3/6.5 ms、分离区 6.5/8.6 ms 的原始测量分布，是表3、表4 中实验建立时间的直接来源。"
+    },
+    {
+      "file": "fig12_p20.png",
+      "n": 13,
+      "page": 20,
+      "caption_zh": "实验（符号）与数值（实线）建立时间对比：压力（蓝）与热流（红），相对边界层建立",
+      "caption_orig": "Figure 13: Experimental (markers) and numerical (solid) establishment times for surface pressure (blue) and heat-transfer (red) relative to the boundary-layer establishment. Grey region shows separation region.",
+      "why": "支撑“数值低估约 2 倍、分离点差异最大”的核心对比结论，并与表3 的 1.8/2.7 比值相互印证。"
+    }
+  ],
+  "verification": {
+    "text_only": "是。仅使用 bundle 的 30 页全文、17 幅图注与 4 张表；未回读原 PDF，未引入外部知识或外部数据。",
+    "a_grade_supported": "是。A 级要点均有页码/表/图/公式支撑：来流与几何（p7、表1、表2、图3）、建立判据（p17 式17）、边界层建立 6.5 ms（p14、图8）、实验 0.2/2.1 ms（表3、表4、图9）、数值 0.111/0.771 ms（p18、表3、图13）、tw/tH（p22、表4）、变拐角（图11、图12）、标度非普适（图14-17、p26）。",
+    "attributes_marked": "是。原文明确、AI概括、AI推断逐条标注；机制段与工程意义末注明属性。",
+    "coverage": "bundle 1990 行、30 页全文读完（PAGE 1-30 至参考文献结束）；使用抓图清单中的图3、8、9、13；未使用 Fig. 1、2、4-7、10-12、14-17 作为 figures。",
+    "no_fabrication": "是。未编造页码、图号、公式或数据；正文未逐一列出的变拐角角度写“文中未逐一列出”，仅给图轴 4°–16°；T̄δ、tm 等无数值处写“文中未给”；表3 与表4、正文与表1 的数值差异如实列入 open_questions。",
+    "open_questions": [
+      "p7 称风洞“在 10 ms 后视为建立、稳态窗口 6 ms”，但 p14 与图9 显示边界层在 6.5 ms 已建立、数据在 6–10 ms 取，二者时间基准需回原文确认。",
+      "表3 实验压力建立 0.2 ms、表4 为 0.219 ms；热流 2.1 与 2.101 ms，正文与表格的圆整/取值口径需统一。",
+      "正文称数值低估约 2 倍，而表3 的比值为 1.8（压力）与 2.7（热流），差异范围需明确。",
+      "建立判据取 St=0.01（典型湍流值），但本文边界层为层流，tH 及 tH/tw 的定量值是否适用需核对。",
+      "A=0.1、n=1、1 kHz 的选择缺少敏感性分析；作者仅称量级对较宽参数范围不敏感，未给数据。",
+      "变拐角数值试验的具体角度列表未在正文给出，只能从图11 横轴读为 4°–16°，需回原文/图确认。",
+      "二维求解器无法捕捉实验观察到的 Görtler 型三维涡，再附区压力/热流差异有多少来自三维效应，文中未定量。",
+      "数值建立时间使用比网格收敛解粗的网格（Lsep 差 10%），该误差与“低估 2 倍”是否部分相关，文中未讨论。"
+    ]
+  }
+}

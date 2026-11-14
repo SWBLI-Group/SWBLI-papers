@@ -1,0 +1,574 @@
+{
+  "id": 1277,
+  "read_note": "1956年JET PROPULSION理论论文，共12页PDF：主体印刷页259–269，另含p.274的讨论/附文；抓图清单中p.11的Table 1/2属于附文“Effect of Chemical Reactions…”，不是Lees主体数据，故未选为figures。bundle OCR公式有个别乱码，已用原PDF第3–8页（印刷页261–266）核对式[9]–[19]；Fig.2/Fig.3位于印刷页265（PDF第7页）。",
+  "one_line": "用相似解把高超声速钝头体层流热流写成驻点值乘压力分布函数，并给出扩散控制极限。",
+  "three_sentence": [
+    {
+      "text": "论文研究高超声速钝头体层流边界层传热的两个极限：热化学平衡（反应极快）与扩散控制（体积复合极慢）。",
+      "attr": "原文明确"
+    },
+    {
+      "text": "在强冷却pw/pe≫1下，表面无量纲焓梯度近似取零压梯度值0.47Pr^{1/3}，热流分布可由压力分布显式积分得到。",
+      "attr": "原文明确"
+    },
+    {
+      "text": "按动力论估计原子-分子扩散系数后，扩散与传导热流最大比约1.30；作者强调该简化结果仍需实验检验。",
+      "attr": "原文明确"
+    }
+  ],
+  "imrad": {
+    "introduction": "研究问题：高超声速飞行时钝头体前缘驻点区发生强脱体激波，动能转化为热与化学能，边界层通常为层流，传热机制可能远离常规分子导热。作者要给出两类极限的简单解析解：(a)完全热化学平衡，反应速率远快于对流/跨流线扩散；(b)扩散控制，体积复合速率远慢于跨流线扩散。已有Cohen–Reshotko、Lai、Hayes等积分/相似方法，但需要能显式给出表面热流分布、便于与实验比较的结果；实际物理情形预计介于两极限之间（印刷页259–260）。",
+    "methods": "把边界层气体简化为原子-分子二元混合，用单一扩散系数D12；忽略NO贡献，并在Ma∞<约25时忽略离子/电子。写出连续、动量、能量、组分与状态方程[1]–[5]；用Levy变换与轴对称Mangler变换引入S、η与流函数ψ，化为相似常微分方程[9]–[10]。在Pr=1、C=1时进一步化为f'''+ff''+β[g−(f')²]=0、g''+fg'=0，并引用Cohen–Reshotko数值解。强冷却pw/pe≫1时忽略压力梯度对速度/总焓剖面的直接影响；用修正牛顿压力分布p/p0'=sin²θb+(p∞/p0')cos²θb计算半球与钝锥。扩散控制极限把组分方程化为与能量方程同形、以Schmidt数替代Prandtl数的方程；用Lennard-Jones动力论估算D12、Sc、Pr及(ρD12Cp/k)w。",
+    "results": "零压梯度下表面无量纲焓梯度g'(0)≈0.47Pr^{1/3}，在pw/pe≫1时几乎不随Tw、Me和压力梯度变化。热流写成qw≈0.50Pr^{-2/3}√((ρeμe)0)√(ue)hseF(s)（式[11]/[12]），驻点由式[12a]/[13]给出。半球分布由式[14]/[15]与D(θ)给出；近驻点qw/(qw)0≈1−(0.722/(γ∞M∞²)−0.667)θ²；M∞>5时高超声速分布几乎覆盖整个半球；M∞=2时比Stine–Wanlass低12–15%。钝锥由A(θc)、B(θc)表给出：θc=10°,20°,30°,40°时A/B=0.181/172.0、0.326/+4.2、0.443/−0.20、0.520/−0.26。扩散控制极限最大扩散/传导比≈(ρD12Cp/k)w^{2/3}；取Sc≈0.49、Pr≈0.71得(ρD12Cp/k)w≈1.45，最大比≈1.30。",
+    "discussion": "机制：强冷却使壁面密度远高于边界层外缘（pw/pe≈10–20），压力梯度对速度剖面的影响被大幅削弱；驻点β对回转体为1/2、圆柱为1，但pw/pe≪1时最大有效β仅1/8与1/4，传热对压力梯度更不敏感。热流分布主要由外部压力分布与驻点值决定，化学详情只在确定hse与物性时进入。局限：二元混合、单一D12、Le=1、Pr常数、C=1、局部相似、修正牛顿压力分布与强冷却假设；实验数据分散，M∞=2时与Stine–Wanlass差12–15%；近分离处局部相似失效；动力论碰撞参数仍有不确定性。"
+  },
+  "core_points": [
+    {
+      "point": "论文把钝头体层流传热分为热化学平衡与扩散控制两个极限，并认为实际情形介于二者之间。",
+      "type": "研究框架",
+      "grade": "A",
+      "source": "印刷页259–260，引言",
+      "attr": "原文明确"
+    },
+    {
+      "point": "强冷却使pw/pe≈10–20，壁面密度远高于外缘，速度与总焓剖面对压力梯度不敏感。",
+      "type": "关键物理",
+      "grade": "A",
+      "source": "印刷页260，2.1节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "采用二元原子-分子混合、单一D12，忽略NO及Ma∞<约25时的离子/电子。",
+      "type": "简化假设",
+      "grade": "A",
+      "source": "印刷页260，2.1节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "用Levy变换与轴对称Mangler变换把边界层方程化为相似ODE[9]–[10]，边界条件为f(0)=f'(0)=0、f'→1，g(0)=gw或g'(0)=0、g→1。",
+      "type": "理论方法",
+      "grade": "A",
+      "source": "印刷页262，2.2节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "零压梯度下g'(0)≈0.47Pr^{1/3}，在pw/pe≫1时可近似用于整个钝头体表面。",
+      "type": "核心结果",
+      "grade": "A",
+      "source": "印刷页263–264，2.2–2.3节",
+      "attr": "原文明确"
+    },
+    {
+      "point": "热流分布写成qw≈0.50Pr^{-2/3}√((ρeμe)0)√(ue)hseF(s)，F(s)含压力、速度与半径的积分。",
+      "type": "核心公式",
+      "grade": "A",
+      "source": "印刷页264，式[11]–[12]",
+      "attr": "原文明确"
+    },
+    {
+      "point": "驻点热流由式[12a]/[13]给出，含修正牛顿压力分布的G(M∞;γ,γw)。",
+      "type": "核心公式",
+      "grade": "A",
+      "source": "印刷页264，式[12a]–[13]",
+      "attr": "原文明确"
+    },
+    {
+      "point": "半球分布由式[14]/[15]与D(θ)给出；M∞>5时高超声速分布几乎覆盖整个半球，M∞=2时比Stine–Wanlass低12–15%。",
+      "type": "结果",
+      "grade": "A",
+      "source": "印刷页265，3节，图2",
+      "attr": "原文明确"
+    },
+    {
+      "point": "钝锥用A(θc)、B(θc)表描述；θc=30°/40°时锥裙分布与等效尖锥几乎相同，细长锥在接合部后数个鼻半径内低于尖锥。",
+      "type": "结果",
+      "grade": "A",
+      "source": "印刷页265–266，3节，图3",
+      "attr": "原文明确"
+    },
+    {
+      "point": "扩散控制极限把组分方程化为Schmidt数控制的同形方程，最大扩散/传导热流比≈(ρD12Cp/k)w^{2/3}（式[19]）。",
+      "type": "理论结果",
+      "grade": "A",
+      "source": "印刷页266，4.1节，式[16]–[19]",
+      "attr": "原文明确"
+    },
+    {
+      "point": "按Lennard-Jones动力论取σ12=3.3 Å、ε12/k=84 K，得Sc≈0.49、Pr≈0.71、(ρD12Cp/k)w≈1.45，最大比≈1.30。",
+      "type": "定量估计",
+      "grade": "A",
+      "source": "印刷页267–268，4.2节，式[20]–[21]",
+      "attr": "原文明确"
+    },
+    {
+      "point": "结论受二元混合、单一D12、Le=1、Pr常数、C=1、局部相似、修正牛顿与强冷却等假设限制，作者明确要求更多实验检验。",
+      "type": "局限",
+      "grade": "A",
+      "source": "印刷页260、268",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "来流/飞行条件",
+      "value": "高超声速飞行；讨论范围以Ma∞<约25为忽略离子/电子的界限",
+      "source": "印刷页260，2.1节"
+    },
+    {
+      "item": "壁面热条件",
+      "value": "强冷却，Tw/Te≪1；pw/pe≈10–20",
+      "source": "印刷页260，2.1节"
+    },
+    {
+      "item": "气体模型",
+      "value": "二元原子-分子混合；单一扩散系数D12；NO贡献忽略",
+      "source": "印刷页260，2.1节"
+    },
+    {
+      "item": "极限(a)",
+      "value": "完全热化学平衡：反应速率远快于对流与跨流线扩散",
+      "source": "印刷页259–260，引言"
+    },
+    {
+      "item": "极限(b)",
+      "value": "扩散控制：体积复合速率远慢于跨流线扩散，近壁温度较低",
+      "source": "印刷页259–260，引言"
+    },
+    {
+      "item": "几何",
+      "value": "不偏航回转体或平面体；半球；球冠钝锥，θc=10°,20°,30°,40°",
+      "source": "印刷页265–266，3节"
+    },
+    {
+      "item": "边界层",
+      "value": "层流、薄边界层，δ/r0≪1，激波与边界层分明；Re_R0足够高（约>10^4量级）",
+      "source": "印刷页261，脚注9"
+    },
+    {
+      "item": "物性/数值假设",
+      "value": "Lewis数=1；Pr≈0.71；相似计算中常取Pr=1、C=1；γ∞=1.40；修正牛顿压力分布",
+      "source": "印刷页262–266"
+    },
+    {
+      "item": "表面催化",
+      "value": "扩散控制极限中取壁面原子浓度为零（完全催化）计算扩散热流",
+      "source": "印刷页261、266"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "Ma∞",
+      "definition": "来流Mach数",
+      "value": "Fig.2曲线取2、3、5、10、∞；忽略离子的适用范围约<25",
+      "relation": "hse≈u∞²/2（高超声速飞行）",
+      "source": "印刷页260、265，图2"
+    },
+    {
+      "name": "Re_R0",
+      "definition": "以鼻尖半径R0为参考的Reynolds数",
+      "value": "要求边界层与激波分明，约>10^4量级",
+      "relation": "决定δ/r0与相似解适用性",
+      "source": "印刷页261，脚注9"
+    },
+    {
+      "name": "hse",
+      "definition": "边界层外缘总焓",
+      "value": "飞行时≈u∞²/2；风洞为储室总焓",
+      "relation": "热流的能量尺度",
+      "source": "印刷页264"
+    },
+    {
+      "name": "Tw/Te",
+      "definition": "壁温与外缘温度比",
+      "value": "≪1（强冷却）",
+      "relation": "决定pw/pe与g(0)=gw",
+      "source": "印刷页260"
+    },
+    {
+      "name": "pw/pe",
+      "definition": "壁面与外缘密度比",
+      "value": "约10–20",
+      "relation": "强冷却与分子量变化共同造成",
+      "source": "印刷页260"
+    },
+    {
+      "name": "β",
+      "definition": "速度梯度参数(2s/ue)(due/ds)",
+      "value": "驻点1/2（回转体）、1（圆柱）；pw/pe≪1时最大有效值1/8、1/4",
+      "relation": "控制压力梯度对速度剖面的影响",
+      "source": "印刷页263"
+    },
+    {
+      "name": "C",
+      "definition": "Chapman–Rubesin函数ρμ/(ρeμe)",
+      "value": "相似计算中取1；高焓下μρ≈μeρe",
+      "relation": "进入动量/能量方程[9]–[10]",
+      "source": "印刷页262–263"
+    },
+    {
+      "name": "Pr",
+      "definition": "Prandtl数Cpμ/k",
+      "value": "干空气约0.71；相似计算常取1",
+      "relation": "能量方程[10]与热流式[11]",
+      "source": "印刷页264、268"
+    },
+    {
+      "name": "Le",
+      "definition": "Lewis数ρD12Cp/k",
+      "value": "取1以简化能量方程",
+      "relation": "使能量方程与组分方程同形",
+      "source": "印刷页262"
+    },
+    {
+      "name": "Sc",
+      "definition": "Schmidt数μ/(ρD12)",
+      "value": "≈0.543/A*(T*)；252–3360 K为0.495–0.482",
+      "relation": "扩散控制极限中替代Pr",
+      "source": "印刷页267–268"
+    },
+    {
+      "name": "D12",
+      "definition": "原子-分子二元扩散系数",
+      "value": "由式[20]计算；取σ12=3.3 Å、ε12/k=84 K",
+      "relation": "Lennard-Jones动力论",
+      "source": "印刷页267，式[20]"
+    },
+    {
+      "name": "(ρD12Cp/k)w",
+      "definition": "扩散与传导热流之比的控制参数",
+      "value": "≈1.45",
+      "relation": "最大扩散/传导≈(1.45)^{2/3}≈1.30",
+      "source": "印刷页268"
+    }
+  ],
+  "methods": [
+    {
+      "item": "气体模型",
+      "value": "二元原子-分子混合，单一D12；忽略NO，Ma∞<约25时忽略离子/电子",
+      "source": "印刷页260，2.1节"
+    },
+    {
+      "item": "控制方程",
+      "value": "连续[1]、动量[2]、能量[3]、组分[4]、状态[5]",
+      "source": "印刷页261，2.1节"
+    },
+    {
+      "item": "坐标变换",
+      "value": "Levy变换[6]–[7]加轴对称Mangler变换；流函数[8a]/[8b]",
+      "source": "印刷页262，2.2节"
+    },
+    {
+      "item": "相似解",
+      "value": "ψ=(2S)^{1/2}f(η)、u/ue=f'、hs/hse=g，得动量[9]与能量[10]",
+      "source": "印刷页262，2.2节"
+    },
+    {
+      "item": "常物性简化",
+      "value": "Pr=1、C=1时化为f'''+ff''+β[g−(f')²]=0、g''+fg'=0；引用Cohen–Reshotko数值解",
+      "source": "印刷页263"
+    },
+    {
+      "item": "压力分布",
+      "value": "修正牛顿p/p0'=sin²θb+(p∞/p0')cos²θb；半球与钝锥几何代入式[14]",
+      "source": "印刷页264–265"
+    },
+    {
+      "item": "扩散极限",
+      "value": "组分方程[16]化为Zi方程，Sc替代Pr；扩散热流式[17]与比值式[19]",
+      "source": "印刷页266，4.1节"
+    },
+    {
+      "item": "动力论物性",
+      "value": "Lennard-Jones势，D12式[20]、黏性式[21]；推荐σ1=0.80 Å、σ12=3.3 Å、σ2=3.69 Å、ε1/k=1.14×10^5 K、ε12/k=84 K",
+      "source": "印刷页267–268，4.2节"
+    },
+    {
+      "item": "对比验证",
+      "value": "与Squire/Sibulkin驻点解、Cohen–Reshotko相似解、Stine–Wanlass、Korobkin及实验压力分布对比",
+      "source": "印刷页264–265"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "在强冷却pw/pe≫1条件下，把可压缩层流边界层用Levy/Mangler变换化为低相似解；压力梯度对速度/总焓剖面影响很小，表面焓梯度可用零压梯度值0.47Pr^{1/3}；于是热流分布由驻点值与外部压力分布积分显式给出。扩散控制极限则把组分方程化为Schmidt数控制的同形方程，得到扩散/传导比的上界。",
+    "assumptions": [
+      "二元原子-分子混合，单一D12；忽略NO，Ma∞<约25时忽略离子/电子。",
+      "强冷却Tw/Te≪1，pw/pe≈10–20；边界层外缘等熵，压力梯度沿法向不变。",
+      "Le=1，Pr取常数；相似计算中进一步取Pr=1、C=1。",
+      "局部相似：速度与总焓剖面只通过β、ue²/2hse、gw及物性比依赖于s。",
+      "修正牛顿压力分布，γ∞=1.40；半球/钝锥几何用θ或θc描述。",
+      "扩散控制极限：体积复合可忽略，壁面原子浓度取零（完全催化）。"
+    ],
+    "steps": [
+      {
+        "title": "写出二元混合边界层方程",
+        "text": "对定常、轴对称（k=1）或平面（k=0）钝头体，写出连续[1]、动量[2]、能量[3]、组分[4]与状态[5]方程；hs包含化学焓与动能（印刷页261）。",
+        "latex": [
+          "\\dfrac{\\partial}{\\partial s}\\left(\\rho u r_0^k\\right)+\\dfrac{\\partial}{\\partial y}\\left(\\rho v r_0^k\\right)=0 \\qquad [1]",
+          "\\rho\\left(u\\dfrac{\\partial u}{\\partial s}+v\\dfrac{\\partial u}{\\partial y}\\right)=-\\dfrac{dp_e}{ds}+\\dfrac{\\partial}{\\partial y}\\left(\\mu\\dfrac{\\partial u}{\\partial y}\\right) \\qquad [2]",
+          "\\rho\\left(u\\dfrac{\\partial h_s}{\\partial s}+v\\dfrac{\\partial h_s}{\\partial y}\\right)=\\dfrac{\\partial}{\\partial y}\\left(\\dfrac{\\mu}{Pr}\\dfrac{\\partial h_s}{\\partial y}\\right)+\\dfrac{\\partial}{\\partial y}\\left\\{\\mu\\left(1-\\dfrac{1}{Pr}\\right)\\dfrac{\\partial}{\\partial y}\\left(\\dfrac{u^2}{2}\\right)\\right\\}+\\dfrac{\\partial}{\\partial y}\\left\\{\\rho D_{12}\\left(1-\\dfrac{1}{Le}\\right)\\sum_i h_i\\dfrac{\\partial C_i}{\\partial y}\\right\\} \\qquad [3]",
+          "\\rho u\\dfrac{\\partial C_i}{\\partial s}+\\rho v\\dfrac{\\partial C_i}{\\partial y}=\\dfrac{\\partial}{\\partial y}\\left(\\rho D_{12}\\dfrac{\\partial C_i}{\\partial y}\\right)+w_i \\qquad [4]",
+          "p=\\rho\\dfrac{R_0}{\\mathfrak{m}}T,\\qquad \\mathfrak{m}=\\left[\\sum_i\\dfrac{C_i}{\\mathfrak{m}_i}\\right]^{-1} \\qquad [5]"
+        ],
+        "source": "印刷页261，2.1节"
+      },
+      {
+        "title": "Levy与Mangler变换",
+        "text": "引入相似坐标η与S，使动量/能量方程化为常微分方程；S含ρeμeuer0^{2k}的积分，η含密度比积分（印刷页262）。",
+        "latex": [
+          "\\eta=\\dfrac{\\rho_e u_e r_0^k}{(2S)^{1/2}}\\int_0^y\\dfrac{\\rho}{\\rho_e}\\,dy",
+          "S=\\int_0^s\\rho_e\\mu_e u_e r_0^{2k}\\,ds \\qquad [6]",
+          "\\dfrac{\\partial}{\\partial y}=\\dfrac{\\rho u_e r_0^k}{(2S)^{1/2}}\\dfrac{\\partial}{\\partial \\eta} \\qquad [7]"
+        ],
+        "source": "印刷页262，式[6]–[7]"
+      },
+      {
+        "title": "引入流函数与相似函数",
+        "text": "用ψ自动满足连续方程，并令ψ=(2S)^{1/2}f(η)、u/ue=f'、hs/hse=g；由此得到动量与能量相似方程（印刷页262）。",
+        "latex": [
+          "\\rho u r_0^k=\\dfrac{\\partial\\psi}{\\partial y},\\qquad \\rho v r_0^k=-\\dfrac{\\partial\\psi}{\\partial s} \\qquad [8a,8b]",
+          "\\psi=(2S)^{1/2}f(\\eta),\\qquad \\dfrac{u}{u_e}=f'(\\eta),\\qquad \\dfrac{h_s}{h_{se}}=g(\\eta)",
+          "(Cf'')'+ff''+\\beta\\left[\\dfrac{\\rho_e}{\\rho}-(f')^2\\right]=0 \\qquad [9]",
+          "\\left(\\dfrac{C}{Pr}g'\\right)'+fg'+\\dfrac{u_e^2}{2h_{se}}\\left[2\\left(1-\\dfrac{1}{Pr}\\right)f'f''\\right]'=0 \\qquad [10]"
+        ],
+        "source": "印刷页262，式[8]–[10]"
+      },
+      {
+        "title": "边界条件与常物性简化",
+        "text": "边界条件为f(0)=f'(0)=0、f'→1，g(0)=gw或g'(0)=0、g→1；当Pr=1、C=1时方程组化为经典形式，并用ρe/ρ=g+((γ−1)/2)Me²[g−(f')²]闭合（印刷页262–263）。",
+        "latex": [
+          "f(0)=f'(0)=0,\\qquad f'(\\eta)\\to1\\ (\\eta\\to\\infty)",
+          "g(0)=g_w\\ \\text{或}\\ g'(0)=0,\\qquad g(\\eta)\\to1\\ (\\eta\\to\\infty)",
+          "f'''+ff''+\\beta\\left[g-(f')^2\\right]=0",
+          "g''+fg'=0",
+          "\\dfrac{\\rho_e}{\\rho}=g+\\dfrac{\\gamma-1}{2}M_e^2\\left[g-(f')^2\\right]"
+        ],
+        "source": "印刷页262–263"
+      },
+      {
+        "title": "强冷却下取零压梯度焓梯度",
+        "text": "pw/pe≫1时压力梯度对速度剖面影响很小；对传热影响更小，因为g'(0)的变化取决于速度剖面变化在边界层上的积分。数值上g'(0)≈0.47Pr^{1/3}，与Tw、Me和压力梯度几乎无关（印刷页263）。",
+        "latex": [
+          "g'(0)\\approx0.47\\,Pr^{1/3}"
+        ],
+        "source": "印刷页263"
+      },
+      {
+        "title": "导出表面热流分布",
+        "text": "把g'(0)代入Fourier导热，得到qw≈0.50Pr^{-2/3}√(ρeμe)√(due/ds)hseF(s)；F(s)含p/p0'、ue/u∞、r0/R0的积分（印刷页264）。",
+        "latex": [
+          "q_w\\approx0.50\\,Pr^{-2/3}\\sqrt{(\\rho_e\\mu_e)_0}\\sqrt{u_e}\\,h_{se}F(s) \\qquad [12]",
+          "F(s)=\\dfrac{(1/\\sqrt{2})(p/p_0')(\\omega_e/\\omega_0)(u_e/u_\\infty)(r_0/R_0)^k}{\\left[\\int_0^s(p/p_0')(\\omega_e/\\omega_0)(u_e/u_\\infty)(r_0/R_0)^{2k}\\,ds\\right]^{1/2}}"
+        ],
+        "source": "印刷页264，式[11]–[12]"
+      },
+      {
+        "title": "驻点热流",
+        "text": "在驻点，2S与(du_e/ds)0、R0关联；用修正牛顿压力分布可把驻点热流写成含G(M∞;γ,γw)的形式（印刷页264）。",
+        "latex": [
+          "(q_w)_0\\approx0.50\\,2^{k/2}(Pr)^{-2/3}\\sqrt{(\\rho_e\\mu_e)_0}\\sqrt{u_\\infty h_{se}}\\,\\dfrac{\\sqrt{[(R_0/u_\\infty)(du_e/ds)]_{s=0}}}{\\sqrt{R_0}} \\qquad [12a]",
+          "(q_w)_0\\approx\\dfrac{0.50\\,2^{k/2}(Pr)^{-2/3}\\sqrt{(\\rho_e\\mu_e)_0}\\sqrt{u_\\infty}\\,h_{se}\\,G(M_\\infty;\\gamma,\\gamma_w)}{\\sqrt{R_0}} \\qquad [13]"
+        ],
+        "source": "印刷页264，式[12a]–[13]"
+      },
+      {
+        "title": "半球热流分布",
+        "text": "对半球取ds=R0dθ、r0=R0sinθ，代入式[14]得式[15]与D(θ)；近驻点展开为1−(0.722/(γ∞M∞²)−0.667)θ²+…（印刷页265）。",
+        "latex": [
+          "\\dfrac{q_w}{(q_w)_0}=\\dfrac{2\\theta\\sin\\theta\\left\\{\\left[1-\\dfrac{1}{\\gamma_\\infty M_\\infty^2}\\right]\\cos^2\\theta+\\dfrac{1}{\\gamma_\\infty M_\\infty^2}\\right\\}}{[D(\\theta)]^{1/2}} \\qquad [15]",
+          "\\dfrac{q_w}{(q_w)_0}=1-\\left(\\dfrac{0.722}{\\gamma_\\infty M_\\infty^2}-0.667\\right)\\theta^2+\\cdots"
+        ],
+        "source": "印刷页265，式[14]–[15]"
+      },
+      {
+        "title": "钝锥热流分布",
+        "text": "球冠段与半球相同；锥裙取r0=sf sinθc、sf/R0=cotθc+[s/R0−(π/2−θc)]，得到A(θc)、B(θc)表达式及数值表（印刷页265–266）。",
+        "latex": [
+          "\\dfrac{q_w}{(q_w)_0}=\\dfrac{A(\\theta_c)}{[B(\\theta_c)+(s'/R_0)^3]^{1/2}}",
+          "A(\\theta_c)=\\dfrac{\\sqrt{3}}{2}\\left[\\left(1-\\dfrac{1}{\\gamma_\\infty M_\\infty^2}\\right)\\sin^2\\theta_c+\\dfrac{1}{\\gamma_\\infty M_\\infty^2}\\right]^{1/2}\\left(\\dfrac{\\pi}{2}-\\theta_c\\right)^{1/2}",
+          "B(\\theta_c)=\\sin^4\\theta_c\\left\\{\\left[1-\\dfrac{1}{\\gamma_\\infty M_\\infty^2}\\right]\\sin^2\\theta_c+\\dfrac{1}{\\gamma_\\infty M_\\infty^2}\\right\\}\\left[\\dfrac{D(\\theta)}{\\theta}\\right]_{\\theta=\\pi/2-\\theta_c}-\\cot^3\\theta_c"
+        ],
+        "source": "印刷页265–266，3节"
+      },
+      {
+        "title": "扩散控制极限",
+        "text": "体积复合可忽略时组分方程[16]化为Zi方程，Sc=μ/(ρD12)替代Pr；扩散热流式[17]与总热流比值式[19]给出两极限间的范围（印刷页266）。",
+        "latex": [
+          "\\rho u\\dfrac{\\partial C_i}{\\partial s}+\\rho v\\dfrac{\\partial C_i}{\\partial y}=\\dfrac{\\partial}{\\partial y}\\left(\\rho D_{12}\\dfrac{\\partial C_i}{\\partial y}\\right) \\qquad [16]",
+          "(q_w)_{diff}=(\\rho D_{12})_w\\left(\\dfrac{\\partial}{\\partial y}\\right)_w\\left[\\sum_i h_{iw}(C_{ie}-C_{iw})\\right]0.50\\left(\\dfrac{\\mu}{\\rho D_{12}}\\right)_w^{1/3} \\qquad [17]",
+          "\\dfrac{(q_w)_{cond}+(q_w)_{diff}}{(q_w)_{equil}}\\approx\\left[1-\\dfrac{\\sum_i h_{iw}(C_{ie}-C_{iw})}{h_{se}}\\right]+\\left(\\dfrac{\\rho D_{12}C_p}{k}\\right)_w^{2/3}\\dfrac{\\sum_i h_{iw}(C_{ie}-C_{iw})}{h_{se}} \\qquad [19]"
+        ],
+        "source": "印刷页266，式[16]–[19]"
+      },
+      {
+        "title": "动力论估计扩散系数与比值",
+        "text": "用Lennard-Jones势的D12式[20]与黏性式[21]，取σ12=3.3 Å、ε12/k=84 K，得Sc≈0.49、Pr≈0.71，故(ρD12Cp/k)w≈0.71/0.49≈1.45，最大扩散/传导比≈(1.45)^{2/3}≈1.30（印刷页267–268）。",
+        "latex": [
+          "(D_{12})_1=\\dfrac{0.002628\\sqrt{T^3(1/m_1+1/m_2)}}{p\\sigma_{12}^2\\Omega_{12}^{(1,1)*}(T_{12}^*)}\\quad \\mathrm{cm^2/s} \\qquad [20]",
+          "\\mu\\times10^7=266.93\\,\\dfrac{\\sqrt{M_2T}}{\\sigma_2^2\\Omega_2^{(2,2)*}(T_2^*)}\\quad \\mathrm{gm/(cm\\,s)} \\qquad [21]",
+          "Sc=\\dfrac{\\mu}{\\rho D_{12}}\\approx\\dfrac{0.543}{A^*(T^*)}",
+          "\\left(\\dfrac{\\rho D_{12}C_p}{k}\\right)_w=\\dfrac{(C_p\\mu/k)_w}{(\\mu/\\rho D_{12})_w}\\approx\\dfrac{0.71}{0.49}\\approx1.45",
+          "\\left(\\dfrac{\\rho D_{12}C_p}{k}\\right)_w^{2/3}\\approx1.30"
+        ],
+        "source": "印刷页267–268，4.2节"
+      }
+    ],
+    "result": "得到平衡极限下钝头体表面热流的显式分布：qw由驻点值(qw)0与压力分布函数F(s)相乘给出，半球/钝锥分别有式[15]与A/B表；扩散控制极限给出最大扩散/传导比≈(ρD12Cp/k)w^{2/3}≈1.30（印刷页264–268）。",
+    "limits": "推导依赖二元混合、单一D12、Le=1、Pr常数、C=1、局部相似、修正牛顿压力分布与pw/pe≫1；近分离处局部相似失效；动力论碰撞参数和实验数据均有不确定性。原PDF与OCR对式[11]的系数排布略有差异，本文以式[12]及PDF印刷页264为准。"
+  },
+  "mechanism": "【原文明确】钝头体前缘强激波把飞行动能变为热与化学能，但强冷却使壁面附近密度远高于外缘（pw/pe≈10–20），边界层很薄；压力梯度主要改变密度而不是速度剖面，故速度与总焓剖面接近零压梯度的Blasius/相似解，表面焓梯度近似常数0.47Pr^{1/3}。【AI概括】于是热流分布=驻点热流×由外部压力分布决定的几何因子，化学平衡只通过hse和物性进入；扩散控制时，原子向壁面的扩散相当于一种“组分导热”，其最大贡献由(ρD12Cp/k)w^{2/3}度量。【AI推断】两种极限给出实际有限速率化学非平衡热流的上下界，σ12=3.3 Å等动力论参数是1.30这一估计的主要不确定性来源。",
+  "findings": [
+    {
+      "finding": "强冷却钝头体表面无量纲焓梯度近似为0.47Pr^{1/3}，与Tw、Me和压力梯度几乎无关。",
+      "evidence": "正文明确给出0.47Pr^{1/3}；Fig.1b的Cohen–Reshotko数值解显示β从0到2时g'(0)变化很小；式[11]取整为0.50Pr^{1/3}（印刷页263–264）。",
+      "type": "核心结果",
+      "strength": "强",
+      "source": "印刷页263–264，图1b，式[11]",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "压力梯度对传热的影响比对摩阻更小；驻点β=1/2（回转体）或1（圆柱），但有效β最大仅1/8或1/4。",
+      "evidence": "正文指出pw/pe≪1时压力梯度项等效于β/4；Fig.1a/1b显示g'(0)随β变化远小于f''(0)（印刷页263）。",
+      "type": "机制",
+      "strength": "强",
+      "source": "印刷页263，图1a–1b",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "平衡极限下热流分布可写成驻点值乘压力分布函数F(s)。",
+      "evidence": "式[11]/[12]给出qw≈0.50Pr^{-2/3}√((ρeμe)0)√(ue)hseF(s)，F(s)含p/p0'与几何积分（印刷页264）。",
+      "type": "核心公式",
+      "strength": "强",
+      "source": "印刷页264，式[11]–[12]",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "半球热流在M∞>5时几乎整半球接近高超声速分布；M∞=2时比Stine–Wanlass低12–15%。",
+      "evidence": "Fig.2给出qw/(qw)0随θ的分布；正文明确M∞=2的差异及M∞>5的覆盖范围（印刷页265）。",
+      "type": "结果",
+      "strength": "强",
+      "source": "印刷页265，图2",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "钝锥锥裙在θc=30°/40°时与等效尖锥几乎相同；细长锥在接合部后数个鼻半径内低于尖锥。",
+      "evidence": "A/B数值表（10°:0.181/172.0；20°:0.326/+4.2；30°:0.443/−0.20；40°:0.520/−0.26）及Fig.3（印刷页265–266）。",
+      "type": "结果",
+      "strength": "强",
+      "source": "印刷页265–266，图3",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "扩散控制极限的最大扩散/传导热流比为(ρD12Cp/k)w^{2/3}。",
+      "evidence": "式[17]与式[19]；正文明确该比值衡量两极限的最大差异（印刷页266）。",
+      "type": "理论结果",
+      "strength": "强",
+      "source": "印刷页266，式[16]–[19]",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "取动力论估计后，扩散/传导最大比约为1.30。",
+      "evidence": "Sc≈0.49、Pr≈0.71，得(ρD12Cp/k)w≈1.45；1.45^{2/3}≈1.30（印刷页267–268）。",
+      "type": "定量估计",
+      "strength": "中",
+      "source": "印刷页267–268，4.2节",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "两极限之外的实际热流预计介于平衡与扩散控制结果之间，需实验判定。",
+      "evidence": "引言明确实际物理情形位于两极限之间；结论要求更多理论与（尤其）实验研究（印刷页260、268）。",
+      "type": "适用性",
+      "strength": "中",
+      "source": "印刷页260、268",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "两类极限给出钝头体层流热流的近似上下界：平衡极限下热流分布由驻点值和外部压力分布显式决定；扩散控制极限把能量方程换成Schmidt数控制的组分方程，最大扩散/传导比约1.30。半球与钝锥公式可直接计算分布，但需要实验检验。",
+  "limits": "二元混合、单一D12、忽略NO/离子（Ma∞<约25）、Le=1、Pr常数、C=1、局部相似、修正牛顿压力分布、强冷却pw/pe≫1；近分离或强逆压梯度处局部相似失效；动力论碰撞参数与实验数据均有不确定性；表面催化/有限速率化学未真正求解。",
+  "significance": "给出高超声速钝头体驻点与表面热流的经典显式公式，提供化学平衡与扩散控制两种界限，便于工程估算、实验设计与后续非平衡计算比较。",
+  "quotes": [
+    {
+      "text": "two limiting cases of laminar heat transfer over blunt-nosed bodies at hypersonic flight speeds",
+      "supports": "全文以两极限组织分析",
+      "source": "印刷页259，摘要",
+      "use": "研究框架"
+    },
+    {
+      "text": "the gas density near the surface of a blunt-nosed body is much higher than the density just outside the boundary layer",
+      "supports": "pw/pe≫1是简化压力梯度的物理基础",
+      "source": "印刷页260，2.1节",
+      "use": "关键假设"
+    },
+    {
+      "text": "represented quite accurately by the zero pressure gradient value of 0.47 Pr^{1/3}",
+      "supports": "表面焓梯度的核心近似",
+      "source": "印刷页263，2.2节",
+      "use": "核心结果"
+    },
+    {
+      "text": "independently of surface temperature, local Mach number Me, or pressure gradient",
+      "supports": "0.47Pr^{1/3}的普适性",
+      "source": "印刷页263，2.2节",
+      "use": "结果"
+    },
+    {
+      "text": "is given by (pD12Cp/k)w^{2/3}",
+      "supports": "扩散/传导最大比的表达式",
+      "source": "印刷页260，引言",
+      "use": "理论结果"
+    },
+    {
+      "text": "this ratio is found to be 1.30",
+      "supports": "动力论估计的定量结论",
+      "source": "印刷页260，引言",
+      "use": "定量结果"
+    },
+    {
+      "text": "clearly required before these simple results can be accepted",
+      "supports": "作者对实验验证的强调",
+      "source": "印刷页260，引言",
+      "use": "局限"
+    },
+    {
+      "text": "the present result has the same form as the 'low-speed,' constant-property solutions",
+      "supports": "相似解与低速常物性解的类比",
+      "source": "印刷页264，2.3节",
+      "use": "方法意义"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig01_p7.png",
+      "n": 2,
+      "page": 7,
+      "caption_zh": "等温半球鼻锥的层流热流率分布（(Tw/Te)≪1）",
+      "caption_orig": "Fig. 2 Laminar heat transfer rate distribution over isothermal hemispherical nose, with (Tw/Te)<^l",
+      "why": "给出qw/(qw)0随θ的变化，覆盖M∞=2、3、5、10、∞；显示M∞>5时高超声速分布几乎覆盖整个半球，M∞=2时明显偏离，是式[15]的核心证据。"
+    },
+    {
+      "file": "fig02_p7.png",
+      "n": 3,
+      "page": 7,
+      "caption_zh": "钝锥的层流热流率分布（(Tw/Te)≪1，M∞sinθc≫1）",
+      "caption_orig": "Fig. 3 Laminar heat transfer rate distribution over blunt cone, with (Tw/Te)<gi Mm sin 0 , » 1",
+      "why": "展示球冠段与锥裙的热流分布、接合部行为及等效尖锥比较，支撑A(θc)/B(θc)表与“细长锥在接合部后低于尖锥”的结论。"
+    }
+  ],
+  "verification": {
+    "text_only": "仅使用bundle文本、图注与抓图清单；未引入外部文献或数据。",
+    "a_grade_supported": "A级条目均对应明确方程、图2/图3、A/B数值表或正文数值；B级为跨段概括。",
+    "attributes_marked": "three_sentence、core_points、findings均带attr；机制段用【原文明确】【AI概括】【AI推断】标注。",
+    "coverage": "覆盖引言、控制方程、相似变换、平衡极限、驻点/半球/钝锥分布、扩散控制极限、动力论物性与讨论；p.11附表属于附文，未纳入主体数据。",
+    "no_fabrication": "页码、图号、公式与数值均来自bundle及原PDF第4–8页核对；无法确认处写“受限于材料”或列入open_questions。",
+    "open_questions": [
+      "式[11]中0.50与Pr^{1/3}、Pr^{-2/3}的排布在OCR与正文间略有差异，如何与式[12]统一？",
+      "Fig.2/Fig.3的纵坐标qw/(qw)0是否均按同一hse归一，M∞=2曲线的“frozen”标记具体指什么？",
+      "(ρD12Cp/k)w≈1.45对σ12=3.3 Å、ε12/k=84 K的敏感度多大？若取其他碰撞参数，1.30会变多少？",
+      "扩散控制极限取壁面原子浓度为零（完全催化），若考虑有限催化或表面复合，最大比如何改变？",
+      "Ma∞<2或>25时，忽略离子/电子与修正牛顿压力分布的误差有多大？",
+      "钝锥表中θc=20°的B(θc)=+4.2与30°/40°的负值符号差异如何解释？",
+      "实验数据分散度是否足以检验12–15%的M∞=2差异？",
+      "有限速率化学非平衡如何定量介于两极限之间？"
+    ]
+  }
+}

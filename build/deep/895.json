@@ -1,0 +1,628 @@
+{
+  "id": 895,
+  "read_note": "英文数值研究论文（Physics of Fluids 30, 046103, 2018，18页），Tumuklu、Levin、Theofilis。材料完整：bundle 893行全文、15张图注均可用；另用原 PDF 第8、10–12页核对式(3)–(11)。两处原文疑点按原文照录并标注：①表II中 X Re 的 BS 点 y=0.756 m 与其余工况量级不符，疑为 0.0756；②第13页 4X Re 段落写“the observations present for the 2X Re case also hold”，疑为 4X 笔误。2X、3X 的来流压力/单位雷诺数未逐项列出。",
+  "one_line": "DSMC 结合残差稳定性分析，揭示双锥高超声速分离流随雷诺数增强的非定常演化。",
+  "three_sentence": [
+    {
+      "text": "采用时间精确 DSMC 模拟 25°/55° 双锥、M∞=15.88 的化学冻结氮气流动，单位雷诺数由 9.35×10^4 增至 3.74×10^5 m^-1，共 X、2X、3X、4X 四个工况。",
+      "attr": "原文明确"
+    },
+    {
+      "text": "随 Re 增大，分离区与二次涡增强、λ 激波更显著，摩阻/压力/热流升高，而速度滑移与温度跳跃降低；分离激波角则基本保持在 45°–46.4°。",
+      "attr": "原文明确"
+    },
+    {
+      "text": "用 Theofilis 残差算法提取最慢衰减模态，衰减率幅值随 Re 减小，4X 工况出现剪切层 Kelvin–Helmholtz 不稳定并在 11 ms 时仍未达稳态。",
+      "attr": "原文明确"
+    }
+  ],
+  "imrad": {
+    "introduction": "研究背景是高超声速层流激波/边界层干扰（SWBLI）及其引起的局部气动热载荷与转捩。双锥是 CUBRC LENS-I 等短时风洞的经典标模，其 Edney IV 型激波干扰包含分离激波、三重点、超声速射流、两道接触面 C1/C2 与 λ 激波，天然具有非定常性。作者指出现有研究的缺口：①实验测量时间有限，却缺少判断“是否达到稳态”的可靠指标；②Gaitonde 等发现 Navier–Stokes 解需约 100 个特征流动时间才收敛，短时设施难以对应；③DSMC 虽时间精确且能自然给出速度滑移，但此前从未与现代全局线性稳定性理论结合；④高 Re 下二次涡、离心/Görtler 型三维失稳如何影响稳定性尚不清楚。本文目标是：用轴对称 DSMC 给出四个 Re 工况的基准流场，用残差法分析最慢衰减模态，确定各工况达到稳态所需时间，并厘清 Re 对分离区结构、表面参数与非定常性的影响。",
+    "methods": "采用 Bird 的 DSMC 方法，求解器为 SMILE，轴对称。碰撞用变硬球（VHS）模型，σT=σref(Tref/T)^α，N2 取 Tref=273 K、α=0.24、d=4.17×10^-10 m；转动-平动与振动-平动能量交换用 Larsen–Borgnakke 模型，V-T 松弛率用 Millikan–White 公式、R-T 松弛率用 Parker 公式并加 DSMC 修正；气-壁作用用 Maxwell 模型、动量与能量全适应，壁温 297.2 K。采用两级笛卡尔网格，保证 λ/dx>2、MCT/dt>1、每个碰撞网格至少 5–6 个粒子；四工况参数见表I。为捕捉非定常演化，作者改造采样：在选定关键点每个时间步采样，并用指示时刻前后各 500 个时间步的样本做系综平均。稳定性分析采用 Theofilis 的残差算法：把宏观量写成稳态解加小扰动，二维基本流上取轴对称扰动（m=0），对探针时间序列拟合指数衰减率 σ，并比较不同流动量是否可由单一最慢模态描述。验证包括：与 Moss–Bird 的 DSMC、CUBRC 实验热流、DS2V 代码交叉对比，以及粒子数/网格/时间步的数值收敛性检查。",
+    "results": "①流场结构：四个工况均为 Edney IV 型；第一锥斜激波角约 28.3°（拟合线 A–B），Taylor–Maccoll 理论给 27.3°（25° 锥、γ=1.34、M=15.88），差约 1°归因于粘性。分离激波角分别为 45.27°、44.98°、46.40°、46.41°，随 Re 变化很小；但分离区长度由 0.028 m 增至 0.045、0.059、0.082 m。高 Re 下三重点下移、C1–C2 间距增大、TMR 区压力升高，λ 激波更明显；3X、4X 出现二次涡。②表面参数：第一锥摩阻系数随 Re 的平方根下降（Blasius 型）；热流幅值与峰值随 Re 升高，峰值位置随分离区增大向下游移动；第一锥分离点上游的热流与单锥一致，说明第二锥不影响该区。③滑移与温度跳跃：速度滑移、平动/转动/振动温度跳跃均随 Re 降低而减小；式(5)的简化 Maxwell 滑移在 x=0.04 m 处与 DSMC 的偏差为 17%、9.6%、3.8%（X、2X、4X），适用于 Kn<2.64×10^-5。④速度分布函数：弓形激波内呈双峰，向下游逐渐 Maxwell 化；前缘与分离点附近已近似 Maxwell 分布。⑤稳定性：X 工况沿用前作的 σ=−3950 s^-1；3X 为 −1514 s^-1；4X 段给出 −2147 s^-1（原文写作“2X Re case”，疑为笔误）。4X 出现低频边界层扰动与剪切层 KH 不稳定，KH 主频约为弓形激波振荡的 20 倍，且到 11 ms 仍未达稳态。",
+    "discussion": "作者把 Re 效应串成一条链：Re 升高→边界层变薄、压缩更强→分离区增大、三重点下游移动、C1–C2 间距与 TMR 压力增大→λ 激波与二次涡更显著→表面摩阻、压力、热流升高，而分子平均自由程减小使速度滑移与温度跳跃降低。稳定性方面，最慢衰减率的幅值随 Re 减小，意味着高 Re 流动需要更长时间才衰减到稳态；4X 已不满足“单一最慢模态”假设，并出现 KH 不稳定，说明即使轴对称双锥也存在一个足够高的 Re 使流动不再稳定。作者强调实验测量时间的重要性：低 Re 表面压力与 24 ms 实验相符，但高 Re 的分离区与第二锥表面热流在 11 ms 仍明显随时间变化，短时实验可能测到的是瞬时值而非稳态值。局限包括：轴对称与 m=0 假设排除了离心/Görtler 型三维失稳；只研究 N2、化学冻结；4X 未真正达到稳态，衰减率拟合的物理含义受限。"
+  },
+  "core_points": [
+    {
+      "point": "首次把时间精确 DSMC 与 Theofilis 现代全局线性稳定性（残差算法）结合，用于双锥高超声速层流分离流。",
+      "type": "方法创新",
+      "grade": "A",
+      "source": "§1，PDF 第3页（刊页046103-2）；摘要",
+      "attr": "原文明确"
+    },
+    {
+      "point": "四个工况通过提高来流静压实现：单位 Re 由 9.35×10^4 增至 3.74×10^5 m^-1，M∞、温度与几何不变。",
+      "type": "工况设置",
+      "grade": "A",
+      "source": "§III A，PDF 第5页（刊页046103-4）；表I",
+      "attr": "原文明确"
+    },
+    {
+      "point": "所有工况均为 Edney IV 型激波干扰，含分离激波、三重点 T、超声速射流、接触面 C1/C2 与 λ 激波。",
+      "type": "流场结构",
+      "grade": "A",
+      "source": "§III A，PDF 第5–6页；图1",
+      "attr": "原文明确"
+    },
+    {
+      "point": "第一锥斜激波角约 28.3°，比 Taylor–Maccoll 无粘理论 27.3°大约 1°，归因于粘性。",
+      "type": "定量结果",
+      "grade": "A",
+      "source": "PDF 第6页（刊页046103-5）",
+      "attr": "原文明确"
+    },
+    {
+      "point": "分离激波角对 Re 不敏感（45.27°、44.98°、46.40°、46.41°），但分离区长度由 0.028 m 显著增至 0.082 m。",
+      "type": "定量结果",
+      "grade": "A",
+      "source": "PDF 第6页；图1、图2",
+      "attr": "原文明确"
+    },
+    {
+      "point": "高 Re 下三重点下游移动、C1–C2 间距与 TMR 区压力增大，λ 激波更显著；3X、4X 出现二次涡，分离区拓扑改变。",
+      "type": "流动机制",
+      "grade": "A",
+      "source": "PDF 第6–7页；图1(c)(d)、图3(c)、图4(b)",
+      "attr": "原文明确"
+    },
+    {
+      "point": "第一锥摩阻系数随 Re 的平方根下降；热流幅值与峰值随 Re 升高，峰值位置随分离区增大向下游移动。",
+      "type": "表面参数",
+      "grade": "A",
+      "source": "§III C，PDF 第9页（刊页046103-8）；图7",
+      "attr": "原文明确"
+    },
+    {
+      "point": "速度滑移与平动/转动/振动温度跳跃均随 Re 升高而减小；式(5)的简化 Maxwell 滑移在 x=0.04 m 的偏差为 17%、9.6%、3.8%（X、2X、4X），适用于 Kn<2.64×10^-5。",
+      "type": "稀薄效应",
+      "grade": "A",
+      "source": "§III C，PDF 第10–11页（刊页046103-9–10）；式(5)，图8、图9",
+      "attr": "原文明确"
+    },
+    {
+      "point": "弓形激波内速度分布函数呈双峰，向下游逐渐 Maxwell 化；前缘与分离点附近已近似 Maxwell 分布。",
+      "type": "动理学证据",
+      "grade": "B",
+      "source": "§III B，PDF 第8–9页；图5、图6",
+      "attr": "原文明确"
+    },
+    {
+      "point": "最慢衰减率幅值随 Re 减小：X 为 −3950 s^-1（前作）、3X 为 −1514 s^-1、4X 段给 −2147 s^-1（原文“2X”疑笔误）。",
+      "type": "稳定性定量",
+      "grade": "A",
+      "source": "§IV，PDF 第13页（刊页046103-12）；式(11)，图10、图11",
+      "attr": "原文明确"
+    },
+    {
+      "point": "4X 工况剪切层出现 KH 不稳定，主频约为弓形激波振荡的 20 倍；边界层内还有低频扰动。",
+      "type": "非定常机制",
+      "grade": "A",
+      "source": "§IV，PDF 第14页（刊页046103-13）；图12",
+      "attr": "原文明确"
+    },
+    {
+      "point": "4X 在 11 ms 仍未达稳态（约为 3X 计算时长的两倍），表面热流在分离区与第二锥后段仍显著随时间变化。",
+      "type": "稳态判定",
+      "grade": "A",
+      "source": "§IV–§V，PDF 第14–16页；图13、图15(b)",
+      "attr": "原文明确"
+    }
+  ],
+  "conditions": [
+    {
+      "item": "气体与化学模型",
+      "value": "纯 N2，化学冻结，不考虑 N2 解离",
+      "source": "§III A，PDF 第5页",
+      "note": "滞止焓 2.2 MJ/kg 足够低"
+    },
+    {
+      "item": "来流马赫数 M∞",
+      "value": "15.88",
+      "source": "§III A，PDF 第5页"
+    },
+    {
+      "item": "来流平动/转动温度",
+      "value": "Ttrn=Trot=42.6 K",
+      "source": "§III A，PDF 第5页"
+    },
+    {
+      "item": "来流振动温度",
+      "value": "Tvib=1986 K",
+      "source": "§III A，PDF 第5页",
+      "note": "反射激波风洞的典型非平衡来流"
+    },
+    {
+      "item": "来流速度",
+      "value": "U∞=2073 m/s",
+      "source": "§III A，PDF 第5页"
+    },
+    {
+      "item": "滞止焓",
+      "value": "h0=2.2 MJ/kg",
+      "source": "§III A，PDF 第5页"
+    },
+    {
+      "item": "壁面条件",
+      "value": "等温壁 297.2 K，Maxwell 模型，动量与能量全适应（σ=1）",
+      "source": "§II，PDF 第4页；§III A"
+    },
+    {
+      "item": "几何",
+      "value": "25°/55° 尖前缘双锥，轴对称",
+      "source": "§I，PDF 第3页；§III"
+    },
+    {
+      "item": "计算域",
+      "value": "x=[−0.05, 0.20] m，y=[0.0, 0.25] m",
+      "source": "表I脚注，PDF 第4页"
+    },
+    {
+      "item": "工况数",
+      "value": "X、2X、3X、4X 四个雷诺数工况",
+      "source": "§III A，PDF 第5页；表I"
+    },
+    {
+      "item": "来流静压",
+      "value": "X Re：2.2 Pa；4X Re：8.8 Pa；2X、3X 未逐项列出",
+      "source": "§III A，PDF 第5页"
+    },
+    {
+      "item": "单位雷诺数",
+      "value": "X Re：9.35×10^4 m^-1；4X Re：3.74×10^5 m^-1；2X、3X 未逐项列出",
+      "source": "摘要；§III A，PDF 第5页"
+    },
+    {
+      "item": "DSMC 网格准则",
+      "value": "λ/dx>2；MCT/dt>1；每个碰撞网格至少 5–6 个粒子；表II给出关键点的实际值",
+      "source": "§II，PDF 第4页；表II，PDF 第5页"
+    },
+    {
+      "item": "采样方式",
+      "value": "关键点每时间步采样；场量用指示时刻前后各 500 个时间步样本平均",
+      "source": "§II，PDF 第4页"
+    },
+    {
+      "item": "稳定性扰动假设",
+      "value": "二维基本流、轴对称扰动（m=0）、小扰动 ε≪1",
+      "source": "§IV，PDF 第11–12页；式(9)–(11)"
+    },
+    {
+      "item": "低 Re 参考稳定时间",
+      "value": "X 工况在 2.4 ms 取样；3X 约 5.31 ms；4X 到 11 ms",
+      "source": "图5、图10、图13；§IV"
+    }
+  ],
+  "key_parameters": [
+    {
+      "name": "单位雷诺数 Re/m（四工况）",
+      "definition": "以来流密度、速度与粘性计算的单位长度雷诺数",
+      "value": "X 9.35×10^4；4X 3.74×10^5 m^-1；2X、3X 未逐项列出",
+      "relation": "通过提高来流静压实现，几何与来流温度不变",
+      "source": "摘要；§III A，PDF 第5页"
+    },
+    {
+      "name": "来流静压（四工况）",
+      "definition": "自由来流静压",
+      "value": "X 2.2 Pa；4X 8.8 Pa；2X、3X 未逐项列出",
+      "relation": "与 Re 近似线性对应",
+      "source": "§III A，PDF 第5页"
+    },
+    {
+      "name": "模拟粒子数（四工况）",
+      "definition": "计算域内模拟分子总数",
+      "value": "X 10.94×10^9；2X 3.63×10^9；3X 4.14×10^9；4X 2.74×10^9",
+      "relation": "X 工况比 Moss–Bird 约 16×10^6 提高约 700 倍以保证统计量",
+      "source": "表I，PDF 第4页"
+    },
+    {
+      "name": "时间步数（四工况）",
+      "definition": "总时间步",
+      "value": "X 125 000；2X 400 000；3X 880 000；4X 2 000 000",
+      "relation": "高 Re 需更多步以覆盖更长的物理时间",
+      "source": "表I，PDF 第4页"
+    },
+    {
+      "name": "时间步长 dt（四工况）",
+      "definition": "DSMC 时间步",
+      "value": "X 2.0×10^-8 s；2X 8.0×10^-9 s；3X 6.0×10^-9 s；4X 5.0×10^-9 s",
+      "relation": "满足 MCT/dt>1",
+      "source": "表I，PDF 第4页"
+    },
+    {
+      "name": "碰撞网格总数（四工况）",
+      "definition": "两级笛卡尔网格中的碰撞网格数",
+      "value": "X 4.51×10^8；2X 4.70×10^8；3X 5.270×10^8；4X 3.70×10^8",
+      "relation": "由局部密度梯度自适应细分",
+      "source": "表I，PDF 第4页"
+    },
+    {
+      "name": "FNUM（四工况）",
+      "definition": "一个模拟粒子代表的真实分子数",
+      "value": "X 2.5×10^7；2X 1.5×10^8；3X 2.0×10^8；4X 4.0×10^8",
+      "relation": "与粒子总数、密度水平匹配",
+      "source": "表I，PDF 第4页"
+    },
+    {
+      "name": "CPU 小时（四工况）",
+      "definition": "ERDC Topaz 上的总计算时间",
+      "value": "X 91 995；2X 115 200；3X 352 000；4X 544 000 CPU hours",
+      "relation": "960 核，并行效率约 54%",
+      "source": "表I，PDF 第4页"
+    },
+    {
+      "name": "斜激波角",
+      "definition": "第一锥前缘斜激波与 x 轴夹角",
+      "value": "DSMC 拟合线 A–B 约 28.3°；Taylor–Maccoll 理论 27.3°",
+      "relation": "差值约 1°，作者归因于粘性",
+      "source": "PDF 第6页（刊页046103-5）"
+    },
+    {
+      "name": "分离激波角（四工况）",
+      "definition": "分离激波与平行 x 轴直线的夹角（图中 C–D 线）",
+      "value": "X 45.27°；2X 44.98°；3X 46.40°；4X 46.41°",
+      "relation": "随 Re 变化不显著",
+      "source": "PDF 第6页"
+    },
+    {
+      "name": "分离区长度（四工况）",
+      "definition": "分离点与再附点之间的距离",
+      "value": "X 0.028 m；2X 0.045 m；3X 0.059 m；4X 0.082 m",
+      "relation": "随 Re 单调增大",
+      "source": "PDF 第6页；表II"
+    },
+    {
+      "name": "分离点/再附点坐标（四工况）",
+      "definition": "表II给出的 SP、RP 坐标（m）",
+      "value": "X SP(0.079,0.037)、RP(0.101,0.055)；2X (0.071,0.033)/(0.105,0.062)；3X (0.064,0.03)/(0.109,0.068)；4X (0.057,0.027)/(0.118,0.081)",
+      "relation": "用于计算分离区长度与探针位置",
+      "source": "表II，PDF 第5页"
+    },
+    {
+      "name": "最慢模态衰减率 σ（各工况）",
+      "definition": "对探针宏观量时间序列作指数拟合得到的衰减率",
+      "value": "X −3950 s^-1（引自前作40）；3X −1514 s^-1；4X 段 −2147 s^-1（原文写“2X Re case”，疑笔误）；2X 未给出",
+      "relation": "|σ| 随 Re 减小，所需稳态时间增大",
+      "source": "§IV，PDF 第13页；式(11)"
+    },
+    {
+      "name": "速度滑移公式偏差（三工况）",
+      "definition": "式(5)计算的 V_Md 与 DSMC 结果在 x=0.04 m 的相对差",
+      "value": "X 17%；2X 9.6%；4X 3.8%；3X 未列出",
+      "relation": "偏差随 Re 升高而减小；式(5)适用于 Kn<2.64×10^-5",
+      "source": "§III C，PDF 第10–11页；图8(a)"
+    },
+    {
+      "name": "KH 主频与弓形激波振荡频率之比",
+      "definition": "剪切层 KH 不稳定主频 / 弓形激波振荡主频",
+      "value": "约 20 倍",
+      "relation": "仅在最高 Re（4X）工况观察到",
+      "source": "§IV，PDF 第14页；图12(b)(c)"
+    },
+    {
+      "name": "振动特征温度与分子质量",
+      "definition": "N2 的振动特征温度 θv 与分子质量 m",
+      "value": "θv=3371 K；m=4.65×10^-26 kg",
+      "relation": "用于式(4)与式(6)–(8)的能量换算",
+      "source": "PDF 第8、11页"
+    }
+  ],
+  "methods": [
+    {
+      "item": "数值方法",
+      "value": "轴对称 DSMC，SMILE 代码，majorant frequency scheme 处理碰撞项",
+      "source": "§II，PDF 第4页"
+    },
+    {
+      "item": "碰撞模型",
+      "value": "变硬球（VHS），σT=σref(Tref/T)^α；N2 取 Tref=273 K、α=0.24、d=4.17×10^-10 m",
+      "source": "式(2)，PDF 第4页"
+    },
+    {
+      "item": "内能松弛",
+      "value": "Larsen–Borgnakke 模型；V-T 用 Millikan–White 松弛率，R-T 用 Parker 松弛率并加 DSMC 修正因子",
+      "source": "§II，PDF 第4页"
+    },
+    {
+      "item": "气-壁作用",
+      "value": "Maxwell 模型，动量与能量全适应，壁温 297.2 K",
+      "source": "§II，PDF 第4页"
+    },
+    {
+      "item": "网格与时间步准则",
+      "value": "两级笛卡尔网格；λ/dx>2、MCT/dt>1、每碰撞网格 5–6 个粒子；表II给出关键点实际值",
+      "source": "§II，PDF 第4–5页"
+    },
+    {
+      "item": "非定常采样",
+      "value": "关键点逐时间步采样；场量用指示时刻前后各 500 步样本平均，以兼顾降噪与捕捉非定常",
+      "source": "§II，PDF 第4页"
+    },
+    {
+      "item": "稳定性分析",
+      "value": "Theofilis 残差算法：q=q̄+εq̂，二维基本流上取 m=0 轴对称扰动；对探针时间序列拟合指数衰减率 σ",
+      "source": "式(9)–(11)，PDF 第11–12页"
+    },
+    {
+      "item": "工况扫描",
+      "value": "保持几何、M∞、Ttrn、Trot、Tvib、U∞ 不变，仅提高来流静压使单位 Re 由 9.35×10^4 增至 3.74×10^5 m^-1",
+      "source": "§III A，PDF 第5页"
+    },
+    {
+      "item": "验证一：数值收敛",
+      "value": "X 工况与四倍粒子/网格、二分之一时间步的前作对比，热流一致；表II检查 λ/dx、MCT/dt、NPICC",
+      "source": "§III C，PDF 第9页；表II"
+    },
+    {
+      "item": "验证二：实验/代码对比",
+      "value": "热流与 CUBRC 实验、Moss–Bird DSMC 对比；SMILE 与 DS2V 结果一致；速度分布与 Maxwell 拟合对比",
+      "source": "§III B–C，PDF 第8–11页；图6–图9"
+    },
+    {
+      "item": "计算资源",
+      "value": "ERDC Topaz，960 核，并行效率约 54%；四工况 CPU 小时见表I",
+      "source": "表I，PDF 第4页"
+    }
+  ],
+  "derivation": {
+    "exists": true,
+    "idea": "以 Boltzmann 方程为起点，用 DSMC 的随机碰撞过程逼近其碰撞项，从而在连续/近连续区自然获得速度滑移与温度跳跃；再把接近收敛的 DSMC 宏观量视为稳态解叠加小扰动，用线性稳定性分解把扰动写成模态形式，在轴对称假设下化为实指数衰减，通过拟合探针时间序列提取最慢衰减率。",
+    "assumptions": [
+      "大部分流场处于连续介质区，DSMC 数值准则（λ/dx>2、MCT/dt>1、每网格 5–6 粒子）得到满足",
+      "N2 化学冻结，无解离与电离；转动/振动采用各自特征温度与松弛模型",
+      "气-壁为 Maxwell 全适应，壁温恒定 297.2 K",
+      "接近收敛时扰动幅度 ε≪1，可作线性叠加",
+      "基本流为二维（轴对称），扰动取 m=0 的轴对称模态",
+      "最慢衰减模态主导长时间行为；4X 工况该假设变差"
+    ],
+    "steps": [
+      {
+        "title": "Boltzmann 方程与 DSMC 对应",
+        "text": "DSMC 求解的是稀薄气体 Boltzmann 方程：分布函数沿分子轨迹的输运等于碰撞项。SMILE 用 majorant frequency scheme 抽样碰撞，因而在满足网格/时间步准则时，DSMC 的系综平均收敛到该方程的解，并自然包含速度滑移、温度跳跃与热非平衡。",
+        "latex": [
+          "\\frac{\\partial}{\\partial t}(n f(c_i)) + c_j \\frac{\\partial}{\\partial x_j}(n f(c_i)) + \\frac{\\partial}{\\partial c_j}(F_j n f(c_i)) = \\left[\\frac{\\partial (n f(c_i))}{\\partial t}\\right]_{\\mathrm{collision}} \\tag{1}"
+        ],
+        "source": "式(1)，PDF 第4页（刊页046103-3）"
+      },
+      {
+        "title": "VHS 碰撞截面",
+        "text": "分子间碰撞用变硬球模型，总碰撞截面随温度按幂律变化；对 N2 取参考温度 273 K、幂指数 0.24、碰撞直径 4.17×10^-10 m。该模型给出与温度相关的粘性与平均自由程，是后续 Kn 数与滑移估计的基础。",
+        "latex": [
+          "\\sigma_T=\\sigma_{\\mathrm{ref}}\\left(\\frac{T_{\\mathrm{ref}}}{T}\\right)^{\\alpha} \\tag{2}"
+        ],
+        "source": "式(2)，PDF 第4页"
+      },
+      {
+        "title": "比热比与振动自由度",
+        "text": "为从转动/振动温度计算当地比热比，作者用标准动理论：平动与转动自由度对 N2 分别取 3 与 2，振动用简谐振荡模型，其有效自由度由振动特征温度与当地振动温度给出。由此可解释高 Re 下近壁区 γ 升高（振动贡献被冻结）。",
+        "latex": [
+          "\\gamma=\\frac{\\xi_{\\mathrm{trn}}+\\xi_{\\mathrm{rot}}+\\xi_{\\mathrm{vib}}+2}{\\xi_{\\mathrm{trn}}+\\xi_{\\mathrm{rot}}+\\xi_{\\mathrm{vib}}} \\tag{3}",
+          "\\xi_{\\mathrm{vib}}=\\frac{2\\theta_v/T_{\\mathrm{vib}}}{\\exp(\\theta_v/T_{\\mathrm{vib}})-1} \\tag{4}"
+        ],
+        "source": "式(3)(4)，PDF 第8页（刊页046103-7）；θv=3371 K"
+      },
+      {
+        "title": "简化 Maxwell 速度滑移",
+        "text": "在近连续区，壁面切向速度不等于壁速，滑移量与当地分子平均自由程和切向速度法向梯度成正比；适应系数 σ 取 1 时系数为 1。作者用该式检验 DSMC 的滑移量，并给出其适用上限 Kn<2.64×10^-5。",
+        "latex": [
+          "V_d^{M}=\\frac{2-\\sigma}{\\sigma}\\,\\lambda\\,\\frac{\\partial V_{\\mathrm{tan}}}{\\partial n} \\tag{5}"
+        ],
+        "source": "式(5)，PDF 第10页（刊页046103-9）"
+      },
+      {
+        "title": "温度跳跃的入射/反射通量归一化",
+        "text": "把壁面元上入射（i）与反射（r）粒子的能量通量按法向速度倒数加权平均，减去当地宏观速度对应的动能，得到各方向的指示温度；对 n、τ、L 三个方向分别计算，即得平动温度跳跃。反射粒子的平均切向速度与内能也用同样权重得到。",
+        "latex": [
+          "T_{ind}=\\frac{m}{k}\\left[\\frac{\\sum_{i=1}^{N_i}\\left(\\frac{V_{di}^2}{|V_{ni}|}+\\frac{V_{dr}^2}{|V_{nr}|}\\right)}{\\sum_{i=1}^{N_i}\\left(\\frac{1}{|V_{ni}|}+\\frac{1}{|V_{nr}|}\\right)}-V_d^2\\right] \\tag{6}",
+          "V_{dI}=\\left[\\sum_{i=1}^{N_i}\\left(\\frac{V_{di}}{|V_{ni}|}+\\frac{V_{dr}}{|V_{nr}|}\\right)\\right]\\left[\\sum_{i=1}^{N_i}\\left(\\frac{1}{|V_{ni}|}+\\frac{1}{|V_{nr}|}\\right)\\right]^{-1} \\tag{7}",
+          "E_f=\\left[\\sum_{i=1}^{N_i}\\left(\\frac{e_{ji}}{|V_{ni}|}+\\frac{e_{jr}}{|V_{nr}|}\\right)\\right]\\left[\\sum_{i=1}^{N_i}\\left(\\frac{1}{|V_{ni}|}+\\frac{1}{|V_{nr}|}\\right)\\right]^{-1} \\tag{8}"
+        ],
+        "source": "式(6)–(8)，PDF 第11页（刊页046103-10）；m=4.65×10^-26 kg"
+      },
+      {
+        "title": "线性稳定性分解",
+        "text": "设接近收敛的宏观量 q=(u,v,Ttrn,Trot,Tvib,P) 可写成稳态基本流 q̄ 与小三维扰动之和；扰动再按方位波数 m 与复频率 ω 展开为模态叠加。本文取轴对称基本流与 m=0，因此扰动退化为随时间指数变化的实模态。",
+        "latex": [
+          "\\mathbf{q}(x,y,z,t)=\\bar{\\mathbf{q}}(x,y,z)+\\epsilon\\hat{\\mathbf{q}}(x,y,z,t) \\tag{9}",
+          "\\mathbf{q}(x,y,z,t)=\\hat{\\mathbf{q}}(x,y)e^{i(m\\phi-\\omega t)}+c.c. \\tag{10}"
+        ],
+        "source": "式(9)(10)，PDF 第11–12页（刊页046103-10–11）"
+      },
+      {
+        "title": "轴对称残差与衰减率拟合",
+        "text": "在 m=0、轴对称基本流下，扰动写成 q̂_r e^{σt}；σ 为最慢衰减率。由于 DSMC 信号有统计噪声，不能像 DNS 那样对对数信号直接求导，作者改为对每个宏观量的时间序列作指数曲线拟合，取共同的最慢衰减率，并据此判断何时达到稳态。",
+        "latex": [
+          "\\mathbf{q}(x,y,t)=\\bar{\\mathbf{q}}(x,y)+\\epsilon\\hat{\\mathbf{q}}_r e^{\\sigma t} \\tag{11}"
+        ],
+        "source": "式(11)，PDF 第12页（刊页046103-11）"
+      }
+    ],
+    "result": "得到各工况的最慢衰减率：X 沿用前作 −3950 s^-1，3X 为 −1514 s^-1，4X 段给 −2147 s^-1；|σ| 随 Re 减小，故高 Re 需要更长物理时间才能达到稳态。除 4X 外，速度、温度、压力等量都可由单一模态较好拟合；4X 出现 KH 不稳定与低频边界层扰动，单模态假设失效。",
+    "limits": "推导不是从 Boltzmann 方程到 Navier–Stokes 的严格渐近展开，而是“DSMC 解 + 线性稳定性模态分解”的半经验框架；m=0 轴对称假设排除了离心/Görtler 型三维失稳；式(5)是简化 Maxwell 滑移，仅在 Kn<2.64×10^-5 内被检验；式(6)–(8)用入射/反射通量加权，未显式包含适应系数与壁面粗糙度；4X 未达稳态，其 σ 的“最慢模态”解释有限；化学冻结与单一气体限制了对真实高焓流的推广。"
+  },
+  "mechanism": "Re 升高的直接后果是边界层变薄、激波压缩增强与分子平均自由程相对减小。更薄的边界层使分离激波后的逆压梯度更集中，分离区随之变长，三重点下移，C1–C2 之间的超声速射流空间变大、TMR 区压力升高，于是 λ 激波结构更突出；同时分离泡内出现二次涡，使分离区拓扑从单泡变为多泡，对三维扰动更不稳定。表面侧，边界层变薄使壁面法向梯度增大，摩阻与热流升高；而平均自由程减小使速度滑移和温度跳跃降低。长时间行为上，最慢衰减模态的衰减率幅值随 Re 下降，意味着扰动衰减更慢、达到稳态所需时间更长；在最高 Re 下，剪切层中的 KH 不稳定增长率足够高，与弓形激波振荡耦合，使流动在可观测时间内始终非定常。",
+  "findings": [
+    {
+      "finding": "四个 Re 工况的分离激波角几乎不变（45.27°–46.41°），但分离区长度随 Re 由 0.028 m 增至 0.082 m。",
+      "evidence": "图2的压力等值线与表II的 SP/RP 坐标；正文给出四个角度与四个长度值。",
+      "type": "定量趋势",
+      "strength": "强",
+      "source": "PDF 第6页；图1、图2、表II",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "第一锥斜激波角约 28.3°，比 Taylor–Maccoll 无粘理论 27.3°大约 1°，作者归因于粘性效应。",
+      "evidence": "DSMC 拟合线 A–B 与理论值对比；两者使用同一 M∞=15.88、25° 锥、γ=1.34。",
+      "type": "定量对比",
+      "strength": "强",
+      "source": "PDF 第6页",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "随 Re 升高，三重点下游移动、C1–C2 间距与 TMR 区压力增大，λ 激波更显著；3X、4X 出现二次涡。",
+      "evidence": "图1的四个纹影图、图3(c)与图4(b)的压力场对比；正文明确“larger distance between C1 and C2 and greater pressure ... make the λ-shocklets more distinctive”。",
+      "type": "流场结构",
+      "strength": "强",
+      "source": "PDF 第6–7页；图1、图3、图4",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "第一锥摩阻系数随 Re 的平方根下降；热流幅值与峰值随 Re 升高，峰值位置随分离区增大向下游移动。",
+      "evidence": "图7(a)(b)的四工况曲线；作者与 Blasius 边界层标度及“边界层变薄导致更强压缩”的解释一致。",
+      "type": "表面参数",
+      "strength": "强",
+      "source": "PDF 第9页；图7",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "速度滑移与平动/转动/振动温度跳跃均随 Re 升高而减小；式(5)在 x=0.04 m 的偏差为 17%、9.6%、3.8%（X、2X、4X），适用于 Kn<2.64×10^-5。",
+      "evidence": "图8(a)的滑移曲线、图9(a)–(c)的三种温度跳跃曲线；正文给出三个百分比与 Kn 上限。",
+      "type": "稀薄效应",
+      "strength": "强",
+      "source": "PDF 第10–11页；式(5)，图8、图9",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "弓形激波内速度分布函数呈双峰（0 与 2073 m/s），向下游逐渐 Maxwell 化；前缘与分离点附近已近似 Maxwell 分布。",
+      "evidence": "图5(b)的四个位置 a–d 与图6(a)(b)的 Maxwell 拟合；正文指出这是经典双峰分布。",
+      "type": "动理学证据",
+      "strength": "强",
+      "source": "PDF 第8–9页；图5、图6",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "最慢模态衰减率幅值随 Re 减小：X 为 −3950 s^-1（前作）、3X 为 −1514 s^-1、4X 段为 −2147 s^-1（原文“2X”疑笔误），故高 Re 达到稳态所需时间更长。",
+      "evidence": "图10、图11的指数拟合曲线；正文明确“the magnitude decay rate ... decreases with Reynolds number”。",
+      "type": "稳定性定量",
+      "strength": "强",
+      "source": "PDF 第13页；式(11)，图10、图11",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "4X 工况剪切层出现 KH 不稳定，主频约为弓形激波振荡的 20 倍；边界层内还有低频扰动，说明流动已非层流。",
+      "evidence": "图12(c)探针 C 的时间序列与频谱；正文与图12(b)弓形激波探针 B 对比给出 20 倍关系。",
+      "type": "非定常机制",
+      "strength": "强",
+      "source": "PDF 第14页；图12",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "4X 在 11 ms 仍未达稳态，表面热流在分离区与第二锥后段仍显著随时间变化；低 Re 表面压力则与 24 ms 实验相符。",
+      "evidence": "图13(d)的 10.5→11 ms 温度差、图15(b)的热流时间变化；正文明确“the flow does not reach steady state”。",
+      "type": "稳态判定",
+      "strength": "强",
+      "source": "PDF 第14–16页；图13、图15",
+      "attr": "原文明确"
+    },
+    {
+      "finding": "即使轴对称双锥具有压力释放效应，仍存在一个足够高的 Re 使流动不再稳定；这是本文首次在双锥上展示的结果。",
+      "evidence": "结论段明确“even for an axisymmetric flow, there is a Reynolds number sufficiently large that the flow will no longer remain stable”。",
+      "type": "总体结论",
+      "strength": "强",
+      "source": "PDF 第15页；§V",
+      "attr": "原文明确"
+    }
+  ],
+  "conclusions": "本文证明 DSMC 与全局线性稳定性可以形成一条可用的分析链：DSMC 给出含滑移/温度跳跃的基准流场与长时间信号，残差算法从中提取最慢衰减率，从而定量回答“何时达到稳态”。四个 Re 工况显示：分离激波角对 Re 不敏感，但分离区长度、二次涡、λ 激波强度、表面摩阻/压力/热流随 Re 显著增强，速度滑移与温度跳跃随 Re 减小；最慢衰减率幅值随 Re 下降，4X 出现 KH 不稳定并在 11 ms 仍未稳态。作者据此提醒：短时风洞实验若测量时间不足，可能在分离区与第二锥表面测到非稳态值；后续需研究更高 Re 下的新模态与转捩临界雷诺数。",
+  "limits": "①仅 N2、化学冻结，未考虑空气/真实气体化学反应与辐射；②轴对称与 m=0 扰动假设排除了离心/Görtler 等三维失稳，而二次涡恰恰可能由三维机制主导；③4X 未真正达到稳态，其 σ 与单模态拟合的物理解释有限；④式(5)为简化 Maxwell 滑移，只适用于 Kn<2.64×10^-5，且适应系数取 1；⑤式(6)–(8)的通量加权未显式处理壁面适应系数、粗糙度与多组分；⑥统计噪声使衰减率只能靠曲线拟合，未给出不确定度；⑦2X、3X 的来流压力/单位 Re 与 2X 的 σ 未逐项列出；⑧表II X 工况 BS 点 y=0.756 m 疑为 0.0756，4X 段“2X Re case”疑为笔误，均影响逐项复核。",
+  "significance": "方法上，这是 DSMC 与全局线性稳定性理论的首次结合，为稀薄/近连续高超声速分离流提供了一条不依赖连续介质假设的稳定性分析路径，也给出了“用残差衰减率判定稳态”的可操作标准。物理上，它把 Re 对 Edney IV 型双锥流的作用从“分离区变大”细化为“分离激波角不变、分离区/二次涡/λ 激波增强、表面载荷升高、滑移与跳跃降低、衰减变慢直至 KH 失稳”的完整链条。工程上，它直接质疑短时风洞“按特征流动时间估算测量时间”的做法，指出高 Re 双锥在 11 ms 量级仍未稳态，对实验数据判读与热防护设计具有警示意义。",
+  "quotes": [
+    {
+      "text": "the separation shock angle is found to be similar for all Re numbers",
+      "supports": "分离激波角对 Re 不敏感",
+      "source": "摘要，PDF 第2页",
+      "use": "与分离区长度强烈依赖 Re 形成对照"
+    },
+    {
+      "text": "skin friction, pressure, and surface heating rates increasing and velocity slip and temperature jump values decreasing for increasing Re number",
+      "supports": "表面参数与稀薄参数的反向趋势",
+      "source": "摘要，PDF 第2页",
+      "use": "概括 §III C 的核心结果"
+    },
+    {
+      "text": "the flow is chemically frozen",
+      "supports": "化学冻结假设",
+      "source": "§III A，PDF 第5页",
+      "use": "说明为何可只用 N2、无解离"
+    },
+    {
+      "text": "the magnitude decay rate of the least damped eigenmode decreases with Reynolds number",
+      "supports": "高 Re 需要更长稳态时间",
+      "source": "§IV，PDF 第13页",
+      "use": "连接稳定性分析与实验测量时间"
+    },
+    {
+      "text": "the most dominant frequency of the KH instability is about 20 times larger than that of the bow shock oscillations",
+      "supports": "KH 与弓形激波振荡的时间尺度分离",
+      "source": "§IV，PDF 第14页",
+      "use": "支撑 4X 非定常机制"
+    },
+    {
+      "text": "the flow does not reach steady state even though the simulation was run two times further in time",
+      "supports": "4X 在 11 ms 仍未稳态",
+      "source": "§IV，PDF 第14页",
+      "use": "说明高 Re 稳态判定的困难"
+    },
+    {
+      "text": "there was no connection between the kinetic simulations of gas dynamics (i.e., DSMC) and modern linear stability theory",
+      "supports": "本文方法创新的缺口陈述",
+      "source": "§I，PDF 第3页",
+      "use": "解释为何要发展 DSMC+残差算法"
+    },
+    {
+      "text": "even for an axisymmetric flow, there is a Reynolds number sufficiently large that the flow will no longer remain stable",
+      "supports": "轴对称双锥也存在失稳临界 Re",
+      "source": "§IV末，PDF 第15页",
+      "use": "全文最重要的总体结论之一"
+    }
+  ],
+  "figures": [
+    {
+      "file": "fig01_p6.png",
+      "n": 1,
+      "page": 6,
+      "caption_zh": "四个雷诺数工况的计算纹影（密度梯度）：(a) X Re、(b) 2X Re、(c) 3X Re、(d) 4X Re；图中标出分离点 S、三重点 T、再附点 R，显示 Edney IV 型激波干扰与分离区随 Re 的增强。",
+      "caption_orig": "FIG. 1. Variation of the SWBLI with respect to Reynolds numbers, (a) X Re, (b) 2X Re, (c) 3X Re, (d) 4X Re cases, based on computed Schlieren with distinct features of S: Separation point T: Triple point, R: Reattachment point.",
+      "why": "直接支撑“分离激波角近似不变、分离区与二次涡随 Re 增大、λ 激波更显著”的核心结论，是全文流场结构的首要证据。"
+    },
+    {
+      "file": "fig07_p10.png",
+      "n": 7,
+      "page": 10,
+      "caption_zh": "雷诺数对表面参数的影响并与单锥构型对比：(a) 摩阻系数，绿圈为 Moss–Bird 的 DSMC 数据；(b) 热流，与实验及前人工作对比，插图比较单锥/双锥；(c) 3X Re 稳态下热流的单锥/双锥对比。",
+      "caption_orig": "FIG. 7. Effects of Reynolds number on surface parameters and comparison with a single cone configuration. (a) Skin friction; green circle symbols correspond to the DSMC data of Moss and Bird.25 (b) Heat flux, comparison with the experiment2 and previous work40",
+      "why": "支撑“摩阻随 Re 升高而下降、热流幅值与峰值随 Re 升高、第一锥分离点上游不受第二锥影响”三条定量结论，并给出与实验/前作的验证。"
+    },
+    {
+      "file": "fig12_p14.png",
+      "n": 12,
+      "page": 14,
+      "caption_zh": "三个探针位置的压强与平动温度时间序列：(a) 分离点 A（0.055, 0.027 m）；(b) 弓形激波内 B（0.113, 0.111 m）；(c) 剪切层 KH 不稳定区 C（0.191, 0.157 m）。",
+      "caption_orig": "FIG. 12. Time traces of pressure and the translational temperature at (a) location A, (x, y) = (0.055, 0.027) (m); (b) location B, (x, y) = (0.113, 0.111) (m); (c) location C, (x, y) = (0.191, 0.157). Note that probe locations are shown in Fig. 13 and correspond to the separation point, a point in the bow-shock, and a location in the shear layer where a KH instability takes place, respectively.",
+      "why": "直接展示分离点、弓形激波与剪切层三个区域的不同时间尺度，是“KH 主频约为弓形激波振荡 20 倍”与“边界层低频扰动”的证据。"
+    },
+    {
+      "file": "fig13_p15.png",
+      "n": 13,
+      "page": 15,
+      "caption_zh": "两个时刻平动温度场的百分比差：(a) 最低 Re（t1=0.8, t2=2.52 ms）；(b) 3X Re（1.59→5.31 ms）；(c) 最高 Re（1.5→11 ms）；(d) 最高 Re（10.5→11 ms）。每个样本含 1000 个时间步。",
+      "caption_orig": "FIG. 13. Percentage difference of the translational temperatures at two different times, (Ttrn(x, y, t2) − Ttrn(x, y, t1))/((Ttrn(x, y, t2) + Ttrn(x, y, t1))/2) ∗100: (a) for the lowest Re case between, t1 = 0.8 and t2 = 2.52 ms, (b) for the 3X Re case between t1 = 1.59 and t2 = 5.31 ms, (c) for the highest Re case between t1 = 1.5 and t2 = 11 ms, and (d) for the highest Re case between t1 = 10.5 and t2 = 11 ms.",
+      "why": "用同一工况不同时刻的场差识别仍未定常的区域，支撑“分离区、弓形/分离激波、C1 接触面时间依赖性最强，高 Re 在 11 ms 仍未稳态”的结论。"
+    }
+  ],
+  "verification": {
+    "text_only": "仅使用 bundle 全文、图注及原 PDF 第8、10–12页核对式(3)–(11)；未引入外部知识。",
+    "a_grade_supported": "A 级条目均对应正文明确数据：表I/II、图1/2/7/8/9/10/11/12/13、式(3)–(11)及第6、9–16页结论；无仅凭图件目测的 A 级结论。",
+    "attributes_marked": "three_sentence、core_points、findings 均逐条标注属性；中文图题为原英文图注的翻译/概括（AI概括），caption_orig 保留原文。",
+    "coverage": "bundle 893行已全文读完；PDF 核对4页（第8、10、11、12页），覆盖式(3)–(11)；表I/II与四工况数据全部录入。",
+    "no_fabrication": "未编页码、图号、公式或数据；表II X Re 的 BS 点 y=0.756 m 按原文照录并注明疑为 0.0756；4X 段“2X Re case”按原文照录并注明疑笔误；2X、3X 的 p∞/Re/m 与 2X 的 σ 未给出即写“未逐项列出”，未用线性插值冒充实测值。",
+    "open_questions": [
+      "4X 工况真正达到稳态需要多长时间，是否存在临界 Re 使流动永久非定常？",
+      "KH 不稳定与弓形激波/分离激波振荡之间的耦合机制是什么，20 倍频比是否随 Re 或几何变化？",
+      "m=0 轴对称假设遗漏的离心/Görtler 三维失稳是否才是二次涡与高 Re 非定常的主因？",
+      "2X、3X 的衰减率与来流压力未逐项给出，|σ| 随 Re 的下降是否严格单调？",
+      "在化学非平衡空气、不同气体（如 CO2 或 Ar）下，分离区长度与表面热流的 Re 标度是否仍成立？",
+      "短时风洞 24 ms 测量与计算 11 ms 未稳态之间如何建立可比的“稳态判据”？",
+      "单模态拟合在 4X 失效后，需要引入哪些新模态（低频边界层模态、KH 模态）才能描述其长期行为？"
+    ]
+  }
+}

@@ -1,0 +1,654 @@
+{
+ "id": 1073,
+ "read_note": "文章类型：理论分析（Lagrangian 判据推导）＋解析解与数值解验证，非实验论文。材料范围：12 页全文完整（p.1–12），含图 1–9、式 (1)–(26) 与参考文献；bundle 全文已逐页读到 EOF。图表可读性：图件清单给出 9 个条目，正文图注完整；式 (23)、(26) 的文本层有乱码，已用 PDF 第 6、8 页核对，式 (8)–(22) 用 PDF 第 3–5 页核对。信息完整度：判据推导链、两个验证算例与结论齐全；网格量、时间步长、FTLE 计算的 δx/δy 取值与定量误差均未给出。提取口径：只依据 bundle 文本、图注与核对的 PDF 页，不引外部文献结论。",
+ "one_line": "对二维周期流提出壁面 FTLE 取零（最小）处即分离点的 Lagrangian 必要判据，并用解析分离泡与方腔流验证。",
+ "three_sentence": [
+  {
+   "text": "瞬时 Euler 流线无法正确定位非定常分离点；Haller 的加权平均零摩阻判据能给出分离位置，但未说明它在 FTLE 场中对应何处。",
+   "attr": "AI概括"
+  },
+  {
+   "text": "沿无滑移壁面解析变形梯度与 Cauchy–Green 张量，证明周期流分离点满足 λmax=1、壁面 FTLE 为零且沿壁最小，并用 Ghosh 解析分离泡（ω=2π、β=3、T=1）和 Ma=0.3、Re=1200 的周期驱动方腔验证。",
+   "attr": "原文明确"
+  },
+  {
+   "text": "壁面 FTLE 最小点与 Haller 判据给出的分离点一致，但再附点同样满足零 FTLE，需借助条纹线/物质尖峰区分，且判据只适用于时间周期流。",
+   "attr": "原文明确"
+  }
+ ],
+ "imrad": {
+  "introduction": "非定常分离存在 Euler 与 Lagrangian 两套描述：对周期分离泡，瞬时流线随时间大幅变化，而条纹线给出的物质尖峰起点固定（p.1–2，Fig.1）。已有工作包括 Shariff 等把分离点定义为 Poincaré 映射的不稳定流形不动点并给出时间平均摩阻为零（p.2）；Yuster 与 Hackborn 严格重导近定常周期流的零平均摩阻原理（p.2）；Haller 提出二维非定常分离精确理论——分离发生在加权平均摩阻为零且梯度为负处，对不可压与可压均适用（p.2）；Shadden 等用后向 FTLE 捕捉分离剖面，但未明确壁面分离点，因为壁面分离点是非双曲的而 FTLE 脊线对应双曲轨迹（p.2）；Lei 等用 LCS 捕捉翼型分离剖面、再用 Haller 判据定位（p.2–3）。缺口：FTLE 场中壁面分离点的位置没有被明确指出。目标：分析二维周期流沿壁面的 FTLE 分布，提出“壁面 FTLE 取零（最小）处即分离点”的新 Lagrangian 必要判据，作为 Haller 判据的扩展（p.3）。适用边界：二维、时间周期流；作者声称对不可压与可压流均适用（p.5、p.11）。",
+  "methods": "理论部分从粒子运动方程 (1) 与无滑移边界 (2) 出发，用流映射 (7)、变形梯度 (8) 及其沿轨迹的矩阵微分方程 (9)–(10)；壁面 ux=vx=0 使 (9) 退化为上三角 (11)；连续性方程 (12)–(14) 给出壁面密度沿轨迹的关系；直接积分 (11) 得 (15)，定义 a、b (16)，构造 Cauchy–Green 张量 (17)，得特征值 (18) 与 FTLE 定义 (19)；对周期流由 Haller 判据 (6) 得 a=0、b=1，从而 λmax=1、σ=0（(21)–(22)，p.4–5）。验证一：Ghosh 等解析周期分离泡 (23)，取 ω=2π、β=3、T=1，后向积分一个周期计算壁面 FTLE，起始时刻取 t=0、0.2T、0.4T、0.6T、0.8T、T（p.6，Fig.2）。验证二：二维周期驱动方腔，L=1（Fig.3），求解二维非定常 Navier–Stokes：对流项五阶 WENO、黏性项四阶中心差分、时间项三阶 TVD Runge–Kutta（p.7）；先用 Re=100、400、1000、3200 的稳态解与 Ghia 等基准对比验证代码（Ma=0.1、Pr=0.72、顶盖 u=1、v=0，Fig.4）；非定常工况 Ma=0.3（“practically compressible”）、Re=1200、顶盖 u=1+(2/3)sin(2t/3)、周期 T=3π（p.7–8）；粒子轨迹用四阶 Lagrange 插值速度与四阶 Runge–Kutta 积分 (1)（p.8）；变形梯度用二阶有限差分 (24)–(25) 近似（p.6）。网格量、时间步长、δx/δy 取值与计算不确定度文中未提及。",
+  "results": "解析分离泡：壁面 FTLE 在 x=−1 处取最小，且 t=0、0.2T、…、T 六个起始时刻的曲线几乎重合，说明不可压周期流的壁面 FTLE 与起始时刻无关；该位置与 Haller 加权平均零摩阻判据以及 Fig.1 物质线给出的分离点一致（p.6–7，Fig.2）。方腔：一个周期内上部次级涡周期出现和消失、底部两涡周期移动（p.8，Fig.6）；Euler 意义下左鞍点（分离点或再附点）在 x=0.194–0.267 间移动，右鞍点在 x=0.662–0.719 间移动，而 Haller 判据给出固定分离点 x=0.242、再附点 x=0.693（p.8，Fig.7）；壁面 FTLE 最小值位于 x=0.242，与 Haller 判据一致（p.9，Fig.8）；分离点附近物质尖峰与 Haller 理论的一阶分离剖面 x=γ+y f0(t0)（式 (26)）吻合，分离角随时间变化但分离位置固定（p.10，Fig.9）。",
+  "discussion": "机制链：无滑移壁面使变形梯度上三角化；流向拉伸 ∂x/∂y0 由加权剪切积分 a 控制，b=ρ(t0)/ρ(t)>0 使 λmax≥1，且仅在 a=0、0<b≤1 时 λmax=1；周期流的 Haller 判据 (6) 正对应 a(γ,t0,t0+T)=0，故分离点壁面 FTLE 最小并等于零（p.4–5）。判据只是必要条件：再附点同样满足 (5)(6) 并给出 σ=0，需要借助条纹线/物质尖峰区分（p.5–6）。意义：把 Haller 的加权平均摩阻判据转化为可直接从壁面 FTLE 曲线读取的几何判据，可用于数值或实验后处理定位分离点。局限：仅限时间周期流，一般非定常流留待未来工作（p.11）；必须至少后向积分一个周期；未给出网格、插值与有限差分误差的定量不确定度；可压缩性只通过壁面密度 ρ 进入，验证算例 Ma=0.3 压缩性较弱。"
+ },
+ "core_points": [
+  {
+   "point": "提出新判据：二维周期流的分离点位于壁面 FTLE 的最小点，该点一般满足 σ0T(γ,0)=0。",
+   "type": "理论判据",
+   "grade": "A",
+   "source": "p.5，式 (22) 及其后文字",
+   "attr": "原文明确"
+  },
+  {
+   "point": "判据由 Haller 加权平均零摩阻条件 (5)–(6) 推导而来，是必要条件而非充分条件。",
+   "type": "理论定位",
+   "grade": "A",
+   "source": "p.3 式 (5)–(6)；p.5 “Eq. (5) is just a necessary condition”",
+   "attr": "原文明确"
+  },
+  {
+   "point": "壁面变形梯度因 ux=vx=0 而退化为上三角，λmax=1 仅当 a=0 且 0<b≤1。",
+   "type": "推导关键",
+   "grade": "A",
+   "source": "p.4 式 (11)、(16)、(18)",
+   "attr": "原文明确"
+  },
+  {
+   "point": "再附点与分离点同样满足零 FTLE，需用条纹线是否形成物质尖峰来区分两者。",
+   "type": "适用性限制",
+   "grade": "A",
+   "source": "p.5–6",
+   "attr": "原文明确"
+  },
+  {
+   "point": "解析分离泡的壁面 FTLE 最小值在 x=−1，且六个起始时刻结果几乎相同。",
+   "type": "验证结果",
+   "grade": "A",
+   "source": "p.6–7，Fig.2",
+   "attr": "原文明确"
+  },
+  {
+   "point": "方腔算例壁面 FTLE 最小值在 x=0.242，与 Haller 判据完全一致。",
+   "type": "验证结果",
+   "grade": "A",
+   "source": "p.9，Fig.8",
+   "attr": "原文明确"
+  },
+  {
+   "point": "Euler 意义下分离鞍点在 x=0.194–0.267 间移动，再附鞍点在 x=0.662–0.719 间移动，而 Lagrangian 判据给出固定值 0.242 与 0.693。",
+   "type": "定量对比",
+   "grade": "A",
+   "source": "p.8，Fig.7",
+   "attr": "原文明确"
+  },
+  {
+   "point": "物质尖峰与 Haller 一阶分离剖面 x=γ+y f0(t0) 在壁面附近吻合，支持“固定分离”图像。",
+   "type": "机理证据",
+   "grade": "B",
+   "source": "p.10，Fig.9，式 (26)",
+   "attr": "原文明确"
+  },
+  {
+   "point": "判据对不可压周期流与 Ma=0.3 的近可压周期方腔均给出合理结果，作者据此声称可用于可压流。",
+   "type": "适用范围",
+   "grade": "B",
+   "source": "p.7、p.11",
+   "attr": "AI概括"
+  },
+  {
+   "point": "作者承认判据仅限时间周期流，一般时间依赖非定常流未处理。",
+   "type": "局限",
+   "grade": "A",
+   "source": "p.11 结论",
+   "attr": "原文明确"
+  },
+  {
+   "point": "FTLE 须由后向积分得到，才能揭示分离剖面对应的不稳定流形。",
+   "type": "方法要点",
+   "grade": "B",
+   "source": "p.6",
+   "attr": "原文明确"
+  },
+  {
+   "point": "由于只用到壁面量，原则上可由实验壁面附近的粒子轨迹构造 FTLE 曲线定位分离点；论文未做实验验证。",
+   "type": "工程意义",
+   "grade": "C",
+   "source": "p.3、p.5；AI 由判据形式推断",
+   "attr": "AI推断"
+  }
+ ],
+ "conditions": [
+  {
+   "item": "流动类型",
+   "value": "二维、时间周期流；不可压或可压均声称适用",
+   "source": "p.3 §2；p.5；p.11",
+   "note": "判据本身未限制马赫数，但可压缩性只通过壁面密度体现"
+  },
+  {
+   "item": "壁面边界条件",
+   "value": "y=0 处 u(x,0,t)=v(x,0,t)=0（无滑移）",
+   "source": "p.3，式 (2)"
+  },
+  {
+   "item": "解析分离泡：速度场参数",
+   "value": "ω=2π，β=3；壁面 y=0",
+   "source": "p.6，式 (23)",
+   "note": "速度场取自 Ghosh 等，形式为 u=−y+3y²+x²y−(2/3)y³+βxy sin(ωt)，v=−xy²−(1/2)βy² sin(ωt)"
+  },
+  {
+   "item": "解析分离泡：周期",
+   "value": "T=1",
+   "source": "p.6"
+  },
+  {
+   "item": "解析分离泡：FTLE 计算",
+   "value": "后向积分 1 个周期；起始时刻 t=0、0.2T、0.4T、0.6T、0.8T、T",
+   "source": "p.6，Fig.2"
+  },
+  {
+   "item": "方腔几何",
+   "value": "二维正方形，无量纲边长 L=1；顶盖沿 x 方向运动",
+   "source": "p.7，Fig.3"
+  },
+  {
+   "item": "方腔稳态验证工况 1",
+   "value": "Re=100；Ma=0.1；Pr=0.72；顶盖 u=1、v=0",
+   "source": "p.7"
+  },
+  {
+   "item": "方腔稳态验证工况 2",
+   "value": "Re=400；Ma=0.1；Pr=0.72；顶盖 u=1、v=0",
+   "source": "p.7"
+  },
+  {
+   "item": "方腔稳态验证工况 3",
+   "value": "Re=1000；Ma=0.1；Pr=0.72；顶盖 u=1、v=0",
+   "source": "p.7"
+  },
+  {
+   "item": "方腔稳态验证工况 4",
+   "value": "Re=3200；Ma=0.1；Pr=0.72；顶盖 u=1、v=0",
+   "source": "p.7"
+  },
+  {
+   "item": "方腔非定常工况",
+   "value": "Re=1200；Ma=0.3；顶盖 u=1+(2/3)sin(2t/3)、v=0",
+   "source": "p.7–8"
+  },
+  {
+   "item": "方腔非定常周期",
+   "value": "T=3π",
+   "source": "p.8，Fig.5 讨论"
+  },
+  {
+   "item": "网格量与时间步长",
+   "value": "文中未提及",
+   "source": "p.7 §3.2.1；全文未给出"
+  },
+  {
+   "item": "FTLE 有限差分扰动尺度 δx、δy",
+   "value": "文中未提及具体取值，仅称“choosing δx and δy small enough”",
+   "source": "p.6"
+  },
+  {
+   "item": "壁温/热流条件",
+   "value": "文中未提及（等温不可压/近可压方腔，无热边界条件描述）",
+   "source": "p.7 §3.2.1"
+  }
+ ],
+ "key_parameters": [
+  {
+   "name": "a(x0,t0,t)",
+   "definition": "壁面加权剪切积分，ρ(x0,0,t0)∫uy/ρ dτ",
+   "value": "随 x0、t0、t 变化；分离点处 a(γ,t0,t0+T)=0",
+   "relation": "式 (16)；进入 Cauchy–Green 张量非对角元",
+   "source": "p.5，式 (16)"
+  },
+  {
+   "name": "b(x0,t0,t)",
+   "definition": "壁面密度比 ρ(x0,0,t0)/ρ(x0,0,t)",
+   "value": "恒 >0；分离点处 b=1；不可压时恒为 1",
+   "relation": "式 (16)；与 a 共同决定 λmax",
+   "source": "p.5，式 (16)"
+  },
+  {
+   "name": "λmax",
+   "definition": "壁面 Cauchy–Green 张量 C 的最大特征值",
+   "value": "≥1；λmax=1 仅当 a=0 且 0<b≤1",
+   "relation": "式 (18)",
+   "source": "p.5，式 (17)–(18)"
+  },
+  {
+   "name": "σt0t（FTLE）",
+   "definition": "(1/|t−t0|) ln√λmax(C)",
+   "value": "壁面分离点处 σ=0，且沿壁面取最小",
+   "relation": "式 (19)、(21)",
+   "source": "p.5，式 (19)–(22)"
+  },
+  {
+   "name": "解析泡分离点位置",
+   "definition": "壁面 FTLE 最小值所在 x",
+   "value": "x=−1",
+   "relation": "与 Haller 判据及物质线结果一致",
+   "source": "p.6–7，Fig.2"
+  },
+  {
+   "name": "方腔分离点位置",
+   "definition": "壁面 FTLE 最小值 / Haller 判据",
+   "value": "x=0.242（无量纲，L=1）",
+   "relation": "两者一致",
+   "source": "p.8–9，Fig.7、Fig.8"
+  },
+  {
+   "name": "方腔再附点位置",
+   "definition": "Haller 判据给出的固定再附点",
+   "value": "x=0.693（无量纲，L=1）",
+   "relation": "同样满足零 FTLE，需条纹线区分",
+   "source": "p.8–9"
+  },
+  {
+   "name": "Euler 左鞍点移动范围",
+   "definition": "瞬时零壁面摩阻点（分离侧）",
+   "value": "x=0.194–0.267",
+   "relation": "随时间移动，与固定分离点 0.242 不同",
+   "source": "p.8，Fig.7"
+  },
+  {
+   "name": "Euler 右鞍点移动范围",
+   "definition": "瞬时零壁面摩阻点（再附侧）",
+   "value": "x=0.662–0.719",
+   "relation": "随时间移动，与固定再附点 0.693 不同",
+   "source": "p.8，Fig.7"
+  },
+  {
+   "name": "分离泡周期 T",
+   "definition": "解析速度场周期",
+   "value": "T=1（无量纲）",
+   "relation": "ω=2π",
+   "source": "p.6"
+  },
+  {
+   "name": "方腔周期 T",
+   "definition": "顶盖速度周期",
+   "value": "T=3π（无量纲）",
+   "relation": "u=1+(2/3)sin(2t/3)",
+   "source": "p.8"
+  },
+  {
+   "name": "雷诺数",
+   "definition": "方腔算例雷诺数",
+   "value": "稳态验证 100、400、1000、3200；非定常 1200",
+   "relation": "基于 L=1 与顶盖速度",
+   "source": "p.7–8"
+  },
+  {
+   "name": "马赫数",
+   "definition": "基于壁温与来流体积速度",
+   "value": "稳态 Ma=0.1；非定常 Ma=0.3",
+   "relation": "用于可压/不可压近似",
+   "source": "p.7"
+  },
+  {
+   "name": "一阶分离剖面 f0(t0)",
+   "definition": "Haller 理论给出的分离剖面斜率函数，全部为壁面量",
+   "value": "由式 (26) 计算；文中未给数值",
+   "relation": "剖面形式 x=γ+y f0(t0)",
+   "source": "p.10，式 (26)"
+  }
+ ],
+ "methods": [
+  {
+   "item": "控制方程",
+   "value": "二维粒子运动方程 ẋ=u、ẏ=v；连续性方程 ρt+∇·(ρv)=0",
+   "source": "p.3–4，式 (1)、(12)",
+   "note": "未写出动量方程，验证算例另行求解二维非定常 N–S"
+  },
+  {
+   "item": "理论工具",
+   "value": "流映射、变形梯度沿轨迹的矩阵微分方程、Cauchy–Green 张量特征值、FTLE",
+   "source": "p.4–5，式 (7)–(19)"
+  },
+  {
+   "item": "判据形式",
+   "value": "周期流壁面 FTLE 取零/最小处为分离点（必要条件）",
+   "source": "p.5，式 (22)"
+  },
+  {
+   "item": "解析验证算例",
+   "value": "Ghosh 等时间周期分离泡，ω=2π、β=3、T=1",
+   "source": "p.6，式 (23)"
+  },
+  {
+   "item": "数值离散：对流项",
+   "value": "五阶 WENO 格式",
+   "source": "p.7 §3.2.1"
+  },
+  {
+   "item": "数值离散：黏性项",
+   "value": "四阶中心有限差分",
+   "source": "p.7"
+  },
+  {
+   "item": "数值离散：时间项",
+   "value": "三阶 TVD Runge–Kutta",
+   "source": "p.7"
+  },
+  {
+   "item": "代码验证",
+   "value": "Re=100、400、1000、3200 稳态方腔与 Ghia 等数据对比，作者称“excellent agreement”",
+   "source": "p.7，Fig.4",
+   "note": "仅给出 u(y) 与 v(x) 中心线对比，无误差表"
+  },
+  {
+   "item": "非定常计算设置",
+   "value": "Ma=0.3、Re=1200、顶盖 u=1+(2/3)sin(2t/3)、T=3π",
+   "source": "p.7–8"
+  },
+  {
+   "item": "粒子轨迹积分",
+   "value": "速度四阶 Lagrange 插值＋四阶 Runge–Kutta",
+   "source": "p.8"
+  },
+  {
+   "item": "变形梯度计算",
+   "value": "二阶有限差分近似式 (24)–(25)，δx、δy 尽可能小",
+   "source": "p.6",
+   "note": "未给 δ 取值与误差分析"
+  },
+  {
+   "item": "FTLE 积分方向",
+   "value": "后向积分一个周期（t → t−T）",
+   "source": "p.6"
+  },
+  {
+   "item": "网格无关性",
+   "value": "文中未提及（未给网格量、y+ 或网格收敛研究）",
+   "source": "p.7 §3.2.1"
+  },
+  {
+   "item": "收敛判据",
+   "value": "以方腔中心 u、v 的时间演化作为数值解收敛指标；并称已获得充分解析的方腔流",
+   "source": "p.8，Fig.5",
+   "note": "未给残差阈值"
+  }
+ ],
+ "derivation": {
+  "exists": true,
+  "idea": "把 Haller 的“加权平均壁面摩阻为零”判据翻译成壁面 FTLE 的语言：无滑移壁面使变形梯度上三角化，壁面 FTLE 只由加权剪切积分 a 与密度比 b 决定；周期流中 a=0、b=1 恰是 Haller 条件，因此分离点对应 λmax=1 与零 FTLE，并在壁面取最小。",
+  "assumptions": [
+   "流场二维，速度 v=(u,v) 足够光滑，粒子轨迹由 ẋ=u、ẏ=v 唯一确定",
+   "壁面 y=0 满足无滑移 u=v=0",
+   "周期流周期为 T，且流动在时间上严格周期",
+   "可压缩性仅通过连续性方程给出的壁面密度沿轨迹变化进入；不可压时 ρ 为常数",
+   "判据为必要条件：不区分分离点与再附点"
+  ],
+  "steps": [
+   {
+    "title": "设定粒子运动与无滑移壁面",
+    "text": "以二维速度场描述流体粒子运动，壁面取 y=0 且满足无滑移，这是后续壁面简化的前提。",
+    "latex": [
+     "\\begin{cases}\\dot{x}=u(x,y,t)\\\\ \\dot{y}=v(x,y,t)\\end{cases}",
+     "u(x,0,t)=v(x,0,t)=0"
+    ],
+    "source": "p.3，式 (1)、(2)"
+   },
+   {
+    "title": "回顾 Haller 判据",
+    "text": "Haller 的分离必要条件写成壁面剪切 uy/ρ 的时间积分有界；对周期流化为整周期积分为零，其 Lagrangian 形式是 ∂x(t0+T;γ,0,t0)/∂y0=0。原文只引用、未重新推导该理论。",
+    "latex": [
+     "\\limsup_{t\\to-\\infty}\\left|\\int_{t_0}^{t}\\frac{u_y(\\gamma,0,\\tau)}{\\rho(\\gamma,0,\\tau)}\\,\\mathrm{d}\\tau\\right|<\\infty",
+     "\\limsup_{t\\to-\\infty}\\left|\\frac{\\partial x(t;\\gamma,0,t_0)}{\\partial y_0}\\right|<\\infty",
+     "\\int_0^T\\frac{u_y(\\gamma,0,t)}{\\rho(\\gamma,0,t)}\\,\\mathrm{d}t=0",
+     "\\frac{\\partial x(t_0+T;\\gamma,0,t_0)}{\\partial y_0}=0"
+    ],
+    "source": "p.3，式 (3)–(6)"
+   },
+   {
+    "title": "定义流映射与变形梯度",
+    "text": "流映射 F 把 t0 时刻的初始位置映到 t 时刻位置；其 Jacobian 即变形梯度，对初始位置求导得到沿轨迹的矩阵微分方程，初值为单位阵。",
+    "latex": [
+     "F_{t_0}^{t}(x_0,y_0)=\\begin{pmatrix}x(t;x_0,y_0,t_0)\\\\ y(t;x_0,y_0,t_0)\\end{pmatrix}",
+     "\\nabla F_{t_0}^{t}(x_0,y_0)=\\begin{pmatrix}\\dfrac{\\partial x(t)}{\\partial x_0}&\\dfrac{\\partial x(t)}{\\partial y_0}\\\\[8pt] \\dfrac{\\partial y(t)}{\\partial x_0}&\\dfrac{\\partial y(t)}{\\partial y_0}\\end{pmatrix}",
+     "\\frac{\\mathrm{d}}{\\mathrm{d}t}\\nabla F_{t_0}^{t}=\\begin{pmatrix}u_x&u_y\\\\ v_x&v_y\\end{pmatrix}\\nabla F_{t_0}^{t}",
+     "\\left.\\nabla F_{t_0}^{t}\\right|_{t=t_0}=\\begin{pmatrix}1&0\\\\0&1\\end{pmatrix}"
+    ],
+    "source": "p.4，式 (7)–(10)"
+   },
+   {
+    "title": "用无滑移条件简化到壁面",
+    "text": "壁面上 ux=vx=0，矩阵微分方程退化为上三角形式，这是全文推导的关键简化：壁面变形梯度不再与流向速度梯度耦合。",
+    "latex": [
+     "\\frac{\\mathrm{d}}{\\mathrm{d}t}\\nabla F_{t_0}^{t}(x_0,0)=\\begin{pmatrix}0&u_y\\left(F_{t_0}^{t}(x_0,0),t\\right)\\\\ 0&v_y\\left(F_{t_0}^{t}(x_0,0),t\\right)\\end{pmatrix}\\nabla F_{t_0}^{t}(x_0,0)"
+    ],
+    "source": "p.4，式 (11)"
+   },
+   {
+    "title": "用连续性方程给出壁面密度关系",
+    "text": "连续性方程在壁面退化为 ρt+ρvy=0，积分得密度沿轨迹的指数关系；它把可压缩性引入变形梯度。",
+    "latex": [
+     "\\rho_t+\\nabla\\cdot(\\rho\\boldsymbol{v})=0",
+     "\\rho_t(x,0,t)+\\rho(x,0,t)v_y(x,0,t)=0",
+     "\\rho(x,0,t)=\\rho(x,0,t_0)\\exp\\left(-\\int_{t_0}^{t}v_y(x,0,s)\\,\\mathrm{d}s\\right)"
+    ],
+    "source": "p.4，式 (12)–(14)"
+   },
+   {
+    "title": "直接积分得到壁面变形梯度",
+    "text": "把式 (11) 直接积分并用初值 (10)、密度关系 (14)，得到壁面变形梯度的显式上三角形式。",
+    "latex": [
+     "\\nabla F_{t_0}^{t}(x_0,0)=\\begin{pmatrix}1&\\rho(x_0,0,t_0)\\displaystyle\\int_{t_0}^{t}\\frac{u_y(x_0,0,\\tau)}{\\rho(x_0,0,\\tau)}\\,\\mathrm{d}\\tau\\\\[12pt] 0&\\dfrac{\\rho(x_0,0,t_0)}{\\rho(x_0,0,t)}\\end{pmatrix}"
+    ],
+    "source": "p.4，式 (15)"
+   },
+   {
+    "title": "定义 a、b 并构造 Cauchy–Green 张量",
+    "text": "令 a 为加权剪切积分、b 为壁面密度比（恒正），则 C=FTF 为对称正定矩阵 (1, a; a, a²+b²)。",
+    "latex": [
+     "a(x_0,t_0,t)=\\rho(x_0,0,t_0)\\int_{t_0}^{t}\\frac{u_y(x_0,0,\\tau)}{\\rho(x_0,0,\\tau)}\\,\\mathrm{d}\\tau,\\qquad b(x_0,t_0,t)=\\frac{\\rho(x_0,0,t_0)}{\\rho(x_0,0,t)}",
+     "C_{t_0}^{t}(x_0,0)=\\left(F_{t_0}^{t}(x_0,0)\\right)^{\\mathrm{T}}F_{t_0}^{t}(x_0,0)=\\begin{pmatrix}1&a\\\\ a&a^2+b^2\\end{pmatrix}"
+    ],
+    "source": "p.5，式 (16)–(17)"
+   },
+   {
+    "title": "求最大特征值并给出 FTLE",
+    "text": "对称正定张量的两个实正特征值如式 (18)；λmax≥1，且仅在 a=0、0<b≤1 时取 1。FTLE 定义为 λmax 的对数除以时间间隔。",
+    "latex": [
+     "\\lambda_{1,2}=\\frac{1}{2}\\left(1+a^2+b^2\\pm\\sqrt{(a^2+b^2+1)^2-4b^2}\\right)",
+     "\\sigma_{t_0}^{t}(x_0,y_0)=\\frac{1}{|t-t_0|}\\ln\\sqrt{\\lambda_{\\max}\\left(C_{t_0}^{t}(x_0,y_0)\\right)}"
+    ],
+    "source": "p.5，式 (18)–(19)"
+   },
+   {
+    "title": "定常情形：回到 Prandtl 判据",
+    "text": "定常流分离点满足壁面摩阻为零且其梯度为负；此时 a=0、b=1，对任意时间间隔 λmax=1，故分离点沿壁面 FTLE 最小。",
+    "latex": [
+     "\\tau_w(\\gamma)=\\nu\\rho u_y(\\gamma,0)=0,\\qquad \\tau_w'(\\gamma)=\\nu\\rho u_{xy}(\\gamma,0)<0"
+    ],
+    "source": "p.5，式 (20) 及其后文字"
+   },
+   {
+    "title": "周期情形：由 Haller 条件得零 FTLE",
+    "text": "对周期 T，由式 (15) 与 (6) 得 a(γ,t0,t0+T)=0、b=1，故 λmax=1；邻域内 λmax>1，于是分离点沿壁面 FTLE 最小。由于 a、b 与 t0 无关，判据可写为 σ0T(γ,0)=0。",
+    "latex": [
+     "\\sigma_{t_0}^{t_0+T}(x_0,0)=\\frac{1}{|T|}\\ln\\sqrt{\\lambda_{\\max}\\left(C_{t_0}^{t_0+T}(x_0,0)\\right)}",
+     "\\sigma_0^{T}(\\gamma,0)=0"
+    ],
+    "source": "p.5，式 (21)–(22)"
+   },
+   {
+    "title": "判据的边界与再附点歧义",
+    "text": "式 (5) 只是必要条件，故式 (22) 也只是必要条件；再附点同样满足 (5)(6)，也给出零 FTLE，需用条纹线观察是否形成物质尖峰来区分。",
+    "latex": [],
+    "source": "p.5–6"
+   }
+  ],
+  "result": "周期流分离点的壁面 FTLE 取得最小值且一般等于零，即 σ0T(γ,0)=0；该结论与 Haller 加权平均零摩阻判据等价于同一条件 a=0、b=1，但不构成充分条件，且再附点同为零 FTLE 点。",
+  "limits": "仅适用于时间周期流（作者在 p.11 明确承认）；需至少后向积分一个周期；只给出必要条件，不能单独区分分离与再附；可压缩性仅通过壁面密度进入，未考虑壁面传热或真实气体效应；推导未讨论三维、壁面曲率或非周期强迫；数值验证未给网格与有限差分扰动尺度的定量误差。"
+ },
+ "mechanism": "【原文明确】无滑移壁面上 ux=vx=0，使壁面变形梯度矩阵成为上三角；其非对角元是加权剪切积分 a，对角元是密度比 b>0。于是 λmax≥1，且只有当 a=0 且 0<b≤1 时才等于 1。【原文明确】对周期流，Haller 的整周期加权摩阻为零条件恰好就是 a=0，因此分离点处 λmax=1、FTLE=0；离开分离点后 a≠0 使 λmax>1，故分离点是壁面 FTLE 的极小点。【AI推断】物理上可理解为：在一个周期内，壁面法向相邻的两条物质线在流向没有净拉伸（加权剪切正负抵消），因而分离点附近既不被持续拉离也不被持续压向壁面，这正是“固定分离”的 Lagrangian 特征；而瞬时 Euler 鞍点会随周期来回移动。",
+ "findings": [
+  {
+   "finding": "解析周期分离泡的壁面 FTLE 在 x=−1 处取最小值，据此判定的分离点与 Haller 判据、物质线结果一致。",
+   "evidence": "Fig.2 全局与局部放大图，最小值位于 x=−1；正文称“A minimal FTLE is located at x = −1”",
+   "type": "解析算例验证",
+   "strength": "强",
+   "source": "p.6–7，Fig.2",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "不可压周期流的壁面 FTLE 分布与起始时刻无关：t=0、0.2T、0.4T、0.6T、0.8T、T 六条曲线几乎重合。",
+   "evidence": "Fig.2 中六条曲线重叠；正文称“almost the same”",
+   "type": "数值观察",
+   "strength": "强",
+   "source": "p.6–7，Fig.2",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "周期方腔的壁面 FTLE 最小值位于 x=0.242，与 Haller 判据给出的固定分离点完全一致。",
+   "evidence": "Fig.8 及其正文“a minimum of FTLE at x = 0.242”",
+   "type": "数值验证",
+   "strength": "强",
+   "source": "p.9，Fig.8",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "Euler 瞬时零摩阻鞍点在一个周期内移动（分离侧 0.194–0.267，再附侧 0.662–0.719），而 Lagrangian 判据给出固定值 0.242 与 0.693。",
+   "evidence": "Fig.7(a) 两个鞍点的时间演化；正文给出具体范围",
+   "type": "定量对比",
+   "strength": "强",
+   "source": "p.8，Fig.7",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "再附点同样满足零 FTLE，因此判据本身不能区分分离与再附，需要条纹线/物质尖峰判别。",
+   "evidence": "正文“the reattachment point also gives σ0T(γ,0)=0”；Fig.9 物质尖峰",
+   "type": "理论边界",
+   "strength": "强",
+   "source": "p.5–6；p.10，Fig.9",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "分离点附近的物质尖峰与 Haller 一阶分离剖面 x=γ+y f0(t0) 吻合，分离角随时间变化但分离位置固定。",
+   "evidence": "Fig.9 红色虚线与粒子云对比",
+   "type": "机理证据",
+   "strength": "中",
+   "source": "p.10，Fig.9，式 (26)",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "代码在 Re=100–3200 稳态方腔与 Ghia 等基准吻合良好，保证方腔流被充分解析。",
+   "evidence": "Fig.4 中心线 u、v 剖面与基准数据对比；作者称“excellent agreement”",
+   "type": "代码验证",
+   "strength": "中",
+   "source": "p.7，Fig.4",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "判据在 Ma=0.3 的近可压周期方腔仍成立，支持作者“可用于可压流”的主张，但该算例压缩性较弱。",
+   "evidence": "非定常工况 Ma=0.3、Re=1200，Fig.8 结果",
+   "type": "适用范围证据",
+   "strength": "弱",
+   "source": "p.7–9",
+   "attr": "AI推断"
+  }
+ ],
+ "conclusions": "作者提出并验证了一个基于壁面 FTLE 的二维周期流非定常分离 Lagrangian 必要判据：分离发生在壁面 FTLE 为零（沿壁最小）的点。该判据是 Haller 加权平均零摩阻判据的扩展，可用于定位分离点并补充 FTLE 场的信息；用解析分离泡和驱动方腔数值解作了验证。作者明确其只适用于时间周期流，一般非定常流的判据留待未来工作（p.11）。",
+ "contributions": [
+  "把 Haller 的加权平均零壁面摩阻判据转化为壁面 FTLE 的零值/极小值判据，使分离点可直接从 FTLE 曲线读取。",
+  "给出壁面变形梯度上三角化及 a、b 两个标量控制 λmax 与 FTLE 的解析结构。",
+  "用解析周期分离泡和周期驱动方腔两个算例验证，分离位置与 Haller 判据定量一致（x=0.242、x=0.693）。",
+  "指出再附点同为零 FTLE 点，并给出用条纹线/物质尖峰区分的操作方式。"
+ ],
+ "limits": "作者承认：判据仅限时间周期流，一般时间依赖非定常流未处理（p.11）；判据只是必要条件，不能单独区分分离与再附。材料显示的其他局限：壁面 FTLE 需后向积分整周期，计算成本与存储较高；数值部分未给网格量、时间步长、δx/δy 与 FTLE 误差，无法评估数值不确定度；方腔算例 Ma=0.3 压缩性弱，“对可压流适用”缺少强压缩/高焓验证；未考虑壁面传热、真实气体与三维效应；未做实验验证。",
+ "significance": "对高速流动的价值在于提供一个纯运动学的分离点定位工具：只要能从数值或实验获得壁面附近一个周期内的粒子轨迹，即可构造壁面 FTLE 曲线并读取极小点，避免瞬时流线/摩阻零点随周期漂移带来的误判（p.1–2、p.8）。这对非定常分离泡、周期性激波/边界层干扰、进气道与叶栅等周期主导流动的分离位置辨识有方法借鉴意义（AI 推断）。但它不能回答分离的因果机制、分离泡长度随时间演化或三维/湍流效应；用于可压缩高焓流动前需在强压缩条件下重新验证。",
+ "quotes": [
+  {
+   "text": "flow separation occurs at the location of the minimal FTLE",
+   "supports": "论文核心判据的原始表述",
+   "source": "p.6",
+   "use": "引用判据时作为定义句"
+  },
+  {
+   "text": "the separation point of a periodic flow admits a minimal FTLE along the wall",
+   "supports": "周期流分离点的 FTLE 极小性质",
+   "source": "p.5",
+   "use": "推导结论的引用"
+  },
+  {
+   "text": "Eq. (5) is just a necessary condition for separation",
+   "supports": "判据只是必要条件，不能区分分离/再附",
+   "source": "p.5",
+   "use": "讨论适用边界时引用"
+  },
+  {
+   "text": "this criterion is restricted to time-periodic flows",
+   "supports": "作者自认的适用范围限制",
+   "source": "p.11",
+   "use": "批评性引用或未来工作铺垫"
+  },
+  {
+   "text": "the location of separation remains fixed at x = 0.242",
+   "supports": "Lagrangian 判据给出固定分离点，区别于移动的 Euler 鞍点",
+   "source": "p.8",
+   "use": "与 Euler 描述对比时引用"
+  },
+  {
+   "text": "the reattachment point remains fixed at x = 0.693",
+   "supports": "再附点同样由 Lagrangian 判据固定",
+   "source": "p.8",
+   "use": "说明再附点零 FTLE 的来源"
+  },
+  {
+   "text": "a material spike will form",
+   "supports": "分离点的可观察运动学特征",
+   "source": "p.6",
+   "use": "解释如何区分分离与再附"
+  },
+  {
+   "text": "it is independent of the starting time for an incompressible periodic flow",
+   "supports": "不可压周期流的壁面 FTLE 分布与起始时刻无关",
+   "source": "p.6",
+   "use": "说明判据无需固定起始相位，便于实际应用"
+  }
+ ],
+ "figures": [
+  {
+   "file": "fig01_p2.png",
+   "n": 1,
+   "page": 2,
+   "caption_zh": "周期分离泡中 Lagrangian 与 Eulerian 描述的差异：蓝线为流线，黑/灰粒子为壁面附近释放的粒子团，红线为物质线",
+   "caption_orig": "Fig. 1 Differences between Lagrangian and Eulerian frames for a periodic separation bubble (details in Subsection 3.1), where blue lines are streamlines, black and grey clusters are particles released near the wall, and red lines are the material lines (color online)",
+   "why": "给出研究动机：瞬时流线随周期变化，而物质线/条纹线给出的分离起点固定，说明必须用 Lagrangian 判据定位非定常分离点。"
+  },
+  {
+   "file": "fig02_p7.png",
+   "n": 2,
+   "page": 7,
+   "caption_zh": "解析分离泡的壁面 FTLE 分布：(a) 全局视图；(b) 最小值附近放大图，六个起始时刻曲线重合，最小值位于 x=−1",
+   "caption_orig": "Fig. 2 FTLE distributions of (a) the global view and (b) the zoomed view around the minimum (color online)",
+   "why": "直接支撑“壁面 FTLE 最小值即分离点”以及“与起始时刻无关”两条核心结论。"
+  },
+  {
+   "file": "fig08_p10.png",
+   "n": 7,
+   "page": 10,
+   "caption_zh": "方腔底壁瞬时零摩阻点的时间演化 (a) 与按 Haller 判据式 (5) 计算的加权平均摩阻积分分布 (b)",
+   "caption_orig": "Fig. 7 Schemes of (a) the time evolution of instantaneous zero skin-friction at the bottom wall and (b) the integral of weighted averaging skin-friction in a period according to Eq. (5) (color online)",
+   "why": "定量展示 Euler 鞍点移动范围（0.194–0.267、0.662–0.719）与 Haller 判据固定值（0.242、0.693）的对比，是判据有效性的关键对照。"
+  },
+  {
+   "file": "fig09_p11.png",
+   "n": 9,
+   "page": 11,
+   "caption_zh": "周期驱动方腔中的分离物质尖峰及一阶分离剖面（红色虚线）",
+   "caption_orig": "Fig. 9 Separating material spike in periodic lid-driven cavity flows and leading-order separation profile (see red dashed lines) (color online)",
+   "why": "支撑“固定分离”的物理图像：分离角随时间变化，但尖峰根部和一阶理论剖面与判据给出的分离位置一致。"
+  }
+ ],
+ "verification": {
+  "text_only": "是。仅使用 bundle 全文、图件清单图注，并用 PDF 第 3–8 页核对式 (3)–(26) 的符号与上下标；未引用外部文献结论。",
+  "a_grade_supported": "是。A 级要点（判据式 (22)、必要条件定位、上三角简化、x=−1、x=0.242、0.194–0.267/0.662–0.719、再附点歧义、周期流限制）均有正文页码与图号对应。",
+  "attributes_marked": "是。逐条标注【原文明确】/【AI概括】/【AI推断】；机制段与意义段中推断内容已单独标出。",
+  "coverage": "全文 12 页逐页读到 EOF；覆盖摘要、引言、第 2 节推导、第 3 节两个验证算例、第 4 节结论；参考文献未逐条精读。",
+  "no_fabrication": "是。未编造页码、图号或数据；网格量、时间步长、δx/δy、误差量级等缺失项均写“文中未提及”。",
+  "open_questions": [
+   "方腔计算的网格量、时间步长与 FTLE 有限差分 δx/δy 取值未给出，壁面 FTLE 极小点的数值误差有多大？",
+   "判据只给出必要条件，实际使用中若壁面同时存在多个零 FTLE 点，如何自动区分分离与再附？",
+   "作者称可压流适用，但只验证 Ma=0.3；在强激波、高焓或壁面传热条件下，壁面密度比 b 的强变化是否会破坏“λmax=1 唯一对应分离点”的结论？",
+   "对三维或非周期强迫流，壁面 FTLE 极小判据是否仍成立？",
+   "式 (26) 的 f0(t0) 在实际数据中如何稳定计算？文中未给数值结果。",
+   "能否用实验壁面粒子轨迹（如 PIV/条纹线）构造足够光滑的壁面 FTLE 曲线以复现该判据？"
+  ]
+ }
+}

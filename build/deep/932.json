@@ -1,0 +1,743 @@
+{
+ "id": 932,
+ "read_note": "类型：理论建模 + DSMC 数值验证的期刊论文（Physics of Fluids 33, 086106, 2021，13页）；材料范围：bundle 含第1–13页全文与11幅抓图（图1–11）；图表可读性：正文与图注完整，双栏提取导致式(1)–(20)符号错位，已用PDF第4、5、7、8、12页核对关键公式；信息完整度：表I–IV工况、DSMC设置、推导链、验证与讨论齐全。",
+ "one_line": "提出等效双激波+自由干扰理论模型，给出层流高超声速压缩角分离角与峰值压力的显式预测式并用DSMC验证。",
+ "three_sentence": [
+  {
+   "text": "高超声速压缩角分离流的峰值压力与分离角缺乏由来流参数直接计算的显式理论式，自由干扰理论本身不能预测峰值压力（p.1–3）。",
+   "attr": "原文明确"
+  },
+  {
+   "text": "把峰值压力分解为分离激波与再附激波两次斜激波压缩，结合自由干扰理论得到分离角θs与峰值压力比ppk/p∞的显式式，并用Ma∞=7–15、Re=10^4–10^5的DSMC数据验证（p.3–9）。",
+   "attr": "AI概括"
+  },
+  {
+   "text": "分离角几乎与Ma∞无关而主要随θw与Re变化，峰值压力比近似正比于Ma∞²(θw−θs)²；模型可推广到轴对称空心圆柱-裙，但Re<10^4稀薄流下失效（p.6–11）。",
+   "attr": "AI概括"
+  }
+ ],
+ "imrad": {
+  "introduction": "高超声速飞行器控制面、进气道、体襟翼等部位的压缩角会产生激波/边界层干扰，分离与再附带来局部高压和严酷气动加热；工程上常把峰值热流写成峰值压力的幂函数，但峰值压力本身与流场结构密切相关，二者关系并不清楚（p.1）。已有压缩角研究虽多，但分离角的显式公式与影响规律很少；Kumar与Stollery仅把分离流线与分离点粘性干扰参数关联，最小粘性耗散/最小熵产方法或自由干扰+激波关系可求激波角，但在粘性干扰不可忽略时仍缺乏显式表达（p.2）。压力预测方面，自由干扰理论不能给出峰值压力，半经验式适用条件有限，最近的最小粘性耗散模型为隐式且忽略Reynolds数（p.2–3）。本文目标是针对低至中等Reynolds数（10^4–10^5）、层流、无真实气体/非定常效应的分离压缩角，建立峰值压力与分离角的理论模型，给出显式公式，用DSMC验证，并推广到轴对称空心圆柱-裙流动（p.3）。",
+  "methods": "理论部分：根据壁面压力分布与流场结构，把分离-再附流简化为“等效双激波无粘模型”——区1为分离激波上游、区2为两激波之间、区3为再附激波后；假设平台压力等于分离激波后压力、峰值压力等于再附激波后压力，且峰值站边界层法向压力梯度可忽略（p.3–4）。分离角由高超声速斜激波关系与Chapman自由干扰理论联立求得：自由干扰理论把平台压力系数与OUI（上游干扰起点）处摩阻关联，OUI处摩阻用Hayes–Probstein强/弱干扰渐近经Churchill–Usagi桥接，因此Ks=Ma∞θs仅由OUI粘性干扰参数ζo控制；OUI位置由作者前作的扰动/抗扰动模型给出（p.4）。强粘性干扰下进一步作渐近简化，得到θs与ppk/p∞的显式幂律（p.7–8）。数值验证：二维/轴对称DSMC程序DS2V 4.5（Bird），变径硬球分子模型、Larsen–Borgnakke平动-转动能量交换、完全漫反射壁面、转动适应系数1、无反应空气（79% N2/21% O2）；网格自适应，时间步为局部平均碰撞时间的1/3，每个碰撞网格分子数>8，碰撞对分离尺度小于平均自由程（p.5）。工况覆盖Ma∞=7–15、Re=1.0×10^4–1.0×10^5、θw=21°–30°、T∞=60 K、Tw=300 K、平板前缘到拐角长度1 m，共分A1–A4、B1–B2六组，全部满足Hankey初始分离判据(Ma∞θi.s.)²=1.77ν（p.5）。轴对称验证用空心圆柱-裙，d=0.065 m、l=0.1017 m、零攻角、冷壁，仅计算外部流动（p.9）。弱粘性干扰用Roghelia等[45]实验的分离角代入模型检验峰值压力（p.10–11）。峰值热流用DSMC结果拟合qpk/qref=a(ppk/pref)^b（p.10–11）。",
+  "results": "理论结果：式(1)给出分离激波后压力系数cp,2与Ks的关系；式(2)为自由干扰理论的平台压力系数；联立得式(3)的Ks²隐式关系，取Pp=3.72时与DSMC分离角吻合（Fig.5，p.6）。用式(4)桥接OUI摩阻后，Ks仅随ζo变化；强粘性干扰下得式(8) Ks²∝ζo^{3/4}，再代入OUI位置简化式得式(10) Ks²≈η(ζKw²)^{3/8}，η=0.571（Fig.7a，p.7）。由此得到分离角显式式(11) θs≈0.756θw^{3/8}/(Ma∞^{1/16}Re^{3/32})，并在Ma∞=10时简化为式(12) θs≈0.655θw^{3/8}/Re^{3/32}（p.7）。峰值压力：式(5)–(7)给出p2/p∞=Ps、p3/p2=Pr、ppk/p∞≈PsPr；高超声速小角近似下得式(13) p3/p∞≈2γ²/(γ−1)Ma∞²θr²，定义ξ=(p3/p∞)/(Ma∞²θr²)，取ξ=7.85得式(14) ppk/p∞≈7.85(θw−θs)²Ma∞²；Table II显示多数工况相对误差<10%（Fig.8，p.8–9）。参数规律：θs随θw增大、随Ma∞与Re减小；高Ma∞下θs对Ma∞不敏感；ppk/p∞随Ma∞、Re、θw单调增大（Fig.7b、Fig.8b–c，p.7–9）。轴对称：式(15)中c=0.659、式(16)中ξ=4.57；分离角与峰值压力均低于同条件二维压缩角，归因于三维泄流效应（Fig.10、Table III，p.9–10）。弱粘性干扰：用Roghelia实验分离角计算的p3与实验峰值压力相对误差<5%（Table IV，p.11）。峰值热流：qpk/qref=0.16(ppk/pref)^{1.0}，与Hung–Barnett的a=0.13、b=1.13接近（Fig.11，p.11）。",
+  "discussion": "机制上，分离角由OUI处粘性干扰控制的分离激波强度决定：Re增大使粘性作用相对减弱，较弱的激波即可诱发分离，故θs随Re增大而减小；θw增大使拐角扰动增强、压升增大，故θs随θw增大；强粘性干扰下θs∝θw^{3/8}Re^{-3/32}，而Ma∞依赖近似抵消，因此高Ma∞下θs几乎不变（p.6–7）。峰值压力则取决于再附激波：虽然Re增大时分离区压升减弱，但再附激波与斜坡粘性层相互作用更剧烈，峰压仍随Re增大；峰压比近似∝Ma∞²(θw−θs)²，因此随Ma∞、θw单调增大（p.8–9）。轴对称流动因三维泄流效应分离被抑制，θs与ppk均小于二维（p.9–10）。作者还讨论了两类边界：Re>10^5且Ma∞较低时OUI进入弱粘性干扰区，式(4)变为Ma∞³cf,o≈0.664ζo，Ks²∝ζo而非强干扰的ζo^{3/4}，分离角规律改变，但峰值压力模型仍可用（Table IV，p.10–11）；Re<10^4稀薄条件下再附压缩波可能无法汇聚成再附激波，双激波模型失效（p.11）。峰值热流与峰值压力的幂律指数b在文献中随转捩在0.7–1.3间变化，说明再附区物理仍复杂（p.11–12）。"
+ },
+ "core_points": [
+  {
+   "point": "提出等效双激波无粘模型，把峰值压力视为再附激波后、边界层外缘的压力。",
+   "type": "理论模型",
+   "grade": "A",
+   "source": "p.3–4、Fig.3",
+   "attr": "原文明确"
+  },
+  {
+   "point": "结合自由干扰理论导出Ks²–Pp关系式(3)，取Pp=3.72与DSMC分离角吻合。",
+   "type": "推导/验证",
+   "grade": "A",
+   "source": "式(3)、Fig.5，p.4–6",
+   "attr": "原文明确"
+  },
+  {
+   "point": "给出分离角显式式(11)：θs∝θw^{3/8}Ma∞^{-1/16}Re^{-3/32}，Ma∞=10时化为式(12)。",
+   "type": "显式公式",
+   "grade": "A",
+   "source": "式(11)–(12)，p.7",
+   "attr": "原文明确"
+  },
+  {
+   "point": "分离角随拐角θw增大、随Ma∞与Re减小；高Ma∞下几乎与Ma∞无关。",
+   "type": "参数规律",
+   "grade": "A",
+   "source": "Fig.7b，p.7",
+   "attr": "原文明确"
+  },
+  {
+   "point": "峰值压力比近似为7.85(θw−θs)²Ma∞²，即正比于Ma∞²与再附偏转角平方。",
+   "type": "显式公式",
+   "grade": "A",
+   "source": "式(14)、Fig.8，p.8–9",
+   "attr": "原文明确"
+  },
+  {
+   "point": "ppk/p∞随Ma∞、Re、θw单调增大；Re增大时分离区压升减弱但再附压升增强。",
+   "type": "参数规律",
+   "grade": "A",
+   "source": "Fig.8b–c，p.9",
+   "attr": "原文明确"
+  },
+  {
+   "point": "推广到空心圆柱-裙：θs式(15)系数c=0.659，峰压式(16)系数ξ=4.57，二者均低于二维。",
+   "type": "轴对称推广",
+   "grade": "B",
+   "source": "式(15)–(16)、Fig.10、Table III，p.9–10",
+   "attr": "原文明确"
+  },
+  {
+   "point": "弱粘性干扰下（Re>10^5）峰压模型仍可用，与Roghelia实验误差<5%。",
+   "type": "实验校验",
+   "grade": "B",
+   "source": "Table IV，p.10–11",
+   "attr": "原文明确"
+  },
+  {
+   "point": "峰值热流与峰值压力呈幂律qpk/qref=0.16(ppk/pref)^{1.0}，与Hung–Barnett的0.13/1.13接近。",
+   "type": "工程关联",
+   "grade": "B",
+   "source": "式(17)、Fig.11，p.10–11",
+   "attr": "原文明确"
+  },
+  {
+   "point": "Re<10^4稀薄条件下再附压缩波无法汇聚成激波，双激波模型失效。",
+   "type": "适用边界",
+   "grade": "C",
+   "source": "p.11",
+   "attr": "原文明确"
+  },
+  {
+   "point": "整条预测链可由Ma∞、Re、θw直接给出θs和ppk/p∞，构成工程快速估计方法。",
+   "type": "工程价值",
+   "grade": "B",
+   "source": "式(11)–(14)，p.7–9",
+   "attr": "AI概括"
+  }
+ ],
+ "conditions": [
+  {
+   "item": "DSMC 总体范围（表I）",
+   "value": "Ma∞=7–15；Re=1.0×10^4–1.0×10^5；θw=21°–30°；T∞=60 K；Tw=300 K；平板前缘到拐角长度1 m；二维尖前缘；无反应空气（79% N2/21% O2）",
+   "source": "p.5"
+  },
+  {
+   "item": "DSMC A1-1（表I）",
+   "value": "Ma∞=7；Re=1.0e+04；θw=25°；x_o=0.510 m；θs=12.40°；ppk/p∞=21.14",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A1-2（表I）",
+   "value": "Ma∞=9；Re=1.0e+04；θw=25°；x_o=0.635 m；θs=12.13°；ppk/p∞=36.39",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A2-1（表I）",
+   "value": "Ma∞=7；Re=2.0e+04；θw=25°；x_o=0.335 m；θs=11.90°；ppk/p∞=22.46",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A2-2（表I）",
+   "value": "Ma∞=9；Re=2.0e+04；θw=25°；x_o=0.510 m；θs=11.10°；ppk/p∞=38.08",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A2-3（表I）",
+   "value": "Ma∞=11；Re=2.0e+04；θw=25°；x_o=0.650 m；θs=10.98°；ppk/p∞=59.68",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A3-1（表I）",
+   "value": "Ma∞=7；Re=5.0e+04；θw=25°；x_o=0.260 m；θs=10.56°；ppk/p∞=23.36",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A3-2（表I）",
+   "value": "Ma∞=9；Re=5.0e+04；θw=25°；x_o=0.335 m；θs=10.13°；ppk/p∞=41.19",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A3-3（表I）",
+   "value": "Ma∞=11；Re=5.0e+04；θw=25°；x_o=0.425 m；θs=9.95°；ppk/p∞=66.29",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A3-4（表I）",
+   "value": "Ma∞=13；Re=5.0e+04；θw=25°；x_o=0.480 m；θs=9.87°；ppk/p∞=96.74",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A3-5（表I）",
+   "value": "Ma∞=15；Re=5.0e+04；θw=25°；x_o=0.575 m；θs=9.46°；ppk/p∞=128.49",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A4-1（表I）",
+   "value": "Ma∞=13；Re=1.0e+05；θw=25°；x_o=0.325 m；θs=9.36°；ppk/p∞=104.14",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC A4-2（表I）",
+   "value": "Ma∞=15；Re=1.0e+05；θw=25°；x_o=0.375 m；θs=9.17°；ppk/p∞=148.19",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC B1-1（表I）",
+   "value": "Ma∞=11；Re=5.0e+04；θw=21°；x_o=0.630 m；θs=9.09°；ppk/p∞=44.61",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC B1-2（表I）",
+   "value": "Ma∞=11；Re=5.0e+04；θw=24°；x_o=0.470 m；θs=9.73°；ppk/p∞=60.46",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC B1-3（表I）",
+   "value": "Ma∞=11；Re=5.0e+04；θw=27°；x_o=0.350 m；θs=10.37°；ppk/p∞=80.30",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC B1-4（表I）",
+   "value": "Ma∞=11；Re=5.0e+04；θw=30°；x_o=0.265 m；θs=10.81°；ppk/p∞=101.63",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC B2-1（表I）",
+   "value": "Ma∞=15；Re=5.0e+04；θw=21°；x_o=0.840 m；θs=7.20°；ppk/p∞=92.07",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC B2-2（表I）",
+   "value": "Ma∞=15；Re=5.0e+04；θw=24°；x_o=0.620 m；θs=8.06°；ppk/p∞=115.55",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC B2-3（表I）",
+   "value": "Ma∞=15；Re=5.0e+04；θw=27°；x_o=0.460 m；θs=9.02°；ppk/p∞=155.89",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "DSMC B2-4（表I）",
+   "value": "Ma∞=15；Re=5.0e+04；θw=30°；x_o=0.325 m；θs=10.27°；ppk/p∞=206.46",
+   "source": "表I，p.4"
+  },
+  {
+   "item": "空心圆柱-裙几何",
+   "value": "圆柱段直径d=0.065 m；圆柱段长度l=0.1017 m；零攻角；冷壁；仅计算外部流动",
+   "source": "p.9、Fig.9"
+  },
+  {
+   "item": "空心圆柱-裙 A-1（表III）",
+   "value": "Ma∞=7；Re=2.0e+04；T∞=60 K；Tw/T0=0.463；θw=27°；θs=10.10°；ppk/p∞=24.73",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "空心圆柱-裙 B-1（表III）",
+   "value": "Ma∞=7；Re=5.0e+04；T∞=60 K；Tw/T0=0.291；θw=21°；θs=7.54°；ppk/p∞=14.51",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "空心圆柱-裙 B-2（表III）",
+   "value": "Ma∞=7；Re=5.0e+04；T∞=60 K；Tw/T0=0.291；θw=24°；θs=8.52°；ppk/p∞=19.82",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "空心圆柱-裙 B-3（表III）",
+   "value": "Ma∞=7；Re=5.0e+04；T∞=60 K；Tw/T0=0.291；θw=27°；θs=9.57°；ppk/p∞=26.66",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "空心圆柱-裙 C-1（表III）",
+   "value": "Ma∞=9；Re=3.0e+04；T∞=60 K；Tw/T0=0.463；θw=27°；θs=9.39°；ppk/p∞=46.94",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "空心圆柱-裙 D-1（表III）",
+   "value": "Ma∞=9；Re=5.0e+04；T∞=60 K；Tw/T0=0.291；θw=24°；θs=8.17°；ppk/p∞=35.43",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "空心圆柱-裙 D-2（表III）",
+   "value": "Ma∞=9；Re=5.0e+04；T∞=60 K；Tw/T0=0.291；θw=27°；θs=9.19°；ppk/p∞=49.11",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "空心圆柱-裙 E-1（表III）",
+   "value": "Ma∞=11；Re=5.0e+04；T∞=60 K；Tw/T0=0.198；θw=27°；θs=8.99°；ppk/p∞=82.33",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "空心圆柱-裙 F-1（表III）",
+   "value": "Ma∞=13；Re=5.0e+04；T∞=60 K；Tw/T0=0.463；θw=27°；θs=8.85°；ppk/p∞=119.35",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "空心圆柱-裙 G-1（表III）",
+   "value": "Ma∞=15；Re=5.0e+04；T∞=60 K；Tw/T0=0.291；θw=27°；θs=8.70°；ppk/p∞=161.81",
+   "source": "表III，p.9"
+  },
+  {
+   "item": "弱粘性干扰对比（表IV，Roghelia等[45]）",
+   "value": "Ma∞=7.7；Re=4.2×10^5；θw=20°；θs=5°；实验ppk,e/p1=17.19；理论p3/p1=16.85",
+   "source": "表IV，p.11"
+  },
+  {
+   "item": "弱粘性干扰对比（表IV，Roghelia等[45]）",
+   "value": "Ma∞=7.7；Re=4.2×10^5；θw=25°；θs=5°；实验ppk,e/p1=27.15；理论p3/p1=26.09",
+   "source": "表IV，p.11"
+  }
+ ],
+ "key_parameters": [
+  {
+   "name": "Ks",
+   "definition": "分离激波的高超声速相似参数，Ks=Ma∞θs",
+   "value": "由式(3)/(10)确定",
+   "relation": "强干扰下仅由OUI粘性干扰参数ζo控制",
+   "source": "p.4、p.7"
+  },
+  {
+   "name": "cp,2",
+   "definition": "分离激波后压力系数，(p2−p∞)/(0.5γMa∞²p∞)",
+   "value": "按式(1)计算",
+   "relation": "随Ks增大",
+   "source": "式(1)，p.4"
+  },
+  {
+   "name": "cp,p",
+   "definition": "平台压力系数，(pp−po)/(0.5γMa_o²p_o)",
+   "value": "按式(2)计算",
+   "relation": "cp,p=Pp[cf,o/√(Ma_o²−1)]^{1/2}",
+   "source": "式(2)，p.4"
+  },
+  {
+   "name": "Pp",
+   "definition": "自由干扰理论的经验常数",
+   "value": "本文高超声速条件取3.72；超音速来流下约2.4",
+   "relation": "用于式(2)、(3)、(8)、(10)",
+   "source": "p.4、p.6"
+  },
+  {
+   "name": "ζo",
+   "definition": "OUI处粘性干扰参数，ζo=Ma∞³√C/√Re_o",
+   "value": "由OUI位置x_o与来流条件计算",
+   "relation": "强干扰ζo≫1",
+   "source": "式(4)下方，p.4"
+  },
+  {
+   "name": "η",
+   "definition": "式(10)的系数，η=0.456Pp/[(γ+1)β^{3/8}]",
+   "value": "0.571（二维，由DSMC数据确定）",
+   "relation": "Ks²≈η(ζKw²)^{3/8}",
+   "source": "p.7、Fig.7a"
+  },
+  {
+   "name": "β",
+   "definition": "OUI位置简化式(9)中的常数",
+   "value": "1.77",
+   "relation": "x_o/l≈βMa∞/(θw²Re^{1/2})（式(9)符号受排版限制，完整形式无法确认）",
+   "source": "p.7"
+  },
+  {
+   "name": "ξ",
+   "definition": "峰值压力缩放因子，ξ=(p3/p∞)/(Ma∞²θr²)",
+   "value": "7.85（二维）；4.57（空心圆柱-裙）",
+   "relation": "ppk/p∞≈ξ(θw−θs)²Ma∞²",
+   "source": "p.8–10、Table II"
+  },
+  {
+   "name": "c",
+   "definition": "轴对称分离角公式(15)的系数",
+   "value": "0.659（d=0.065 m、l=0.1017 m）",
+   "relation": "θs≈cθw^{3/8}/(Ma∞^{1/16}Re^{3/32})",
+   "source": "p.10"
+  },
+  {
+   "name": "a, b",
+   "definition": "峰值热流-峰值压力幂律的系数与指数",
+   "value": "a=0.16，b=1.0（本文DSMC拟合）；Hung–Barnett：a=0.13，b=1.13",
+   "relation": "qpk/qref=a(ppk/pref)^b",
+   "source": "p.11、Fig.11"
+  },
+  {
+   "name": "θs",
+   "definition": "分离角（分离激波处流线偏转角）",
+   "value": "DSMC工况约7.20°–12.40°",
+   "relation": "随θw增大、随Ma∞与Re减小",
+   "source": "Table I，p.4；Fig.7"
+  },
+  {
+   "name": "ppk/p∞",
+   "definition": "峰值压力与来流静压之比",
+   "value": "DSMC工况约14.51–206.46",
+   "relation": "随Ma∞、Re、θw单调增大",
+   "source": "Table I、Table III"
+  },
+  {
+   "name": "Ma∞²θr²",
+   "definition": "再附流动的高超声速相似参数平方，θr=θw−θs",
+   "value": "Table II给出2.27–53.87",
+   "relation": "p3/p∞与ξ的乘积关系",
+   "source": "Table II，p.8"
+  },
+  {
+   "name": "误差水平",
+   "definition": "简化式相对DSMC/实验的偏差",
+   "value": "峰压估计多数<10%；弱干扰实验峰压<5%",
+   "relation": "用于评价模型有效性",
+   "source": "p.9、p.11"
+  }
+ ],
+ "methods": [
+  {
+   "item": "理论框架",
+   "value": "等效双激波无粘模型：区1–3、分离激波/再附激波；平台压力=分离激波后压力，峰值压力=再附激波后压力",
+   "source": "p.3–4、Fig.3",
+   "note": "峰值站忽略边界层法向压力梯度"
+  },
+  {
+   "item": "分离角求解",
+   "value": "高超声速斜激波关系式(1)+Chapman自由干扰理论式(2)，联立得式(3)；OUI摩阻用式(4)桥接",
+   "source": "p.4",
+   "note": "Pp取3.72"
+  },
+  {
+   "item": "OUI位置",
+   "value": "由作者前作的扰动/抗扰动模型计算；强干扰下用式(9)简化",
+   "source": "p.4、p.7",
+   "note": "式(9)完整符号形式受排版限制，无法确认"
+  },
+  {
+   "item": "强粘性干扰简化",
+   "value": "ζo≫1时Ma∞³cf,o→0.208ζo^{3/2}，得式(8)、(10)，再得式(11)–(12)",
+   "source": "p.7",
+   "note": "Ma∞=10为式(12)的特征值"
+  },
+  {
+   "item": "峰值压力求解",
+   "value": "斜激波关系用两次：式(5)得p2，式(6)得p3，式(7)得ppk；高超声速极限得式(13)–(14)",
+   "source": "p.4–5、p.8",
+   "note": "ξ=7.85"
+  },
+  {
+   "item": "DSMC程序",
+   "value": "DS2V 4.5（Bird），二维/轴对称，时间精确与非定常/时均稳态模拟",
+   "source": "p.5",
+   "note": "变径硬球分子模型；Larsen–Borgnakke能量交换"
+  },
+  {
+   "item": "DSMC气体与壁面",
+   "value": "无反应空气（79% N2、21% O2）；完全漫反射壁面；转动适应系数1；仅平动-转动能量交换",
+   "source": "p.5",
+   "note": "未考虑真实气体效应"
+  },
+  {
+   "item": "DSMC数值设置",
+   "value": "网格自动生成并局部自适应；时间步=局部平均碰撞时间/3；每个碰撞网格分子数>8；碰撞对分离尺度<平均自由程",
+   "source": "p.5",
+   "note": "作者称已严格验证结果与参数设置无关"
+  },
+  {
+   "item": "DSMC工况矩阵",
+   "value": "Ma∞=7–15；Re=1.0×10^4–1.0×10^5；θw=21°–30°；T∞=60 K；Tw=300 K；平板前缘到拐角长度1 m；二维尖前缘",
+   "source": "p.5、Table I",
+   "note": "分A1–A4、B1–B2六组"
+  },
+  {
+   "item": "分离判据",
+   "value": "Hankey判据(Ma∞θi.s.)²=1.77ν，ν=Ma∞²/√Re；全部DSMC工况满足",
+   "source": "p.5",
+   "note": "ν为来流粘性干扰参数"
+  },
+  {
+   "item": "轴对称验证",
+   "value": "空心圆柱-裙：d=0.065 m、l=0.1017 m、零攻角、冷壁；仅计算外部流动",
+   "source": "p.9、Fig.9",
+   "note": "与同条件二维压缩角对比"
+  },
+  {
+   "item": "弱干扰实验校验",
+   "value": "Roghelia等[45]实验的分离角代入式(13)计算p3，与实验峰值压力比较",
+   "source": "p.10–11、Table IV",
+   "note": "Re=4.2×10^5，θw=20°/25°"
+  },
+  {
+   "item": "峰值热流关联",
+   "value": "DSMC的qpk与ppk拟合式(17)；参考值取p∞与可压缩平板St_ref=0.332√(C/Re)Pr^{-2/3}",
+   "source": "p.10–11",
+   "note": "得a=0.16、b=1.0"
+  }
+ ],
+ "derivation": {
+  "exists": true,
+  "idea": "把分离-再附压缩角流场简化为等效双激波无粘过程：先用自由干扰理论把平台压力与OUI处摩阻关联，求出分离激波强度/分离角；再用两次斜激波关系由分离角求再附激波后压力，即峰值压力。强粘性干扰下对摩阻与OUI位置作渐近简化，得到只含Ma∞、Re、θw的显式幂律。",
+  "assumptions": [
+   "定常、二维（轴对称推广时轴对称）、层流、连续介质、理想空气；不考虑真实气体效应与非定常效应（p.3）。",
+   "平台压力等于分离激波后压力（Needham–Stollery）（p.3）。",
+   "平台到峰值的压升等于等效再附激波压升；峰值站边界层法向压力梯度可忽略，峰值压力等于边界层外缘压力（p.3）。",
+   "高超声速近似Ma∞²≫1、小角近似sinβ≈β、θr=θw−θs（p.4、p.8）。",
+   "强粘性干扰ζo≫1用于显式幂律；弱干扰（Re>10^5）与稀薄（Re<10^4）条件需另行处理（p.7、p.10–11）。",
+   "Pp为经验常数，本文取3.72（超音速来流下约2.4）（p.4、p.6）。"
+  ],
+  "steps": [
+   {
+    "title": "等效双激波模型与峰值压力分解",
+    "text": "将流场分为分离激波上游区1、两激波间区2、再附激波后区3；平台压力取分离激波后压力，峰值压力取再附激波后压力，于是ppk/p∞=(p2/p∞)(p3/p2)。",
+    "latex": [
+     "\\frac{p_2}{p_\\infty}=f(K_s)=P_s,\\quad f(K)=1+\\frac{\\gamma(\\gamma+1)K^2}{4}+\\gamma K^2\\sqrt{\\frac{\\gamma+1}{4}+\\frac{1}{K^2}} \\tag{5}",
+     "\\frac{p_3}{p_2}=f(K_r)=P_r,\\quad K_r=Ma_2\\theta_r \\tag{6}",
+     "\\frac{p_{pk}}{p_\\infty}\\approx\\frac{p_3}{p_\\infty}=P_sP_r \\tag{7}"
+    ],
+    "source": "p.3–5、式(5)–(7)"
+   },
+   {
+    "title": "分离激波压力系数与相似参数",
+    "text": "由高超声速斜激波关系写出分离激波后压力系数，引入分离激波相似参数Ks=Ma∞θs。",
+    "latex": [
+     "c_{p,2}=\\frac{2}{Ma_\\infty^2}\\left[\\frac{\\gamma+1}{4}+\\sqrt{\\left(\\frac{\\gamma+1}{4}\\right)^2+\\frac{1}{K_s^2}}\\right]K_s^2 \\tag{1}",
+     "c_{p,2}=\\frac{p_2-p_\\infty}{0.5\\gamma Ma_\\infty^2p_\\infty},\\quad K_s=Ma_\\infty\\theta_s"
+    ],
+    "source": "p.4、式(1)"
+   },
+   {
+    "title": "自由干扰理论关联平台压力",
+    "text": "Chapman自由干扰理论把平台压力系数与OUI处摩阻关联；令cp,2≈cp,p，联立式(1)、(2)得Ks²的隐式关系式(3)。",
+    "latex": [
+     "c_{p,p}=P_p\\left[\\frac{c_{f,o}}{\\sqrt{Ma_o^2-1}}\\right]^{1/2} \\tag{2}",
+     "c_{p,p}=\\frac{p_p-p_o}{0.5\\gamma Ma_o^2p_o}",
+     "K_s^2=\\frac{P_p^2Ma_o^3c_{f,o}}{(\\gamma+1)P_p\\left(Ma_o^3c_{f,o}\\right)^{1/2}+4} \\tag{3}"
+    ],
+    "source": "p.4、式(2)–(3)"
+   },
+   {
+    "title": "OUI摩阻的强/弱干扰桥接",
+    "text": "Hayes–Probstein给出强干扰Ma∞³cf,o≈0.208ζo^{3/2}与弱干扰Ma∞³cf,o≈0.664ζo；用Churchill–Usagi方法桥接，得式(4)，因此Ks仅由ζo控制。",
+    "latex": [
+     "Ma_\\infty^3c_{f,o}\\approx\\left[\\left(0.208\\zeta_o^{3/2}\\right)^2+\\left(0.664\\zeta_o\\right)^2\\right]^{1/2} \\tag{4}",
+     "\\zeta_o=Ma_\\infty^3\\frac{\\sqrt{C}}{\\sqrt{Re_o}}",
+     "K_s=K_s(\\zeta_o)"
+    ],
+    "source": "p.4、式(4)"
+   },
+   {
+    "title": "强粘性干扰渐近简化",
+    "text": "ζo≫1时取Ma∞³cf,o→0.208ζo^{3/2}，得Ks²∝ζo^{3/4}；再代入OUI位置简化式(9)并忽略Chapman–Rubesin参数影响，化为Ks²≈η(ζKw²)^{3/8}。式(9)的完整符号形式受PDF排版限制，未逐字录入。",
+    "latex": [
+     "K_s^2\\approx\\frac{0.456P_p}{\\gamma+1}\\zeta_o^{3/4} \\tag{8}",
+     "K_s^2\\approx\\eta\\left(\\zeta K_w^2\\right)^{3/8},\\quad \\eta=\\frac{0.456P_p}{(\\gamma+1)\\beta^{3/8}},\\quad K_w=Ma_\\infty\\theta_w,\\quad \\zeta=\\frac{Ma_\\infty^3}{\\sqrt{Re}} \\tag{10}"
+    ],
+    "source": "p.7、式(8)–(10)"
+   },
+   {
+    "title": "分离角显式式",
+    "text": "由Ks=Ma∞θs展开式(10)的幂次，得式(11)；取特征Mach数Ma∞=10，得式(12)。",
+    "latex": [
+     "\\theta_s\\approx\\frac{0.756\\theta_w^{3/8}}{Ma_\\infty^{1/16}Re^{3/32}} \\tag{11}",
+     "\\theta_s\\approx0.655\\frac{\\theta_w^{3/8}}{Re^{3/32}} \\tag{12}"
+    ],
+    "source": "p.7、式(11)–(12)"
+   },
+   {
+    "title": "峰值压力简化",
+    "text": "高超声速极限与小角近似下取Ma2²θs²≈8/[(γ−1)(γ+1)²]、f(K)≈γ(γ+1)K²/2，代入式(7)得式(13)；定义ξ=(p3/p∞)/(Ma∞²θr²)，取ξ=7.85得式(14)。",
+    "latex": [
+     "Ma_2^2\\theta_s^2\\approx\\frac{8}{(\\gamma-1)(\\gamma+1)^2}",
+     "f(K)\\approx\\frac{\\gamma(\\gamma+1)}{2}K^2",
+     "\\frac{p_3}{p_\\infty}\\approx\\frac{2\\gamma^2}{\\gamma-1}Ma_\\infty^2\\theta_r^2 \\tag{13}",
+     "\\frac{p_{pk}}{p_\\infty}\\approx7.85(\\theta_w-\\theta_s)^2Ma_\\infty^2 \\tag{14}"
+    ],
+    "source": "p.8、式(13)–(14)"
+   },
+   {
+    "title": "轴对称空心圆柱-裙推广",
+    "text": "把式(11)、(14)的形式用于空心圆柱-裙，用DSMC数据标定c=0.659、ξ=4.57；三维泄流效应使分离角与峰值压力均低于二维压缩角。",
+    "latex": [
+     "\\theta_s\\approx c\\frac{\\theta_w^{3/8}}{Ma_\\infty^{1/16}Re^{3/32}},\\quad c=0.659 \\tag{15}",
+     "\\frac{p_{pk}}{p_\\infty}\\approx\\xi(\\theta_w-\\theta_s)^2Ma_\\infty^2,\\quad \\xi=4.57 \\tag{16}"
+    ],
+    "source": "p.9–10、式(15)–(16)"
+   },
+   {
+    "title": "峰值热流与峰值压力关联",
+    "text": "用DSMC峰值热流拟合幂律，得a=0.16、b=1.0；取pref=p∞、St_ref=0.332√(C/Re)Pr^{-2/3}，并代入式(14)可把Stpk写成Ma∞、Re、θw、Pr的显式函数（式20）。",
+    "latex": [
+     "\\frac{q_{pk}}{q_{ref}}=a\\left(\\frac{p_{pk}}{p_{ref}}\\right)^b \\tag{17}",
+     "p_{ref}=p_\\infty \\tag{18}",
+     "\\frac{q_{ref}}{\\rho_\\infty u_\\infty(h_{aw}-h_w)}=St_{ref}=0.332\\sqrt{\\frac{C}{Re}}Pr^{-2/3} \\tag{19}"
+    ],
+    "source": "p.10–11、式(17)–(20)"
+   }
+  ],
+  "result": "显式预测链：由Ma∞、Re、θw经式(4)/(10)/(11)得θs，再由式(14)得ppk/p∞。二维系数η=0.571、ξ=7.85；轴对称空心圆柱-裙c=0.659、ξ=4.57。DSMC验证：分离角见Fig.5，分离/再附激波压比与峰压见Fig.6，简化式见Fig.7–8，峰压估计多数误差<10%。",
+  "limits": "模型限于定常、层流、连续介质、无真实气体效应的低至中等Reynolds数（10^4–10^5）二维/轴对称尖前缘压缩角；强粘性干扰ζ≫1用于显式幂律。Re>10^5弱干扰时式(4)的渐近式改变，分离角规律不同；Re<10^4稀薄流中再附激波可能不形成，模型失效（p.10–11）。Pp、η、ξ、c均为标定常数，轴对称系数只在一个d/l几何标定；式(9)的完整形式受排版限制，无法确认。"
+ },
+ "mechanism": "压缩角逆压梯度使层流边界层分离，形成分离激波、分离泡、平台区和再附激波（Fig.1–3）。分离角由OUI处粘性干扰控制：自由干扰理论把平台压力系数与OUI摩阻联系，强干扰下摩阻∝ζo^{3/2}，故Ks²∝ζo^{3/4}；再结合OUI位置随Ma∞、Re、θw的变化，得到θs∝θw^{3/8}Ma∞^{-1/16}Re^{-3/32}【原文明确】。因此θs随θw增大、随Re增大而减小，Ma∞依赖近似抵消（p.6–7）。峰值压力由再附激波决定：等效双激波模型把峰压写成两次斜激波压比的乘积，高超声速极限下ppk/p∞∝Ma∞²θr²；θr=θw−θs，故峰压随Ma∞与θw增大【原文明确】。Re增大时分离区压升减弱，但再附激波与斜坡粘性层相互作用更强，峰压仍增大（p.8–9）。轴对称流动中三维泄流削弱分离，θs与峰压均低于二维（p.9–10）【原文明确】。",
+ "findings": [
+  {
+   "finding": "等效双激波模型能同时预测分离激波后压力、再附激波后压力与峰值压力，与DSMC数据总体吻合。",
+   "evidence": "Fig.6(a) p2/p∞、Fig.6(b) p3/p2、Fig.6(c) ppk/p∞的理论值与DSMC散点对比",
+   "type": "理论-数值验证",
+   "strength": "强",
+   "source": "p.5–6、Fig.6",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "式(3)取Pp=3.72时，分离角理论值与DSMC数据匹配良好。",
+   "evidence": "Fig.5中Separation angle vs. ζKs²的理论曲线与A1–A4、B1–B2散点",
+   "type": "定量验证",
+   "strength": "强",
+   "source": "p.6、Fig.5",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "简化式(10)（η=0.571）能关联分离角数据，并给出θs随θw、Ma∞、Re的变化规律。",
+   "evidence": "Fig.7(a) Eq.(10)与DSMC；Fig.7(b)固定Re=10^5/10^4、Ma∞=7/15的θs–θw曲线",
+   "type": "简化式验证",
+   "strength": "强",
+   "source": "p.7、Fig.7",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "分离角几乎与Ma∞无关，主要随θw增大、随Re增大而减小。",
+   "evidence": "式(11)的幂次−1/16（Ma∞）与−3/32（Re）；Fig.7(b)中高Ma∞曲线接近",
+   "type": "参数规律",
+   "strength": "强",
+   "source": "p.7",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "ppk/p∞≈7.85(θw−θs)²Ma∞²，即峰压比近似正比于Ma∞²；多数工况误差<10%。",
+   "evidence": "式(14)、Fig.8(a)峰压比与(θw−θs)²Ma∞²的线性关系；Table II的ξ值",
+   "type": "显式公式/验证",
+   "strength": "强",
+   "source": "p.8–9、Fig.8、Table II",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "峰压比随Ma∞、Re、θw单调增大；Re增大时分离压升减弱但再附压升更强。",
+   "evidence": "Fig.8(b) ppk/p∞–Ma∞²；Fig.8(c)不同Re、θw的ppk/p∞曲线",
+   "type": "参数规律",
+   "strength": "强",
+   "source": "p.9、Fig.8b–c",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "轴对称空心圆柱-裙的分离角与峰压均低于同条件二维压缩角；c=0.659、ξ=4.57。",
+   "evidence": "式(15)–(16)、Fig.10(a)(b)与Table III；Fig.9(b)流场结构对比",
+   "type": "轴对称推广",
+   "strength": "中",
+   "source": "p.9–10",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "弱粘性干扰下峰压模型仍可用，与Roghelia等实验的误差<5%。",
+   "evidence": "Table IV：θw=20°时17.19 vs 16.85；θw=25°时27.15 vs 26.09",
+   "type": "实验校验",
+   "strength": "中",
+   "source": "p.10–11、Table IV",
+   "attr": "原文明确"
+  },
+  {
+   "finding": "峰值热流与峰值压力呈幂律，本文DSMC拟合a=0.16、b=1.0，与Hung–Barnett的0.13/1.13接近。",
+   "evidence": "Fig.11 qpk/qref–ppk/pref双对数图及拟合线",
+   "type": "工程关联",
+   "strength": "中",
+   "source": "p.10–11、Fig.11",
+   "attr": "原文明确"
+  }
+ ],
+ "conclusions": "作者结论：层流分离高超声速压缩角的峰值压力可视为再附激波后、边界层外缘的压力，因为峰值站边界层法向压力梯度可忽略；据此提出等效双激波无粘模型，并以分离角为关键参数，由Rankine–Hugoniot关系求峰压（p.11–12）。分离角与峰压的定量公式经DSMC验证；强粘性干扰下给出显式简化式：θs≈0.756θw^{3/8}/(Ma∞^{1/16}Re^{3/32})、ppk/p∞≈7.85(θw−θs)²Ma∞²（p.7–9、p.12）。分离角主要由Re与θw决定，几乎与Ma∞无关；峰压比随Ma∞、Re、θw单调增大，并近似正比于Ma∞²（p.12）。理论结果可推广到轴对称空心圆柱-裙，因泄流效应其分离角与峰压均低于二维（p.12）。峰值热流可与峰值压力关联，但该关系仍需深入研究（p.12）。",
+ "contributions": [
+  "提出等效双激波无粘模型，把峰值压力与分离角、再附激波关系显式连接（p.3–5）。",
+  "给出含Ma∞、Re、θw的分离角显式式(11)–(12)和峰压显式式(14)，并用DSMC系统验证（p.7–9）。",
+  "揭示分离角几乎与Ma∞无关、峰压比∝Ma∞²的参数规律（p.7–9）。",
+  "把模型推广到轴对称空心圆柱-裙，并给出峰压-峰值热流幂律关联（p.9–11）。"
+ ],
+ "limits": "作者承认/本文明确的局限：模型为定常、层流、连续介质、无真实气体效应，适用Re=10^4–10^5；强粘性干扰ζ≫1才得到显式幂律，Re>10^5弱干扰时分离角规律改变，Re<10^4稀薄流中再附激波可能不形成，模型失效（p.3、p.10–11）。验证主要依赖DSMC而非实验；弱干扰仅有Roghelia等两组实验点；Pp=3.72、η=0.571、ξ=7.85、c=0.659、ξ=4.57均为标定常数，轴对称系数只针对d=0.065 m、l=0.1017 m几何；峰值热流幂律指数在文献中随转捩在0.7–1.3变化，本文b=1.0的普适性有限（p.11–12）。AI识别：式(9)的完整符号形式受排版限制无法确认；未讨论壁温/真实气体对γ与输运性质的影响；未给出公式的不确定度区间。",
+ "significance": "对高速流动/工程的意义：提供了一条由来流Ma∞、Re、角角θw直接估算层流分离压缩角分离角与峰值压力的解析链，可用于热防护系统初步设计、进气道/控制面载荷估算，并可推广到轴对称裙/ flares【AI概括】。峰值压力-峰值热流幂律可把昂贵的DSMC/CFD热流计算转化为压力估算；但本文的验证以DSMC为主，用于飞行真实气体、湍流、稀薄或大分离非定常工况前需重新标定Pp、ξ等常数【AI推断】。",
+ "quotes": [
+  {
+   "text": "the plateau pressure is equal to the pressure behind the separation shock",
+   "supports": "平台压力假设",
+   "source": "p.3",
+   "use": "引用等效双激波模型的核心假设"
+  },
+  {
+   "text": "the peak pressure is equal to the pressure at the outer edge of the boundary layer",
+   "supports": "峰值压力=边界层外缘压力",
+   "source": "p.3",
+   "use": "支撑峰值压力建模"
+  },
+  {
+   "text": "the separation angle is almost independent of the freestream Mach number",
+   "supports": "分离角对Ma∞不敏感",
+   "source": "p.2（摘要）",
+   "use": "引用主要参数规律"
+  },
+  {
+   "text": "the ratio of peak pressure to freestream pressure is approximately proportional to the square of the freestream Mach number",
+   "supports": "峰压比∝Ma∞²",
+   "source": "p.2（摘要）",
+   "use": "引用峰压标度律"
+  },
+  {
+   "text": "the separation angle increases with the increase in the corner angle",
+   "supports": "θs随θw增大",
+   "source": "p.7",
+   "use": "参数影响引用"
+  },
+  {
+   "text": "the separation angle will be smaller as Re increases",
+   "supports": "θs随Re增大而减小",
+   "source": "p.7",
+   "use": "解释Re效应"
+  },
+  {
+   "text": "the peak pressure ratio monotonically increases with the increase in freestream Mach number, Reynolds number, and the corner angle",
+   "supports": "峰压比单调增大规律",
+   "source": "p.9",
+   "use": "参数规律总结"
+  },
+  {
+   "text": "the separation length of axisymmetric flow is smaller than that of two-dimensional flow",
+   "supports": "轴对称泄流效应",
+   "source": "p.9",
+   "use": "推广到圆柱-裙的依据"
+  }
+ ],
+ "figures": [
+  {
+   "file": "fig03_p4.png",
+   "n": 3,
+   "page": 4,
+   "caption_zh": "等效双激波无粘模型及分离压缩角流动的特征压力示意",
+   "caption_orig": "FIG. 3. Illustration of the equivalent double shocks inviscid flow model and the characteristic pressures of a separated compression corner flow. SL, streamline; S, separation; DSL, dividing streamline; SB, separation bubble; R, reattachment; SS, separation shock; RS, reattachment shock.",
+   "why": "给出区1–3、分离/再附激波与freestream/plateau/peak三个特征压力，是全文推导的模型基础。"
+  },
+  {
+   "file": "fig05_p6.png",
+   "n": 5,
+   "page": 6,
+   "caption_zh": "分离角理论结果与DSMC数据对比",
+   "caption_orig": "FIG. 5. Comparison of the theoretical results on the separation angle with the DSMC data.",
+   "why": "支撑式(3)取Pp=3.72后可跨Ma∞与Re工况关联分离角。"
+  },
+  {
+   "file": "fig06_p6.png",
+   "n": 6,
+   "page": 6,
+   "caption_zh": "分离激波压比、再附激波压比与峰值压力理论值与DSMC对比",
+   "caption_orig": "FIG. 6. Comparison of theoretical results for pressures with the DSMC data. (a) Pressure ratio across the separation shock. (b) Pressure ratio across the reattachment shock. (c) Peak pressure ratio.",
+   "why": "逐级验证等效双激波模型的三个压力量，支撑峰值压力建模。"
+  },
+  {
+   "file": "fig08_p8.png",
+   "n": 8,
+   "page": 8,
+   "caption_zh": "峰值压力简化式与DSMC对比及角角/Reynolds数影响",
+   "caption_orig": "FIG. 8. Comparison of the simplified form for peak pressure with the DSMC data. (a) Simplified form for peak pressure. (b) Variation of the peak pressure ratio with the square of freestream Mach number. (c) The influecing laws of corner angle and Reynolds number on the peak pressure ratio.",
+   "why": "支撑式(14)的线性collapse、峰压比∝Ma∞²以及θw/Re的单调影响。"
+  }
+ ],
+ "verification": {
+  "text_only": "是。仅使用bundle全文、图注与抓图清单；式(1)–(20)用PDF第4、5、7、8、12页核对；未引入外部文献或数据。",
+  "a_grade_supported": "是。A级要点有原文式号/图号/页码支撑：等效双激波模型（p.3–4、Fig.3）、式(3)与Fig.5、式(11)–(12)与Fig.7、式(14)与Fig.8、参数规律（p.7–9）。",
+  "attributes_marked": "是。three_sentence、core_points、findings均标注原文明确/AI概括/AI推断。",
+  "coverage": "覆盖IMRaD四节、表I–IV、图1–11、式(1)–(20)的主要推导链、DSMC设置、二维与轴对称验证、弱干扰校验、峰值热流关联及适用边界。",
+  "no_fabrication": "是。未编造页码、图号、公式、数据；式(9)完整形式、γ取值等未确认处已注明受限于材料或文中未提及；表I/III数值逐工况录入。",
+  "open_questions": [
+   "式(9)分母中符号的完整形式受双栏排版限制，无法确认，需回原文核对。",
+   "文中未明确给出γ的数值，公式计算是否取空气γ=1.4需回原文确认。",
+   "Pp=3.72的标定不确定度与适用Re/Ma范围未给出。",
+   "DSMC的x_o由流线提取，作者承认可能引入人为误差；其定量不确定度未给出。",
+   "轴对称系数c=0.659、ξ=4.57仅在一个d/l几何标定，其他直径/长度比的适用性未知。",
+   "峰值热流幂律b=1.0仅由本文DSMC拟合，文献b=0.7–1.3，普适性需更多数据。",
+   "弱干扰校验仅两个实验点（θw=20°、25°），且Re相同，统计代表性有限。"
+  ]
+ }
+}
