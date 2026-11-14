@@ -779,8 +779,10 @@
   "collections": [
    "新增检索 / 本轮补充"
   ],
-  "pdfs": [],
-  "has_pdf": false,
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\VV7UN7GM\\Babinsky和Harvey - 2011 - Shock wave-boundary-layer interactions.pdf"
+  ],
+  "has_pdf": true,
   "pdftext": ""
  },
  {
@@ -3679,8 +3681,10 @@
   "collections": [
    "新增检索 / 轴对称平板入射激波"
   ],
-  "pdfs": [],
-  "has_pdf": false,
+  "pdfs": [
+   "C:\\Users\\TYL13\\Zotero\\storage\\JQUNBVAN\\Friedlander 等 - 2025 - Numerical Simulations of an Axisymmetric Shock-WaveBoundary-Layer Interaction.pdf"
+  ],
+  "has_pdf": true,
   "pdftext": ""
  },
  {
