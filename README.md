@@ -12,6 +12,8 @@ F:\文献工具\
 ├─ taxonomy.html           分类体系与检索口径
 ├─ papers\
 │  └─ <作者>-<年份>-<期刊>-<标题>.html
+├─ records\               成员贡献记录（一条文献一个 JSON）
+├─ CONTRIBUTING.md        贡献与修改规范
 ├─ pdfs\                   本地全文库（不进入 Git）
 │  ├─ <作者>-<年份>-<期刊>-<标题>.pdf
 │  ├─ manifest.json        id 与文件名的对应表
@@ -88,3 +90,7 @@ python build/build_site.py
 ```
 
 网盘内容仅供课题组内部学习使用，请勿公开转发。链接如失效，请联系维护者更新。
+
+## 贡献
+
+多人协作、记录格式、标签规范、PR 流程与评审要求见 [CONTRIBUTING.md](CONTRIBUTING.md)。核心原则：**成员只新增自己的 `records/` JSON 和 PDF 来源信息，不手写 HTML，不修改构建脚本和全局数据。**
