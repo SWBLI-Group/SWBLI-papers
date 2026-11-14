@@ -45,7 +45,7 @@ ALLOWED_REGIMES = ["层流", "转捩", "湍流", "无粘", "非定常", "多流�
 ALLOWED_GASES = ["真实气体效应", "壁面催化", "壁面适应", "振动能激发", "稀薄气体效应", "化学非平衡", "振动能非平衡"]
 ALLOWED_METHODS = ["理论建模（控制方程）", "理论建模（数据驱动）", "稳定性分析", "实验研究", "数值模拟", "综述", "教材", "计算工具"]
 ALLOWED_GEOMETRIES = ["压缩拐角", "平板", "平板入射激波", "双楔", "双锥", "轴对称", "多构型", "纯方程", "其他"]
-ALLOWED_ARTICLE_TYPES = ["教材", "会议", "期刊", "报告", "综述", "学位论文", "预印本"]
+ALLOWED_ARTICLE_TYPES = ["教材", "会议", "期刊", "报告", "综述", "学位论文", "预印本", "无全文PDF"]
 # 2000 年归入“2000~至今”，保证两个年代桶互斥。
 ALLOWED_ERAS = ["2000~至今", "1900~2000"]
 # 968《分离流动的某些进展》是一般分离流动综述，不纳入 SWBLI 专题综述页。
@@ -476,6 +476,13 @@ def attach_local_pdf(p):
         if "无全文pdf" not in p["tags"]:
             p["tags"].append("无全文pdf")
     p["tags"] = [t for t in TAG_ORDER if t in set(p["tags"])]
+    # 状态型“文章类型”：把“无全文PDF”放进文章类型切面，便于和期刊/会议/学位论文等并列筛选。
+    if not p.get("pdf_href"):
+        if "无全文PDF" not in p.get("article_types", []):
+            p.setdefault("article_types", []).append("无全文PDF")
+    else:
+        p["article_types"] = [t for t in p.get("article_types", []) if t != "无全文PDF"]
+    p["article_types"] = [t for t in ALLOWED_ARTICLE_TYPES if t in set(p.get("article_types", []))]
 
 
 def norm_content(meta_by_id, content):
