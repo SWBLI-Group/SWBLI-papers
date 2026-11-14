@@ -13,7 +13,12 @@ F:\文献工具\
 ├─ papers\
 │  └─ <作者>-<年份>-<期刊>-<标题>.html
 ├─ records\               成员贡献记录（一条文献一个 JSON）
+├─ schemas\               贡献记录 JSON Schema
 ├─ CONTRIBUTING.md        贡献与修改规范
+├─ PROJECT_MEMORY.md      项目记忆（架构、现状、已知问题）
+├─ CLAUDE.md              Claude Code 项目规则
+├─ AGENTS.md              通用 AI 项目规则
+├─ .github\               校验工作流与 CODEOWNERS
 ├─ pdfs\                   本地全文库（不进入 Git）
 │  ├─ <作者>-<年份>-<期刊>-<标题>.pdf
 │  ├─ manifest.json        id 与文件名的对应表
@@ -94,3 +99,32 @@ python build/build_site.py
 ## 贡献
 
 多人协作、记录格式、标签规范、PR 流程与评审要求见 [CONTRIBUTING.md](CONTRIBUTING.md)。核心原则：**成员只新增自己的 `records/` JSON 和 PDF 来源信息，不手写 HTML，不修改构建脚本和全局数据。**
+
+## AI 协作：记忆与规则
+
+成员使用 AI 大模型修改项目时，先让模型阅读：
+
+| 文件 | 作用 |
+|---|---|
+| [PROJECT_MEMORY.md](PROJECT_MEMORY.md) | 项目记忆：架构、数据流、当前状态、已知问题 |
+| [CLAUDE.md](CLAUDE.md) | Claude Code 自动加载的项目规则 |
+| [AGENTS.md](AGENTS.md) | 通用 AI 工具（Codex/Cursor/Copilot 等）的项目规则 |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | 人类贡献流程、字段规范与评审要求 |
+| [records/_TEMPLATE.json](records/_TEMPLATE.json) | 单条文献 JSON 模板 |
+
+AI 的硬性规则：
+
+1. 新增文献只改 `records/<github-handle>/<year>/<slug>.json`，不手写 `papers/*.html`；
+2. `papers/*.html`、`assets/data.js`、构建脚本、前端和全局标签是冻结层；
+3. **新增标签/关注点、新增页面功能、修改 schema 或构建逻辑，必须先联系项目作者 @yiluntam**，不能自行实现；
+4. PDF 不进 Git，只使用合法开放获取、Zotero 群组库或课题组网盘；
+5. 不编造文献、DOI、摘要、数值或结论；用作者—年份引注。
+
+记录提交后运行：
+
+```bash
+PYTHONIOENCODING=utf-8 python build/validate_records.py
+PYTHONIOENCODING=utf-8 python build/build_site.py
+```
+
+GitHub Actions 也会在 PR 中自动运行记录校验和语法检查。

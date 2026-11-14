@@ -28,14 +28,14 @@ reviews.html / taxonomy.html 构建生成物
 schemas/                     记录 schema
 ```
 
-如果需要新增字段、标签、页面模块或修改构建逻辑，先开 Issue，标题用：
+如果需要新增字段、**新增标签/关注点**、新增页面功能或修改构建逻辑，**必须先联系项目作者 @yiluntam**，不要自行实现或合并：
 
 ```text
 [Schema change] 需要新增的字段或标签
 [Build change] 需要修改的构建行为
 ```
 
-由维护者统一修改 schema、构建脚本和前端，再通知所有成员。
+由作者/维护者统一修改 schema、标签词表、构建脚本和前端，再通知所有成员。
 
 ## 3. 成员自己的工作区
 
@@ -170,7 +170,7 @@ records/yiluntam/2026/Bleilebens-2006-ShockWaves-elevated-surface-temperatures.j
 
 - 一位主题负责人审核内容（壁温、稳定性、主动控制等）；
 - 一位维护者审核结构、构建和链接；
-- CI 通过（schema、重复 DOI、标签、构建）。
+- CI 通过（`build/validate_records.py`、重复 DOI/标题、标签、Python/JS 语法）。
 
 评审重点：
 
@@ -198,13 +198,13 @@ contrib/<github-handle>/<slug>
 
 一个 PR 只做一类事情：新增记录、修正记录、修改标签或修改底层结构，不要混在一起。
 
-## 9. 当前过渡状态
+## 9. 当前构建状态
 
-现有 `content_A–K.json` 和 `external_meta.json` 是历史数据，暂由维护者统一维护，普通成员不要直接改。
+`build_site.py` 已自动扫描 `records/**/*.json`，把每条记录合并进站点。成员提交合并后，维护者运行一次构建即可生成 `papers/<slug>.html` 和 `assets/data.js`。
 
-新文献先按本规范的 `records/` 格式提交。`records/` 自动合并进站点的构建函数由维护者接入；在接入前，维护者会在合并 PR 时把记录转入现有内容文件并重建页面。
+现有 `content_A–K.json` 和 `external_meta.json` 是历史数据，仍由维护者统一维护，普通成员不要直接改。
 
-无论处于哪个阶段，**成员只需要提交 JSON 和 PDF 来源信息，不需要手写 HTML**；`papers/<slug>.html` 始终由 `build_site.py` 生成。
+无论何时，**成员只需要提交 JSON 和 PDF 来源信息，不需要手写 HTML**；`papers/<slug>.html` 始终由 `build_site.py` 生成。
 
 ## 10. 维护者检查清单
 
@@ -212,6 +212,7 @@ contrib/<github-handle>/<slug>
 
 ```bash
 cd F:\文献工具
+PYTHONIOENCODING=utf-8 python build/validate_records.py
 PYTHONIOENCODING=utf-8 python build/build_site.py
 node --check assets/app.js
 ```

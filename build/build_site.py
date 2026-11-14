@@ -4,6 +4,7 @@
 Usage:
     python build/build_site.py
 """
+import hashlib
 import html
 import json
 import math
@@ -19,6 +20,7 @@ from urllib.parse import quote as urlquote
 BASE = Path(__file__).resolve().parent
 ROOT = BASE.parent
 PDF_DIR = ROOT / "pdfs"
+RECORDS_DIR = ROOT / "records"
 META_PATH = BASE / "selected_meta.json"
 CONTENT_GLOB = "content_*.json"
 CITATION_METRICS_PATH = BASE / "citation_metrics.json"
@@ -483,6 +485,102 @@ def attach_local_pdf(p):
     else:
         p["article_types"] = [t for t in p.get("article_types", []) if t != "无全文PDF"]
     p["article_types"] = [t for t in ALLOWED_ARTICLE_TYPES if t in set(p.get("article_types", []))]
+
+
+
+def _norm_record_title(t):
+    return re.sub(r"[^0-9a-z\u4e00-\u9fff]+", "", str(t or "").lower())
+
+
+def load_contrib_records(meta_by_id, c_by_id):
+    """Merge records/<handle>/<year>/<slug>.json into the legacy data model.
+
+    A record is self-contained: bibliographic metadata + content + focus.
+    The internal id is derived from DOI/Zotero key/title so contributors never
+    pick or collide on numeric ids.
+    """
+    if not RECORDS_DIR.exists():
+        return []
+    used_ids = set(meta_by_id)
+    seen_doi = {str(m.get("doi", "")).strip().lower() for m in meta_by_id.values() if m.get("doi")}
+    seen_title = {_norm_record_title(m.get("title")) for m in meta_by_id.values() if m.get("title")}
+    records = []
+    for path in sorted(RECORDS_DIR.rglob("*.json")):
+        if path.name.startswith("_") or path.name.startswith("."):
+            continue
+        try:
+            rec = load_json(path)
+        except Exception as exc:
+            print(f"!! cannot parse record {path}: {exc}")
+            continue
+        if not isinstance(rec, dict):
+            print(f"!! record is not an object: {path}")
+            continue
+        if rec.get("status", "active") != "active":
+            print(f"skip inactive record {path}")
+            continue
+        title = clean_str(rec.get("title"))
+        content = rec.get("content") if isinstance(rec.get("content"), dict) else {}
+        title = title or clean_str(content.get("title_zh"))
+        doi = clean_str(rec.get("doi")).lower()
+        zkey = clean_str(rec.get("zotero_key"))
+        if not (doi or zkey or title):
+            print(f"!! record has no doi/zotero_key/title: {path}")
+            continue
+        nt = _norm_record_title(title)
+        if (doi and doi in seen_doi) or (nt and nt in seen_title):
+            print(f"!! duplicate record skipped: {path}")
+            continue
+        seed = doi or zkey or title
+        pid = int(hashlib.sha1(seed.encode("utf-8")).hexdigest()[:7], 16)
+        while pid in used_ids:
+            pid = (pid + 1) % 0x7FFFFFFF
+        used_ids.add(pid)
+        authors = rec.get("authors") if isinstance(rec.get("authors"), list) else []
+        meta = {
+            "id": pid, "key": zkey, "type": clean_str(rec.get("type")) or "journalArticle",
+            "title": title, "season": "", "authors": authors,
+            "author_display": clean_str(rec.get("author_display")) or build_author_display(authors),
+            "year": str(rec.get("year") or ""), "journal": clean_str(rec.get("journal")),
+            "journal_abbr": clean_str(rec.get("journal_abbr")), "volume": clean_str(rec.get("volume")),
+            "issue": clean_str(rec.get("issue")), "pages": clean_str(rec.get("pages")),
+            "doi": clean_str(rec.get("doi")), "url": clean_str(rec.get("url")),
+            "publisher": clean_str(rec.get("publisher")), "place": clean_str(rec.get("place")),
+            "edition": clean_str(rec.get("edition")), "isbn": clean_str(rec.get("isbn")),
+            "language": clean_str(rec.get("language")) or "en",
+            "abstract_orig": clean_str(rec.get("abstract_orig")), "notes": as_list(rec.get("notes")),
+            "zotero_tags": as_list(rec.get("zotero_tags")),
+            "collections": as_list(rec.get("collections")) or ["records"],
+            "pdfs": [], "has_pdf": False, "pdftext": "",
+        }
+        pdf_file = clean_str(rec.get("pdf_file")) or clean_str(rec.get("pdf"))
+        if pdf_file:
+            pdf_path = Path(pdf_file)
+            if not pdf_path.is_absolute():
+                pdf_path = ROOT / pdf_path
+            if pdf_path.is_file():
+                meta["pdfs"] = [str(pdf_path)]
+                meta["has_pdf"] = True
+            else:
+                print(f"!! record PDF not found: {pdf_file} ({path})")
+        c = dict(content)
+        c["id"] = pid
+        c["title_zh"] = clean_str(c.get("title_zh")) or title
+        for key in ("board", "regimes", "real_gas", "methods", "geometry", "tags", "focus"):
+            c[key] = as_list(rec.get(key)) if key in rec else as_list(c.get(key))
+        c["evidence"] = clean_str(rec.get("evidence")) or clean_str(c.get("evidence")) or "摘要"
+        c["confidence"] = clean_str(rec.get("confidence")) or clean_str(c.get("confidence")) or "中"
+        c["related"] = [int(x) for x in as_list(rec.get("related")) if str(x).isdigit()]
+        meta_by_id[pid] = meta
+        c_by_id[pid] = c
+        records.append(c)
+        if doi:
+            seen_doi.add(doi)
+        if nt:
+            seen_title.add(nt)
+    if records:
+        print(f"loaded {len(records)} contrib records from records/")
+    return records
 
 
 def norm_content(meta_by_id, content):
@@ -2381,6 +2479,11 @@ def main():
             else:
                 print(f"!! focus tag for unknown id {key}")
         print(f"applied {applied} focus tag records")
+
+    # records/<handle>/<year>/<slug>.json：成员自己的单条文献记录。
+    # 与历史 content_*.json 合并，后者的 id 优先；records 不允许覆盖已有 DOI/标题。
+    records_content = load_contrib_records(meta_by_id, c_by_id)
+    contents.extend(records_content)
 
     deep_by_id = {}
     if DEEP_DIR.exists():
