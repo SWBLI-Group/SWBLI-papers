@@ -38,7 +38,6 @@ F:\文献工具\
    ├─ content_*.json       结构化中文内容
    ├─ focus_tags.json      壁温/轴对称/动壁等关注点
    ├─ deep\                深度精读记录
-   ├─ audit\               标签与深读的审计记录（不参与构建）
    └─ formula_latex.py     公式源
 ```
 
