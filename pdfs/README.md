@@ -9,3 +9,11 @@
 - 早期按 DOI 命名的旧副本已移到项目外的 `F:\文献工具_archive\pdfs_legacy_2026-11-14\`，仅作备份；站点不再引用。
 
 该目录被 `.gitignore` 排除，不进入 GitHub 仓库：PDF 多为出版社版权文件，且体积达 GB 级。仓库只发布站点与题录；换机器时需从 Zotero 重新复制全文。
+
+课题组内部可通过百度网盘获取完整 `pdfs`：
+
+```text
+链接: https://pan.baidu.com/s/5vKsauxXnsAOAMdVWa4g66Q
+```
+
+仅供课题组内部学习使用，请勿公开转发。

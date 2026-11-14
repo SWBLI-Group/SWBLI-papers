@@ -78,3 +78,13 @@ python build/build_site.py
 `pdfs\` 保存本地全文副本，方便详情页直接打开，但因版权和体积原因不提交到 Git。换机器后需从 Zotero 重新复制 PDF；`pdfs\manifest.json` 会记录每个条目对应的文件名。
 
 仓库只发布站点、题录和内容数据，不包含出版社 PDF 原件。
+
+## PDF 共享（课题组）
+
+课题组成员可通过以下百度网盘链接获取 `pdfs` 全文库：
+
+```text
+链接: https://pan.baidu.com/s/5vKsauxXnsAOAMdVWa4g66Q
+```
+
+网盘内容仅供课题组内部学习使用，请勿公开转发。链接如失效，请联系维护者更新。
