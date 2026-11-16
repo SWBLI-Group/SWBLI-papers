@@ -11,9 +11,10 @@
 下载后把 PDF 放到 `pdfs/incoming/`，运行：
 
 ```bash
-PYTHONIOENCODING=utf-8 python build/import_downloaded_pdfs.py
-PYTHONIOENCODING=utf-8 python build/build_site.py
+PYTHONIOENCODING=utf-8 python tools/import_downloaded_pdfs.py
 ```
+
+导入后，在 `papers/<slug>.html` 和 `assets/data.js` 中更新该条目的 PDF 按钮/`pdf_href`；不要运行 `build_site.py`。
 
 ## 统计
 

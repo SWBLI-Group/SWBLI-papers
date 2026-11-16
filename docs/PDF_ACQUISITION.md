@@ -29,15 +29,16 @@ pdfs/incoming/
 
 ```bash
 cd F:\文献工具
-PYTHONIOENCODING=utf-8 python build/import_downloaded_pdfs.py --dry-run
+PYTHONIOENCODING=utf-8 python tools/import_downloaded_pdfs.py --dry-run
 ```
 
 3. 匹配无误后正式导入：
 
 ```bash
-PYTHONIOENCODING=utf-8 python build/import_downloaded_pdfs.py
-PYTHONIOENCODING=utf-8 python build/build_site.py
+PYTHONIOENCODING=utf-8 python tools/import_downloaded_pdfs.py
 ```
+
+4. 在对应 `papers/<slug>.html` 和 `assets/data.js` 中把该条目的 PDF 按钮/`pdf_href` 指向新文件；不要运行 `build_site.py`，它会覆盖手工维护的页面。
 
 脚本会按以下顺序匹配：
 
@@ -51,4 +52,4 @@ PYTHONIOENCODING=utf-8 python build/build_site.py
 
 - 我无法代登录你的 CST 账号，也不能绕过付费墙；这里提供的是**可核验的下载清单 + 导入工具**。
 - 如果 CST 下载的是扫描版 PDF、没有文本层，请把文件名改成内部 id（例如 `2050.pdf`），脚本仍可匹配。
-- 导入后运行 `python build/validate_records.py` 和 `python build/build_site.py` 检查。
+- 导入后在 PR 中检查 `papers/<slug>.html` 和 `assets/data.js` 的 `pdf_href` 是否一致。

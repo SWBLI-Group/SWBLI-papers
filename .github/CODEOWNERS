@@ -1,10 +1,6 @@
-# 默认由作者/维护者审核
+# 所有 PR 默认由作者审核
 * @yiluntam
 
-# 贡献记录默认也由维护者审核；
-# 如果以后按主题分负责人，把下面替换成实际 GitHub handle：
-# records/ @topic-owner
-build/ @yiluntam
-assets/app.js @yiluntam
-assets/style.css @yiluntam
-schemas/ @yiluntam
+# 只有 build/ 是禁止成员修改的底层；需要改 build 时先联系 @yiluntam，
+# 由作者加 allow-build-change 标签后 PR 才能通过 guard-build 检查。
+/build/ @yiluntam

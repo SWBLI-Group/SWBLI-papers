@@ -1,0 +1,24 @@
+name: guard-build
+
+on:
+  pull_request:
+
+jobs:
+  forbid-build:
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'allow-build-change') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reject changes under build/
+        run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          files=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
+          echo "Changed files:"
+          echo "$files"
+          if echo "$files" | grep -q '^build/'; then
+            echo "::error::build/ 是禁止修改的底层。请先联系 @yiluntam；确需修改时由作者加 allow-build-change 标签。"
+            exit 1
+          fi
+          echo "OK: no build/ changes"

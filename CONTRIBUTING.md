@@ -1,231 +1,180 @@
-# 贡献与修改规范
+# 贡献与修改规范（new 分支）
 
-本项目是多成员共同维护的 SWBLI 文献库。目标不是让一个人包揽全部文献，而是让每位成员维护自己负责的主题或批次，同时保证整个库的结构、标签和页面风格一致。
+本分支采用“条目页面 + 数据索引”的直接维护方式。**`build/` 是唯一禁止修改的底层**，其余站点文件通过 PR 提交，由作者审核。
 
-## 1. 核心原则
+> 开发分支：`new`。所有成员 PR 请提交到 `new`，不要合并到 `main`。`main` 由作者保护。
 
-1. **一条文献一个 JSON 文件**，不要把多条文献写进同一个大 JSON。
-2. **只提交内容数据，不手写 HTML**。`papers/<slug>.html` 由构建脚本生成，不要手动编辑。
-3. **PDF 不进 Git**。PDF 放本地 `pdfs/`、Zotero 群组库或课题组网盘；Git 只保存题录、摘要和结构化内容。
-4. **底层结构冻结**。项目目录、字段 schema、受控标签、构建脚本和页面样式由维护者统一修改；普通贡献只新增/修改自己的记录。
-5. **以 DOI 或 Zotero key 作为稳定标识**，不要用“第几篇”或临时数字当主键。
+## 1. 可修改与不可修改
 
-## 2. 固定不变的部分
-
-以下内容属于项目底层，成员不要在自己的 PR 中修改：
+### 禁止修改
 
 ```text
-build/build_site.py          构建入口
-build/*.json                 全局题录/关注点/映射
-build/deep/                  深度精读记录
-build/formula_latex.py       公式源
-assets/app.js                检索、筛选、引用逻辑
-assets/style.css             页面样式
-assets/data.js               构建生成物
-papers/*.html                构建生成物
-index.html / library.html    构建生成物
-reviews.html / taxonomy.html 构建生成物
-schemas/                     记录 schema
+build/
 ```
 
-如果需要新增字段、**新增标签/关注点**、新增页面功能或修改构建逻辑，**必须先联系项目作者 @yiluntam**，不要自行实现或合并：
+`build/` 里的脚本、题录、内容 JSON、深读记录和公式源都是维护者底层。普通 PR 修改 `build/` 会被 CI 拒绝；确需修改时先联系作者 @yiluntam，由作者加 `allow-build-change` 标签。
+
+### 成员可修改
 
 ```text
-[Schema change] 需要新增的字段或标签
-[Build change] 需要修改的构建行为
+papers/<slug>.html      条目页面
+assets/data.js          前端索引数据
+assets/figs/            可选：条目新增图件
+pdfs/                   本地全文（不进入 Git）
 ```
 
-由作者/维护者统一修改 schema、标签词表、构建脚本和前端，再通知所有成员。
+根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 在需要更新统计/入口时也可改，但要与 `assets/data.js` 保持一致。
 
-## 3. 成员自己的工作区
+`assets/app.js`、`assets/style.css`、`assets/katex/`、`assets/pdfjs/` 不是日常条目修改所需；如果确实要改，请在 PR 中说明原因，由作者重点审核。
 
-新增文献统一放在：
+## 2. assets 是什么
 
-```text
-records/<github-handle>/<year>/<slug>.json
-```
+| 路径 | 作用 | 新增条目是否必须改 |
+|---|---|---|
+| `assets/data.js` | 文献库全部前端数据：卡片、搜索、筛选、标签、关注点、PDF 链接 | **必须改**，否则新条目不会出现在文献库/筛选中 |
+| `assets/figs/` | 深度精读页引用的图件 | 只有新增图件时改 |
+| `assets/app.js` | 搜索、分面、引用复制、PDF 打开等交互 | 通常不需要 |
+| `assets/style.css` | 页面样式 | 通常不需要 |
+| `assets/katex/` | 本地公式渲染 | 不需要 |
+| `assets/pdfjs/` | 本地 PDF 解析 | 不需要 |
 
-例如：
+**关键：** 新增/修改条目必须同时改 `papers/<slug>.html` 和 `assets/data.js`。只改页面，文献库列表和筛选不会更新。
 
-```text
-records/yiluntam/2026/Bleilebens-2006-ShockWaves-elevated-surface-temperatures.json
-```
+## 3. 新增一条文献
 
-- `<github-handle>`：贡献者的 GitHub 用户名，便于确定维护边界。
-- `<year>`：文献年份，便于按年份浏览。
-- `<slug>`：与页面、PDF 一致的“作者-年份-期刊-简要标题”标识，避免中文文件名和特殊字符。
-- 每位成员只修改自己目录下的文件；不要直接改别人的记录。
-- 如果同一篇文献由多人维护，先在 Issue 中确认唯一负责人，避免重复。
+1. 复制一个结构相近的 `papers/<slug>.html`，改成新页面；
+2. 修改页面中的题录、中文内容、标签、DOI、PDF 按钮；
+3. 在 `assets/data.js` 的 `window.SWBLI_DATA.papers` 中加入对应对象；
+4. 更新 `meta` 中的计数（`total`、`with_pdf`、`tagCounts`、`focusCounts` 等）；
+5. 把 PDF 放到本地 `pdfs/<slug>.pdf`，**不要提交到 Git**；
+6. 提交 PR 到 `new` 分支，等待作者审核。
 
-## 4. 单条记录格式
+建议 `id` 使用 DOI（或 Zotero key）的 SHA-1 前 7 位转成整数，避免多人撞号；也可以先联系作者分配。
 
-每个 JSON 只描述一篇文献，建议包含以下字段：
+### data.js 条目对象参考
 
-```json
+```js
 {
-  "schema_version": 1,
-  "doi": "10.1017/jfm.2024.533",
-  "zotero_key": "XXXXXXXX",
-  "title": "Effects of wall temperature on hypersonic shock wave/turbulent boundary layer interactions",
-  "authors": [
-    { "first": "Ji", "last": "Zhang" }
-  ],
-  "year": "2024",
-  "journal": "Journal of Fluid Mechanics",
-  "journal_abbr": "JFM",
-  "volume": "",
-  "issue": "",
-  "pages": "",
-  "language": "en",
-  "abstract_orig": "原文摘要……",
-  "content": {
-    "title_zh": "壁面温度对高超声速激波/湍流边界层干扰的影响",
-    "gist": "一句话概括，不超过40字",
-    "abstract_zh": "中文摘要，100–260字",
-    "background": "研究背景与问题，120–220字",
-    "main_work": "本文主要工作，260–420字",
-    "method_detail": "方法与算例细节，180–320字",
-    "findings": "关键结果与证据，180–320字",
-    "conclusions": "本文结论，180–300字",
-    "limits": "适用边界与局限，80–180字",
-    "problem_solved": "本文解决的问题，60–140字",
-    "key_findings": ["发现1", "发现2", "发现3"],
-    "derivation_idea": "推导思路，可选",
-    "derivation_steps": ["步骤1", "步骤2", "步骤3"],
-    "formula": null,
-    "review": null
-  },
-  "board": ["流动分离"],
-  "regimes": ["湍流"],
-  "real_gas": [],
-  "methods": ["数值模拟"],
-  "geometry": ["压缩拐角"],
-  "tags": ["湍流", "流动分离", "数值模拟"],
-  "focus": ["壁温效应", "非定常效应"],
-  "evidence": "PDF全文",
-  "confidence": "高",
-  "pdf_file": "pdfs/zhang-2024-jfm-wall-temperature.pdf",
-  "status": "active"
+  id: 2101,
+  href: "papers/<作者>-<年份>-<期刊>-<标题>.html",
+  title: "英文题名",
+  title_zh: "中文题名",
+  author_display: "第一作者 et al.",
+  year: "2026",
+  venue: "期刊名",
+  doi: "10.xxxx/xxxx",
+  abstract_zh: "...",
+  main_work: "...",
+  conclusions: "...",
+  limits: "...",
+  board: ["流动分离"],
+  regimes: ["湍流"],
+  methods: ["数值模拟"],
+  geometry: ["压缩拐角"],
+  tags: ["湍流", "流动分离", "数值模拟"],
+  focus: ["壁温效应"],
+  pdf_href: "pdfs/<slug>.pdf",
+  pdf_name: "<slug>.pdf",
+  evidence: "PDF全文",
+  confidence: "高"
 }
 ```
 
-### 字段约定
+字段和页面必须一一对应；尤其 `href`、`pdf_href`、`tags`、`focus` 不能与页面不一致。
 
-- `board`：`流动分离`、`初始分离`、`峰值传热`、`基础与工具`，可多选。
-- `regimes`：`层流`、`转捩`、`湍流`、`无粘`、`非定常`、`多流态`。
-- `real_gas`：空数组，或 `真实气体效应`、`壁面催化`、`壁面适应`、`振动能激发`、`稀薄气体效应`、`化学非平衡`、`振动能非平衡`。
-- `methods`：`理论建模（控制方程）`、`理论建模（数据驱动）`、`稳定性分析`、`实验研究`、`数值模拟`、`综述`、`教材`、`计算工具`。
-- `geometry`：`压缩拐角`、`平板`、`平板入射激波`、`双楔`、`双锥`、`轴对称`、`多构型`、`纯方程`、`其他`。
-- `tags`：只能使用项目受控词表，不能自造标签。
-- `focus`：只能使用 `focus_tags.json` 的受控关注点；必须是正文明确讨论该变量，不能只因标题里出现。
-- `evidence`：`摘要+笔记`、`摘要`、`PDF全文`、`PDF摘要/结论页`、`PDF摘要/目录`、`题录/公开摘要（原文摘要缺失）`、`仅题录`。
-- `confidence`：`高`、`中`、`低`。
-- `pdf_file`：只写相对本地路径，**不要提交 PDF 文件本身**。
-- `status`：`active`、`retracted`、`superseded`；撤稿或替换时改这里，不要直接删除别人的记录。
+## 4. 修改已有条目
 
-## 5. PDF 与 Zotero
+1. 直接在 `papers/<slug>.html` 改内容；
+2. 同步修改 `assets/data.js` 中同一 `id` 的对象；
+3. 如果修改标签/关注点，更新 `meta.tagCounts`、`meta.focusCounts`；
+4. 如果删除 PDF，同时删掉本地 `pdfs` 链接并更新 `pdf_href`；
+5. 提交 PR，写清楚改了什么、依据是什么。
 
-1. 成员先把文献和 PDF 加入 Zotero 群组库，或上传到课题组网盘；
-2. 记录中填写 `zotero_key`、`doi`、`pdf_file`；
-3. `pdfs/` 只保存在本地，`pdfs/*` 已被 `.gitignore` 排除；
-4. 构建时由维护者或本地脚本把 PDF 复制成 `pdfs/<slug>.pdf`；
-5. 只使用出版社、arXiv、NASA、机构仓库、开放获取等合法来源；不要使用盗版源。
+### 删除条目
 
-课题组内部可通过百度网盘获取完整 `pdfs`，链接见根目录 `README.md`。
+不要直接删除别人的页面。把条目标记为撤稿/替换，或先在 Issue/PR 中说明；由作者确认后再删。
 
-## 6. 新增与修改流程
+## 5. PDF 规则
 
-### 新增一篇文献
+- `pdfs/` 被 `.gitignore` 排除，**PDF 二进制不进入 Git**；
+- 成员把 PDF 填入本地 `pdfs/`，或上传到课题组百度网盘/Zotero 群组库；
+- PR 只提交页面、`assets/data.js` 和必要的 `assets/figs`；
+- PR 描述里写清 PDF 文件名/DOI/网盘位置，便于审核；
+- 只使用合法来源：出版社、arXiv、NASA、机构仓库、学校/CST 订阅、课题组 Zotero；
+- 禁止 sci-hub 和任何绕过付费墙的方式。
 
-1. 先搜索库和 Issue，确认 DOI/标题没有重复；
-2. 在 `records/<你的handle>/<year>/` 下新增一个 JSON；
-3. 填写题录、中文内容、标签、关注点和 PDF 信息；
-4. 提交 PR，标题格式：
+如果确实需要把 PDF 纳入版控，需要单独讨论 Git LFS/私有存储方案，不能直接改 `.gitignore` 提交大文件。
 
-```text
-[record] <第一作者> <年份> <简要标题>
-```
+## 6. 标签与关注点
 
-5. PR 描述中写清楚：
-   - DOI；
-   - 主题（壁温/稳定性/主动控制/传热/转捩等）；
-   - 证据等级；
-   - 已知局限；
-   - 是否有本地 PDF。
+- 标签、关注点可以在当次条目 PR 中提出；
+- 新增标签必须同时改页面、`assets/data.js` 的条目和 `meta` 计数；
+- 关注点必须有正文证据，不能只因标题或构型出现；
+- 新增全局标签/页面功能属于底层变更，PR 中必须写明理由，由作者 @yiluntam 审核。
 
-### 修改已有记录
+## 7. 不要运行构建
 
-- 只修改自己目录下的记录；
-- 修改别人的记录前，先在 Issue 中联系负责人；
-- 标签、关注点、结论的修改必须在 PR 描述中说明依据；
-- 不接受“只改格式、不改内容”的大规模重排 PR，避免制造冲突。
+`build/` 禁止修改，日常也不要运行 `build_site.py`：
 
-### 撤稿或替换
+- 它会根据 `build/` 的旧数据重写 `papers/` 和 `assets/data.js`；
+- 会覆盖成员手工维护的页面；
+- 当前分支的条目页面和 `assets/data.js` 是直接维护源。
 
-不要直接删除记录。把 `status` 改为 `retracted` 或 `superseded`，并在 PR 中说明原因；维护者再决定是否从页面隐藏。
+如果确实需要运行构建，先联系作者。
 
-## 7. 评审与合并
+## 8. PR 流程
 
-每个 PR 至少需要：
-
-- 一位主题负责人审核内容（壁温、稳定性、主动控制等）；
-- 一位维护者审核结构、构建和链接；
-- CI 通过（`build/validate_records.py`、重复 DOI/标题、标签、Python/JS 语法）。
-
-评审重点：
-
-1. 题录是否与 DOI/原文一致；
-2. 中文摘要是否忠于原文，有没有编造数字；
-3. 标签和关注点是否有证据；
-4. PDF 来源是否合法；
-5. 是否修改了不该改的底层文件。
-
-## 8. 分支与提交
-
-分支名：
-
-```text
-contrib/<github-handle>/<slug>
-```
-
-提交信息示例：
-
-```text
-[record] add Zhang 2024 JFM wall-temperature paper
-[fix] correct DOI for Li 2025 CJA paper
-[focus] tag Hao 2023 as stability
-```
-
-一个 PR 只做一类事情：新增记录、修正记录、修改标签或修改底层结构，不要混在一起。
-
-## 9. 当前构建状态
-
-`build_site.py` 已自动扫描 `records/**/*.json`，把每条记录合并进站点。成员提交合并后，维护者运行一次构建即可生成 `papers/<slug>.html` 和 `assets/data.js`。
-
-现有 `content_A–K.json` 和 `external_meta.json` 是历史数据，仍由维护者统一维护，普通成员不要直接改。
-
-无论何时，**成员只需要提交 JSON 和 PDF 来源信息，不需要手写 HTML**；`papers/<slug>.html` 始终由 `build_site.py` 生成。
-
-## 10. 维护者检查清单
-
-合并前运行：
+1. 从 `new` 拉分支：
 
 ```bash
-cd F:\文献工具
-PYTHONIOENCODING=utf-8 python build/validate_records.py
-PYTHONIOENCODING=utf-8 python build/build_site.py
+git switch new
+git pull
+git switch -c contrib/<你的GitHub用户名>/<slug>
+```
+
+2. 修改 `papers/`、`assets/data.js`，可选 `assets/figs/`；
+3. 本地检查：
+
+```bash
+node --check assets/data.js
 node --check assets/app.js
 ```
 
-确认：
+4. 提交 PR，目标分支选 **`new`**，不要选 `main`；
+5. PR 标题：
 
-- `wrote N papers, N detail pages`
-- `无全文PDF` 数量与预期一致
-- 新条目有页面、有 PDF 或 DOI
-- 没有数字文件名残留
-- 没有把 `pdfs/` 或大文件提交进 Git
-- `git status` 干净
+```text
+[entry] <第一作者> <年份> <简要标题>
+```
 
-## 11. 一句话总结
+6. PR 描述写清：
 
-**底层结构冻结；每位成员只维护自己的 `records/` JSON 和 PDF 来源；HTML、`assets/data.js` 和页面由构建统一生成；所有改动走 Issue → PR → 主题评审 → 维护者合并。**
+- 改了哪个 `papers/` 页面；
+- `assets/data.js` 对应 id；
+- 新增/修改的标签和关注点；
+- PDF 本地文件名/网盘位置；
+- 证据等级（摘要/全文）；
+- 是否有不确定内容。
+
+7. 作者审核后合并到 `new`；**不要自行合并到 `main`**。
+
+## 9. 评审重点
+
+- 页面与 `assets/data.js` 是否一致；
+- 是否只改了 `papers/`、`assets/`、`pdfs/` 等允许路径；
+- 是否误改 `build/`；
+- 标签/关注点是否有证据；
+- PDF 来源是否合法；
+- 是否编造数值、DOI、作者或结论；
+- 中文内容是否通顺、与原文一致。
+
+## 10. 分支与 main
+
+- `new`：日常贡献与审核分支；
+- `main`：由作者保护，只接受作者确认后的合并；
+- 普通成员不要向 `main` 开 PR，也不要直接 push；
+- 作者在 GitHub 设置中保护 `main`：Require PR、Require review、Require status checks、禁止 force push。
+
+## 11. 一句话
+
+**只改 `papers/` 和 `assets/`（含 `assets/data.js`），PDF 放本地/网盘；`build/` 禁止修改；所有 PR 提到 `new`，由作者审核，不直接合并 `main`。**

@@ -1,63 +1,57 @@
 # 项目规则（Claude Code 专用入口）
 
-> 开始任何修改前，先读 `PROJECT_MEMORY.md`、`CONTRIBUTING.md` 和 `README.md`。
-> 本文件是项目级规则；如果与用户当次明确要求冲突，以用户当次要求为准，但必须先说明影响。
+> 先读 `PROJECT_MEMORY.md`、`CONTRIBUTING.md` 和 `README.md`。
+> 当前开发分支：`new`。普通成员 PR 提交到 `new`，不要合并到 `main`。
 
-## 先判断任务类型
+## 修改边界
 
-1. **新增/修改文献记录**：只改 `records/<github-handle>/<year>/<slug>.json`。
-2. **修改站点/构建/标签体系**：属于维护者操作。先说明要改哪些文件、为什么、影响范围，等待明确同意后再动。
-3. **只写文档/总结**：可以改 `README.md`、`PROJECT_MEMORY.md`、`CONTRIBUTING.md`，不要顺手改生成物。
+允许修改：
 
-## 绝对不要做
+```text
+papers/<slug>.html
+assets/data.js
+assets/figs/（仅新增图件时）
+pdfs/（本地，不进入 Git）
+```
 
-- 不要手改 `papers/*.html`、`assets/data.js`、`index.html`、`library.html`、`reviews.html`、`taxonomy.html`；它们由 `build/build_site.py` 生成。
-- 不要手改 `build/build_site.py`、`assets/app.js`、`assets/style.css`、`build/formula_latex.py`、schema、全局标签词表，除非维护者明确要求。
-- **新增标签/关注点、新增页面功能、修改 schema 或构建逻辑，必须先联系项目作者 @yiluntam；不得自行实现或合并。**
-- 不要把 `pdfs/`、`build/figs/`、大 PDF、数据库或临时构建产物提交到 Git。
-- 不要使用 sci-hub 或其他盗版源；不要绕过付费墙。
-- 不要编造文献、DOI、作者、年份、摘要、数值或结论。
-- 不要用内部数字 id 代替作者—年份引注。
-- 不要覆盖或删除别人的 `records/` 记录；撤稿改 `status`。
-- 不要在 Git 提交中添加合作者信息（如 `Co-Authored-By`）。
+禁止修改：
 
-## 新增一条文献
+```text
+build/
+```
 
-1. 先用 DOI 和标题检查是否已在库中；重复则不要新增。
-2. 复制 `records/_TEMPLATE.json` 到 `records/<handle>/<year>/<slug>.json`。
-3. 填写题录、中文内容、`board/regimes/methods/geometry/tags/focus/evidence/confidence`。
-4. 只使用受控标签；`focus` 必须有正文证据。
-5. PDF 只写本地相对路径 `pdf_file`，不要把 PDF 提交到 Git。
-6. `build_site.py` 会自动扫描 `records/**/*.json` 并合并；提交前运行 `python build/validate_records.py`。
+`build/` 是底层与历史构建源；改它会被 CI 拒绝。确需修改时先联系作者 @yiluntam，由作者加 `allow-build-change` 标签。
 
-## 内容质量
+`assets/app.js`、`assets/style.css`、`assets/katex/`、`assets/pdfjs/` 不是日常条目修改所需；要改必须在 PR 中说明原因。
 
-- `abstract_zh` 100–260 字；`main_work` 260–420 字；`conclusions` 180–300 字；`limits` 80–180 字。
-- 摘要级证据不能写成全文结论；`evidence` 和 `confidence` 必须如实填写。
-- 中文为主；公式用 Unicode 文本，不用 LaTeX。
-- 用户可见总结用作者—年份引注，例如 `Bleilebens & Olivier（2006）`。
+## 新增/修改条目
 
-## 构建与检查
+1. 同时修改 `papers/<slug>.html` 和 `assets/data.js`；
+2. 保证 `href`、`pdf_href`、`tags`、`focus` 页面与数据一致；
+3. 更新 `assets/data.js` 的 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts` 等计数；
+4. 标签/关注点必须有正文证据；
+5. PDF 放本地 `pdfs/` 或网盘，不提交 Git；
+6. 新增标签、页面功能或底层改动必须先联系 @yiluntam。
+
+## 内容规则
+
+- 不编造文献、DOI、作者、年份、摘要、数值或结论；
+- 摘要级证据不能写成全文结论；
+- 中文为主；公式用 Unicode 文本，不用 LaTeX；
+- 用户可见总结用作者—年份引注，不用内部数字 id。
+
+## 检查
 
 ```bash
-cd F:\文献工具
-PYTHONIOENCODING=utf-8 python build/build_site.py
+node --check assets/data.js
 node --check assets/app.js
 ```
 
-Windows 终端必须加 `PYTHONIOENCODING=utf-8`。构建后检查：
+不要运行 `build_site.py`；它会用旧构建源覆盖手工维护的 `papers/` 和 `assets/data.js`。
 
-- `wrote N papers, N detail pages`
-- `无全文PDF` 数量符合预期
-- 新条目有页面，PDF 或 DOI 可点
-- 没有数字文件名残留
-- `git status` 没有 PDF/临时文件
+## 禁止事项
 
-## 当前项目事实
-
-- 283 篇、203 篇有本地 PDF、80 篇 `无全文PDF`。
-- 页面文件名是关键词 slug，不再是数字 id。
-- `build/figs/` 已归档到项目外；构建使用 `assets/figs/`，当前缺失引用为 0。
-- `assets/data.js` 仍含本机绝对路径；公开部署前必须做去本地路径构建。
-- `records/` 已由 `build_site.py` 自动扫描并合并；`build/validate_records.py` 和 GitHub Actions 负责校验。
-- 详细背景见 `PROJECT_MEMORY.md`。
+- 不使用 sci-hub 或盗版源；
+- 不提交 PDF、大文件、数据库；
+- 不覆盖/删除别人的条目；
+- 不在 Git 提交中添加合作者信息（如 `Co-Authored-By`）。

@@ -1,44 +1,61 @@
 # 项目规则（通用 AI 入口）
 
-> 适用于 Claude、Codex、Cursor、Copilot 等任何修改本项目的 AI 工具。
-> 开始前先读 `PROJECT_MEMORY.md`、`CONTRIBUTING.md` 和 `README.md`。Claude Code 还会自动读取 `CLAUDE.md`。
+> 适用于 Claude、Codex、Cursor、Copilot 等 AI 工具。
+> 开始前读 `PROJECT_MEMORY.md`、`CONTRIBUTING.md` 和 `README.md`。Claude Code 还会自动读取 `CLAUDE.md`。
+> 当前开发分支：`new`；PR 提到 `new`，不直接合并 `main`。
 
-## 核心规则
+## 修改边界
 
-1. **不要手写 HTML**：`papers/*.html`、`assets/data.js`、根页面均由 `build/build_site.py` 生成。
-2. **不要改底层**：`build/build_site.py`、`assets/app.js`、`assets/style.css`、`build/formula_latex.py`、schema、全局标签词表、目录结构由维护者统一管理；需要修改先说明并等待明确同意。**新增标签/关注点、新增页面功能、修改 schema 或构建逻辑，必须先联系项目作者 @yiluntam。**
-3. **新增文献只加一个 JSON**：`records/<github-handle>/<year>/<slug>.json`。一条文献一个文件，不要编辑别人的记录。
-4. **PDF 不进 Git**：`pdfs/` 已被忽略；只使用合法开放获取、Zotero 群组库、课题组网盘或用户提供的 PDF。禁止 sci-hub 和绕过付费墙。
-5. **不编造**：文献、DOI、作者、年份、摘要、数值、公式和结论必须有题录/摘要/PDF 依据；`evidence` 与 `confidence` 如实填写。
-6. **用作者—年份引注**：不要用内部数字 id 代替；中文为主，公式用 Unicode 文本。
-7. **提交前检查**：不提交 PDF、`build/figs/`、数据库、临时文件；Git 提交不要添加合作者信息。
-
-## 新增记录流程
+只改：
 
 ```text
-复制 records/_TEMPLATE.json
-→ records/<handle>/<year>/<slug>.json
-→ 填写题录 + content + board/regimes/methods/geometry/tags/focus
-→ 检查 DOI/标题不重复
-→ 提交 PR
+papers/<slug>.html
+assets/data.js
+assets/figs/（仅新增图件时）
+pdfs/（本地，不进入 Git）
 ```
 
-`build_site.py` 会自动扫描 `records/**/*.json` 并合并；提交前运行 `python build/validate_records.py`。
+禁止改：
 
-## 构建
+```text
+build/
+```
+
+`build/` 是底层与历史构建源。普通 PR 改 `build/` 会被 `.github/workflows/guard-build.yml` 拒绝；确需修改先联系作者 @yiluntam，由作者加 `allow-build-change` 标签。
+
+`assets/app.js`、`assets/style.css`、`assets/katex/`、`assets/pdfjs/` 不是日常条目修改所需；要改必须说明原因并由作者审核。
+
+## 条目规则
+
+新增/修改一条文献必须同时改：
+
+1. `papers/<slug>.html`：正文、题录、标签、DOI、PDF 按钮；
+2. `assets/data.js`：同一 `id` 的索引对象；
+3. `meta` 计数（`total`、`with_pdf`、`tagCounts`、`focusCounts` 等）。
+
+只改页面、不改 `assets/data.js`，条目不会出现在文献库、搜索和筛选中。
+
+## 内容与 PDF
+
+- 不编造文献、DOI、摘要、数值或结论；
+- 中文为主；公式用 Unicode 文本；
+- 用户可见总结用作者—年份引注；
+- PDF 放本地 `pdfs/` 或网盘，不进入 Git；
+- 只使用合法来源，不使用 sci-hub 或绕过付费墙；
+- 新增标签/关注点、页面功能或底层改动必须先联系 @yiluntam。
+
+## 检查
 
 ```bash
-cd F:\文献工具
-PYTHONIOENCODING=utf-8 python build/build_site.py
+node --check assets/data.js
 node --check assets/app.js
 ```
 
-Windows 终端必须带 `PYTHONIOENCODING=utf-8`。
+不要运行 `build_site.py`；它会覆盖手工维护的 `papers/` 和 `assets/data.js`。
 
 ## 当前事实
 
-- 283 篇、203 篇有本地 PDF、80 篇 `无全文PDF`。
-- 文件名是“作者-年份-期刊-标题”关键词 slug，不是数字 id。
-- `build/figs/` 已归档；`assets/figs/` 是运行所需图件，当前缺失引用 0。
+- 283 篇、204 篇有本地 PDF、79 篇 `无全文PDF`。
+- 文件名是“作者-年份-期刊-标题”关键词 slug。
+- `build/figs/` 已归档；`assets/figs/` 是运行图件。
 - `assets/data.js` 仍含本机绝对路径，公开部署前必须去本地路径。
-- 详细架构、主题入口和已知问题见 `PROJECT_MEMORY.md`。

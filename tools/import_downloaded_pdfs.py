@@ -2,8 +2,8 @@
 """Import PDFs downloaded manually (e.g. via CST/CNKI) into pdfs/<slug>.pdf.
 
 Usage:
-    python build/import_downloaded_pdfs.py
-    python build/import_downloaded_pdfs.py --dry-run
+    python tools/import_downloaded_pdfs.py
+    python tools/import_downloaded_pdfs.py --dry-run
 
 Put downloaded files anywhere under pdfs/incoming/. The script matches by:
 1. numeric filename equal to the internal id (e.g. 2085.pdf);
