@@ -30,7 +30,7 @@ build/
 2. 保证 `href`、`pdf_href`、`tags`、`focus` 页面与数据一致；
 3. 更新 `assets/data.js` 的 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts` 等计数；
 4. 标签/关注点必须有正文证据；
-5. PDF 放本地 `pdfs/` 或网盘，不提交 Git；
+5. PDF 不放进内容 PR；如需提交全文，走单独的 `pdf-inbox` 分支，只放 `pdfs/`，该分支不合并到 `new`/`main`；
 6. 新增标签、页面功能或底层改动必须先联系 @yiluntam。
 
 ## 内容规则
@@ -52,6 +52,6 @@ node --check assets/app.js
 ## 禁止事项
 
 - 不使用 sci-hub 或盗版源；
-- 不提交 PDF、大文件、数据库；
+- 不把 PDF 放进内容 PR；PDF 单独提交到 `pdf-inbox`；
 - 不覆盖/删除别人的条目；
 - 不在 Git 提交中添加合作者信息（如 `Co-Authored-By`）。

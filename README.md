@@ -84,7 +84,12 @@ build/
 
 ### PDF 规则
 
-`pdfs/` 被 `.gitignore` 排除，PDF 二进制不进入 Git。成员把 PDF 放进本地 `pdfs/`，或上传到课题组百度网盘/Zotero 群组库；PR 只提交页面、`assets/data.js` 和必要的图件。只使用合法来源，不使用 sci-hub。
+PDF 分两条通道：
+
+1. **内容 PR**：提交到 `new`，只改 `papers/` 和 `assets/data.js`，不放 PDF；
+2. **PDF 提交 PR**：提交到 `pdf-inbox` 分支，只放 `pdfs/<DOI 或 slug>.pdf`，不合并到 `new`/`main`。
+
+作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR。这样 PDF 可以直接提交和审核，但不会进入站点分支。只使用合法来源，不使用 sci-hub。
 
 课题组百度网盘：
 

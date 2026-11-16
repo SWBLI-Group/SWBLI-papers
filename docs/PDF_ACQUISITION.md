@@ -15,6 +15,8 @@
 
 不要使用 sci-hub 或其他盗版源。
 
+如果要把 PDF 交给项目审核，请开 PR 到独立分支 `pdf-inbox`（只放 PDF，不合并到 `new`）；本地导入仍用 `pdfs/incoming/`。
+
 ## 下载后如何入库
 
 1. 把下载到的 PDF 放到：

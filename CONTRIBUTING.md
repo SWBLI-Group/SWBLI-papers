@@ -94,16 +94,39 @@ pdfs/                   本地全文（不进入 Git）
 
 不要直接删除别人的页面。把条目标记为撤稿/替换，或先在 Issue/PR 中说明；由作者确认后再删。
 
-## 5. PDF 规则
+## 5. PDF 规则：内容 PR 与 PDF 提交分开
 
-- `pdfs/` 被 `.gitignore` 排除，**PDF 二进制不进入 Git**；
-- 成员把 PDF 填入本地 `pdfs/`，或上传到课题组百度网盘/Zotero 群组库；
-- PR 只提交页面、`assets/data.js` 和必要的 `assets/figs`；
-- PR 描述里写清 PDF 文件名/DOI/网盘位置，便于审核；
-- 只使用合法来源：出版社、arXiv、NASA、机构仓库、学校/CST 订阅、课题组 Zotero；
-- 禁止 sci-hub 和任何绕过付费墙的方式。
+PDF 采用两条通道，避免把大文件和站点内容混在一个 PR 里：
 
-如果确实需要把 PDF 纳入版控，需要单独讨论 Git LFS/私有存储方案，不能直接改 `.gitignore` 提交大文件。
+### A. 内容 PR（提交到 `new`）
+
+只改：
+
+```text
+papers/<slug>.html
+assets/data.js
+assets/figs/（可选）
+```
+
+**不要在这个 PR 里放 PDF。** `new` 分支的 `pdfs/` 继续由 `.gitignore` 排除。
+
+### B. PDF 提交 PR（提交到 `pdf-inbox` 分支）
+
+专门用于上传全文，不合并到 `new`：
+
+```text
+pdf-inbox 分支
+└─ pdfs/<DOI 或 slug>.pdf
+```
+
+- 只提交 PDF，不改 `papers/`、`assets/` 和 `build/`；
+- 作者审核后从 `pdf-inbox` 下载 PDF；
+- 作者把 PDF 放入本地项目的 `pdfs/`，再合并对应的内容 PR；
+- `pdf-inbox` 永远不合并到 `new`/`main`。
+
+这样 PDF 可以被直接提交、审核和使用，但不会进入站点分支，也不会把 1.2 GB 二进制带进 `new`。
+
+只使用合法来源：出版社、arXiv、NASA、机构仓库、学校/CST 订阅、课题组 Zotero；禁止 sci-hub 和绕过付费墙。
 
 ## 6. 标签与关注点
 

@@ -95,12 +95,14 @@ pdfs/（本地，不进入 Git）
 
 ## 7. PDF 与版权
 
-- `pdfs/` 被 `.gitignore` 排除，PDF 二进制不进入 Git；
-- 成员把 PDF 放入本地 `pdfs/`，或上传到课题组百度网盘/Zotero 群组库；
-- PR 只提交页面、`assets/data.js` 和必要的 `assets/figs`；
+PDF 走独立提交通道：
+
+- **内容 PR** 提交到 `new`：只改 `papers/`、`assets/data.js`，不放 PDF；
+- **PDF PR** 提交到 `pdf-inbox` 分支：只放 `pdfs/<DOI 或 slug>.pdf`，不合并到 `new`/`main`；
+- 作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR；
+- 课题组内部也可用百度网盘/Zotero 群组库分发；
 - 只使用合法来源：出版社、arXiv、NASA、HAL、机构仓库、学校/CST 订阅、课题组 Zotero；
 - **禁止 sci-hub 和绕过付费墙**；
-- 课题组内部百度网盘链接见根目录 `README.md`；
 - `assets/data.js` 含本机绝对路径（`pdf_local_abs`、`pdf_source`、`pdfs`），公开部署前需去本地路径。
 
 ## 8. 分支与审核
