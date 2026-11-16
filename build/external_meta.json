@@ -3061,8 +3061,10 @@
   "collections": [
    "新增检索 / 稳定性与湍流"
   ],
-  "pdfs": [],
-  "has_pdf": false,
+  "pdfs": [
+   "F:\\文献工具\\pdfs\\Pandey-et-al-2026-arXiv-Hypersonic-Shock-Wave-Boundary-Layer-Interaction-Three.pdf"
+  ],
+  "has_pdf": true,
   "pdftext": ""
  },
  {

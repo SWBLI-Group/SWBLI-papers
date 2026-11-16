@@ -14,6 +14,7 @@ F:\文献工具\
 │  └─ <作者>-<年份>-<期刊>-<标题>.html
 ├─ records\               成员贡献记录（一条文献一个 JSON）
 ├─ schemas\               贡献记录 JSON Schema
+├─ docs\                  无全文清单与 PDF 补全说明
 ├─ CONTRIBUTING.md        贡献与修改规范
 ├─ PROJECT_MEMORY.md      项目记忆（架构、现状、已知问题）
 ├─ CLAUDE.md              Claude Code 项目规则
@@ -94,6 +95,23 @@ python build/build_site.py
 ```
 
 网盘内容仅供课题组内部学习使用，请勿公开转发。链接如失效，请联系维护者更新。
+
+## 补全无全文条目
+
+当前无本地全文的条目清单：
+
+- [docs/no_pdf_downloads.csv](docs/no_pdf_downloads.csv)
+- [docs/PDF_ACQUISITION.md](docs/PDF_ACQUISITION.md)
+
+在 CST、学校图书馆或 CNKI 下载后，把 PDF 放进 `pdfs/incoming/`，运行：
+
+```bash
+PYTHONIOENCODING=utf-8 python build/import_downloaded_pdfs.py --dry-run
+PYTHONIOENCODING=utf-8 python build/import_downloaded_pdfs.py
+PYTHONIOENCODING=utf-8 python build/build_site.py
+```
+
+脚本会按 id、DOI 或标题匹配并复制成关键词文件名；只使用合法来源，不使用 sci-hub。
 
 ## 贡献
 
