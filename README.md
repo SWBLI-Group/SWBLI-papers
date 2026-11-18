@@ -62,6 +62,8 @@ pdfs/                   本地全文，不进入 Git
 
 根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 在需要更新统计/入口时也可改，但要与 `assets/data.js` 一致。
 
+`docs/` 下的 PDF 清单与获取说明可以更新；`README.md`、`CONTRIBUTING.md`、`PROJECT_MEMORY.md`、`CLAUDE.md`、`AGENTS.md` 是规则/记忆文档，修改需作者审核。
+
 ### 禁止修改
 
 ```text

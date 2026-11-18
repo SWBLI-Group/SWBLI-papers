@@ -25,6 +25,8 @@ pdfs/                   本地全文（不进入 Git）
 
 根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 在需要更新统计/入口时也可改，但要与 `assets/data.js` 保持一致。
 
+`docs/` 下的 PDF 清单和获取说明可以随 PR 更新；但 `README.md`、`CONTRIBUTING.md`、`PROJECT_MEMORY.md`、`CLAUDE.md`、`AGENTS.md` 属于项目规则/记忆，普通成员不要直接改，确有需要请在 PR 中提出，由作者审核。
+
 `assets/app.js`、`assets/style.css`、`assets/katex/`、`assets/pdfjs/` 不是日常条目修改所需；如果确实要改，请在 PR 中说明原因，由作者重点审核。
 
 ## 2. assets 是什么
