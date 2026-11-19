@@ -39,4 +39,4 @@ PR 会运行 `validate-pdf-inbox`：
 - 不使用 sci-hub 或盗版源；
 - 本分支不合并到 `new`/`main`；
 - 文件尽量按 `pdfs/<slug>.pdf` 或 `pdfs/<DOI>.pdf` 命名；
-- pdf-inbox 只作为中转，作者下载后应定期清理已处理的 PDF，避免仓库体积持续增长。
+- pdf-inbox 只作为中转。已处理的 PDF 可以从工作树删除，但 Git 历史仍会保留，仓库体积不会因此减小；体积过大时由管理员重建/压缩分支历史，或改用网盘。
