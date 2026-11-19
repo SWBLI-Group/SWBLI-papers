@@ -19,14 +19,15 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Fetch local-library hash manifest
+      - name: Fetch trusted validator and hash manifest
         run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
           git fetch origin new --depth=1
+          git show "origin/${{ github.base_ref }}:tools/validate_pdf_inbox.py" > tools/validate_pdf_inbox.py
           git show origin/new:pdfs/library_hashes.json > "$RUNNER_TEMP/library_hashes.json"
 
       - name: Reject duplicate or non-new files
         run: |
-          git fetch origin "${{ github.base_ref }}" --depth=1
           python tools/validate_pdf_inbox.py \
             --base "origin/${{ github.base_ref }}" \
             --library "$RUNNER_TEMP/library_hashes.json"
