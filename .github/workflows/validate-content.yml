@@ -1,12 +1,9 @@
 name: validate-content
 
 on:
+  # Run on every PR: a required check that is skipped by path filters would
+  # remain pending and block merging.
   pull_request:
-    paths:
-      - "papers/**"
-      - "assets/data.js"
-      - "tools/validate_content.py"
-      - ".github/workflows/validate-content.yml"
   push:
     branches: [new, main]
     paths:
