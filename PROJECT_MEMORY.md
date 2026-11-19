@@ -124,7 +124,7 @@ PDF 走独立提交通道：
 ## 8. 分支与审核
 
 - `new`：日常贡献与审核分支；
-- `main`：发布/稳定快照，由作者保护；2026-11-19 已与 `new` 同步，之后只在发布节点由作者更新；
+- `main`：发布/稳定快照，由作者保护；当前落后于 `new`（`new` 已加入 2101/2102 等新条目），按周期/发布节点由作者从 `new` 更新；
 - 普通成员不要向 `main` 开 PR，也不要直接 push；
 - PR 目标选 `new`；
 - 作者在 GitHub 设置中保护 `main`：Require PR、Require review、Require status checks、禁止 force push 和删除；
