@@ -18,9 +18,11 @@ git switch -c pdf/<你的GitHub用户名>/<slug>
 pdfs/<DOI 或 slug>.pdf
 ```
 
-3. 提交 PR，目标分支选 `pdf-inbox`；
+3. 提交 PR，目标分支选 `pdf-inbox`；**不要直接 push 到 `pdf-inbox`**；
 4. PR 中写清 DOI、题名、年份、来源（出版社/arXiv/NASA/CST/学校订阅）；
 5. 作者审核后下载 PDF，放入本地 `pdfs/`，再合并对应的 `new` 内容 PR。
+
+建议把 `pdf-inbox` 设为受保护分支：Require pull request、禁止 force push/删除，并把 `validate-pdf-inbox / check-new-pdf` 设为 required check。
 
 ## 自动查重
 
