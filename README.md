@@ -21,7 +21,8 @@ F:\文献工具\
 │  └─ figs\                深度精读页图件
 ├─ pdfs\                   本地全文库（不进入 Git）
 │  ├─ <作者>-<年份>-<期刊>-<标题>.pdf
-│  ├─ manifest.json        id 与文件名的对应表
+│  ├─ manifest.json        id 与文件名的对应表（本地）
+│  ├─ library_hashes.json  PDF SHA-256 查重清单（进入 Git）
 │  └─ README.md
 ├─ docs\                   无全文清单与 PDF 补全说明
 ├─ tools\                  PDF 导入、内容一致性校验等辅助脚本
