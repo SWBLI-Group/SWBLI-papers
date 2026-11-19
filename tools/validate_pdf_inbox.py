@@ -27,7 +27,11 @@ WARN_BYTES = 50 * 1024 * 1024
 
 def run_git(*args):
     return subprocess.run(
-        ["git", *args], cwd=ROOT, check=True, text=True, capture_output=True
+        ["git", "-c", "core.quotePath=false", *args],
+        cwd=ROOT,
+        check=True,
+        text=True,
+        capture_output=True,
     ).stdout
 
 
