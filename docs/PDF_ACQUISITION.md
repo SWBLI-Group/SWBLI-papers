@@ -40,7 +40,14 @@ PYTHONIOENCODING=utf-8 python tools/import_downloaded_pdfs.py --dry-run
 PYTHONIOENCODING=utf-8 python tools/import_downloaded_pdfs.py
 ```
 
-4. 在对应 `papers/<slug>.html` 和 `assets/data.js` 中把该条目的 PDF 按钮/`pdf_href` 指向新文件；不要运行 `build_site.py`，它会覆盖手工维护的页面。
+4. 在对应 `papers/<slug>.html` 和 `assets/data.js` 中把该条目的 PDF 按钮/`pdf_href` 指向新文件，然后运行：
+
+```bash
+python tools/update_pdf_hashes.py
+python tools/validate_content.py
+```
+
+不要运行 `build_site.py`，它会覆盖手工维护的页面。
 
 脚本会按以下顺序匹配：
 
@@ -48,7 +55,7 @@ PYTHONIOENCODING=utf-8 python tools/import_downloaded_pdfs.py
 2. 文件名或 PDF 前几页中的 DOI；
 3. PDF 前几页中的规范化标题。
 
-匹配成功后复制为 `pdfs/<作者>-<年份>-<期刊>-<标题>.pdf`，下一次构建自动挂到详情页。
+匹配成功后复制为 `pdfs/<作者>-<年份>-<期刊>-<标题>.pdf`；还需要手工更新页面和 `assets/data.js` 的 `pdf_href`，再更新哈希清单并运行校验。
 
 ## 说明
 

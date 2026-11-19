@@ -14,7 +14,7 @@
 PYTHONIOENCODING=utf-8 python tools/import_downloaded_pdfs.py
 ```
 
-导入后，在 `papers/<slug>.html` 和 `assets/data.js` 中更新该条目的 PDF 按钮/`pdf_href`；不要运行 `build_site.py`。
+导入后，在 `papers/<slug>.html` 和 `assets/data.js` 中更新该条目的 PDF 按钮/`pdf_href`，运行 `python tools/update_pdf_hashes.py` 和 `python tools/validate_content.py`；不要运行 `build_site.py`。
 
 ## 统计
 

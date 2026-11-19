@@ -34,6 +34,7 @@
 
 - PDF 文件名或 DOI：
 - 已提交到 `pdf-inbox`：是 / 否
+- 已通过 `validate-pdf-inbox` 查重：是 / 否 / 未上传
 - 本地 `pdfs/` 路径：
 
 ## 检查
@@ -41,6 +42,7 @@
 - [ ] 只改了 `papers/`（必要时 `assets/figs/`）
 - [ ] 没有修改 `build/`
 - [ ] 没有修改 `assets/data.js`
+- [ ] 没有修改 `pdfs/library_hashes.json`
 - [ ] 新页面 `data-pid` 留空，由管理员分配 id
 - [ ] 已运行 `python tools/validate_content.py --allow-orphan-pages`
 - [ ] 已运行 `node --check assets/app.js`
