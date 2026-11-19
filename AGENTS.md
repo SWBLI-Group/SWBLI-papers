@@ -76,5 +76,5 @@ python tools/validate_content.py
 - 285 篇、206 篇有本地 PDF、79 篇 `无全文PDF`。
 - 文件名是“作者-年份-期刊-标题”关键词 slug。
 - `build/figs/` 已归档；`assets/figs/` 是运行图件。
-- `assets/data.js` 仍含本机绝对路径，公开部署前必须去本地路径。
+- `assets/data.js` 的 PDF 路径已改为相对路径 / 空值；公开部署前仍应复核 `pdf_source`、`pdf_local_abs`、`pdfs` 字段。
 - 当前已知重复：993/2069 同一 CNKI 论文、1132/492 同题；新增重复必须复核。

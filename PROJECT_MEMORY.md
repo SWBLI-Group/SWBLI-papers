@@ -119,7 +119,7 @@ PDF 走独立提交通道：
 - 课题组内部也可用百度网盘/Zotero 群组库分发；
 - 只使用合法来源：出版社、arXiv、NASA、HAL、机构仓库、学校/CST 订阅、课题组 Zotero；
 - **禁止 sci-hub 和绕过付费墙**；
-- `assets/data.js` 含本机绝对路径（`pdf_local_abs`、`pdf_source`、`pdfs`），公开部署前需去本地路径。
+- `assets/data.js` 的 PDF 路径已改为相对路径 / 空值（`pdf_local_abs`、`pdf_source`、`pdfs`）；公开部署前仍应复核。
 
 ## 8. 分支与审核
 
