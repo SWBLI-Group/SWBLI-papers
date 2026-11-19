@@ -10,10 +10,11 @@
 
 ```text
 papers/<slug>.html
-assets/data.js
 assets/figs/（仅新增图件时）
 pdfs/（本地，不进入 Git）
 ```
+
+`assets/data.js` 只由管理员更新，成员不要改。
 
 禁止改：
 
@@ -27,13 +28,13 @@ build/
 
 ## 条目规则
 
-新增/修改一条文献必须同时改：
+成员负责：
 
 1. `papers/<slug>.html`：正文、题录、标签、DOI、PDF 按钮；
-2. `assets/data.js`：同一 `id` 的索引对象；
-3. `meta` 计数（`total`、`with_pdf`、`tagCounts`、`focusCounts` 等）。
+2. PR 描述中的 `assets/data.js` 条目对象；
+3. `meta` 计数建议（`total`、`with_pdf`、`tagCounts`、`focusCounts` 等）。
 
-只改页面、不改 `assets/data.js`，条目不会出现在文献库、搜索和筛选中。
+管理员负责更新 `assets/data.js`；在管理员更新前，条目不会出现在文献库、搜索和筛选中。
 
 ## 内容与 PDF
 
@@ -47,9 +48,10 @@ build/
 ## 检查
 
 ```bash
-node --check assets/data.js
 node --check assets/app.js
 ```
+
+`data.js` 由管理员更新后再运行 `node --check assets/data.js`。
 
 不要运行 `build_site.py`；它会覆盖手工维护的 `papers/` 和 `assets/data.js`。
 

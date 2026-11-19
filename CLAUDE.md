@@ -9,10 +9,11 @@
 
 ```text
 papers/<slug>.html
-assets/data.js
 assets/figs/（仅新增图件时）
 pdfs/（本地，不进入 Git）
 ```
+
+`assets/data.js` 只由管理员更新，成员不要改。
 
 禁止修改：
 
@@ -26,12 +27,11 @@ build/
 
 ## 新增/修改条目
 
-1. 同时修改 `papers/<slug>.html` 和 `assets/data.js`；
-2. 保证 `href`、`pdf_href`、`tags`、`focus` 页面与数据一致；
-3. 更新 `assets/data.js` 的 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts` 等计数；
-4. 标签/关注点必须有正文证据；
-5. PDF 不放进内容 PR；如需提交全文，走单独的 `pdf-inbox` 分支，只放 `pdfs/`，该分支不合并到 `new`/`main`；
-6. 新增标签、页面功能或底层改动必须先联系 @yiluntam。
+1. 修改 `papers/<slug>.html`；
+2. 在 PR 描述中提供 `assets/data.js` 条目对象和 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts` 等计数建议；
+3. 标签/关注点必须有正文证据；
+4. PDF 不放进内容 PR；如需提交全文，走单独的 `pdf-inbox` 分支，只放 `pdfs/`，该分支不合并到 `new`/`main`；
+5. 新增标签、页面功能或底层改动必须先联系 @yiluntam。
 
 ## 内容规则
 
@@ -43,9 +43,10 @@ build/
 ## 检查
 
 ```bash
-node --check assets/data.js
 node --check assets/app.js
 ```
+
+`data.js` 由管理员更新后再运行 `node --check assets/data.js`。
 
 不要运行 `build_site.py`；它会用旧构建源覆盖手工维护的 `papers/` 和 `assets/data.js`。
 

@@ -1,0 +1,24 @@
+name: guard-data
+
+on:
+  pull_request:
+
+jobs:
+  forbid-member-data-edit:
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'allow-data-change') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reject assets/data.js changes from member PRs
+        run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          files=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
+          echo "Changed files:"
+          echo "$files"
+          if echo "$files" | grep -q '^assets/data\.js$'; then
+            echo "::error::assets/data.js 只由管理员更新。请在 PR 描述中提供条目对象，由 @yiluntam 合并；管理员确需在 PR 中更新时加 allow-data-change 标签。"
+            exit 1
+          fi
+          echo "OK: no assets/data.js changes"

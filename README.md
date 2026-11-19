@@ -55,12 +55,13 @@ F:\文献工具\index.html
 
 ```text
 papers/<slug>.html      条目页面
-assets/data.js          文献库前端索引
-assets/figs/            仅新增图件时需要
+assets/figs/            仅新增图件时
 pdfs/                   本地全文，不进入 Git
 ```
 
-根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 在需要更新统计/入口时也可改，但要与 `assets/data.js` 一致。
+`assets/data.js` 是文献库索引，**只由管理员更新**；普通成员不要修改。成员新增/修改条目时，在 PR 描述中提供一个 `data.js` 条目对象，由管理员合并进 `assets/data.js` 并更新 `meta` 计数。
+
+根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 由管理员按需更新统计。
 
 `docs/` 下的 PDF 清单与获取说明可以更新；`README.md`、`CONTRIBUTING.md`、`PROJECT_MEMORY.md`、`CLAUDE.md`、`AGENTS.md` 是规则/记忆文档，修改需作者审核。
 
@@ -74,21 +75,25 @@ build/
 
 ### 新增/修改条目
 
-必须同时处理：
+成员负责：
 
 1. `papers/<slug>.html`：正文、题录、标签、DOI、PDF 按钮；
-2. `assets/data.js`：同一 `id` 的索引对象；
-3. `meta` 计数（`total`、`with_pdf`、`tagCounts`、`focusCounts` 等）；
-4. 可选 `assets/figs/` 图件；
-5. 本地 `pdfs/<slug>.pdf`。
+2. 可选 `assets/figs/` 图件；
+3. 在 PR 描述中提供 `assets/data.js` 的条目对象和 `meta` 计数建议。
 
-只改页面、不改 `assets/data.js`，新条目不会出现在文献库、搜索和筛选中。
+管理员负责：
+
+1. 把条目对象合并进 `assets/data.js`；
+2. 更新 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts` 等计数；
+3. 检查页面与数据一致。
+
+在管理员更新 `assets/data.js` 之前，新条目不会出现在文献库、搜索和筛选中。
 
 ### PDF 规则
 
 PDF 分两条通道：
 
-1. **内容 PR**：提交到 `new`，只改 `papers/` 和 `assets/data.js`，不放 PDF；
+1. **内容 PR**：提交到 `new`，只改 `papers/`，不放 PDF；`assets/data.js` 由管理员更新；
 2. **PDF 提交 PR**：提交到 `pdf-inbox` 分支，只放 `pdfs/<DOI 或 slug>.pdf`，不合并到 `new`/`main`。
 
 作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR。这样 PDF 可以直接提交和审核，但不会进入站点分支。只使用合法来源，不使用 sci-hub。
@@ -110,7 +115,7 @@ PDF 分两条通道：
 
 | 路径 | 作用 | 新增条目是否必须改 |
 |---|---|---|
-| `assets/data.js` | 卡片、搜索、筛选、标签、关注点、PDF 链接的全部前端数据 | **必须改** |
+| `assets/data.js` | 卡片、搜索、筛选、标签、关注点、PDF 链接的全部前端数据 | **管理员更新**，成员不要改 |
 | `assets/figs/` | 深度精读页图件 | 只有新增图件时改 |
 | `assets/app.js` | 搜索、分面、引用复制、PDF 打开等交互 | 通常不需要 |
 | `assets/style.css` | 页面样式 | 通常不需要 |
@@ -134,12 +139,12 @@ PDF 分两条通道：
 
 AI 的硬性规则：
 
-1. 只改 `papers/`、`assets/data.js`，必要时 `assets/figs/`；
+1. 只改 `papers/`，必要时 `assets/figs/`；`assets/data.js` 由管理员更新；
 2. 不改 `build/`；
 3. 新增标签/关注点、页面功能或底层结构，必须先联系项目作者 @yiluntam；
 4. 不编造文献、DOI、摘要、数值或结论；
-5. PDF 不进 Git，不使用 sci-hub；
-6. 提交前运行 `node --check assets/data.js` 和 `node --check assets/app.js`。
+5. PDF 不进内容 PR，提交到 `pdf-inbox`；
+6. 不改 `assets/data.js`；PR 中提供数据条目对象供管理员合并。
 
 ## 补全无全文条目
 

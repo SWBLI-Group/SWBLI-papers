@@ -14,42 +14,45 @@ build/
 
 `build/` 里的脚本、题录、内容 JSON、深读记录和公式源都是维护者底层。普通 PR 修改 `build/` 会被 CI 拒绝；确需修改时先联系作者 @yiluntam，由作者加 `allow-build-change` 标签。
 
+`assets/data.js` 同样只由管理员更新；普通成员 PR 修改它会被 `guard-data` 拒绝。成员在 PR 描述中提供条目对象，由作者合并。
+
 ### 成员可修改
 
 ```text
 papers/<slug>.html      条目页面
-assets/data.js          前端索引数据
 assets/figs/            可选：条目新增图件
 pdfs/                   本地全文（不进入 Git）
 ```
 
-根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 在需要更新统计/入口时也可改，但要与 `assets/data.js` 保持一致。
+`assets/data.js` 是文献库索引，**只由管理员更新**；普通成员不要修改。成员在 PR 描述中提供一个 `data.js` 条目对象，由管理员合并并更新 `meta` 计数。
+
+根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 也由管理员按需更新统计。
 
 `docs/` 下的 PDF 清单和获取说明可以随 PR 更新；但 `README.md`、`CONTRIBUTING.md`、`PROJECT_MEMORY.md`、`CLAUDE.md`、`AGENTS.md` 属于项目规则/记忆，普通成员不要直接改，确有需要请在 PR 中提出，由作者审核。
 
-`assets/app.js`、`assets/style.css`、`assets/katex/`、`assets/pdfjs/` 不是日常条目修改所需；如果确实要改，请在 PR 中说明原因，由作者重点审核。
+`assets/app.js`、`assets/style.css`、`assets/katex/`、`assets/pdfjs/` 也不是日常条目修改所需；如果确实要改，请在 PR 中说明原因，由作者重点审核。
 
 ## 2. assets 是什么
 
 | 路径 | 作用 | 新增条目是否必须改 |
 |---|---|---|
-| `assets/data.js` | 文献库全部前端数据：卡片、搜索、筛选、标签、关注点、PDF 链接 | **必须改**，否则新条目不会出现在文献库/筛选中 |
+| `assets/data.js` | 文献库全部前端数据：卡片、搜索、筛选、标签、关注点、PDF 链接 | **管理员更新**，成员不要修改 |
 | `assets/figs/` | 深度精读页引用的图件 | 只有新增图件时改 |
 | `assets/app.js` | 搜索、分面、引用复制、PDF 打开等交互 | 通常不需要 |
 | `assets/style.css` | 页面样式 | 通常不需要 |
 | `assets/katex/` | 本地公式渲染 | 不需要 |
 | `assets/pdfjs/` | 本地 PDF 解析 | 不需要 |
 
-**关键：** 新增/修改条目必须同时改 `papers/<slug>.html` 和 `assets/data.js`。只改页面，文献库列表和筛选不会更新。
+**关键：** 成员只改 `papers/<slug>.html`，并在 PR 描述中提供 `assets/data.js` 条目对象；管理员合并 `data.js` 后，条目才会出现在文献库和筛选中。
 
 ## 3. 新增一条文献
 
 1. 复制一个结构相近的 `papers/<slug>.html`，改成新页面；
 2. 修改页面中的题录、中文内容、标签、DOI、PDF 按钮；
-3. 在 `assets/data.js` 的 `window.SWBLI_DATA.papers` 中加入对应对象；
-4. 更新 `meta` 中的计数（`total`、`with_pdf`、`tagCounts`、`focusCounts` 等）；
-5. 把 PDF 放到本地 `pdfs/<slug>.pdf`，**不要提交到 Git**；
-6. 提交 PR 到 `new` 分支，等待作者审核。
+3. 在 PR 描述中贴出对应 `assets/data.js` 条目对象（可复制本文下方参考格式）；
+4. 在 PR 描述中写出 `meta` 计数建议（`total`、`with_pdf`、`tagCounts`、`focusCounts` 等）；
+5. 把 PDF 放到本地 `pdfs/<slug>.pdf`，或提交到 `pdf-inbox`，**不要放进内容 PR**；
+6. 提交 PR 到 `new` 分支，等待管理员审核并更新 `assets/data.js`。
 
 建议 `id` 使用 DOI（或 Zotero key）的 SHA-1 前 7 位转成整数，避免多人撞号；也可以先联系作者分配。
 
@@ -87,10 +90,10 @@ pdfs/                   本地全文（不进入 Git）
 ## 4. 修改已有条目
 
 1. 直接在 `papers/<slug>.html` 改内容；
-2. 同步修改 `assets/data.js` 中同一 `id` 的对象；
-3. 如果修改标签/关注点，更新 `meta.tagCounts`、`meta.focusCounts`；
-4. 如果删除 PDF，同时删掉本地 `pdfs` 链接并更新 `pdf_href`；
-5. 提交 PR，写清楚改了什么、依据是什么。
+2. 在 PR 描述中给出 `assets/data.js` 对应对象的新值；
+3. 如果修改标签/关注点，同时给出 `meta.tagCounts`、`meta.focusCounts` 的更新建议；
+4. 如果删除 PDF，同时说明 `pdf_href` 的新值；
+5. 提交 PR，由管理员更新 `assets/data.js` 并合并。
 
 ### 删除条目
 
@@ -106,9 +109,10 @@ PDF 采用两条通道，避免把大文件和站点内容混在一个 PR 里：
 
 ```text
 papers/<slug>.html
-assets/data.js
 assets/figs/（可选）
 ```
+
+`assets/data.js` 由管理员更新。
 
 **不要在这个 PR 里放 PDF。** `new` 分支的 `pdfs/` 继续由 `.gitignore` 排除。
 
@@ -133,7 +137,7 @@ pdf-inbox 分支
 ## 6. 标签与关注点
 
 - 标签、关注点可以在当次条目 PR 中提出；
-- 新增标签必须同时改页面、`assets/data.js` 的条目和 `meta` 计数；
+- 新增标签必须在页面和 PR 描述中的 `data.js` 条目里体现；`meta` 计数由管理员更新；
 - 关注点必须有正文证据，不能只因标题或构型出现；
 - 新增全局标签/页面功能属于底层变更，PR 中必须写明理由，由作者 @yiluntam 审核。
 
@@ -157,13 +161,14 @@ git pull
 git switch -c contrib/<你的GitHub用户名>/<slug>
 ```
 
-2. 修改 `papers/`、`assets/data.js`，可选 `assets/figs/`；
-3. 本地检查：
+2. 修改 `papers/`，可选 `assets/figs/`；不要改 `assets/data.js`；
+3. 本地检查页面链接：
 
 ```bash
-node --check assets/data.js
 node --check assets/app.js
 ```
+
+如果本地确实改了 `data.js`，管理员合并前再运行 `node --check assets/data.js`。
 
 4. 提交 PR，目标分支选 **`new`**，不要选 `main`；
 5. PR 标题：
@@ -175,7 +180,7 @@ node --check assets/app.js
 6. PR 描述写清：
 
 - 改了哪个 `papers/` 页面；
-- `assets/data.js` 对应 id；
+- PR 描述中的 `data.js` 条目对象和 id；
 - 新增/修改的标签和关注点；
 - PDF 本地文件名/网盘位置；
 - 证据等级（摘要/全文）；
@@ -185,7 +190,7 @@ node --check assets/app.js
 
 ## 9. 评审重点
 
-- 页面与 `assets/data.js` 是否一致；
+- 页面与管理员合并后的 `assets/data.js` 是否一致；
 - 是否只改了 `papers/`、`assets/`、`pdfs/` 等允许路径；
 - 是否误改 `build/`；
 - 标签/关注点是否有证据；
@@ -202,4 +207,4 @@ node --check assets/app.js
 
 ## 11. 一句话
 
-**只改 `papers/` 和 `assets/`（含 `assets/data.js`），PDF 放本地/网盘；`build/` 禁止修改；所有 PR 提到 `new`，由作者审核，不直接合并 `main`。**
+**成员只改 `papers/`（必要时 `assets/figs/`），`assets/data.js` 由管理员更新；PDF 走 `pdf-inbox`；`build/` 禁止修改；所有 PR 提到 `new`，由作者审核，不直接合并 `main`。**

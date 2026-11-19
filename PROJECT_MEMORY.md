@@ -30,7 +30,7 @@
 
 ```text
 papers/<slug>.html      单篇条目页面（成员可直接修改）
-assets/data.js          文献库前端索引（成员新增/修改条目时必须同步）
+assets/data.js          文献库前端索引（仅管理员更新）
 assets/figs/            深度精读图件（仅在需要时修改）
 pdfs/<slug>.pdf         本地全文（不进入 Git）
 index.html              总览
@@ -53,18 +53,19 @@ build/formula_latex.py
 build/CONTENT_SPEC.md
 ```
 
-普通 PR 改 `build/` 会被 `.github/workflows/guard-build.yml` 拒绝；确需修改时先联系作者 @yiluntam，由作者加 `allow-build-change` 标签。
+普通 PR 改 `build/` 会被 `.github/workflows/guard-build.yml` 拒绝；普通成员改 `assets/data.js` 会被 `.github/workflows/guard-data.yml` 拒绝。确需修改时联系作者 @yiluntam，由作者加 `allow-build-change` / `allow-data-change` 标签。
 
 ## 4. 成员可修改的内容
 
 ```text
 papers/<slug>.html
-assets/data.js
 assets/figs/（仅新增图件时）
 pdfs/（本地，不进入 Git）
 ```
 
-根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 在需要更新统计/入口时也可改，但要和 `assets/data.js` 保持一致。
+`assets/data.js` 只由管理员更新；成员在 PR 描述中提供条目对象和 meta 计数建议。
+
+根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 的统计/入口由管理员按需更新，并和 `assets/data.js` 保持一致。
 
 `assets/app.js`、`assets/style.css`、`assets/katex/`、`assets/pdfjs/` 不是日常条目修改所需；如果确实要改，PR 中说明原因，由作者重点审核。
 
@@ -72,7 +73,7 @@ pdfs/（本地，不进入 Git）
 
 | 路径 | 作用 | 新增条目是否必须改 |
 |---|---|---|
-| `assets/data.js` | 卡片、搜索、筛选、标签、关注点、PDF 链接的全部前端数据 | **必须改** |
+| `assets/data.js` | 卡片、搜索、筛选、标签、关注点、PDF 链接的全部前端数据 | **管理员更新** |
 | `assets/figs/` | 深度精读页图件 | 只有新增图件时改 |
 | `assets/app.js` | 搜索、分面、引用复制、PDF 打开等交互 | 通常不需要 |
 | `assets/style.css` | 页面样式 | 通常不需要 |
@@ -83,21 +84,23 @@ pdfs/（本地，不进入 Git）
 
 ## 6. 条目编辑规则
 
-新增/修改条目必须同时处理：
+成员负责：
 
 1. `papers/<slug>.html`：正文、题录、标签、DOI、PDF 按钮；
-2. `assets/data.js`：同一 `id` 的索引对象；
-3. `meta.total`、`with_pdf`、`tagCounts`、`focusCounts` 等计数；
-4. 可选 `assets/figs/` 图件；
-5. 本地 `pdfs/<slug>.pdf`。
+2. 可选 `assets/figs/` 图件；
+3. PR 描述中的 `assets/data.js` 条目对象和 `meta` 计数建议。
 
-`href`、`pdf_href`、`tags`、`focus` 必须页面与 `data.js` 一致。
+管理员负责：
+
+1. 把条目对象合并进 `assets/data.js`；
+2. 更新 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts`；
+3. 检查 `href`、`pdf_href`、`tags`、`focus` 页面与数据一致。
 
 ## 7. PDF 与版权
 
 PDF 走独立提交通道：
 
-- **内容 PR** 提交到 `new`：只改 `papers/`、`assets/data.js`，不放 PDF；
+- **内容 PR** 提交到 `new`：只改 `papers/`，不放 PDF；`assets/data.js` 由管理员更新；
 - **PDF PR** 提交到 `pdf-inbox` 分支：只放 `pdfs/<DOI 或 slug>.pdf`，不合并到 `new`/`main`；
 - 作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR；
 - 课题组内部也可用百度网盘/Zotero 群组库分发；
@@ -142,15 +145,15 @@ python build/build_site.py
 AI 进入项目后应：
 
 1. 先读 `PROJECT_MEMORY.md`、`CONTRIBUTING.md`、`README.md`；
-2. 只改 `papers/`、`assets/data.js`（必要时 `assets/figs/`），不改 `build/`；
-3. 新增/修改条目时同时更新页面和 `assets/data.js`；
+2. 只改 `papers/`（必要时 `assets/figs/`），不改 `build/`，不改 `assets/data.js`；
+3. 新增/修改条目时改页面，并在 PR 描述中提供 `data.js` 条目对象；
 4. 新增标签/关注点、页面功能或修改底层结构，必须先联系作者 @yiluntam；
 5. 不编造文献、DOI、摘要、数值或结论；
 6. PDF 不进 Git，不碰 sci-hub；
-7. 改完运行 `node --check assets/data.js` 和 `node --check assets/app.js`；
+7. 改完运行 `node --check assets/app.js`；管理员更新 `data.js` 后再运行 `node --check assets/data.js`；
 8. 不覆盖别人的条目；删除/替换先说明；
 9. Git 提交不要添加合作者信息。
 
 ## 12. 一句话
 
-**`papers/` 和 `assets/data.js` 是日常维护源；`pdfs/` 本地保存；`build/` 完全冻结；PR 提到 `new`，作者审核，不直接合并 `main`。**
+**成员只改 `papers/`；`assets/data.js` 由管理员更新；`pdfs/` 本地保存或走 `pdf-inbox`；`build/` 完全冻结；PR 提到 `new`，作者审核，不直接合并 `main`。**
