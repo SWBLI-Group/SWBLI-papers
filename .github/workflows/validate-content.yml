@@ -35,7 +35,7 @@ jobs:
 
       - name: Reject PDF binaries on content branches
         run: |
-          tracked=$(git ls-files 'pdfs/*' | grep -iE '\.pdf$' || true)
+          tracked=$(git ls-files | grep -iE '\.pdf$' || true)
           if [ -n "$tracked" ]; then
             echo "::error::PDF 不能进入 new/main；请提交到 pdf-inbox 分支。"
             echo "$tracked"
