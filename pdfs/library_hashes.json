@@ -1,0 +1,1634 @@
+[
+ {
+  "file": "Ackroyd-1967-MathematicalProceeding-laminar-compressible-boundary-layer-stationary-origin.pdf",
+  "sha256": "6c1e3cdd0931c8f4907d656597b342ad3951cb0adc3c29ebd03bb1a19b8602ed",
+  "size": 654739,
+  "id": 1174,
+  "doi": "10.1017/s0305004100041840",
+  "title": "On the laminar compressible boundary layer with stationary origin on a moving flat wall"
+ },
+ {
+  "file": "Anderson-Jr-2006-AmericanInstituteofAer-Hypersonic-High-Temperature-Gas-Dynamics.pdf",
+  "sha256": "dfcdd7aa74c8b1fea4c6a4ff20d187dbc335a9721e182912d404f0f770d2c696",
+  "size": 6841563,
+  "id": 1282,
+  "doi": "10.2514/4.861956",
+  "title": "Hypersonic and High-Temperature Gas Dynamics"
+ },
+ {
+  "file": "Anderson-Jr-2017-McGrawHillEducation-Fundamentals-Aerodynamics.pdf",
+  "sha256": "084b9eb5ac7d942aaab65553af0ea3a9326df004c29093be11d9c81ff5116bb0",
+  "size": 28593641,
+  "id": 227,
+  "doi": "",
+  "title": "Fundamentals of Aerodynamics"
+ },
+ {
+  "file": "Babinsky-Harvey-2011-CambridgeUniversityPre-Shock-Wave-Boundary-Layer-Interactions.pdf",
+  "sha256": "8fda9160bdcef17aaa1a1ef09751c6a6d29560ee929845009f628cf80b13407b",
+  "size": 12350568,
+  "id": 1132,
+  "doi": "10.1017/CBO9780511842757",
+  "title": "Shock Wave-Boundary-Layer Interactions"
+ },
+ {
+  "file": "Baby-et-al-2024-JFluidMech-Regular-reflection-Mach-reflection-RR-MR-transition.pdf",
+  "sha256": "5d176a8f7e663352300b4eb6645a49d08c8c1771a5eb46740f3e35315391083b",
+  "size": 3026245,
+  "id": 645,
+  "doi": "10.1017/jfm.2024.826",
+  "title": "Regular reflection to Mach reflection (RR–MR) transition in short wedges"
+ },
+ {
+  "file": "Baskaran-Muruganandam-2024-PhysicsofFluids-shock-wave-boundary-layer-interaction-varying-flow.pdf",
+  "sha256": "8fb034d2424504b842ee5c3ab42dc86c746aba2fb958222d36bbef1a56de5825",
+  "size": 6509206,
+  "id": 884,
+  "doi": "10.1063/5.0198982",
+  "title": "A study on shock-wave/boundary-layer interaction with varying flow deflection angle"
+ },
+ {
+  "file": "Ben-Dor-2007-Springer-Shock-Wave-Reflection-Phenomena.pdf",
+  "sha256": "7cf7c205605e7f7ffb899e1c5f0e9a7f3630cf929a2f48d139f84cbb202c5d9c",
+  "size": 11296698,
+  "id": 719,
+  "doi": "",
+  "title": "Shock Wave Reflection Phenomena"
+ },
+ {
+  "file": "Ben-Hassan-Saidi-et-al-2025-JFluidMech-Modal-triadic-interactions-dynamics-transitional-shock.pdf",
+  "sha256": "05582c4f95a5a8404051d1b6befba6cb15caaca4301cec57b0230ec9f7496a79",
+  "size": 6969975,
+  "id": 2004,
+  "doi": "10.1017/jfm.2025.236",
+  "title": "Modal analysis of the triadic interactions in the dynamics of a transitional shock wave boundary layer interaction"
+ },
+ {
+  "file": "Bernardini-et-al-2023-JFluidMech-Unsteadiness-characterisation-shock-wave-turbulent.pdf",
+  "sha256": "252123403894d59ca9943a50cacf6c4945f7064b1564cdbd14d837353dce9af4",
+  "size": 2668083,
+  "id": 2015,
+  "doi": "10.1017/jfm.2022.1038",
+  "title": "Unsteadiness characterisation of shock wave/turbulent boundary-layer interaction at moderate Reynolds number"
+ },
+ {
+  "file": "Bertin-1994-AmericanInstituteofAer-Hypersonic-Aerothermodynamics.pdf",
+  "sha256": "d4756d728f95fb12993adcaa6aa0640fbb3531eb778367aa4fc260d5b0b11b57",
+  "size": 9436541,
+  "id": 1034,
+  "doi": "10.2514/4.470363",
+  "title": "Hypersonic Aerothermodynamics"
+ },
+ {
+  "file": "Bertin-Cummings-2006-AnnuRevFluidMech-Critical-hypersonic-aerothermodynamic-phenomena.pdf",
+  "sha256": "12bf6f9e60c851532006b2cc21f8b4e383e047998fde60a9927e5c6602a26c9b",
+  "size": 531174,
+  "id": 835,
+  "doi": "10.1146/annurev.fluid.38.050304.092041",
+  "title": "Critical hypersonic aerothermodynamic phenomena"
+ },
+ {
+  "file": "Bleilebens-Olivier-2006-ShockWaves-elevated-surface-temperatures-hypersonic-shock-wave.pdf",
+  "sha256": "e05df7ade7ebed72020ed2322c0272bd426600f859cea8db5088167ae58fe8df",
+  "size": 814419,
+  "id": 1112,
+  "doi": "10.1007/s00193-006-0025-2",
+  "title": "On the influence of elevated surface temperatures on hypersonic shock wave/boundary layer interaction at a heated ramp model"
+ },
+ {
+  "file": "Bloy-Georgeff-1974-JournalofFluidMechanic-hypersonic-laminar-boundary-layer-near-sharp-compression.pdf",
+  "sha256": "9887fc3dd9d7440b4f72aaa47c1eeb289242f8259e61fb6db10daf3b6a4c1435",
+  "size": 458546,
+  "id": 1202,
+  "doi": "10.1017/s0022112074001716",
+  "title": "The hypersonic laminar boundary layer near sharp compression and expansion corners"
+ },
+ {
+  "file": "Brown-et-al-1990-JournalofFluidMechanic-Inviscid-viscous-interaction-triple-deck-scales-hypersonic.pdf",
+  "sha256": "01097ef6363ef2ae8ce4017073786371063dc17e9023811b1b57b9df19ce890a",
+  "size": 562915,
+  "id": 1210,
+  "doi": "10.1017/s0022112090003275",
+  "title": "Inviscid–viscous interaction on triple-deck scales in a hypersonic flow with strong wall cooling"
+ },
+ {
+  "file": "Bugeat-et-al-2022-JFluidMech-Low-frequency-resolvent-laminar-oblique-shock-wave.pdf",
+  "sha256": "af2084d795c31e5fec9fc481f018f437020585100fa5e19c8287d52d5fbf4d95",
+  "size": 3380474,
+  "id": 2007,
+  "doi": "10.1017/jfm.2022.390",
+  "title": "Low-frequency resolvent analysis of the laminar oblique shock wave/boundary layer interaction"
+ },
+ {
+  "file": "Bushnell-Weinstein-1968-JSpacecrRockets-Correlation-peak-heating-reattachment-separated-flows.pdf",
+  "sha256": "919f169869e4cf64dc70fd420eaf2d15943866e45417095f794d82f235c4cc45",
+  "size": 332963,
+  "id": 474,
+  "doi": "10.2514/3.29432",
+  "title": "Correlation of peak heating for reattachment of separated flows."
+ },
+ {
+  "file": "Candler-2019-AnnuRevFluidMech-Rate-Hypersonic-Flows.pdf",
+  "sha256": "43c564415428e80f03f2d1004cefb5013900bcb9af91d1bae5d8e543c07e8fd3",
+  "size": 1952058,
+  "id": 834,
+  "doi": "10.1146/annurev-fluid-010518-040258",
+  "title": "Rate Effects in Hypersonic Flows"
+ },
+ {
+  "file": "Casseau-et-al-2016-Aerospace-Two-Temperature-Open-Source-CFD-Model-Hypersonic.pdf",
+  "sha256": "155e018676c0fc0cb18a9d58196d355af06f3f6057b476de8b1f596aa776a4ef",
+  "size": 1312881,
+  "id": 975,
+  "doi": "10.3390/aerospace3040034",
+  "title": "A Two-Temperature Open-Source CFD Model for Hypersonic Reacting Flows, Part One: Zero-Dimensional Analysis"
+ },
+ {
+  "file": "Ceci-et-al-2023-JFM-low-frequency-unsteadiness-swept-shock-wave-boundary.pdf",
+  "sha256": "d844f468cea5560cff7b100d916af2964f678d88e29b4a88639a26ad5b2922aa",
+  "size": 1219993,
+  "id": 2077,
+  "doi": "10.1017/jfm.2023.2",
+  "title": "On low-frequency unsteadiness in swept shock wave–boundary layer interactions"
+ },
+ {
+  "file": "Chang-et-al-2022-JFluidMech-Hypersonic-shock-impingement-flat-plate-flow-separation.pdf",
+  "sha256": "9d18f5b51c17c651473ffffd3abbf78c7001abdf4117f9ae69667f64327f5cf0",
+  "size": 2262057,
+  "id": 799,
+  "doi": "10.1017/jfm.2022.827",
+  "title": "Hypersonic shock impingement studies on a flat plate: flow separation of laminar boundary layers"
+ },
+ {
+  "file": "Chapman-et-al-1958-NACAReport1356-Separated-Flows-Supersonic-Subsonic-Streams-Emphasis.pdf",
+  "sha256": "eb32294bc48b0c84dc9f0f3523762f3c9d9290b3ba0478ab08dc278dce525506",
+  "size": 46842302,
+  "id": 746,
+  "doi": "",
+  "title": "Investigation of Separated Flows in Supersonic and Subsonic Streams with Emphasis on the Effect of Transition"
+ },
+ {
+  "file": "Currao-et-al-2021-AIAAJournal-Hypersonic-Oscillating-Shock-Wave-Boundary-Layer.pdf",
+  "sha256": "0789146a7860edf7ae1093dfa312d47533731dbd4c36a1eb9176381f217e5cb3",
+  "size": 25841228,
+  "id": 893,
+  "doi": "10.2514/1.J059590",
+  "title": "Hypersonic Oscillating Shock-Wave/Boundary-Layer Interaction on a Flat Plate"
+ },
+ {
+  "file": "Daub-et-al-2015-DLRelib-results-shock-wave-boundary-layer-interaction-induced.pdf",
+  "sha256": "66f0e21f1879a3bca18212331f8f8dde5c0b48ba593ee408d6c33a0ea9f0c519",
+  "size": 5975174,
+  "id": 452,
+  "doi": "",
+  "title": "Experimental results on shock-wave/boundary-layer interaction induced by a movable wedge"
+ },
+ {
+  "file": "Daub-et-al-2016-CEASSpaceJ-results-unsteady-shock-wave-boundary-layer-interaction.pdf",
+  "sha256": "2aff756405bf761f0d5c82015266ee7e14411686513ef0acb3502fb84e7933ba",
+  "size": 2150572,
+  "id": 874,
+  "doi": "10.1007/s12567-015-0102-4",
+  "title": "Experimental results on unsteady shock-wave/boundary-layer interaction induced by an impinging shock"
+ },
+ {
+  "file": "Davis-Sturtevant-2000-PhysicsofFluids-Separation-length-high-enthalpy-shock-boundary-layer.pdf",
+  "sha256": "b2b1fa8345fd147df51a0fc7998ab981d1d7ef223c70daa4ebbeec66a3962de2",
+  "size": 1073710,
+  "id": 1116,
+  "doi": "10.1063/1.1289553",
+  "title": "Separation length in high-enthalpy shock/boundary-layer interaction"
+ },
+ {
+  "file": "Deepak-et-al-2013-Aeronautj1968-computational-laminar-shock-wave-boundary-layer.pdf",
+  "sha256": "db101dbfcdae2c86284b1b5298e4af691543ce9f2b2058a25ad55dbf63a5132f",
+  "size": 7440147,
+  "id": 744,
+  "doi": "10.1017/S0001924000007740",
+  "title": "A computational investigation of laminar shock/wave boundary layer interactions"
+ },
+ {
+  "file": "Degrez-et-al-1987-JFluidMech-interaction-oblique-shock-wave-laminar-boundary-layer.pdf",
+  "sha256": "8d3fd54f0a46bd5b80e5bfb6e296e45e7cdf478a2f40571b988a2a55d76c72d6",
+  "size": 2720639,
+  "id": 807,
+  "doi": "10.1017/S0022112087000946",
+  "title": "The interaction of an oblique shock wave with a laminar boundary layer revisited. An experimental and numerical study"
+ },
+ {
+  "file": "Delery-Dussauge-2009-ShockWaves-Some-physical-aspects-shock-wave-boundary-layer.pdf",
+  "sha256": "c1fdbfa59ca2f67441545bb87e7437076b63d79b000ef7960e8312f8a262e459",
+  "size": 1081719,
+  "id": 488,
+  "doi": "10.1007/s00193-009-0220-z",
+  "title": "Some physical aspects of shock wave/boundary layer interactions"
+ },
+ {
+  "file": "Dolling-2001-AIAAJournal-Fifty-Years-Shock-Wave-Boundary-Layer-Interaction.pdf",
+  "sha256": "e680f9cda949b3d05866ec2a780cf7f93a488b1551d0904a7dd0c4c69fe92ef8",
+  "size": 389589,
+  "id": 501,
+  "doi": "10.2514/2.1476",
+  "title": "Fifty Years of Shock-Wave/Boundary-Layer Interaction Research: What Next?"
+ },
+ {
+  "file": "Dorrance-2017-DoverPublications-Viscous-Hypersonic-Flow-Theory-Reacting-Hypersonic.pdf",
+  "sha256": "ff0ac0ecf25cec89eb84937b1c9bf8d28590760fd6fe6dbca93f3328a0895f64",
+  "size": 36961678,
+  "id": 1030,
+  "doi": "",
+  "title": "Viscous Hypersonic Flow: Theory of Reacting and Hypersonic Boundary Layers"
+ },
+ {
+  "file": "Dou-et-al-2006-ShockWaves-Incipient-separation-shock-wave-boundary-layer.pdf",
+  "sha256": "54501b931276e920b66a2410aa57c1fd8fd5bf5042565887cfbe25e4b92fdcd4",
+  "size": 319983,
+  "id": 1297,
+  "doi": "10.1007/s00193-006-0044-z",
+  "title": "Incipient separation in shock wave/boundary layer interactions as induced by sharp fin"
+ },
+ {
+  "file": "Dwivedi-et-al-2019-JFluidMech-Reattachment-streaks-hypersonic-compression-ramp-flow.pdf",
+  "sha256": "b6f0f0865c7ca80742787caed4c796f875ac8e64800a8cbc3118f8d42187c20c",
+  "size": 4619121,
+  "id": 2010,
+  "doi": "10.1017/jfm.2019.702",
+  "title": "Reattachment streaks in hypersonic compression ramp flow: an input–output analysis"
+ },
+ {
+  "file": "Dwivedi-et-al-2020-PhysRevFluids-Transient-growth-oblique-shock-wave-boundary-layer.pdf",
+  "sha256": "506c7400c4b07d5a68ea75c34177c127fe26f4335991c24d73057926cb165fce",
+  "size": 2758433,
+  "id": 2008,
+  "doi": "10.1103/physrevfluids.5.063904",
+  "title": "Transient growth analysis of oblique shock-wave/boundary-layer interactions at Mach 5.92"
+ },
+ {
+  "file": "Egorov-et-al-2020-FluidDyn-Simulation-Interaction-Shock-Boundary-Layer-Flat-Plate.pdf",
+  "sha256": "087d9176adcc09015bda9128cfe212e5e3cebedfcf3debb8490c1a551e837b59",
+  "size": 1824229,
+  "id": 803,
+  "doi": "10.1134/S0015462820050055",
+  "title": "Numerical Simulation of the Interaction between a Shock and the Boundary Layer on a Flat Plate in Motion"
+ },
+ {
+  "file": "Egorov-et-al-2021-AIPConfProc-shock-wave-boundary-layer-interaction-moving-flat.pdf",
+  "sha256": "f205227ab31f725361424b90a1c2306b43d01c49464fdd77df54d169cc8f58b0",
+  "size": 2534962,
+  "id": 809,
+  "doi": "10.1063/5.0052130",
+  "title": "Investigation of shock wave boundary layer interaction over the moving flat plate"
+ },
+ {
+  "file": "Elfstrom-1972-JFluidMech-Turbulent-hypersonic-flow-wedge-compression-corner.pdf",
+  "sha256": "80567b85f1a8f2d46d775561d1ba3fa6a10c6439d84026461cefdbed507eb93c",
+  "size": 2993892,
+  "id": 868,
+  "doi": "10.1017/S0022112072000060",
+  "title": "Turbulent hypersonic flow at a wedge-compression corner"
+ },
+ {
+  "file": "Fang-et-al-2021-CanJPhys-Physical-modeling-correlation-separation-length.pdf",
+  "sha256": "d5ce0937188aa9b07aa2b4a7bb31c488d28e079c7785ea4ff2741f8b9e48fe30",
+  "size": 2993090,
+  "id": 346,
+  "doi": "10.1139/cjp-2020-0314",
+  "title": "Physical modeling and correlation of separation length in hypersonic laminar ramp flows"
+ },
+ {
+  "file": "Fazio-2024-AuthoreaPreprint-Transformation-Methods-Moving-Wall-Boundary-Layer-Flow.pdf",
+  "sha256": "c560c79cea277251a614b9f8881562d1274f1aec26760db89624230f1172e033",
+  "size": 2051997,
+  "id": 1156,
+  "doi": "10.22541/au.170667421.15277022/v1",
+  "title": "Numerical Transformation Methods for a Moving-Wall Boundary Layer Flow of a Rarefied Gas Free Stream over a Moving Flat Plate"
+ },
+ {
+  "file": "Friedlander-et-al-2025-AIAASciTech2025-Simulations-Axisymmetric-Shock-Wave-Boundary-Layer.pdf",
+  "sha256": "586c1db3127618f7bf90b2c57489329fd0f81d71b77519bc0543d73e1c7a0460",
+  "size": 7098229,
+  "id": 2054,
+  "doi": "10.2514/6.2025-2065",
+  "title": "Numerical Simulations of an Axisymmetric Shock-Wave/Boundary-Layer Interaction"
+ },
+ {
+  "file": "Funderburk-Narayanaswamy-2019-AIAAJ-Negative-Surface-Curvature-Axisymmetric-Shock-Boundary.pdf",
+  "sha256": "4a4867a2a0beeaf02369cc928121a08103496c2a9c149bbeffbf39f637b2e513",
+  "size": 5058227,
+  "id": 1507,
+  "doi": "10.2514/1.J057275",
+  "title": "Investigation of Negative Surface Curvature Effects in Axisymmetric Shock/Boundary-Layer Interaction"
+ },
+ {
+  "file": "Gadd-et-al-1954-ProceedingsoftheRoyalS-interaction-shock-waves-boundary-layers.pdf",
+  "sha256": "a68dc9914506e5b463bf5eace8ece05ba4b48d43add2ee1f35f10f42244ebc0a",
+  "size": 5693574,
+  "id": 1199,
+  "doi": "10.1098/rspa.1954.0251",
+  "title": "An experimental investigation of the interaction between shock waves and boundary layers"
+ },
+ {
+  "file": "Gaitonde-2015-ProgressinAerospaceSci-Progress-shock-wave-boundary-layer-interactions.pdf",
+  "sha256": "14e529a940de25df167dcb8097ec8e9fdb06b1c064c0349bb4f39016643603a4",
+  "size": 9103029,
+  "id": 489,
+  "doi": "10.1016/j.paerosci.2014.09.002",
+  "title": "Progress in shock wave/boundary layer interactions"
+ },
+ {
+  "file": "Gaitonde-Adler-2023-AnnuRevFluidMech-Dynamics-Three-Dimensional-Shock-Wave-Boundary-Layer.pdf",
+  "sha256": "b8f192a2a6f1ed644e7dad1d9904df86bd5428f4571faaba3f439e1a36399220",
+  "size": 3578901,
+  "id": 490,
+  "doi": "10.1146/annurev-fluid-120720-022542",
+  "title": "Dynamics of Three-Dimensional Shock-Wave/Boundary-Layer Interactions"
+ },
+ {
+  "file": "Gao-Wu-2010-JFluidMech-flow-structure-Mach-reflection-steady-supersonic-flow.pdf",
+  "sha256": "abea146cad7a4006d69f21bc7e8f6a3e6873357e44ce9471b8286923173ac069",
+  "size": 2036728,
+  "id": 696,
+  "doi": "10.1017/S0022112010001011",
+  "title": "A study of the flow structure for Mach reflection in steady supersonic flow"
+ },
+ {
+  "file": "Grasso-Marini-1996-ComputersFluids-hypersonic-shock-wave-laminar-boundary-layer-interaction.pdf",
+  "sha256": "27496ff593089e021b486ae5bbc265fe3fc79cdc7db62273baa9220610d4ac45",
+  "size": 1557114,
+  "id": 482,
+  "doi": "10.1016/0045-7930(96)00019-9",
+  "title": "Analysis of hypersonic shock-wave laminar boundary-layer interaction phenomena"
+ },
+ {
+  "file": "Greenshields-Reese-2012-ProgressinAerospaceSci-Rarefied-hypersonic-flow-simulations-Navier-Stokes.pdf",
+  "sha256": "dfbd6818ab3f0c93ab4a5339c7a694043a318d6073bcafca85bdc7302703066c",
+  "size": 720289,
+  "id": 1002,
+  "doi": "10.1016/j.paerosci.2011.08.001",
+  "title": "Rarefied hypersonic flow simulations using the Navier–Stokes equations with non-equilibrium boundary conditions"
+ },
+ {
+  "file": "Guan-et-al-2020-JournalofFluidMechanic-Mach-reflection-promoted-upstream-shock-wave.pdf",
+  "sha256": "55f7176ca19f08db0470cb2aa32f0c152206d51beff91d1df9f7807eaa133433",
+  "size": 3580906,
+  "id": 660,
+  "doi": "10.1017/jfm.2020.677",
+  "title": "Mach reflection promoted by an upstream shock wave"
+ },
+ {
+  "file": "Guiho-et-al-2016-JFluidMech-Instabilities-oblique-shock-wave-laminar-boundary-layer.pdf",
+  "sha256": "e5c604ec3aad781a852033574ecbe6926e121d435a3163d0aa88d8770af5735e",
+  "size": 8829819,
+  "id": 843,
+  "doi": "10.1017/jfm.2015.729",
+  "title": "Instabilities in oblique shock wave/laminar boundary-layer interactions"
+ },
+ {
+  "file": "Hakkinen-et-al-1959-NASAMemorandum21859W-Interaction-Oblique-Shock-Wave-Laminar-Boundary-Layer.pdf",
+  "sha256": "d93939ff780ce6110e9321ae1451cd1da41ff368195eb053309cf526bbf4f6fb",
+  "size": 1350220,
+  "id": 850,
+  "doi": "",
+  "title": "The Interaction of an Oblique Shock Wave with a Laminar Boundary Layer"
+ },
+ {
+  "file": "Haller-2004-JournalofFluidMechanic-Exact-theory-unsteady-separation-two-dimensional-flows.pdf",
+  "sha256": "0b841c1568eb6b28c98f839981fe9fbe316806b01c2df548571ea32e001f500e",
+  "size": 1393804,
+  "id": 1071,
+  "doi": "10.1017/s0022112004009929",
+  "title": "Exact theory of unsteady separation for two-dimensional flows"
+ },
+ {
+  "file": "Hamed-Kumar-1994-JEngGasTurbinesPower-Flow-Separation-Shock-Wave-Boundary-Layer-Interactions.pdf",
+  "sha256": "2068baf0e011f18c052cd03901010190d11cb8b2abfad934cea944e272e3fe63",
+  "size": 644516,
+  "id": 1503,
+  "doi": "10.1115/1.2906816",
+  "title": "Flow Separation in Shock Wave Boundary Layer Interactions"
+ },
+ {
+  "file": "Han-et-al-2018-ApplMathMechEnglEd-Lagrangian-criterion-unsteady-flow-separation-two.pdf",
+  "sha256": "0e5a80cd5197338d95920bd5bb8adcabbd7e8fb5d83b35bc1962628c66b451c2",
+  "size": 1146884,
+  "id": 1073,
+  "doi": "10.1007/s10483-018-2350-8",
+  "title": "A Lagrangian criterion of unsteady flow separation for two-dimensional periodic flows"
+ },
+ {
+  "file": "Hankey-1967-AIAAJournal-Prediction-incipient-separation-shock-boundary-layer.pdf",
+  "sha256": "ce6e62e0c90a8fcfc88c5dc814d2bd7198943ddac5b1b71ba0dea0c1bb835da2",
+  "size": 233299,
+  "id": 768,
+  "doi": "10.2514/3.3973",
+  "title": "Prediction of incipient separation in shock-boundary-layer interactions"
+ },
+ {
+  "file": "Hankey-Cross-1967-AIAAJournal-Approximate-closed-form-solutions-supersonic-laminar.pdf",
+  "sha256": "32b66f54ef3cecb3dd3ade7342d89502f43ff6416b9c34b1d70fc0698440dc8c",
+  "size": 408766,
+  "id": 1256,
+  "doi": "10.2514/3.4043",
+  "title": "Approximate closed-form solutions for supersonic laminar separated flows"
+ },
+ {
+  "file": "Hankey-Jr-Holden-1975-AGARDographNo203-Two-Dimensional-Shock-Wave-Boundary-Layer-Interactions.pdf",
+  "sha256": "cc8b24146890db87757363fbbac5421c437cce246209e5a4e8f57974d21d266e",
+  "size": 36331602,
+  "id": 1472,
+  "doi": "",
+  "title": "Two-Dimensional Shock Wave-Boundary Layer Interactions in High Speed Flows"
+ },
+ {
+  "file": "Hao-2023-JFM-low-frequency-unsteadiness-shock-wave-turbulent-boundary.pdf",
+  "sha256": "027528d6677048427c8f3c2c7da028a79906e032438276c6ed86c384c158c825",
+  "size": 4744677,
+  "id": 2078,
+  "doi": "10.1017/jfm.2023.687",
+  "title": "On the low-frequency unsteadiness in shock wave–turbulent boundary layer interactions"
+ },
+ {
+  "file": "Harvey-1968-NASATechnicalNoteD4671-laminar-flow-separation-flat-plate-induced-deflected.pdf",
+  "sha256": "ff378384ac5c0c3e5aa99fe568d0f474340ea26ee1e35c7ba365ec542e16d1a3",
+  "size": 2285029,
+  "id": 1188,
+  "doi": "",
+  "title": "Experimental investigation of laminar-flow separation on a flat plate induced by deflected trailing-edge flap at Mach 19"
+ },
+ {
+  "file": "Hayakawa-Squire-1982-JFluidMech-upstream-boundary-layer-state-shock-interaction.pdf",
+  "sha256": "37fae15326b4c316abb7a981ede56e54cfeceeb090c7000d8b2e604221bdaad3",
+  "size": 3166193,
+  "id": 475,
+  "doi": "10.1017/S0022112082002262",
+  "title": "The effect of the upstream boundary-layer state on the shock interaction at a compression corner"
+ },
+ {
+  "file": "He-Shi-2025-JFluidMech-Transition-shock-reflection-downstream-expansion-fan.pdf",
+  "sha256": "9dbb752e6b2dc9e1af261e4ca45cbadb637afe575328d41a72f5b62cce7d0d6c",
+  "size": 1897409,
+  "id": 643,
+  "doi": "10.1017/jfm.2025.41",
+  "title": "Transition of shock reflection with downstream expansion fan interference"
+ },
+ {
+  "file": "Helm-Martin-2021-PhysRevFluids-Scaling-hypersonic-shock-turbulent-boundary-layer.pdf",
+  "sha256": "685959882e42457ddef0b0460c1d25e4ea15a70a83f4c3e3f000818b9c33ce1a",
+  "size": 3620184,
+  "id": 1505,
+  "doi": "10.1103/PhysRevFluids.6.074607",
+  "title": "Scaling of hypersonic shock/turbulent boundary layer interactions"
+ },
+ {
+  "file": "Hildebrand-et-al-2018-PhysRevFluids-Simulation-stability-oblique-shock-wave-boundary-layer.pdf",
+  "sha256": "ecd376456db17d46e739bc1ee54123a7858d7e39aa15442a39657c1e70b7154a",
+  "size": 6467086,
+  "id": 2009,
+  "doi": "10.1103/physrevfluids.3.013906",
+  "title": "Simulation and stability analysis of oblique shock-wave/boundary-layer interactions at Mach 5.92"
+ },
+ {
+  "file": "Hirschel-2015-Springer-Basics-Aerothermodynamics.pdf",
+  "sha256": "16991c0f128d3ae85b1cfaf267b8b5a5e3813c481cf9d94bc889a32439b8c4dd",
+  "size": 17613076,
+  "id": 1022,
+  "doi": "10.1007/978-3-319-14373-6",
+  "title": "Basics of Aerothermodynamics"
+ },
+ {
+  "file": "Hirschel-Weiland-2009-Springer-Aerothermodynamic-Design-Problems-Hypersonic-Flight.pdf",
+  "sha256": "bd2887e44f7645e95dd0354fd2e1c6222b13dcfc6b78ffe7c9149298154bdd80",
+  "size": 79353037,
+  "id": 1495,
+  "doi": "10.1007/978-3-540-89974-7",
+  "title": "Selected Aerothermodynamic Design Problems of Hypersonic Flight Vehicles"
+ },
+ {
+  "file": "Hodge-1977-AIAAJournal-Prediction-Hypersonic-Laminar-Boundary-Layer-Shock-Wave.pdf",
+  "sha256": "8f8470a9d7b20e9ae28ce30cbb95990ab30d0e77ca573a695354c45a14cfda6b",
+  "size": 253809,
+  "id": 1126,
+  "doi": "10.2514/3.60730",
+  "title": "Prediction of Hypersonic Laminar Boundary-Layer/Shock-Wave Interactions"
+ },
+ {
+  "file": "Hoelmer-1967-AIAAJournal-Laminar-boundary-layer-separation-hypersonic-flow.pdf",
+  "sha256": "cfdb6714d28a439f9a163f9f8cdb3bfefbd9d302f3ecf4918d88b67e110d3198",
+  "size": 471108,
+  "id": 1056,
+  "doi": "10.2514/3.3977",
+  "title": "Laminar boundary-layer separation in hypersonic flow"
+ },
+ {
+  "file": "Holden-1966-AIAAJournal-separated-flows-hypersonic-speeds-II-Two-dimensional.pdf",
+  "sha256": "30b061790dc579db72617de80077a634167dff858b6815b4bf704de703f72ce0",
+  "size": 1589069,
+  "id": 1316,
+  "doi": "10.2514/3.3548",
+  "title": "Experimental studies of separated flows at hypersonic speeds. II. Two-dimensional wedge separated flow studies"
+ },
+ {
+  "file": "Holden-1971-AIAAJournal-Boundary-layer-displacement-leading-edge-bluntness.pdf",
+  "sha256": "dfc6f12e9a7a581b91c94cfe076e7c3b603e09a6ae9a195d73e018cf9748d54a",
+  "size": 1719507,
+  "id": 1194,
+  "doi": "10.2514/3.6127",
+  "title": "Boundary-layer displacement and leading-edge bluntness effects on attached and separated laminar boundary layers in a compression corner. II - Experimental study"
+ },
+ {
+  "file": "Holden-1972-10thAerospaceSciencesM-Shock-wave-turbulent-boundary-layer-interaction-hypersonic.pdf",
+  "sha256": "fee16ae5cfb9830f395d0d56b09aaf3a242d1f801294bd60af91b3e4ba060507",
+  "size": 3437054,
+  "id": 772,
+  "doi": "10.2514/6.1972-74",
+  "title": "Shock wave-turbulent boundary layer interaction in hypersonic flow"
+ },
+ {
+  "file": "Holden-1978-11thFluidandPlasmaDyna-flow-separation-regions-shock-wave-boundary-layer.pdf",
+  "sha256": "9b762c368df2655d1273b48cde1774d211115301bcdb08ae10b808f8c1b30a7b",
+  "size": 1461811,
+  "id": 1190,
+  "doi": "10.2514/6.1978-1169",
+  "title": "A study of flow separation in regions of shock wave-boundary layer interaction in hypersonic flow"
+ },
+ {
+  "file": "Holden-1986-24thAerospaceSciencesM-review-aerothermal-problems-associated-hypersonic-flight.pdf",
+  "sha256": "cec49beb8095f4e8f3a372bf8f593ce764b61960584564c5b0efc02c48dd3fce",
+  "size": 2294806,
+  "id": 1460,
+  "doi": "10.2514/6.1986-267",
+  "title": "A review of aerothermal problems associated with hypersonic flight"
+ },
+ {
+  "file": "Holden-2006-44thAIAAAerospaceScien-Historical-Review-Prediction-Methods-Describe-Laminar.pdf",
+  "sha256": "52abdb763af3f457daf09ef31fe1b8ac12639ecec8c1a1ea43906f40a3077a76",
+  "size": 3645907,
+  "id": 491,
+  "doi": "10.2514/6.2006-494",
+  "title": "Historical Review of Experimental Studies and Prediction Methods to Describe Laminar and Turbulent Shock Wave/Boundary Layer Interactions in Hypersonic Flows"
+ },
+ {
+  "file": "Hu-et-al-2020-PhysicsofFluids-Prediction-plateau-peak-pressure-compression-ramp-flow.pdf",
+  "sha256": "6f266a608ab9507ca1ee1b30c70c162e31f7bb8c53f52e2c028cf6ce87932f96",
+  "size": 3029122,
+  "id": 460,
+  "doi": "10.1063/5.0024101",
+  "title": "Prediction of plateau and peak of pressure in a compression ramp flow with large separation"
+ },
+ {
+  "file": "Huang-et-al-2022-FrontEnergyRes-Unsteady-Motion-Shock-Wave-Supersonic-Compression-Ramp.pdf",
+  "sha256": "c4f05f2518a2ea881b312b246c13f31be23e776b0a9ed8ca51838118fc0bb2ae",
+  "size": 2907474,
+  "id": 880,
+  "doi": "10.3389/fenrg.2022.854019",
+  "title": "Unsteady Motion of Shock Wave for a Supersonic Compression Ramp Flow Based on Large Eddy Simulation"
+ },
+ {
+  "file": "Hung-1973-6thFluidandPlasmaDynam-Interference-heating-due-shock-wave-impingement-laminar.pdf",
+  "sha256": "58c2cb079ee89da0942b67fa2a33a25b3e31b20b51b4857b4c3a190e2f8e2a16",
+  "size": 615514,
+  "id": 476,
+  "doi": "10.2514/6.1973-678",
+  "title": "Interference heating due to shock wave impingement on laminar boundary layers"
+ },
+ {
+  "file": "Hunter-Jr-Reeves-1971-AIAAPaper71128-Results-strong-interaction-wake-like-model-supersonic.pdf",
+  "sha256": "46b00e84a22de566b10c5f1361bc3e62f43d69760661e2a47826236617d2a3e2",
+  "size": 808085,
+  "id": 1477,
+  "doi": "10.2514/6.1971-128",
+  "title": "Results of a strong interaction, wake-like model of supersonic separated and reattaching turbulent flows"
+ },
+ {
+  "file": "Inger-1995-AIAAJournal-Scaling-incipient-separation-high-speed-laminar-flows.pdf",
+  "sha256": "05f4b2de498c7fc1deec5277a73b677fee7f3077e6c48ac7baecfd44b53f1b32",
+  "size": 519192,
+  "id": 770,
+  "doi": "10.2514/3.12356",
+  "title": "Scaling of incipient separation in high speed laminar flows"
+ },
+ {
+  "file": "Inoue-1981-AIAAJournal-MRS-criterion-flow-separation-moving-walls.pdf",
+  "sha256": "b8a82b6e8f40ba73a78abc6cb2e1a15493af07487c8eeaf80dd11fc6e6ef06aa",
+  "size": 451148,
+  "id": 1069,
+  "doi": "10.2514/3.7848",
+  "title": "MRS criterion for flow separation over moving walls"
+ },
+ {
+  "file": "Jenquin-et-al-2026-JFluidMech-Onset-separation-unsteadiness-hypersonic-shock-boundary.pdf",
+  "sha256": "50ae9506ce42246ea7116fd107c33830cd80315b057bfe555473e44e14a2e417",
+  "size": 4745725,
+  "id": 2045,
+  "doi": "10.1017/jfm.2026.11284",
+  "title": "Onset of separation unsteadiness in hypersonic shock–boundary-layer interaction on a cone-step"
+ },
+ {
+  "file": "Jiao-et-al-2025-PhysicsofFluids-moving-wall-separation-bubble-hypersonic-ramp-flat.pdf",
+  "sha256": "c6330cc36a04318bd33d8e7b9aefee45ee99afcdd10fa2d1a69d01c9d034a3a0",
+  "size": 5363878,
+  "id": 902,
+  "doi": "10.1063/5.0296257",
+  "title": "Experimental investigation of the effects of a moving wall on the separation bubble in a hypersonic ramp–flat plate configuration"
+ },
+ {
+  "file": "John-et-al-2014-InternationalJournalof-Shock-wave-boundary-layer-interactions-hypersonic-flows.pdf",
+  "sha256": "24329be34ea9fd5c952e091c7224a9107d6f25b6160aab5ef378dcf59952443c",
+  "size": 2196168,
+  "id": 1200,
+  "doi": "10.1016/j.ijheatmasstransfer.2013.10.072",
+  "title": "Shock wave boundary layer interactions in hypersonic flows"
+ },
+ {
+  "file": "John-Kulkarni-2014-ComputersFluids-assessment-correlations-shock-wave-boundary-layer.pdf",
+  "sha256": "b1e0ca5cc10e3d7b6c29f522f8c63b5da971fecef7a62d654cedaaadcf6e7074",
+  "size": 3174388,
+  "id": 1110,
+  "doi": "10.1016/j.compfluid.2013.11.011",
+  "title": "Numerical assessment of correlations for shock wave boundary layer interaction"
+ },
+ {
+  "file": "Ju-Bao-2024-PhysFluids-Heat-transfer-flat-plate-arbitrary-surface-catalysis.pdf",
+  "sha256": "99ba987bb8d76c774497aaa8f670a2f1c1cb312da581db452d065322eede7c0a",
+  "size": 2208947,
+  "id": 339,
+  "doi": "10.1063/5.0226542",
+  "title": "Heat transfer to a flat plate with arbitrary surface catalysis under partially dissociated nitrogen freestream"
+ },
+ {
+  "file": "Ju-et-al-2026-ActaMechSin-Theoretical-modelling-arbitrary-surface-catalysis-peak.pdf",
+  "sha256": "79383276a835aa24be21cc35bb48355607597f1d117cfdaf241ae1baf815e66f",
+  "size": 1646360,
+  "id": 934,
+  "doi": "10.1007/s10409-025-25114-x",
+  "title": "Theoretical modelling for effects of arbitrary surface catalysis on peak heat flux in laminar compression corner flows"
+ },
+ {
+  "file": "Kang-Lee-2026-JFluidMech-low-frequency-unsteadiness-shock-wave-turbulent-boundary.pdf",
+  "sha256": "bfdf7e4e2bf913f5a882caae8d3c03bb36681a9dbb406c96fc9a1109e03ecfb5",
+  "size": 5529881,
+  "id": 2046,
+  "doi": "10.1017/jfm.2026.11644",
+  "title": "On low-frequency unsteadiness in shock-wave–turbulent boundary layer interaction with varying corner curvature"
+ },
+ {
+  "file": "Katzer-1989-JFluidMech-lengthscales-laminar-shock-boundary-layer-interaction.pdf",
+  "sha256": "b50aa0ab991b0d63f1c9744af046ed8d4a076f3dd62db2b9b71655d785e0625e",
+  "size": 2091853,
+  "id": 477,
+  "doi": "10.1017/S0022112089002375",
+  "title": "On the lengthscales of laminar shock/boundary-layer interaction"
+ },
+ {
+  "file": "Klemp-Acrivos-1976-JournalofFluidMechanic-moving-wall-boundary-layer-reverse-flow.pdf",
+  "sha256": "3d43cdf07ebdd27ade662814527535d3df1cf6dab15db3fd88b4565fc3ed2af9",
+  "size": 382501,
+  "id": 1166,
+  "doi": "10.1017/s0022112076000670",
+  "title": "A moving-wall boundary layer with reverse flow"
+ },
+ {
+  "file": "Kuehn-1959-NASAMemorandum12159A-Pressure-Rise-Required-Incipient-Separation-Turbulent.pdf",
+  "sha256": "2146ce2509bdc65d1bed50543f4c821b55ca4ea67dcece6ccccd35f7846ccfc5",
+  "size": 2491335,
+  "id": 1458,
+  "doi": "",
+  "title": "Experimental Investigation of the Pressure Rise Required for the Incipient Separation of Turbulent Boundary Layers in Two-Dimensional Supersonic Flow"
+ },
+ {
+  "file": "Kumar-Stollery-1996-TheAeronauticalJournal-Hypersonic-control-flap-effectiveness.pdf",
+  "sha256": "63f02308b422111b2d0041241ce304ffb29ddc3c673410c4ff19d34a22d05b24",
+  "size": 5725981,
+  "id": 1216,
+  "doi": "10.1017/s0001924000067154",
+  "title": "Hypersonic control flap effectiveness"
+ },
+ {
+  "file": "Lakshmi-Narasimha-Prasad-et-al-2026-JFM-Shock-wave-boundary-layer-interaction-axisymmetric-body.pdf",
+  "sha256": "a07e22e4062e98ba0878c4a0e78bf7eeecce912cbf78cc6f434fcc6d549f7dbf",
+  "size": 2642242,
+  "id": 2098,
+  "doi": "10.1017/jfm.2026.12248",
+  "title": "Shock-wave–boundary-layer interaction over an axisymmetric body"
+ },
+ {
+  "file": "Lees-1956-JournalofJetPropulsion-Laminar-Heat-Transfer-Blunt-Nosed-Bodies-Hypersonic.pdf",
+  "sha256": "fcd6b77e1944ca19c067f81f1a5c36cd59a60688da50f1d8c87f1b7bd1bfcc95",
+  "size": 2688965,
+  "id": 1277,
+  "doi": "10.2514/8.6977",
+  "title": "Laminar Heat Transfer Over Blunt-Nosed Bodies at Hypersonic Flight Speeds"
+ },
+ {
+  "file": "Lees-Reeves-1964-AerospaceSciencesMeeti-Supersonic-separated-reattaching-laminar-flows-I-General.pdf",
+  "sha256": "a166f48cd12bbb361a6c7415c3d3a590f50230cec9422a00df7d64bac25fc15f",
+  "size": 1391021,
+  "id": 1259,
+  "doi": "10.2514/6.1964-4",
+  "title": "Supersonic separated and reattaching laminar flows. I. General theory and application to adiabatic boundary layer-shock wave interactions"
+ },
+ {
+  "file": "Levy-1954-JournaloftheAeronautic-Large-Temperature-Changes-including-Viscous-Heating-Upon.pdf",
+  "sha256": "a7928d026749833406ffecd38ac30e62a2db86d512742de6d994e20786f03c25",
+  "size": 2495327,
+  "id": 1275,
+  "doi": "10.2514/8.3088",
+  "title": "Effect of Large Temperature Changes (including Viscous Heating) Upon Laminar Boundary Layers with Variable Free-Stream Velocity"
+ },
+ {
+  "file": "Lewis-et-al-1968-AIAAJournal-supersonic-laminar-two-dimensional-boundary-layer.pdf",
+  "sha256": "f0abff4d7b0c932ddee4e1e3bbbcfe60c202419dd2c3fec86930b30bfe4d7ad5",
+  "size": 1012199,
+  "id": 1204,
+  "doi": "10.2514/3.4434",
+  "title": "Experimental investigation of supersonic laminar, two-dimensional boundary-layer separation in a compression corner with and without cooling."
+ },
+ {
+  "file": "Li-et-al-2021-PhysFluids-Theory-based-prediction-separation-angle-peak-pressure.pdf",
+  "sha256": "0371cb33cd8ff5773056dd385b8e250319e6aa3e622a85922a15b1901d3c2934",
+  "size": 2507011,
+  "id": 932,
+  "doi": "10.1063/5.0062526",
+  "title": "Theory-based prediction of separation angle and peak pressure for laminar separated hypersonic compression corner flows"
+ },
+ {
+  "file": "Lighthill-Newman-1953-ProcA-boundary-layers-upstream-I-comparison-subsonic-supersonic.pdf",
+  "sha256": "f44dcbd6b1c2e29b66d9a20aabb4e79d122b5c0f7d98b0e5bd7a586fef2d8003",
+  "size": 3032131,
+  "id": 846,
+  "doi": "10.1098/rspa.1953.0067",
+  "title": "On boundary layers and upstream influence. I. A comparison between subsonic and supersonic flows"
+ },
+ {
+  "file": "Liu-Bao-2023-PhysFluids-Peak-heat-flux-prediction-hypersonic-flow-compression.pdf",
+  "sha256": "eb997f0c3b62489be9ed4766f103e13d79fdf885a03b8ed9b1cfd85b6bdbccc9",
+  "size": 4234703,
+  "id": 928,
+  "doi": "10.1063/5.0133708",
+  "title": "Peak heat flux prediction of hypersonic flow over compression ramp under vibrationally excited free-stream condition"
+ },
+ {
+  "file": "Liu-et-al-2024-PhysFluids-shock-wave-boundary-layer-interaction-slightly-rarefied.pdf",
+  "sha256": "7a25dca428589767b75af0df0e8614317988690f1bf3dcf6d53bf88cc5b339fd",
+  "size": 4153522,
+  "id": 680,
+  "doi": "10.1063/5.0187112",
+  "title": "On the shock wave boundary layer interaction in slightly rarefied gas"
+ },
+ {
+  "file": "Ma-et-al-2024-AerospSciTechnol-prospects-hypersonic-inlet-design-intelligent-optimization.pdf",
+  "sha256": "be20eb7334da12d5e9ce5b075329279aa823288620cd221b6f5a09be66f9876f",
+  "size": 42946919,
+  "id": 1540,
+  "doi": "10.1016/j.ast.2024.108953",
+  "title": "Recent advances and prospects in hypersonic inlet design and intelligent optimization"
+ },
+ {
+  "file": "MacCormack-1971-ProceedingsoftheSecond-solution-interaction-shock-wave-laminar-boundary-layer.pdf",
+  "sha256": "e088821e93c459400f2eb1112badc183a5ef9d845e350ce479761b509740eed0",
+  "size": 841457,
+  "id": 789,
+  "doi": "10.1007/3-540-05407-3_24",
+  "title": "Numerical solution of the interaction of a shock wave with a laminar boundary layer"
+ },
+ {
+  "file": "MacCormack-Baldwin-1975-AIAAPaper751-method-solving-Navier-Stokes-equations-application-shock.pdf",
+  "sha256": "d42679ea6e8beb4d1fe7913a5f8cd00fd2606c0ab61c8c63a71a779e3b1a7b48",
+  "size": 398403,
+  "id": 1485,
+  "doi": "10.2514/6.1975-1",
+  "title": "A numerical method for solving the Navier-Stokes equations with application to shock-boundary layer interactions"
+ },
+ {
+  "file": "Magyari-2010-JournalofFluidMechanic-Translation-groups-boundary-layer-flows-induced-continuous.pdf",
+  "sha256": "134e7634fccb8f4a6f8eb8c40c0aa65d73036510ccde887c1e1735ce7aea2509",
+  "size": 213153,
+  "id": 1172,
+  "doi": "10.1017/s0022112010000911",
+  "title": "Translation groups of the boundary-layer flows induced by continuous moving surfaces"
+ },
+ {
+  "file": "Mahalingesh-et-al-2024-JFluidMech-universal-scaling-length-scales-shock-induced-separation.pdf",
+  "sha256": "d043737c4f3c5157a736405feef25d1a33af45ba3a9f0f15f7fe6396021e9c2e",
+  "size": 5416931,
+  "id": 1480,
+  "doi": "10.1017/jfm.2024.864",
+  "title": "A universal scaling for the length scales of shock-induced separation"
+ },
+ {
+  "file": "Maier-et-al-2021-Aerospace-SU2-NEMO-Open-Source-Framework-High-Mach.pdf",
+  "sha256": "bfd2b47042d87e2d123c813b162d29a0c8d0ca54448c3595f5a9aea3cea9f884",
+  "size": 16447514,
+  "id": 911,
+  "doi": "10.3390/aerospace8070193",
+  "title": "SU2-NEMO: An Open-Source Framework for High-Mach Nonequilibrium Multi-Species Flows"
+ },
+ {
+  "file": "Marini-2001-AerospaceScienceandTec-hypersonic-compression-ramp-laminar-flows-sharp-leading.pdf",
+  "sha256": "fbede016bc99bf6bcfce0503ac198376e3d2f71cc2e79ce75e9ba908772aaea3",
+  "size": 687319,
+  "id": 478,
+  "doi": "10.1016/S1270-9638(01)01109-9",
+  "title": "Analysis of hypersonic compression ramp laminar flows under sharp leading edge conditions"
+ },
+ {
+  "file": "Martin-2001-AIPConferenceProceedin-Blasius-boundary-layer-solution-slip-flow-conditions.pdf",
+  "sha256": "900b01e58ae92b821ef51d84a4ec1bc189f7804d3da5619b6e41bb2ccb0f01d8",
+  "size": 344891,
+  "id": 1162,
+  "doi": "10.1063/1.1407604",
+  "title": "Blasius boundary layer solution with slip flow conditions"
+ },
+ {
+  "file": "Menter-1994-AIAAJournal-Two-equation-eddy-viscosity-turbulence-models-engineering.pdf",
+  "sha256": "a939bfb3b322d7a4f1978e8b21469623dc125ffcb2de6ff2e6c723e4842be896",
+  "size": 1163645,
+  "id": 1350,
+  "doi": "10.2514/3.12149",
+  "title": "Two-equation eddy-viscosity turbulence models for engineering applications"
+ },
+ {
+  "file": "Miki-et-al-2026-POF-Wall-heat-transfer-flow-field-configuration-shock.pdf",
+  "sha256": "0f7c150b3ebb71482109a68a417bf2aea1be09526fe7d24b302d072de5326975",
+  "size": 1590080,
+  "id": 2076,
+  "doi": "10.1063/5.0321514",
+  "title": "Wall heat transfer and flow field configuration of shock wave–turbulent boundary layer interactions on cryogenically cooled wall"
+ },
+ {
+  "file": "Mosele-et-al-2023-Aerospace-Mach-2-5-Axisymmetric-Turbulent-Shock-Wave.pdf",
+  "sha256": "a1b0385ca78d21bbdc5debaccd727fb647a2d0f3fb2a063a7c22ddc6589d643a",
+  "size": 9384912,
+  "id": 1563,
+  "doi": "10.3390/aerospace10020159",
+  "title": "Numerical Investigation of Mach 2.5 Axisymmetric Turbulent Shock Wave Boundary Layer Interactions"
+ },
+ {
+  "file": "Needham-Stollery-1966-3rdand4thAerospaceScie-Boundary-layer-separation-hypersonic-flow.pdf",
+  "sha256": "4f1390b9f0af4c95afd4660df8fbeb72591fc1eb3dc4540e99ead5c9510d3565",
+  "size": 820861,
+  "id": 764,
+  "doi": "10.2514/6.1966-455",
+  "title": "Boundary layer separation in hypersonic flow"
+ },
+ {
+  "file": "Nicotra-et-al-2026-ShockWaves-freestream-noise-boundary-layer-transition-hypersonic.pdf",
+  "sha256": "3aae245f90a0d3e8a4ca1cb5d201888a0aaf05bd99f43f0b9c07ece623ece7c0",
+  "size": 3021833,
+  "id": 2083,
+  "doi": "10.1007/s00193-026-01286-0",
+  "title": "Effect of freestream noise and boundary-layer transition on hypersonic shock-wave/boundary-layer interaction unsteadiness"
+ },
+ {
+  "file": "Panaras-Inger-1977-ASME1977InternationalG-Transonic-Normal-Shock-Turbulent-Boundary-Layer.pdf",
+  "sha256": "3b358eaf5929eda15da92e704267753d652da70b5b5b092ead80d24fb036a52c",
+  "size": 1626509,
+  "id": 1299,
+  "doi": "10.1115/77-GT-34",
+  "title": "Transonic Normal Shock-Turbulent Boundary Layer Interaction in Pressure Gradient Flows"
+ },
+ {
+  "file": "Pandey-et-al-2026-arXiv-Hypersonic-Shock-Wave-Boundary-Layer-Interaction-Three.pdf",
+  "sha256": "9659f5e7fbf3ea667c1e36e0b3fa6a122b4e9cec23c96b2686371cd66f4f7557",
+  "size": 6700304,
+  "id": 2040,
+  "doi": "10.48550/arXiv.2606.19592",
+  "title": "Hypersonic Shock-Wave/Boundary-Layer Interaction on a Three-Dimensional Expansion-Compression Geometry"
+ },
+ {
+  "file": "Passiatore-et-al-2023-PRF-Shock-impingement-transitional-hypersonic-high-enthalpy.pdf",
+  "sha256": "97ca06d18bbcc45207a80d28e7a233c5fa776d4f35370d8efbe3073b97bc4f85",
+  "size": 14661866,
+  "id": 2089,
+  "doi": "10.1103/physrevfluids.8.044601",
+  "title": "Shock impingement on a transitional hypersonic high-enthalpy boundary layer"
+ },
+ {
+  "file": "Pilyugin-Khlebnikov-2004-FluidDynamics-Interaction-Streamwise-Oscillating-Shock-Boundary-Layer.pdf",
+  "sha256": "a3279fefd855dac9eaec916d845be09308ee6d3238bf579dabaad940d5cbe6ec",
+  "size": 211029,
+  "id": 925,
+  "doi": "10.1023/B:FLUI.0000038567.54882.7a",
+  "title": "Study of the Interaction of a Streamwise-Oscillating Shock with the Boundary Layer on a Flat Plate"
+ },
+ {
+  "file": "Rajesh-et-al-2024-Springer-Shock-Interactions-24th-Shock-Interaction-Symposium-SIS.pdf",
+  "sha256": "804bec333add8bc37b95d0d41fb5119750b7eb9290b19670ab52f345b103e907",
+  "size": 29958633,
+  "id": 1566,
+  "doi": "10.1007/978-981-97-6099-2",
+  "title": "Advances in Shock Interactions: Proceedings of the 24th International Shock Interaction Symposium, SIS-2022, 17-20 October, Chennai, India"
+ },
+ {
+  "file": "Rathakrishnan-2015-Wiley-High-Enthalpy-Gas-Dynamics.pdf",
+  "sha256": "c0ef76ad22aa93f36e52b86df04706e786fa751562a9bc885f12e48447ef4b63",
+  "size": 3939828,
+  "id": 1033,
+  "doi": "10.1002/9781119113126",
+  "title": "High Enthalpy Gas Dynamics"
+ },
+ {
+  "file": "Reinberger-et-al-2024-PhysicsofFluids-Exact-solution-heat-transfer-across-Sakiadis-boundary.pdf",
+  "sha256": "b2d181490bbb879c89c6393a9cfb8c32d8f4581445218b94e50391c0598e102f",
+  "size": 1442469,
+  "id": 1255,
+  "doi": "10.1063/5.0218229",
+  "title": "Exact solution for heat transfer across the Sakiadis boundary layer"
+ },
+ {
+  "file": "Reyhner-Flugge-Lotz-1968-InternationalJournalof-interaction-shock-wave-laminar-boundary-layer.pdf",
+  "sha256": "b20de4a5a2c65d07343a0fdf8f432909e8319f80a1c2535c755086117e121f23",
+  "size": 1473450,
+  "id": 794,
+  "doi": "10.1016/0020-7462(68)90014-0",
+  "title": "The interaction of a shock wave with a laminar boundary layer"
+ },
+ {
+  "file": "Roghelia-et-al-2017-47thAIAAFluidDynamicsC-Gortler-vortices-hypersonic-ramp-flows-behind-sharp.pdf",
+  "sha256": "fcd0529f437b7124e152c02f86d918dd177c0abe2b3a2a7e4fcfebf9afd2ff87",
+  "size": 999887,
+  "id": 1466,
+  "doi": "10.2514/6.2017-3463",
+  "title": "Experimental investigation of Görtler vortices in hypersonic ramp flows behind sharp and blunt leading edges"
+ },
+ {
+  "file": "Ruban-et-al-2011-JFluidMech-unsteady-boundary-layer-separation-supersonic-flow-Part.pdf",
+  "sha256": "ed93408f678e69f3c457a6f0d816e7b108839ff4f1400aefe077e10b7948a8d2",
+  "size": 574522,
+  "id": 1089,
+  "doi": "10.1017/jfm.2011.104",
+  "title": "On unsteady boundary-layer separation in supersonic flow. Part 1. Upstream moving separation point"
+ },
+ {
+  "file": "Ruban-et-al-2020-JournalofFluidMechanic-quasi-steady-boundary-layer-separation-supersonic-flow.pdf",
+  "sha256": "c5f6760c68f0a5655056db1d6c22ce11fa24d87835f588078b5fba0f49684a9b",
+  "size": 670317,
+  "id": 1091,
+  "doi": "10.1017/jfm.2020.486",
+  "title": "On quasi-steady boundary-layer separation in supersonic flow. Part 2. Downstream moving separation point"
+ },
+ {
+  "file": "Ruban-Kravtsova-2025-JFluidMech-Singularity-boundary-layer-upstream-sliding-wall.pdf",
+  "sha256": "1939f8a165a2ca2cadf619d38acbbfb58a559654b904db12661efecad3d54322",
+  "size": 3106227,
+  "id": 1094,
+  "doi": "10.1017/jfm.2025.377",
+  "title": "Singularity in the boundary layer on an upstream-sliding wall"
+ },
+ {
+  "file": "Sakiadis-1961-AIChEJournal-Boundary-layer-behavior-continuous-solid-surfaces-II.pdf",
+  "sha256": "0e0eca54e29799678752867abfd989b6d104b8574c6bd5074342d40b26c78c03",
+  "size": 2074883,
+  "id": 1242,
+  "doi": "10.1002/aic.690070211",
+  "title": "Boundary‐layer behavior on continuous solid surfaces: II. The boundary layer on a continuous flat surface"
+ },
+ {
+  "file": "Sandham-2012-RTOENAVT195-Shock-Wave-Boundary-Layer-Interactions.pdf",
+  "sha256": "9cd48b66f2289a5495a49dc554b1a927e4db94ed2e63f9c026aa98acea076c9f",
+  "size": 1158157,
+  "id": 492,
+  "doi": "",
+  "title": "Shock-Wave/Boundary-Layer Interactions"
+ },
+ {
+  "file": "Savarino-et-al-2026-arXiv-Optimal-non-linear-mechanisms-laminar-turbulent-transition.pdf",
+  "sha256": "97c031c63af4d49f5213be9250c6f810acc972449d69ae55f2687bc6121aaf82",
+  "size": 30361767,
+  "id": 2011,
+  "doi": "",
+  "title": "Optimal non-linear mechanisms for laminar-turbulent transition of a shock-induced separated shear layer"
+ },
+ {
+  "file": "Sawant-et-al-2021-IUTAMBookseries-Linear-Instability-Shock-Dominated-Laminar-Hypersonic.pdf",
+  "sha256": "18d556baf3c8b08752dc22f048aa2da67ba79bc955569c5ce624ff44d3c49580",
+  "size": 2065329,
+  "id": 2006,
+  "doi": "10.1007/978-3-030-67902-6_57",
+  "title": "Linear Instability of Shock-Dominated Laminar Hypersonic Separated Flows"
+ },
+ {
+  "file": "Sawant-et-al-2022-JFluidMech-synchronisation-three-dimensional-shock-layer-laminar.pdf",
+  "sha256": "f3d3525f8afcb67780d7bec8fb5637f171936dacc6b09802463b1b042d98af80",
+  "size": 2385497,
+  "id": 2005,
+  "doi": "10.1017/jfm.2022.276",
+  "title": "On the synchronisation of three-dimensional shock layer and laminar separation bubble instabilities in hypersonic flow over a double wedge"
+ },
+ {
+  "file": "Schmisseur-2015-ProgressinAerospaceSci-Hypersonics-21st-century-perspective-AFOSR-sponsored.pdf",
+  "sha256": "263e7ebb1a209a0453f5f711de95683a22f0eb6f2c59da812e0d0f3c0f6723ef",
+  "size": 4402253,
+  "id": 839,
+  "doi": "10.1016/j.paerosci.2014.09.009",
+  "title": "Hypersonics into the 21st century: A perspective on AFOSR-sponsored research in aerothermodynamics"
+ },
+ {
+  "file": "Sears-Telionis-1975-SIAMJApplMath-Boundary-Layer-Separation-Unsteady-Flow.pdf",
+  "sha256": "dd37e5eedc1a0e08e74bd728b88e53048ed4c60ed4a8eba900ebe40f0cd2c20f",
+  "size": 2306935,
+  "id": 1482,
+  "doi": "10.1137/0128018",
+  "title": "Boundary-Layer Separation in Unsteady Flow"
+ },
+ {
+  "file": "Serra-et-al-2019-JournalofFluidMechanic-Material-spike-formation-highly-unsteady-separated-flows.pdf",
+  "sha256": "dc12338f0db0ffe40b49cd91520c37b14313581b67866113a5f4cbb3c1e7fd58",
+  "size": 1582677,
+  "id": 1182,
+  "doi": "10.1017/jfm.2019.876",
+  "title": "Material spike formation in highly unsteady separated flows"
+ },
+ {
+  "file": "Settles-Dodson-1994-AIAAJ-Supersonic-hypersonic-shock-boundary-layer-interaction.pdf",
+  "sha256": "b85a92f028485db8d0d60982128a27c7d2caae343afa803aa1e2e80626d09daa",
+  "size": 1353211,
+  "id": 1551,
+  "doi": "10.2514/3.12205",
+  "title": "Supersonic and hypersonic shock/boundary-layer interaction database"
+ },
+ {
+  "file": "Settles-et-al-1975-13thAerospaceSciencesM-Incipient-separation-supersonic-turbulent-boundary-layer.pdf",
+  "sha256": "b2ecc27a546f654a56c1711c15e37468369f3e838802451d57d161d4707704ab",
+  "size": 1102419,
+  "id": 1462,
+  "doi": "10.2514/6.1975-7",
+  "title": "Incipient separation of a supersonic turbulent boundary layer at moderate to high Reynolds numbers"
+ },
+ {
+  "file": "Settles-et-al-1976-AIAAJournal-Incipient-Separation-Supersonic-Turbulent-Boundary-Layer.pdf",
+  "sha256": "24c395258dd81d1c35245f8bf440d8bf25f16646a9abe5578b54e72510691b38",
+  "size": 1045142,
+  "id": 776,
+  "doi": "10.2514/3.61331",
+  "title": "Incipient Separation of a Supersonic Turbulent Boundary Layer at High Reynolds Numbers"
+ },
+ {
+  "file": "Simeonides-et-al-1994-AIAAJournal-analytical-computational-methods-applied-hypersonic.pdf",
+  "sha256": "53049f2540ee5f778c3d1c4ff2313ee07534ea0833021b126abb94de47faf101",
+  "size": 1615256,
+  "id": 473,
+  "doi": "10.2514/3.11985",
+  "title": "Experimental, analytical, and computational methods applied to hypersonic compression ramp flows"
+ },
+ {
+  "file": "Simeonides-Haase-1995-JFluidMech-computational-hypersonic-flow-about-compression-ramps.pdf",
+  "sha256": "6451a37799cfa9f23663243228e861025430b4b7d871fbaf2985ac5421749e66",
+  "size": 2236565,
+  "id": 472,
+  "doi": "10.1017/S0022112095002229",
+  "title": "Experimental and computational investigations of hypersonic flow about compression ramps"
+ },
+ {
+  "file": "Song-et-al-2026-JFluidMech-Secondary-global-instabilities-shock-wave-boundary-layer.pdf",
+  "sha256": "5e9cc005b5aba40d3529b728abdc37ef8e94c6878bfb0c022ce1cd879f529695",
+  "size": 3821933,
+  "id": 2001,
+  "doi": "10.1017/jfm.2026.12013",
+  "title": "Secondary global instabilities in shock-wave–boundary-layer interactions: direct numerical simulations and three-dimensional global stability analysis"
+ },
+ {
+  "file": "Song-Hao-2023-PhysicsofFluids-Global-instability-interaction-oblique-shock-laminar.pdf",
+  "sha256": "ebeb82c25fea5e5c23652768fdea430ab8343ca1709a31cbfcb6ad40dec6db5d",
+  "size": 7551209,
+  "id": 793,
+  "doi": "10.1063/5.0160648",
+  "title": "Global instability of the interaction between an oblique shock and a laminar boundary layer"
+ },
+ {
+  "file": "Song-Hao-2025-JournalofFluidMechanic-Instabilities-shock-wave-boundary-layer-interactions-Mach.pdf",
+  "sha256": "557d2d20946d4db02802d4b8ca07bde03aa0c380ee46080ec51f60a0d966db0f",
+  "size": 3690224,
+  "id": 856,
+  "doi": "10.1017/jfm.2025.10597",
+  "title": "Instabilities in shock-wave–boundary-layer interactions at Mach 6"
+ },
+ {
+  "file": "Souverein-et-al-2013-JFluidMech-scaling-turbulent-shock-wave-boundary-layer-interactions.pdf",
+  "sha256": "5c021dc50311df49a337c157b294e7039e768361160cbffdf5feb2c283d27cab",
+  "size": 1294655,
+  "id": 461,
+  "doi": "10.1017/jfm.2012.495",
+  "title": "A scaling analysis for turbulent shock-wave/boundary-layer interactions"
+ },
+ {
+  "file": "Sriram-Jagadeesh-2015-AIAAJournal-Correlation-Length-Impinging-Shock-Induced-Large.pdf",
+  "sha256": "1cf3f5ea2cf0f683e2bcfde0c79b9237173862c88fed100c708200f16de98a6c",
+  "size": 5310036,
+  "id": 462,
+  "doi": "10.2514/1.J053271",
+  "title": "Correlation for Length of Impinging Shock-Induced Large Separation Bubble at Hypersonic Speed"
+ },
+ {
+  "file": "Stella-et-al-2018-PhysRevFluids-Mass-entrainment-based-model-separating-flows.pdf",
+  "sha256": "19fd032f583b7736d765631870faa21e68b6c56c4d828ec705fbbae391b813df",
+  "size": 2285193,
+  "id": 459,
+  "doi": "10.1103/PhysRevFluids.3.114702",
+  "title": "Mass entrainment-based model for separating flows"
+ },
+ {
+  "file": "Stewartson-Williams-1969-ProcA-Self-induced-separation.pdf",
+  "sha256": "6dd56167a5229f44eb4055cfb2366b641305999a2d642934ced89382e0689fa6",
+  "size": 4876525,
+  "id": 822,
+  "doi": "10.1098/rspa.1969.0148",
+  "title": "Self-induced separation"
+ },
+ {
+  "file": "Sun-et-al-2024-TCFD-wall-heat-flux-hypersonic-shock-wave-boundary.pdf",
+  "sha256": "f27f1bc6dcc26603373a0f8a70ebe59c9673c70420d27788717e6870c844c3d7",
+  "size": 1706590,
+  "id": 2100,
+  "doi": "10.1007/s00162-024-00711-3",
+  "title": "Analysis of the wall heat flux of the hypersonic shock wave/boundary layer interaction using a novel decomposition formula"
+ },
+ {
+  "file": "Sychev-1972-FluidDynamics-Laminar-separation.pdf",
+  "sha256": "41c5cfc8bc20dcaaac52d1bb8b0c3b00a88e426e217ead1400a9f58184c9ee20",
+  "size": 741728,
+  "id": 1291,
+  "doi": "",
+  "title": "Laminar separation"
+ },
+ {
+  "file": "Sychev-1979-FluidDyn-Asymptotic-theory-nonstationary-separation.pdf",
+  "sha256": "82f817da5dd1fc06c9542b72205a77459c3a79d1182db1770166749db33b6f15",
+  "size": 871179,
+  "id": 1290,
+  "doi": "10.1007/BF01051983",
+  "title": "Asymptotic theory of nonstationary separation"
+ },
+ {
+  "file": "Sychev-1982-FluidDyn-Asymptotic-theory-separation-flows.pdf",
+  "sha256": "d878274ab8f61d498b69dc87379cd87e49cbd5bc2ce10f5961855f49e3bcfe7a",
+  "size": 992640,
+  "id": 1511,
+  "doi": "10.1007/BF01314493",
+  "title": "Asymptotic theory of separation flows"
+ },
+ {
+  "file": "Timoshin-1996-JournalofFluidMechanic-Concerning-marginal-singularities-boundary-layer-flow.pdf",
+  "sha256": "26bfb967519615909ea74d8c158547d587edbe7dbcc5fe24e23d2443eafb6a7a",
+  "size": 545117,
+  "id": 1064,
+  "doi": "10.1017/S0022112096001449",
+  "title": "Concerning marginal singularities in the boundary-layer flow on a downstream-moving surface"
+ },
+ {
+  "file": "Toure-Schulein-2020-ExpFluids-Scaling-steady-traveling-shock-wave-turbulent-boundary.pdf",
+  "sha256": "70f29fbc11165b38d2851dbd6df7d31f6bb5bc82aab0998e8f13b5c09c2f5af9",
+  "size": 8280637,
+  "id": 742,
+  "doi": "10.1007/s00348-020-02989-5",
+  "title": "Scaling for steady and traveling shock wave/turbulent boundary layer interactions"
+ },
+ {
+  "file": "Toure-Schulein-2023-JFluidMech-Interaction-moving-shock-wave-turbulent-boundary-layer.pdf",
+  "sha256": "fc63379d0f49ad6ad86d11713db48df4f3ca6e0d3591561333de1ec6b8caf520",
+  "size": 4292500,
+  "id": 503,
+  "doi": "10.1017/jfm.2023.357",
+  "title": "Interaction of a moving shock wave with a turbulent boundary layer"
+ },
+ {
+  "file": "Tsahalis-1976-9thFluidandPlasmaDynam-Laminar-boundary-layer-separation-upstream-moving-wall.pdf",
+  "sha256": "8da422ddd0c35cc2c5e48fa1c039ce43effd67bcf9a38e8b528f299d8215a81d",
+  "size": 506314,
+  "id": 1078,
+  "doi": "10.2514/6.1976-377",
+  "title": "Laminar boundary-layer separation from an upstream moving wall"
+ },
+ {
+  "file": "Tsou-et-al-1967-InternationalJournalof-Flow-heat-transfer-boundary-layer-continuous-moving.pdf",
+  "sha256": "54dffc84d24e5e2e939942d0e73b82543dcaaecb2f9e0f81a444b71a463ee472",
+  "size": 1460790,
+  "id": 1222,
+  "doi": "10.1016/0017-9310(67)90100-7",
+  "title": "Flow and heat transfer in the boundary layer on a continuous moving surface"
+ },
+ {
+  "file": "Tumuklu-et-al-2018-PhysicsofFluids-unsteady-hypersonic-laminar-separated-flows-double-cone.pdf",
+  "sha256": "8bc0942acfdf38cd858306419db5ecc10fd630135e84fc05b3c6301c454a199c",
+  "size": 7838274,
+  "id": 895,
+  "doi": "10.1063/1.5022598",
+  "title": "Investigation of unsteady, hypersonic, laminar separated flows over a double cone geometry using a kinetic approach"
+ },
+ {
+  "file": "Vanstone-et-al-2017-AIAAJournal-Establishment-Times-Hypersonic-Shock-Wave-Boundary-Layer.pdf",
+  "sha256": "af2da6ba92996366fd3a5ee0ee3ce8c238e0f097105847a58b084b383da0490a",
+  "size": 5514021,
+  "id": 451,
+  "doi": "10.2514/1.J055575",
+  "title": "Establishment Times of Hypersonic Shock-Wave/Boundary-Layer Interactions in Intermittent Facilities"
+ },
+ {
+  "file": "Wang-et-al-2025-AerospaceScienceandTec-Shock-reflection-wave-structures-near-intersection-point.pdf",
+  "sha256": "21ed486cbd504a4c9479aa5e2630d5e0ade311ab681da895e2ed5743b919fc32",
+  "size": 12246040,
+  "id": 635,
+  "doi": "10.1016/j.ast.2025.110266",
+  "title": "Shock reflection with the influence of wave structures near the intersection point in confined-space double-wedge"
+ },
+ {
+  "file": "Wang-et-al-2026-ChineseJournalofAerona-Prediction-separation-length-hypersonic-shock-wave.pdf",
+  "sha256": "1ef95734153d59f8b9a3550327fe081de2a6a2d597aa7243f3ae68fd8a283d73",
+  "size": 1274914,
+  "id": 1039,
+  "doi": "10.1016/j.cja.2026.104153",
+  "title": "Prediction of separation length for hypersonic shock wave/turbulent boundary layer interactions"
+ },
+ {
+  "file": "Weng-et-al-2024-AerospaceScienceandTec-interactions-2D-3D-conical-shock-wave-axisymmetric.pdf",
+  "sha256": "fe1e80c88f6ba16afebd07f7aeaad25706b045ef2df211ab64cdc90cadff1dc3",
+  "size": 3331262,
+  "id": 2039,
+  "doi": "10.1016/j.ast.2023.108769",
+  "title": "Numerical investigations on interactions between 2D/3D conical shock wave and axisymmetric boundary layer at Ma=2.2"
+ },
+ {
+  "file": "White-2006-McGrawHill-Viscous-Fluid-Flow.pdf",
+  "sha256": "4353c4876143e0705294ace67e9d69f286a3a690f32d1437914a02f2389af00f",
+  "size": 37026012,
+  "id": 226,
+  "doi": "",
+  "title": "Viscous Fluid Flow"
+ },
+ {
+  "file": "Xu-Liao-2008-CommunicationsinNonlin-Dual-solutions-boundary-layer-flow-upstream-moving.pdf",
+  "sha256": "175da5b4457735480bbac1a700223f470c6499d849e0d7eb3957344a7db9832e",
+  "size": 190605,
+  "id": 1150,
+  "doi": "10.1016/j.cnsns.2006.04.008",
+  "title": "Dual solutions of boundary layer flow over an upstream moving plate"
+ },
+ {
+  "file": "Yao-et-al-2007-PhysicsofFluids-Mach-number-unstable-disturbances-shock-boundary-layer.pdf",
+  "sha256": "7d8e9d78c382bac6cc4e220a33bddba6ba2f7c45f4dd7e7bad32f7f9bfdf96ad",
+  "size": 1477795,
+  "id": 1306,
+  "doi": "10.1063/1.2720831",
+  "title": "The effect of Mach number on unstable disturbances in shock/boundary-layer interactions"
+ },
+ {
+  "file": "Yao-et-al-2013-JFluidMech-Shock-reflection-presence-upstream-expansion-wave.pdf",
+  "sha256": "7a69f1935595f47ea186c7b5e2de04b9fa396212ed85a83024762e86ac2a8f3b",
+  "size": 43151344,
+  "id": 623,
+  "doi": "10.1017/jfm.2013.467",
+  "title": "Shock reflection in the presence of an upstream expansion wave and a downstream shock wave"
+ },
+ {
+  "file": "Yapalparvi-Van-Dommelen-2012-JFluidMech-solution-unsteady-boundary-layer-separation-supersonic.pdf",
+  "sha256": "bd8d4d36d503606378bd8d4b9a472cff10a01f4edc6d1574a418c74b105664dd",
+  "size": 896845,
+  "id": 1086,
+  "doi": "10.1017/jfm.2012.261",
+  "title": "Numerical solution of unsteady boundary-layer separation in supersonic flow: upstream moving wall"
+ },
+ {
+  "file": "Yu-et-al-2020-InternationalJournalof-Theoretical-modeling-heat-transfer-flat-plate-vibrational.pdf",
+  "sha256": "78a98e52b579f5f5fd4bfb9fb11f83292804b402fcfd163560953fa518183045",
+  "size": 1897823,
+  "id": 387,
+  "doi": "10.1016/j.ijheatmasstransfer.2020.119434",
+  "title": "Theoretical modeling of heat transfer to flat plate under vibrational excitation freestream conditions"
+ },
+ {
+  "file": "Zhang-et-al-2025-Proceedingsofthe34thIn-Unsteadiness-Hypersonic-Shock-Wave-Turbulent-Boundary.pdf",
+  "sha256": "f4934791f2915f89c29d53450226ef55d31d4f21dc8f6b88f44214bf7d0da050",
+  "size": 1826736,
+  "id": 1009,
+  "doi": "10.1007/978-981-96-4767-5_37",
+  "title": "Experimental Study on Unsteadiness in Hypersonic Shock Wave/Turbulent Boundary Layer Interaction"
+ },
+ {
+  "file": "Zhang-et-al-2026-AdvAerodyn-flow-separation-characteristics-shock-wave-boundary-layer.pdf",
+  "sha256": "69460a4db1e09ee6842577702d12c85cb953d6aa191dd061343206d4f72df847",
+  "size": 8253745,
+  "id": 1303,
+  "doi": "10.1186/s42774-025-00221-8",
+  "title": "Research on the flow separation characteristics of shock wave-boundary layer interaction"
+ },
+ {
+  "file": "Zhang-Hao-2026-JFM-Suppression-low-frequency-unsteadiness-shock-wave.pdf",
+  "sha256": "5d36f64796f91b3e3e936333bf61d22beb3339472e863823c90b53f79d5fc132",
+  "size": 808197,
+  "id": 2097,
+  "doi": "10.1017/jfm.2026.11679",
+  "title": "Suppression of low-frequency unsteadiness in shock wave–turbulent boundary layer interactions with a micro-bump"
+ },
+ {
+  "file": "Zhong-et-al-2021-ChineseJournalofAerona-Reflected-shock-turbulent-boundary-layer-interaction.pdf",
+  "sha256": "83f6c9a7a5b87a9b2f12c1036c2f2b990e3bfd71fba59af68069882c415b2698",
+  "size": 2245922,
+  "id": 878,
+  "doi": "10.1016/j.cja.2020.12.009",
+  "title": "Reflected shock/turbulent boundary layer interaction structure analysis based on large eddy simulation"
+ },
+ {
+  "file": "Zhu-et-al-2017-AIAAJournal-Wall-Temperature-Shock-Wave-Turbulent-Boundary-Layer.pdf",
+  "sha256": "50632fe2fccb52f2bfa42128c0e4ddd9e3ddbe0cb84fd1b4e672795208a32014",
+  "size": 2575627,
+  "id": 1324,
+  "doi": "10.2514/1.J054939",
+  "title": "Numerical Study on Wall Temperature Effects on Shock Wave/Turbulent Boundary-Layer Interaction"
+ },
+ {
+  "file": "Zuo-et-al-2019-JFluidMech-Direct-simulation-conical-shock-wave-turbulent-boundary.pdf",
+  "sha256": "a2e16268ed3deb1fbcf68a6aaafeafb960c916a8429cd7f2497bc094289bc758",
+  "size": 10080075,
+  "id": 2038,
+  "doi": "10.1017/jfm.2019.558",
+  "title": "Direct numerical simulation of conical shock wave–turbulent boundary layer interaction"
+ },
+ {
+  "file": "Zuo-et-al-2022-AIAAJ-Wall-Temperature-Hypersonic-Impinging-Shock-Wave-Turbulent.pdf",
+  "sha256": "40ebeb34a621afd3c74ac98fed6c3c448d5bed21f192038f129ef35092e6051a",
+  "size": 2533343,
+  "id": 1476,
+  "doi": "10.2514/1.J061708",
+  "title": "Effects of Wall Temperature on Hypersonic Impinging Shock-Wave/Turbulent-Boundary-Layer Interactions"
+ },
+ {
+  "file": "Zuo-et-al-2023-JFluidMech-wall-pressure-fluctuations-conical-shock-wave-turbulent.pdf",
+  "sha256": "4e3b141982115442ff6092b2d5f02d168bb8f0ed61e70d787753c0ea98a52674",
+  "size": 3478624,
+  "id": 2049,
+  "doi": "10.1017/jfm.2023.480",
+  "title": "On wall pressure fluctuations in conical shock wave/turbulent boundary layer interaction"
+ },
+ {
+  "file": "任军豪-et-al-2026-NA-高超声速动态压缩拐角热流特性试验研究.pdf",
+  "sha256": "09d617f64096e94186686cc5947b605c99e3dca51c321d528bcef727041b3f9b",
+  "size": 9436928,
+  "id": 1005,
+  "doi": "",
+  "title": "高超声速动态压缩拐角热流特性试验研究"
+ },
+ {
+  "file": "吴子牛-et-al-2015-航空学报-高超声速飞行器流动特征分析.pdf",
+  "sha256": "1d4c867537134a4c824b7c33f8f83317b2ef87d3a6a8e148b9d8081571fedb94",
+  "size": 3696726,
+  "id": 1494,
+  "doi": "",
+  "title": "高超声速飞行器流动特征分析"
+ },
+ {
+  "file": "唐振元-et-al-2024-第八届中国空天动力联合大会-微射流控制激波湍流边界层干扰中气动热.pdf",
+  "sha256": "edaf73e94ca02eb4c749aa351e856c1fa77f8e8b40847d64a6332ee4d70a5324",
+  "size": 3810215,
+  "id": 992,
+  "doi": "10.26914/c.cnkihy.2024.090346",
+  "title": "微射流控制激波湍流边界层干扰中气动热的特性及机理"
+ },
+ {
+  "file": "居光敬-2025-中国科学院大学-典型高超声速流动中任意催化壁面传热的.pdf",
+  "sha256": "3132bb18caf98e09d94b46668557c53536c84de2380acbf14944c66ff2c77e03",
+  "size": 6107153,
+  "id": 754,
+  "doi": "",
+  "title": "典型高超声速流动中任意催化壁面传热的模型理论"
+ },
+ {
+  "file": "张兆顺-崔桂香-2015-清华大学出版社-流体力学.pdf",
+  "sha256": "6532b73c7241674888969c32d81f6b186fa3d6d9fdcd0c4398c038d25218564c",
+  "size": 70602440,
+  "id": 225,
+  "doi": "",
+  "title": "流体力学"
+ },
+ {
+  "file": "张涵信-1985-航空学报-分离流动的某些进展.pdf",
+  "sha256": "8ec7d2e2d40c5a5ceca746a43ee7dd7632a9f903579c81845ae071e25f4a0497",
+  "size": 707549,
+  "id": 968,
+  "doi": "",
+  "title": "分离流动的某些进展"
+ },
+ {
+  "file": "徐敬惟-2026-中国科学院大学-壁面效应对高超声速压缩拐角流动与传热.pdf",
+  "sha256": "805708521f03a644981fa5c811b7bd5984adc395f963285fe56bf86b54dd3cb3",
+  "size": 5062486,
+  "id": 909,
+  "doi": "",
+  "title": "壁面效应对高超声速压缩拐角流动与传热特性的影响研究"
+ },
+ {
+  "file": "徐锦-et-al-2016-战术导弹技术-高超声速进气道发展研究.pdf",
+  "sha256": "68ca9b39c6ad9e23d91c66a8bba8cdda87a47ecc6f3df87710a854002c0f01e0",
+  "size": 1731570,
+  "id": 1521,
+  "doi": "10.16358/j.issn.1009-1300.2016.05.04",
+  "title": "高超声速进气道发展研究"
+ },
+ {
+  "file": "方芳-et-al-2020-物理学报-基于斜驻点模型的剪切层撞击壁面流动及.pdf",
+  "sha256": "ec09429b01259507f443f78e7b6363780d7036f00e17c8f8efa43b41f391b0f9",
+  "size": 3565995,
+  "id": 499,
+  "doi": "",
+  "title": "基于斜驻点模型的剪切层撞击壁面流动及传热特性"
+ },
+ {
+  "file": "方芳-鲍麟-2021-气体物理-高超声速分离再附流动峰值热流的模型理.pdf",
+  "sha256": "09ceaeb11f4cf84c223ed51400eac43913689ffa35f066301a7723602258bcd3",
+  "size": 1355585,
+  "id": 380,
+  "doi": "10.19527/j.cnki.2096-1642.0837",
+  "title": "高超声速分离-再附流动峰值热流的模型理论"
+ },
+ {
+  "file": "李灿民-et-al-2023-航空学报-基于后掠唇罩的入射激波边界层干扰流动.pdf",
+  "sha256": "5ef096d23e986b9539a225f3e6da5653d2f3b53ff036d8fb4b6da85ca1a447f0",
+  "size": 2270489,
+  "id": 997,
+  "doi": "",
+  "title": "基于后掠唇罩的入射激波/边界层干扰流动控制方法"
+ },
+ {
+  "file": "李玉川-2018-中国科学院大学-典型粗糙壁高速流动的壁面阻力与热流研.pdf",
+  "sha256": "3675379a4386ca41325a04ee9403575c629e449ccc0647912a5f9b78d8731b47",
+  "size": 21207833,
+  "id": 250,
+  "doi": "",
+  "title": "典型粗糙壁高速流动的壁面阻力与热流研究"
+ },
+ {
+  "file": "李玉川-鲍麟-2019-中国科学院大学学报-波状粗糙壁模型流动的壁面热流和阻力关.pdf",
+  "sha256": "e95e1604da2d6dbcc1f55963f1167f6167583fa2de6066b5797ede2029275222",
+  "size": 564187,
+  "id": 917,
+  "doi": "",
+  "title": "波状粗糙壁模型流动的壁面热流和阻力关联关系的数值研究"
+ },
+ {
+  "file": "李邦明-et-al-2010-应用数学和力学-高超声速飞行器前驻点热流数值模拟的物.pdf",
+  "sha256": "dbdb4b4f646189d30ea86b1ea00fdcfa389732c8ef5151d95f6a664850468df8",
+  "size": 580418,
+  "id": 914,
+  "doi": "",
+  "title": "高超声速飞行器前驻点热流数值模拟的物理准则研究"
+ },
+ {
+  "file": "李邦明-et-al-2012-力学学报-高超声速压缩拐角峰值热流位置预测模型.pdf",
+  "sha256": "a7140cb80cc9d7fc85620a5153d6258c0edd0a20d60acd7db4116e383c41f659",
+  "size": 1117850,
+  "id": 915,
+  "doi": "",
+  "title": "高超声速压缩拐角峰值热流位置预测模型研究"
+ },
+ {
+  "file": "杨柳青-et-al-2022-JNanjingUnivAeronautAs-圆锥激波与平板边界层干扰的数值模拟研.pdf",
+  "sha256": "04600ac5f72ad3bc175676b47fcec80eac46eb102c81de4e45c615b173c3c4cf",
+  "size": 5508372,
+  "id": 2059,
+  "doi": "10.16356/j.1005-2615.2022.04.007",
+  "title": "圆锥激波与平板边界层干扰的数值模拟研究"
+ },
+ {
+  "file": "杨柳青-et-al-2023-PhysGases-斜激波与轴对称边界层干扰的数值模拟.pdf",
+  "sha256": "96b7a69ef65b9c81d3672bbd5c8777821e5f909a174b3fe7fe00a9ad04d9f48f",
+  "size": 12314263,
+  "id": 2060,
+  "doi": "10.19527/j.cnki.2096-1642.0982",
+  "title": "斜激波与轴对称边界层干扰的数值模拟"
+ },
+ {
+  "file": "洪雨婷-2023-中国科学技术大学博士学位论文-高超声速流动中典型构型的激波湍流边界.pdf",
+  "sha256": "7a799472c2e4533ce0973ea4861db1ffc34cc23ba8a1db521f7cd24f0a8d4209",
+  "size": 28842856,
+  "id": 993,
+  "doi": "10.27517/d.cnki.gzkju.2023.000542",
+  "title": "高超声速流动中典型构型的激波/湍流边界层干扰及流动控制"
+ },
+ {
+  "file": "洪雨婷-2023-国防科技大学-高超声速流动中典型构型的激波湍流边界.pdf",
+  "sha256": "7a799472c2e4533ce0973ea4861db1ffc34cc23ba8a1db521f7cd24f0a8d4209",
+  "size": 28842856,
+  "id": 2069,
+  "doi": "10.27517/d.cnki.gzkju.2023.000542",
+  "title": "高超声速流动中典型构型的激波/湍流边界层干扰及流动控制"
+ },
+ {
+  "file": "王子运-et-al-2025-航空动力-宽域飞行器进气道内激波边界层干扰控制.pdf",
+  "sha256": "50f82772719b9c1f63d747fad8ea3fd56402dd52d972d807c8d4f815c466e623",
+  "size": 1614897,
+  "id": 990,
+  "doi": "",
+  "title": "宽域飞行器进气道内激波/边界层干扰控制技术的新进展"
+ },
+ {
+  "file": "王智慧-et-al-2016-气体物理-尖化前缘的稀薄气体化学非平衡流动和气.pdf",
+  "sha256": "7c1c008423faa7df8a90007ae80d4cc44a368c1da7b9cf53e5685813cd2ff547",
+  "size": 1346144,
+  "id": 375,
+  "doi": "10.19527/j.cnki.2096-1642.2016.01.004",
+  "title": "尖化前缘的稀薄气体化学非平衡流动和气动加热相似律研究"
+ },
+ {
+  "file": "王梦格-et-al-2023-航空学报-基于振荡式涡流发生器的激波边界层干扰.pdf",
+  "sha256": "386f9719f2ceccb87c8eb8128904bf8990cae886b730514431b20baeefff9f8f",
+  "size": 1966049,
+  "id": 991,
+  "doi": "",
+  "title": "基于振荡式涡流发生器的激波/边界层干扰控制方法"
+ },
+ {
+  "file": "王浩东-2025-中国科学院大学-高超声速激波湍流边界层干扰的分离尺度.pdf",
+  "sha256": "0b599c2babfb352f8284c17506afbcb4f13792e24d366a6fc55fce89bf77cfa0",
+  "size": 9025564,
+  "id": 755,
+  "doi": "",
+  "title": "高超声速激波/湍流边界层干扰的分离尺度预测研究"
+ },
+ {
+  "file": "王浩东-et-al-2025-气体物理-高超声速激波湍流边界层干扰的初始分离.pdf",
+  "sha256": "b4ff6cd77c7f05bd15e749d3cd081135d06f700c831d70fe2055981de78b0ae6",
+  "size": 702811,
+  "id": 384,
+  "doi": "10.19527/j.cnki.2096-1642.1149",
+  "title": "高超声速激波/湍流边界层干扰的初始分离条件"
+ },
+ {
+  "file": "田珊珊-et-al-2023-航空学报-基于鼓包的激波边界层干扰控制研究进展.pdf",
+  "sha256": "239761a4d309409ddf722b2fb5798bfee1efab18c0dba6ea16a209d546c1777f",
+  "size": 2313876,
+  "id": 989,
+  "doi": "10.7527/S1000-6893.2023.28411",
+  "title": "基于鼓包的激波/边界层干扰控制研究进展"
+ },
+ {
+  "file": "章顺良-et-al-2023-空天技术-壁面局部催化特性和微粗糙度对气动加热.pdf",
+  "sha256": "86aacd43bbcce3c1f0984efb9a20c922a62ae332049ec1b70707054a17495142",
+  "size": 3482626,
+  "id": 382,
+  "doi": "10.16338/j.issn.2097-0714.20230050",
+  "title": "壁面局部催化特性和微粗糙度对气动加热的影响"
+ },
+ {
+  "file": "童福林-et-al-2017-力学学报-激波与转捩边界层干扰非定常特性数值分.pdf",
+  "sha256": "d62e14beae44399e786c06fc620c55f5350940e9fc55f87d7ae1d574e477c0fe",
+  "size": 23659307,
+  "id": 721,
+  "doi": "",
+  "title": "激波与转捩边界层干扰非定常特性数值分析"
+ },
+ {
+  "file": "童秉纲-et-al-1990-高等教育出版社-气体动力学.pdf",
+  "sha256": "d41c85a9343b065d52525869fa6b5ce26cfcd703198e846a1c95ccbd853624a0",
+  "size": 32043524,
+  "id": 230,
+  "doi": "",
+  "title": "气体动力学"
+ },
+ {
+  "file": "胡金铭-et-al-2026-力学学报-高超声速两楔分离非定常流动的数值研究.pdf",
+  "sha256": "3f50f4055a39b7d552e0e63eac41381ba59a3d4b8113572a1aa03985f7a51b28",
+  "size": 1886091,
+  "id": 752,
+  "doi": "",
+  "title": "高超声速两楔分离非定常流动的数值研究"
+ },
+ {
+  "file": "蔡琛芳-et-al-2025-兵器装备工程学报-压缩拐角激波边界层干扰对壁面的加热效.pdf",
+  "sha256": "3a522657f77100ff69715f62f1441018b75df8a79201b1eabd304bf1b079afb3",
+  "size": 5260127,
+  "id": 1010,
+  "doi": "",
+  "title": "压缩拐角激波边界层干扰对壁面的加热效应"
+ },
+ {
+  "file": "蔡琛芳-et-al-2025-航天器环境工程-压缩拐角激波边界层干扰热流分布实验研.pdf",
+  "sha256": "7b4f605b9613ab1bcb6577ce720a9c1e43c2b23f1fa7bcd09ac1f8a6bc672f57",
+  "size": 6516165,
+  "id": 1014,
+  "doi": "",
+  "title": "压缩拐角激波边界层干扰热流分布实验研究"
+ },
+ {
+  "file": "赵一朴-2018-IJM-Developments-Chemical-Non-Equilibrium-Simulation.pdf",
+  "sha256": "2e695f330330b56620ab3aef62eb21d1e057fe739e42cd881829411b9a11e2f5",
+  "size": 3434698,
+  "id": 286,
+  "doi": "10.12677/IJM.2018.74015",
+  "title": "Developments of Chemical Non-Equilibrium Effects in Numerical Simulation of Aerodynamic Heating in Hypersonic Flow"
+ },
+ {
+  "file": "赵云飞-et-al-2014-ActaAerodynamicaSinica-非定常运动下的激波边界层干扰分离特性.pdf",
+  "sha256": "786e1298edb5f59a0f5446e0abcc8e253f9ac8e4a6687cdb3b44c6d7ebbb1f83",
+  "size": 1100230,
+  "id": 565,
+  "doi": "10.7638/kqdlxxb-2014.0089",
+  "title": "非定常运动下的激波/边界层干扰分离特性研究"
+ },
+ {
+  "file": "郑晓刚-et-al-2025-航空学报-高超声速三维内转进气道研究进展综述.pdf",
+  "sha256": "681a00ec3f879c964735d378e4667821bd686393e70db8b02eed863611a3cd3d",
+  "size": 15336251,
+  "id": 1535,
+  "doi": "",
+  "title": "高超声速三维内转进气道研究进展综述"
+ }
+]

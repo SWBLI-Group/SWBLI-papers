@@ -113,6 +113,8 @@ PDF 走独立提交通道：
 - **内容 PR** 提交到 `new`：只改 `papers/`，不放 PDF；`assets/data.js` 由管理员更新；
 - **PDF PR** 提交到 `pdf-inbox` 分支：只放 `pdfs/<DOI 或 slug>.pdf`，不合并到 `new`/`main`；
 - 作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR；
+- `pdfs/library_hashes.json` 保存本地 PDF 的 SHA-256（不含全文），用于 `pdf-inbox` PR 查重；新增/删除本地 PDF 后运行 `python tools/update_pdf_hashes.py`；
+- `pdf-inbox` PR 检查只接受新增 PDF，拒绝重复哈希、非 PDF、超大文件和修改已有 PDF；
 - 课题组内部也可用百度网盘/Zotero 群组库分发；
 - 只使用合法来源：出版社、arXiv、NASA、HAL、机构仓库、学校/CST 订阅、课题组 Zotero；
 - **禁止 sci-hub 和绕过付费墙**；

@@ -119,6 +119,12 @@ PDF 分两条通道：
 
 作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR。这样 PDF 可以直接提交和审核，但不会进入站点分支。只使用合法来源，不使用 sci-hub；单个 PDF 建议小于 50 MB，超过 100 MB 不能提交，改用网盘。
 
+`pdf-inbox` 的 PR 会自动查重：仓库保存 `pdfs/library_hashes.json`（SHA-256，不含全文），上传文件若与本地已有 PDF 或 `pdf-inbox` 已有文件内容相同，会被判定为“不是新 PDF”并失败。管理员新增/删除本地 PDF 后运行：
+
+```bash
+python tools/update_pdf_hashes.py
+```
+
 课题组百度网盘：
 
 ```text

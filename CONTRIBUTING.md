@@ -175,6 +175,25 @@ pdf-inbox 分支
 - `pdf-inbox` 只放 PDF 和必要说明，不放 `papers/`、`assets/`、`build/` 或压缩包；
 - 作者导入本地后，再在内容 PR 中更新 `pdf_href`，并运行严格校验。
 
+### PDF 查重：library_hashes.json
+
+仓库不保存 PDF 内容，但保存 `pdfs/library_hashes.json`：本地 204 篇 PDF 的文件名、SHA-256、大小和对应 id。它不含全文，用于判断上传的 PDF 是否已经在文献库中。
+
+新增或删除本地 PDF 后，管理员运行：
+
+```bash
+python tools/update_pdf_hashes.py
+```
+
+`pdf-inbox` 的 PR 检查会：
+
+- 要求 PR 只新增 `pdfs/<name>.pdf`，不允许改已有 PDF 或其他文件；
+- 检查文件头确实是 PDF、大小和命名；
+- 计算 SHA-256，若与 `library_hashes.json` 或 `pdf-inbox` 已有文件相同，判定为“不是新 PDF”并失败；
+- 检查同一次 PR 内是否有重复文件。
+
+因此，**同一个 PDF 已经存在于本地文献库时，再上传会被拒绝**。如果只是文件名不同但内容相同，也会被哈希识别出来。
+
 ## 6. 标签与关注点
 
 - 标签、关注点可以在当次条目 PR 中提出；

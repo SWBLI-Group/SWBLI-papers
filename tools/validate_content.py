@@ -4,6 +4,7 @@
 Run from project root:
     python tools/validate_content.py
     python tools/validate_content.py --allow-orphan-pages   # member PR before admin updates data.js
+    python tools/validate_content.py --skip-pdf-files       # CI checkout without local PDFs
 
 Checks include:
 - duplicate paper ids / hrefs;
@@ -51,6 +52,7 @@ def main():
     except AttributeError:
         pass
     allow_orphan_pages = "--allow-orphan-pages" in sys.argv
+    skip_pdf_files = "--skip-pdf-files" in sys.argv
     errors = []
     warnings = []
     data = load_data()
@@ -81,8 +83,44 @@ def main():
         pdf = str(paper.get("pdf_href", "") or "")
         if pdf and not pdf.startswith(("http://", "https://", "file:")):
             target = ROOT / unquote(pdf.split("?", 1)[0])
-            if not target.is_file():
+            if not target.is_file() and not skip_pdf_files:
                 errors.append(f"missing PDF for id {pid}: {pdf}")
+
+    manifest_path = ROOT / "pdfs" / "library_hashes.json"
+    manifest_entries = []
+    if not manifest_path.is_file():
+        errors.append("missing pdfs/library_hashes.json; run python tools/update_pdf_hashes.py")
+    else:
+        manifest_entries = json.loads(manifest_path.read_text(encoding="utf-8"))
+        by_file = {entry.get("file"): entry for entry in manifest_entries}
+        seen_hash = {}
+        for entry in manifest_entries:
+            name = entry.get("file", "")
+            digest = str(entry.get("sha256", ""))
+            if not re.fullmatch(r"[0-9a-f]{64}", digest):
+                errors.append(f"library_hashes.json: invalid sha256 for {name}")
+            if digest in seen_hash:
+                warnings.append(
+                    f"library_hashes.json: duplicate PDF hash {seen_hash[digest]} / {name}"
+                )
+            seen_hash[digest] = name
+        referenced_files = set()
+        for paper in papers:
+            pdf = str(paper.get("pdf_href", "") or "")
+            if not pdf or pdf.startswith(("http://", "https://", "file:")):
+                continue
+            name = Path(unquote(pdf.split("?", 1)[0])).name
+            referenced_files.add(name)
+            if name not in by_file:
+                errors.append(
+                    f"library_hashes.json missing {name} for id {paper.get('id')}; "
+                    "run python tools/update_pdf_hashes.py"
+                )
+        for entry in manifest_entries:
+            if entry.get("file") not in referenced_files:
+                warnings.append(
+                    f"library_hashes.json has unreferenced PDF: {entry.get('file')}"
+                )
 
     pages = sorted(PAPERS_DIR.glob("*.html")) if PAPERS_DIR.exists() else []
     data_pages = {str(Path(p.get("href", "")).name) for p in papers if p.get("href")}

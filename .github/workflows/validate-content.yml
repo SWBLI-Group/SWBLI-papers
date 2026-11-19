@@ -9,7 +9,9 @@ on:
     paths:
       - "papers/**"
       - "assets/data.js"
+      - "pdfs/library_hashes.json"
       - "tools/validate_content.py"
+      - "tools/update_pdf_hashes.py"
       - ".github/workflows/validate-content.yml"
 
 permissions:
@@ -45,7 +47,7 @@ jobs:
             fi
           fi
           if [ "$strict" = "1" ]; then
-            python tools/validate_content.py
+            python tools/validate_content.py --skip-pdf-files
           else
-            python tools/validate_content.py --allow-orphan-pages
+            python tools/validate_content.py --allow-orphan-pages --skip-pdf-files
           fi
