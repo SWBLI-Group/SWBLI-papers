@@ -13,7 +13,7 @@ assets/figs/（仅新增图件时）
 pdfs/（本地，不进入 Git）
 ```
 
-`assets/data.js` 只由管理员更新，成员不要改。
+`assets/data.js` 和 `pdfs/library_hashes.json` 只由管理员更新，成员不要改。
 
 禁止修改：
 
@@ -30,7 +30,7 @@ build/
 1. 修改 `papers/<slug>.html`；新页面把 `data-pid` 留空，不得自行分配 id；
 2. 在 PR 描述中提供 `assets/data.js` 条目对象（`id` 留空）和 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts` 等计数建议；
 3. 标签/关注点必须有正文证据；
-4. PDF 不放进内容 PR；如需提交全文，走单独的 `pdf-inbox` 分支，只放 `pdfs/`，该分支不合并到 `new`/`main`；
+4. PDF 不放进内容 PR；不得用 `git add -f` 把 `pdfs/*.pdf` 带进 `new`/`main`（CI 会拒绝）；如需提交全文，走单独的 `pdf-inbox` 分支，只放 `pdfs/`，该分支不合并到 `new`/`main`；
 5. 新增/删除本地 PDF 后由管理员运行 `python tools/update_pdf_hashes.py`，更新 `pdfs/library_hashes.json`；`pdf-inbox` PR 会用 SHA-256 查重；
 6. 新增标签、页面功能或底层改动必须先联系 @yiluntam；
 7. 不通过修改 CI、添加标签或绕过检查来让校验变绿。

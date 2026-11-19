@@ -54,7 +54,7 @@ build/formula_latex.py
 build/CONTENT_SPEC.md
 ```
 
-普通 PR 改 `build/` 会被 `.github/workflows/guard-build.yml` 拒绝；普通成员改 `assets/data.js` 会被 `.github/workflows/guard-data.yml` 拒绝。确需修改时联系作者 @yiluntam，由作者加 `allow-build-change` / `allow-data-change` 标签。
+普通 PR 改 `build/` 会被 `.github/workflows/guard-build.yml` 拒绝；普通成员改 `assets/data.js` 或 `pdfs/library_hashes.json` 会被 `.github/workflows/guard-data.yml` 拒绝。确需修改时联系作者 @yiluntam，由作者加 `allow-build-change` / `allow-data-change` 标签。
 
 ## 4. 成员可修改的内容
 
@@ -64,7 +64,7 @@ assets/figs/（仅新增图件时）
 pdfs/（本地，不进入 Git）
 ```
 
-`assets/data.js` 只由管理员更新；成员在 PR 描述中提供条目对象和 meta 计数建议。
+`assets/data.js` 和 `pdfs/library_hashes.json` 只由管理员更新；成员在 PR 描述中提供条目对象和 meta 计数建议。
 
 根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 的统计/入口由管理员按需更新，并和 `assets/data.js` 保持一致。
 
@@ -115,6 +115,7 @@ PDF 走独立提交通道：
 - 作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR；
 - `pdfs/library_hashes.json` 保存本地 PDF 的 SHA-256（不含全文），用于 `pdf-inbox` PR 查重；新增/删除本地 PDF 后运行 `python tools/update_pdf_hashes.py`；
 - `pdf-inbox` PR 检查只接受新增 PDF，拒绝重复哈希、非 PDF、超大文件和修改已有 PDF；
+- `new`/`main` 的 CI 拒绝被 Git 跟踪的 `pdfs/*.pdf`，防止用 `git add -f` 绕过 `.gitignore`；
 - 课题组内部也可用百度网盘/Zotero 群组库分发；
 - 只使用合法来源：出版社、arXiv、NASA、HAL、机构仓库、学校/CST 订阅、课题组 Zotero；
 - **禁止 sci-hub 和绕过付费墙**；
@@ -127,7 +128,7 @@ PDF 走独立提交通道：
 - 普通成员不要向 `main` 开 PR，也不要直接 push；
 - PR 目标选 `new`；
 - 作者在 GitHub 设置中保护 `main`：Require PR、Require review、Require status checks、禁止 force push 和删除；
-- `CODEOWNERS` 默认所有 PR 由 @yiluntam 审核；`guard-build.yml` 拒绝 `build/` 修改；`guard-data.yml` 拒绝成员改 `assets/data.js`；`validate-content.yml` 检查重复 id 和数据一致性；
+- `CODEOWNERS` 默认所有 PR 由 @yiluntam 审核；`guard-build.yml` 拒绝 `build/` 修改；`guard-data.yml` 拒绝成员改 `assets/data.js` 或 `pdfs/library_hashes.json`；`validate-content.yml` 检查重复 id、数据一致性和被跟踪的 PDF 二进制；
 - ruleset 只对目标为 `main` 的推送/PR 生效；在 `new` 上工作被“放行”是正常的。若 `main` 也没拦截，检查 target、Active 状态、bypass 名单、required checks 名称，以及仓库转到 Organization 后旧 ruleset 是否还留在个人仓库；
 - 组织所有者通常可绕过 ruleset，必须用普通成员账号验证；另指定至少 1 名备份管理员。
 

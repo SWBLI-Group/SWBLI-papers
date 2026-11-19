@@ -14,7 +14,7 @@ assets/figs/（仅新增图件时）
 pdfs/（本地，不进入 Git）
 ```
 
-`assets/data.js` 只由管理员更新，成员不要改。
+`assets/data.js` 和 `pdfs/library_hashes.json` 只由管理员更新，成员不要改。
 
 禁止改：
 
@@ -41,7 +41,7 @@ build/
 - 不编造文献、DOI、摘要、数值或结论；
 - 中文为主；公式用 Unicode 文本；
 - 用户可见总结用作者—年份引注；
-- PDF 不放进内容 PR；如需提交全文，走单独的 `pdf-inbox` 分支，只放 `pdfs/`，该分支不合并到 `new`/`main`；
+- PDF 不放进内容 PR；不得用 `git add -f` 把 `pdfs/*.pdf` 带进 `new`/`main`（CI 会拒绝）；如需提交全文，走单独的 `pdf-inbox` 分支，只放 `pdfs/`，该分支不合并到 `new`/`main`；
 - 新增/删除本地 PDF 后由管理员运行 `python tools/update_pdf_hashes.py`，更新 `pdfs/library_hashes.json`；`pdf-inbox` PR 会用 SHA-256 查重；
 - 只使用合法来源，不使用 sci-hub 或绕过付费墙；
 - 新增标签/关注点、页面功能或底层改动必须先联系 @yiluntam。

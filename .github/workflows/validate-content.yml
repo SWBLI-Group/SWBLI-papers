@@ -33,6 +33,16 @@ jobs:
           node --check assets/data.js
           node --check assets/app.js
 
+      - name: Reject PDF binaries on content branches
+        run: |
+          tracked=$(git ls-files 'pdfs/*' | grep -iE '\.pdf$' || true)
+          if [ -n "$tracked" ]; then
+            echo "::error::PDF 不能进入 new/main；请提交到 pdf-inbox 分支。"
+            echo "$tracked"
+            exit 1
+          fi
+          echo "OK: no tracked PDF binaries"
+
       - name: Validate paper ids and data consistency
         run: |
           strict=1

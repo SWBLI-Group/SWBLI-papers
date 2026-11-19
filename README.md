@@ -60,7 +60,7 @@ assets/figs/            仅新增图件时
 pdfs/                   本地全文，不进入 Git
 ```
 
-`assets/data.js` 是文献库索引，**只由管理员更新**；普通成员不要修改。成员新增/修改条目时，在 PR 描述中提供一个 `data.js` 条目对象，由管理员合并进 `assets/data.js` 并更新 `meta` 计数。
+`assets/data.js` 是文献库索引，**只由管理员更新**；`pdfs/library_hashes.json` 是 PDF 查重清单，也只由管理员更新。普通成员不要修改。成员新增/修改条目时，在 PR 描述中提供一个 `data.js` 条目对象，由管理员合并进 `assets/data.js` 并更新 `meta` 计数。
 
 根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 由管理员按需更新统计。
 
@@ -117,6 +117,8 @@ PDF 分两条通道：
 
 1. **内容 PR**：提交到 `new`，只改 `papers/`，不放 PDF；`assets/data.js` 由管理员更新；
 2. **PDF 提交 PR**：提交到 `pdf-inbox` 分支，只放 `pdfs/<DOI 或 slug>.pdf`，不合并到 `new`/`main`。
+
+`new`/`main` 上不得出现被 Git 跟踪的 `pdfs/*.pdf`；CI 会拒绝，即使使用 `git add -f` 绕过 `.gitignore`。
 
 作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR。这样 PDF 可以直接提交和审核，但不会进入站点分支。只使用合法来源，不使用 sci-hub；单个 PDF 建议小于 50 MB，超过 100 MB 不能提交，改用网盘。
 

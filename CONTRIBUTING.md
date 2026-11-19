@@ -14,7 +14,7 @@ build/
 
 `build/` 里的脚本、题录、内容 JSON、深读记录和公式源都是维护者底层。普通 PR 修改 `build/` 会被 CI 拒绝；确需修改时先联系作者 @yiluntam，由作者加 `allow-build-change` 标签。
 
-`assets/data.js` 同样只由管理员更新；普通成员 PR 修改它会被 `guard-data` 拒绝。成员在 PR 描述中提供条目对象，由作者合并。
+`assets/data.js` 和 `pdfs/library_hashes.json` 同样只由管理员更新；普通成员 PR 修改它们会被 `guard-data` 拒绝。成员在 PR 描述中提供条目对象，由作者合并。
 
 ### 成员可修改
 
@@ -24,7 +24,7 @@ assets/figs/            可选：条目新增图件
 pdfs/                   本地全文（不进入 Git）
 ```
 
-`assets/data.js` 是文献库索引，**只由管理员更新**；普通成员不要修改。成员在 PR 描述中提供一个 `data.js` 条目对象，由管理员合并并更新 `meta` 计数。
+`assets/data.js` 是文献库索引，**只由管理员更新**；`pdfs/library_hashes.json` 是 PDF 查重清单，同样只由管理员更新。普通成员不要修改。成员在 PR 描述中提供一个 `data.js` 条目对象，由管理员合并并更新 `meta` 计数。
 
 根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 也由管理员按需更新统计。
 
@@ -173,6 +173,7 @@ pdf-inbox 分支
 - 文件名统一为 `pdfs/<slug>.pdf`，与条目页面同名，不加空格和临时后缀；
 - 只提交你有权共享的全文；出版社版权 PDF 仅限课题组内部流转，不要放进公开仓库；
 - `pdf-inbox` 只放 PDF 和必要说明，不放 `papers/`、`assets/`、`build/` 或压缩包；
+- `new`/`main` 上不得出现被 Git 跟踪的 `pdfs/*.pdf`；CI 会拒绝，即使使用 `git add -f` 绕过 `.gitignore`；
 - 作者导入本地后，再在内容 PR 中更新 `pdf_href`，并运行严格校验。
 
 ### PDF 查重：library_hashes.json
