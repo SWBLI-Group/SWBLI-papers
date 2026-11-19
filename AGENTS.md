@@ -66,14 +66,14 @@ python tools/validate_content.py
 
 ## 分支与 main
 
-- `new` 是日常贡献分支；`main` 是发布/稳定快照，已于 2026-11-19 与 `new` 同步。
+- `new` 是日常贡献分支；`main` 是发布/稳定快照，已于 2026-11-19 与 `new` 同步，之后日常只在 `new` 修改，按周期/发布节点更新 `main`。
 - 普通成员不向 `main` 开 PR，也不直接 push。
 - `main` 的 ruleset 只拦截目标为 `main` 的操作，在 `new` 上工作被放行是正常的。
 - 不修改 ruleset、CI 或绕过检查；发布同步由作者操作。
 
 ## 当前事实
 
-- 283 篇、204 篇有本地 PDF、79 篇 `无全文PDF`。
+- 285 篇、206 篇有本地 PDF、79 篇 `无全文PDF`。
 - 文件名是“作者-年份-期刊-标题”关键词 slug。
 - `build/figs/` 已归档；`assets/figs/` 是运行图件。
 - `assets/data.js` 仍含本机绝对路径，公开部署前必须去本地路径。

@@ -672,6 +672,14 @@
   "title": "On low-frequency unsteadiness in shock-wave–turbulent boundary layer interaction with varying corner curvature"
  },
  {
+  "file": "Karpuzcu-et-al-2024-AIAA-SciTech-scaled-angle-stability-large-separation-bubble.pdf",
+  "sha256": "98aba3e3fbddc98d215ad6d91ff09c5a51ebc794dbde39686d6528d02adde04c",
+  "size": 998044,
+  "id": 2102,
+  "doi": "10.2514/6.2024-1359",
+  "title": "Effect of the Scaled Angle on the Stability of a Large Separation Bubble"
+ },
+ {
   "file": "Katzer-1989-JFluidMech-lengthscales-laminar-shock-boundary-layer-interaction.pdf",
   "sha256": "b50aa0ab991b0d63f1c9744af046ed8d4a076f3dd62db2b9b71655d785e0625e",
   "size": 2091853,
@@ -1422,6 +1430,14 @@
   "id": 1521,
   "doi": "10.16358/j.issn.1009-1300.2016.05.04",
   "title": "高超声速进气道发展研究"
+ },
+ {
+  "file": "方芳-2020-中国科学院大学-高超声速再附流动传热模型理论.pdf",
+  "sha256": "8f7a084cb0d6a85837c1e0532503b0917ed7da053b79aefbc812f6aed7514f63",
+  "size": 3465158,
+  "id": 2101,
+  "doi": "",
+  "title": "Theoretical Modeling of Heat Transfer in Hypersonic Reattachment Flows and Its Applications"
  },
  {
   "file": "方芳-et-al-2020-物理学报-基于斜驻点模型的剪切层撞击壁面流动及.pdf",
