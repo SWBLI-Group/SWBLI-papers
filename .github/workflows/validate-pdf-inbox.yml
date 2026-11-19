@@ -1,0 +1,32 @@
+name: validate-pdf-inbox
+
+on:
+  pull_request:
+    branches: [pdf-inbox]
+
+permissions:
+  contents: read
+
+jobs:
+  check-new-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch local-library hash manifest
+        run: |
+          git fetch origin new --depth=1
+          git show origin/new:pdfs/library_hashes.json > "$RUNNER_TEMP/library_hashes.json"
+
+      - name: Reject duplicate or non-new files
+        run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          python tools/validate_pdf_inbox.py \
+            --base "origin/${{ github.base_ref }}" \
+            --library "$RUNNER_TEMP/library_hashes.json"
