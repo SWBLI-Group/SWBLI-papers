@@ -9,7 +9,7 @@ on:
     paths:
       - "papers/**"
       - "assets/data.js"
-      - "pdfs/library_hashes.json"
+      - "pdfs/**"
       - "tools/validate_content.py"
       - "tools/update_pdf_hashes.py"
       - ".github/workflows/validate-content.yml"
