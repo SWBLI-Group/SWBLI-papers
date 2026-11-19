@@ -265,7 +265,7 @@ Ruleset 只对**目标分支匹配**的推送/PR 生效；在 `new` 上工作不
 2. **状态**：Enforcement status 是 **Active**，不是 Evaluate/Disabled；
 3. **绕过名单**：Bypass list 里是否包含 Organization admin / Repository admin / 你自己；组织所有者通常可绕过，测试时要用普通成员账号；
 4. **规则内容**：至少启用 Restrict deletions、Block force pushes、Require a pull request before merging、Required approvals ≥ 1、Require status checks；
-5. **检查名称**：Required checks 要选实际出现过的 `guard-build`、`guard-data`、`validate-content`；工作流从未运行过时，下拉列表里可能找不到；
+5. **检查名称**：Required checks 要选实际出现过的 `guard-build / forbid-build`、`guard-data / forbid-member-data-edit`、`validate-content / validate`；工作流从未运行过时，下拉列表里可能找不到；
 6. **迁移遗留**：仓库从个人账号转到 Organization 后，旧 ruleset 可能仍留在个人仓库；请在 `SWBLI-Group/SWBLI-papers` 下重新创建并确认；
 7. **测试方式**：用普通成员账号直接 `git push origin HEAD:main`，应被拒绝；向 `main` 开 PR，应要求审核和检查通过。
 
