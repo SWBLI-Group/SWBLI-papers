@@ -2,8 +2,8 @@
 
 > 给人类维护者和 AI 大模型的项目级背景。开始改项目前，先读本文件、`CONTRIBUTING.md` 和根目录 `README.md`。
 >
-> 最后更新：2026-11-16
-> 当前开发分支：`new`
+> 最后更新：2026-11-19
+> 当前开发分支：`new`；`main` 尚未同步最新规则，需由管理员在发布前更新
 
 ## 1. 项目是什么
 
@@ -39,6 +39,7 @@ reviews.html            综述页
 taxonomy.html           分类说明
 build/                  底层与历史构建源（禁止修改、禁止日常运行）
 docs/                   无全文清单与补全说明
+tools/validate_content.py  页面/数据一致性校验（含重复 id）
 ```
 
 ## 3. 固定底层
@@ -92,9 +93,18 @@ pdfs/（本地，不进入 Git）
 
 管理员负责：
 
-1. 把条目对象合并进 `assets/data.js`；
-2. 更新 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts`；
-3. 检查 `href`、`pdf_href`、`tags`、`focus` 页面与数据一致。
+1. 为条目分配唯一 `id`，填写页面的 `data-pid`；
+2. 把条目对象合并进 `assets/data.js`；
+3. 更新 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts`；
+4. 检查 `href`、`pdf_href`、`tags`、`focus` 页面与数据一致。
+
+### id 分配与校验
+
+- 成员新页面 `data-pid` 留空，`data.js` 对象 `id` 留空；管理员统一分配，禁止成员按 DOI 哈希自行取号。
+- 成员 PR 运行 `python tools/validate_content.py --allow-orphan-pages`；管理员合并 `data.js` 后运行严格模式 `python tools/validate_content.py`。
+- 校验覆盖：重复 `id`/`href`/页面 `data-pid`、页面与数据双向对应、`pdf_href` 是否存在、受控标签、各分面计数、根页面硬编码总数和标签云。
+- 重复 DOI/标题以 `WARN` 输出；当前已知 993/2069 同一 CNKI 论文、1132/492 同题，新增重复必须复核。
+- CI：`.github/workflows/validate-content.yml`，PR 用宽松模式（允许新页面暂未进 `data.js`），推送 `new`/`main` 用严格模式。
 
 ## 7. PDF 与版权
 
@@ -111,11 +121,13 @@ PDF 走独立提交通道：
 ## 8. 分支与审核
 
 - `new`：日常贡献与审核分支；
-- `main`：由作者保护，只接受作者确认后的合并；
+- `main`：发布/稳定快照，由作者保护；当前未正式发布，仍停留在旧规则提交，需要由管理员从 `new` 同步后才是准确的克隆入口；
 - 普通成员不要向 `main` 开 PR，也不要直接 push；
 - PR 目标选 `new`；
-- 作者在 GitHub 设置中保护 `main`：Require PR、Require review、Require status checks、禁止 force push；
-- `CODEOWNERS` 默认所有 PR 由 @yiluntam 审核；`guard-build.yml` 拒绝 `build/` 修改。
+- 作者在 GitHub 设置中保护 `main`：Require PR、Require review、Require status checks、禁止 force push 和删除；
+- `CODEOWNERS` 默认所有 PR 由 @yiluntam 审核；`guard-build.yml` 拒绝 `build/` 修改；`guard-data.yml` 拒绝成员改 `assets/data.js`；`validate-content.yml` 检查重复 id 和数据一致性；
+- ruleset 只对目标为 `main` 的推送/PR 生效；在 `new` 上工作被“放行”是正常的。若 `main` 也没拦截，检查 target、Active 状态、bypass 名单、required checks 名称，以及仓库转到 Organization 后旧 ruleset 是否还留在个人仓库；
+- 组织所有者通常可绕过 ruleset，必须用普通成员账号验证；另指定至少 1 名备份管理员。
 
 ## 9. 不要运行构建
 
@@ -150,10 +162,12 @@ AI 进入项目后应：
 4. 新增标签/关注点、页面功能或修改底层结构，必须先联系作者 @yiluntam；
 5. 不编造文献、DOI、摘要、数值或结论；
 6. PDF 不进 Git，不碰 sci-hub；
-7. 改完运行 `node --check assets/app.js`；管理员更新 `data.js` 后再运行 `node --check assets/data.js`；
-8. 不覆盖别人的条目；删除/替换先说明；
-9. Git 提交不要添加合作者信息。
+7. 改完运行 `node --check assets/app.js` 和 `python tools/validate_content.py --allow-orphan-pages`；管理员更新 `data.js` 后再运行 `node --check assets/data.js` 和严格模式校验；
+8. 不自行分配 id；新页面 `data-pid` 留空，由管理员填写；
+9. 不覆盖别人的条目；删除/替换先说明；
+10. 不通过改 CI、加标签或绕过校验来让检查变绿；
+11. Git 提交不要添加合作者信息。
 
 ## 12. 一句话
 
-**成员只改 `papers/`；`assets/data.js` 由管理员更新；`pdfs/` 本地保存或走 `pdf-inbox`；`build/` 完全冻结；PR 提到 `new`，作者审核，不直接合并 `main`。**
+**成员只改 `papers/`；`assets/data.js` 由管理员更新并分配 id；改完跑 `tools/validate_content.py`；`pdfs/` 本地保存或走 `pdf-inbox`；`build/` 完全冻结；PR 提到 `new`，作者审核，不直接合并 `main`。**

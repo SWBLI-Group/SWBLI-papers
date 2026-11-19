@@ -2,7 +2,7 @@
 
 本分支采用“条目页面 + 数据索引”的直接维护方式。**`build/` 是唯一禁止修改的底层**，其余站点文件通过 PR 提交，由作者审核。
 
-> 开发分支：`new`。所有成员 PR 请提交到 `new`，不要合并到 `main`。`main` 由作者保护。
+> 开发分支：`new`。所有成员 PR 请提交到 `new`，不要合并到 `main`。`main` 是发布/稳定快照，由作者保护；当前项目尚未正式发布，`main` 会随 `new` 的验收结果同步更新。
 
 ## 1. 可修改与不可修改
 
@@ -54,7 +54,17 @@ pdfs/                   本地全文（不进入 Git）
 5. 把 PDF 放到本地 `pdfs/<slug>.pdf`，或提交到 `pdf-inbox`，**不要放进内容 PR**；
 6. 提交 PR 到 `new` 分支，等待管理员审核并更新 `assets/data.js`。
 
-建议 `id` 使用 DOI（或 Zotero key）的 SHA-1 前 7 位转成整数，避免多人撞号；也可以先联系作者分配。
+### id 分配（防止撞号）
+
+`id` 是 `assets/data.js` 的内部编号，**不再由成员自行生成**。旧规则中的 DOI/SHA-1 取号作废。
+
+1. 成员新建页面时，把 `data-pid` 留空：`<body data-pid="">`；
+2. PR 描述中的 `data.js` 对象把 `id` 留空，由管理员分配；
+3. 管理员从当前最大 `id` 之后取未占用的数字，或使用已约定号段；不得复用已删除条目的 id；
+4. 管理员合并 `data.js` 时，同时填写页面的 `data-pid`；
+5. 合并后运行严格校验，确认 id 唯一且页面与数据一致。
+
+禁止多人各自按 DOI 哈希取号；这仍是撞号的主要来源。`tools/validate_content.py` 会把重复 `id`、重复 `href`、重复页面 `data-pid` 直接判为失败。
 
 ### data.js 条目对象参考
 
@@ -85,7 +95,30 @@ pdfs/                   本地全文（不进入 Git）
 }
 ```
 
-字段和页面必须一一对应；尤其 `href`、`pdf_href`、`tags`、`focus` 不能与页面不一致。
+字段和页面必须一一对应；尤其 `id`/`data-pid`、`href`、`pdf_href`、`tags`、`focus` 不能与页面不一致。
+
+### 合并前必须通过的一致性校验
+
+```bash
+# 成员 PR：允许新页面暂时没有 data.js 条目
+python tools/validate_content.py --allow-orphan-pages
+
+# 管理员更新 data.js 后 / 合并到 new、main 前：严格模式
+python tools/validate_content.py
+```
+
+脚本检查：
+
+- 重复 `id`、重复 `href`、重复页面 `data-pid`；
+- 每个 `data.js` 条目都有页面，每个页面都有数据条目；
+- 页面 `data-pid` 与数据 `id` 一致；
+- `href` 文件存在；本地 `pdf_href` 文件存在；
+- `tags`、`focus` 属于 `meta` 受控词表；
+- `meta.total`、`with_pdf`、`tagCounts`、`focusCounts`、`boardCounts`、`regimeCounts`、`methodCounts`、`geometryCounts`、`gasCounts` 与 `papers` 一致；
+- 根页面 `index.html`、`library.html`、`reviews.html`、`taxonomy.html` 的硬编码总数和标签云计数与 `meta` 一致；
+- 重复 DOI/标题以 `WARN` 输出，供管理员复核。
+
+当前库中已存在的重复项（993/2069 同一 CNKI 论文、1132/492 同题）是已知警告；新增重复必须由管理员核对后合并或说明，不得当作没看见。`assets/data.js` 单行且很大，不要用自动格式化工具重排。
 
 ## 4. 修改已有条目
 
@@ -134,6 +167,14 @@ pdf-inbox 分支
 
 只使用合法来源：出版社、arXiv、NASA、机构仓库、学校/CST 订阅、课题组 Zotero；禁止 sci-hub 和绕过付费墙。
 
+补充规则：
+
+- 单个 PDF 建议小于 50 MB；GitHub 单文件硬上限 100 MB，超过时不要提交，改用网盘并在 PR 中说明；
+- 文件名统一为 `pdfs/<slug>.pdf`，与条目页面同名，不加空格和临时后缀；
+- 只提交你有权共享的全文；出版社版权 PDF 仅限课题组内部流转，不要放进公开仓库；
+- `pdf-inbox` 只放 PDF 和必要说明，不放 `papers/`、`assets/`、`build/` 或压缩包；
+- 作者导入本地后，再在内容 PR 中更新 `pdf_href`，并运行严格校验。
+
 ## 6. 标签与关注点
 
 - 标签、关注点可以在当次条目 PR 中提出；
@@ -162,13 +203,21 @@ git switch -c contrib/<你的GitHub用户名>/<slug>
 ```
 
 2. 修改 `papers/`，可选 `assets/figs/`；不要改 `assets/data.js`；
-3. 本地检查页面链接：
+3. 本地检查：
 
 ```bash
 node --check assets/app.js
+python tools/validate_content.py --allow-orphan-pages
 ```
 
-如果本地确实改了 `data.js`，管理员合并前再运行 `node --check assets/data.js`。
+CI 还会运行 `validate-content`，检查重复 id、重复页面 `data-pid`、页面/数据一致性和根页面计数。成员 PR 允许“新页面暂时没有 data.js 条目”，但重复 id 或重复 `data-pid` 会直接失败。
+
+管理员在 PR 中合并 `data.js` 后，改为严格模式：
+
+```bash
+node --check assets/data.js
+python tools/validate_content.py
+```
 
 4. 提交 PR，目标分支选 **`new`**，不要选 `main`；
 5. PR 标题：
@@ -191,20 +240,43 @@ node --check assets/app.js
 ## 9. 评审重点
 
 - 页面与管理员合并后的 `assets/data.js` 是否一致；
+- `id` 是否由管理员分配、是否唯一，页面 `data-pid` 是否已填；
 - 是否只改了 `papers/`、`assets/`、`pdfs/` 等允许路径；
 - 是否误改 `build/`；
 - 标签/关注点是否有证据；
-- PDF 来源是否合法；
+- PDF 来源是否合法、体积是否可接受；
 - 是否编造数值、DOI、作者或结论；
-- 中文内容是否通顺、与原文一致。
+- 中文内容是否通顺、与原文一致；
+- `validate-content`、`guard-build`、`guard-data` 是否全部通过。
 
-## 10. 分支与 main
+## 10. 分支、main 与 ruleset
 
 - `new`：日常贡献与审核分支；
-- `main`：由作者保护，只接受作者确认后的合并；
+- `main`：发布/稳定快照，只接受作者确认后的合并；当前未正式发布，`main` 需要随 `new` 同步；
 - 普通成员不要向 `main` 开 PR，也不要直接 push；
-- 作者在 GitHub 设置中保护 `main`：Require PR、Require review、Require status checks、禁止 force push。
+- 管理员在发布节点用 PR 或受保护合并把 `new` 合入 `main`，合并前必须通过严格校验；
+- 作者在 GitHub 设置中保护 `main`：Require PR、Require review、Require status checks、禁止 force push 和删除。
+
+### GitHub ruleset 不生效时的检查清单
+
+Ruleset 只对**目标分支匹配**的推送/PR 生效；在 `new` 上工作不会被 `main` 的 ruleset 拦截，这是正常现象。若在 `main` 上也没有拦截，逐项检查：
+
+1. **目标**：Target branches 包含 `main`（或 `refs/heads/main`），不是只写了 `new` 或 `*` 之外的错误模式；
+2. **状态**：Enforcement status 是 **Active**，不是 Evaluate/Disabled；
+3. **绕过名单**：Bypass list 里是否包含 Organization admin / Repository admin / 你自己；组织所有者通常可绕过，测试时要用普通成员账号；
+4. **规则内容**：至少启用 Restrict deletions、Block force pushes、Require a pull request before merging、Required approvals ≥ 1、Require status checks；
+5. **检查名称**：Required checks 要选实际出现过的 `guard-build`、`guard-data`、`validate-content`；工作流从未运行过时，下拉列表里可能找不到；
+6. **迁移遗留**：仓库从个人账号转到 Organization 后，旧 ruleset 可能仍留在个人仓库；请在 `SWBLI-Group/SWBLI-papers` 下重新创建并确认；
+7. **测试方式**：用普通成员账号直接 `git push origin HEAD:main`，应被拒绝；向 `main` 开 PR，应要求审核和检查通过。
+
+如果组织所有者账号能直接推 `main`，说明 bypass 包含了管理员；这不代表 ruleset 坏了，但普通成员仍应被拦截。要验证真实效果，必须用非管理员账号测试。
+
+### 管理员与备份
+
+- 至少指定 1 名备份管理员，避免只有 @yiluntam 能合并、恢复或改 ruleset；
+- 定期保留仓库镜像（`git clone --mirror`）和 `assets/data.js` 备份；PDF 仍以网盘/Zotero 为准；
+- 不要为了赶进度关闭 required checks 或把成员加进 bypass 名单。
 
 ## 11. 一句话
 
-**成员只改 `papers/`（必要时 `assets/figs/`），`assets/data.js` 由管理员更新；PDF 走 `pdf-inbox`；`build/` 禁止修改；所有 PR 提到 `new`，由作者审核，不直接合并 `main`。**
+**成员只改 `papers/`（必要时 `assets/figs/`），`assets/data.js` 由管理员更新并分配 id；改完运行 `tools/validate_content.py`；PDF 走 `pdf-inbox`；`build/` 禁止修改；所有 PR 提到 `new`，由作者审核，不直接合并 `main`。**

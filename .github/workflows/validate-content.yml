@@ -1,0 +1,54 @@
+name: validate-content
+
+on:
+  pull_request:
+    paths:
+      - "papers/**"
+      - "assets/data.js"
+      - "tools/validate_content.py"
+      - ".github/workflows/validate-content.yml"
+  push:
+    branches: [new, main]
+    paths:
+      - "papers/**"
+      - "assets/data.js"
+      - "tools/validate_content.py"
+      - ".github/workflows/validate-content.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate JS syntax
+        run: |
+          node --check assets/data.js
+          node --check assets/app.js
+
+      - name: Validate paper ids and data consistency
+        run: |
+          strict=1
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch origin "${{ github.base_ref }}" --depth=1
+            files=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD")
+            if ! echo "$files" | grep -q '^assets/data\.js$'; then
+              # A member PR may add papers/<slug>.html before the admin updates
+              # assets/data.js. Orphan pages are warnings in this mode; duplicate
+              # ids, duplicate page data-pid and missing pages are still errors.
+              strict=0
+            fi
+          fi
+          if [ "$strict" = "1" ]; then
+            python tools/validate_content.py
+          else
+            python tools/validate_content.py --allow-orphan-pages
+          fi

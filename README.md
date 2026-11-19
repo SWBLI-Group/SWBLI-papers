@@ -24,7 +24,7 @@ F:\文献工具\
 │  ├─ manifest.json        id 与文件名的对应表
 │  └─ README.md
 ├─ docs\                   无全文清单与 PDF 补全说明
-├─ tools\                  PDF 导入等辅助脚本
+├─ tools\                  PDF 导入、内容一致性校验等辅助脚本
 ├─ build\                  底层与历史构建源（成员禁止修改）
 ├─ CONTRIBUTING.md         贡献与修改规范
 ├─ PROJECT_MEMORY.md       项目记忆（架构、现状、已知问题）
@@ -83,11 +83,32 @@ build/
 
 管理员负责：
 
-1. 把条目对象合并进 `assets/data.js`；
-2. 更新 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts` 等计数；
-3. 检查页面与数据一致。
+1. 为条目分配唯一 `id`，填写页面的 `data-pid`；
+2. 把条目对象合并进 `assets/data.js`；
+3. 更新 `meta.total`、`with_pdf`、`tagCounts`、`focusCounts` 等计数；
+4. 检查页面与数据一致。
+
+成员新建页面时把 `data-pid` 留空，**不要自行按 DOI 哈希取号**；id 由管理员统一分配，避免多人撞号。
 
 在管理员更新 `assets/data.js` 之前，新条目不会出现在文献库、搜索和筛选中。
+
+### 一致性校验
+
+成员 PR 至少运行：
+
+```bash
+node --check assets/app.js
+python tools/validate_content.py --allow-orphan-pages
+```
+
+管理员更新 `assets/data.js` 后，或合并到 `new`/`main` 前运行严格模式：
+
+```bash
+node --check assets/data.js
+python tools/validate_content.py
+```
+
+校验脚本会检查重复 `id`、重复 `href`、重复页面 `data-pid`、页面与数据条目的双向对应、`data-pid` 与 `id` 一致、本地 PDF 是否存在、受控标签、各分面计数以及根页面硬编码总数/标签云。CI 工作流 `validate-content` 会在 PR 和推送到 `new`/`main` 时运行；重复 id 会让检查失败。
 
 ### PDF 规则
 
@@ -96,7 +117,7 @@ PDF 分两条通道：
 1. **内容 PR**：提交到 `new`，只改 `papers/`，不放 PDF；`assets/data.js` 由管理员更新；
 2. **PDF 提交 PR**：提交到 `pdf-inbox` 分支，只放 `pdfs/<DOI 或 slug>.pdf`，不合并到 `new`/`main`。
 
-作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR。这样 PDF 可以直接提交和审核，但不会进入站点分支。只使用合法来源，不使用 sci-hub。
+作者从 `pdf-inbox` 下载 PDF，放入本地 `pdfs/`，再合并内容 PR。这样 PDF 可以直接提交和审核，但不会进入站点分支。只使用合法来源，不使用 sci-hub；单个 PDF 建议小于 50 MB，超过 100 MB 不能提交，改用网盘。
 
 课题组百度网盘：
 
@@ -107,9 +128,12 @@ PDF 分两条通道：
 ### 分支与审核
 
 - `new`：日常贡献与审核分支；
-- `main`：由作者保护，只接受作者确认后的合并；
+- `main`：发布/稳定快照，由作者保护，只接受作者确认后的合并；当前项目尚未正式发布，`main` 需要随 `new` 同步；
 - PR 目标选 `new`，不要向 `main` 开 PR；
-- 所有 PR 由作者 @yiluntam 审核。
+- 所有 PR 由作者 @yiluntam 审核；
+- 管理员至少再指定 1 名备份管理员，避免单点。
+
+GitHub ruleset 保护 `main` 的检查清单见 [CONTRIBUTING.md](CONTRIBUTING.md#github-ruleset-不生效时的检查清单)。ruleset 只对目标为 `main` 的推送/PR 生效，在 `new` 上工作不会被拦截；如果组织所有者仍能直接推 `main`，通常是 bypass 名单包含管理员。
 
 ## assets 是什么
 
@@ -141,10 +165,13 @@ AI 的硬性规则：
 
 1. 只改 `papers/`，必要时 `assets/figs/`；`assets/data.js` 由管理员更新；
 2. 不改 `build/`；
-3. 新增标签/关注点、页面功能或底层结构，必须先联系项目作者 @yiluntam；
-4. 不编造文献、DOI、摘要、数值或结论；
-5. PDF 不进内容 PR，提交到 `pdf-inbox`；
-6. 不改 `assets/data.js`；PR 中提供数据条目对象供管理员合并。
+3. 不自行分配 `id`；新页面 `data-pid` 留空，由管理员统一填；
+4. 新增标签/关注点、页面功能或底层结构，必须先联系项目作者 @yiluntam；
+5. 不编造文献、DOI、摘要、数值或结论；
+6. PDF 不进内容 PR，提交到 `pdf-inbox`；
+7. 改完必须运行 `python tools/validate_content.py --allow-orphan-pages` 和 `node --check assets/app.js`；
+8. 不改 `assets/data.js`；PR 中提供数据条目对象供管理员合并；
+9. 不通过修改 CI、加标签或绕过校验来“修绿”。
 
 ## 补全无全文条目
 

@@ -30,11 +30,11 @@ build/
 
 成员负责：
 
-1. `papers/<slug>.html`：正文、题录、标签、DOI、PDF 按钮；
-2. PR 描述中的 `assets/data.js` 条目对象；
+1. `papers/<slug>.html`：正文、题录、标签、DOI、PDF 按钮；新页面 `data-pid` 留空；
+2. PR 描述中的 `assets/data.js` 条目对象（`id` 留空）；
 3. `meta` 计数建议（`total`、`with_pdf`、`tagCounts`、`focusCounts` 等）。
 
-管理员负责更新 `assets/data.js`；在管理员更新前，条目不会出现在文献库、搜索和筛选中。
+管理员负责分配唯一 id、更新 `assets/data.js` 并填写页面 `data-pid`；在管理员更新前，条目不会出现在文献库、搜索和筛选中。不要自行按 DOI 哈希取号。
 
 ## 内容与 PDF
 
@@ -49,11 +49,26 @@ build/
 
 ```bash
 node --check assets/app.js
+python tools/validate_content.py --allow-orphan-pages
 ```
 
-`data.js` 由管理员更新后再运行 `node --check assets/data.js`。
+`data.js` 由管理员更新后，改为严格模式：
+
+```bash
+node --check assets/data.js
+python tools/validate_content.py
+```
+
+校验会检查重复 `id`、重复页面 `data-pid`、页面/数据双向对应、本地 PDF、受控标签、各分面计数和根页面硬编码总数。重复 id 是硬错误，不能通过改别人页面来消除。
 
 不要运行 `build_site.py`；它会覆盖手工维护的 `papers/` 和 `assets/data.js`。
+
+## 分支与 main
+
+- `new` 是日常贡献分支；`main` 是发布/稳定快照，当前尚未同步最新规则。
+- 普通成员不向 `main` 开 PR，也不直接 push。
+- `main` 的 ruleset 只拦截目标为 `main` 的操作，在 `new` 上工作被放行是正常的。
+- 不修改 ruleset、CI 或绕过检查；发布同步由作者操作。
 
 ## 当前事实
 
@@ -61,3 +76,4 @@ node --check assets/app.js
 - 文件名是“作者-年份-期刊-标题”关键词 slug。
 - `build/figs/` 已归档；`assets/figs/` 是运行图件。
 - `assets/data.js` 仍含本机绝对路径，公开部署前必须去本地路径。
+- 当前已知重复：993/2069 同一 CNKI 论文、1132/492 同题；新增重复必须复核。
