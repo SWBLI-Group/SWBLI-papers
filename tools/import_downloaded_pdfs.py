@@ -10,7 +10,11 @@ Put downloaded files anywhere under pdfs/incoming/. The script matches by:
 2. DOI in the filename or first pages;
 3. normalized title in the first pages.
 
-It only copies files; the next build_site.py run will attach them to pages.
+It only copies files. After import, update the page's PDF button and the
+matching data.js pdf_href, then run:
+    python tools/update_pdf_hashes.py
+    python tools/validate_content.py
+Do not run build_site.py; it would overwrite the hand-maintained pages.
 """
 import argparse
 import json

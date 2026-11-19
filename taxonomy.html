@@ -54,7 +54,7 @@
     <p>详情页按 IMRaD 结构组织：阅读说明 → 一句话/三句话 → 核心内容清单 → 引言 → 条件与参数 → 方法 → 核心推导 → 结果与证据 → 机制 → 讨论/局限 → 工程意义 → 核心图件 → 可引用素材 → 核验。公式以 LaTeX 源码保存，页面用本地打包的 KaTeX 渲染（离线，无 CDN）；核心图件由 PDF 按图注位置裁取并回链原页。</p>
     <p>已排除 HCW、燃烧、纯爆轰噪声及与 SWBLI 无关的传热/制动/鳍片文献。教材、软件文档与纯无粘激波背景保留在“基础与工具”，用于支撑主板块。</p>
     <p>被引数优先来自 OpenAlex（DOI 批量匹配；无 DOI 时按题名 + 年份严格匹配），参考文献数优先来自 Crossref（DOI 匹配，通常更完整），两者都列出以便核对，结果缓存在 <span class="kbd">build/citation_metrics.json</span>。不同平台收录范围与计数口径不同，未匹配文献不补零；卡片上的“高被引”只是 ≥100 次的浏览阈值，不是学科评价。</p>
-    <p class="muted small">日常修改内容后运行 <span class="kbd">python build/build_site.py</span> 即可；更新被引数据时运行 <span class="kbd">python build/fetch_citations.py</span> 后再构建；只有重新抓取 Zotero 元数据时，才先运行 <span class="kbd">python build/prepare_selected.py</span>。</p>
+    <p class="muted small">日常条目修改直接编辑 <span class="kbd">papers/&lt;slug&gt;.html</span>；<span class="kbd">assets/data.js</span> 由管理员更新，并运行 <span class="kbd">python tools/validate_content.py</span>。<span class="kbd">build/</span> 仅保留历史构建源，不要日常运行 build_site.py。</p>
   </div>
 </section>
 </main>

@@ -78,8 +78,9 @@ def main():
             errors.append(f"missing page for id {pid}: {href}")
         if page and page.is_file():
             ppid = page_pid(page)
-            if ppid and ppid != pid:
-                errors.append(f"page {href}: data-pid={ppid}, data id={pid}")
+            if ppid != pid:
+                shown = ppid or "(empty)"
+                errors.append(f"page {href}: data-pid={shown}, data id={pid}")
         pdf = str(paper.get("pdf_href", "") or "")
         if pdf and not pdf.startswith(("http://", "https://", "file:")):
             target = ROOT / unquote(pdf.split("?", 1)[0])

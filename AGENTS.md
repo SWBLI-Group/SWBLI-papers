@@ -66,7 +66,7 @@ python tools/validate_content.py
 
 ## 分支与 main
 
-- `new` 是日常贡献分支；`main` 是发布/稳定快照，当前尚未同步最新规则。
+- `new` 是日常贡献分支；`main` 是发布/稳定快照，已于 2026-11-19 与 `new` 同步。
 - 普通成员不向 `main` 开 PR，也不直接 push。
 - `main` 的 ruleset 只拦截目标为 `main` 的操作，在 `new` 上工作被放行是正常的。
 - 不修改 ruleset、CI 或绕过检查；发布同步由作者操作。
