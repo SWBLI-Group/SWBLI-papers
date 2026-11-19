@@ -45,6 +45,13 @@ jobs:
               # ids, duplicate page data-pid and missing pages are still errors.
               strict=0
             fi
+          elif [ "${{ github.event_name }}" = "push" ] && [ "${{ github.ref }}" != "refs/heads/main" ]; then
+            # A page-only merge into new is expected to be temporarily orphaned
+            # until the admin's data.js update. The data.js push is strict.
+            files=$(git diff "${{ github.event.before }}"...HEAD --name-only 2>/dev/null || true)
+            if ! echo "$files" | grep -q '^assets/data\.js$'; then
+              strict=0
+            fi
           fi
           if [ "$strict" = "1" ]; then
             python tools/validate_content.py --skip-pdf-files

@@ -92,12 +92,19 @@ def main():
     if not manifest_path.is_file():
         errors.append("missing pdfs/library_hashes.json; run python tools/update_pdf_hashes.py")
     else:
-        manifest_entries = json.loads(manifest_path.read_text(encoding="utf-8"))
-        by_file = {entry.get("file"): entry for entry in manifest_entries}
+        try:
+            manifest_entries = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            errors.append(f"library_hashes.json is not valid JSON: {exc}")
+            manifest_entries = []
+        by_file = {}
         seen_hash = {}
         for entry in manifest_entries:
             name = entry.get("file", "")
             digest = str(entry.get("sha256", ""))
+            if name in by_file:
+                errors.append(f"library_hashes.json: duplicate file entry {name}")
+            by_file[name] = entry
             if not re.fullmatch(r"[0-9a-f]{64}", digest):
                 errors.append(f"library_hashes.json: invalid sha256 for {name}")
             if digest in seen_hash:

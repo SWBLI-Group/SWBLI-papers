@@ -229,7 +229,7 @@ node --check assets/app.js
 python tools/validate_content.py --allow-orphan-pages
 ```
 
-CI 还会运行 `validate-content`，检查重复 id、重复页面 `data-pid`、页面/数据一致性和根页面计数。成员 PR 允许“新页面暂时没有 data.js 条目”，但重复 id 或重复 `data-pid` 会直接失败。
+CI 还会运行 `validate-content`，检查重复 id、重复页面 `data-pid`、页面/数据一致性和根页面计数。成员 PR 允许“新页面暂时没有 data.js 条目”，但重复 id 或重复 `data-pid` 会直接失败。页面 PR 合并到 `new` 后、管理员更新 `data.js` 前，`new` 允许暂时存在未入索引的新页面；`data.js` 的推送和 `main` 的检查始终严格。
 
 管理员在 PR 中合并 `data.js` 后，改为严格模式：
 

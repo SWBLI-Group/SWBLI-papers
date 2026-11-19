@@ -104,7 +104,7 @@ pdfs/（本地，不进入 Git）
 - 成员 PR 运行 `python tools/validate_content.py --allow-orphan-pages`；管理员合并 `data.js` 后运行严格模式 `python tools/validate_content.py`。
 - 校验覆盖：重复 `id`/`href`/页面 `data-pid`、页面与数据双向对应、`pdf_href` 是否存在、受控标签、各分面计数、根页面硬编码总数和标签云。
 - 重复 DOI/标题以 `WARN` 输出；当前已知 993/2069 同一 CNKI 论文、1132/492 同题，新增重复必须复核。
-- CI：`.github/workflows/validate-content.yml`，PR 用宽松模式（允许新页面暂未进 `data.js`），推送 `new`/`main` 用严格模式。
+- CI：`.github/workflows/validate-content.yml`，PR 用宽松模式（允许新页面暂未进 `data.js`）；推送 `new` 时仅在本次改动包含 `assets/data.js` 才用严格模式，推送 `main` 始终严格；成员页面合并后、管理员更新 `data.js` 前 `new` 可暂时处于“页面未入索引”的过渡状态。
 
 ## 7. PDF 与版权
 
