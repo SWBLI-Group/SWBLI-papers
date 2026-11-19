@@ -40,5 +40,5 @@ PR 会运行 `validate-pdf-inbox`：
 - 只放 PDF，不改 `papers/`、`assets/`、`build/`；
 - 不使用 sci-hub 或盗版源；
 - 本分支不合并到 `new`/`main`；
-- 文件尽量按 `pdfs/<slug>.pdf` 或 `pdfs/<DOI>.pdf` 命名；
+- 文件尽量按 `pdfs/<slug>.pdf` 或 `pdfs/<DOI>.pdf` 命名；DOI 中的 `/` 用 `_` 替代，不能出现子目录；
 - pdf-inbox 只作为中转。已处理的 PDF 可以从工作树删除，但 Git 历史仍会保留，仓库体积不会因此减小；体积过大时由管理员重建/压缩分支历史，或改用网盘。
