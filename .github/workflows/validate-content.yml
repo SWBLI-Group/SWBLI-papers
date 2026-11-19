@@ -28,6 +28,12 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Use trusted validator from base branch
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          git show "origin/${{ github.base_ref }}:tools/validate_content.py" > tools/validate_content.py
+
       - name: Validate JS syntax
         run: |
           node --check assets/data.js
